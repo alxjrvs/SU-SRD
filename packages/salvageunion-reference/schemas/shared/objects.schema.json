@@ -473,6 +473,118 @@
               "const": "dramatic"
             }
           }
+        },
+        {
+          "type": "object",
+          "description": "Duos roll table with custom ranges and entity references",
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "duos"
+            }
+          },
+          "patternProperties": {
+            "^\\d+-\\d+$": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "Reference roll table with individual outcomes (1-20) that reference entities",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "reference"
+            },
+            "1": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "2": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "3": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "4": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "5": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "6": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "7": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "8": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "9": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "10": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "11": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "12": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "13": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "14": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "15": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "16": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "17": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "18": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "19": {
+              "$ref": "#/definitions/encounterTableEntry"
+            },
+            "20": {
+              "$ref": "#/definitions/encounterTableEntry"
+            }
+          }
         }
       ]
     },
@@ -627,6 +739,51 @@
       "items": {
         "$ref": "#/definitions/contentBlock"
       }
+    },
+    "encounterTableEntry": {
+      "type": "object",
+      "description": "An entry in an encounter table referencing an entity",
+      "required": ["name", "page"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the entity referenced"
+        },
+        "page": {
+          "$ref": "common.schema.json#/definitions/positiveInteger",
+          "description": "The page number where the entity can be found"
+        }
+      },
+      "additionalProperties": false
+    },
+    "formationMech": {
+      "type": "object",
+      "description": "A mech in a lance formation",
+      "required": ["chassis", "pattern", "source", "page"],
+      "properties": {
+        "chassis": {
+          "type": "string",
+          "description": "The chassis name of the mech"
+        },
+        "pattern": {
+          "type": "string",
+          "description": "The pattern name of the mech"
+        },
+        "source": {
+          "$ref": "enums.schema.json#/definitions/source",
+          "description": "The source book for this mech"
+        },
+        "page": {
+          "$ref": "common.schema.json#/definitions/positiveInteger",
+          "description": "The page number where this mech can be found"
+        },
+        "quantity": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The number of this mech in the formation (defaults to 1 if not specified)"
+        }
+      },
+      "additionalProperties": false
     },
     "grant": {
       "type": "object",

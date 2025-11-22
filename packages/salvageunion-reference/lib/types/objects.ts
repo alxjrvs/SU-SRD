@@ -228,6 +228,46 @@ export interface SURefObjectContentBlock {
 }
 
 /**
+ * An entry in an encounter table referencing an entity
+ */
+export interface SURefObjectEncounterTableEntry {
+  /**
+   * The name of the entity referenced
+   */
+  name: string
+  /**
+   * The page number where the entity can be found
+   */
+  page: SURefCommonPositiveInteger
+}
+
+/**
+ * A mech in a lance formation
+ */
+export interface SURefObjectFormationMech {
+  /**
+   * The chassis name of the mech
+   */
+  chassis: string
+  /**
+   * The pattern name of the mech
+   */
+  pattern: string
+  /**
+   * The source book for this mech
+   */
+  source: SURefEnumSource
+  /**
+   * The page number where this mech can be found
+   */
+  page: SURefCommonPositiveInteger
+  /**
+   * The number of this mech in the formation (defaults to 1 if not specified)
+   */
+  quantity?: number
+}
+
+/**
  * Grantable entity with a name and description
  */
 export interface SURefObjectGrant {
@@ -369,6 +409,32 @@ export type SURefObjectTable =
   | {
       '20': string
       type: 'dramatic'
+    }
+  | {
+      type: 'duos'
+    }
+  | {
+      '1': SURefObjectEncounterTableEntry
+      '2': SURefObjectEncounterTableEntry
+      '3': SURefObjectEncounterTableEntry
+      '4': SURefObjectEncounterTableEntry
+      '5': SURefObjectEncounterTableEntry
+      '6': SURefObjectEncounterTableEntry
+      '7': SURefObjectEncounterTableEntry
+      '8': SURefObjectEncounterTableEntry
+      '9': SURefObjectEncounterTableEntry
+      '10': SURefObjectEncounterTableEntry
+      '11': SURefObjectEncounterTableEntry
+      '12': SURefObjectEncounterTableEntry
+      '13': SURefObjectEncounterTableEntry
+      '14': SURefObjectEncounterTableEntry
+      '15': SURefObjectEncounterTableEntry
+      '16': SURefObjectEncounterTableEntry
+      '17': SURefObjectEncounterTableEntry
+      '18': SURefObjectEncounterTableEntry
+      '19': SURefObjectEncounterTableEntry
+      '20': SURefObjectEncounterTableEntry
+      type: 'reference'
     }
 
 export type SURefObjectActionOptions = {

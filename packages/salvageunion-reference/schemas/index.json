@@ -172,6 +172,16 @@
       "displayName": "Keywords"
     },
     {
+      "id": "lances",
+      "title": "lances",
+      "description": "Lance formations and groups in Salvage Union",
+      "dataFile": "data/lances.json",
+      "schemaFile": "schemas/lances.schema.json",
+      "itemCount": 1,
+      "requiredFields": ["goals", "assets", "weaknesses", "formation"],
+      "displayName": "Lances"
+    },
+    {
       "id": "meld",
       "title": "meld",
       "description": "Meld-infected creatures in Salvage Union",

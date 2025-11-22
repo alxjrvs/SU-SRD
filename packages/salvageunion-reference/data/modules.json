@@ -648,5 +648,45 @@
     "blackMarket": true,
     "page": 71,
     "actions": ["Corrupted Neuralink Module"]
+  },
+  {
+    "id": "f2f2656a-9f02-415d-a9ac-6749d45bccff",
+    "source": "We Were Here First!",
+    "name": "Adrenal Glands",
+    "techLevel": "B",
+    "slotsRequired": 1,
+    "salvageValue": 7,
+    "page": 75,
+    "actions": ["Burst (Adrenal Glands)", "Power (Adrenal Glands)"]
+  },
+  {
+    "id": "ba747361-ba39-4ae1-ad11-f9ae34c4de61",
+    "source": "We Were Here First!",
+    "name": "Chimerium Cell",
+    "techLevel": 2,
+    "slotsRequired": 1,
+    "salvageValue": 1,
+    "page": 75,
+    "actions": ["Chimerium Cell"]
+  },
+  {
+    "id": "07dd7ad9-f5f5-4d1c-ba85-8dc092fbadbf",
+    "source": "We Were Here First!",
+    "name": "Regeneration Glands",
+    "techLevel": "B",
+    "slotsRequired": 1,
+    "salvageValue": 9,
+    "page": 75,
+    "actions": ["Regeneration Glands", "Regrowth (Regeneration Glands)"]
+  },
+  {
+    "id": "87b5984a-6458-42d7-a193-422f9c491650",
+    "source": "We Were Here First!",
+    "name": "Olfactory Glands",
+    "techLevel": "B",
+    "slotsRequired": 1,
+    "salvageValue": 6,
+    "page": 75,
+    "actions": ["Olfactory Glands", "Olfactory Scan (Olfactory Glands)"]
   }
 ]

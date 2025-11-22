@@ -64,6 +64,7 @@ export type SURefEnumSchemaName =
   | 'drones'
   | 'equipment'
   | 'keywords'
+  | 'lances'
   | 'meld'
   | 'modules'
   | 'npcs'
@@ -76,7 +77,12 @@ export type SURefEnumSchemaName =
 /**
  * The source book or expansion for this content
  */
-export type SURefEnumSource = 'Salvage Union Workshop Manual' | 'Mech Monday'
+export type SURefEnumSource =
+  | 'Salvage Union Workshop Manual'
+  | 'Mech Monday'
+  | 'We Were Here First!'
+  | 'Rainmaker'
+  | 'False Flag'
 
 /**
  * Ability tree name

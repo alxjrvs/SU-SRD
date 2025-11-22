@@ -82,9 +82,16 @@ export function extractProperty<K extends SURefMetaEntityKeys>(
  * @returns The tech level or undefined
  */
 export function getTechLevel(entity: SURefMetaEntity): number | undefined {
-  return 'techLevel' in entity && typeof entity.techLevel === 'number'
-    ? entity.techLevel
-    : undefined
+  if ('techLevel' in entity) {
+    const techLevel = entity.techLevel
+    if (typeof techLevel === 'number') {
+      return techLevel
+    }
+    if (techLevel === 'B') {
+      return 1
+    }
+  }
+  return undefined
 }
 
 /**
@@ -372,8 +379,8 @@ export function getBlackMarket(entity: SURefMetaEntity): boolean | undefined {
  */
 export function hasTechLevel(
   entity: SURefMetaEntity
-): entity is SURefMetaEntity & { techLevel: number } {
-  return 'techLevel' in entity && typeof entity.techLevel === 'number'
+): entity is SURefMetaEntity & { techLevel: number | 'B' } {
+  return 'techLevel' in entity && (typeof entity.techLevel === 'number' || entity.techLevel === 'B')
 }
 
 /**

@@ -263,8 +263,14 @@ export class SalvageUnionReference {
    */
   public static getTechLevel(entity: SURefEntity): number | undefined {
     // Check if entity has top-level techLevel (Chassis, Systems, Modules, Drones, Vehicles)
-    if ('techLevel' in entity && typeof entity.techLevel === 'number') {
-      return entity.techLevel
+    if ('techLevel' in entity) {
+      const techLevel = entity.techLevel
+      if (typeof techLevel === 'number') {
+        return techLevel
+      }
+      if (techLevel === 'B') {
+        return 1
+      }
     }
     return undefined
   }

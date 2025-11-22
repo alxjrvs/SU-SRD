@@ -22,6 +22,7 @@ import type {
   SURefDrone,
   SURefEquipment,
   SURefKeyword,
+  SURefLance,
   SURefMeld,
   SURefModule,
   SURefNPC,
@@ -86,6 +87,7 @@ export type SchemaToEntityMap = {
   drones: SURefDrone
   equipment: SURefEquipment
   keywords: SURefKeyword
+  lances: SURefLance
   meld: SURefMeld
   modules: SURefModule
   npcs: SURefNPC
@@ -116,6 +118,7 @@ export const EntitySchemaNames = new Set<EntitySchemaName>([
   'drones',
   'equipment',
   'keywords',
+  'lances',
   'meld',
   'modules',
   'npcs',
@@ -143,6 +146,7 @@ export const SchemaToModelMap = {
   drones: 'Drones',
   equipment: 'Equipment',
   keywords: 'Keywords',
+  lances: 'Lances',
   meld: 'Meld',
   modules: 'Modules',
   npcs: 'NPCs',
@@ -170,6 +174,7 @@ export const SchemaToDisplayName = {
   drones: 'Drones',
   equipment: 'Equipment',
   keywords: 'Keywords',
+  lances: 'Lances',
   meld: 'Meld',
   modules: 'Modules',
   npcs: 'NPCs',
@@ -205,6 +210,7 @@ export class SalvageUnionReference {
   static Drones = models.Drones as ModelWithMetadata<SchemaToEntityMap['drones']>
   static Equipment = models.Equipment as ModelWithMetadata<SchemaToEntityMap['equipment']>
   static Keywords = models.Keywords as ModelWithMetadata<SchemaToEntityMap['keywords']>
+  static Lances = models.Lances as ModelWithMetadata<SchemaToEntityMap['lances']>
   static Meld = models.Meld as ModelWithMetadata<SchemaToEntityMap['meld']>
   static Modules = models.Modules as ModelWithMetadata<SchemaToEntityMap['modules']>
   static NPCs = models.NPCs as ModelWithMetadata<SchemaToEntityMap['npcs']>
@@ -411,8 +417,14 @@ export class SalvageUnionReference {
    */
   public static getTechLevel(entity: SURefEntity): number | undefined {
     // Check if entity has top-level techLevel (Chassis, Systems, Modules, Drones, Vehicles)
-    if ('techLevel' in entity && typeof entity.techLevel === 'number') {
-      return entity.techLevel
+    if ('techLevel' in entity) {
+      const techLevel = entity.techLevel
+      if (typeof techLevel === 'number') {
+        return techLevel
+      }
+      if (techLevel === 'B') {
+        return 1
+      }
     }
     return undefined
   }

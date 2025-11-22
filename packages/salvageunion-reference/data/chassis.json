@@ -120,6 +120,37 @@
             "value": "These heavily armed and armoured Mules were used extensively during the Second Corpo War, to ferry cargo between arcos. Many salvager raids were rebuffed by corpos 'Circling the Mules' to create a devastating ring of missile fire."
           }
         ]
+      },
+      {
+        "name": "Acid Spitter Mule",
+        "systems": [
+          {
+            "name": "Acid Cannon"
+          },
+          {
+            "name": "Rigging Arm"
+          },
+          {
+            "name": "Escape Hatch"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Olfactory Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Mules fitted with acid spitters to defend their Bio-Salvage hauls in Gehenna."
+          }
+        ]
       }
     ],
     "structurePoints": 12,
@@ -613,6 +644,61 @@
           {
             "type": "paragraph",
             "value": "Designed for its original designation as a lumberjack Mech."
+          }
+        ]
+      },
+      {
+        "name": "Chimerium Harvester Pattern Thresher",
+        "systems": [
+          {
+            "name": "Chimerium Harvester"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Rigging Arm",
+            "count": 2
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Survey Scanner"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "Mutant Pattern Thresher",
+        "systems": [
+          {
+            "name": "Bio-Talon"
+          },
+          {
+            "name": "Armour Plating"
+          },
+          {
+            "name": "Escape Hatch"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Evasion Protocols"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Threshers rigged with bio-organic systems, such as talons harvested from Chimerium Beasts."
           }
         ]
       }
@@ -4241,5 +4327,365 @@
       }
     ],
     "chassisAbilities": ["Integrated VTU System", "Flashy", "Fast", "Polycarbonate Stealth Chassis"]
+  },
+  {
+    "id": "ea298ac2-b22d-45d3-9353-71c57703a4b4",
+    "name": "Impaler",
+    "source": "We Were Here First!",
+    "page": 64,
+    "patterns": [
+      {
+        "name": "Alpha Pattern Impaler",
+        "systems": [
+          {
+            "name": "Railgun"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Ejection System"
+          },
+          {
+            "name": "Refractive Shield Projector"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Pinpoint Targeter"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Laser Guidance Module"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Deployed in heavy combat zones, this pattern mounts a humongous railgun to impale targets from extreme range."
+          }
+        ]
+      },
+      {
+        "name": "Delta Pattern Impaler",
+        "systems": [
+          {
+            "name": "30mm Autocannon",
+            "count": 2
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Ejection System"
+          },
+          {
+            "name": "Loudspeakers"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Multi-Targeter"
+          },
+          {
+            "name": "Alpha Strike Module"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "A straightforward build designed to pound targets with twin Autocannons."
+          }
+        ]
+      },
+      {
+        "name": "Experimental Bio Pattern Impaler",
+        "systems": [
+          {
+            "name": "Acid Cannon"
+          },
+          {
+            "name": "Super-Sonic Screecher"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Escape Hatch"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Adrenal Glands"
+          },
+          {
+            "name": "Olfactory Glands"
+          },
+          {
+            "name": "Comms Module"
+          }
+        ],
+        "content": []
+      }
+    ],
+    "structurePoints": 26,
+    "energyPoints": 7,
+    "heatCapacity": 15,
+    "systemSlots": 15,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 3,
+    "salvageValue": 6,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'B-419' Impaler is the main combat Mech of the BOLZA Corporation. Its rugged design helps it survive and manoeuvre in the harsh conditions of the Arid Steppes."
+      }
+    ],
+    "chassisAbilities": ["Rugged Chassis"]
+  },
+  {
+    "id": "a15bb42b-6d0d-49c3-a86f-13ef573399ba",
+    "name": "Fleshripper",
+    "source": "We Were Here First!",
+    "page": 67,
+    "patterns": [
+      {
+        "name": "Maw Pattern Fleshripper",
+        "systems": [
+          {
+            "name": "Acid Cannon"
+          },
+          {
+            "name": "Armoured Shield"
+          },
+          {
+            "name": "Bio-Maw"
+          },
+          {
+            "name": "Bio-Talon",
+            "count": 2
+          },
+          {
+            "name": "Mutated Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Adrenal Glands"
+          },
+          {
+            "name": "Alpha Strike Module"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Regeneration Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "The 'stock' Fleshripper pattern developed by the Red Mesa Facility is loaded with a mixture of long-ranged capabilities through its skin-melting acid cannon and deadly close-ranged maw attacks."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 50,
+    "energyPoints": 10,
+    "heatCapacity": 16,
+    "systemSlots": 26,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 50,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A resilient Bio-Mech built from the core thoraxes, chest cavities, rib cages, and central nervous systems of Bio-Titans. Layers of thickened carapace with the ability to regenerate grow on its fleshy form."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Heavily Armoured Carapace"]
+  },
+  {
+    "id": "ff9af5ce-df71-40cc-8e2e-8141b5a8c1d0",
+    "name": "Stormterror",
+    "source": "We Were Here First!",
+    "page": 68,
+    "patterns": [
+      {
+        "name": "Screecher Pattern Stormterror",
+        "systems": [
+          {
+            "name": "Super-Sonic Screecher"
+          },
+          {
+            "name": "Bio-Talon",
+            "count": 3
+          },
+          {
+            "name": "Mutated Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Adrenal Glands"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Weapon Link Module"
+          },
+          {
+            "name": "Regeneration Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Created as an aerial assassin, this Stormterror Mech is fitted with a Super Sonic Screecher to scatter ground troops as it hones in on its target."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 30,
+    "energyPoints": 12,
+    "heatCapacity": 14,
+    "systemSlots": 20,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 30,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A Bio-Mech designed to destroy low-flying aircraft and perform hit-and-run attacks on enemy installations."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Integrated Monstrous Bio-Wings"]
+  },
+  {
+    "id": "79bef9bb-3222-4655-b1a9-911fe272ac2c",
+    "name": "Cranium Bio-Mech",
+    "source": "We Were Here First!",
+    "page": 70,
+    "patterns": [
+      {
+        "name": "Probe Pattern Cranium",
+        "systems": [
+          {
+            "name": "Bio-Talon"
+          },
+          {
+            "name": "EDG Alpha"
+          },
+          {
+            "name": "Escape Hatch"
+          },
+          {
+            "name": "Mutated Locomotion System"
+          },
+          {
+            "name": "Super-Sonic Screecher"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Firewall Module"
+          },
+          {
+            "name": "Mech Scrambler"
+          },
+          {
+            "name": "Neuralink Module"
+          },
+          {
+            "name": "Panda Sneeze Module"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Data logs reveal that this Bio-Mech was used to break the will of the President of the Dahlia Foundation and obtain the access codes to their bunker, where the last of their people were holding out against corpo forces."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 18,
+    "energyPoints": 16,
+    "heatCapacity": 10,
+    "systemSlots": 14,
+    "moduleSlots": 5,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 18,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Fashioned from the engorged craniums of brain bugs, this bloated, slug like Bio-Chassis was deployed to interrogate high-value targets, siphoning succulent secrets straight from their brainstem and feeding it to the Pilot."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Probing Proboscis"]
+  },
+  {
+    "id": "ea209e85-964d-437a-b552-423f540719cf",
+    "name": "Scuttler Bio-Mech",
+    "source": "We Were Here First!",
+    "page": 72,
+    "patterns": [
+      {
+        "name": "Harvester Pattern Scuttler",
+        "systems": [
+          {
+            "name": "Bio-Maw"
+          },
+          {
+            "name": "Bio-Talon"
+          },
+          {
+            "name": "Chimerium Harvester"
+          },
+          {
+            "name": "Escape Hatch"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Neuralink Module"
+          },
+          {
+            "name": "Olfactory Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Designed by the Red Mesa Facility to harvest Chimerium in the most hard-to-reach places, whilst having some nasty defensive capabilities in the form of its Maw and Talons if cornered."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 14,
+    "energyPoints": 10,
+    "heatCapacity": 13,
+    "systemSlots": 16,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 14,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed from the spider-like legs on many Bio-Titans, this light and fast Bio-Chassis is able to rapidly traverse a wide array of terrain."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Integrated Scuttling Locomotion System"]
   }
 ]

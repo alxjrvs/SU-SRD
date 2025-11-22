@@ -458,5 +458,89 @@
         "value": "[(CHASSIS)] has an integrated Vectored Thrust Unit System which is included in its profile. This functions as a standard VTU System."
       }
     ]
+  },
+  {
+    "name": "Rugged Chassis",
+    "id": "d04e560b-4e9b-468c-8c3b-e76fa1a701b4",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Designed to survive in the harsh conditions of the Arid Steppes and withstand brutal punishment. When this Chassis takes damage, reduce the amount by 1. This can reduce damage to 0."
+      }
+    ]
+  },
+  {
+    "name": "Bio-Chassis",
+    "id": "95d876f8-bd10-4fa0-a169-346bbdf1e4d1",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This chassis is made of living Bio-Titan flesh. See rules for Bio-Chassis."
+      }
+    ]
+  },
+  {
+    "name": "Heavily Armoured Carapace",
+    "id": "2d5162ab-4066-4dea-ba60-87437e7e0bfa",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Fleshripper Bio-Chassis has 3 layers of Armour Plating. When it takes damage, remove a layer of Armour Plating. The Fleshripper Bio-Chassis instead takes no damage and suffers no other effects. The Armour Plating regenerates fully during Downtime."
+      },
+      {
+        "type": "paragraph",
+        "value": "In addition, when you roll on the Bio-Chassis Critical Damage Table you may re-roll the result, accepting the second."
+      }
+    ]
+  },
+  {
+    "name": "Integrated Monstrous Bio-Wings",
+    "id": "891c406a-ea02-44e2-b089-6b6d9a416ce0",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Stormterror gains the Fly Trait. This allows it to fly over all obstacles and terrain. All attacks against the Stormterror when it is flying are treated as though it is in Long Range. In addition, once per turn (as long as The Stormterror is flying) it may move an additional Range Band as a Free Action."
+      }
+    ]
+  },
+  {
+    "name": "Probing Proboscis",
+    "id": "37ea0154-31b4-4235-8bde-7949bcd10bf1",
+    "actionType": "Turn",
+    "activationCost": 2,
+    "range": ["Close"],
+    "traits": [
+      {
+        "type": "melee"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Probing Proboscis penetrates through the skull, to the frontal lobe of a creature, extracting its brain matter to glean knowledge from the darkest recesses of its mind. When you use this Ability choose a target creature in Range. This Ability does not affect Bio-Titans or Meld."
+      },
+      {
+        "type": "paragraph",
+        "value": "ROLL THE DIE"
+      }
+    ],
+    "table": {
+      "1": "The Probing Proboscis fails to penetrate the target and leaves you exposed. You gain the Vulnerable Trait until the start of your next turn.",
+      "20": "You may ask the Mediator 5 questions and they will answer based on what the creature would know. The target creature then dies.",
+      "11-19": "You may ask the Mediator 3 questions and they will answer based on what the creature would know. The target creature then dies.",
+      "6-10": "You may ask the Mediator 2 questions and they will answer based on what the creature would know. One of these answers will contain some false information. The target creature rolls on the Critical Damage Table.",
+      "2-5": "The Probing Proboscis fails to penetrate the target.",
+      "type": "standard"
+    }
+  },
+  {
+    "name": "Integrated Scuttling Locomotion System",
+    "id": "83e032ec-2525-4917-be24-79f66375ec80",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Allows the Scuttler to move normally and grants it the Climb and Fast Traits."
+      }
+    ]
   }
 ]

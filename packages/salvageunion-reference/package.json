@@ -35,7 +35,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "rm -rf dist && bun test && npm-run-all --parallel docs generate && tsc --project tsconfig.build.json && npm-run-all --parallel format lint",
+    "build": "rm -rf dist && bun test && npm-run-all --parallel docs generate && tsc --project tsconfig.build.json && bun run validate:all && npm-run-all --parallel format lint",
     "build:quick": "bun run generate && tsc --project tsconfig.build.json",
     "build:incremental": "bun run generate && tsc --project tsconfig.build.json --incremental",
     "watch": "bun run generate && tsc --project tsconfig.build.json --watch",
@@ -57,6 +57,8 @@
     "generate": "bun run generate:types && bun run generate:typeIndex && bun run generate:index && bun run generate:utilities && bun run lint -- --fix && bun run format",
     "validate:generated": "tsx tools/validateGenerated.ts",
     "validate:references": "tsx tools/validateReferences.ts",
+    "validate:actions": "tsx tools/validateActionReferences.ts",
+    "validate:all": "npm-run-all --parallel validate:ids validate:references validate:actions",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "test": "bun test",
     "test:coverage": "bun test --coverage",

@@ -46,7 +46,7 @@
     "id": "5b1e5b18-c023-4e7c-a6b9-c6a22cb6e48d",
     "source": "Salvage Union Workshop Manual",
     "name": "Veteran",
-    "actions": ["Green Laser Rifle (Veteran)", "Portable comms Unit (NPC)"],
+    "actions": ["Green Laser Rifle (Veteran)", "Portable Comms Unit (NPC)"],
     "hitPoints": 9,
     "page": 298,
     "content": [
@@ -60,7 +60,7 @@
     "id": "ad0a3127-2fb2-4d38-af8e-7fc76d9d05d9",
     "source": "Salvage Union Workshop Manual",
     "name": "Combat Pilot",
-    "actions": ["Pistol (Combat Pilot)", "Portable comms Unit (NPC)"],
+    "actions": ["Pistol (Combat Pilot)", "Portable Comms Unit (NPC)"],
     "hitPoints": 10,
     "page": 298,
     "content": [
@@ -74,7 +74,7 @@
     "id": "15ff8ca3-a759-4c39-a546-1cac319ffc4e",
     "source": "Salvage Union Workshop Manual",
     "name": "Ace",
-    "actions": ["Sniper Rifle (Ace)", "Portable comms Unit (NPC)"],
+    "actions": ["Sniper Rifle (Ace)", "Portable Comms Unit (NPC)"],
     "hitPoints": 16,
     "page": 298,
     "content": [
@@ -83,5 +83,52 @@
         "value": "A veteran Mech Pilot, usually with Corpo training."
       }
     ]
+  },
+  {
+    "id": "6e32a3fe-d645-4120-bf39-ff33721dd3bb",
+    "name": "Chimerium Mutant",
+    "source": "We Were Here First!",
+    "hitPoints": 5,
+    "bioSalvageValue": 1,
+    "actions": ["Mutated Weapon (Chimerium Mutant)", "Random Mutation (Chimerium Mutant)"],
+    "page": 54,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Humans twisted by Chimerium mutation."
+      }
+    ]
+  },
+  {
+    "id": "aae3317d-ada2-42d8-ab59-78c2765136e2",
+    "name": "Chimerium Chosen",
+    "source": "We Were Here First!",
+    "hitPoints": 8,
+    "bioSalvageValue": 2,
+    "actions": [
+      "Bio-Rifle (Chimerium Chosen)",
+      "Mutated Weapon (Chimerium Chosen)",
+      "Random Mutation (Chimerium Chosen)"
+    ],
+    "page": 54,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Chosen of the Mastermind. Fierce Chimerium enhanced warriors."
+      }
+    ]
+  },
+  {
+    "id": "9791494b-69fa-4fe8-87ed-e4d7b5f94730",
+    "name": "Chimerium Mutant Squad",
+    "source": "We Were Here First!",
+    "hitPoints": 10,
+    "bioSalvageValue": 2,
+    "actions": [
+      "Mutated Weapons (Chimerium Mutant Squad)",
+      "Random Mutation (Chimerium Mutant Squad)"
+    ],
+    "page": 54,
+    "content": []
   }
 ]

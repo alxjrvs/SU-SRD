@@ -18,6 +18,10 @@
     "properties": {
       "hitPoints": {
         "$ref": "shared/common.schema.json#/definitions/hitPoints"
+      },
+      "bioSalvageValue": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger",
+        "description": "Bio-salvage value for Chimerium mutants"
       }
     },
     "unevaluatedProperties": false

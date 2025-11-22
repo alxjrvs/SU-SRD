@@ -183,6 +183,24 @@ export function isKeyword(entity: SURefMetaEntity): entity is SURefKeyword {
 }
 
 /**
+ * Type guard to check if an entity is a Lance
+ * @param entity - The entity to check
+ * @returns True if the entity is a Lance
+ */
+export function isLance(entity: SURefMetaEntity): entity is SURefLance {
+  return (
+    'id' in entity &&
+    'name' in entity &&
+    'source' in entity &&
+    'page' in entity &&
+    'goals' in entity &&
+    'assets' in entity &&
+    'weaknesses' in entity &&
+    'formation' in entity
+  )
+}
+
+/**
  * Type guard to check if an entity is a Meld
  * @param entity - The entity to check
  * @returns True if the entity is a Meld
@@ -273,6 +291,7 @@ import type {
   SURefDrone,
   SURefEquipment,
   SURefKeyword,
+  SURefLance,
   SURefMeld,
   SURefMetaAbilityTreeRequirement,
   SURefMetaCrawlerTechLevel,
@@ -657,6 +676,44 @@ export function getBonusPerTechLevel(
     !Array.isArray(entity.bonusPerTechLevel)
     ? entity.bonusPerTechLevel
     : undefined
+}
+
+/**
+ * Extract goals from an entity
+ * @param entity - The entity to extract from
+ * @returns The goals or undefined
+ */
+export function getGoals(entity: SURefMetaEntity): string | undefined {
+  return 'goals' in entity && typeof entity.goals === 'string' ? entity.goals : undefined
+}
+
+/**
+ * Extract assets from an entity
+ * @param entity - The entity to extract from
+ * @returns The assets or undefined
+ */
+export function getAssets(entity: SURefMetaEntity): string | undefined {
+  return 'assets' in entity && typeof entity.assets === 'string' ? entity.assets : undefined
+}
+
+/**
+ * Extract weaknesses from an entity
+ * @param entity - The entity to extract from
+ * @returns The weaknesses or undefined
+ */
+export function getWeaknesses(entity: SURefMetaEntity): string | undefined {
+  return 'weaknesses' in entity && typeof entity.weaknesses === 'string'
+    ? entity.weaknesses
+    : undefined
+}
+
+/**
+ * Extract formation from an entity
+ * @param entity - The entity to extract from
+ * @returns The formation or undefined
+ */
+export function getFormation(entity: SURefMetaEntity): unknown | undefined {
+  return 'formation' in entity ? entity.formation : undefined
 }
 
 /**

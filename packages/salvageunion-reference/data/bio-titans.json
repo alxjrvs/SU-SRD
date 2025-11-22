@@ -124,5 +124,25 @@
         "value": "A mammoth, amphibian lizard said to have been born in the aftermath of the first nuclear war. It dwells somewhere deep within The Great Cape and was responsible for the destruction of the Kombu Tech home arco, a coastal city of a million souls."
       }
     ]
+  },
+  {
+    "id": "ab560707-8448-47be-9cfb-4dca5ead08c1",
+    "source": "We Were Here First!",
+    "name": "Cortex Bio-Titan",
+    "actions": [
+      "One Step Ahead (Cortex Bio-Titan)",
+      "Proboscis (Cortex Bio-Titan)",
+      "Mutant Fanatics (Cortex Bio-Titan)",
+      "Probing Telepathy (Cortex Bio-Titan)",
+      "Titanic Actions (Cortex Bio-Titan)"
+    ],
+    "structurePoints": 10,
+    "page": 56,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A Bio-Titan developed by the Red Mesa researchers to be hyper-intelligent. It resembles a bloated slug, with hundreds of tiny eyes and a huge tentacle-like proboscis protruding from its drooling mouth."
+      }
+    ]
   }
 ]

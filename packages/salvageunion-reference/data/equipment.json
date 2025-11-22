@@ -612,7 +612,7 @@
     "indexable": false,
     "source": "Salvage Union Workshop Manual",
     "techLevel": 1,
-    "actions": ["Knife Missle"],
+    "actions": ["Knife Missile"],
     "page": 73,
     "id": "256126db-8ba3-4a57-975a-2ed74832b983"
   },
@@ -621,7 +621,7 @@
     "indexable": false,
     "source": "Salvage Union Workshop Manual",
     "techLevel": 1,
-    "actions": ["Custom Missle Launcher"],
+    "actions": ["Custom Missile Launcher"],
     "page": 73,
     "id": "d83b2f0b-ba15-431d-baa2-2e2381a4d9fb",
     "content": [
@@ -776,5 +776,37 @@
     "blackMarket": true,
     "page": 71,
     "actions": ["Blinding Blue Laser Rifle"]
+  },
+  {
+    "id": "a9dd2333-2e2c-4866-93a7-a7861e20ae05",
+    "source": "We Were Here First!",
+    "name": "Chimerium Salvaging Tools",
+    "techLevel": 1,
+    "actions": ["Chimerium Salvaging Tools"],
+    "page": 63
+  },
+  {
+    "id": "9c017d05-8ba7-4225-a203-b2bf9d240bcb",
+    "source": "We Were Here First!",
+    "name": "Bio-Scanner",
+    "techLevel": 1,
+    "actions": ["Bio-Scanner"],
+    "page": 63
+  },
+  {
+    "id": "4f715070-4a94-4211-829f-4479364ff159",
+    "source": "We Were Here First!",
+    "name": "Bio-Rifle",
+    "techLevel": 3,
+    "actions": ["Bio-Rifle (Equipment)"],
+    "page": 63
+  },
+  {
+    "id": "889d913f-549d-40d2-8a4e-51b3ae7877e9",
+    "source": "We Were Here First!",
+    "name": "Chimerium Beast Companion",
+    "techLevel": 4,
+    "actions": ["Chimerium Beast Companion"],
+    "page": 63
   }
 ]

@@ -1004,5 +1004,85 @@
     "blackMarket": true,
     "page": 71,
     "actions": ["Rad Wave Generator"]
+  },
+  {
+    "id": "2d55bd6c-1e38-48b5-8d4e-0e1699420537",
+    "source": "We Were Here First!",
+    "name": "Super-Sonic Screecher",
+    "techLevel": "B",
+    "slotsRequired": 5,
+    "salvageValue": 12,
+    "page": 74,
+    "actions": ["Super-Sonic Screecher"]
+  },
+  {
+    "id": "610ae724-5c73-437f-bf19-ff3af032885e",
+    "source": "We Were Here First!",
+    "name": "EDG Alpha",
+    "techLevel": "B",
+    "slotsRequired": 5,
+    "salvageValue": 16,
+    "page": 74,
+    "actions": ["EDG Alpha"]
+  },
+  {
+    "id": "b2e026c2-aee7-4675-ac8d-5c2417e10423",
+    "source": "We Were Here First!",
+    "name": "Bio-Talon",
+    "techLevel": "B",
+    "slotsRequired": 4,
+    "salvageValue": 6,
+    "page": 74,
+    "actions": ["Bio-Talon"]
+  },
+  {
+    "id": "2dfa05cd-6b29-4757-8f46-3b0f7bd7e701",
+    "source": "We Were Here First!",
+    "name": "Acid Cannon",
+    "techLevel": "B",
+    "slotsRequired": 7,
+    "salvageValue": 20,
+    "page": 74,
+    "actions": ["Acid Cannon"]
+  },
+  {
+    "id": "392f90c7-05cb-424c-9dcd-8237216a6a24",
+    "source": "We Were Here First!",
+    "name": "Bio-Wings",
+    "techLevel": "B",
+    "slotsRequired": 6,
+    "salvageValue": 25,
+    "page": 74,
+    "actions": ["Bio-Wings"]
+  },
+  {
+    "id": "8ec910ec-a87a-4d06-a8c6-f07ddb240cf9",
+    "source": "We Were Here First!",
+    "name": "Bio-Maw",
+    "techLevel": "B",
+    "slotsRequired": 6,
+    "salvageValue": 24,
+    "page": 74,
+    "actions": ["Bite (Bio-Maw)", "Consume (Bio-Maw)"]
+  },
+  {
+    "id": "50ecbfb3-8a66-43b2-a3dd-c328cea933e9",
+    "source": "We Were Here First!",
+    "name": "Chimerium Harvester",
+    "techLevel": 3,
+    "slotsRequired": 3,
+    "salvageValue": 2,
+    "page": 74,
+    "actions": ["Chimerium Harvester"]
+  },
+  {
+    "id": "7321ad43-af2e-4d2b-bd2d-5f75688f331a",
+    "source": "We Were Here First!",
+    "name": "Mutated Locomotion System",
+    "techLevel": "B",
+    "slotsRequired": 3,
+    "salvageValue": 4,
+    "page": 75,
+    "actions": ["Mutated Locomotion System"]
   }
 ]

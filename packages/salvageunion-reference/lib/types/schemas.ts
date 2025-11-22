@@ -6,7 +6,11 @@
 
 import type { SURefEnumActionType, SURefEnumDamageType, SURefEnumTree } from './enums.js'
 
-import type { SURefCommonHitPoints, SURefCommonPositiveInteger } from './common.js'
+import type {
+  SURefCommonHitPoints,
+  SURefCommonNonNegativeInteger,
+  SURefCommonPositiveInteger,
+} from './common.js'
 
 import type {
   SURefObjectAction,
@@ -18,6 +22,7 @@ import type {
   SURefObjectChoices,
   SURefObjectCombatEntity,
   SURefObjectContent,
+  SURefObjectFormationMech,
   SURefObjectGrant,
   SURefObjectMechanicalEntity,
   SURefObjectNpc,
@@ -201,6 +206,29 @@ export interface SURefKeyword extends SURefObjectBaseEntity {
 }
 
 /**
+ * Lance formations and groups in Salvage Union
+ */
+export interface SURefLance extends SURefObjectBaseEntity {
+  /**
+   * The goals and motivations of this lance
+   */
+  goals: string
+  /**
+   * The assets and resources controlled by this lance
+   */
+  assets: string
+  /**
+   * The weaknesses and vulnerabilities of this lance
+   */
+  weaknesses: string
+  /**
+   * The mechs that make up this lance formation
+   */
+  formation: SURefObjectFormationMech[]
+  content?: SURefObjectContent
+}
+
+/**
  * Meld-infected creatures in Salvage Union
  */
 export interface SURefMeld extends SURefObjectBaseEntity {
@@ -233,6 +261,10 @@ export type SURefModule = SURefObjectSystemModule & SURefObjectBaseEntity
  */
 export interface SURefNPC extends SURefObjectBaseEntity, SURefObjectCombatEntity {
   hitPoints: SURefCommonHitPoints
+  /**
+   * Bio-salvage value for Chimerium mutants
+   */
+  bioSalvageValue?: SURefCommonNonNegativeInteger
 }
 
 /**
