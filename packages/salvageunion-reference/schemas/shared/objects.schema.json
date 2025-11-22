@@ -140,6 +140,21 @@
           "items": {
             "$ref": "#/definitions/trait"
           }
+        },
+        "energyPoints": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "heatCapacity": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "systemSlots": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "moduleSlots": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "cargoCapacity": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         }
       }
     },
@@ -881,6 +896,17 @@
         "hidden": {
           "type": "boolean",
           "description": "If true, this action will not affect the rendering of the entity display"
+        },
+        "activationCurrency": {
+          "type": "string",
+          "enum": ["EP or AP", "SP or HP", "Variable"],
+          "description": "The currency type for activation cost (EP/AP, SP/HP, or Variable)"
+        },
+        "source": {
+          "$ref": "enums.schema.json#/definitions/source"
+        },
+        "page": {
+          "$ref": "common.schema.json#/definitions/positiveInteger"
         }
       }
     },

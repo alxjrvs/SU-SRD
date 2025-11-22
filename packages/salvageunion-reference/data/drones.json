@@ -144,26 +144,5 @@
         "value": "A miniaturised corpo stealth drone developed for black ops and wetwork."
       }
     ]
-  },
-  {
-    "id": "14721d4b-bdbf-4433-a812-d90abafbfc30",
-    "source": "False Flag",
-    "name": "Big Brother Drone",
-    "systems": ["Hover Locomotion System"],
-    "techLevel": 5,
-    "salvageValue": 1,
-    "structurePoints": 3,
-    "energyPoints": 4,
-    "heatCapacity": 4,
-    "systemSlots": 4,
-    "moduleSlots": 1,
-    "cargoCapacity": 2,
-    "page": 62,
-    "content": [
-      {
-        "type": "paragraph",
-        "value": "Big Brother Drones are programmed with swarm protocols that make them act as a single unified force. Their distinctive buzzing sound spells doom for pilots. They may be customised as a Mech using their profile."
-      }
-    ]
   }
 ]

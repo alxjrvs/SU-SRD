@@ -104,17 +104,18 @@
   {
     "id": "46102100-e51b-48a1-9264-4025105d7c2b",
     "source": "Rainmaker",
+    "page": 81,
     "name": "Basement Frogs",
     "actions": ["Pseudo-teeth", "Tongue Lash"],
     "hitPoints": 2,
     "content": [
       {
         "type": "paragraph",
-        "value": "Territorial, large, aggressive frogs that use their tongues to trip and tangle prey."
+        "value": "Territorial, these frogs have grown large and aggressive to defend their home. They use their tongues to trip and tangle their prey so that the rest can descend on them."
       },
       {
         "type": "paragraph",
-        "value": "Ambush: Act first in combat; if another has similar ability, they act simultaneously."
+        "value": "Ambush: Basement Frogs always act first in combat. If someone else has a similar Ability they act simultaneously."
       }
     ]
   },
@@ -122,6 +123,7 @@
     "id": "7c9f8da0-7f31-429b-970e-5ec25d5fffef",
     "source": "Rainmaker",
     "name": "Ghost",
+    "page": 81,
     "actions": ["Metal Bars and Ripping Hands (Ghost)"],
     "hitPoints": 4,
     "content": [
@@ -143,6 +145,7 @@
     "id": "e4c80ede-89d0-483e-8f9f-6b080287f5ad",
     "source": "Rainmaker",
     "name": "Ghost Haunt",
+    "page": 81,
     "actions": ["Metal Bars and Ripping Hands (Ghost Haunt)"],
     "hitPoints": 12,
     "content": [

@@ -158,10 +158,7 @@
     "page": 79,
     "hitPoints": 8,
     "damageType": "HP",
-    "actions": [
-      "Machine-Pistols (Gully Crusher Squad)",
-      "Outrider Hunters"
-    ],
+    "actions": ["Machine-Pistols (Gully Crusher Squad)", "Outrider Hunters"],
     "content": [
       {
         "type": "paragraph",
@@ -195,10 +192,7 @@
     "page": 79,
     "hitPoints": 6,
     "damageType": "HP",
-    "actions": [
-      "Epoxy Guns (Cuspers Squad)",
-      "Hit & Run"
-    ],
+    "actions": ["Epoxy Guns (Cuspers Squad)", "Hit & Run"],
     "content": [
       {
         "type": "paragraph",
@@ -213,11 +207,7 @@
     "page": 79,
     "hitPoints": 8,
     "damageType": "HP",
-    "actions": [
-      "Fell Rifles (Fell Stalkers Squad)",
-      "Thermal Goggles",
-      "Born in the Saddle"
-    ],
+    "actions": ["Fell Rifles (Fell Stalkers Squad)", "Thermal Goggles", "Born in the Saddle"],
     "content": [
       {
         "type": "paragraph",

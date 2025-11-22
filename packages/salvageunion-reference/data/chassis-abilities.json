@@ -546,8 +546,6 @@
   {
     "name": "Integrated Hydrologic Locomotion System",
     "id": "ff2fa5e6-54a1-48f8-836c-d1cbc61f26fe",
-    "source": "False Flag",
-    "page": 54,
     "content": [
       {
         "type": "paragraph",
@@ -558,8 +556,6 @@
   {
     "name": "Dependable Chassis",
     "id": "e65a1db5-fb84-44f4-93b5-e68b80ac5b1e",
-    "source": "False Flag",
-    "page": 56,
     "content": [
       {
         "type": "paragraph",
@@ -570,8 +566,6 @@
   {
     "name": "Sub-Zero Engineered Chassis",
     "id": "5850e29b-9111-4d51-9120-db4c0375ffda",
-    "source": "False Flag",
-    "page": 59,
     "content": [
       {
         "type": "paragraph",
@@ -582,8 +576,6 @@
   {
     "name": "Parasitic Reactor",
     "id": "3dad8018-be52-48ef-be8b-0dc5a4317604",
-    "source": "False Flag",
-    "page": 60,
     "content": [
       {
         "type": "paragraph",
@@ -594,8 +586,6 @@
   {
     "name": "Parasitic Membrane",
     "id": "042f2f1f-f5dc-4606-a14e-dbf30991cd03",
-    "source": "False Flag",
-    "page": 60,
     "activationCost": 0,
     "actionType": "Turn",
     "range": ["Long"],
@@ -634,8 +624,6 @@
   {
     "name": "Cumbersome",
     "id": "33273f69-ca80-475e-a39a-192c025beaf2",
-    "source": "False Flag",
-    "page": 62,
     "content": [
       {
         "type": "paragraph",
@@ -646,20 +634,20 @@
   {
     "name": "Big Brother Drone Controller",
     "id": "f0b036f8-3924-4e90-935d-1f102a2d8cf3",
-    "source": "False Flag",
-    "page": 62,
     "content": [
       {
         "type": "paragraph",
         "value": "The Big Brother controls a suite of Drones. The Big Brother can control up to 4 Big Brother Drones, and the Pilot may issue commands up to Far Range as a Free Action. The Big Brother Drones have their own turn in the turn order, and always act simultaneously."
+      },
+      {
+        "type": "paragraph",
+        "value": "The Big Brother Drones act separately to [(CHASSIS)] on their own turn, and are controlled by the Pilot. They function effectively as Mechs, but cannot Push. They can be installed with Systems and Modules and restore their SP and EP in a T3 or higher Mech Bay during Downtime. If the Drones are damaged they can be repaired as though they were Mechs. If they are destroyed you may craft new Big Brother Drones for 2 Tech 5 Scrap as per the crafting rules. [(CHASSIS)] may have up to 4 active Big Brother Drones at a time. Big Brother Drone Stats: 3 SP, 4 EP, 4 Heat Cap, 4 System Slots, 1 Module Slot, 2 Cargo Cap, Tech Level 5, Salvage Value 1. Integrated Hover Locomotion System."
       }
     ]
   },
   {
     "name": "MELD",
     "id": "d9f8aad4-45a6-41ca-913e-38111be14497",
-    "source": "False Flag",
-    "page": 64,
     "content": [
       {
         "type": "paragraph",
@@ -670,8 +658,6 @@
   {
     "name": "Integrated Meld Locomotion",
     "id": "8f45ec86-c4cf-490c-b7ef-80e6cf3ad067",
-    "source": "False Flag",
-    "page": 64,
     "content": [
       {
         "type": "paragraph",
@@ -682,8 +668,6 @@
   {
     "name": "Integrated Neuralink Communicator",
     "id": "dfa5c157-5281-4d20-afdd-f7d990d6d68e",
-    "source": "False Flag",
-    "page": 64,
     "content": [
       {
         "type": "paragraph",
@@ -694,8 +678,6 @@
   {
     "name": "Mech Replication",
     "id": "2af25422-a3ed-426e-b07e-d1d2c7587442",
-    "source": "False Flag",
-    "page": 64,
     "activationCost": 0,
     "actionType": "Short",
     "range": ["Close"],
@@ -739,8 +721,6 @@
   {
     "name": "Integrated Wader Locomotion System",
     "id": "3db49582-3b13-4228-b59f-0937d274bc32",
-    "source": "Rainmaker",
-    "page": 60,
     "content": [
       {
         "type": "paragraph",
@@ -751,8 +731,6 @@
   {
     "name": "Hybrid Diesel Reactor",
     "id": "cf7be84e-2604-476c-a8e4-803c1ac08f05",
-    "source": "Rainmaker",
-    "page": 60,
     "content": [
       {
         "type": "paragraph",
@@ -771,8 +749,6 @@
   {
     "name": "Excoriate",
     "id": "92a43d31-60ab-4eb0-882e-7a41936d1ac6",
-    "source": "Rainmaker",
-    "page": 68,
     "actionType": "Free",
     "content": [
       {
@@ -788,8 +764,6 @@
   {
     "name": "Automech",
     "id": "e3b6c1ac-e23e-4332-9930-fab3da86e42a",
-    "source": "Rainmaker",
-    "page": 62,
     "content": [
       {
         "type": "paragraph",
@@ -800,8 +774,6 @@
   {
     "name": "Hell Fumes",
     "id": "084a74be-8a8a-4382-81a3-0db67e5a8bc9",
-    "source": "Rainmaker",
-    "page": 62,
     "activationCost": 3,
     "actionType": "Turn",
     "range": ["Long"],
@@ -823,8 +795,6 @@
   {
     "name": "Integrated Advanced Stabilising Locomotion System",
     "id": "9dd10211-7f3d-410c-8975-93ca8ebf41f7",
-    "source": "Rainmaker",
-    "page": 64,
     "content": [
       {
         "type": "paragraph",
@@ -843,8 +813,6 @@
   {
     "name": "Demonic Visage",
     "id": "a1828bb8-2fc4-4a13-8f61-fdd88bc3374d",
-    "source": "Rainmaker",
-    "page": 66,
     "content": [
       {
         "type": "paragraph",
@@ -855,8 +823,6 @@
   {
     "name": "Energy Smite",
     "id": "2f646a21-5f63-47f2-ad46-c5223a125997",
-    "source": "Rainmaker",
-    "page": 70,
     "activationCost": "X",
     "actionType": "Free",
     "content": [
@@ -869,8 +835,6 @@
   {
     "name": "Cerberus Control System",
     "id": "802bba11-0f4d-4dcd-82f4-ed7acb6920e1",
-    "source": "Rainmaker",
-    "page": 72,
     "content": [
       {
         "type": "paragraph",

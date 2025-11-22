@@ -10807,8 +10807,6 @@
   {
     "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
     "name": "Meld Injector",
-    "source": "False Flag",
-    "page": 68,
     "actionType": "Turn",
     "range": [
       "Close"
@@ -10832,8 +10830,6 @@
   {
     "id": "d6c5cbbd-1874-4432-beb8-e823465b64d8",
     "name": "Meld Manipulator",
-    "source": "False Flag",
-    "page": 68,
     "actionType": "Turn",
     "range": [
       "Close"
@@ -10860,8 +10856,6 @@
   {
     "id": "400e1fb8-b36d-421a-9052-72b0130f2db2",
     "name": "Overcharged Green Laser",
-    "source": "False Flag",
-    "page": 68,
     "actionType": "Turn",
     "range": [
       "Medium"
@@ -10889,8 +10883,6 @@
   {
     "id": "811977fb-e4fb-403a-8665-ac5eae79d412",
     "name": "Nanite Sifter",
-    "source": "False Flag",
-    "page": 68,
     "actionType": "Turn",
     "range": [
       "Close"
@@ -10921,8 +10913,6 @@
   {
     "id": "15eb9549-bc4e-4e78-816d-1e12ff70a2f1",
     "name": "Refine (Nanite Sifter)",
-    "source": "False Flag",
-    "page": 68,
     "actionType": "Long",
     "activationCost": 1,
     "content": [
@@ -10935,8 +10925,6 @@
   {
     "id": "e22738e3-8204-498d-892d-fa3aee59ead4",
     "name": "Meld Spore Launcher",
-    "source": "False Flag",
-    "page": 68,
     "actionType": "Turn",
     "range": [
       "Long"
@@ -10975,8 +10963,6 @@
   {
     "id": "ddb136e9-f203-427d-a41a-94e01584b00b",
     "name": "Replicate (Meld System Replicator)",
-    "source": "False Flag",
-    "page": 69,
     "actionType": "Turn",
     "range": [
       "Close"
@@ -10992,8 +10978,6 @@
   {
     "id": "a1b3e173-a5e0-47ec-bd36-95cf07cef7bc",
     "name": "Meld System Replicator",
-    "source": "False Flag",
-    "page": 69,
     "content": [
       {
         "type": "paragraph",
@@ -11004,8 +10988,6 @@
   {
     "id": "b43c3e9b-eaca-4341-a89c-3fe848c736eb",
     "name": "Meld Tendrils",
-    "source": "False Flag",
-    "page": 69,
     "actionType": "Turn",
     "range": [
       "Medium"
@@ -11083,8 +11065,6 @@
   {
     "id": "e98fa567-c485-47f5-803b-b2f08e1cb8bd",
     "name": "Nanite Reconstruction (Meld Regenerator)",
-    "source": "False Flag",
-    "page": 70,
     "actionType": "Passive",
     "content": [
       {
@@ -11104,8 +11084,6 @@
   {
     "id": "34b68549-6a95-4fd1-8fd4-09301c7ac3cf",
     "name": "Nanite Repair (Meld Regenerator)",
-    "source": "False Flag",
-    "page": 70,
     "actionType": "Reaction",
     "activationCost": 3,
     "content": [
@@ -11126,8 +11104,6 @@
   {
     "id": "327d2178-6a20-436a-b8c7-7c60d7fa91d7",
     "name": "Meld Regenerator",
-    "source": "False Flag",
-    "page": 70,
     "content": [
       {
         "type": "paragraph",
@@ -11138,8 +11114,6 @@
   {
     "id": "d1cbda54-90e6-4d92-bdb9-6c8b160638fe",
     "name": "Meld Distorter",
-    "source": "False Flag",
-    "page": 70,
     "actionType": "Turn",
     "range": [
       "Close"
@@ -11174,7 +11148,9 @@
   },
   {
     "id": "a57c0c27-190c-47f6-a649-de6335efd946",
-    "range": ["Long"],
+    "range": [
+      "Long"
+    ],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -11204,7 +11180,9 @@
   },
   {
     "id": "cfe37881-a3ce-4545-b081-18f6c058eeb2",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "damage": {
       "damageType": "HP",
       "amount": 6
@@ -11228,7 +11206,9 @@
   {
     "id": "8e59d1ad-e5cd-40bb-aaf8-58c228f2f74b",
     "actionType": "Turn",
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "name": "Handheld Meld Injector",
     "content": [
       {
@@ -11249,7 +11229,9 @@
   },
   {
     "id": "8b0f4051-e8bb-49f4-9849-1918690f0c05",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -11287,7 +11269,9 @@
   {
     "id": "52bb3a90-6642-4847-9bb4-d996a767e7ef",
     "name": "Deployable .50 Cal Machine Gun",
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -11320,7 +11304,9 @@
   {
     "id": "f889193e-e842-4a1b-9462-431564522eec",
     "name": "Machine Pistols",
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -11348,7 +11334,9 @@
   {
     "id": "1a48a9cb-df87-4732-82ef-ebb8bcf485e7",
     "name": "Epoxy Gun",
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -11367,7 +11355,9 @@
   {
     "id": "ca6a0f7f-8f47-4234-a348-5675402140f0",
     "name": "Rebar Lance",
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -11391,7 +11381,9 @@
   {
     "id": "aba98f6c-e5e6-4dac-b0b9-13b93836bb2e",
     "name": "Lance Charge",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "actionType": "Turn",
     "content": [
       {
@@ -11407,7 +11399,9 @@
   {
     "id": "997d8dd7-9002-496c-83a9-6a954b43da02",
     "name": "Servo Lasso",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "content": [
       {
         "type": "paragraph",
@@ -11422,7 +11416,9 @@
   {
     "id": "70179219-f6ad-41e8-aaab-f2091400a6ef",
     "name": "Fell Rifle",
-    "range": ["Long"],
+    "range": [
+      "Long"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -11446,9 +11442,9 @@
   {
     "id": "cb744f12-f69f-427b-949e-6cecc6b1d173",
     "name": "Machine-Pistols (Gully Crusher Squad)",
-    "source": "Rainmaker",
-    "page": 79,
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -11472,8 +11468,6 @@
   {
     "id": "8f41be1c-8069-4bfb-979b-8358e2789661",
     "name": "Outrider Hunters",
-    "source": "Rainmaker",
-    "page": 79,
     "content": [
       {
         "type": "paragraph",
@@ -11484,9 +11478,9 @@
   {
     "id": "355d08a3-c640-49f9-9eca-7ad9c02055bc",
     "name": "Improvised Explosive Device (Flint Children Squad)",
-    "source": "Rainmaker",
-    "page": 79,
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -11511,8 +11505,6 @@
   {
     "id": "21a15e23-6b4f-427b-82ac-a4c98f90aa16",
     "name": "Demolition Experts",
-    "source": "Rainmaker",
-    "page": 79,
     "content": [
       {
         "type": "paragraph",
@@ -11523,8 +11515,6 @@
   {
     "id": "1750ed33-8a3a-49d2-86c5-86ee02df0f08",
     "name": "Minefield",
-    "source": "Rainmaker",
-    "page": 79,
     "content": [
       {
         "type": "paragraph",
@@ -11535,9 +11525,9 @@
   {
     "id": "bf5fee40-2333-40bf-bbda-94e1ccdecaab",
     "name": "Epoxy Guns (Cuspers Squad)",
-    "source": "Rainmaker",
-    "page": 79,
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -11562,8 +11552,6 @@
   {
     "id": "6c68d814-7334-460d-b838-096aaa2ef372",
     "name": "Hit & Run",
-    "source": "Rainmaker",
-    "page": 79,
     "content": [
       {
         "type": "paragraph",
@@ -11574,9 +11562,9 @@
   {
     "id": "0ca7b931-beec-490a-b75d-38f1feb1a90b",
     "name": "Fell Rifles (Fell Stalkers Squad)",
-    "source": "Rainmaker",
-    "page": 79,
-    "range": ["Long"],
+    "range": [
+      "Long"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -11604,8 +11592,6 @@
   {
     "id": "5c6f77d1-961d-4216-9f8e-2943ee25495b",
     "name": "Born in the Saddle",
-    "source": "Rainmaker",
-    "page": 79,
     "content": [
       {
         "type": "paragraph",
@@ -11616,9 +11602,9 @@
   {
     "id": "d70135ab-0cd4-4706-ad7f-01716b6ddf0c",
     "name": "Rebar Lances (Free Hill Coalition Squad)",
-    "source": "Rainmaker",
-    "page": 79,
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -11642,9 +11628,9 @@
   {
     "id": "7b1efaf3-5ae6-45bb-b7c9-81ba066a041a",
     "name": "Servo-Lasso (Free Hill Coalition Squad)",
-    "source": "Rainmaker",
-    "page": 79,
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "content": [
       {
         "type": "paragraph",
@@ -11659,8 +11645,6 @@
   {
     "id": "64a9f7ef-133a-46d8-be08-ab17be378985",
     "name": "Thermal Goggles",
-    "source": "Rainmaker",
-    "page": 79,
     "content": [
       {
         "type": "paragraph",
@@ -11673,8 +11657,6 @@
     "name": "Camouflaged Scales (Apophis)",
     "displayName": "Camouflaged Scales",
     "actionType": "Passive",
-    "source": "Rainmaker",
-    "page": 81,
     "content": [
       {
         "type": "paragraph",
@@ -11704,8 +11686,6 @@
         "type": "deadly"
       }
     ],
-    "source": "Rainmaker",
-    "page": 81,
     "content": [
       {
         "type": "paragraph",
@@ -11729,8 +11709,6 @@
         "type": "melee"
       }
     ],
-    "source": "Rainmaker",
-    "page": 81,
     "content": [
       {
         "type": "paragraph",
@@ -11743,8 +11721,6 @@
     "name": "Crush (Apophis)",
     "displayName": "Crush",
     "actionType": "Turn",
-    "source": "Rainmaker",
-    "page": 81,
     "content": [
       {
         "type": "paragraph",
@@ -11756,8 +11732,6 @@
     "id": "b239d9c5-ea33-4f5e-b7bf-5b0805efa3d4",
     "name": "Titanic Actions (Apophis)",
     "displayName": "Titanic Actions",
-    "source": "Rainmaker",
-    "page": 81,
     "content": [
       {
         "type": "paragraph",
@@ -11789,7 +11763,9 @@
   {
     "id": "32c1b47f-38cd-4de3-8447-8ff898aa73b9",
     "name": "Pilot Seeker Tendrils",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -11816,7 +11792,9 @@
   {
     "id": "f5ad4482-fb2b-468b-995c-9b930ac9356d",
     "name": "Puppeteer Tendrils",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "actionType": "Turn",
     "traits": [
       {
@@ -11833,7 +11811,9 @@
   {
     "id": "c07208c2-f5fc-40b3-a8d1-368039f82b0b",
     "name": "Mech Marionette",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "actionType": "Turn",
     "content": [
       {
@@ -11905,8 +11885,6 @@
     "id": "e0b63ff6-7541-49d7-bc8f-94308c415cec",
     "name": "Aquatic Ambusher (Genbu)",
     "displayName": "Aquatic Ambusher",
-    "source": "Rainmaker",
-    "page": 82,
     "actionType": "Passive",
     "content": [
       {
@@ -11919,9 +11897,9 @@
     "id": "8e6b4dc1-863d-4581-94a5-9c0742e9435e",
     "name": "Grasping Tentacles (Genbu)",
     "displayName": "Grasping Tentacles",
-    "source": "Rainmaker",
-    "page": 82,
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -11941,9 +11919,9 @@
     "id": "676f4cf0-9bbc-486c-96c8-c4c113347404",
     "name": "Mace-Tentacles (Genbu)",
     "displayName": "Mace-Tentacles",
-    "source": "Rainmaker",
-    "page": 82,
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -11972,8 +11950,6 @@
     "id": "34091167-a996-4455-8665-6b904b14961d",
     "name": "Shell Regeneration (Genbu)",
     "displayName": "Shell Regeneration",
-    "source": "Rainmaker",
-    "page": 82,
     "actionType": "Turn",
     "content": [
       {
@@ -11986,8 +11962,6 @@
     "id": "c33a9caf-aac3-423d-b6dc-4685472bd049",
     "name": "Armour Plating (Genbu)",
     "displayName": "Armour Plating",
-    "source": "Rainmaker",
-    "page": 82,
     "actionType": "Passive",
     "traits": [
       {
@@ -12006,8 +11980,6 @@
     "id": "055bf8d4-9a9f-43bb-a82b-9a791f90ea10",
     "name": "Cephalopod (Genbu)",
     "displayName": "Cephalopod",
-    "source": "Rainmaker",
-    "page": 82,
     "actionType": "Passive",
     "content": [
       {
@@ -12020,8 +11992,6 @@
     "id": "bf9470f6-5df0-405b-b550-b9f1feb0d228",
     "name": "Titanic Actions (Genbu)",
     "displayName": "Titanic Actions",
-    "source": "Rainmaker",
-    "page": 82,
     "content": [
       {
         "type": "paragraph",
@@ -12042,6 +12012,94 @@
       {
         "type": "list-item",
         "value": "Genbu uses its Shell Regeneration Ability."
+      }
+    ]
+  },
+  {
+    "id": "05957294-9d2b-4ce2-a77a-b55f744bbe53",
+    "name": "Pseudo-teeth",
+    "range": [
+      "Close"
+    ],
+    "damage": {
+      "damageType": "HP",
+      "amount": 1
+    },
+    "traits": [
+      {
+        "type": "melee"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Make a melee attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "11d76f01-536f-4e92-9325-c6f8c9fd4379",
+    "name": "Tongue Lash",
+    "range": [
+      "Close"
+    ],
+    "traits": [
+      {
+        "type": "pinning"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The creature uses its tongue to trip and tangle prey."
+      }
+    ]
+  },
+  {
+    "id": "2b67d7d6-3434-40c0-9cfe-5591b5092d41",
+    "name": "Metal Bars and Ripping Hands (Ghost)",
+    "range": [
+      "Close"
+    ],
+    "damage": {
+      "damageType": "SP",
+      "amount": 1
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "If this attack hits it damages a random System or Module on the target."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a melee attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "d13aa01b-3b60-44b7-8a42-a36d0b798097",
+    "name": "Metal Bars and Ripping Hands (Ghost Haunt)",
+    "range": [
+      "Close"
+    ],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "traits": [
+      {
+        "type": "multi-attack",
+        "amount": 2
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "If this attack hits it destroys a random System or Module on the target."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a melee attack against a target within Range."
       }
     ]
   }
