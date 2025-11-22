@@ -33,9 +33,7 @@
     "name": "Data Scanner",
     "activationCost": 2,
     "actionType": "Short",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "scanner"
@@ -231,9 +229,7 @@
   },
   {
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -313,9 +309,7 @@
     "name": "Integrated Advanced Shield Projector",
     "activationCost": "X",
     "actionType": "Reaction",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "shield"
@@ -514,9 +508,7 @@
     "id": "b4da3397-d89a-4891-80fc-c5dde7ab25b7",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "melee"
@@ -548,6 +540,341 @@
       {
         "type": "paragraph",
         "value": "Allows the Scuttler to move normally and grants it the Climb and Fast Traits."
+      }
+    ]
+  },
+  {
+    "name": "Integrated Hydrologic Locomotion System",
+    "id": "ff2fa5e6-54a1-48f8-836c-d1cbc61f26fe",
+    "source": "False Flag",
+    "page": 54,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Kelpie has an Integrated Hydrologic Locomotion System, allowing it to move and function underwater but not on land."
+      }
+    ]
+  },
+  {
+    "name": "Dependable Chassis",
+    "id": "e65a1db5-fb84-44f4-93b5-e68b80ac5b1e",
+    "source": "False Flag",
+    "page": 56,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This Chassis gains the Dependable Trait. Additionally, you may re-roll results on the Critical Damage Table and on failed Heat Checks."
+      }
+    ]
+  },
+  {
+    "name": "Sub-Zero Engineered Chassis",
+    "id": "5850e29b-9111-4d51-9120-db4c0375ffda",
+    "source": "False Flag",
+    "page": 59,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Designed by Opus to operate within sub-zero temperatures and reinforced with titanium alloys, insulative materials and numerous locomotive stabilisers. The Pioneer suffers no adverse effects (including damage) from freezing conditions. It is also not slowed by Difficult Terrain in frozen and snowy biomes, such as the Frozen Gulf or the Forgotten Tundra. A Pilot within the Pioneer Chassis is also entirely protected from any adverse effects from freezing conditions, as the insulated interior keeps them at a stable body temperature."
+      }
+    ]
+  },
+  {
+    "name": "Parasitic Reactor",
+    "id": "3dad8018-be52-48ef-be8b-0dc5a4317604",
+    "source": "False Flag",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Theoretically, [(CHASSIS)] has infinite energy capacity, but it may only gain Energy Points from its Parasitic Membrane Ability. During Downtime its Energy Point total is reduced to its base value of 0."
+      }
+    ]
+  },
+  {
+    "name": "Parasitic Membrane",
+    "id": "042f2f1f-f5dc-4606-a14e-dbf30991cd03",
+    "source": "False Flag",
+    "page": 60,
+    "activationCost": 0,
+    "actionType": "Turn",
+    "range": ["Long"],
+    "traits": [
+      {
+        "type": "hacking"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "[(CHASSIS)] deploys a membrane-like probe which burrows into the reactor of an opposing Mech, draining it of energy and transferring it to [(CHASSIS)]. When you activate this ability, choose a target enemy Mech in Range and Roll the Die."
+      },
+      {
+        "type": "paragraph",
+        "value": "On a successful hit the membrane is attached. The target Mech immediately loses ¼ of its Max EP and [(CHASSIS)] gains that amount. The target Mech may not activate any EP Abilities on its next Turn."
+      },
+      {
+        "type": "paragraph",
+        "value": "On each of your following turns, you may activate one of the following effects as a Free Action. If a Mech has 0 current EP, you may not use any of these effects on it."
+      },
+      {
+        "type": "list-item",
+        "value": "The target Mech loses ¼ of its Max EP and [(CHASSIS)] gains that amount. The target Mech may not activate any EP Abilities on its next Turn."
+      },
+      {
+        "type": "list-item",
+        "value": "You entirely detach the probe. The target Mech loses ½ of its Max EP and [(CHASSIS)] gains that amount. The target Mech may not activate any EP Abilities on its next Turn."
+      },
+      {
+        "type": "list-item",
+        "value": "You entirely detach the probe. The target Mech reduces its EP to 0 and may not activate any EP Abilities for the next hour."
+      }
+    ]
+  },
+  {
+    "name": "Cumbersome",
+    "id": "33273f69-ca80-475e-a39a-192c025beaf2",
+    "source": "False Flag",
+    "page": 62,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Big Brother must choose between moving or taking a Turn Action on its turn. It also takes twice as long to travel between any two points on the Campaign, Region, or Area maps."
+      }
+    ]
+  },
+  {
+    "name": "Big Brother Drone Controller",
+    "id": "f0b036f8-3924-4e90-935d-1f102a2d8cf3",
+    "source": "False Flag",
+    "page": 62,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Big Brother controls a suite of Drones. The Big Brother can control up to 4 Big Brother Drones, and the Pilot may issue commands up to Far Range as a Free Action. The Big Brother Drones have their own turn in the turn order, and always act simultaneously."
+      }
+    ]
+  },
+  {
+    "name": "MELD",
+    "id": "d9f8aad4-45a6-41ca-913e-38111be14497",
+    "source": "False Flag",
+    "page": 64,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The X0315 is Meld and has all the strengths and vulnerabilities of Meld."
+      }
+    ]
+  },
+  {
+    "name": "Integrated Meld Locomotion",
+    "id": "8f45ec86-c4cf-490c-b7ef-80e6cf3ad067",
+    "source": "False Flag",
+    "page": 64,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The X0315 has multiple tendril-like legs which allow it to move normally."
+      }
+    ]
+  },
+  {
+    "name": "Integrated Neuralink Communicator",
+    "id": "dfa5c157-5281-4d20-afdd-f7d990d6d68e",
+    "source": "False Flag",
+    "page": 64,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The X0315 has the equivalent of a Neuralink Communicator Module."
+      }
+    ]
+  },
+  {
+    "name": "Mech Replication",
+    "id": "2af25422-a3ed-426e-b07e-d1d2c7587442",
+    "source": "False Flag",
+    "page": 64,
+    "activationCost": 0,
+    "actionType": "Short",
+    "range": ["Close"],
+    "traits": [
+      {
+        "type": "uses",
+        "amount": 5
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The X0315 attaches one of its tendrils to a target Mech in Range and morphs into that Mech, duplicating everything, including the Chassis and all attached Systems and Modules. The target Mech is entirely destroyed in the process, including all of its attached Systems and Modules, as well as its Cargo."
+      },
+      {
+        "type": "list-item",
+        "value": "This Ability cannot target an active piloted Mech: it must be used on an inactive Mech or a downed Mech that has been reduced to 0 SP."
+      },
+      {
+        "type": "list-item",
+        "value": "The duplicated Systems and Modules cannot be dismounted or salvaged."
+      },
+      {
+        "type": "list-item",
+        "value": "No other Systems or Modules may be mounted onto the duplicated Chassis."
+      },
+      {
+        "type": "list-item",
+        "value": "This Ability replaces all of the X0315's statistics with that of the target Mech at their max values."
+      },
+      {
+        "type": "list-item",
+        "value": "It retains this Ability and all of its other Chassis Abilities, including the SP and EP bonuses it gets from its Pilot."
+      },
+      {
+        "type": "list-item",
+        "value": "The X0315 reverts back to its base form during Downtime."
+      }
+    ]
+  },
+  {
+    "name": "Integrated Wader Locomotion System",
+    "id": "3db49582-3b13-4228-b59f-0937d274bc32",
+    "source": "Rainmaker",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "[(CHASSIS)] has a standard Locomotion System that allows it to move through water, swamps, mud, rivers and similar expanses of difficult terrain without penalty."
+      }
+    ]
+  },
+  {
+    "name": "Hybrid Diesel Reactor",
+    "id": "cf7be84e-2604-476c-a8e4-803c1ac08f05",
+    "source": "Rainmaker",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "[(CHASSIS)] utilises an archaic reactor that can be powered with crude fossil fuels."
+      },
+      {
+        "type": "paragraph",
+        "value": "As a Short Action, a Pilot can spend one, Tech 1, Scrap to restore 1 EP to [(CHASSIS)]. This Scrap represents finding a fuel source."
+      },
+      {
+        "type": "paragraph",
+        "value": "During Downtime [(CHASSIS)] gains only 5 Energy Points instead of being restored to its maximum amount. Otherwise this works as a normal reactor."
+      }
+    ]
+  },
+  {
+    "name": "Excoriate",
+    "id": "92a43d31-60ab-4eb0-882e-7a41936d1ac6",
+    "source": "Rainmaker",
+    "page": 68,
+    "actionType": "Free",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When [(CHASSIS)] makes an attack with a Weapon System that has the Burn Trait, it may increase its Heat by 4. If it does so it deals an additional 1 SP damage with the attack, and increases the Burn damage value of the attack by 1. For example a FM-3 Flamethrower would deal 2 SP damage with Burn (2)."
+      },
+      {
+        "type": "paragraph",
+        "value": "This Ability must be activated before the attack is resolved. This Ability can be activated multiple times in a turn, on the same or different Weapon Systems mounted on [(CHASSIS)]."
+      }
+    ]
+  },
+  {
+    "name": "Automech",
+    "id": "e3b6c1ac-e23e-4332-9930-fab3da86e42a",
+    "source": "Rainmaker",
+    "page": 62,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "[(CHASSIS)] is an Automech and follows all of the rules for Automechs."
+      }
+    ]
+  },
+  {
+    "name": "Hell Fumes",
+    "id": "084a74be-8a8a-4382-81a3-0db67e5a8bc9",
+    "source": "Rainmaker",
+    "page": 62,
+    "activationCost": 3,
+    "actionType": "Turn",
+    "range": ["Long"],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The [(CHASSIS)] Mech can produce clouds of superheated black smoke from deep within its core. This can be used to cover a retreat."
+      },
+      {
+        "type": "paragraph",
+        "value": "When activated any point in range becomes coated in thick plumes of black smoke. Vision is impossible through the smoke and anything with the Targeter or Optics Trait does not work either."
+      },
+      {
+        "type": "paragraph",
+        "value": "Anything that moves through the area takes 2 SP damage. Mechs that move through the area also increase their Heat by 2 and must make a Heat Check the first time they enter the area and every hour they remain in it."
+      }
+    ]
+  },
+  {
+    "name": "Integrated Advanced Stabilising Locomotion System",
+    "id": "9dd10211-7f3d-410c-8975-93ca8ebf41f7",
+    "source": "Rainmaker",
+    "page": 64,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This Chassis Ability functions as a Stabilising Locomotion System. (p.181 SU Core Book) It has the following improvements:"
+      },
+      {
+        "type": "list-item",
+        "value": "The Ravager reduces all damage dealt to it by 3 SP whilst stabilised, to a minimum of 1."
+      },
+      {
+        "type": "list-item",
+        "value": "The first attack the Ravager makes on its turn whilst stabilised deals an additional 3 SP damage."
+      }
+    ]
+  },
+  {
+    "name": "Demonic Visage",
+    "id": "a1828bb8-2fc4-4a13-8f61-fdd88bc3374d",
+    "source": "Rainmaker",
+    "page": 66,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The [(CHASSIS)] Mech is designed to evoke fear in all who look upon them. The first time any creature looks upon it, including player Pilots, they must make a Morale Check."
+      }
+    ]
+  },
+  {
+    "name": "Energy Smite",
+    "id": "2f646a21-5f63-47f2-ad46-c5223a125997",
+    "source": "Rainmaker",
+    "page": 70,
+    "activationCost": "X",
+    "actionType": "Free",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When activated the next attack the [(CHASSIS)] makes with the Melee Trait deals an additional amount of SP damage equal to the amount of EP spent on this Ability. They must declare this before making the attack, and make the attack as normal. They may activate this Ability multiple times each turn."
+      }
+    ]
+  },
+  {
+    "name": "Cerberus Control System",
+    "id": "802bba11-0f4d-4dcd-82f4-ed7acb6920e1",
+    "source": "Rainmaker",
+    "page": 72,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The three heads of Cerberus are piloted separately. Each head can be piloted by a separate Pilot, or all three can be piloted by the same Pilot. Each Pilot activates Systems and Modules and makes attacks separately for their head. Movement is shared between all heads and the chassis. Each head and the chassis can target separately. Critical damage is rolled separately for the chassis and each head. The chassis and all heads share Energy Points and Heat Capacity. Reactor Overload checks are made for the chassis."
       }
     ]
   }

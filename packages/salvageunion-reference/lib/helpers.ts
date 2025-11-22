@@ -284,13 +284,13 @@ export function getCrawlerNameById(crawlerId: string | null, fallback = 'Unknown
 
 /**
  * Normalize tech level to a number for calculations
- * Treats "B" (Bio) as 1
- * @param techLevel - The tech level (number or 'B')
+ * Treats "B" (Bio) and "N" (Nanite) as 1
+ * @param techLevel - The tech level (number, 'B', or 'N')
  * @returns The numeric tech level
  */
-export function normalizeTechLevel(techLevel: number | 'B' | null | undefined): number {
+export function normalizeTechLevel(techLevel: number | 'B' | 'N' | null | undefined): number {
   if (techLevel === null || techLevel === undefined) return 0
-  if (techLevel === 'B') return 1
+  if (techLevel === 'B' || techLevel === 'N') return 1
   return techLevel
 }
 
@@ -305,12 +305,12 @@ export function findCrawlerTechLevel(techLevel: number): SURefMetaCrawlerTechLev
 
 /**
  * Get structure points for a tech level with fallback
- * @param techLevel - The tech level number (or 'B' which is treated as 1)
+ * @param techLevel - The tech level number (or 'B'/'N' which are treated as 1)
  * @param fallback - Fallback number if tech level not found (default: 20)
  * @returns The structure points or fallback
  */
 export function getStructurePointsForTechLevel(
-  techLevel: number | 'B' | null,
+  techLevel: number | 'B' | 'N' | null,
   fallback = 20
 ): number {
   if (techLevel === null) return fallback
@@ -384,11 +384,11 @@ export function getMaxTechLevel(): number {
 /**
  * Get scrap conversion rate for a tech level
  * Each tech level is worth its numeric value in TL1 scrap
- * "B" (Bio) is treated as 1
- * @param techLevel - The tech level (1-6 or 'B')
+ * "B" (Bio) and "N" (Nanite) are treated as 1
+ * @param techLevel - The tech level (1-6, 'B', or 'N')
  * @returns The conversion rate (tech level value)
  */
-export function getScrapConversionRate(techLevel: number | 'B'): number {
+export function getScrapConversionRate(techLevel: number | 'B' | 'N'): number {
   return normalizeTechLevel(techLevel)
 }
 

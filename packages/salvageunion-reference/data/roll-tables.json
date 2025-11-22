@@ -668,7 +668,6 @@
     "name": "Salvage Cache Table",
     "section": "salvage",
     "table": {
-      "type": "flat",
       "1": "d20 Bio-Salvage",
       "2": "5 Bio-Rifles",
       "3": "5 Chimerium Salvaging Tools and 5 Bio-Scanners",
@@ -688,7 +687,8 @@
       "17": "A Scuttler Bio-Chassis",
       "18": "A Cranium Bio-Chassis",
       "19": "An Impaler Mech Chassis",
-      "20": "A Chimerium Meteor"
+      "20": "A Chimerium Meteor",
+      "type": "flat"
     },
     "page": 23
   },
@@ -724,14 +724,14 @@
     "name": "Bio-Chassis Damage Table",
     "section": "damage",
     "table": {
-      "type": "bio-chassis",
       "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
+      "20": "ADRENAL BURST: Your Bio-Chassis has survived. It has 1 SP. In addition, you may move or take one action of your choice with your Bio-Chassis, or Push your next roll within 10 minutes for free.",
+      "type": "bio-chassis",
       "2-3": "SYSTEM DESTRUCTION: A System mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
       "4-5": "SEVERE BIO-BACKLASH: Your Pilot suffers a Major Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
       "6-8": "MODULE DESTRUCTION: A Module mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
       "9-10": "BIO-BACKLASH: Your Pilot suffers a Minor Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
-      "11-19": "CORE DAMAGE: Your Bio-Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means of escape.",
-      "20": "ADRENAL BURST: Your Bio-Chassis has survived. It has 1 SP. In addition, you may move or take one action of your choice with your Bio-Chassis, or Push your next roll within 10 minutes for free."
+      "11-19": "CORE DAMAGE: Your Bio-Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means of escape."
     },
     "page": 78,
     "content": [
@@ -747,14 +747,14 @@
     "name": "Bio-Chassis Overload Table",
     "section": "damage",
     "table": {
-      "type": "bio-chassis",
       "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
+      "20": "BIO-OVERDRIVE: Your Bio-Chassis goes into a frenzy. You may take any additional move or action this Turn, or Push your next roll within 10 minutes for free.",
+      "type": "bio-chassis",
       "2-3": "SYSTEM OVERLOAD: One of your Bio-Chassis Systems, chosen at random or by the Mediator, is destroyed.",
       "4-5": "SEVERE PILOT OVERLOAD: Your Pilot suffers a Major Injury.",
       "6-8": "MODULE OVERLOAD: One of your Bio-Chassis Modules, chosen at random or by the Mediator, is destroyed.",
       "9-10": "PILOT OVERLOAD: Your Pilot suffers a Minor Injury.",
-      "11-19": "BIO-OVERLOAD: Your Bio-Chassis burns out, threatening to liquify you in its amniotic sac. Your Pilot is unconscious for 1 Turn, in which time your Bio-Chassis cannot act and gains the Vulnerable Trait. Your Pilot takes HP damage equal to your Bio-Chassis' current Heat.",
-      "20": "BIO-OVERDRIVE: Your Bio-Chassis goes into a frenzy. You may take any additional move or action this Turn, or Push your next roll within 10 minutes for free."
+      "11-19": "BIO-OVERLOAD: Your Bio-Chassis burns out, threatening to liquify you in its amniotic sac. Your Pilot is unconscious for 1 Turn, in which time your Bio-Chassis cannot act and gains the Vulnerable Trait. Your Pilot takes HP damage equal to your Bio-Chassis' current Heat."
     },
     "page": 79,
     "content": [
@@ -770,7 +770,6 @@
     "name": "Rumour",
     "section": "rumours",
     "table": {
-      "type": "flat",
       "1": "Vornaya is gathering dirt on the other corpos.",
       "2": "Novosrik has been dead for years, and they blame the Vornayans for it.",
       "3": "Drakov's Mercs will hire just about anyone.",
@@ -790,7 +789,8 @@
       "17": "Vornaya would be dead without its clean water reservoir.",
       "18": "The checkpoint leads to DronTek territory, but they don't like folk from here going there.",
       "19": "An exec living up in Isston has a high tech Medbay.",
-      "20": "The Meld wants to destroy us all and become one again."
+      "20": "The Meld wants to destroy us all and become one again.",
+      "type": "flat"
     },
     "page": 8
   },
@@ -812,6 +812,42 @@
       {
         "type": "paragraph",
         "value": "If you want to randomise an encounter with Meld, or at points when this Module prompts you to, roll on this table to determine what Meld are in the area."
+      }
+    ]
+  },
+  {
+    "id": "98a883c5-1fb9-4240-b299-5cd000723566",
+    "source": "False Flag",
+    "name": "Anomalous Zone",
+    "section": "encounters",
+    "table": {
+      "1": "MELD DUST SWARM: Inert Meld dust swarms are carried by the wind. They are harmless. Harvesting a swarm yields 10 Inert Meld. There is a 1 in 20 chance for an 'Active' swarm containing 10 Active Meld Nanites, which can infect Mechs, Vehicles, Creatures, and water.",
+      "2": "PIERCER: These creatures create horrendous echoes. Any creature within their Far Range suffers a Minor Injury and is deaf for an hour, including Pilots in Mechs. Piercers are often found emanating from hollow scrap, pipes, barrels, empty cockpits, or cargo holds.",
+      "3": "SLUDGER: Sludge from the Nanite Sea coats wide areas and is dangerous due to Active Meld Nanites. Biological or mechanical entities entering it become infected. Harvesting and refining a spill yields Active Meld Nanites, but requires specific tools or a clever approach to avoid infection.",
+      "4": "GRAVITY MUSHER: An invisible anomaly that drastically increases gravity, crushing Mechs and biological creatures. It can be detected by scanners, probing, or careful searching, and by throwing small items. It can usually be pushed through with one Mech movement, but some are larger. Exposed Pilots are reduced to 0 HP, must roll on the Critical Injury Table, and die if they remain for over a minute. Mechs must roll on the Critical Damage Table each turn spent in the anomaly.",
+      "5": "MELD DRONE SWARM: These swarms are composed of fallen and infected corpses, rising zombie-like from the ground. They seek to crush and infect biological and mechanical entities. A d20 roll determines the number of active Meld Drones, which can be run individually or as one squad per multiple of 5.",
+      "6": "FLITTER: A relatively harmless anomaly that causes objects and creatures to float a few inches off the ground, making it visible. Anything in motion when entering continues at half speed, and the area counts as Difficult Terrain.",
+      "7": "ZAPPER: This anomaly generates a field of dangerously charged electricity. Movement through it causes 4 SP damage. Mechs or Vehicles regain 2 Energy Points and become statically charged. The next time they use an Energy Point ability, they deal 2 SP damage to a random Mech or Vehicle (including themselves), and the target gains 1 EP. The anomaly then discharges harmlessly.",
+      "8": "HEAT HAZE: This anomaly superheats the area. Each hour, a Mech's Heat increases by 2, forcing a Heat Check. Heat-generating effects (like pushing) generate twice as much heat. Exposed creatures suffer a Major Injury each hour. Meld-infected entities in the area become permanently heated, suffering these effects hourly in any area.",
+      "9": "SLIMER: This anomaly causes highly corrosive, clear slime to coat the area, which is difficult to spot. It wells up from the earth and accumulates in holes and ditches. Anything caught in it takes 2 SP damage per turn (1 minute) until removed or it deals 6 SP total damage. Water worsens the slime (2 SP additional damage), while fire and freezing can remove it.",
+      "10": "MELD NANOID: Groups of d20 Meld Nanoids emerge from the ground or small pools, forming creatures that target anything with a Reactor source before attacking.",
+      "11": "LAUNCH PAD: This anomaly creates a sudden gravitational thrust, propelling a Mech, Vehicle, or Pilot into the air in a random direction, allowing them to clear terrain or obstacles. Landing deals 3 SP damage to Mechs or Vehicles, and 2 HP damage to Pilots (unless a smoother landing method is found).",
+      "12": "VORTEX: This anomaly creates a gravitational field around large metallic objects (mech chassis, scrap piles, metal rebars), drawing other objects into a vortex-like pattern. Pilots drawn in take 2 HP damage and suffer a Major Injury from being slammed. Mechs can usually avoid the force, but passing through it risks a random Scrap, System, or Module in their cargo bay being sucked in and damaged. Retrieving it risks 1 SP damage from debris.",
+      "13": "NANITE SPORE: A bulbous, spore-like black mushroom grows from fertile earth. Anything within Medium Range causes it to disperse a Meld Dust Swarm, which acts like a regular Dust Swarm but deals 3 SP damage and causes Meld Infection.",
+      "14": "IRRADIATED ANOMALY: This anomaly causes radiation to spike to dangerous levels, making the area count as Irradiated (per Salvage Union Core Rules p.323). Anything Meld-infected in the area also becomes irradiated.",
+      "15": "MELD SPLITTER: A Meld Splitter emerges from pools of Meld, seeking to convert Mechs into Behemoths or creatures into drones.",
+      "16": "GROUNDSWELL: This anomaly causes black veins to criss-cross and split the earth, creating dangerous fissures that creatures can fall into and Mechs can get stuck in.",
+      "17": "TIME DILATION: This anomaly slows down time in the area. Every hour spent there counts as 24 hours of normal time. For example, 3 hours spent equals 3 days outside. Contracts and other time-critical events progress, and the Union Crawler requires additional Upkeep per week.",
+      "18": "TRANSMOGRIFICATION: This anomaly transforms the molecular structure of mechanical and electronic entities. When a Mech or Vehicle enters, a random System or Module transforms into another random System or Module of its Tech Level or lower over the next hour. If this exceeds System Slots, it destroys the previous system, damages the mech, and potentially harms the pilot. It's identifiable by distorted or shifting Mech Systems, Modules, and scrap.",
+      "19": "RED DEATH: This anomaly rapidly rusts metallic objects, visible as numerous objects in varying states of extreme rusting. Each hour, Mechs or Vehicles take 3 SP damage, and a random System becomes damaged. Exposed metallic Pilot Equipment is destroyed.",
+      "20": "MELD BEHEMOTH: A Meld Behemoth rises from the ground. The anomaly is strewn with rotting, kelp-covered carcasses of broken mechs. It infects Mechs, Vehicles, Pilots, Creatures, and pools of water.",
+      "type": "flat"
+    },
+    "page": 10,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When Pilots are in an Anomalous Zone, roll on the Anomaly Table below for each journey or each hour spent in the area as appropriate."
       }
     ]
   }

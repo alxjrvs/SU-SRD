@@ -51,9 +51,14 @@
           "type": "string",
           "const": "B",
           "description": "Bio tech level (treated as 1 in calculations)"
+        },
+        {
+          "type": "string",
+          "const": "N",
+          "description": "Nanite tech level (treated as 1 in calculations)"
         }
       ],
-      "description": "Technology level of the item or entity (number or 'B' for Bio)"
+      "description": "Technology level of the item or entity (number, 'B' for Bio, or 'N' for Nanite)"
     },
     "salvageValue": {
       "$ref": "#/definitions/nonNegativeInteger",

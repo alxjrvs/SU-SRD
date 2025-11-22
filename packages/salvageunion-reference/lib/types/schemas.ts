@@ -206,25 +206,25 @@ export interface SURefKeyword extends SURefObjectBaseEntity {
 }
 
 /**
- * Lance formations and groups in Salvage Union
+ * Faction groups and organizations in Salvage Union
  */
-export interface SURefLance extends SURefObjectBaseEntity {
+export interface SURefFaction extends SURefObjectBaseEntity {
   /**
-   * The goals and motivations of this lance
+   * The goals and motivations of this faction
    */
   goals: string
   /**
-   * The assets and resources controlled by this lance
+   * The assets and resources controlled by this faction
    */
   assets: string
   /**
-   * The weaknesses and vulnerabilities of this lance
+   * The weaknesses and vulnerabilities of this faction
    */
   weaknesses: string
   /**
-   * The mechs that make up this lance formation
+   * The mechs that make up this faction formation
    */
-  formation: SURefObjectFormationMech[]
+  formation?: SURefObjectFormationMech[]
   content?: SURefObjectContent
 }
 

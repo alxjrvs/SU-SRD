@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema#",
-  "$id": "https://salvageunion.com/schemas/lances.schema.json",
-  "title": "lances",
-  "description": "Lance formations and groups in Salvage Union",
+  "$id": "https://salvageunion.com/schemas/factions.schema.json",
+  "title": "factions",
+  "description": "Faction groups and organizations in Salvage Union",
   "type": "array",
   "items": {
     "type": "object",
@@ -14,19 +14,19 @@
     "properties": {
       "goals": {
         "type": "string",
-        "description": "The goals and motivations of this lance"
+        "description": "The goals and motivations of this faction"
       },
       "assets": {
         "type": "string",
-        "description": "The assets and resources controlled by this lance"
+        "description": "The assets and resources controlled by this faction"
       },
       "weaknesses": {
         "type": "string",
-        "description": "The weaknesses and vulnerabilities of this lance"
+        "description": "The weaknesses and vulnerabilities of this faction"
       },
       "formation": {
         "type": "array",
-        "description": "The mechs that make up this lance formation",
+        "description": "The mechs that make up this faction formation",
         "items": {
           "$ref": "shared/objects.schema.json#/definitions/formationMech"
         }
@@ -35,7 +35,7 @@
         "$ref": "shared/objects.schema.json#/definitions/content"
       }
     },
-    "required": ["goals", "assets", "weaknesses", "formation"],
+    "required": ["goals", "assets", "weaknesses"],
     "unevaluatedProperties": false
   }
 }

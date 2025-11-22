@@ -25,7 +25,7 @@ import distancesData from '../data/distances.json' with { type: 'json' }
 import dronesData from '../data/drones.json' with { type: 'json' }
 import equipmentData from '../data/equipment.json' with { type: 'json' }
 import keywordsData from '../data/keywords.json' with { type: 'json' }
-import lancesData from '../data/lances.json' with { type: 'json' }
+import factionsData from '../data/factions.json' with { type: 'json' }
 import meldData from '../data/meld.json' with { type: 'json' }
 import modulesData from '../data/modules.json' with { type: 'json' }
 import npcsData from '../data/npcs.json' with { type: 'json' }
@@ -51,7 +51,7 @@ import distancesSchema from '../schemas/distances.schema.json' with { type: 'jso
 import dronesSchema from '../schemas/drones.schema.json' with { type: 'json' }
 import equipmentSchema from '../schemas/equipment.schema.json' with { type: 'json' }
 import keywordsSchema from '../schemas/keywords.schema.json' with { type: 'json' }
-import lancesSchema from '../schemas/lances.schema.json' with { type: 'json' }
+import factionsSchema from '../schemas/factions.schema.json' with { type: 'json' }
 import meldSchema from '../schemas/meld.schema.json' with { type: 'json' }
 import modulesSchema from '../schemas/modules.schema.json' with { type: 'json' }
 import npcsSchema from '../schemas/npcs.schema.json' with { type: 'json' }
@@ -80,7 +80,7 @@ const dataMap: Record<string, unknown[]> = {
   drones: dronesData,
   equipment: equipmentData,
   keywords: keywordsData,
-  lances: lancesData,
+  factions: factionsData,
   meld: meldData,
   modules: modulesData,
   npcs: npcsData,
@@ -110,7 +110,7 @@ const schemaMap: Record<string, Record<string, unknown>> = {
   drones: dronesSchema,
   equipment: equipmentSchema,
   keywords: keywordsSchema,
-  lances: lancesSchema,
+  factions: factionsSchema,
   meld: meldSchema,
   modules: modulesSchema,
   npcs: npcsSchema,
@@ -233,6 +233,7 @@ const schemaDisplayNames: Record<string, { singular: string; plural: string }> =
   drones: { singular: 'Drone', plural: 'Drones' },
   equipment: { singular: 'Equipment', plural: 'Equipment' },
   keywords: { singular: 'Keyword', plural: 'Keywords' },
+  factions: { singular: 'Faction', plural: 'Factions' },
   meld: { singular: 'Meld', plural: 'Meld' },
   modules: { singular: 'Module', plural: 'Modules' },
   npcs: { singular: 'NPC', plural: 'NPCs' },

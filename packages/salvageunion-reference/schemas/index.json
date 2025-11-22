@@ -172,14 +172,14 @@
       "displayName": "Keywords"
     },
     {
-      "id": "lances",
-      "title": "lances",
-      "description": "Lance formations and groups in Salvage Union",
-      "dataFile": "data/lances.json",
-      "schemaFile": "schemas/lances.schema.json",
+      "id": "factions",
+      "title": "factions",
+      "description": "Faction groups and organizations in Salvage Union",
+      "dataFile": "data/factions.json",
+      "schemaFile": "schemas/factions.schema.json",
       "itemCount": 1,
-      "requiredFields": ["goals", "assets", "weaknesses", "formation"],
-      "displayName": "Lances"
+      "requiredFields": ["goals", "assets", "weaknesses"],
+      "displayName": "Factions"
     },
     {
       "id": "meld",

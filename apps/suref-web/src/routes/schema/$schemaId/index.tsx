@@ -11,6 +11,7 @@ const schemaIndexData = getSchemaCatalog()
 const schemaViewerSearchSchema = z.object({
   search: z.string().optional(),
   tl: z.array(z.number()).optional(),
+  source: z.array(z.string()).optional(),
 })
 
 export const Route = createFileRoute('/schema/$schemaId/')({

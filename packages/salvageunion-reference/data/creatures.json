@@ -100,5 +100,64 @@
         "value": "Large flying scavengers that feast on flesh and bone."
       }
     ]
+  },
+  {
+    "id": "46102100-e51b-48a1-9264-4025105d7c2b",
+    "source": "Rainmaker",
+    "name": "Basement Frogs",
+    "actions": ["Pseudo-teeth", "Tongue Lash"],
+    "hitPoints": 2,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Territorial, large, aggressive frogs that use their tongues to trip and tangle prey."
+      },
+      {
+        "type": "paragraph",
+        "value": "Ambush: Act first in combat; if another has similar ability, they act simultaneously."
+      }
+    ]
+  },
+  {
+    "id": "7c9f8da0-7f31-429b-970e-5ec25d5fffef",
+    "source": "Rainmaker",
+    "name": "Ghost",
+    "actions": ["Metal Bars and Ripping Hands (Ghost)"],
+    "hitPoints": 4,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Creatures of nightmares brought to life by biotechnology to rip and tear."
+      },
+      {
+        "type": "paragraph",
+        "value": "Phased: Ghosts are permanently phased. They can move through walls and obstacles and are invisible except for a faint blue outline. They can make attacks whilst phased. Thermal Optics will allow a Ghost to be seen in its phased state."
+      },
+      {
+        "type": "paragraph",
+        "value": "Organic: Ghosts are biological horrors. They are treated as creatures for the purposes of all Traits and Abilities, for example the Anti-Organic Trait (p.318 SU Core Book)."
+      }
+    ]
+  },
+  {
+    "id": "e4c80ede-89d0-483e-8f9f-6b080287f5ad",
+    "source": "Rainmaker",
+    "name": "Ghost Haunt",
+    "actions": ["Metal Bars and Ripping Hands (Ghost Haunt)"],
+    "hitPoints": 12,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A haunt of ghosts that sow terror and mayhem."
+      },
+      {
+        "type": "paragraph",
+        "value": "Phased: See Ghost."
+      },
+      {
+        "type": "paragraph",
+        "value": "Organic: See Ghost."
+      }
+    ]
   }
 ]

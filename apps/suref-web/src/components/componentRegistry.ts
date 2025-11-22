@@ -32,6 +32,7 @@ export const componentRegistry: Record<string, DisplayComponentType> = {
   distances: createEntityDisplay('distances'),
   drones: createEntityDisplay('drones'),
   equipment: createEntityDisplay('equipment'),
+  factions: createEntityDisplay('factions'),
   keywords: createEntityDisplay('keywords'),
   meld: createEntityDisplay('meld'),
   modules: createEntityDisplay('modules'),

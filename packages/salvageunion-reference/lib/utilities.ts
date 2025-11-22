@@ -87,7 +87,7 @@ export function getTechLevel(entity: SURefMetaEntity): number | undefined {
     if (typeof techLevel === 'number') {
       return techLevel
     }
-    if (techLevel === 'B') {
+    if (techLevel === 'B' || techLevel === 'N') {
       return 1
     }
   }
@@ -379,8 +379,11 @@ export function getBlackMarket(entity: SURefMetaEntity): boolean | undefined {
  */
 export function hasTechLevel(
   entity: SURefMetaEntity
-): entity is SURefMetaEntity & { techLevel: number | 'B' } {
-  return 'techLevel' in entity && (typeof entity.techLevel === 'number' || entity.techLevel === 'B')
+): entity is SURefMetaEntity & { techLevel: number | 'B' | 'N' } {
+  return (
+    'techLevel' in entity &&
+    (typeof entity.techLevel === 'number' || entity.techLevel === 'B' || entity.techLevel === 'N')
+  )
 }
 
 /**

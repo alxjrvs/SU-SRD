@@ -64,7 +64,7 @@ export type SURefEnumSchemaName =
   | 'drones'
   | 'equipment'
   | 'keywords'
-  | 'lances'
+  | 'factions'
   | 'meld'
   | 'modules'
   | 'npcs'

@@ -35,9 +35,9 @@ export type SURefCommonActivationCost = number | 'X'
 export type SURefCommonName = string
 
 /**
- * Technology level of the item or entity (number or 'B' for Bio)
+ * Technology level of the item or entity (number, 'B' for Bio, or 'N' for Nanite)
  */
-export type SURefCommonTechLevel = number | 'B'
+export type SURefCommonTechLevel = number | 'B' | 'N'
 
 /**
  * Salvage value in credits

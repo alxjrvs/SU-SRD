@@ -363,17 +363,14 @@ export function getSourceStyles(
       }
     }
     case 'False Flag': {
-      // Thin vertical white lines
+      // Windows 95 beveled border aesthetic
+      // Classic raised button look: light top/left, dark bottom/right
       return {
-        backgroundImage: `repeating-linear-gradient(
-          0deg,
-          transparent,
-          transparent 3px,
-          rgba(255, 255, 255, 0.4) 3px,
-          rgba(255, 255, 255, 0.4) 4px
-        )`,
-        backgroundSize: '6px 100%',
-        backgroundPosition: '0 0',
+        borderTop: '1px solid rgba(255, 255, 255, 0.8)',
+        borderLeft: '1px solid rgba(255, 255, 255, 0.8)',
+        borderBottom: '1px solid rgba(128, 128, 128, 0.6)',
+        borderRight: '1px solid rgba(128, 128, 128, 0.6)',
+        position: 'relative' as const,
       }
     }
     case 'Rainmaker': {

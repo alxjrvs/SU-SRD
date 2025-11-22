@@ -405,7 +405,9 @@ describe('getTechLevel', () => {
 
     expect(techLevel).toBeDefined()
     expect(typeof techLevel).toBe('number')
-    expect(techLevel).toBe(system.techLevel)
+    // getTechLevel normalizes 'B' and 'N' to 1, so compare with normalized value
+    const expected = typeof system.techLevel === 'number' ? system.techLevel : 1
+    expect(techLevel).toBe(expected)
   })
 
   it('should get tech level from chassis (in stats)', () => {
@@ -414,7 +416,9 @@ describe('getTechLevel', () => {
 
     expect(techLevel).toBeDefined()
     expect(typeof techLevel).toBe('number')
-    expect(techLevel).toBe(chassis.techLevel)
+    // getTechLevel normalizes 'B' and 'N' to 1, so compare with normalized value
+    const expected = typeof chassis.techLevel === 'number' ? chassis.techLevel : 1
+    expect(techLevel).toBe(expected)
   })
 
   it('should return undefined for entities without tech level', () => {

@@ -268,7 +268,7 @@ export class SalvageUnionReference {
       if (typeof techLevel === 'number') {
         return techLevel
       }
-      if (techLevel === 'B') {
+      if (techLevel === 'B' || techLevel === 'N') {
         return 1
       }
     }

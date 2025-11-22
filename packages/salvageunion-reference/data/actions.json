@@ -6366,6 +6366,39 @@
     ]
   },
   {
+    "id": "528c8a36-83ea-406b-b775-0573031953d9",
+    "range": [
+      "Close"
+    ],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "traits": [
+      {
+        "type": "anti-organic"
+      },
+      {
+        "type": "overheat"
+      },
+      {
+        "type": "burn",
+        "amount": 2
+      }
+    ],
+    "name": "Napalm Shotgun",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When you hit with this weapon up to one other target of your choice in Close Range takes 2 SP damage and Burn (2)."
+      },
+      {
+        "type": "paragraph",
+        "value": "Take a Napalm Launcher and saw off the barrel, and you get this contemptible weapon capable of liquifying flesh from bone. Such is its horrific potential that it's even banned by the Corporate Council."
+      }
+    ]
+  },
+  {
     "id": "5b381c42-1ca5-41bb-b5f0-d7df743abf6f",
     "traits": [
       {
@@ -10768,6 +10801,1247 @@
       {
         "type": "paragraph",
         "value": "When activated you are able to pinpoint the location of any Bio-Titan or Bio-Salvage within Range. The Mediator will tell you their location."
+      }
+    ]
+  },
+  {
+    "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "name": "Meld Injector",
+    "source": "False Flag",
+    "page": 68,
+    "actionType": "Turn",
+    "range": [
+      "Close"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed by Stefanus as part of their Solitude Meld Research Program and designed to inject an Active Meld Nanite into a subject, causing infection. It may store up to two Active Meld Nanites within its injection bay."
+      },
+      {
+        "type": "paragraph",
+        "value": "When activated choose a target in Range such as a Mech, creature, body of water, area of terrain or anything else appropriate. The target is now infected with Meld Infection. This requires an Active Meld Nanite to be loaded into the Injector, which is expended on use."
+      }
+    ],
+    "traits": [
+      {
+        "type": "meld infection"
+      }
+    ]
+  },
+  {
+    "id": "d6c5cbbd-1874-4432-beb8-e823465b64d8",
+    "name": "Meld Manipulator",
+    "source": "False Flag",
+    "page": 68,
+    "actionType": "Turn",
+    "range": [
+      "Close"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "An articulated, manipulation arm with incredibly fine tendrils kept permanently in a cryogenic state to allow for the safe handling of Meld Nanites."
+      },
+      {
+        "type": "paragraph",
+        "value": "This System allows the user to safely salvage and carry Active Meld Nanites, granting the Rigging and Salvaging Trait when interacting with Inert or Active Meld Nanites only. Two Active or Inert Meld Nanites may be held in the Meld Manipulator, though it cannot be activated whilst holding Meld Nanites."
+      }
+    ],
+    "traits": [
+      {
+        "type": "rigging"
+      },
+      {
+        "type": "salvaging"
+      }
+    ]
+  },
+  {
+    "id": "400e1fb8-b36d-421a-9052-72b0130f2db2",
+    "name": "Overcharged Green Laser",
+    "source": "False Flag",
+    "page": 68,
+    "actionType": "Turn",
+    "range": [
+      "Medium"
+    ],
+    "damage": {
+      "damageType": "SP",
+      "amount": 5
+    },
+    "traits": [
+      {
+        "type": "hot",
+        "amount": 4
+      },
+      {
+        "type": "energy"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This modified Green Laser produces significantly more heat than normal, but hits harder. In frozen climes, the heat is less of an issue."
+      }
+    ]
+  },
+  {
+    "id": "811977fb-e4fb-403a-8665-ac5eae79d412",
+    "name": "Nanite Sifter",
+    "source": "False Flag",
+    "page": 68,
+    "actionType": "Turn",
+    "range": [
+      "Close"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A web of cryo-treated tendrils designed to salvage, carry and process Meld Nanites in bulk, with advanced filtering to harvest vaster quantities of Inert Meld. Developed by the Vornayans with the support of Stefanus and DronTek research."
+      },
+      {
+        "type": "paragraph",
+        "value": "This System counts as having the Salvaging and Rigging Traits but only when dealing with Active or Inert Meld Nanites or Nanite-Tech. Additionally, you gain twice as many Inert Meld Nanites when Area Salvaging or salvaging Inert Meld Nanites from a source such as a Meld reduced to 0 SP."
+      },
+      {
+        "type": "paragraph",
+        "value": "Up to 4 Active or Inert Meld Nanites may be held by the Nanite Sifter, though it cannot be activated whilst actively holding Meld Nanites."
+      }
+    ],
+    "traits": [
+      {
+        "type": "rigging"
+      },
+      {
+        "type": "salvaging"
+      }
+    ]
+  },
+  {
+    "id": "15eb9549-bc4e-4e78-816d-1e12ff70a2f1",
+    "name": "Refine (Nanite Sifter)",
+    "source": "False Flag",
+    "page": 68,
+    "actionType": "Long",
+    "activationCost": 1,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When activated you may process up to 20 Inert Meld Nanites. Roll a d20 for each, on the roll of a 20 they are an Active Meld Nanite."
+      }
+    ]
+  },
+  {
+    "id": "e22738e3-8204-498d-892d-fa3aee59ead4",
+    "name": "Meld Spore Launcher",
+    "source": "False Flag",
+    "page": 68,
+    "actionType": "Turn",
+    "range": [
+      "Long"
+    ],
+    "damage": {
+      "damageType": "SP",
+      "amount": 4
+    },
+    "traits": [
+      {
+        "type": "burn",
+        "amount": 4
+      },
+      {
+        "type": "anti-organic"
+      },
+      {
+        "type": "explosive",
+        "amount": 4
+      },
+      {
+        "type": "meld infection"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This system was reverse engineered from a spore anomaly. It fires a cloud of meld particles which can rapidly disintegrate metal and flesh."
+      },
+      {
+        "type": "paragraph",
+        "value": "After the Meld Spore Launcher is fired, the immediate area is covered in the spore cloud. Anything entering it will suffer 4 SP damage and Meld Infection."
+      }
+    ]
+  },
+  {
+    "id": "ddb136e9-f203-427d-a41a-94e01584b00b",
+    "name": "Replicate (Meld System Replicator)",
+    "source": "False Flag",
+    "page": 69,
+    "actionType": "Turn",
+    "range": [
+      "Close"
+    ],
+    "activationCost": 4,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This System becomes a copy of a target System in Range. The target System is destroyed in the process. The replicated System retains this Ability, as well as the Salvage and System Slot Value of the Meld System Replicator. The replicated System reverts back to the Meld System Replicator during Downtime."
+      }
+    ]
+  },
+  {
+    "id": "a1b3e173-a5e0-47ec-bd36-95cf07cef7bc",
+    "name": "Meld System Replicator",
+    "source": "False Flag",
+    "page": 69,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed by Solitude researchers, this versatile tendril-like System has the ability to morph itself into any other system it touches."
+      }
+    ]
+  },
+  {
+    "id": "b43c3e9b-eaca-4341-a89c-3fe848c736eb",
+    "name": "Meld Tendrils",
+    "source": "False Flag",
+    "page": 69,
+    "actionType": "Turn",
+    "range": [
+      "Medium"
+    ],
+    "damage": {
+      "damageType": "SP",
+      "amount": 4
+    },
+    "traits": [
+      {
+        "type": "melee"
+      },
+      {
+        "type": "meld infection"
+      },
+      {
+        "type": "multi-attack",
+        "amount": 2
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This was one of Stefanus' first applications of Meld tech to a mech chassis, allowing for lashing tendril strikes against foes."
+      }
+    ]
+  },
+  {
+    "id": "aede8ac4-b4aa-4d43-b405-535685e3c2fe",
+    "actionType": "Free",
+    "activationCost": 1,
+    "name": "Heating Unit",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This simple Opus-designed heating unit keeps a Pilot warm in their cockpit. When activated, it prevents any negative effects from freezing temperatures. This effect lasts for 1 hour."
+      }
+    ]
+  },
+  {
+    "id": "b15b6e0d-68c7-41ba-94cb-3247e6518075",
+    "actionType": "Turn",
+    "activationCost": "X",
+    "range": [
+      "Medium"
+    ],
+    "traits": [
+      {
+        "type": "hacking"
+      }
+    ],
+    "name": "Pop Goes The Weasel",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This is a Stefanus-developed hacking tool designed to detonate an opposing Mech's reactor. It transfers energy from the host Mech to the opposing Mech, causing it to rapidly overload. When you activate this Module, choose the amount of EP you wish to spend (minimum 1EP). A target Mech in Range must then roll on the Reactor Overload Table p.235. Reduce the amount rolled by the amount of EP you spent on this Ability. For example, if you spent 5 EP on the ability, reduce the die roll on the Reactor Overload Table by 5. Any results lower than 1 count as 1."
+      }
+    ]
+  },
+  {
+    "id": "cb72d05d-9e63-49ba-927e-0ae7c8781851",
+    "actionType": "Turn",
+    "activationCost": 3,
+    "range": [
+      "Close"
+    ],
+    "name": "Meld Module Replicator",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Utilising the Melds innate ability to replicate electronic systems, this module has the ability to morph into other modules. This Module becomes a copy of a target Module in Range, destroying the target Module in the process. The replicated Module retains this Ability, as well as the Salvage and Module Slot Value of the Meld Module Replicator. The replicated Module reverts back to the Meld Module Replicator during Downtime."
+      }
+    ]
+  },
+  {
+    "id": "e98fa567-c485-47f5-803b-b2f08e1cb8bd",
+    "name": "Nanite Reconstruction (Meld Regenerator)",
+    "source": "False Flag",
+    "page": 70,
+    "actionType": "Passive",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "If your Mech is reduced to 0 SP, roll on this table instead of the Critical Damage Table."
+      }
+    ],
+    "table": {
+      "1": "Awakening: Your Mech is transformed into a Meld Behemoth under the control of the Meld. Your Pilot may attempt to escape, but if they fail, they are consumed by the Meld and considered dead.",
+      "20": "Full Restoration: Your Mech Chassis is Intact and restored to its Max SP value.",
+      "11-19": "Partial Restoration: Your Mech Chassis is Intact and gains an amount of SP equal to 3 + its Tech Level.",
+      "6-10": "Improvised Restoration: A System of your choice on your Mech is destroyed. However, your Mech Chassis is Intact, and gains an amount of SP equal to the Salvage Value of the destroyed System.",
+      "2-5": "Failed Restoration: Roll on the Critical Damage Table as normal.",
+      "type": "standard"
+    }
+  },
+  {
+    "id": "34b68549-6a95-4fd1-8fd4-09301c7ac3cf",
+    "name": "Nanite Repair (Meld Regenerator)",
+    "source": "False Flag",
+    "page": 70,
+    "actionType": "Reaction",
+    "activationCost": 3,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When activated, choose from one of the following options:"
+      },
+      {
+        "type": "list-item",
+        "value": "Your Mech restores 3 + its Tech Level SP."
+      },
+      {
+        "type": "list-item",
+        "value": "A damaged or destroyed System or Module mounted on your Mech is restored to the Intact Condition."
+      }
+    ]
+  },
+  {
+    "id": "327d2178-6a20-436a-b8c7-7c60d7fa91d7",
+    "name": "Meld Regenerator",
+    "source": "False Flag",
+    "page": 70,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Based on research into the regenerative capacity of Meld Nanites, this module actively regenerates damage to a Mech even when at the brink of destruction. However, it risks being subsumed by the hive."
+      }
+    ]
+  },
+  {
+    "id": "d1cbda54-90e6-4d92-bdb9-6c8b160638fe",
+    "name": "Meld Distorter",
+    "source": "False Flag",
+    "page": 70,
+    "actionType": "Turn",
+    "range": [
+      "Close"
+    ],
+    "activationCost": 3,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed from the transmogrifigation anomalies that dotted the Northern Wastes following the Vornaya Event, this module releases a swarm of nanites that distort any electronics or hardware in their way."
+      },
+      {
+        "type": "paragraph",
+        "value": "When activated, choose a target System or Module in Range."
+      },
+      {
+        "type": "paragraph",
+        "value": "ROLL THE DIE"
+      },
+      {
+        "type": "paragraph",
+        "value": "If there are not enough System or Module slots on the Mech for the new System or Module, it is damaged and falls off. The Mech takes SP damage equal to the difference in the number of slots. For example, if a System that had a System Slot value of 2 was transformed into one that had a value of 3, the Mech would take 1 SP damage."
+      }
+    ],
+    "table": {
+      "1": "It transforms into a Meld Nanoid, controlled by the Meld and hostile to you.",
+      "20": "It morphs into a System or Module of your choice which is of its Tech Level.",
+      "11-19": "It morphs into a random System or Module of its Tech Level.",
+      "6-10": "It morphs into a Tech 1 System or Module of your choice.",
+      "2-5": "It's mangled beyond comprehension and considered destroyed.",
+      "type": "standard"
+    }
+  },
+  {
+    "id": "a57c0c27-190c-47f6-a649-de6335efd946",
+    "range": ["Long"],
+    "damage": {
+      "damageType": "HP",
+      "amount": 4
+    },
+    "traits": [
+      {
+        "type": "dependable"
+      }
+    ],
+    "name": "DronTek Rifle",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Simple, efficient, and dependable, DronTek arms most of their standing forces with this rifle."
+      }
+    ]
+  },
+  {
+    "id": "082b3c97-733c-4d48-a43c-94dc02d0cc75",
+    "name": "Portable Cryopod",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This metallic pod reduces the temperature inside it to near absolute zero levels (-270°C). It is designed to safely carry up to 1 Active or 3 Inert Meld Nanites."
+      }
+    ]
+  },
+  {
+    "id": "cfe37881-a3ce-4545-b081-18f6c058eeb2",
+    "range": ["Medium"],
+    "damage": {
+      "damageType": "HP",
+      "amount": 6
+    },
+    "traits": [
+      {
+        "type": "energy"
+      },
+      {
+        "type": "unwieldy"
+      }
+    ],
+    "name": "Overcharged Green Laser Rifle",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This Stefanus laser, issued to their ground troops, is similar to the Mech variant. It produces a lot of heat, making it prone to overloading, but that matters less in the cold. This weapon loses the Unwieldy Trait in cold environments."
+      }
+    ]
+  },
+  {
+    "id": "8e59d1ad-e5cd-40bb-aaf8-58c228f2f74b",
+    "actionType": "Turn",
+    "range": ["Close"],
+    "name": "Handheld Meld Injector",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A portable version of the Meld Injector, developed by Stefanus for their Meld Nanite experiments on living subjects. It may store a single Active Meld Nanite within its injection bay. When activated choose a target in Range such as a Mech, creature, body of water, area of terrain or anything else appropriate. The target is now infected with Meld Infection. This requires an Active Meld Nanite to be loaded into the Injector, which is expended on use."
+      }
+    ]
+  },
+  {
+    "id": "77300604-f71b-49a6-a27a-a4f9fd2219a6",
+    "name": "Handheld Meld Manipulator",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A portable version of the Meld manipulation arm. This allows a Pilot to safely salvage and carry Active Meld Nanites, granting the Rigging and Salvaging Trait when interacting with Inert or Active Meld Nanites only. A single Active or Inert Meld Nanite may be held in the Meld Manipulator, though it cannot be activated whilst actively holding Meld Nanites."
+      }
+    ]
+  },
+  {
+    "id": "8b0f4051-e8bb-49f4-9849-1918690f0c05",
+    "range": ["Medium"],
+    "damage": {
+      "damageType": "HP",
+      "amount": 4
+    },
+    "traits": [
+      {
+        "type": "anti-organic"
+      },
+      {
+        "type": "meld infection"
+      }
+    ],
+    "name": "Meld Rifle",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This Meld-infused rifle fires high calibre rounds loaded with flesh eating nanites which release upon impact, spreading over the wounded area. This causes horrific wounds to biological targets."
+      }
+    ]
+  },
+  {
+    "id": "e13d2dad-12af-466e-85ed-03acacf80a84",
+    "name": "Genetic Lock",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed by TJG Automations, a Genetic Lock encodes the DNA of a Mech Pilot to the Chassis, preventing anyone else from being able to Pilot it."
+      },
+      {
+        "type": "paragraph",
+        "value": "A Mech equipped with a Genetic Lock can only be Piloted by one person who encodes their DNA string to the Chassis. If an unauthorised Pilot attempts to in any way activate the Mech they will trigger the security protocols. This seals the cockpit of the Mech and triggers a sonic screecher, designed to alert though with a high pitched alarm, and knock out the unauthorised Pilot. The Pilot must roll on the Critical Injury Table."
+      }
+    ]
+  },
+  {
+    "id": "52bb3a90-6642-4847-9bb4-d996a767e7ef",
+    "name": "Deployable .50 Cal Machine Gun",
+    "range": ["Close"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "traits": [
+      {
+        "type": "ballistic"
+      },
+      {
+        "type": "pinning"
+      },
+      {
+        "type": "heavy"
+      },
+      {
+        "type": "deployable"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A portable heavy machine gun that needs to be deployed by infantry before it's fired. It requires a Turn Action to set up before it can fire. Whilst deployed it is Immobile."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "f889193e-e842-4a1b-9462-431564522eec",
+    "name": "Machine Pistols",
+    "range": ["Close"],
+    "damage": {
+      "damageType": "HP",
+      "amount": 4
+    },
+    "traits": [
+      {
+        "type": "ballistic"
+      },
+      {
+        "type": "multi-attack",
+        "amount": 2
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A pair of easily concealed rapid fire pistols."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "1a48a9cb-df87-4732-82ef-ebb8bcf485e7",
+    "name": "Epoxy Gun",
+    "range": ["Close"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 1
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A weapon that launches hot, burning epoxy at a target that compacts and seals on impact. On a successful hit, an Epoxy Gun blocks a Mech reactor and exhaust ports, preventing cooling. The Mech gains 1 Heat at the start of each of their turns and must make a Heat Check. This effect is cumulative. Epoxy takes a Short Action to scrape off a Mech."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "ca6a0f7f-8f47-4234-a348-5675402140f0",
+    "name": "Rebar Lance",
+    "range": ["Close"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "traits": [
+      {
+        "type": "melee"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Lances wielded by the Free Hill Coalition, highly effective when mounted on horseback."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a melee attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "aba98f6c-e5e6-4dac-b0b9-13b93836bb2e",
+    "name": "Lance Charge",
+    "range": ["Medium"],
+    "actionType": "Turn",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "If the wielder of the Rebar Lance is mounted, and not already in Close Range to any enemy, they may activate this ability once per turn."
+      },
+      {
+        "type": "paragraph",
+        "value": "Move to Close Range of a target in Range. If you attack them with the Rebar Lance, it deals 2× damage on a successful hit."
+      }
+    ]
+  },
+  {
+    "id": "997d8dd7-9002-496c-83a9-6a954b43da02",
+    "name": "Servo Lasso",
+    "range": ["Medium"],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A lasso made of tightly woven tensile wire, attached to a mechanical winch. On a successful hit, a target Mech, Vehicle or Creature is tied down by the servo-lasso, it falls Prone and gains the Vulnerable and Immobile Traits. It may attempt to Escape as a Turn Action."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "70179219-f6ad-41e8-aaab-f2091400a6ef",
+    "name": "Fell Rifle",
+    "range": ["Long"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 3
+    },
+    "traits": [
+      {
+        "type": "ballistic"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Long rifles loaded with armour piercing rounds, able to blast holes through steel. Used by the Fell Stalkers along with their Thermal Goggles to pick off targets at range even in dense fog."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "cb744f12-f69f-427b-949e-6cecc6b1d173",
+    "name": "Machine-Pistols (Gully Crusher Squad)",
+    "source": "Rainmaker",
+    "page": 79,
+    "range": ["Close"],
+    "damage": {
+      "damageType": "HP",
+      "amount": 4
+    },
+    "traits": [
+      {
+        "type": "ballistic"
+      },
+      {
+        "type": "multi-attack",
+        "amount": 4
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "8f41be1c-8069-4bfb-979b-8358e2789661",
+    "name": "Outrider Hunters",
+    "source": "Rainmaker",
+    "page": 79,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When a Gully Crusher hits a Squad with an attack they deal 2× damage."
+      }
+    ]
+  },
+  {
+    "id": "355d08a3-c640-49f9-9eca-7ad9c02055bc",
+    "name": "Improvised Explosive Device (Flint Children Squad)",
+    "source": "Rainmaker",
+    "page": 79,
+    "range": ["Close"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 4
+    },
+    "traits": [
+      {
+        "type": "explosive",
+        "amount": 1
+      },
+      {
+        "type": "multi-attack",
+        "amount": 2
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "21a15e23-6b4f-427b-82ac-a4c98f90aa16",
+    "name": "Demolition Experts",
+    "source": "Rainmaker",
+    "page": 79,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Flint Children do not take any damage from the Explosive Trait."
+      }
+    ]
+  },
+  {
+    "id": "1750ed33-8a3a-49d2-86c5-86ee02df0f08",
+    "name": "Minefield",
+    "source": "Rainmaker",
+    "page": 79,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Flint Children lace their combat zones with mines. When fighting them a Setback or Tough Choice can result in being hit by its Improvised Explosive Device."
+      }
+    ]
+  },
+  {
+    "id": "bf5fee40-2333-40bf-bbda-94e1ccdecaab",
+    "name": "Epoxy Guns (Cuspers Squad)",
+    "source": "Rainmaker",
+    "page": 79,
+    "range": ["Close"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 1
+    },
+    "traits": [
+      {
+        "type": "multi-attack",
+        "amount": 2
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A weapon that launches hot, burning epoxy at a target that compacts and seals on impact. On a successful hit, an Epoxy Gun blocks a Mech reactor and exhaust ports, preventing cooling. The Mech gains 1 Heat at the start of each of their turns and must make a Heat Check. This effect is cumulative. Epoxy takes a Short Action to scrape off a Mech."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "6c68d814-7334-460d-b838-096aaa2ef372",
+    "name": "Hit & Run",
+    "source": "Rainmaker",
+    "page": 79,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Before or after Cuspers Squad makes an attack they may move a range band as a Free Action."
+      }
+    ]
+  },
+  {
+    "id": "0ca7b931-beec-490a-b75d-38f1feb1a90b",
+    "name": "Fell Rifles (Fell Stalkers Squad)",
+    "source": "Rainmaker",
+    "page": 79,
+    "range": ["Long"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 3
+    },
+    "traits": [
+      {
+        "type": "ballistic"
+      },
+      {
+        "type": "multi-attack",
+        "amount": 2
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Long rifles loaded with armour piercing rounds, able to blast holes through steel. Used by the Fell Stalkers along with their Thermal Goggles to pick off targets at range even in dense fog."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "5c6f77d1-961d-4216-9f8e-2943ee25495b",
+    "name": "Born in the Saddle",
+    "source": "Rainmaker",
+    "page": 79,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When an attack roll is made against a Fell Stalker Squad the attacker must roll twice and pick the lowest result."
+      }
+    ]
+  },
+  {
+    "id": "d70135ab-0cd4-4706-ad7f-01716b6ddf0c",
+    "name": "Rebar Lances (Free Hill Coalition Squad)",
+    "source": "Rainmaker",
+    "page": 79,
+    "range": ["Close"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "traits": [
+      {
+        "type": "melee"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Lances wielded by the Free Hill Coalition, highly effective when mounted on horseback."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a melee attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "7b1efaf3-5ae6-45bb-b7c9-81ba066a041a",
+    "name": "Servo-Lasso (Free Hill Coalition Squad)",
+    "source": "Rainmaker",
+    "page": 79,
+    "range": ["Medium"],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A lasso made of tightly woven tensile wire, attached to a mechanical winch. On a successful hit, a target Mech, Vehicle or Creature is tied down by the servo-lasso, it falls Prone and gains the Vulnerable and Immobile Traits. It may attempt to Escape as a Turn Action."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "64a9f7ef-133a-46d8-be08-ab17be378985",
+    "name": "Thermal Goggles",
+    "source": "Rainmaker",
+    "page": 79,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "T3 Pilot Equipment, acts as Thermal Optics."
+      }
+    ]
+  },
+  {
+    "id": "0e13d663-dc07-4a5d-88eb-b20b93d806fb",
+    "name": "Camouflaged Scales (Apophis)",
+    "displayName": "Camouflaged Scales",
+    "actionType": "Passive",
+    "source": "Rainmaker",
+    "page": 81,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Apophis scales are an array of hypnotic colours designed to confuse foes and throw off targeting, scanning and optical systems. Apophis cannot be targeted with anything with the Targeter Trait. It also cannot be seen by anything with the Optics Trait or Scanner Trait."
+      }
+    ]
+  },
+  {
+    "id": "5cf942e4-d588-402a-bea2-135dda076c89",
+    "name": "Venomous Bite (Apophis)",
+    "displayName": "Venomous Bite",
+    "range": [
+      "Close"
+    ],
+    "damage": {
+      "amount": 5,
+      "damageType": "SP"
+    },
+    "traits": [
+      {
+        "type": "melee"
+      },
+      {
+        "type": "poison"
+      },
+      {
+        "type": "deadly"
+      }
+    ],
+    "source": "Rainmaker",
+    "page": 81,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A poisonous bite attack Apophis primarily utilises against beasts that enter its lair, its venom able even to kill another Bio-Titan."
+      },
+      {
+        "type": "paragraph",
+        "value": "This attack does not affect Mechs or Vehicles."
+      }
+    ]
+  },
+  {
+    "id": "44a1e91e-4a29-40e7-a426-5c9f661b1466",
+    "name": "Constricting Coils (Apophis)",
+    "displayName": "Constricting Coils",
+    "range": [
+      "Close"
+    ],
+    "traits": [
+      {
+        "type": "melee"
+      }
+    ],
+    "source": "Rainmaker",
+    "page": 81,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Apophis wraps itself around its prey. It may target one Mech, Bio-Titan or Vehicle or up to 4 Creatures with this Ability. Make an attack roll as normal. On a hit each target is constricted. They immediately take 6 SP damage and gain the Vulnerable and Immobile Traits. A target caught may attempt to escape as a Turn Action. Apophis may only constrict one Mech or 3 Creatures at a time."
+      }
+    ]
+  },
+  {
+    "id": "bd3e75cb-aa4d-4f1e-aed9-e2c948b3b820",
+    "name": "Crush (Apophis)",
+    "displayName": "Crush",
+    "actionType": "Turn",
+    "source": "Rainmaker",
+    "page": 81,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Apophis crushes all targets that it has constricted. This automatically deals 12 SP damage to the targets, and a random System or Module on a Mech is destroyed. (The 2x damage of the Vulnerable Trait is factored into this damage.)"
+      }
+    ]
+  },
+  {
+    "id": "b239d9c5-ea33-4f5e-b7bf-5b0805efa3d4",
+    "name": "Titanic Actions (Apophis)",
+    "displayName": "Titanic Actions",
+    "source": "Rainmaker",
+    "page": 81,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Apophis can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Apophis regains spent Titanic Actions at the start of their turn."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "value": "Titanic Actions"
+      },
+      {
+        "type": "list-item",
+        "value": "Apophis moves a Range Band."
+      },
+      {
+        "type": "list-item",
+        "value": "Apophis uses its Crush Ability."
+      },
+      {
+        "type": "list-item",
+        "value": "Apophis uses its Constricting Coils Attack (Uses 2 Titanic Actions)."
+      },
+      {
+        "type": "list-item",
+        "value": "Apophis makes a Venomous Bite Attack."
+      }
+    ]
+  },
+  {
+    "id": "32c1b47f-38cd-4de3-8447-8ff898aa73b9",
+    "name": "Pilot Seeker Tendrils",
+    "range": ["Medium"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "traits": [
+      {
+        "type": "melee"
+      },
+      {
+        "type": "anti-organic"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Pilot Seeker Tendrils may choose to attack a Pilot in the cockpit of their Mech. The attack is resolved as though attacking the Pilot."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a melee attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "f5ad4482-fb2b-468b-995c-9b930ac9356d",
+    "name": "Puppeteer Tendrils",
+    "range": ["Medium"],
+    "actionType": "Turn",
+    "traits": [
+      {
+        "type": "melee"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Puppeteer tendrils can target any Mech without a Pilot in Range. The Mech comes under the control of Physalis. It acts when Physalis wills it via its Mech Marionette Ability."
+      }
+    ]
+  },
+  {
+    "id": "c07208c2-f5fc-40b3-a8d1-368039f82b0b",
+    "name": "Mech Marionette",
+    "range": ["Medium"],
+    "actionType": "Turn",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A Mech in Range under the control of Physalis may either Move or take a Turn Action. It may also take as many Free Actions as it is able to. It cannot take Reactions."
+      }
+    ]
+  },
+  {
+    "id": "6788277f-10af-40c7-be9f-5d0049972929",
+    "name": "Puppet Shield",
+    "actionType": "Reaction",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When Physalis is hit by an attack it may redirect the attack to one of the Mechs under its control. The attack deals its damage and any effects to the chosen Mech. During a round, Physalis may use this Reaction once per Mech it has under its control."
+      }
+    ]
+  },
+  {
+    "id": "653ade99-a3b0-4094-b822-1f1edca5f507",
+    "name": "Hovering Mass",
+    "actionType": "Passive",
+    "traits": [
+      {
+        "type": "hover"
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Physalis uses electro-magnetic propulsion to hover over terrain and obstacles. It has the Hover Trait."
+      }
+    ]
+  },
+  {
+    "id": "a4733b36-8ef0-48e9-9c41-a76b14cc6868",
+    "name": "Titanic Actions (Physalis)",
+    "displayName": "Titanic Actions",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Physalis can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Physalis regains spent Titanic Actions at the start of their turn."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "value": "Titanic Actions"
+      },
+      {
+        "type": "list-item",
+        "value": "Physalis makes an attack with its Pilot Seeker Tendrils"
+      },
+      {
+        "type": "list-item",
+        "value": "Physalis uses its Puppeteer Tendrils Ability"
+      },
+      {
+        "type": "list-item",
+        "value": "Physalis uses its Mech Marionette Ability"
+      },
+      {
+        "type": "list-item",
+        "value": "Physalis Moves a Range Band"
+      }
+    ]
+  },
+  {
+    "id": "e0b63ff6-7541-49d7-bc8f-94308c415cec",
+    "name": "Aquatic Ambusher (Genbu)",
+    "displayName": "Aquatic Ambusher",
+    "source": "Rainmaker",
+    "page": 82,
+    "actionType": "Passive",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "If undetected in an aquatic environment, Genbu always acts first in an Action Scene."
+      }
+    ]
+  },
+  {
+    "id": "8e6b4dc1-863d-4581-94a5-9c0742e9435e",
+    "name": "Grasping Tentacles (Genbu)",
+    "displayName": "Grasping Tentacles",
+    "source": "Rainmaker",
+    "page": 82,
+    "range": ["Medium"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 2
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A target hit by this attack gains the Vulnerable and Immobile Trait. They may use a Turn Action to attempt to escape."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a ranged attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "676f4cf0-9bbc-486c-96c8-c4c113347404",
+    "name": "Mace-Tentacles (Genbu)",
+    "displayName": "Mace-Tentacles",
+    "source": "Rainmaker",
+    "page": 82,
+    "range": ["Medium"],
+    "damage": {
+      "damageType": "SP",
+      "amount": 5
+    },
+    "traits": [
+      {
+        "type": "melee"
+      },
+      {
+        "type": "multi-attack",
+        "amount": 2
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Crushing Attacks: Each successful hit Genbu makes with their Mace-Tentacles destroys a random System or Module on the target."
+      },
+      {
+        "type": "paragraph",
+        "value": "Make a melee attack against a target within Range."
+      }
+    ]
+  },
+  {
+    "id": "34091167-a996-4455-8665-6b904b14961d",
+    "name": "Shell Regeneration (Genbu)",
+    "displayName": "Shell Regeneration",
+    "source": "Rainmaker",
+    "page": 82,
+    "actionType": "Turn",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Genbu regenerates a layer of Armour Plating on its shell, regaining 1 Armour Plating up to its maximum of 6."
+      }
+    ]
+  },
+  {
+    "id": "c33a9caf-aac3-423d-b6dc-4685472bd049",
+    "name": "Armour Plating (Genbu)",
+    "displayName": "Armour Plating",
+    "source": "Rainmaker",
+    "page": 82,
+    "actionType": "Passive",
+    "traits": [
+      {
+        "type": "uses",
+        "amount": 6
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When Genbu takes damage, instead remove a layer of Armour Plating and it takes no damage or effect from the attack."
+      }
+    ]
+  },
+  {
+    "id": "055bf8d4-9a9f-43bb-a82b-9a791f90ea10",
+    "name": "Cephalopod (Genbu)",
+    "displayName": "Cephalopod",
+    "source": "Rainmaker",
+    "page": 82,
+    "actionType": "Passive",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Genbu can move effortlessly in water, swamp, rivers, and other aquatic environments. Genbu is slow on areas of land. It must choose to either attack or move on its turn when on land."
+      }
+    ]
+  },
+  {
+    "id": "bf9470f6-5df0-405b-b550-b9f1feb0d228",
+    "name": "Titanic Actions (Genbu)",
+    "displayName": "Titanic Actions",
+    "source": "Rainmaker",
+    "page": 82,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Genbu can take three Titanic Actions, choosing from the options below. Only one Titanic Action may be chosen at a time and only at the end of another Pilot's or NPC's turn. Genbu regains spent Titanic Actions at the start of their turn."
+      },
+      {
+        "type": "list-item",
+        "value": "Genbu moves a Range band if it is in an aquatic environment."
+      },
+      {
+        "type": "list-item",
+        "value": "Genbu makes a single Mace Tentacle Attack."
+      },
+      {
+        "type": "list-item",
+        "value": "Genbu makes a single Grasping Tentacle Attack."
+      },
+      {
+        "type": "list-item",
+        "value": "Genbu uses its Shell Regeneration Ability."
       }
     ]
   }

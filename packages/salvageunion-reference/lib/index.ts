@@ -22,7 +22,7 @@ import type {
   SURefDrone,
   SURefEquipment,
   SURefKeyword,
-  SURefLance,
+  SURefFaction,
   SURefMeld,
   SURefModule,
   SURefNPC,
@@ -87,7 +87,7 @@ export type SchemaToEntityMap = {
   drones: SURefDrone
   equipment: SURefEquipment
   keywords: SURefKeyword
-  lances: SURefLance
+  factions: SURefFaction
   meld: SURefMeld
   modules: SURefModule
   npcs: SURefNPC
@@ -118,7 +118,7 @@ export const EntitySchemaNames = new Set<EntitySchemaName>([
   'drones',
   'equipment',
   'keywords',
-  'lances',
+  'factions',
   'meld',
   'modules',
   'npcs',
@@ -146,7 +146,7 @@ export const SchemaToModelMap = {
   drones: 'Drones',
   equipment: 'Equipment',
   keywords: 'Keywords',
-  lances: 'Lances',
+  factions: 'Factions',
   meld: 'Meld',
   modules: 'Modules',
   npcs: 'NPCs',
@@ -174,7 +174,7 @@ export const SchemaToDisplayName = {
   drones: 'Drones',
   equipment: 'Equipment',
   keywords: 'Keywords',
-  lances: 'Lances',
+  factions: 'Factions',
   meld: 'Meld',
   modules: 'Modules',
   npcs: 'NPCs',
@@ -210,7 +210,7 @@ export class SalvageUnionReference {
   static Drones = models.Drones as ModelWithMetadata<SchemaToEntityMap['drones']>
   static Equipment = models.Equipment as ModelWithMetadata<SchemaToEntityMap['equipment']>
   static Keywords = models.Keywords as ModelWithMetadata<SchemaToEntityMap['keywords']>
-  static Lances = models.Lances as ModelWithMetadata<SchemaToEntityMap['lances']>
+  static Factions = models.Factions as ModelWithMetadata<SchemaToEntityMap['factions']>
   static Meld = models.Meld as ModelWithMetadata<SchemaToEntityMap['meld']>
   static Modules = models.Modules as ModelWithMetadata<SchemaToEntityMap['modules']>
   static NPCs = models.NPCs as ModelWithMetadata<SchemaToEntityMap['npcs']>
@@ -422,7 +422,7 @@ export class SalvageUnionReference {
       if (typeof techLevel === 'number') {
         return techLevel
       }
-      if (techLevel === 'B') {
+      if (techLevel === 'B' || techLevel === 'N') {
         return 1
       }
     }

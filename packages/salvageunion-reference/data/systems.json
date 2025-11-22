@@ -1301,5 +1301,151 @@
     "actions": [
       "Mutated Locomotion System"
     ]
+  },
+  {
+    "id": "6c726e51-57e7-4417-b558-573d948551e7",
+    "source": "False Flag",
+    "name": "Frost Protection",
+    "techLevel": 2,
+    "slotsRequired": 3,
+    "salvageValue": 4,
+    "page": 67,
+    "actions": [
+      "Frost Protection"
+    ]
+  },
+  {
+    "id": "642e2b18-5df9-4a7b-9bc6-9bb0fb3bed5b",
+    "source": "False Flag",
+    "name": "Hydrologic Locomotion System",
+    "techLevel": 2,
+    "slotsRequired": 4,
+    "salvageValue": 3,
+    "page": 67,
+    "actions": [
+      "Hydrologic Locomotion System"
+    ]
+  },
+  {
+    "id": "052d7865-c9c7-4cd3-b418-0a8b3cd51b02",
+    "source": "False Flag",
+    "name": "K4 Rifle",
+    "techLevel": 2,
+    "slotsRequired": 1,
+    "salvageValue": 2,
+    "page": 67,
+    "actions": [
+      "K4 Rifle"
+    ]
+  },
+  {
+    "id": "eb1d3c30-a58d-4ea4-a568-39d59e4361c3",
+    "source": "False Flag",
+    "name": "Cryopod System",
+    "techLevel": 3,
+    "slotsRequired": 3,
+    "salvageValue": 1,
+    "page": 67,
+    "actions": [
+      "Cryopod System"
+    ]
+  },
+  {
+    "id": "9f5e5bf0-2023-4ae8-a911-cb8b8858523b",
+    "source": "False Flag",
+    "name": "Meld Injector",
+    "techLevel": 3,
+    "slotsRequired": 2,
+    "salvageValue": 2,
+    "page": 68,
+    "actions": [
+      "Meld Injector"
+    ]
+  },
+  {
+    "id": "afbd1b85-0650-4c4d-aeaf-99eb752f53cd",
+    "source": "False Flag",
+    "name": "Meld Manipulator",
+    "techLevel": 3,
+    "slotsRequired": 2,
+    "salvageValue": 2,
+    "page": 68,
+    "actions": [
+      "Meld Manipulator"
+    ]
+  },
+  {
+    "id": "10443df9-693f-4aeb-be5f-a41c16a9856a",
+    "source": "False Flag",
+    "name": "Overcharged Green Laser",
+    "techLevel": 3,
+    "slotsRequired": 4,
+    "salvageValue": 2,
+    "page": 68,
+    "actions": [
+      "Overcharged Green Laser"
+    ]
+  },
+  {
+    "id": "79f8a74e-dc50-4a2a-abea-b053213f0c5f",
+    "source": "False Flag",
+    "name": "Nanite Sifter",
+    "techLevel": 4,
+    "slotsRequired": 4,
+    "salvageValue": 4,
+    "page": 68,
+    "actions": [
+      "Nanite Sifter",
+      "Refine (Nanite Sifter)"
+    ]
+  },
+  {
+    "id": "5590f106-f185-4298-bef4-136e38158709",
+    "source": "False Flag",
+    "name": "Meld Spore Launcher",
+    "techLevel": "N",
+    "slotsRequired": 7,
+    "salvageValue": 5,
+    "page": 68,
+    "actions": [
+      "Meld Spore Launcher"
+    ]
+  },
+  {
+    "id": "06562478-3162-4a47-b4c6-19804a78585f",
+    "source": "False Flag",
+    "name": "Meld System Replicator",
+    "techLevel": "N",
+    "slotsRequired": 6,
+    "salvageValue": 6,
+    "page": 69,
+    "actions": [
+      "Meld System Replicator",
+      "Replicate (Meld System Replicator)"
+    ]
+  },
+  {
+    "id": "c15e9637-e17c-4717-9247-5462fa0223d1",
+    "source": "False Flag",
+    "name": "Meld Tendrils",
+    "techLevel": "N",
+    "slotsRequired": 6,
+    "salvageValue": 6,
+    "page": 69,
+    "actions": [
+      "Meld Tendrils"
+    ]
+  },
+  {
+    "id": "f08c58e7-1e14-4bd6-a508-55e00d369e7e",
+    "source": "Rainmaker",
+    "name": "Napalm Shotgun",
+    "techLevel": 4,
+    "slotsRequired": 3,
+    "salvageValue": 3,
+    "page": 76,
+    "actions": [
+      "Napalm Shotgun"
+    ]
   }
 ]

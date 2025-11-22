@@ -150,5 +150,97 @@
         "value": "A swarm of Combat Drones flying in sync."
       }
     ]
+  },
+  {
+    "id": "2c761238-bf2c-4e26-b8b5-4c3d60ba3fd2",
+    "name": "Gully Crusher Squad",
+    "source": "Rainmaker",
+    "page": 79,
+    "hitPoints": 8,
+    "damageType": "HP",
+    "actions": [
+      "Machine-Pistols (Gully Crusher Squad)",
+      "Outrider Hunters"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Trained at fighting other Outriders and bands of troops, their machine pistols rake their foes with hot death."
+      }
+    ]
+  },
+  {
+    "id": "567f2b23-525b-4774-8206-3486eb1da1b8",
+    "name": "Flint Children Squad",
+    "source": "Rainmaker",
+    "page": 79,
+    "hitPoints": 8,
+    "damageType": "HP",
+    "actions": [
+      "Improvised Explosive Device (Flint Children Squad)",
+      "Demolition Experts",
+      "Minefield"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Demolition Experts who lace the area around their territory with homemade explosives."
+      }
+    ]
+  },
+  {
+    "id": "502ccfd8-8c04-4c4e-a435-53e70f7abfa4",
+    "name": "Cuspers Squad",
+    "source": "Rainmaker",
+    "page": 79,
+    "hitPoints": 6,
+    "damageType": "HP",
+    "actions": [
+      "Epoxy Guns (Cuspers Squad)",
+      "Hit & Run"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Expert hit and run riders who carry epoxy weapons that seal the exhaust ports of Mechs causing them to overload."
+      }
+    ]
+  },
+  {
+    "id": "64ee7ad5-e45c-4339-b106-e9c4af860ac5",
+    "name": "Fell Stalkers Squad",
+    "source": "Rainmaker",
+    "page": 79,
+    "hitPoints": 8,
+    "damageType": "HP",
+    "actions": [
+      "Fell Rifles (Fell Stalkers Squad)",
+      "Thermal Goggles",
+      "Born in the Saddle"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Sharpshooters who can ride into a maelstrom of fire and come out unscathed."
+      }
+    ]
+  },
+  {
+    "id": "740cbf45-6074-4d85-a504-de26495497c9",
+    "name": "Free Hill Coalition Squad",
+    "source": "Rainmaker",
+    "page": 79,
+    "hitPoints": 10,
+    "damageType": "HP",
+    "actions": [
+      "Rebar Lances (Free Hill Coalition Squad)",
+      "Servo-Lasso (Free Hill Coalition Squad)"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Daring riders who pin targets with servo-lassos and then skewer them with their lances."
+      }
+    ]
   }
 ]

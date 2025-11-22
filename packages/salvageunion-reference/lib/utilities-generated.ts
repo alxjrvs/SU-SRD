@@ -183,11 +183,11 @@ export function isKeyword(entity: SURefMetaEntity): entity is SURefKeyword {
 }
 
 /**
- * Type guard to check if an entity is a Lance
+ * Type guard to check if an entity is a Faction
  * @param entity - The entity to check
- * @returns True if the entity is a Lance
+ * @returns True if the entity is a Faction
  */
-export function isLance(entity: SURefMetaEntity): entity is SURefLance {
+export function isFaction(entity: SURefMetaEntity): entity is SURefFaction {
   return (
     'id' in entity &&
     'name' in entity &&
@@ -195,8 +195,7 @@ export function isLance(entity: SURefMetaEntity): entity is SURefLance {
     'page' in entity &&
     'goals' in entity &&
     'assets' in entity &&
-    'weaknesses' in entity &&
-    'formation' in entity
+    'weaknesses' in entity
   )
 }
 
@@ -290,8 +289,8 @@ import type {
   SURefDistance,
   SURefDrone,
   SURefEquipment,
+  SURefFaction,
   SURefKeyword,
-  SURefLance,
   SURefMeld,
   SURefMetaAbilityTreeRequirement,
   SURefMetaCrawlerTechLevel,
