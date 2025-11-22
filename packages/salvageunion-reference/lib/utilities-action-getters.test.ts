@@ -1,6 +1,17 @@
 import { describe, expect, test } from 'bun:test'
-import { SalvageUnionReference } from './index.js'
 import { getDataMaps } from './ModelFactory.js'
+
+// Import SalvageUnionReference - use lazy getter to avoid initialization issues
+import type { SalvageUnionReference as SURefType } from './index.js'
+let SalvageUnionReference: typeof SURefType
+
+function getReference() {
+  if (!SalvageUnionReference) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    SalvageUnionReference = require('./index.js').SalvageUnionReference
+  }
+  return SalvageUnionReference
+}
 import {
   getDescription,
   getActivationCost,
@@ -19,14 +30,14 @@ import {
 describe('Action Property Getters', () => {
   describe('getDescription', () => {
     test('should get description from ability', () => {
-      const ability = SalvageUnionReference.Abilities.all()[0]!
+      const ability = getReference().Abilities.all()[0]!
       const description = getDescription(ability)
       expect(description).toBeDefined()
       expect(typeof description).toBe('string')
     })
 
     test('should return undefined for non-ability entities (deprecated)', () => {
-      const chassis = SalvageUnionReference.Chassis.all()[0]!
+      const chassis = getReference().Chassis.all()[0]!
       const description = getDescription(chassis)
       expect(description).toBeUndefined()
     })
@@ -34,7 +45,9 @@ describe('Action Property Getters', () => {
 
   describe('getActivationCost', () => {
     test('should get activation cost from ability (action property)', () => {
-      const ability = SalvageUnionReference.Abilities.all().find((a) => a.name === 'Ace Pilot')
+      const ability = getReference()
+        .Abilities.all()
+        .find((a) => a.name === 'Ace Pilot')
       if (ability) {
         const cost = getActivationCost(ability)
         expect(cost).toBeDefined()
@@ -105,7 +118,7 @@ describe('Action Property Getters', () => {
     })
 
     test('should work correctly with real systems where action name matches entity name', () => {
-      const systems = SalvageUnionReference.Systems.all()
+      const systems = getReference().Systems.all()
       const systemWithMatchingAction = systems.find((s) => {
         if (!s.actions || s.actions.length === 0) return false
         const resolvedActions = extractActions(s)
@@ -177,7 +190,7 @@ describe('Action Property Getters', () => {
 
   describe('getActionType', () => {
     test('should get action type from ability (action property)', () => {
-      const ability = SalvageUnionReference.Abilities.all()[0]!
+      const ability = getReference().Abilities.all()[0]!
       const actionType = getActionType(ability)
       expect(actionType).toBeDefined()
       expect(typeof actionType).toBe('string')
@@ -248,7 +261,9 @@ describe('Action Property Getters', () => {
 
   describe('getRange', () => {
     test('should get range from system (action property)', () => {
-      const system = SalvageUnionReference.Systems.all().find((s) => s.name === 'Assault Rifle')
+      const system = getReference()
+        .Systems.all()
+        .find((s) => s.name === 'Assault Rifle')
       if (system) {
         const range = getRange(system)
         expect(range).toBeDefined()
@@ -298,7 +313,9 @@ describe('Action Property Getters', () => {
 
   describe('getDamage', () => {
     test('should get damage from system (action property)', () => {
-      const system = SalvageUnionReference.Systems.all().find((s) => s.name === 'Assault Rifle')
+      const system = getReference()
+        .Systems.all()
+        .find((s) => s.name === 'Assault Rifle')
       if (system) {
         const damage = getDamage(system)
         expect(damage).toBeDefined()
@@ -308,10 +325,12 @@ describe('Action Property Getters', () => {
     })
 
     test('should get damage from chassis action (base level)', () => {
-      const chassis = SalvageUnionReference.Chassis.all().find((c) => {
-        const abilities = getChassisAbilities(c)
-        return abilities && abilities.length > 0 && abilities[0]?.damage !== undefined
-      })
+      const chassis = getReference()
+        .Chassis.all()
+        .find((c) => {
+          const abilities = getChassisAbilities(c)
+          return abilities && abilities.length > 0 && abilities[0]?.damage !== undefined
+        })
       if (chassis) {
         const damage = getDamage(chassis)
         expect(damage).toBeDefined()
@@ -360,10 +379,12 @@ describe('Action Property Getters', () => {
 
   describe('getTraits', () => {
     test('should get traits from system (action property)', () => {
-      const system = SalvageUnionReference.Systems.all().find((s) => {
-        const traits = getTraits(s)
-        return traits && traits.length > 0
-      })
+      const system = getReference()
+        .Systems.all()
+        .find((s) => {
+          const traits = getTraits(s)
+          return traits && traits.length > 0
+        })
       if (system) {
         const traits = getTraits(system)
         expect(traits).toBeDefined()
@@ -372,7 +393,7 @@ describe('Action Property Getters', () => {
     })
 
     test('should get traits from creature (base level)', () => {
-      const creature = SalvageUnionReference.Creatures.all()[0]!
+      const creature = getReference().Creatures.all()[0]!
       const traits = getTraits(creature)
       if (traits) {
         expect(Array.isArray(traits)).toBe(true)
@@ -421,10 +442,12 @@ describe('Action Property Getters', () => {
 
   describe('getEffects', () => {
     test('should get effects from ability (base level)', () => {
-      const ability = SalvageUnionReference.Abilities.all().find((a) => {
-        const effects = getEffects(a)
-        return effects && effects.length > 0
-      })
+      const ability = getReference()
+        .Abilities.all()
+        .find((a) => {
+          const effects = getEffects(a)
+          return effects && effects.length > 0
+        })
       if (ability) {
         const effects = getEffects(ability)
         expect(effects).toBeDefined()
@@ -447,10 +470,12 @@ describe('Action Property Getters', () => {
 
   describe('getTable', () => {
     test('should get table from crawler bay (base level)', () => {
-      const crawlerBay = SalvageUnionReference.CrawlerBays.all().find((cb) => {
-        const table = getTable(cb)
-        return table !== undefined
-      })
+      const crawlerBay = getReference()
+        .CrawlerBays.all()
+        .find((cb) => {
+          const table = getTable(cb)
+          return table !== undefined
+        })
       if (crawlerBay) {
         const table = getTable(crawlerBay)
         expect(table).toBeDefined()
@@ -461,10 +486,12 @@ describe('Action Property Getters', () => {
 
   describe('getOptions', () => {
     test('should get options from ability (action property)', () => {
-      const ability = SalvageUnionReference.Abilities.all().find((a) => {
-        const options = getOptions(a)
-        return options && options.length > 0
-      })
+      const ability = getReference()
+        .Abilities.all()
+        .find((a) => {
+          const options = getOptions(a)
+          return options && options.length > 0
+        })
       if (ability) {
         const options = getOptions(ability)
         expect(options).toBeDefined()
@@ -475,10 +502,12 @@ describe('Action Property Getters', () => {
 
   describe('getChoices', () => {
     test('should get choices from equipment (action property)', () => {
-      const equipment = SalvageUnionReference.Equipment.all().find((e) => {
-        const choices = getChoices(e)
-        return choices && choices.length > 0
-      })
+      const equipment = getReference()
+        .Equipment.all()
+        .find((e) => {
+          const choices = getChoices(e)
+          return choices && choices.length > 0
+        })
       if (equipment) {
         const choices = getChoices(equipment)
         expect(choices).toBeDefined()

@@ -6,6 +6,7 @@ import { ContentBlockRenderer } from './EntityDisplay/ContentBlockRenderer'
 import { EntityChoice } from './EntityDisplay/EntityChoice'
 import { extractEntityDetails } from '@/lib/entityDataExtraction'
 import { SharedDetailItem } from './EntityDisplay/sharedDetailItem'
+import { RollTable } from '@/components/shared/RollTable'
 
 interface NestedActionDisplayProps {
   /** Action data from salvageunion-reference */
@@ -45,6 +46,7 @@ export function NestedActionDisplay({
   const hasContent = data.content && data.content.length > 0
   const actionChoices: SURefObjectChoice[] = data.choices || []
   const hasChoices = actionChoices.length > 0
+  const hasTable = data.table !== undefined && data.table !== null
 
   // Default variant: light blue background with details
   // Always render data row on a new line, regardless of content blocks
@@ -92,11 +94,29 @@ export function NestedActionDisplay({
         </VStack>
       )}
 
+      {hasTable && (
+        <Box
+          p={spacing}
+          pt={hasContentToRender && !hideContent ? 0 : details.length > 0 ? 0 : spacing}
+          borderRadius="md"
+          position="relative"
+          zIndex={10}
+        >
+          <RollTable
+            disabled={false}
+            table={data.table!}
+            showCommand
+            compact
+            tableName={displayName}
+          />
+        </Box>
+      )}
+
       {hasChoices && (
         <VStack
           gap={spacing}
           p={spacing}
-          pt={hasContentToRender && !hideContent ? 0 : details.length > 0 ? 0 : spacing}
+          pt={hasContentToRender && !hideContent ? 0 : hasTable ? 0 : details.length > 0 ? 0 : spacing}
           alignItems="stretch"
         >
           {actionChoices.map((choice) => (

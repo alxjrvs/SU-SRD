@@ -47,7 +47,7 @@
       },
       "activationCurrency": {
         "type": "string",
-        "enum": ["Variable"]
+        "enum": ["Variable", "EP or AP", "SP or HP"]
       },
       "actions": {
         "type": "array",

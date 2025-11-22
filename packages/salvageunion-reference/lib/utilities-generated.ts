@@ -712,8 +712,19 @@ export function getWeaknesses(entity: SURefMetaEntity): string | undefined {
  * @param entity - The entity to extract from
  * @returns The formation or undefined
  */
-export function getFormation(entity: SURefMetaEntity): unknown | undefined {
-  return 'formation' in entity ? entity.formation : undefined
+export function getFormation(entity: SURefMetaEntity): SURefObjectFormationMech[] | undefined {
+  return 'formation' in entity && Array.isArray(entity.formation) ? entity.formation : undefined
+}
+
+/**
+ * Extract bioSalvageValue from an entity
+ * @param entity - The entity to extract from
+ * @returns The bioSalvageValue or undefined
+ */
+export function getBioSalvageValue(entity: SURefMetaEntity): number | undefined {
+  return 'bioSalvageValue' in entity && typeof entity.bioSalvageValue === 'number'
+    ? entity.bioSalvageValue
+    : undefined
 }
 
 /**
@@ -738,6 +749,7 @@ export function getDamageType(entity: SURefMetaEntity): unknown | undefined {
 import type {
   SURefObjectBonusPerTechLevel,
   SURefObjectChoice,
+  SURefObjectFormationMech,
   SURefObjectGrant,
   SURefObjectNpc,
   SURefObjectPattern,

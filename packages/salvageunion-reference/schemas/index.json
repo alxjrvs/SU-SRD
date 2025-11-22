@@ -167,7 +167,7 @@
       "description": "Game keywords and terminology in Salvage Union",
       "dataFile": "data/keywords.json",
       "schemaFile": "schemas/keywords.schema.json",
-      "itemCount": 73,
+      "itemCount": 76,
       "requiredFields": ["name", "source", "page"],
       "displayName": "Keywords"
     },

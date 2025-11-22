@@ -874,5 +874,85 @@
         "value": "If something is wheeled it moves via use of wheels. Wheeled vehicles cannot cross areas of Difficult Terrain and can only be used effectively on roads or other flat expanses, few of which exist in the wastelands."
       }
     ]
+  },
+  {
+    "id": "b87fd43c-f3fb-44a0-af49-7eb6afb30b03",
+    "source": "We Were Here First!",
+    "name": "bio-system",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Some Bio-Systems and Bio-Modules will have different effects based on whether they are installed in a Bio-Chassis or a Mech-Chassis."
+      },
+      {
+        "type": "paragraph",
+        "value": "If a Union Crawler has a Bio-Mech Bay a Bio-Chassis fully restores its SP, EP, and reduces its Heat to 0 during Downtime."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis, Bio-Systems and Bio-Modules do not repair from Damaged to Intact automatically during downtime. They must be repaired with Bio-Salvage."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis can install both standard and Bio Systems and Modules."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis roll on an alternate Bio-Chassis Damage Table (see p. 78) when they are reduced to 0 SP."
+      }
+    ]
+  },
+  {
+    "id": "8bf406cd-dfc9-4e83-9b05-d1186c5a9000",
+    "source": "We Were Here First!",
+    "name": "bio-module",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Some Bio-Systems and Bio-Modules will have different effects based on whether they are installed in a Bio-Chassis or a Mech-Chassis."
+      },
+      {
+        "type": "paragraph",
+        "value": "If a Union Crawler has a Bio-Mech Bay a Bio-Chassis fully restores its SP, EP, and reduces its Heat to 0 during Downtime."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis, Bio-Systems and Bio-Modules do not repair from Damaged to Intact automatically during downtime. They must be repaired with Bio-Salvage."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis can install both standard and Bio Systems and Modules."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis roll on an alternate Bio-Chassis Damage Table (see p. 78) when they are reduced to 0 SP."
+      }
+    ]
+  },
+  {
+    "id": "908e7718-0409-4a7b-b165-908ff108061a",
+    "source": "We Were Here First!",
+    "name": "bio-chassis",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis roll on an alternate Bio-Chassis Overload Table (see p. 79) when they fail a Heat Check."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis requires the Pilot to hook themselves up physically to the Bio-Mech. There are many different ways this can be done: tendrils and wires; amniotic sacs; electrodes; and harnessing. The exact details are up to the players and the Mediator to determine."
+      },
+      {
+        "type": "paragraph",
+        "value": "Otherwise, Bio-Chassis operate as a standard Mech."
+      },
+      {
+        "type": "paragraph",
+        "value": "Unless otherwise stated in their entry, Bio-Systems and Bio-Modules can be installed on either Bio-Chassis or standard Mech-Chassis."
+      }
+    ]
   }
 ]

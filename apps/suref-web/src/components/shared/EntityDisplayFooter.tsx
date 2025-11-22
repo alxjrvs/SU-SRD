@@ -2,9 +2,10 @@ import { Flex } from '@chakra-ui/react'
 import { getDisplayName, isAbility } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
 import { useEntityDisplayContext } from '@/components/entity/EntityDisplay/useEntityDisplayContext'
+import { getSourceStyles } from '@/components/entity/entityDisplayHelpers'
 
 export function EntityDisplayFooter({ bg }: { bg?: string }) {
-  const { data, schemaName, spacing, compact } = useEntityDisplayContext()
+  const { data, schemaName, spacing, compact, source, disabled } = useEntityDisplayContext()
   if (!('page' in data) || !data.page) return null
   const displayName = getDisplayName(schemaName)
 
@@ -13,6 +14,10 @@ export function EntityDisplayFooter({ bg }: { bg?: string }) {
 
   const fontWeightBold = compact ? 'semibold' : 'bold'
   const fontWeightSemibold = 'semibold'
+
+  // Apply source-specific styling
+  const sourceFooterStyles = getSourceStyles(source, disabled ?? false, compact, 'footer')
+
   return (
     <Flex
       p={spacing.contentPadding}
@@ -22,6 +27,7 @@ export function EntityDisplayFooter({ bg }: { bg?: string }) {
       w="full"
       gap={4}
       bg={bg ?? 'transparent'}
+      css={sourceFooterStyles}
     >
       <Flex gap={2} alignItems="center" flex="0 1 auto" minW="0">
         {displayName && (

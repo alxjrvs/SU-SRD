@@ -77,6 +77,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
     assetUrl,
     actionsToDisplay,
     matchingAction,
+    source,
   } = useEntityDisplayContext()
 
   // Determine which content to render (from EntityTopMatter)
@@ -145,6 +146,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
       bodyPadding="0"
       onHeaderClick={handleHeaderClick}
       headerTestId="frame-header-container"
+      source={source}
     >
       {(!collapsible || isExpanded) && (
         <VStack

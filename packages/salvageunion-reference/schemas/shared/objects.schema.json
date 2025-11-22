@@ -477,112 +477,104 @@
         {
           "type": "object",
           "description": "Duos roll table with custom ranges and entity references",
-          "required": ["type"],
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "duos"
-            }
-          },
-          "patternProperties": {
-            "^\\d+-\\d+$": {
-              "type": "string",
-              "description": "The name of the entity or ability"
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "Reference roll table with individual outcomes (1-20) that reference entities",
           "additionalProperties": false,
           "required": [
             "type",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20"
+            "1-2",
+            "3-4",
+            "5-6",
+            "7-8",
+            "9-10",
+            "11-12",
+            "13-14",
+            "15-16",
+            "17-18",
+            "19-20"
           ],
           "properties": {
             "type": {
               "type": "string",
-              "const": "reference"
+              "const": "duos"
+            },
+            "1-2": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "3-4": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "5-6": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "7-8": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "9-10": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "11-12": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "13-14": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "15-16": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "17-18": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "19-20": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "description": "Bio-Chassis roll table with custom ranges",
+          "additionalProperties": false,
+          "required": ["type", "1", "2-3", "4-5", "6-8", "9-10", "11-19", "20"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "bio-chassis"
             },
             "1": {
-              "$ref": "#/definitions/encounterTableEntry"
+              "type": "string",
+              "description": "Critical failure outcome"
             },
-            "2": {
-              "$ref": "#/definitions/encounterTableEntry"
+            "2-3": {
+              "type": "string",
+              "description": "System destruction outcome"
             },
-            "3": {
-              "$ref": "#/definitions/encounterTableEntry"
+            "4-5": {
+              "type": "string",
+              "description": "Severe bio-backlash outcome"
             },
-            "4": {
-              "$ref": "#/definitions/encounterTableEntry"
+            "6-8": {
+              "type": "string",
+              "description": "Module destruction outcome"
             },
-            "5": {
-              "$ref": "#/definitions/encounterTableEntry"
+            "9-10": {
+              "type": "string",
+              "description": "Bio-backlash outcome"
             },
-            "6": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "7": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "8": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "9": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "10": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "11": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "12": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "13": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "14": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "15": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "16": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "17": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "18": {
-              "$ref": "#/definitions/encounterTableEntry"
-            },
-            "19": {
-              "$ref": "#/definitions/encounterTableEntry"
+            "11-19": {
+              "type": "string",
+              "description": "Core damage outcome"
             },
             "20": {
-              "$ref": "#/definitions/encounterTableEntry"
+              "type": "string",
+              "description": "Critical success outcome"
             }
           }
         }
@@ -739,22 +731,6 @@
       "items": {
         "$ref": "#/definitions/contentBlock"
       }
-    },
-    "encounterTableEntry": {
-      "type": "object",
-      "description": "An entry in an encounter table referencing an entity",
-      "required": ["name", "page"],
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the entity referenced"
-        },
-        "page": {
-          "$ref": "common.schema.json#/definitions/positiveInteger",
-          "description": "The page number where the entity can be found"
-        }
-      },
-      "additionalProperties": false
     },
     "formationMech": {
       "type": "object",

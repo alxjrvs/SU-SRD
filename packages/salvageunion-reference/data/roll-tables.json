@@ -668,87 +668,27 @@
     "name": "Salvage Cache Table",
     "section": "salvage",
     "table": {
-      "type": "reference",
-      "1": {
-        "name": "d20 Bio-Salvage",
-        "page": 61
-      },
-      "2": {
-        "name": "5 Bio-Rifles",
-        "page": 63
-      },
-      "3": {
-        "name": "5 Chimerium Salvaging Tools and 5 Bio-Scanners",
-        "page": 63
-      },
-      "4": {
-        "name": "A Chimerium Harvester System",
-        "page": 74
-      },
-      "5": {
-        "name": "An Acid Spitter Mule",
-        "page": 76
-      },
-      "6": {
-        "name": "A Mutant Pattern Thresher",
-        "page": 76
-      },
-      "7": {
-        "name": "A Bio-Wings Bio-System",
-        "page": 74
-      },
-      "8": {
-        "name": "An Olfactory Glands Module",
-        "page": 75
-      },
-      "9": {
-        "name": "A Regeneration Glands Module",
-        "page": 75
-      },
-      "10": {
-        "name": "A Stormterror Bio-Chassis",
-        "page": 68
-      },
-      "11": {
-        "name": "A Bio-Talon Bio-System",
-        "page": 74
-      },
-      "12": {
-        "name": "A Bio-Maw Bio-System",
-        "page": 74
-      },
-      "13": {
-        "name": "An Acid Cannon Bio-System",
-        "page": 74
-      },
-      "14": {
-        "name": "An EDG Alpha Bio-System",
-        "page": 74
-      },
-      "15": {
-        "name": "A Fleshripper Bio-Chassis",
-        "page": 66
-      },
-      "16": {
-        "name": "A Super-Sonic Screecher Bio-System",
-        "page": 74
-      },
-      "17": {
-        "name": "A Scuttler Bio-Chassis",
-        "page": 72
-      },
-      "18": {
-        "name": "A Cranium Bio-Chassis",
-        "page": 70
-      },
-      "19": {
-        "name": "An Impaler Mech Chassis",
-        "page": 64
-      },
-      "20": {
-        "name": "A Chimerium Meteor",
-        "page": 9
-      }
+      "type": "flat",
+      "1": "d20 Bio-Salvage",
+      "2": "5 Bio-Rifles",
+      "3": "5 Chimerium Salvaging Tools and 5 Bio-Scanners",
+      "4": "A Chimerium Harvester System",
+      "5": "An Acid Spitter Mule",
+      "6": "A Mutant Pattern Thresher",
+      "7": "A Bio-Wings Bio-System",
+      "8": "An Olfactory Glands Module",
+      "9": "A Regeneration Glands Module",
+      "10": "A Stormterror Bio-Chassis",
+      "11": "A Bio-Talon Bio-System",
+      "12": "A Bio-Maw Bio-System",
+      "13": "An Acid Cannon Bio-System",
+      "14": "An EDG Alpha Bio-System",
+      "15": "A Fleshripper Bio-Chassis",
+      "16": "A Super-Sonic Screecher Bio-System",
+      "17": "A Scuttler Bio-Chassis",
+      "18": "A Cranium Bio-Chassis",
+      "19": "An Impaler Mech Chassis",
+      "20": "A Chimerium Meteor"
     },
     "page": 23
   },
@@ -784,14 +724,14 @@
     "name": "Bio-Chassis Damage Table",
     "section": "damage",
     "table": {
+      "type": "bio-chassis",
       "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
       "2-3": "SYSTEM DESTRUCTION: A System mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
       "4-5": "SEVERE BIO-BACKLASH: Your Pilot suffers a Major Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
       "6-8": "MODULE DESTRUCTION: A Module mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
       "9-10": "BIO-BACKLASH: Your Pilot suffers a Minor Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
       "11-19": "CORE DAMAGE: Your Bio-Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means of escape.",
-      "20": "ADRENAL BURST: Your Bio-Chassis has survived. It has 1 SP. In addition, you may move or take one action of your choice with your Bio-Chassis, or Push your next roll within 10 minutes for free.",
-      "type": "standard"
+      "20": "ADRENAL BURST: Your Bio-Chassis has survived. It has 1 SP. In addition, you may move or take one action of your choice with your Bio-Chassis, or Push your next roll within 10 minutes for free."
     },
     "page": 78,
     "content": [
@@ -807,20 +747,71 @@
     "name": "Bio-Chassis Overload Table",
     "section": "damage",
     "table": {
+      "type": "bio-chassis",
       "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
       "2-3": "SYSTEM OVERLOAD: One of your Bio-Chassis Systems, chosen at random or by the Mediator, is destroyed.",
       "4-5": "SEVERE PILOT OVERLOAD: Your Pilot suffers a Major Injury.",
       "6-8": "MODULE OVERLOAD: One of your Bio-Chassis Modules, chosen at random or by the Mediator, is destroyed.",
       "9-10": "PILOT OVERLOAD: Your Pilot suffers a Minor Injury.",
       "11-19": "BIO-OVERLOAD: Your Bio-Chassis burns out, threatening to liquify you in its amniotic sac. Your Pilot is unconscious for 1 Turn, in which time your Bio-Chassis cannot act and gains the Vulnerable Trait. Your Pilot takes HP damage equal to your Bio-Chassis' current Heat.",
-      "20": "BIO-OVERDRIVE: Your Bio-Chassis goes into a frenzy. You may take any additional move or action this Turn, or Push your next roll within 10 minutes for free.",
-      "type": "standard"
+      "20": "BIO-OVERDRIVE: Your Bio-Chassis goes into a frenzy. You may take any additional move or action this Turn, or Push your next roll within 10 minutes for free."
     },
     "page": 79,
     "content": [
       {
         "type": "paragraph",
         "value": "Roll on this table when a Bio-Chassis fails a Heat Check."
+      }
+    ]
+  },
+  {
+    "id": "a8b9c0d1-e2f3-4a5b-b6c7-d8e9f0a1b2c3",
+    "source": "False Flag",
+    "name": "Rumour",
+    "section": "rumours",
+    "table": {
+      "type": "flat",
+      "1": "Vornaya is gathering dirt on the other corpos.",
+      "2": "Novosrik has been dead for years, and they blame the Vornayans for it.",
+      "3": "Drakov's Mercs will hire just about anyone.",
+      "4": "DronTek is operating a black site somewhere in the Nanite Coast.",
+      "5": "Stefanus listens to everything within Ostfjord Port and stores it all somewhere in the city.",
+      "6": "Markov is a friendly guy when you get to know him.",
+      "7": "There's something alive in the Ice Caves.",
+      "8": "Olga uses the blood of the last person that betrayed her to grease her Mech's pistons.",
+      "9": "Something big is hidden in Solitude.",
+      "10": "Do not think about the experiments Stefanus is conducting.",
+      "11": "Stefanus is paying a fortune for anomalies.",
+      "12": "Do not look at the trees for long.",
+      "13": "Stefanus is researching strange Meld Tech.",
+      "14": "They say that a lobotomised Pilot eternally guards the lighthouse.",
+      "15": "There's a Big Brother Mech in the old Mil-Tech Base.",
+      "16": "Something swallowed an entire caravan in the Solitude Icefall.",
+      "17": "Vornaya would be dead without its clean water reservoir.",
+      "18": "The checkpoint leads to DronTek territory, but they don't like folk from here going there.",
+      "19": "An exec living up in Isston has a high tech Medbay.",
+      "20": "The Meld wants to destroy us all and become one again."
+    },
+    "page": 8
+  },
+  {
+    "id": "c2d3e4f5-a6b7-4c8d-9e0f-1a2b3c4d5e6f",
+    "source": "False Flag",
+    "name": "Meld Encounter",
+    "section": "encounters",
+    "table": {
+      "1": "Meld Behemoth",
+      "20": "4x Active Meld Nanites",
+      "11-19": "6x Meld Nanoids",
+      "6-10": "5x Meld Drone Swarm",
+      "2-5": "3x Meld Splitter",
+      "type": "standard"
+    },
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "If you want to randomise an encounter with Meld, or at points when this Module prompts you to, roll on this table to determine what Meld are in the area."
       }
     ]
   }

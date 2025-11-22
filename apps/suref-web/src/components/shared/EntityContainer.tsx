@@ -1,6 +1,8 @@
 import { Flex, type FlexProps } from '@chakra-ui/react'
 import type { ReactNode } from 'react'
+import type { SURefEnumSource } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
+import { getSourceStyles } from '@/components/entity/entityDisplayHelpers'
 
 type EntityContainerProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 'direction'> & {
   /** Background color token (e.g., 'bg.builder.pilot', 'su.orange', 'su.green') */
@@ -39,6 +41,8 @@ type EntityContainerProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 
   compact?: boolean
   /** Whether to reverse the header layout (title on right, rightContent on left) */
   reverse?: boolean
+  /** Optional source book for source-based styling */
+  source?: SURefEnumSource
 }
 
 export function EntityContainer({
@@ -61,6 +65,7 @@ export function EntityContainer({
   onHeaderClick,
   headerTestId,
   reverse = false,
+  source,
   ...flexProps
 }: EntityContainerProps) {
   const actualHeaderBg = disabled ? 'su.grey' : headerBg || bg
@@ -68,6 +73,9 @@ export function EntityContainer({
 
   const hasHeader = !!(title || leftContent || rightContent)
   const headerCursor = onHeaderClick ? 'pointer' : 'default'
+
+  // Source-based styling using shared helper function
+  const sourceHeaderStyles = getSourceStyles(source, disabled, compact, 'header')
 
   return (
     <Flex
@@ -120,6 +128,7 @@ export function EntityContainer({
           opacity={headerOpacity}
           h={compact ? '70px' : undefined}
           overflow="visible"
+          css={sourceHeaderStyles}
         >
           <Flex alignItems="center" gap={compact ? 0.5 : 1}>
             {leftContent}

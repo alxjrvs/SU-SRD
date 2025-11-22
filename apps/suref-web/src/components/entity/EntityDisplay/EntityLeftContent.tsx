@@ -9,6 +9,7 @@ export function EntityLeftContent() {
 
   const hasTechLevel = !!techLevel
   const hasLevel = !!level && !hideLevel
+  const isBioTechLevel = techLevel === 'B' || ('techLevel' in data && data.techLevel === 'B')
 
   if (!hasTechLevel && !hasLevel) return null
   return (
@@ -16,7 +17,9 @@ export function EntityLeftContent() {
       {hasLevel && <LevelDisplay level={level!} compact={compact} inline />}
       {hasTechLevel && (
         <StatDisplay
-          inverse
+          inverse={!isBioTechLevel}
+          bg={isBioTechLevel ? 'su.sicklyYellow' : undefined}
+          valueColor={isBioTechLevel ? 'su.black' : undefined}
           label={compact ? 'TL' : 'Tech'}
           bottomLabel={compact ? '' : 'Level'}
           value={techLevel}

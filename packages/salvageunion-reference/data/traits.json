@@ -526,5 +526,17 @@
         "value": "A System with the Wield Trait requires your Mech to have a System with the [[Rigging]] Trait to use it; as it must be held. This applies for each System with this Trait, for example to use an Armoured Shield and a Mech Melee Armament you need two Systems with the [[Rigging]] Trait."
       }
     ]
+  },
+  {
+    "id": "b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e",
+    "source": "False Flag",
+    "name": "dependable",
+    "page": 8,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This weapon won't break, jam, or otherwise suffer any adverse effects through use, including through Tough Choices and Setbacks."
+      }
+    ]
   }
 ]

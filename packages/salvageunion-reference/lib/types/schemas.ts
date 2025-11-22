@@ -42,7 +42,7 @@ export interface SURefAbility extends SURefObjectBaseEntity {
   level: number | 'L' | 'G'
   mechActionType?: SURefEnumActionType
   grants?: SURefObjectGrant[]
-  activationCurrency?: 'Variable'
+  activationCurrency?: 'Variable' | 'EP or AP' | 'SP or HP'
   actions?: string[]
 }
 

@@ -1,7 +1,7 @@
 [
   {
     "name": "Integrated Cargo Bay",
-    "id": "d14854b7-56fc-4bf4-a9e8-74a5648fc661",
+    "id": "7e7e3626-31ce-4e11-8dde-8f4df4790f28",
     "content": [
       {
         "type": "paragraph",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Hover Drone",
-    "id": "65d87343-8b66-434c-a933-68a7c114f9ea",
+    "id": "2dff834a-c0f4-46a6-b2fc-d14ce2c4f7f7",
     "content": [
       {
         "type": "paragraph",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Hazard Protected Chassis",
-    "id": "1825c81c-bba8-4d8f-926c-833987b6f710",
+    "id": "c92219d9-cd17-4510-9dda-22b7e7bf1dd3",
     "content": [
       {
         "type": "paragraph",
@@ -33,13 +33,15 @@
     "name": "Data Scanner",
     "activationCost": 2,
     "actionType": "Short",
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "traits": [
       {
         "type": "scanner"
       }
     ],
-    "id": "65940c9e-3236-4ee9-9e34-3aff37763a87",
+    "id": "24389eed-a4f8-46df-9995-3c4d1dc7d1c9",
     "content": [
       {
         "type": "paragraph",
@@ -53,7 +55,7 @@
   },
   {
     "name": "Heavily Armoured Chassis",
-    "id": "0d9b5e11-968b-48e1-a479-14127a604ea2",
+    "id": "ce8fba79-7ed3-43b6-b321-09c4c0b7b4db",
     "content": [
       {
         "type": "paragraph",
@@ -63,7 +65,7 @@
   },
   {
     "name": "Integrated Epoxy Printer",
-    "id": "eb674791-d327-41b2-92a7-bd59c0508965",
+    "id": "1289002d-1b15-4e17-ad9f-a64eebf91c4d",
     "actionType": "Short",
     "activationCost": 3,
     "content": [
@@ -99,7 +101,7 @@
   },
   {
     "name": "Integrated Expanded Transport Hold",
-    "id": "0adbd032-5c64-4f24-9128-9cfb4771539a",
+    "id": "64ef36f7-5e27-4899-b3e8-18fe4e330f87",
     "content": [
       {
         "type": "paragraph",
@@ -109,7 +111,7 @@
   },
   {
     "name": "Fast",
-    "id": "5b3adf7f-fc0e-4fb7-b4e8-844325ba441c",
+    "id": "e6a4c811-14e2-49bc-af29-16b59703df47",
     "content": [
       {
         "type": "paragraph"
@@ -126,7 +128,7 @@
       "2-5": "As per 11-19, but a random System on the Jackhammer is also Damaged.",
       "type": "standard"
     },
-    "id": "86600ea9-91dc-4408-b780-a097833bc684",
+    "id": "d1ef5791-f55a-4291-b204-0ddec4db02f9",
     "content": [
       {
         "type": "paragraph",
@@ -136,7 +138,7 @@
   },
   {
     "name": "Scrap Plating",
-    "id": "ffc41898-8744-4211-b3a3-d4e79e937244",
+    "id": "615c9ffc-097c-4fe5-8855-123d97d0264c",
     "content": [
       {
         "type": "paragraph",
@@ -146,7 +148,7 @@
   },
   {
     "name": "Integrated Amphibious Locomotion System",
-    "id": "6f85dbb0-141a-4b3d-ba2a-91e3fd655b2b",
+    "id": "a2b1978b-ce66-42de-93d0-cbf059e93b15",
     "content": [
       {
         "type": "paragraph",
@@ -156,7 +158,7 @@
   },
   {
     "name": "Hot Swap Universal Mounts",
-    "id": "9412655e-2d96-468f-b6d2-b3008471c940",
+    "id": "399e1492-8757-460a-9f8e-900b733a1604",
     "content": [
       {
         "type": "paragraph",
@@ -173,7 +175,7 @@
         "type": "shield"
       }
     ],
-    "id": "f183cc63-d4ae-4802-9cbd-91eee1cb9e70",
+    "id": "48516ab0-b9dd-40a2-988b-e42509e8d1fa",
     "content": [
       {
         "type": "paragraph",
@@ -195,7 +197,7 @@
   },
   {
     "name": "Integrated Colossal Cargo Bay",
-    "id": "76308ada-500f-4e96-a09b-cf6156c6da8a",
+    "id": "28b32b95-8cf6-4327-b22e-5d057ef2b7db",
     "content": [
       {
         "type": "paragraph",
@@ -205,7 +207,7 @@
   },
   {
     "name": "Close Range Protocols",
-    "id": "bf7ec0e9-3751-4a7e-9a04-60f6c8989610",
+    "id": "cc4ee089-5377-40b0-85cd-1afb82b67157",
     "content": [
       {
         "type": "paragraph",
@@ -215,7 +217,7 @@
   },
   {
     "name": "Sestra Drone Controller",
-    "id": "2973801a-830e-4029-88c0-e1ec00c04589",
+    "id": "cc40f078-6f0d-4e52-81c1-263adce0ecd5",
     "content": [
       {
         "type": "paragraph",
@@ -229,7 +231,9 @@
   },
   {
     "activationCost": 2,
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "actionType": "Turn",
     "traits": [
       {
@@ -237,7 +241,7 @@
       }
     ],
     "name": "Integrated Frog Prince Module",
-    "id": "05bdea9b-ef33-48ee-bd0b-1f31f75653db",
+    "id": "fddb10a8-42af-4397-a3de-e61818234da6",
     "content": [
       {
         "type": "paragraph",
@@ -275,7 +279,7 @@
   },
   {
     "name": "Solar Reactor",
-    "id": "9e5b1dec-909f-4f83-b9bd-3d930e6834b9",
+    "id": "cdaf8817-81d7-4ed6-ac7f-9cd5ef05fd4d",
     "content": [
       {
         "type": "paragraph",
@@ -285,7 +289,7 @@
   },
   {
     "name": "Polycarbonate Stealth Chassis",
-    "id": "56f1e08f-1870-49d5-b542-18add87294f9",
+    "id": "673aaeba-f005-4baa-9173-fca0abee3558",
     "content": [
       {
         "type": "paragraph",
@@ -297,7 +301,7 @@
     "name": "Terraforming Bubble",
     "activationCost": 2,
     "actionType": "Turn",
-    "id": "1e2916fd-ed83-478c-8e57-8a7130c5c8c3",
+    "id": "c2a3deca-430a-46c9-9310-2388b56d002c",
     "content": [
       {
         "type": "paragraph",
@@ -309,13 +313,15 @@
     "name": "Integrated Advanced Shield Projector",
     "activationCost": "X",
     "actionType": "Reaction",
-    "range": ["Medium"],
+    "range": [
+      "Medium"
+    ],
     "traits": [
       {
         "type": "shield"
       }
     ],
-    "id": "7b1ffa81-deaf-4096-80ba-90eaa164c495",
+    "id": "5b8375d5-6d4a-4b8e-b44d-6e992584ffda",
     "content": [
       {
         "type": "paragraph",
@@ -325,7 +331,7 @@
   },
   {
     "name": "Eradication Protocols",
-    "id": "9a500906-868d-4b6a-853d-9694f958ecae",
+    "id": "3ce9388b-adad-4742-a912-edacabfaa11c",
     "content": [
       {
         "type": "paragraph",
@@ -335,7 +341,7 @@
   },
   {
     "name": "Flashy",
-    "id": "84b97703-bddc-4713-9b4d-29d29157c180",
+    "id": "7a50b925-4ce2-4589-9a73-09aa06f156f3",
     "content": [
       {
         "type": "paragraph",
@@ -347,7 +353,7 @@
     "actionType": "Turn",
     "activationCost": 2,
     "name": "Morph Sphere",
-    "id": "ab735870-c818-418e-b651-3f08443b42ea",
+    "id": "f8b710c9-a4f6-43e2-9d0c-fdefe36725cf",
     "content": [
       {
         "type": "paragraph",
@@ -365,7 +371,7 @@
   },
   {
     "name": "Integrated Advanced Vectored Thrust Unit",
-    "id": "00440cc8-2afa-440b-a5be-460858f4f291",
+    "id": "6d8d2c8f-0486-4d6c-8085-b3b07238787e",
     "content": [
       {
         "type": "paragraph",
@@ -375,7 +381,7 @@
   },
   {
     "name": "Heat Efficient Reactor",
-    "id": "cbad70da-a9e2-409a-a237-b67fa432c710",
+    "id": "c25fc384-85d3-45dc-8707-62834f0dceb3",
     "content": [
       {
         "type": "paragraph",
@@ -385,7 +391,7 @@
   },
   {
     "name": "Integrated Mech Bay",
-    "id": "a304d370-5311-45fd-8f37-3355cb09e00d",
+    "id": "d7cb7b13-0daf-4d7e-a22f-c5ced451e02d",
     "content": [
       {
         "type": "paragraph",
@@ -397,7 +403,7 @@
     "name": "Stealth Projector",
     "activationCost": 4,
     "actionType": "Turn",
-    "id": "51cd852b-98cc-4639-9620-87fede9e840d",
+    "id": "a7517ce9-956d-4369-8bc3-be1fa4188f4c",
     "content": [
       {
         "type": "paragraph",
@@ -407,7 +413,7 @@
   },
   {
     "name": "Cybernetic Neuralink",
-    "id": "d6ccd961-09a0-41cb-924d-17f8e83ebae4",
+    "id": "a86e968b-31e9-4b4e-b79f-3afaca6398f6",
     "content": [
       {
         "type": "paragraph",
@@ -441,7 +447,7 @@
   },
   {
     "name": "Juggernaut",
-    "id": "b3a909de-7629-4f79-9534-d6fe3bc36af7",
+    "id": "5e6dff8a-4cda-4fd5-87ef-25794092188a",
     "content": [
       {
         "type": "paragraph",
@@ -451,7 +457,7 @@
   },
   {
     "name": "Integrated VTU System",
-    "id": "7b4cb082-5cc0-4b33-9dd7-4bb179622b23",
+    "id": "15b02e14-541a-4271-938c-c0ac247cea50",
     "content": [
       {
         "type": "paragraph",
@@ -461,7 +467,7 @@
   },
   {
     "name": "Rugged Chassis",
-    "id": "d04e560b-4e9b-468c-8c3b-e76fa1a701b4",
+    "id": "5b57aeb4-a97f-4e8d-ad23-856bcb18f271",
     "content": [
       {
         "type": "paragraph",
@@ -471,7 +477,7 @@
   },
   {
     "name": "Bio-Chassis",
-    "id": "95d876f8-bd10-4fa0-a169-346bbdf1e4d1",
+    "id": "7a996e2b-f705-4c97-9792-7d671a876468",
     "content": [
       {
         "type": "paragraph",
@@ -481,7 +487,7 @@
   },
   {
     "name": "Heavily Armoured Carapace",
-    "id": "2d5162ab-4066-4dea-ba60-87437e7e0bfa",
+    "id": "917d1847-242c-4360-994b-ad7b57260099",
     "content": [
       {
         "type": "paragraph",
@@ -495,7 +501,7 @@
   },
   {
     "name": "Integrated Monstrous Bio-Wings",
-    "id": "891c406a-ea02-44e2-b089-6b6d9a416ce0",
+    "id": "5975223c-dc43-4360-93ae-b0a1a73755cb",
     "content": [
       {
         "type": "paragraph",
@@ -505,10 +511,12 @@
   },
   {
     "name": "Probing Proboscis",
-    "id": "37ea0154-31b4-4235-8bde-7949bcd10bf1",
+    "id": "b4da3397-d89a-4891-80fc-c5dde7ab25b7",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": ["Close"],
+    "range": [
+      "Close"
+    ],
     "traits": [
       {
         "type": "melee"
@@ -535,7 +543,7 @@
   },
   {
     "name": "Integrated Scuttling Locomotion System",
-    "id": "83e032ec-2525-4917-be24-79f66375ec80",
+    "id": "1614a91d-9b1e-4ed3-98e6-605d1a975362",
     "content": [
       {
         "type": "paragraph",

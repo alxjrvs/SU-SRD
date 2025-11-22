@@ -228,20 +228,6 @@ export interface SURefObjectContentBlock {
 }
 
 /**
- * An entry in an encounter table referencing an entity
- */
-export interface SURefObjectEncounterTableEntry {
-  /**
-   * The name of the entity referenced
-   */
-  name: string
-  /**
-   * The page number where the entity can be found
-   */
-  page: SURefCommonPositiveInteger
-}
-
-/**
  * A mech in a lance formation
  */
 export interface SURefObjectFormationMech {
@@ -412,29 +398,77 @@ export type SURefObjectTable =
     }
   | {
       type: 'duos'
+      /**
+       * The name of the entity or ability
+       */
+      '1-2': string
+      /**
+       * The name of the entity or ability
+       */
+      '3-4': string
+      /**
+       * The name of the entity or ability
+       */
+      '5-6': string
+      /**
+       * The name of the entity or ability
+       */
+      '7-8': string
+      /**
+       * The name of the entity or ability
+       */
+      '9-10': string
+      /**
+       * The name of the entity or ability
+       */
+      '11-12': string
+      /**
+       * The name of the entity or ability
+       */
+      '13-14': string
+      /**
+       * The name of the entity or ability
+       */
+      '15-16': string
+      /**
+       * The name of the entity or ability
+       */
+      '17-18': string
+      /**
+       * The name of the entity or ability
+       */
+      '19-20': string
     }
   | {
-      '1': SURefObjectEncounterTableEntry
-      '2': SURefObjectEncounterTableEntry
-      '3': SURefObjectEncounterTableEntry
-      '4': SURefObjectEncounterTableEntry
-      '5': SURefObjectEncounterTableEntry
-      '6': SURefObjectEncounterTableEntry
-      '7': SURefObjectEncounterTableEntry
-      '8': SURefObjectEncounterTableEntry
-      '9': SURefObjectEncounterTableEntry
-      '10': SURefObjectEncounterTableEntry
-      '11': SURefObjectEncounterTableEntry
-      '12': SURefObjectEncounterTableEntry
-      '13': SURefObjectEncounterTableEntry
-      '14': SURefObjectEncounterTableEntry
-      '15': SURefObjectEncounterTableEntry
-      '16': SURefObjectEncounterTableEntry
-      '17': SURefObjectEncounterTableEntry
-      '18': SURefObjectEncounterTableEntry
-      '19': SURefObjectEncounterTableEntry
-      '20': SURefObjectEncounterTableEntry
-      type: 'reference'
+      /**
+       * Critical failure outcome
+       */
+      '1': string
+      /**
+       * Critical success outcome
+       */
+      '20': string
+      type: 'bio-chassis'
+      /**
+       * System destruction outcome
+       */
+      '2-3': string
+      /**
+       * Severe bio-backlash outcome
+       */
+      '4-5': string
+      /**
+       * Module destruction outcome
+       */
+      '6-8': string
+      /**
+       * Bio-backlash outcome
+       */
+      '9-10': string
+      /**
+       * Core damage outcome
+       */
+      '11-19': string
     }
 
 export type SURefObjectActionOptions = {
