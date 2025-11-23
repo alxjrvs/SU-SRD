@@ -1,6 +1,6 @@
 import { useMemo, useState, useCallback } from 'react'
 import { Box, VStack, Button, Tabs, Flex } from '@chakra-ui/react'
-import { SalvageUnionReference, getTechLevel } from 'salvageunion-reference'
+import { SalvageUnionReference, getTechLevelNumber } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
 import { EntityDisplay } from '@/components/entity/EntityDisplay'
 import type { UseMechWizardStateReturn } from './useMechWizardState'
@@ -18,7 +18,7 @@ export function ChassisSelectionStep({ wizardState, onComplete }: ChassisSelecti
     if (state.selectedChassisId) {
       const chassis = SalvageUnionReference.Chassis.find((c) => c.id === state.selectedChassisId)
       if (chassis) {
-        return getTechLevel(chassis) ?? 1
+        return getTechLevelNumber(chassis) ?? 1
       }
     }
     return 1
@@ -32,7 +32,7 @@ export function ChassisSelectionStep({ wizardState, onComplete }: ChassisSelecti
   const techLevels = useMemo(() => {
     const levels = new Set<number>()
     workshopChassis.forEach((chassis) => {
-      const tl = getTechLevel(chassis)
+      const tl = getTechLevelNumber(chassis)
       if (tl !== undefined) {
         levels.add(tl)
       }

@@ -79,9 +79,25 @@ export function extractProperty<K extends SURefMetaEntityKeys>(
 /**
  * Extract tech level from an entity
  * @param entity - The entity to extract from
- * @returns The tech level or undefined
+ * @returns The tech level (number, 'B', 'N') or undefined
  */
-export function getTechLevel(entity: SURefMetaEntity): number | undefined {
+export function getTechLevel(entity: SURefMetaEntity): number | 'B' | 'N' | undefined {
+  if ('techLevel' in entity) {
+    const techLevel = entity.techLevel
+    if (typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N') {
+      return techLevel
+    }
+  }
+  return undefined
+}
+
+/**
+ * Extract tech level from an entity as a numeric value
+ * Normalizes 'B' and 'N' to 1 for math operations
+ * @param entity - The entity to extract from
+ * @returns The tech level as a number or undefined
+ */
+export function getTechLevelNumber(entity: SURefMetaEntity): number | undefined {
   if ('techLevel' in entity) {
     const techLevel = entity.techLevel
     if (typeof techLevel === 'number') {

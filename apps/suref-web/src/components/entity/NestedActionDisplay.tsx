@@ -116,7 +116,9 @@ export function NestedActionDisplay({
         <VStack
           gap={spacing}
           p={spacing}
-          pt={hasContentToRender && !hideContent ? 0 : hasTable ? 0 : details.length > 0 ? 0 : spacing}
+          pt={
+            hasContentToRender && !hideContent ? 0 : hasTable ? 0 : details.length > 0 ? 0 : spacing
+          }
           alignItems="stretch"
         >
           {actionChoices.map((choice) => (

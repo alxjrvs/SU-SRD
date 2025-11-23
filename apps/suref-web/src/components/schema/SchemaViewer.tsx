@@ -10,7 +10,7 @@ import { useNavigate } from '@tanstack/react-router'
 import { Route } from '@/routes/schema/$schemaId/index'
 import { getDisplayComponent } from '@/components/componentRegistry'
 import type { SURefEntity } from 'salvageunion-reference'
-import { getTechLevel } from 'salvageunion-reference'
+import { getTechLevelNumber } from 'salvageunion-reference'
 import { getEntitySlug } from '@/utils/slug'
 
 interface SchemaViewerProps {
@@ -35,7 +35,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
   const techLevels = useMemo(() => {
     const levels = new Set<number>()
     data.forEach((item) => {
-      const techLevel = getTechLevel(item)
+      const techLevel = getTechLevelNumber(item)
       if (techLevel !== undefined) {
         levels.add(techLevel)
       }
@@ -65,7 +65,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
       }
 
       if (techLevelFilters.size > 0) {
-        const techLevel = getTechLevel(item)
+        const techLevel = getTechLevelNumber(item)
         const itemTechLevel = techLevel?.toString()
         if (!itemTechLevel || !techLevelFilters.has(itemTechLevel)) {
           return false
@@ -121,12 +121,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
 
   return (
     <Flex flexDirection="column" minH="100%">
-      <ReferenceHeader
-        title={capitalizedTitle}
-        textAlign="center"
-        py={hasFilters ? 6 : 4}
-        px={6}
-      >
+      <ReferenceHeader title={capitalizedTitle} textAlign="center" py={hasFilters ? 6 : 4} px={6}>
         <Box maxW="800px" mx="auto" w="full">
           <Text color="su.black" textAlign="center" mb={hasFilters ? 3 : 2}>
             {currentSchema.description}

@@ -64,6 +64,10 @@ export interface SURefMetaAction extends SURefObjectAction {
    * The optional display name of the action
    */
   displayName?: string
+  /**
+   * The currency type for activation cost (EP/AP, SP/HP, or Variable)
+   */
+  activationCurrency?: 'Variable' | 'EP or AP' | 'SP or HP'
 }
 
 /**

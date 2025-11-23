@@ -87,6 +87,11 @@ export interface SURefObjectMechanicalEntity {
   salvageValue?: SURefCommonSalvageValue
   systems?: string[]
   traits?: SURefObjectTrait[]
+  energyPoints?: SURefCommonNonNegativeInteger
+  heatCapacity?: SURefCommonNonNegativeInteger
+  systemSlots?: SURefCommonNonNegativeInteger
+  moduleSlots?: SURefCommonNonNegativeInteger
+  cargoCapacity?: SURefCommonNonNegativeInteger
 }
 
 /**
@@ -297,6 +302,12 @@ export interface SURefObjectAction {
    * If true, this action will not affect the rendering of the entity display
    */
   hidden?: boolean
+  /**
+   * The currency type for activation cost (EP/AP, SP/HP, or Variable)
+   */
+  activationCurrency?: string
+  source?: SURefEnumSource
+  page?: SURefCommonPositiveInteger
 }
 
 /**

@@ -3,6 +3,7 @@ import type { ButtonProps } from '@chakra-ui/react'
 import type { SURefEntity, SURefEnumSchemaName, SURefEnumSource } from 'salvageunion-reference'
 import {
   getTechLevel,
+  getTechLevelNumber,
   hasActions,
   getChassisAbilities,
   getEffects,
@@ -97,13 +98,10 @@ export function EntityDisplayProvider({
     }
   }
   const title = extractName(data, schemaName)
-  // Get numeric tech level for calculations (converts "B" to 1)
-  const techLevelNumeric = getTechLevel(data)
-  // Get tech level for display - preserve "B" instead of converting to 1
-  const techLevelForDisplay = 'techLevel' in data && data.techLevel === 'B' 
-    ? 'B' 
-    : techLevelNumeric
-  const techLevel = techLevelForDisplay
+  // Get tech level for display (preserves "B" and "N")
+  const techLevel = getTechLevel(data)
+  // Get numeric tech level for calculations (converts "B" and "N" to 1)
+  const techLevelNumeric = getTechLevelNumber(data)
   const source = getSource(data) as SURefEnumSource | undefined
   const calculatedHeaderBg = calculateBackgroundColor(
     schemaName,

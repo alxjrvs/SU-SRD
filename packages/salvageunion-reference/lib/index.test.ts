@@ -34,6 +34,7 @@ describe('SalvageUnionReference static properties', () => {
         'getByRef',
         'getManyByRef',
         'getTechLevel',
+        'getTechLevelNumber',
         'getSalvageValue',
         'getSlotsRequired',
         'getAllClasses',
@@ -332,14 +333,20 @@ describe('Property Extractors', () => {
     const system = SalvageUnionReference.Systems.all()[0]!
     const techLevel = getTechLevel(system)
     expect(techLevel).toBeDefined()
-    expect(typeof techLevel).toBe('number')
+    // Should return actual value (number, 'B', or 'N')
+    expect(typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N').toBe(true)
+    // Verify it matches the actual techLevel value
+    expect(techLevel).toBe(system.techLevel)
   })
 
   it('should extract techLevel from modules', () => {
     const module = SalvageUnionReference.Modules.all()[0]!
     const techLevel = getTechLevel(module)
     expect(techLevel).toBeDefined()
-    expect(typeof techLevel).toBe('number')
+    // Should return actual value (number, 'B', or 'N')
+    expect(typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N').toBe(true)
+    // Verify it matches the actual techLevel value
+    expect(techLevel).toBe(module.techLevel)
   })
 
   it('should return undefined for entities without techLevel', () => {
@@ -404,10 +411,10 @@ describe('getTechLevel', () => {
     const techLevel = getTechLevel(system)
 
     expect(techLevel).toBeDefined()
-    expect(typeof techLevel).toBe('number')
-    // getTechLevel normalizes 'B' and 'N' to 1, so compare with normalized value
-    const expected = typeof system.techLevel === 'number' ? system.techLevel : 1
-    expect(techLevel).toBe(expected)
+    // Should return actual value (number, 'B', or 'N')
+    expect(typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N').toBe(true)
+    // Verify it matches the actual techLevel value
+    expect(techLevel).toBe(system.techLevel)
   })
 
   it('should get tech level from chassis (in stats)', () => {
@@ -415,15 +422,46 @@ describe('getTechLevel', () => {
     const techLevel = getTechLevel(chassis)
 
     expect(techLevel).toBeDefined()
+    // Should return actual value (number, 'B', or 'N')
+    expect(typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N').toBe(true)
+    // Verify it matches the actual techLevel value
+    expect(techLevel).toBe(chassis.techLevel)
+  })
+
+  it('should return undefined for entities without tech level', () => {
+    const ability = SalvageUnionReference.Abilities.all()[0]!
+    const techLevel = getTechLevel(ability)
+
+    expect(techLevel).toBeUndefined()
+  })
+})
+
+describe('getTechLevelNumber', () => {
+  it('should get tech level as number from systems', () => {
+    const system = SalvageUnionReference.Systems.all()[0]!
+    const techLevel = SalvageUnionReference.getTechLevelNumber(system)
+
+    expect(techLevel).toBeDefined()
     expect(typeof techLevel).toBe('number')
-    // getTechLevel normalizes 'B' and 'N' to 1, so compare with normalized value
+    // Should normalize 'B' and 'N' to 1
+    const expected = typeof system.techLevel === 'number' ? system.techLevel : 1
+    expect(techLevel).toBe(expected)
+  })
+
+  it('should get tech level as number from chassis (in stats)', () => {
+    const chassis = SalvageUnionReference.Chassis.all()[0]!
+    const techLevel = SalvageUnionReference.getTechLevelNumber(chassis)
+
+    expect(techLevel).toBeDefined()
+    expect(typeof techLevel).toBe('number')
+    // Should normalize 'B' and 'N' to 1
     const expected = typeof chassis.techLevel === 'number' ? chassis.techLevel : 1
     expect(techLevel).toBe(expected)
   })
 
   it('should return undefined for entities without tech level', () => {
     const ability = SalvageUnionReference.Abilities.all()[0]!
-    const techLevel = getTechLevel(ability)
+    const techLevel = SalvageUnionReference.getTechLevelNumber(ability)
 
     expect(techLevel).toBeUndefined()
   })

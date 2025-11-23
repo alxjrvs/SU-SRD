@@ -16,7 +16,7 @@ export function EntityDisplayFooter({ bg }: { bg?: string }) {
   const fontWeightSemibold = 'semibold'
 
   // Apply source-specific styling
-  const sourceFooterStyles = getSourceStyles(source, disabled ?? false, compact, 'footer')
+  const sourceFooterStyles = getSourceStyles(source, disabled ?? false, 'footer')
 
   return (
     <Flex

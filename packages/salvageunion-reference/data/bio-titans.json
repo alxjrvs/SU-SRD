@@ -171,6 +171,7 @@
     "page": 82,
     "name": "Hill Worm Pattern Typhon",
     "actions": [
+      "Metallic Reconstitution",
       "Burrower",
       "Armour Plating (Typhon)",
       "Swallow Whole",
@@ -186,10 +187,6 @@
       {
         "type": "paragraph",
         "value": "Vengeance of the earth. This terrifying spiked worm can even swallow a Colossus whole. Some believe the spirits of miners in the Ferrous Range, who died in industrial accidents, summoned this being in vengeance."
-      },
-      {
-        "type": "paragraph",
-        "value": "Metallic Reconstitution: The Worm's physiology extracts metals and extrudes them as defensive rings. It gains an additional Armour Plating when it reduces a Mech or Vehicle to 0 SP."
       }
     ]
   },

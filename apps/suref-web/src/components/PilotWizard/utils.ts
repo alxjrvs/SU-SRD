@@ -1,5 +1,5 @@
 import type { SURefClass, SURefAbility, SURefEquipment } from 'salvageunion-reference'
-import { SalvageUnionReference, getTechLevel } from 'salvageunion-reference'
+import { SalvageUnionReference, getTechLevelNumber } from 'salvageunion-reference'
 
 export interface WizardState {
   selectedClassId: string | null
@@ -63,7 +63,7 @@ export function getTL1Equipment(): SURefEquipment[] {
   const allEquipment = SalvageUnionReference.Equipment.all()
   return allEquipment
     .filter((equip) => {
-      const techLevel = getTechLevel(equip)
+      const techLevel = getTechLevelNumber(equip)
       return techLevel === 1
     })
     .sort((a, b) => a.name.localeCompare(b.name))

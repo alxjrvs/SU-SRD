@@ -84,7 +84,7 @@ export function EntitySelectionModal({
     return entities
   }, [schemaNames])
 
-  const getEntityTechLevel = (entity: SURefEntity): number | null => {
+  const getEntityTechLevel = (entity: SURefEntity): number | 'B' | 'N' | null => {
     return getTechLevel(entity) ?? null
   }
 

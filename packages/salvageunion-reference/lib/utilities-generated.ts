@@ -432,29 +432,6 @@ export function getSalvageValue(entity: SURefMetaEntity): unknown | undefined {
 }
 
 /**
- * Extract hitPoints from an entity
- * @param entity - The entity to extract from
- * @returns The hitPoints or undefined
- */
-export function getHitPoints(entity: SURefMetaEntity): unknown | undefined {
-  return 'hitPoints' in entity ? entity.hitPoints : undefined
-}
-
-/**
- * Extract npc from an entity
- * @param entity - The entity to extract from
- * @returns The npc or undefined
- */
-export function getNpc(entity: SURefMetaEntity): SURefObjectNpc | undefined {
-  return 'npc' in entity &&
-    entity.npc !== null &&
-    typeof entity.npc === 'object' &&
-    !Array.isArray(entity.npc)
-    ? entity.npc
-    : undefined
-}
-
-/**
  * Extract energyPoints from an entity
  * @param entity - The entity to extract from
  * @returns The energyPoints or undefined
@@ -506,6 +483,29 @@ export function getModuleSlots(entity: SURefMetaEntity): number | undefined {
 export function getCargoCapacity(entity: SURefMetaEntity): number | undefined {
   return 'cargoCapacity' in entity && typeof entity.cargoCapacity === 'number'
     ? entity.cargoCapacity
+    : undefined
+}
+
+/**
+ * Extract hitPoints from an entity
+ * @param entity - The entity to extract from
+ * @returns The hitPoints or undefined
+ */
+export function getHitPoints(entity: SURefMetaEntity): unknown | undefined {
+  return 'hitPoints' in entity ? entity.hitPoints : undefined
+}
+
+/**
+ * Extract npc from an entity
+ * @param entity - The entity to extract from
+ * @returns The npc or undefined
+ */
+export function getNpc(entity: SURefMetaEntity): SURefObjectNpc | undefined {
+  return 'npc' in entity &&
+    entity.npc !== null &&
+    typeof entity.npc === 'object' &&
+    !Array.isArray(entity.npc)
+    ? entity.npc
     : undefined
 }
 

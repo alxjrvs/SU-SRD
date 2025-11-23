@@ -14,6 +14,7 @@ import {
   isChassis,
   isSystem,
   getTechLevel,
+  getTechLevelNumber,
   getSalvageValue,
   getSlotsRequired,
   getPageReference,
@@ -241,21 +242,28 @@ describe('Property Extractors', () => {
       const system = getReference().Systems.all()[0]!
       const techLevel = getTechLevel(system)
       expect(techLevel).toBeDefined()
-      expect(typeof techLevel).toBe('number')
+      // Should return actual value (number, 'B', or 'N')
+      expect(typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N').toBe(true)
+      // Verify it matches the actual techLevel value
+      expect(techLevel).toBe(system.techLevel)
     })
 
     it('should extract techLevel from modules', () => {
       const module = getReference().Modules.all()[0]!
       const techLevel = getTechLevel(module)
       expect(techLevel).toBeDefined()
-      expect(typeof techLevel).toBe('number')
+      // Should return actual value (number, 'B', or 'N')
+      expect(typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N').toBe(true)
+      // Verify it matches the actual techLevel value
+      expect(techLevel).toBe(module.techLevel)
     })
 
     it('should extract techLevel from chassis stats', () => {
       const chassis = getReference().Chassis.all()[0]!
       const techLevel = getTechLevel(chassis)
       expect(techLevel).toBeDefined()
-      expect(typeof techLevel).toBe('number')
+      // Should return actual value (number, 'B', or 'N')
+      expect(typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N').toBe(true)
       // Verify it matches the stats object
       expect(techLevel).toBe(chassis.techLevel)
     })
@@ -263,6 +271,44 @@ describe('Property Extractors', () => {
     it('should return undefined for entities without techLevel', () => {
       const ability = getReference().Abilities.all()[0]!
       const techLevel = getTechLevel(ability)
+      expect(techLevel).toBeUndefined()
+    })
+  })
+
+  describe('getTechLevelNumber', () => {
+    it('should extract techLevel as number from systems', () => {
+      const system = getReference().Systems.all()[0]!
+      const techLevel = getTechLevelNumber(system)
+      expect(techLevel).toBeDefined()
+      expect(typeof techLevel).toBe('number')
+      // Should normalize 'B' and 'N' to 1
+      const expected = typeof system.techLevel === 'number' ? system.techLevel : 1
+      expect(techLevel).toBe(expected)
+    })
+
+    it('should extract techLevel as number from modules', () => {
+      const module = getReference().Modules.all()[0]!
+      const techLevel = getTechLevelNumber(module)
+      expect(techLevel).toBeDefined()
+      expect(typeof techLevel).toBe('number')
+      // Should normalize 'B' and 'N' to 1
+      const expected = typeof module.techLevel === 'number' ? module.techLevel : 1
+      expect(techLevel).toBe(expected)
+    })
+
+    it('should extract techLevel as number from chassis stats', () => {
+      const chassis = getReference().Chassis.all()[0]!
+      const techLevel = getTechLevelNumber(chassis)
+      expect(techLevel).toBeDefined()
+      expect(typeof techLevel).toBe('number')
+      // Should normalize 'B' and 'N' to 1
+      const expected = typeof chassis.techLevel === 'number' ? chassis.techLevel : 1
+      expect(techLevel).toBe(expected)
+    })
+
+    it('should return undefined for entities without techLevel', () => {
+      const ability = getReference().Abilities.all()[0]!
+      const techLevel = getTechLevelNumber(ability)
       expect(techLevel).toBeUndefined()
     })
   })

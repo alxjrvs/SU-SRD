@@ -37,8 +37,8 @@ export function EntityStats({ data, label = '', prefix = '' }: EntityStatsProps)
           return (
             <StatDisplay
               key={index}
-              label="BIO-SALVAGE"
-              bottomLabel="VALUE"
+              label={compact ? 'BSV' : 'BIO-SALVAGE'}
+              bottomLabel={compact ? '' : 'VALUE'}
               value={displayValue}
               compact={compact}
               hoverText={config.tooltip}

@@ -15,25 +15,20 @@ export function MainMechDisplay({ id, isEditable }: { id: string; isEditable: bo
   const title = chassisName && pattern ? `"${pattern}"` : chassisName || 'Mech Chassis'
   const subtitle = pattern && chassisName ? `${chassisName} Chassis` : ''
 
-  // Use sickly yellow background for Bio tech level (TL = B)
-  const isBioTechLevel = chassisRef && 'techLevel' in chassisRef && chassisRef.techLevel === 'B'
-  const bgColor = isBioTechLevel ? 'su.sicklyYellow' : 'su.green'
-  
-  // Display "B" for Bio tech level, otherwise use numeric value
-  const techLevelDisplay = chassisRef
-    ? isBioTechLevel
-      ? 'B'
-      : getTechLevel(chassisRef) ?? 0
-    : 0
+  // Get tech level for display (preserves "B" and "N")
+  const techLevelDisplay = chassisRef ? (getTechLevel(chassisRef) ?? 0) : 0
+  const isBioTechLevel = techLevelDisplay === 'B'
+  const isNTechLevel = techLevelDisplay === 'N'
+  const bgColor = isBioTechLevel ? 'su.sicklyYellow' : isNTechLevel ? 'su.silver' : 'su.green'
 
   return (
     <VStack flex="1" gap={2} alignItems="stretch">
       <RoundedBox
         leftContent={
           <StatDisplay
-            inverse={!isBioTechLevel}
-            bg={isBioTechLevel ? 'su.sicklyYellow' : undefined}
-            valueColor={isBioTechLevel ? 'su.black' : undefined}
+            inverse={!isBioTechLevel && !isNTechLevel}
+            bg={isBioTechLevel ? 'su.sicklyYellow' : isNTechLevel ? 'su.silver' : undefined}
+            valueColor={isBioTechLevel ? 'su.black' : isNTechLevel ? 'su.black' : undefined}
             label="tech"
             bottomLabel="Level"
             value={techLevelDisplay}

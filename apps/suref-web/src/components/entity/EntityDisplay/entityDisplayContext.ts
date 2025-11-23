@@ -47,8 +47,8 @@ export interface EntityDisplayContextValue {
   compact: boolean
   /** Computed entity name */
   title: string
-  /** Computed tech level (can be number, 'B' for Bio, or undefined) */
-  techLevel: number | 'B' | undefined
+  /** Computed tech level (can be number, 'B' for Bio, 'N' for N tech level, or undefined) */
+  techLevel: number | 'B' | 'N' | undefined
   /** Computed header background color */
   headerBg: string
   /** Spacing values */

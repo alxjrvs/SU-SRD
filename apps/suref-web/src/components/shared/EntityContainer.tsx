@@ -75,7 +75,7 @@ export function EntityContainer({
   const headerCursor = onHeaderClick ? 'pointer' : 'default'
 
   // Source-based styling using shared helper function
-  const sourceHeaderStyles = getSourceStyles(source, disabled, compact, 'header')
+  const sourceHeaderStyles = getSourceStyles(source, disabled, 'header')
 
   return (
     <Flex
