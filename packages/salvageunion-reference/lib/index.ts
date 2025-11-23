@@ -21,8 +21,8 @@ import type {
   SURefDistance,
   SURefDrone,
   SURefEquipment,
-  SURefKeyword,
   SURefFaction,
+  SURefKeyword,
   SURefMeld,
   SURefModule,
   SURefNPC,
@@ -33,7 +33,6 @@ import type {
   SURefVehicle,
   SURefMetaAbilityTreeRequirement,
   SURefMetaAction,
-  SURefMetaChassisAbility,
   SURefMetaCrawlerTechLevel,
   SURefEntity,
   SURefEnumSchemaName,
@@ -76,7 +75,6 @@ export type SchemaToEntityMap = {
   'ability-tree-requirements': SURefMetaAbilityTreeRequirement
   actions: SURefMetaAction
   'bio-titans': SURefBioTitan
-  'chassis-abilities': SURefMetaChassisAbility
   chassis: SURefChassis
   classes: SURefClass
   'crawler-bays': SURefCrawlerBay
@@ -86,8 +84,8 @@ export type SchemaToEntityMap = {
   distances: SURefDistance
   drones: SURefDrone
   equipment: SURefEquipment
-  keywords: SURefKeyword
   factions: SURefFaction
+  keywords: SURefKeyword
   meld: SURefMeld
   modules: SURefModule
   npcs: SURefNPC
@@ -107,7 +105,6 @@ export const EntitySchemaNames = new Set<EntitySchemaName>([
   'ability-tree-requirements',
   'actions',
   'bio-titans',
-  'chassis-abilities',
   'chassis',
   'classes',
   'crawler-bays',
@@ -117,8 +114,8 @@ export const EntitySchemaNames = new Set<EntitySchemaName>([
   'distances',
   'drones',
   'equipment',
-  'keywords',
   'factions',
+  'keywords',
   'meld',
   'modules',
   'npcs',
@@ -135,7 +132,6 @@ export const SchemaToModelMap = {
   'ability-tree-requirements': 'AbilityTreeRequirements',
   actions: 'Actions',
   'bio-titans': 'BioTitans',
-  'chassis-abilities': 'ChassisAbilities',
   chassis: 'Chassis',
   classes: 'Classes',
   'crawler-bays': 'CrawlerBays',
@@ -145,8 +141,8 @@ export const SchemaToModelMap = {
   distances: 'Distances',
   drones: 'Drones',
   equipment: 'Equipment',
-  keywords: 'Keywords',
   factions: 'Factions',
+  keywords: 'Keywords',
   meld: 'Meld',
   modules: 'Modules',
   npcs: 'NPCs',
@@ -163,7 +159,6 @@ export const SchemaToDisplayName = {
   'ability-tree-requirements': 'Ability Tree Requirements',
   actions: 'actions',
   'bio-titans': 'Bio-Titans',
-  'chassis-abilities': 'chassis-abilities',
   chassis: 'Chassis',
   classes: 'Classes',
   'crawler-bays': 'Crawler Bays',
@@ -173,8 +168,8 @@ export const SchemaToDisplayName = {
   distances: 'Distances',
   drones: 'Drones',
   equipment: 'Equipment',
+  factions: 'factions',
   keywords: 'Keywords',
-  factions: 'Factions',
   meld: 'Meld',
   modules: 'Modules',
   npcs: 'NPCs',
@@ -198,7 +193,6 @@ export class SalvageUnionReference {
     models.AbilityTreeRequirements as ModelWithMetadata<SURefMetaAbilityTreeRequirement>
   static Actions = models.Actions as ModelWithMetadata<SURefMetaAction>
   static BioTitans = models.BioTitans as ModelWithMetadata<SchemaToEntityMap['bio-titans']>
-  static ChassisAbilities = models.ChassisAbilities as ModelWithMetadata<SURefMetaChassisAbility>
   static Chassis = models.Chassis as ModelWithMetadata<SchemaToEntityMap['chassis']>
   static Classes = models.Classes as ModelWithMetadata<SchemaToEntityMap['classes']>
   static CrawlerBays = models.CrawlerBays as ModelWithMetadata<SchemaToEntityMap['crawler-bays']>
@@ -209,8 +203,8 @@ export class SalvageUnionReference {
   static Distances = models.Distances as ModelWithMetadata<SchemaToEntityMap['distances']>
   static Drones = models.Drones as ModelWithMetadata<SchemaToEntityMap['drones']>
   static Equipment = models.Equipment as ModelWithMetadata<SchemaToEntityMap['equipment']>
-  static Keywords = models.Keywords as ModelWithMetadata<SchemaToEntityMap['keywords']>
   static Factions = models.Factions as ModelWithMetadata<SchemaToEntityMap['factions']>
+  static Keywords = models.Keywords as ModelWithMetadata<SchemaToEntityMap['keywords']>
   static Meld = models.Meld as ModelWithMetadata<SchemaToEntityMap['meld']>
   static Modules = models.Modules as ModelWithMetadata<SchemaToEntityMap['modules']>
   static NPCs = models.NPCs as ModelWithMetadata<SchemaToEntityMap['npcs']>

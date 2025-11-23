@@ -83,16 +83,11 @@ export interface SURefBioTitan extends SURefObjectBaseEntity {
 }
 
 /**
- * Chassis abilities for mech chassis in Salvage Union
- */
-export type SURefMetaChassisAbility = SURefObjectAction
-
-/**
  * Mech chassis definitions in Salvage Union
  */
 export interface SURefChassis extends SURefObjectBaseEntity, SURefObjectChassisStats {
   /**
-   * Array of chassis ability names that reference chassis-abilities.json
+   * Array of chassis ability names that reference actions.json
    */
   chassisAbilities: string[]
   patterns: SURefObjectPattern[]
@@ -203,13 +198,6 @@ export interface SURefEquipment extends SURefObjectBaseEntity, SURefObjectStats 
 }
 
 /**
- * Game keywords and terminology in Salvage Union
- */
-export interface SURefKeyword extends SURefObjectBaseEntity {
-  content?: SURefObjectContent
-}
-
-/**
  * Faction groups and organizations in Salvage Union
  */
 export interface SURefFaction extends SURefObjectBaseEntity {
@@ -229,6 +217,13 @@ export interface SURefFaction extends SURefObjectBaseEntity {
    * The mechs that make up this faction formation
    */
   formation?: SURefObjectFormationMech[]
+  content?: SURefObjectContent
+}
+
+/**
+ * Game keywords and terminology in Salvage Union
+ */
+export interface SURefKeyword extends SURefObjectBaseEntity {
   content?: SURefObjectContent
 }
 

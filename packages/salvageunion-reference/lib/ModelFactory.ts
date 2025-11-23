@@ -15,7 +15,6 @@ import abilityTreeRequirementsData from '../data/ability-tree-requirements.json'
 import actionsData from '../data/actions.json' with { type: 'json' }
 import bioTitansData from '../data/bio-titans.json' with { type: 'json' }
 import chassisData from '../data/chassis.json' with { type: 'json' }
-import chassisAbilitiesData from '../data/chassis-abilities.json' with { type: 'json' }
 import classesData from '../data/classes.json' with { type: 'json' }
 import crawlerBaysData from '../data/crawler-bays.json' with { type: 'json' }
 import crawlerTechLevelsData from '../data/crawler-tech-levels.json' with { type: 'json' }
@@ -41,7 +40,6 @@ import abilityTreeRequirementsSchema from '../schemas/ability-tree-requirements.
 import actionsSchema from '../schemas/actions.schema.json' with { type: 'json' }
 import bioTitansSchema from '../schemas/bio-titans.schema.json' with { type: 'json' }
 import chassisSchema from '../schemas/chassis.schema.json' with { type: 'json' }
-import chassisAbilitiesSchema from '../schemas/chassis-abilities.schema.json' with { type: 'json' }
 import classesSchema from '../schemas/classes.schema.json' with { type: 'json' }
 import crawlerBaysSchema from '../schemas/crawler-bays.schema.json' with { type: 'json' }
 import crawlerTechLevelsSchema from '../schemas/crawler-tech-levels.schema.json' with { type: 'json' }
@@ -70,7 +68,6 @@ const dataMap: Record<string, unknown[]> = {
   actions: actionsData,
   'bio-titans': bioTitansData,
   chassis: chassisData,
-  'chassis-abilities': chassisAbilitiesData,
   classes: classesData,
   'crawler-bays': crawlerBaysData,
   'crawler-tech-levels': crawlerTechLevelsData,
@@ -100,7 +97,6 @@ const schemaMap: Record<string, Record<string, unknown>> = {
   actions: actionsSchema,
   'bio-titans': bioTitansSchema,
   chassis: chassisSchema,
-  'chassis-abilities': chassisAbilitiesSchema,
   classes: classesSchema,
   'crawler-bays': crawlerBaysSchema,
   'crawler-tech-levels': crawlerTechLevelsSchema,

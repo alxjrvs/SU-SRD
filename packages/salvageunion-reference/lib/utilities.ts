@@ -230,7 +230,7 @@ export function extractVisibleActions(entity: SURefMetaEntity): SURefMetaAction[
 
 /**
  * Extract chassis abilities from a chassis
- * Resolves ability names to full ability objects from chassis-abilities schema
+ * Resolves ability names to full ability objects from actions schema
  * @param entity - The entity to extract from
  * @returns The chassis abilities array or undefined
  */
@@ -242,18 +242,18 @@ export function getChassisAbilities(entity: SURefMetaEntity): SURefMetaAction[] 
   const chassisAbilities = entity.chassisAbilities
 
   // Chassis abilities are now stored as an array of ability names (strings)
-  // Resolve each name to its full ability object from the chassis-abilities schema
+  // Resolve each name to its full ability object from the actions schema
   const { dataMap } = getDataMaps()
-  const chassisAbilitiesData = dataMap['chassis-abilities'] as SURefMetaAction[] | undefined
+  const actionsData = dataMap['actions'] as SURefMetaAction[] | undefined
 
-  if (!chassisAbilitiesData) {
-    console.warn('chassis-abilities schema not found')
+  if (!actionsData) {
+    console.warn('actions schema not found')
     return undefined
   }
 
   // Create a map of ability name to ability object
   const abilityMap = new Map<string, SURefMetaAction>()
-  chassisAbilitiesData.forEach((ability) => {
+  actionsData.forEach((ability) => {
     abilityMap.set(ability.name, ability)
   })
 
@@ -277,7 +277,7 @@ export function getChassisAbilities(entity: SURefMetaEntity): SURefMetaAction[] 
       }
       resolved.push(ability)
     } else {
-      console.warn(`Chassis ability "${abilityName}" not found in chassis-abilities schema`)
+      console.warn(`Chassis ability "${abilityName}" not found in actions schema`)
     }
   }
 

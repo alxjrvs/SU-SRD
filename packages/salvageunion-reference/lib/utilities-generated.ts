@@ -174,15 +174,6 @@ export function isEquipment(entity: SURefMetaEntity): entity is SURefEquipment {
 }
 
 /**
- * Type guard to check if an entity is a Keyword
- * @param entity - The entity to check
- * @returns True if the entity is a Keyword
- */
-export function isKeyword(entity: SURefMetaEntity): entity is SURefKeyword {
-  return 'id' in entity && 'name' in entity && 'source' in entity && 'page' in entity
-}
-
-/**
  * Type guard to check if an entity is a Faction
  * @param entity - The entity to check
  * @returns True if the entity is a Faction
@@ -197,6 +188,15 @@ export function isFaction(entity: SURefMetaEntity): entity is SURefFaction {
     'assets' in entity &&
     'weaknesses' in entity
   )
+}
+
+/**
+ * Type guard to check if an entity is a Keyword
+ * @param entity - The entity to check
+ * @returns True if the entity is a Keyword
+ */
+export function isKeyword(entity: SURefMetaEntity): entity is SURefKeyword {
+  return 'id' in entity && 'name' in entity && 'source' in entity && 'page' in entity
 }
 
 /**

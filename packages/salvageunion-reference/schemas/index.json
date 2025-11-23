@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "2.1.10",
-  "generated": "2025-11-21T05:24:48.259Z",
+  "version": "2.2.0",
+  "generated": "2025-11-23T05:13:31.968Z",
   "schemas": [
     {
       "id": "abilities",
@@ -32,7 +32,7 @@
       "description": "Actions, abilities, and attacks that can be performed in Salvage Union",
       "dataFile": "data/actions.json",
       "schemaFile": "schemas/actions.schema.json",
-      "itemCount": 445,
+      "itemCount": 607,
       "requiredFields": ["id", "name"],
       "displayName": "actions",
       "meta": true
@@ -43,20 +43,9 @@
       "description": "Massive bio-engineered titan creatures in Salvage Union",
       "dataFile": "data/bio-titans.json",
       "schemaFile": "schemas/bio-titans.schema.json",
-      "itemCount": 6,
+      "itemCount": 11,
       "requiredFields": ["structurePoints", "actions"],
       "displayName": "Bio-Titans"
-    },
-    {
-      "id": "chassis-abilities",
-      "title": "chassis-abilities",
-      "description": "Chassis abilities for mech chassis in Salvage Union",
-      "dataFile": "data/chassis-abilities.json",
-      "schemaFile": "schemas/chassis-abilities.schema.json",
-      "itemCount": 32,
-      "requiredFields": ["id", "name"],
-      "displayName": "chassis-abilities",
-      "meta": true
     },
     {
       "id": "chassis",
@@ -64,7 +53,7 @@
       "description": "Mech chassis definitions in Salvage Union",
       "dataFile": "data/chassis.json",
       "schemaFile": "schemas/chassis.schema.json",
-      "itemCount": 31,
+      "itemCount": 49,
       "requiredFields": [
         "chassisAbilities",
         "patterns",
@@ -126,7 +115,7 @@
       "description": "Creatures and wildlife in Salvage Union",
       "dataFile": "data/creatures.json",
       "schemaFile": "schemas/creatures.schema.json",
-      "itemCount": 6,
+      "itemCount": 9,
       "requiredFields": ["hitPoints", "actions"],
       "displayName": "Creatures"
     },
@@ -157,19 +146,9 @@
       "description": "Pilot equipment and gear in Salvage Union",
       "dataFile": "data/equipment.json",
       "schemaFile": "schemas/equipment.schema.json",
-      "itemCount": 57,
+      "itemCount": 73,
       "requiredFields": ["techLevel", "actions"],
       "displayName": "Equipment"
-    },
-    {
-      "id": "keywords",
-      "title": "keywords",
-      "description": "Game keywords and terminology in Salvage Union",
-      "dataFile": "data/keywords.json",
-      "schemaFile": "schemas/keywords.schema.json",
-      "itemCount": 76,
-      "requiredFields": ["name", "source", "page"],
-      "displayName": "Keywords"
     },
     {
       "id": "factions",
@@ -177,9 +156,19 @@
       "description": "Faction groups and organizations in Salvage Union",
       "dataFile": "data/factions.json",
       "schemaFile": "schemas/factions.schema.json",
-      "itemCount": 1,
+      "itemCount": 10,
       "requiredFields": ["goals", "assets", "weaknesses"],
-      "displayName": "Factions"
+      "displayName": "factions"
+    },
+    {
+      "id": "keywords",
+      "title": "keywords",
+      "description": "Game keywords and terminology in Salvage Union",
+      "dataFile": "data/keywords.json",
+      "schemaFile": "schemas/keywords.schema.json",
+      "itemCount": 82,
+      "requiredFields": ["name", "source", "page"],
+      "displayName": "Keywords"
     },
     {
       "id": "meld",
@@ -197,7 +186,7 @@
       "description": "Mech modules in Salvage Union",
       "dataFile": "data/modules.json",
       "schemaFile": "schemas/modules.schema.json",
-      "itemCount": 63,
+      "itemCount": 73,
       "requiredFields": ["name", "page"],
       "displayName": "Modules"
     },
@@ -207,7 +196,7 @@
       "description": "Non-player characters and people in Salvage Union",
       "dataFile": "data/npcs.json",
       "schemaFile": "schemas/npcs.schema.json",
-      "itemCount": 6,
+      "itemCount": 9,
       "requiredFields": ["hitPoints", "actions"],
       "displayName": "NPCs"
     },
@@ -217,7 +206,7 @@
       "description": "Random tables and roll tables in Salvage Union",
       "dataFile": "data/roll-tables.json",
       "schemaFile": "schemas/roll-tables.schema.json",
-      "itemCount": 22,
+      "itemCount": 34,
       "requiredFields": ["section", "table"],
       "displayName": "Roll Tables"
     },
@@ -227,7 +216,7 @@
       "description": "NPC squads and groups in Salvage Union",
       "dataFile": "data/squads.json",
       "schemaFile": "schemas/squads.schema.json",
-      "itemCount": 9,
+      "itemCount": 14,
       "requiredFields": ["actions"],
       "displayName": "Squads"
     },
@@ -237,7 +226,7 @@
       "description": "Mech systems in Salvage Union",
       "dataFile": "data/systems.json",
       "schemaFile": "schemas/systems.schema.json",
-      "itemCount": 98,
+      "itemCount": 118,
       "requiredFields": ["name", "page"],
       "displayName": "Systems"
     },
@@ -247,7 +236,7 @@
       "description": "Traits and special properties in Salvage Union",
       "dataFile": "data/traits.json",
       "schemaFile": "schemas/traits.schema.json",
-      "itemCount": 44,
+      "itemCount": 45,
       "requiredFields": ["name", "source", "page"],
       "displayName": "Traits"
     },

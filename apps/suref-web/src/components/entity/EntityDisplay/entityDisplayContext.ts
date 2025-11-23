@@ -6,7 +6,6 @@ import type {
   SURefEnumSchemaName,
   SURefEnumSource,
   SURefMetaAction,
-  SURefMetaChassisAbility,
   SURefObjectTable,
 } from 'salvageunion-reference'
 // Import functions for type extraction (typeof requires actual values, not types)
@@ -102,7 +101,7 @@ export interface EntityDisplayContextValue {
   /** Whether entity has actions */
   hasActions: boolean
   /** Array of chassis abilities (or undefined) */
-  chassisAbilities?: SURefMetaChassisAbility[]
+  chassisAbilities?: SURefMetaAction[]
   /** Array of effects (or undefined) */
   effects?: ReturnType<typeof getEffects>
   /** Table data (or undefined) */

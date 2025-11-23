@@ -21,7 +21,6 @@ import type {
   SURefMeld,
   SURefMetaAbilityTreeRequirement,
   SURefMetaAction,
-  SURefMetaChassisAbility,
   SURefMetaCrawlerTechLevel,
   SURefModule,
   SURefNPC,
@@ -135,7 +134,6 @@ export type SURefMetaEntity =
   | SURefMeld
   | SURefMetaAbilityTreeRequirement
   | SURefMetaAction
-  | SURefMetaChassisAbility
   | SURefMetaCrawlerTechLevel
   | SURefModule
   | SURefNPC

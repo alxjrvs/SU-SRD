@@ -2317,7 +2317,7 @@
         "value": "Developed as a collaboration between the software arm of Stefanus Industries and Sakura Futures, the 'MCS-1337' Mantis was designed as a lightweight hacking Mech. Rarely deployed on the battlefield, it has primarily been utilised in a series of Black Ops operations, most notably during the endless intra-corporate cold wars. With its high energy capacity and a wide array of Module customisation options you sometimes just have to respect corpo engineering."
       }
     ],
-    "chassisAbilities": ["Integrated Frog Prince Module"]
+    "chassisAbilities": ["Integrated Frog Prince"]
   },
   {
     "id": "7772b791-e24f-4944-b524-9105f0991d8f",
@@ -2963,7 +2963,7 @@
             "name": "Electro-Magnetic Self-Destruct"
           },
           {
-            "name": "He 2 Coolant Flush"
+            "name": "He₂ Coolant Flush"
           },
           {
             "name": "Offensive Protocols"
@@ -4431,7 +4431,7 @@
             "name": "Comms Module"
           },
           {
-            "name": "Laser Guidance Module"
+            "name": "Laser Guidance"
           }
         ],
         "content": [
@@ -4671,16 +4671,16 @@
         ],
         "modules": [
           {
-            "name": "Firewall Module"
+            "name": "Firewall"
           },
           {
             "name": "Mech Scrambler"
           },
           {
-            "name": "Neuralink Module"
+            "name": "Neuralink Communicator"
           },
           {
-            "name": "Panda Sneeze Module"
+            "name": "Panda Sneeze"
           }
         ],
         "content": [
@@ -4731,7 +4731,7 @@
         ],
         "modules": [
           {
-            "name": "Neuralink Module"
+            "name": "Neuralink Communicator"
           },
           {
             "name": "Olfactory Glands"
@@ -4818,7 +4818,7 @@
             "name": "Nanite Sifter"
           },
           {
-            "name": "Cryopod"
+            "name": "Cryopod System"
           },
           {
             "name": "Floodlights"
@@ -4909,7 +4909,7 @@
             "name": "Reactor Flare"
           },
           {
-            "name": "Motion Scanner"
+            "name": "M315 Motion Scanner"
           }
         ],
         "content": [
@@ -4967,6 +4967,9 @@
           },
           {
             "name": "Locomotion System"
+          },
+          {
+            "name": "Tracking Node"
           }
         ],
         "modules": [
@@ -4975,9 +4978,6 @@
           },
           {
             "name": "Multi-Optics"
-          },
-          {
-            "name": "Tracking Node"
           }
         ],
         "content": [
@@ -5583,7 +5583,10 @@
             "name": "Missile Pod"
           },
           {
-            "name": "Automated Machine Gun Turret"
+            "name": "Automated Weapon Turret",
+            "preselectedChoices": {
+              "c05fd7f4-cd5a-4c0d-8518-3566cece416d": "Automated Machine Gun Turret"
+            }
           },
           {
             "name": "Chaff Launcher",

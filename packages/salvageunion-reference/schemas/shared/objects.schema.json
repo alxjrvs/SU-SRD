@@ -907,6 +907,10 @@
         },
         "page": {
           "$ref": "common.schema.json#/definitions/positiveInteger"
+        },
+        "actionSource": {
+          "$ref": "enums.schema.json#/definitions/schemaName",
+          "description": "The schema name that this action is used in (e.g., 'chassis', 'systems', 'modules')"
         }
       }
     },

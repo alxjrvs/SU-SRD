@@ -308,6 +308,10 @@ export interface SURefObjectAction {
   activationCurrency?: string
   source?: SURefEnumSource
   page?: SURefCommonPositiveInteger
+  /**
+   * The schema name that this action is used in (e.g., 'chassis', 'systems', 'modules')
+   */
+  actionSource?: SURefEnumSchemaName
 }
 
 /**

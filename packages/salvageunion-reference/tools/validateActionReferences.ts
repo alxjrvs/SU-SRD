@@ -39,23 +39,14 @@ function loadData(filename: string): Record<string, unknown>[] {
 const actions = loadData('actions.json')
 const actionNames = new Set(actions.map((a) => (a.name as string) || ''))
 
-// Load chassis-abilities.json to get all valid chassis ability names
-const chassisAbilities = loadData('chassis-abilities.json')
-const chassisAbilityNames = new Set(chassisAbilities.map((a) => (a.name as string) || ''))
-
 // Create a map for fuzzy matching suggestions
 const actionNamesLower = new Map<string, string>()
 actions.forEach((a) => {
   const name = (a.name as string) || ''
   actionNamesLower.set(name.toLowerCase(), name)
 })
-chassisAbilities.forEach((a) => {
-  const name = (a.name as string) || ''
-  actionNamesLower.set(name.toLowerCase(), name)
-})
 
-console.log(`Loaded ${actionNames.size} actions from actions.json`)
-console.log(`Loaded ${chassisAbilityNames.size} chassis abilities from chassis-abilities.json\n`)
+console.log(`Loaded ${actionNames.size} actions from actions.json\n`)
 
 // Data files that may contain action references
 const dataFiles = [
@@ -120,6 +111,7 @@ for (const filename of dataFiles) {
     }
 
     // Check chassisAbilities arrays (for chassis.json)
+    // Chassis abilities are now stored as actions in actions.json
     if (entity.chassisAbilities && Array.isArray(entity.chassisAbilities)) {
       for (const abilityRef of entity.chassisAbilities) {
         if (typeof abilityRef === 'string') {

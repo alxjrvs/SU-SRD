@@ -8,7 +8,7 @@
     "salvageValue": 1,
     "recommended": true,
     "page": 190,
-    "actions": ["Comms Module"]
+    "actions": ["Comms"]
   },
   {
     "id": "f8acedfb-56da-4ca2-8bb8-511d95a23abe",
@@ -198,7 +198,7 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "page": 196,
-    "actions": ["Navigation Module"]
+    "actions": ["Navigation"]
   },
   {
     "id": "09409fcc-9463-465b-91e5-5580bc1ce7bd",
@@ -428,7 +428,7 @@
     "slotsRequired": 1,
     "salvageValue": 2,
     "page": 203,
-    "actions": ["Alpha Strike Module"]
+    "actions": ["Alpha Strike"]
   },
   {
     "id": "49957195-dedf-4f22-862c-296c010efda4",
@@ -548,12 +548,12 @@
   {
     "id": "f05e57d3-a579-48c1-bd31-bb6a52ffd091",
     "source": "Salvage Union Workshop Manual",
-    "name": "He 2 Coolant Flush",
+    "name": "He₂ Coolant Flush",
     "techLevel": 5,
     "slotsRequired": 1,
     "salvageValue": 2,
     "page": 197,
-    "actions": ["He 2 Coolant Flush"]
+    "actions": ["He₂ Coolant Flush"]
   },
   {
     "id": "3b1ecd72-55bf-4a48-ac16-44e5f47d5138",
@@ -583,7 +583,7 @@
     "slotsRequired": 2,
     "salvageValue": 2,
     "page": 206,
-    "actions": ["Omega Push Module"]
+    "actions": ["Omega Push"]
   },
   {
     "id": "8e991403-1d78-464e-b71c-ccd397bf733e",
@@ -593,7 +593,7 @@
     "slotsRequired": 1,
     "salvageValue": 1,
     "page": 206,
-    "actions": ["DDR Module"]
+    "actions": ["DDR"]
   },
   {
     "id": "684e6851-9a5c-496b-8104-14350e1d32e2",
@@ -647,7 +647,7 @@
     "indexable": false,
     "blackMarket": true,
     "page": 71,
-    "actions": ["Corrupted Neuralink Module"]
+    "actions": ["Corrupted Neuralink"]
   },
   {
     "id": "f2f2656a-9f02-415d-a9ac-6749d45bccff",
@@ -717,7 +717,7 @@
     "slotsRequired": 2,
     "salvageValue": 4,
     "page": 59,
-    "actions": ["Meld Module Replicator"]
+    "actions": ["Meld Replicator"]
   },
   {
     "id": "00ad584d-283d-410c-82a4-85f970bdf274",
