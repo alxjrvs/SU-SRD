@@ -43,6 +43,8 @@ type EntityContainerProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 
   reverse?: boolean
   /** Optional source book for source-based styling */
   source?: SURefEnumSource
+  /** Whether the entity is expanded (affects source styling) */
+  isExpanded?: boolean
 }
 
 export function EntityContainer({
@@ -66,6 +68,7 @@ export function EntityContainer({
   headerTestId,
   reverse = false,
   source,
+  isExpanded = true,
   ...flexProps
 }: EntityContainerProps) {
   const actualHeaderBg = disabled ? 'su.grey' : headerBg || bg
@@ -74,8 +77,8 @@ export function EntityContainer({
   const hasHeader = !!(title || leftContent || rightContent)
   const headerCursor = onHeaderClick ? 'pointer' : 'default'
 
-  // Source-based styling using shared helper function
-  const sourceHeaderStyles = getSourceStyles(source, disabled, 'header')
+  // Source-based styling using shared helper function (only when expanded)
+  const sourceHeaderStyles = getSourceStyles(source, disabled, 'header', isExpanded)
 
   return (
     <Flex

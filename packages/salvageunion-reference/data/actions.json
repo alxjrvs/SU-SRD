@@ -10558,12 +10558,12 @@
       {
         "type": "paragraph",
         "value": "Developed from the razor-sharp talons present on many Bio-Titans, this weapon excels at dismembering foes."
-      },
-      {
-        "type": "paragraph",
-        "value": "20: A System or Appendage on the target is destroyed."
       }
     ],
+    "table": {
+      "type": "dramatic",
+      "20": "A System or Appendage on the target is destroyed."
+    },
     "actionSource": "systems"
   },
   {

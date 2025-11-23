@@ -232,16 +232,17 @@ export function resolveEntityName(
  * Get source-specific CSS styles for entity headers and footers
  * @param source - The source book name
  * @param disabled - Whether the entity is disabled
- * @param compact - Whether compact mode is enabled (disables visual effects like jagged borders)
  * @param variant - Whether this is for 'header' (bottom jagged) or 'footer' (top jagged)
+ * @param isExpanded - Whether the entity is expanded (styles only apply when expanded)
  * @returns CSS styles object or empty object
  */
 export function getSourceStyles(
   source: SURefEnumSource | undefined,
   disabled: boolean = false,
-  variant: 'header' | 'footer' = 'header'
+  variant: 'header' | 'footer' = 'header',
+  isExpanded: boolean = true
 ): Record<string, unknown> {
-  if (!source || disabled) return {}
+  if (!source || disabled || !isExpanded) return {}
 
   switch (source) {
     case 'We Were Here First!': {

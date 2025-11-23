@@ -192,7 +192,7 @@ function EquipmentItemWithSlots({
               )}
             </Flex>
             {sortedSystems.length > 0 && (
-              <VStack gap={2} align="stretch">
+              <VStack gap={3} align="stretch">
                 {sortedSystems.map((system) => {
                   const systemEntity = equipmentSystems.find((e) => e.ref.id === system.id)
                   if (!systemEntity) return null
@@ -238,7 +238,7 @@ function EquipmentItemWithSlots({
               )}
             </Flex>
             {sortedModules.length > 0 && (
-              <VStack gap={2} align="stretch">
+              <VStack gap={3} align="stretch">
                 {sortedModules.map((module) => {
                   const moduleEntity = equipmentModules.find((e) => e.ref.id === module.id)
                   if (!moduleEntity) return null

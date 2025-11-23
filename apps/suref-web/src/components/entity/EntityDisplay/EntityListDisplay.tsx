@@ -65,7 +65,7 @@ export function EntityListDisplay({
     if (visibleOptions.length === 0) return null
 
     return (
-      <VStack gap={spacing.contentPadding} alignItems="start">
+      <VStack gap={spacing.contentPadding + 1} alignItems="start">
         {visibleOptions.map((option, idx) => {
           const isSelected = isMultiSelect
             ? userChoices?.[choice.id] === option.value
@@ -113,7 +113,7 @@ export function EntityListDisplay({
   if (visibleEntities.length === 0) return null
 
   return (
-    <VStack gap={spacing.contentPadding} alignItems="start">
+    <VStack gap={spacing.contentPadding + 1} alignItems="start">
       {visibleEntities.map((entity, idx) => {
         const entityName = resolveEntityName(entity as SURefMetaEntity | SURefObjectSystemModule)
 

@@ -147,6 +147,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
       onHeaderClick={handleHeaderClick}
       headerTestId="frame-header-container"
       source={source}
+      isExpanded={isExpanded}
     >
       {(!collapsible || isExpanded) && (
         <VStack
@@ -161,7 +162,14 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
         >
           {hasTopMatterContent && (
             <>
-              <Box p={spacing.contentPadding}>
+              <Box
+                p={spacing.contentPadding}
+                pt={
+                  source !== 'Salvage Union Workshop Manual' && hasTopMatterContent
+                    ? `calc(${spacing.contentPadding * 0.25}rem + 5px)`
+                    : undefined
+                }
+              >
                 {!hideImage && <EntityImage customWidth={imageWidth} />}
                 {showContent && (
                   <ContentBlockRenderer

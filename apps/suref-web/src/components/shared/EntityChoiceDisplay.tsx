@@ -256,7 +256,7 @@ export function EntityChoiceDisplay(props: EntityChoiceDisplayProps) {
   // Handle multi-select with entities (entity mode only)
   if (isMultiSelect && selectedValues.length > 0 && mode === 'entity') {
     return (
-      <VStack gap={2} alignItems="stretch" mt={2}>
+      <VStack gap={3} alignItems="stretch" mt={2}>
         {selectedValues.map((selection) => {
           const entity = SalvageUnionReference.getByRef(selection.value)
           if (!entity) return null

@@ -5,7 +5,8 @@ import { useEntityDisplayContext } from '@/components/entity/EntityDisplay/useEn
 import { getSourceStyles } from '@/components/entity/entityDisplayHelpers'
 
 export function EntityDisplayFooter({ bg }: { bg?: string }) {
-  const { data, schemaName, spacing, compact, source, disabled } = useEntityDisplayContext()
+  const { data, schemaName, spacing, compact, source, disabled, isExpanded } =
+    useEntityDisplayContext()
   if (!('page' in data) || !data.page) return null
   const displayName = getDisplayName(schemaName)
 
@@ -15,8 +16,8 @@ export function EntityDisplayFooter({ bg }: { bg?: string }) {
   const fontWeightBold = compact ? 'semibold' : 'bold'
   const fontWeightSemibold = 'semibold'
 
-  // Apply source-specific styling
-  const sourceFooterStyles = getSourceStyles(source, disabled ?? false, 'footer')
+  // Apply source-specific styling (only when expanded)
+  const sourceFooterStyles = getSourceStyles(source, disabled ?? false, 'footer', isExpanded)
 
   return (
     <Flex

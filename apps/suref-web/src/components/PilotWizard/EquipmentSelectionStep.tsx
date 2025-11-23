@@ -63,7 +63,7 @@ export function EquipmentSelectionStep({ wizardState, onComplete }: EquipmentSel
         </Text>
       </VStack>
 
-      <VStack gap={4} align="stretch">
+      <VStack gap={5} align="stretch">
         {availableEquipment.map((equipment) => {
           const isSelected = state.selectedEquipmentIds.includes(equipment.id)
           return (
