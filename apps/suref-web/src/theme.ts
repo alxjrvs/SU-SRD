@@ -31,6 +31,8 @@ export const suColors = {
   darkGrey: 'rgb(80, 80, 80)',
   lightGray: 'rgb(199, 199, 199)', // Gray with similar lightness to lightBlue
   deepPurple: 'rgb(60, 30, 80)',
+  sicklyYellow: 'rgb(215, 195, 125)', // Sickly yellow for Bio tech level
+  silver: 'rgb(192, 192, 192)', // Silvery color for N tech level
 
   inputBg: 'rgb(232, 229, 216)',
   inputText: 'rgb(45, 62, 54)',
@@ -87,6 +89,8 @@ const config = defineConfig({
           darkGrey: { value: suColors.darkGrey },
           lightGray: { value: suColors.lightGray },
           deepPurple: { value: suColors.deepPurple },
+          sicklyYellow: { value: suColors.sicklyYellow },
+          silver: { value: suColors.silver },
           inputBg: { value: suColors.inputBg },
           inputText: { value: suColors.inputText },
           crawlerPink: { value: suColors.crawlerPink },

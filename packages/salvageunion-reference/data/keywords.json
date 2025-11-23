@@ -874,5 +874,177 @@
         "value": "If something is wheeled it moves via use of wheels. Wheeled vehicles cannot cross areas of Difficult Terrain and can only be used effectively on roads or other flat expanses, few of which exist in the wastelands."
       }
     ]
+  },
+  {
+    "id": "b87fd43c-f3fb-44a0-af49-7eb6afb30b03",
+    "source": "We Were Here First!",
+    "name": "bio-system",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Some Bio-Systems and Bio-Modules will have different effects based on whether they are installed in a Bio-Chassis or a Mech-Chassis."
+      },
+      {
+        "type": "paragraph",
+        "value": "If a Union Crawler has a Bio-Mech Bay a Bio-Chassis fully restores its SP, EP, and reduces its Heat to 0 during Downtime."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis, Bio-Systems and Bio-Modules do not repair from Damaged to Intact automatically during downtime. They must be repaired with Bio-Salvage."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis can install both standard and Bio Systems and Modules."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis roll on an alternate Bio-Chassis Damage Table (see p. 78) when they are reduced to 0 SP."
+      }
+    ]
+  },
+  {
+    "id": "8bf406cd-dfc9-4e83-9b05-d1186c5a9000",
+    "source": "We Were Here First!",
+    "name": "bio-module",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Some Bio-Systems and Bio-Modules will have different effects based on whether they are installed in a Bio-Chassis or a Mech-Chassis."
+      },
+      {
+        "type": "paragraph",
+        "value": "If a Union Crawler has a Bio-Mech Bay a Bio-Chassis fully restores its SP, EP, and reduces its Heat to 0 during Downtime."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis, Bio-Systems and Bio-Modules do not repair from Damaged to Intact automatically during downtime. They must be repaired with Bio-Salvage."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis can install both standard and Bio Systems and Modules."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis roll on an alternate Bio-Chassis Damage Table (see p. 78) when they are reduced to 0 SP."
+      }
+    ]
+  },
+  {
+    "id": "908e7718-0409-4a7b-b165-908ff108061a",
+    "source": "We Were Here First!",
+    "name": "bio-chassis",
+    "page": 60,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis roll on an alternate Bio-Chassis Overload Table (see p. 79) when they fail a Heat Check."
+      },
+      {
+        "type": "paragraph",
+        "value": "Bio-Chassis requires the Pilot to hook themselves up physically to the Bio-Mech. There are many different ways this can be done: tendrils and wires; amniotic sacs; electrodes; and harnessing. The exact details are up to the players and the Mediator to determine."
+      },
+      {
+        "type": "paragraph",
+        "value": "Otherwise, Bio-Chassis operate as a standard Mech."
+      },
+      {
+        "type": "paragraph",
+        "value": "Unless otherwise stated in their entry, Bio-Systems and Bio-Modules can be installed on either Bio-Chassis or standard Mech-Chassis."
+      }
+    ]
+  },
+  {
+    "id": "db7ec650-f93e-4397-a1f9-46ee2080fc71",
+    "source": "False Flag",
+    "name": "anomalous zone",
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When Pilots are in an Anomalous Zone, they must roll on the Anomaly Table on pages 10-11 for each journey or hour spent in the area."
+      }
+    ]
+  },
+  {
+    "id": "983eeb85-ffca-411f-9fab-b65035046173",
+    "source": "False Flag",
+    "name": "difficult terrain (False Flag)",
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Difficult Terrain takes twice as long to cross. A Union Crawler takes two weeks to traverse it and requires 2 Downtime Cycles and Upkeep payments."
+      }
+    ]
+  },
+  {
+    "id": "98451035-4cab-4368-a77e-c0a794c16876",
+    "source": "False Flag",
+    "name": "freezing",
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "All Heat gained in Freezing areas is halved."
+      },
+      {
+        "type": "paragraph",
+        "value": "For each hour spent in a Freezing area without protection, roll on the following table for effects on a Mech: 20: The Mech is unscathed by the cold. 11-19: The Mech takes 1 SP damage from cold erosion. 6-10: The Mech's electronics freeze over and a random Module is damaged. 2-5: The Mech's parts begin to seize in the cold. A random System is damaged. 1: The Mech's core freezes. Its Chassis is damaged."
+      },
+      {
+        "type": "paragraph",
+        "value": "Pilots suffer 2 HP damage and a Minor Injury per hour in a Freezing area unless protected (e.g., by piloting an operational Mech)."
+      }
+    ]
+  },
+  {
+    "id": "085a8f47-515a-4d39-bb45-030be5d7d550",
+    "source": "False Flag",
+    "name": "low visibility",
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Pilots can only see and target at Close Range, unless they have other means of vision."
+      }
+    ]
+  },
+  {
+    "id": "56be0f3d-b0dd-4bec-b147-8857af31d4ce",
+    "source": "False Flag",
+    "name": "surface ice",
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Mechs falling on surface ice take 4 SP damage and fall Prone. If they fail to recover, they fall through the ice into a crevasse and must roll on the Critical Damage Table. Pilots falling on surface ice take 2 HP damage and fall Prone."
+      }
+    ]
+  },
+  {
+    "id": "03719922-2f99-4b3c-bbc7-77916b0da014",
+    "source": "False Flag",
+    "name": "corporate scrip",
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Scrip is a corpo currency for purchasing basic goods in a settlement, such as food, lodgings, and transportation. It's often used by outsiders who are not part of the corpo DebtCredit™ system."
+      },
+      {
+        "type": "paragraph",
+        "value": "One Tech 1 Scrap typically provides enough Scrip to cover expenses for a whole crew for a month. When Pilots travel into a settled region, assume they will find a way to get scrip and that all basic necessities are covered. Scrip does not need specific tracking by the GM."
+      },
+      {
+        "type": "paragraph",
+        "value": "Scrip cannot be spent on goods with tangible value or which are directly relevant to play, such as Systems, Modules, Pilot Equipment, or Mech Chassis. You must pay Scrap for those goods instead."
+      },
+      {
+        "type": "paragraph",
+        "value": "Scrip is also unique to each corporate settlement, and isn't tradable between them. For example, DronTek scrip is worthless in a Stefanus Arco."
+      }
+    ]
   }
 ]

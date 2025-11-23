@@ -174,6 +174,23 @@ export function isEquipment(entity: SURefMetaEntity): entity is SURefEquipment {
 }
 
 /**
+ * Type guard to check if an entity is a Faction
+ * @param entity - The entity to check
+ * @returns True if the entity is a Faction
+ */
+export function isFaction(entity: SURefMetaEntity): entity is SURefFaction {
+  return (
+    'id' in entity &&
+    'name' in entity &&
+    'source' in entity &&
+    'page' in entity &&
+    'goals' in entity &&
+    'assets' in entity &&
+    'weaknesses' in entity
+  )
+}
+
+/**
  * Type guard to check if an entity is a Keyword
  * @param entity - The entity to check
  * @returns True if the entity is a Keyword
@@ -272,6 +289,7 @@ import type {
   SURefDistance,
   SURefDrone,
   SURefEquipment,
+  SURefFaction,
   SURefKeyword,
   SURefMeld,
   SURefMetaAbilityTreeRequirement,
@@ -414,29 +432,6 @@ export function getSalvageValue(entity: SURefMetaEntity): unknown | undefined {
 }
 
 /**
- * Extract hitPoints from an entity
- * @param entity - The entity to extract from
- * @returns The hitPoints or undefined
- */
-export function getHitPoints(entity: SURefMetaEntity): unknown | undefined {
-  return 'hitPoints' in entity ? entity.hitPoints : undefined
-}
-
-/**
- * Extract npc from an entity
- * @param entity - The entity to extract from
- * @returns The npc or undefined
- */
-export function getNpc(entity: SURefMetaEntity): SURefObjectNpc | undefined {
-  return 'npc' in entity &&
-    entity.npc !== null &&
-    typeof entity.npc === 'object' &&
-    !Array.isArray(entity.npc)
-    ? entity.npc
-    : undefined
-}
-
-/**
  * Extract energyPoints from an entity
  * @param entity - The entity to extract from
  * @returns The energyPoints or undefined
@@ -488,6 +483,29 @@ export function getModuleSlots(entity: SURefMetaEntity): number | undefined {
 export function getCargoCapacity(entity: SURefMetaEntity): number | undefined {
   return 'cargoCapacity' in entity && typeof entity.cargoCapacity === 'number'
     ? entity.cargoCapacity
+    : undefined
+}
+
+/**
+ * Extract hitPoints from an entity
+ * @param entity - The entity to extract from
+ * @returns The hitPoints or undefined
+ */
+export function getHitPoints(entity: SURefMetaEntity): unknown | undefined {
+  return 'hitPoints' in entity ? entity.hitPoints : undefined
+}
+
+/**
+ * Extract npc from an entity
+ * @param entity - The entity to extract from
+ * @returns The npc or undefined
+ */
+export function getNpc(entity: SURefMetaEntity): SURefObjectNpc | undefined {
+  return 'npc' in entity &&
+    entity.npc !== null &&
+    typeof entity.npc === 'object' &&
+    !Array.isArray(entity.npc)
+    ? entity.npc
     : undefined
 }
 
@@ -660,6 +678,55 @@ export function getBonusPerTechLevel(
 }
 
 /**
+ * Extract goals from an entity
+ * @param entity - The entity to extract from
+ * @returns The goals or undefined
+ */
+export function getGoals(entity: SURefMetaEntity): string | undefined {
+  return 'goals' in entity && typeof entity.goals === 'string' ? entity.goals : undefined
+}
+
+/**
+ * Extract assets from an entity
+ * @param entity - The entity to extract from
+ * @returns The assets or undefined
+ */
+export function getAssets(entity: SURefMetaEntity): string | undefined {
+  return 'assets' in entity && typeof entity.assets === 'string' ? entity.assets : undefined
+}
+
+/**
+ * Extract weaknesses from an entity
+ * @param entity - The entity to extract from
+ * @returns The weaknesses or undefined
+ */
+export function getWeaknesses(entity: SURefMetaEntity): string | undefined {
+  return 'weaknesses' in entity && typeof entity.weaknesses === 'string'
+    ? entity.weaknesses
+    : undefined
+}
+
+/**
+ * Extract formation from an entity
+ * @param entity - The entity to extract from
+ * @returns The formation or undefined
+ */
+export function getFormation(entity: SURefMetaEntity): SURefObjectFormationMech[] | undefined {
+  return 'formation' in entity && Array.isArray(entity.formation) ? entity.formation : undefined
+}
+
+/**
+ * Extract bioSalvageValue from an entity
+ * @param entity - The entity to extract from
+ * @returns The bioSalvageValue or undefined
+ */
+export function getBioSalvageValue(entity: SURefMetaEntity): number | undefined {
+  return 'bioSalvageValue' in entity && typeof entity.bioSalvageValue === 'number'
+    ? entity.bioSalvageValue
+    : undefined
+}
+
+/**
  * Extract section from an entity
  * @param entity - The entity to extract from
  * @returns The section or undefined
@@ -681,6 +748,7 @@ export function getDamageType(entity: SURefMetaEntity): unknown | undefined {
 import type {
   SURefObjectBonusPerTechLevel,
   SURefObjectChoice,
+  SURefObjectFormationMech,
   SURefObjectGrant,
   SURefObjectNpc,
   SURefObjectPattern,

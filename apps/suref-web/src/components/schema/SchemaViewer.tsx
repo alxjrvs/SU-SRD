@@ -10,7 +10,7 @@ import { useNavigate } from '@tanstack/react-router'
 import { Route } from '@/routes/schema/$schemaId/index'
 import { getDisplayComponent } from '@/components/componentRegistry'
 import type { SURefEntity } from 'salvageunion-reference'
-import { getTechLevel } from 'salvageunion-reference'
+import { getTechLevelNumber } from 'salvageunion-reference'
 import { getEntitySlug } from '@/utils/slug'
 
 interface SchemaViewerProps {
@@ -25,21 +25,32 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
 
   const data = prefetchedData ?? fetchedData
 
-  const { search = '', tl = [] } = Route.useSearch()
+  const { search = '', tl = [], source = [] } = Route.useSearch()
 
   const techLevelFilters = useMemo(() => new Set(tl.map(String)), [tl])
+  const sourceFilters = useMemo(() => new Set(source), [source])
 
   const currentSchema = schemas.find((s) => s.id === schemaId)
 
   const techLevels = useMemo(() => {
     const levels = new Set<number>()
     data.forEach((item) => {
-      const techLevel = getTechLevel(item)
+      const techLevel = getTechLevelNumber(item)
       if (techLevel !== undefined) {
         levels.add(techLevel)
       }
     })
     return Array.from(levels).sort()
+  }, [data])
+
+  const sources = useMemo(() => {
+    const sourceSet = new Set<string>()
+    data.forEach((item) => {
+      if ('source' in item && typeof item.source === 'string') {
+        sourceSet.add(item.source)
+      }
+    })
+    return Array.from(sourceSet).sort()
   }, [data])
 
   const filteredData = useMemo(() => {
@@ -54,16 +65,23 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
       }
 
       if (techLevelFilters.size > 0) {
-        const techLevel = getTechLevel(item)
+        const techLevel = getTechLevelNumber(item)
         const itemTechLevel = techLevel?.toString()
         if (!itemTechLevel || !techLevelFilters.has(itemTechLevel)) {
           return false
         }
       }
 
+      if (sourceFilters.size > 0) {
+        const itemSource = 'source' in item && typeof item.source === 'string' ? item.source : null
+        if (!itemSource || !sourceFilters.has(itemSource)) {
+          return false
+        }
+      }
+
       return true
     })
-  }, [data, search, techLevelFilters])
+  }, [data, search, techLevelFilters, sourceFilters])
 
   const DisplayComponent = useMemo(() => getDisplayComponent(schemaId), [schemaId])
 
@@ -99,21 +117,18 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
     currentSchema.displayNamePlural ||
     currentSchema.title.charAt(0).toUpperCase() + currentSchema.title.slice(1)
 
+  const hasFilters = techLevels.length > 1 || sources.length > 1
+
   return (
     <Flex flexDirection="column" minH="100%">
-      <ReferenceHeader
-        title={capitalizedTitle}
-        textAlign="center"
-        py={techLevels.length > 1 ? 6 : 4}
-        px={6}
-      >
+      <ReferenceHeader title={capitalizedTitle} textAlign="center" py={hasFilters ? 6 : 4} px={6}>
         <Box maxW="800px" mx="auto" w="full">
-          <Text color="su.black" textAlign="center" mb={techLevels.length > 1 ? 3 : 2}>
+          <Text color="su.black" textAlign="center" mb={hasFilters ? 3 : 2}>
             {currentSchema.description}
           </Text>
         </Box>
 
-        <Box mb={techLevels.length > 1 ? 3 : 2} w="full" maxW="600px" mx="auto">
+        <Box mb={hasFilters ? 3 : 2} w="full" maxW="600px" mx="auto">
           <Input
             type="text"
             placeholder="Search by name or description..."
@@ -132,53 +147,107 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
           />
         </Box>
 
-        {techLevels.length > 1 && (
-          <Flex flexWrap="wrap" gap={2}>
-            <Button
-              onClick={() => {
-                navigate({
-                  search: (prev) => ({ ...prev, tl: undefined }),
-                })
-              }}
-              px={4}
-              py={2}
-              fontWeight="medium"
-              bg={techLevelFilters.size === 0 ? 'su.orange' : 'bg.surface'}
-              color={techLevelFilters.size === 0 ? 'su.white' : 'fg.default'}
-              borderWidth={techLevelFilters.size === 0 ? '0' : '1px'}
-              borderColor="border.default"
-              _hover={techLevelFilters.size === 0 ? {} : { bg: 'bg.hover' }}
-            >
-              All
-            </Button>
-            {techLevels.map((level) => {
-              const isSelected = techLevelFilters.has(String(level))
-              return (
+        {hasFilters && (
+          <Flex flexDirection="column" gap={3} w="full" maxW="1200px" mx="auto">
+            {techLevels.length > 1 && (
+              <Flex flexWrap="wrap" gap={2}>
                 <Button
-                  key={level}
                   onClick={() => {
                     navigate({
-                      search: (prev) => ({
-                        ...prev,
-                        tl: prev.tl?.includes(level)
-                          ? prev.tl.filter((l) => l !== level)
-                          : [...(prev.tl || []), level],
-                      }),
+                      search: (prev) => ({ ...prev, tl: undefined }),
                     })
                   }}
                   px={4}
                   py={2}
                   fontWeight="medium"
-                  bg={isSelected ? 'su.orange' : 'bg.surface'}
-                  color={isSelected ? 'su.white' : 'fg.default'}
-                  borderWidth={isSelected ? '0' : '1px'}
+                  bg={techLevelFilters.size === 0 ? 'su.orange' : 'bg.surface'}
+                  color={techLevelFilters.size === 0 ? 'su.white' : 'fg.default'}
+                  borderWidth={techLevelFilters.size === 0 ? '0' : '1px'}
                   borderColor="border.default"
-                  _hover={isSelected ? {} : { bg: 'bg.hover' }}
+                  _hover={techLevelFilters.size === 0 ? {} : { bg: 'bg.hover' }}
                 >
-                  T{level}
+                  All
                 </Button>
-              )
-            })}
+                {techLevels.map((level) => {
+                  const isSelected = techLevelFilters.has(String(level))
+                  return (
+                    <Button
+                      key={level}
+                      onClick={() => {
+                        navigate({
+                          search: (prev) => ({
+                            ...prev,
+                            tl: prev.tl?.includes(level)
+                              ? prev.tl.filter((l) => l !== level)
+                              : [...(prev.tl || []), level],
+                          }),
+                        })
+                      }}
+                      px={4}
+                      py={2}
+                      fontWeight="medium"
+                      bg={isSelected ? 'su.orange' : 'bg.surface'}
+                      color={isSelected ? 'su.white' : 'fg.default'}
+                      borderWidth={isSelected ? '0' : '1px'}
+                      borderColor="border.default"
+                      _hover={isSelected ? {} : { bg: 'bg.hover' }}
+                    >
+                      T{level}
+                    </Button>
+                  )
+                })}
+              </Flex>
+            )}
+
+            {sources.length > 1 && (
+              <Flex flexWrap="wrap" gap={2}>
+                <Button
+                  onClick={() => {
+                    navigate({
+                      search: (prev) => ({ ...prev, source: undefined }),
+                    })
+                  }}
+                  px={4}
+                  py={2}
+                  fontWeight="medium"
+                  bg={sourceFilters.size === 0 ? 'su.orange' : 'bg.surface'}
+                  color={sourceFilters.size === 0 ? 'su.white' : 'fg.default'}
+                  borderWidth={sourceFilters.size === 0 ? '0' : '1px'}
+                  borderColor="border.default"
+                  _hover={sourceFilters.size === 0 ? {} : { bg: 'bg.hover' }}
+                >
+                  All
+                </Button>
+                {sources.map((source) => {
+                  const isSelected = sourceFilters.has(source)
+                  return (
+                    <Button
+                      key={source}
+                      onClick={() => {
+                        navigate({
+                          search: (prev) => ({
+                            ...prev,
+                            source: prev.source?.includes(source)
+                              ? prev.source.filter((s) => s !== source)
+                              : [...(prev.source || []), source],
+                          }),
+                        })
+                      }}
+                      px={4}
+                      py={2}
+                      fontWeight="medium"
+                      bg={isSelected ? 'su.orange' : 'bg.surface'}
+                      color={isSelected ? 'su.white' : 'fg.default'}
+                      borderWidth={isSelected ? '0' : '1px'}
+                      borderColor="border.default"
+                      _hover={isSelected ? {} : { bg: 'bg.hover' }}
+                    >
+                      {source}
+                    </Button>
+                  )
+                })}
+              </Flex>
+            )}
           </Flex>
         )}
       </ReferenceHeader>

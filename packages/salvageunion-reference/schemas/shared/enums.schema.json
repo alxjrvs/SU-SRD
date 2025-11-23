@@ -6,7 +6,13 @@
   "definitions": {
     "source": {
       "type": "string",
-      "enum": ["Salvage Union Workshop Manual", "Mech Monday"],
+      "enum": [
+        "Salvage Union Workshop Manual",
+        "Mech Monday",
+        "We Were Here First!",
+        "Rainmaker",
+        "False Flag"
+      ],
       "description": "The source book or expansion for this content"
     },
     "contentType": {
@@ -96,6 +102,7 @@
         "drones",
         "equipment",
         "keywords",
+        "factions",
         "meld",
         "modules",
         "npcs",

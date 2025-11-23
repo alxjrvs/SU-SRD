@@ -16,11 +16,11 @@ import type {
   SURefDistance,
   SURefDrone,
   SURefEquipment,
+  SURefFaction,
   SURefKeyword,
   SURefMeld,
   SURefMetaAbilityTreeRequirement,
   SURefMetaAction,
-  SURefMetaChassisAbility,
   SURefMetaCrawlerTechLevel,
   SURefModule,
   SURefNPC,
@@ -106,6 +106,7 @@ export type SURefEntity =
   | SURefDistance
   | SURefDrone
   | SURefEquipment
+  | SURefFaction
   | SURefKeyword
   | SURefMeld
   | SURefModule
@@ -128,11 +129,11 @@ export type SURefMetaEntity =
   | SURefDistance
   | SURefDrone
   | SURefEquipment
+  | SURefFaction
   | SURefKeyword
   | SURefMeld
   | SURefMetaAbilityTreeRequirement
   | SURefMetaAction
-  | SURefMetaChassisAbility
   | SURefMetaCrawlerTechLevel
   | SURefModule
   | SURefNPC

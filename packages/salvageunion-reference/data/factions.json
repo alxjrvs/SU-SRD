@@ -1,0 +1,397 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "BOLZA Logistics Corps",
+    "source": "We Were Here First!",
+    "page": 14,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The logistical arm of the BOLZA operation, responsible for resupply and recovery. They are not combat trained and are less indoctrinated into BOLZA ideals. Led by the foreman of the crew, 'Weaver'."
+      }
+    ],
+    "goals": "Get the job done and get back home to their families. Some are looking for a payday and might look to do some skimming. Most know this is a bad idea.",
+    "assets": "All the transport, repair, and support mechs in the BOLZA force. They also control access to the Chimerium storage facility at the BOLZA Camp.",
+    "weaknesses": "Not being as loyal to the corpo, they can be bought - provided they will be safe. That said, it is a big ask. Better the devil you know.",
+    "formation": [
+      {
+        "chassis": "Atlas",
+        "pattern": "Bastion",
+        "source": "Salvage Union Workshop Manual",
+        "page": 125
+      },
+      {
+        "chassis": "Jackhammer",
+        "pattern": "Auger",
+        "source": "Salvage Union Workshop Manual",
+        "page": 117
+      },
+      {
+        "chassis": "Magpie",
+        "pattern": "Maggie",
+        "source": "Salvage Union Workshop Manual",
+        "page": 121
+      },
+      {
+        "chassis": "Mirror Ball",
+        "pattern": "Reclaimer",
+        "source": "Salvage Union Workshop Manual",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "13edf2cf-1141-4634-8049-7c7f68c89477",
+    "name": "SAKURA 78TH LANCE MSD",
+    "source": "We Were Here First!",
+    "page": 15,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A high-tech lance operating in Gehenna with detailed information about the area and its inhabitants. Fed with information from a Stefanus data auction, they know about the Red Mesa Facility and BOLZA Encampments in the area."
+      }
+    ],
+    "goals": "Gain Chimerium samples to engineer a cure to Chimerium Mutation they can leverage. Prevent BOLZA Chimerium Energy ambitions by assassinating Exec Petro. Commit industrial sabotage on Red Mesa and BOLZA operations to slow down their research ambitions.",
+    "assets": "A high tech lance as well as detailed information on Gehenna and its inhabitants.",
+    "weaknesses": "Isolated and small in number. If BOLZA were to find out about their plans and location, they would very quickly find themselves removed from the equation.",
+    "formation": [
+      {
+        "chassis": "Eidolon",
+        "pattern": "Sakura",
+        "source": "Salvage Union Workshop Manual",
+        "page": 151
+      },
+      {
+        "chassis": "Solo",
+        "pattern": "Sakura",
+        "source": "Salvage Union Workshop Manual",
+        "page": 135
+      },
+      {
+        "chassis": "Mantis",
+        "pattern": "Stefanus",
+        "source": "Salvage Union Workshop Manual",
+        "page": 131
+      },
+      {
+        "chassis": "Consul",
+        "pattern": "Terminator",
+        "source": "Salvage Union Workshop Manual",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "ca055fd0-9a29-4f0a-8b94-5f73cba50e92",
+    "name": "Wagon Wasters",
+    "source": "We Were Here First!",
+    "page": 21,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A large nomadic band of wasters who have assembled thanks to rumours of rare riches in the hills and canyons of Gehenna. Led by 'Sal', a hardened waster and leader by necessity, not choice."
+      }
+    ],
+    "goals": "Salvage as much Chimerium as possible and sell it for more basic goods to keep their band alive.",
+    "assets": "They are many in number and more arrive each day. They will work with anyone, though they are more suspicious of corpos than most. Often underestimated, they still put the weapons they do have to good use.",
+    "weaknesses": "Poorly equipped, they are a ragtag bunch. Being nomadic, they have brought their families, their children, and the sick and old. Many are weak and need support, so do not pose much of a threat militarily.",
+    "formation": [
+      {
+        "chassis": "Thresher",
+        "pattern": "Shepherd",
+        "source": "Salvage Union Workshop Manual",
+        "page": 109
+      },
+      {
+        "chassis": "Mule",
+        "pattern": "Crusher",
+        "source": "Salvage Union Workshop Manual",
+        "page": 101
+      },
+      {
+        "chassis": "Spectrum",
+        "pattern": "Settler",
+        "source": "Salvage Union Workshop Manual",
+        "page": 106
+      },
+      {
+        "chassis": "Scrapper",
+        "pattern": "Leaky",
+        "source": "Salvage Union Workshop Manual",
+        "page": 105
+      }
+    ]
+  },
+  {
+    "id": "57364385-aa7a-41ae-80a3-31c2e97d3593",
+    "name": "BOLZA Corp 1st Lance",
+    "source": "We Were Here First!",
+    "page": 12,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Led by 1st Lance Leader 'Messiah', (Ace), these are the finest BOLZA has to offer and they know it. Deployed when losing is not an option. Indoctrinated into the BOLZA ideals, they follow orders to the letter and they will not quit."
+      }
+    ],
+    "goals": "Their objective is to secure Chimerium Meteor sites for salvage and destroy all opposition.",
+    "assets": "The best equipment, intel, and training that BOLZA has to offer.",
+    "weaknesses": "Arrogant and overconfident as they have never lost. Easily baited.",
+    "formation": [
+      {
+        "chassis": "Impaler",
+        "pattern": "Alpha",
+        "source": "We Were Here First!",
+        "page": 76
+      },
+      {
+        "chassis": "Brawler",
+        "pattern": "Gladiator",
+        "source": "Salvage Union Workshop Manual",
+        "page": 127
+      },
+      {
+        "chassis": "Hussar",
+        "pattern": "Contour",
+        "source": "Salvage Union Workshop Manual",
+        "page": 115
+      },
+      {
+        "chassis": "Aegis",
+        "pattern": "Aeon",
+        "source": "Salvage Union Workshop Manual",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "730dbce7-ca5f-4ed5-92a3-3ba304c5dac2",
+    "name": "BOLZA Corp 2nd Lance",
+    "source": "We Were Here First!",
+    "page": 13,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Overlooked for the coveted 1st Lance position, 2nd Lance Leader 'Anton' (Ace) is furious they were not chosen."
+      }
+    ],
+    "goals": "Beat 1st Lance by securing more Chimerid Meteors. Will do anything to achieve this even if it is not by the book.",
+    "assets": "They are still well equipped with BOLZA support. They have lighter load outs which makes them more responsive and flexible.",
+    "weaknesses": "Hyper focused so they might miss the bigger picture. Could be manipulated as a result.",
+    "formation": [
+      {
+        "chassis": "Impaler",
+        "pattern": "Delta",
+        "source": "We Were Here First!",
+        "page": 76
+      },
+      {
+        "chassis": "Photon",
+        "pattern": "Stitcher",
+        "source": "Salvage Union Workshop Manual",
+        "page": 133
+      },
+      {
+        "chassis": "Gopher",
+        "pattern": "Longsaddle",
+        "source": "Salvage Union Workshop Manual",
+        "page": 113
+      },
+      {
+        "chassis": "Brawler",
+        "pattern": "Rifleman",
+        "source": "Salvage Union Workshop Manual",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "65e8b7f7-fa44-497f-84b5-ba8e89347983",
+    "name": "Trash Locusts",
+    "source": "We Were Here First!",
+    "page": 16,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A fanatical band of scrappers turned raiders, led by their newly appointed leader, Julius the Immortal (Combat Pilot). Will go to any lengths to secure rare salvage. Like locusts, they strip areas bare of salvage and move on to the next."
+      }
+    ],
+    "goals": "The Chimerid Meteor swarms are a golden prize for their new leader Julius, who is looking to make a name for himself. They will be looking to smash and grab as much as they can and get to a new area before they suffer too much heat.",
+    "assets": "There are a lot of them and they are not afraid of a fight. Their tactics are ruthless and unorthodox.",
+    "weaknesses": "Their Mechs are low-tech and scrappy, and they insist on using cumbersome box wheels. They have a loose chain of command held together by fear, and are prone to infighting.",
+    "formation": [
+      {
+        "chassis": "Atlas",
+        "pattern": "Throne",
+        "source": "We Were Here First!",
+        "page": 47
+      },
+      {
+        "chassis": "Mazona",
+        "pattern": "Buzzard",
+        "source": "Salvage Union Workshop Manual",
+        "page": 103,
+        "quantity": 2
+      },
+      {
+        "chassis": "Wheel",
+        "pattern": "Fighting Box",
+        "source": "Salvage Union Workshop Manual",
+        "page": 293,
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "id": "a6036930-9fd1-4674-8cb3-fb6039649492",
+    "name": "Chimerium Cult",
+    "source": "We Were Here First!",
+    "page": 17,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A pseudo-religious organisation which worships meteors as living embodiments of ancient gods. Cult members view the Chimerium as a holy substance that allows them to commune with these entities."
+      }
+    ],
+    "goals": "Harvest Chimerium and use it to craft Bio-Chassis to aid the highest of their ranks, known as 'The Family', on the path to ascension. Current family members, the de facto leaders of the cult, are Father Chatterer, Lady Seed, and The Anointed One.",
+    "assets": "Wide variety of bio-enhanced Mechs. Significant numbers of faithful that can grow through proselytising to other wastelanders.",
+    "weaknesses": "Their fanatical devotion can lead to witch hunts within the cult. Their Mechs are in ropey condition from over modification and a lack of dedicated engineers. Lack dedicated Bio-Chassis.",
+    "formation": [
+      {
+        "chassis": "Thresher",
+        "pattern": "Mutant",
+        "source": "We Were Here First!",
+        "page": 76,
+        "quantity": 2
+      },
+      {
+        "chassis": "Impaler",
+        "pattern": "Experimental Bio",
+        "source": "We Were Here First!",
+        "page": 76
+      },
+      {
+        "chassis": "Mule",
+        "pattern": "Acid Spitter",
+        "source": "We Were Here First!",
+        "page": 76
+      }
+    ]
+  },
+  {
+    "id": "33caf9aa-0429-4fea-9778-4d6a7997a36a",
+    "name": "Red Mesa Mutants",
+    "source": "We Were Here First!",
+    "page": 18,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The former workers and subjects who lived and worked in the Red Mesa Facility. Mutated over the decades by Chimerium and the machinations of The Mastermind, a Cortex Bio-Titan. Require Chimerium to survive."
+      }
+    ],
+    "goals": "They follow the will of The Mastermind, who desires living subjects to continue its Chimerium experiments. The Mastermind is inventive in getting such subjects, either through promises of power or, failing that, force. They further wish to collect as much Chimerium as possible for The Mastermind. In return, he provides them with protection and a ration of Chimerium which they need to survive.",
+    "assets": "They know how to utilise Chimerium to create Bio-Tech. Their lances contain numerous Bio-Chassis and mutated warriors.",
+    "weaknesses": "Many of the Chimerium Mutants quietly resent The Mastermind and there are whispers of uprising and rebellion. Their reliance on Chimerium for survival means the Chimerium Mutants cannot stray too far from the plateau lest they run out of their supply.",
+    "formation": [
+      {
+        "chassis": "Thresher",
+        "pattern": "Mutant",
+        "source": "We Were Here First!",
+        "page": 76
+      },
+      {
+        "chassis": "Scuttler",
+        "pattern": "Harvester",
+        "source": "We Were Here First!",
+        "page": 77
+      },
+      {
+        "chassis": "Stormterror",
+        "pattern": "Screecher",
+        "source": "We Were Here First!",
+        "page": 77
+      }
+    ]
+  },
+  {
+    "id": "39b92526-f512-4fbb-9f36-56c20566e998",
+    "name": "Crawler #693 Salvagers",
+    "source": "We Were Here First!",
+    "page": 19,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A Union Crawler dispatched to the area. Led by Union Rep 'Silver'. Friendly, but competitive. Union regulations dictate that the first who get to a salvage site have the claim."
+      }
+    ],
+    "goals": "Looking to claim as much salvage as possible, they are happy to work and coordinate with other Salvagers and Wasters. Silver has a history with BOLZA: they screwed him out of a salvage job and left his entire team for dead. He has a hateful desire to enact his revenge against them.",
+    "assets": "Crawler #693 is a fully equipped Tech 3 Exploratory Union Crawler.",
+    "weaknesses": "Their hatred towards BOLZA means they will fight them even when outgunned. This will bring more heat down on those that work with them.",
+    "formation": [
+      {
+        "chassis": "Mazona",
+        "pattern": "Scrap Flinger",
+        "source": "Salvage Union Workshop Manual",
+        "page": 103
+      },
+      {
+        "chassis": "Jackhammer",
+        "pattern": "Thatcher",
+        "source": "Salvage Union Workshop Manual",
+        "page": 117
+      },
+      {
+        "chassis": "Magpie",
+        "pattern": "Maggie",
+        "source": "Salvage Union Workshop Manual",
+        "page": 121
+      },
+      {
+        "chassis": "Gopher",
+        "pattern": "Longsaddle",
+        "source": "Salvage Union Workshop Manual",
+        "page": 113
+      }
+    ]
+  },
+  {
+    "id": "4d99e31e-50c4-403d-8fe3-1d4e8ab199de",
+    "name": "Wolf Z' Traders",
+    "source": "We Were Here First!",
+    "page": 20,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "An opportunistic band of traders who ply wares between waster and corpo settlements. Led by a savvy smuggler by the name of 'Gen' and her second in command, 'Buck', who wants to hunt big Bio-Titan game."
+      }
+    ],
+    "goals": "Capture a Bio-Titan or Chimerium Beast alive to sell to the highest bidder. Salvage as much Chimerium as possible and hoard it to sell later at inflated prices.",
+    "assets": "Well armed, including with Black Market Tech. This includes a Corrupted Neuralink Module which 'Gen' is not afraid to use to gain intel. They are well informed on the local landscape due to their trade networks and have no qualms about working with corpos.",
+    "weaknesses": "Though well armed, they will shy from a fight. They prefer negotiating, interrogating, or (if force is needed) hiring muscle. They're here to make bank, not get killed, or worse - lose their assets.",
+    "formation": [
+      {
+        "chassis": "Forge",
+        "pattern": "Osiris",
+        "source": "Salvage Union Workshop Manual",
+        "page": 111
+      },
+      {
+        "chassis": "Solo",
+        "pattern": "Smuggler",
+        "source": "Salvage Union Workshop Manual",
+        "page": 135
+      },
+      {
+        "chassis": "Sestra",
+        "pattern": "Scrounger",
+        "source": "Salvage Union Workshop Manual",
+        "page": 129
+      },
+      {
+        "chassis": "Aegis",
+        "pattern": "Escort",
+        "source": "Salvage Union Workshop Manual",
+        "page": 139
+      }
+    ]
+  }
+]

@@ -4,6 +4,7 @@ import { Button } from '@chakra-ui/react'
 import {
   SalvageUnionReference,
   getTechLevel,
+  getTechLevelNumber,
   type SURefEntity,
   type SURefEnumSchemaName,
 } from 'salvageunion-reference'
@@ -84,7 +85,7 @@ export function EntitySelectionModal({
     return entities
   }, [schemaNames])
 
-  const getEntityTechLevel = (entity: SURefEntity): number | null => {
+  const getEntityTechLevel = (entity: SURefEntity): number | 'B' | 'N' | null => {
     return getTechLevel(entity) ?? null
   }
 
@@ -135,8 +136,8 @@ export function EntitySelectionModal({
           return aDisabled ? 1 : -1
         }
 
-        const aTechLevel = getEntityTechLevel(a.entity) || 0
-        const bTechLevel = getEntityTechLevel(b.entity) || 0
+        const aTechLevel = getTechLevelNumber(a.entity) ?? 0
+        const bTechLevel = getTechLevelNumber(b.entity) ?? 0
 
         if (aTechLevel !== bTechLevel) {
           return aTechLevel - bTechLevel

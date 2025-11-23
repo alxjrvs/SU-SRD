@@ -1,5 +1,5 @@
 import type { SURefChassis } from 'salvageunion-reference'
-import { SalvageUnionReference, getTechLevel, getSalvageValue } from 'salvageunion-reference'
+import { SalvageUnionReference, getTechLevelNumber, getSalvageValue } from 'salvageunion-reference'
 
 export interface WizardState {
   selectedChassisId: string | null
@@ -21,8 +21,8 @@ export function getWorkshopManualChassis(): SURefChassis[] {
   return allChassis
     .filter((chassis) => chassis.source === 'Salvage Union Workshop Manual')
     .sort((a, b) => {
-      const aTL = getTechLevel(a) ?? 0
-      const bTL = getTechLevel(b) ?? 0
+      const aTL = getTechLevelNumber(a) ?? 0
+      const bTL = getTechLevelNumber(b) ?? 0
       if (aTL !== bTL) {
         return aTL - bTL
       }
@@ -35,7 +35,7 @@ export function getWorkshopManualChassis(): SURefChassis[] {
  */
 export function getChassisByTechLevel(chassis: SURefChassis[], techLevel: number): SURefChassis[] {
   return chassis.filter((c) => {
-    const tl = getTechLevel(c)
+    const tl = getTechLevelNumber(c)
     return tl === techLevel
   })
 }
@@ -54,7 +54,7 @@ export function calculateTotalCost(
   if (chassisId) {
     const chassis = SalvageUnionReference.Chassis.find((c) => c.id === chassisId)
     if (chassis) {
-      const techLevel = getTechLevel(chassis) ?? 0
+      const techLevel = getTechLevelNumber(chassis) ?? 0
       const salvageValue = getSalvageValue(chassis) ?? 0
       total += techLevel * salvageValue
     }
@@ -63,7 +63,7 @@ export function calculateTotalCost(
   systemIds.forEach((systemId) => {
     const system = SalvageUnionReference.get('systems', systemId)
     if (system) {
-      const techLevel = getTechLevel(system) ?? 0
+      const techLevel = getTechLevelNumber(system) ?? 0
       const salvageValue = getSalvageValue(system) ?? 0
       total += techLevel * salvageValue
     }
@@ -72,7 +72,7 @@ export function calculateTotalCost(
   moduleIds.forEach((moduleId) => {
     const module = SalvageUnionReference.get('modules', moduleId)
     if (module) {
-      const techLevel = getTechLevel(module) ?? 0
+      const techLevel = getTechLevelNumber(module) ?? 0
       const salvageValue = getSalvageValue(module) ?? 0
       total += techLevel * salvageValue
     }

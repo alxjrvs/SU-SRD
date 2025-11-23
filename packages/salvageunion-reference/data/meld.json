@@ -70,7 +70,7 @@
     "id": "e13f967e-a2af-4c30-a3c0-153a14ec9fdf",
     "source": "Salvage Union Workshop Manual",
     "name": "Meld Behemoth",
-    "actions": ["Behemoth Tendrils", "Assimilation", "Titanic Actions (6)"],
+    "actions": ["Behemoth Tendrils", "Assimilation", "Titanic Actions (Meld Behemoth)"],
     "structurePoints": 60,
     "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/meld/meld%20behemoth.jpg",
     "page": 290,

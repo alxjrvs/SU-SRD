@@ -32,7 +32,7 @@
         "items": {
           "type": "string"
         },
-        "description": "Array of chassis ability names that reference chassis-abilities.json"
+        "description": "Array of chassis ability names that reference actions.json"
       },
       "patterns": {
         "type": "array",

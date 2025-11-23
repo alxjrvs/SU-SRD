@@ -120,6 +120,37 @@
             "value": "These heavily armed and armoured Mules were used extensively during the Second Corpo War, to ferry cargo between arcos. Many salvager raids were rebuffed by corpos 'Circling the Mules' to create a devastating ring of missile fire."
           }
         ]
+      },
+      {
+        "name": "Acid Spitter Mule",
+        "systems": [
+          {
+            "name": "Acid Cannon"
+          },
+          {
+            "name": "Rigging Arm"
+          },
+          {
+            "name": "Escape Hatch"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Olfactory Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Mules fitted with acid spitters to defend their Bio-Salvage hauls in Gehenna."
+          }
+        ]
       }
     ],
     "structurePoints": 12,
@@ -364,6 +395,34 @@
           {
             "type": "paragraph",
             "value": "This Scrapper has been modified for search and rescue operations, many of which were commissioned following Impact Day to clear the irradiated wreckage of what was once the TDA Council."
+          }
+        ]
+      },
+      {
+        "name": "Royce Pattern Scrapper",
+        "systems": [
+          {
+            "name": "30mm Autocannon"
+          },
+          {
+            "name": "Amphibious Locomotion System"
+          },
+          {
+            "name": "Rigging Arm"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Thermal Optics"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Scrappers fitted with amphibious locomotion systems and heavy ballistic weapons. See Salvage Union Core Book p. 106."
           }
         ]
       }
@@ -613,6 +672,61 @@
           {
             "type": "paragraph",
             "value": "Designed for its original designation as a lumberjack Mech."
+          }
+        ]
+      },
+      {
+        "name": "Chimerium Harvester Pattern Thresher",
+        "systems": [
+          {
+            "name": "Chimerium Harvester"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Rigging Arm",
+            "count": 2
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Survey Scanner"
+          }
+        ],
+        "content": []
+      },
+      {
+        "name": "Mutant Pattern Thresher",
+        "systems": [
+          {
+            "name": "Bio-Talon"
+          },
+          {
+            "name": "Armour Plating"
+          },
+          {
+            "name": "Escape Hatch"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Evasion Protocols"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Threshers rigged with bio-organic systems, such as talons harvested from Chimerium Beasts."
           }
         ]
       }
@@ -2203,7 +2317,7 @@
         "value": "Developed as a collaboration between the software arm of Stefanus Industries and Sakura Futures, the 'MCS-1337' Mantis was designed as a lightweight hacking Mech. Rarely deployed on the battlefield, it has primarily been utilised in a series of Black Ops operations, most notably during the endless intra-corporate cold wars. With its high energy capacity and a wide array of Module customisation options you sometimes just have to respect corpo engineering."
       }
     ],
-    "chassisAbilities": ["Integrated Frog Prince Module"]
+    "chassisAbilities": ["Integrated Frog Prince"]
   },
   {
     "id": "7772b791-e24f-4944-b524-9105f0991d8f",
@@ -2849,7 +2963,7 @@
             "name": "Electro-Magnetic Self-Destruct"
           },
           {
-            "name": "He 2 Coolant Flush"
+            "name": "He₂ Coolant Flush"
           },
           {
             "name": "Offensive Protocols"
@@ -3749,6 +3863,51 @@
             "value": "According to the Quantum Writ, the path of Ascension will free you from the mortal sufferings of flesh."
           }
         ]
+      },
+      {
+        "name": "Gruman Pattern Neura-Phage",
+        "systems": [
+          {
+            "name": "Red Pulse Laser"
+          },
+          {
+            "name": "Missile Pod"
+          },
+          {
+            "name": "Composite Armour"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Adv. Targeting Array"
+          },
+          {
+            "name": "Multi-Optics"
+          },
+          {
+            "name": "Reactor Safety Protocols"
+          },
+          {
+            "name": "Firewall"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Gruman pilots a specially modified Neura-phage Mech designed to keep him alive. In addition to all abilities of the Neura-Phage it has the following (Salvage Union Core Book p.153)."
+          },
+          {
+            "type": "paragraph",
+            "value": "Rotatable Core: The Gruman Pattern Neura-Phage can independently rotate its core allowing it to track targets. It may make two attacks during its turn as a single Turn Action. These may be against the same or different targets."
+          },
+          {
+            "type": "paragraph",
+            "value": "Life Support System: Gruman is kept artificially alive within the Mechs Chassis. Any other Pilot who wires themselves into this Mech receives the same benefit. The Mechs Salvage Value is increased to 13."
+          }
+        ]
       }
     ],
     "structurePoints": 29,
@@ -4241,5 +4400,1271 @@
       }
     ],
     "chassisAbilities": ["Integrated VTU System", "Flashy", "Fast", "Polycarbonate Stealth Chassis"]
+  },
+  {
+    "id": "ea298ac2-b22d-45d3-9353-71c57703a4b4",
+    "name": "Impaler",
+    "source": "We Were Here First!",
+    "page": 64,
+    "patterns": [
+      {
+        "name": "Alpha Pattern Impaler",
+        "systems": [
+          {
+            "name": "Railgun"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Ejection System"
+          },
+          {
+            "name": "Refractive Shield Projector"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Pinpoint Targeter"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Laser Guidance"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Deployed in heavy combat zones, this pattern mounts a humongous railgun to impale targets from extreme range."
+          }
+        ]
+      },
+      {
+        "name": "Delta Pattern Impaler",
+        "systems": [
+          {
+            "name": "30mm Autocannon",
+            "count": 2
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Ejection System"
+          },
+          {
+            "name": "Loudspeakers"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Multi-Targeter"
+          },
+          {
+            "name": "Alpha Strike Module"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "A straightforward build designed to pound targets with twin Autocannons."
+          }
+        ]
+      },
+      {
+        "name": "Experimental Bio Pattern Impaler",
+        "systems": [
+          {
+            "name": "Acid Cannon"
+          },
+          {
+            "name": "Super-Sonic Screecher"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Escape Hatch"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Adrenal Glands"
+          },
+          {
+            "name": "Olfactory Glands"
+          },
+          {
+            "name": "Comms Module"
+          }
+        ],
+        "content": []
+      }
+    ],
+    "structurePoints": 26,
+    "energyPoints": 7,
+    "heatCapacity": 15,
+    "systemSlots": 15,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 3,
+    "salvageValue": 6,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'B-419' Impaler is the main combat Mech of the BOLZA Corporation. Its rugged design helps it survive and manoeuvre in the harsh conditions of the Arid Steppes."
+      }
+    ],
+    "chassisAbilities": ["Rugged Chassis"]
+  },
+  {
+    "id": "a15bb42b-6d0d-49c3-a86f-13ef573399ba",
+    "name": "Fleshripper",
+    "source": "We Were Here First!",
+    "page": 67,
+    "patterns": [
+      {
+        "name": "Maw Pattern Fleshripper",
+        "systems": [
+          {
+            "name": "Acid Cannon"
+          },
+          {
+            "name": "Armoured Shield"
+          },
+          {
+            "name": "Bio-Maw"
+          },
+          {
+            "name": "Bio-Talon",
+            "count": 2
+          },
+          {
+            "name": "Mutated Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Adrenal Glands"
+          },
+          {
+            "name": "Alpha Strike Module"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Regeneration Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "The 'stock' Fleshripper pattern developed by the Red Mesa Facility is loaded with a mixture of long-ranged capabilities through its skin-melting acid cannon and deadly close-ranged maw attacks."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 50,
+    "energyPoints": 10,
+    "heatCapacity": 16,
+    "systemSlots": 26,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 50,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A resilient Bio-Mech built from the core thoraxes, chest cavities, rib cages, and central nervous systems of Bio-Titans. Layers of thickened carapace with the ability to regenerate grow on its fleshy form."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Heavily Armoured Carapace"]
+  },
+  {
+    "id": "ff9af5ce-df71-40cc-8e2e-8141b5a8c1d0",
+    "name": "Stormterror",
+    "source": "We Were Here First!",
+    "page": 68,
+    "patterns": [
+      {
+        "name": "Screecher Pattern Stormterror",
+        "systems": [
+          {
+            "name": "Super-Sonic Screecher"
+          },
+          {
+            "name": "Bio-Talon",
+            "count": 3
+          },
+          {
+            "name": "Mutated Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Adrenal Glands"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Weapon Link"
+          },
+          {
+            "name": "Regeneration Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Created as an aerial assassin, this Stormterror Mech is fitted with a Super Sonic Screecher to scatter ground troops as it hones in on its target."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 30,
+    "energyPoints": 12,
+    "heatCapacity": 14,
+    "systemSlots": 20,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 30,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A Bio-Mech designed to destroy low-flying aircraft and perform hit-and-run attacks on enemy installations."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Integrated Monstrous Bio-Wings"]
+  },
+  {
+    "id": "79bef9bb-3222-4655-b1a9-911fe272ac2c",
+    "name": "Cranium Bio-Mech",
+    "source": "We Were Here First!",
+    "page": 70,
+    "patterns": [
+      {
+        "name": "Probe Pattern Cranium",
+        "systems": [
+          {
+            "name": "Bio-Talon"
+          },
+          {
+            "name": "EDG Alpha"
+          },
+          {
+            "name": "Escape Hatch"
+          },
+          {
+            "name": "Mutated Locomotion System"
+          },
+          {
+            "name": "Super-Sonic Screecher"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Firewall"
+          },
+          {
+            "name": "Mech Scrambler"
+          },
+          {
+            "name": "Neuralink Communicator"
+          },
+          {
+            "name": "Panda Sneeze"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Data logs reveal that this Bio-Mech was used to break the will of the President of the Dahlia Foundation and obtain the access codes to their bunker, where the last of their people were holding out against corpo forces."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 18,
+    "energyPoints": 16,
+    "heatCapacity": 10,
+    "systemSlots": 14,
+    "moduleSlots": 5,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 18,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Fashioned from the engorged craniums of brain bugs, this bloated, slug like Bio-Chassis was deployed to interrogate high-value targets, siphoning succulent secrets straight from their brainstem and feeding it to the Pilot."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Probing Proboscis"]
+  },
+  {
+    "id": "ea209e85-964d-437a-b552-423f540719cf",
+    "name": "Scuttler Bio-Mech",
+    "source": "We Were Here First!",
+    "page": 72,
+    "patterns": [
+      {
+        "name": "Harvester Pattern Scuttler",
+        "systems": [
+          {
+            "name": "Bio-Maw"
+          },
+          {
+            "name": "Bio-Talon"
+          },
+          {
+            "name": "Chimerium Harvester"
+          },
+          {
+            "name": "Escape Hatch"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Neuralink Communicator"
+          },
+          {
+            "name": "Olfactory Glands"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Designed by the Red Mesa Facility to harvest Chimerium in the most hard-to-reach places, whilst having some nasty defensive capabilities in the form of its Maw and Talons if cornered."
+          }
+        ]
+      }
+    ],
+    "structurePoints": 14,
+    "energyPoints": 10,
+    "heatCapacity": 13,
+    "systemSlots": 16,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": "B",
+    "salvageValue": 14,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed from the spider-like legs on many Bio-Titans, this light and fast Bio-Chassis is able to rapidly traverse a wide array of terrain."
+      }
+    ],
+    "chassisAbilities": ["Bio-Chassis", "Integrated Scuttling Locomotion System"]
+  },
+  {
+    "id": "f1a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c",
+    "name": "Kelpie",
+    "source": "False Flag",
+    "page": 54,
+    "structurePoints": 7,
+    "energyPoints": 9,
+    "heatCapacity": 7,
+    "systemSlots": 8,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 1,
+    "salvageValue": 3,
+    "chassisAbilities": ["Integrated Hydrologic Locomotion System"],
+    "patterns": [
+      {
+        "name": "10 Finger Pattern",
+        "legalStarting": true,
+        "systems": [
+          {
+            "name": "Rigging Arm"
+          },
+          {
+            "name": "Frost Protection"
+          },
+          {
+            "name": "Escape Hatch"
+          },
+          {
+            "name": "Floodlights"
+          },
+          {
+            "name": "Cargo Pod"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Heating Unit"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Stefanus offers its workers this pattern at a Scrip debt premium. They are built with additional environmental protections against the cold to prevent frostbite, giving rise to this Kelpie's 'affectionate' nickname."
+          }
+        ]
+      },
+      {
+        "name": "Sifter Pattern",
+        "systems": [
+          {
+            "name": "Nanite Sifter"
+          },
+          {
+            "name": "Cryopod System"
+          },
+          {
+            "name": "Floodlights"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Heating Unit"
+          },
+          {
+            "name": "Reactor Flare"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Converted from the '10 Finger' Pattern Kelpies by the Vornayans to mine the Nanite Sea. Workers delve deep into the grey dust, looking for 'Meld Nodes' to harvest with their Nanite Sifter."
+          },
+          {
+            "type": "paragraph",
+            "value": "They surface to process the Nanites and store any Active Meld within their Cryopods. Shifts are long and brutal, and many Pilots end up suffering the debilitating respiratory disease of 'black lung' or the nauseating, mind altering effects of the 'Nano-Bends'."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed by Kombu Tech as a cheap way of harvesting their patented regrown algae which feeds most of the populace of the wastes, the compact Kelpie has inbuilt Hydrologics to allow the efficient traversal of aquatic bodies."
+      }
+    ]
+  },
+  {
+    "id": "ab17cf2b-eb34-4cfa-9ec2-7b68f14474c9",
+    "name": "Trooper",
+    "source": "False Flag",
+    "page": 56,
+    "structurePoints": 16,
+    "energyPoints": 5,
+    "heatCapacity": 12,
+    "systemSlots": 16,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 2,
+    "salvageValue": 5,
+    "chassisAbilities": ["Dependable Chassis"],
+    "patterns": [
+      {
+        "name": "DronTek Pattern",
+        "legalStarting": true,
+        "systems": [
+          {
+            "name": "K4 Rifle"
+          },
+          {
+            "name": "Armoured Shield"
+          },
+          {
+            "name": "Articulated Rigging Arm"
+          },
+          {
+            "name": "Articulated Rigging Arm"
+          },
+          {
+            "name": "Chaff Launcher"
+          },
+          {
+            "name": "Chaff Launcher"
+          },
+          {
+            "name": "Ejection System"
+          },
+          {
+            "name": "Floodlights"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Reactor Flare"
+          },
+          {
+            "name": "M315 Motion Scanner"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "The Trooper is a stock build from the smog-drenched factories of the DronTek motherland, offering cost-effective offensive and defensive capabilities for the corpo pilot on the ground. After the corpo wars, many of the conscripted pilots became mercs to pay off their debts, and as a result, this pattern is still commonly seen in DronTek territory."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'BLC-17' Trooper is a cheap, mass-produced DronTek combat Mech known for its dependable build quality. DronTek instituted a policy of enforced conscription after the first invasion of the Northern Wastes by Evantis during the Corpo Wars, and then deployed the Trooper Mechs en masse."
+      },
+      {
+        "type": "paragraph",
+        "value": "The sacrifices of the new Pilots forced Evantis back, preventing a hostile takeover of DronTek territory. As a reward, DronTek granted Scrip debt rights to the surviving Pilots, allowing them to work to pay off the debt they had accumulated during the conflict."
+      }
+    ]
+  },
+  {
+    "id": "1122a9ba-a073-4784-9501-3f7828c37adf",
+    "name": "Pioneer",
+    "source": "False Flag",
+    "page": 58,
+    "structurePoints": 17,
+    "energyPoints": 12,
+    "heatCapacity": 8,
+    "systemSlots": 14,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": 2,
+    "salvageValue": 6,
+    "chassisAbilities": ["Sub-Zero Engineered Chassis"],
+    "patterns": [
+      {
+        "name": "Deerstalker Pattern",
+        "legalStarting": true,
+        "systems": [
+          {
+            "name": "Mech Melee Armament"
+          },
+          {
+            "name": "Green Laser"
+          },
+          {
+            "name": "Articulated Rigging Arm"
+          },
+          {
+            "name": "Ejection System"
+          },
+          {
+            "name": "Floodlights"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Tracking Node"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Multi-Optics"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Wasters who live in the Forgotten Tundra favour this pattern for its reliability and deadly effectiveness when hunting for scrap."
+          },
+          {
+            "type": "paragraph",
+            "value": "These Mechs are often available for scrap barter at Ostfjord port due to the huge glut of them that were bought by Stefanus. This is a rare exception, as most corpo Mechs require Scrip debt to purchase."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'TC48' Pioneer was developed by the Opus Institute as a scavenging Mech designed to endure the harsh, freezing, conditions of the Frozen Gulf. Initial builds were bought en masse by Stefanus when they moved their Arco to the Forgotten Tundra, following global rises in temperature that made cooling their vast data centres unfeasible elsewhere."
+      },
+      {
+        "type": "paragraph",
+        "value": "As with most Opus Mechs, its blueprints are open source on the corpo-net. As a result, it is often scrapped together by wastelanders living in arctic regions or salvagers delving into the ice."
+      }
+    ]
+  },
+  {
+    "id": "5dcadbe1-1a22-429d-a8f4-9d89a5b10630",
+    "name": "Parasite",
+    "source": "False Flag",
+    "page": 60,
+    "structurePoints": 24,
+    "energyPoints": 0,
+    "heatCapacity": 5,
+    "systemSlots": 17,
+    "moduleSlots": 9,
+    "cargoCapacity": 6,
+    "techLevel": 5,
+    "salvageValue": 13,
+    "chassisAbilities": ["Parasitic Reactor", "Parasitic Membrane"],
+    "patterns": [
+      {
+        "name": "Stefanus Pattern",
+        "legalStarting": true,
+        "systems": [
+          {
+            "name": "Needle Missile Pod",
+            "count": 3
+          },
+          {
+            "name": "Ejector Pod"
+          },
+          {
+            "name": "High Gain Antenna"
+          },
+          {
+            "name": "Multi-Phase Shield"
+          },
+          {
+            "name": "Spider Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Aardvarks Tongue"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Eggs Mayhem"
+          },
+          {
+            "name": "Encrypted Comms"
+          },
+          {
+            "name": "Firewall"
+          },
+          {
+            "name": "Mech Scrambler"
+          },
+          {
+            "name": "Panda Sneeze"
+          },
+          {
+            "name": "Reactor Overload"
+          },
+          {
+            "name": "Sleeping Beauty"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Loaded with a verifiable server rack of hacking modules, this Mech is able to traverse rough terrain to deploy its parasitical payload. If you start to hear a sound in your reactor like nails scratching graphite, it's likely that one of these monsters has gotten hold of you."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'V17' Parasite is a mobile supercomputer with a suite of CPU modules that are capable of causing havoc in an enemy force. Though it may be weaker than similarly sized combat mechs, it will often not need to directly confront an opponent; instead, it uses hacking to immobilise, disable weapons, or even drain reactors. Its highly unorthodox reactor was developed during the cyberwars as a covert means of disabling opposing Mechs from afar."
+      }
+    ]
+  },
+  {
+    "id": "bcdccf7a-10d0-468a-affe-12cc2a27daf7",
+    "name": "Big Brother",
+    "source": "False Flag",
+    "page": 62,
+    "structurePoints": 43,
+    "energyPoints": 9,
+    "heatCapacity": 14,
+    "systemSlots": 23,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": 5,
+    "salvageValue": 15,
+    "chassisAbilities": ["Cumbersome", "Big Brother Drone Controller"],
+    "patterns": [
+      {
+        "name": "DronTek Pattern",
+        "systems": [
+          {
+            "name": "Stabilising Locomotion System"
+          },
+          {
+            "name": "Missile Pod"
+          },
+          {
+            "name": "Railgun"
+          },
+          {
+            "name": "Ejection System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Adv. Targeting Array"
+          },
+          {
+            "name": "Firewall"
+          }
+        ],
+        "drone": {
+          "systems": ["Refractive Shield Projector", "Electro-Magnetic Shield Projector"],
+          "modules": ["Energy Cell"]
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "This pattern was standardised by DronTek during cyberwars and is still used. Drones are designed for specific tasks like shielding and mine placement. The 'Big Brother' itself provides heavy fire support with missiles and railguns. The pattern was used against Stefanus' naval installations surrounding Ostfjord Port, leading to the development of EM-Self Destruct modules."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'KC0-29' Big Brother was developed by DronTek as a heavy weapon and drone support platform, epitomising rugged DronTek design principles. It is a lynchpin within their lances, usually deployed to act as a bulwark against the most powerful forces of the opposition. Its cumbersome speed means it relies on its drones and on faster members of its lance to prevent it being outmanoeuvred. It saw active deployment against Evantis forces in their failed invasion of the Northern Wastes, going toe to toe with their Colossus Mechs."
+      }
+    ]
+  },
+  {
+    "id": "fc47852d-00c7-453e-b497-65c40f24060b",
+    "name": "X0315",
+    "source": "False Flag",
+    "page": 64,
+    "structurePoints": 5,
+    "energyPoints": 0,
+    "heatCapacity": 1,
+    "systemSlots": 0,
+    "moduleSlots": 0,
+    "cargoCapacity": 0,
+    "techLevel": "N",
+    "salvageValue": 15,
+    "chassisAbilities": [
+      "MELD",
+      "Integrated Meld Locomotion",
+      "Integrated Neuralink Communicator",
+      "Mech Replication"
+    ],
+    "patterns": [],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "This experimental Meld Chassis was prototyped by Stefanus researchers at the Solitude Research Facility. The X0315 is not built: it is grown around the pilot. It subsumes a pilot into its Meld form, creating a kind of symbiosis. At the end of the process, the pilot will no longer exist. They will be one with their chassis."
+      },
+      {
+        "type": "paragraph",
+        "value": "The X0315 adds its Pilot's Ability Point total to its Energy and the Pilot's Hit Points to its Structure Points. The Pilot may use all of their Pilot Abilities whilst piloting the X0315 and may spend Energy Points to do so."
+      }
+    ]
+  },
+  {
+    "id": "e6c053a9-9ae4-4447-938b-2f9423ad77e5",
+    "name": "Wader",
+    "source": "Rainmaker",
+    "page": 60,
+    "structurePoints": 7,
+    "energyPoints": 10,
+    "heatCapacity": 6,
+    "systemSlots": 8,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 1,
+    "salvageValue": 4,
+    "chassisAbilities": ["Integrated Wader Locomotion System", "Hybrid Diesel Reactor"],
+    "patterns": [
+      {
+        "name": "Weaver Pattern Wader",
+        "systems": [
+          {
+            "name": ".50 Cal Machine Gun"
+          },
+          {
+            "name": "Personnel Transport Pod"
+          },
+          {
+            "name": "Rigging Arm"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Reactor Flare"
+          },
+          {
+            "name": "Survey Scanner"
+          },
+          {
+            "name": "Navigation Module"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "This variant allows Wasters to carry their entire family and all of their belongings. Its tall frame protects them from ground hazards and allows them to traverse great distances in search of food and resources."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "A stilt-legged, gas guzzling Mech, designed to traverse boggy terrain. Waders were first built by wasters in the Oceanic Rim, utilising parts from broken Mechs and old box wheels destroyed in droves during the Road Wars."
+      },
+      {
+        "type": "paragraph",
+        "value": "Wasters in the Oceanic Rim would take to carrying their entire families in these Mechs upon woven baskets. This allowed them to safely traverse the many areas of boggy terrain, and even cross shallow inlets to other islands within the region."
+      }
+    ]
+  },
+  {
+    "id": "ec8f92dd-709e-49d8-9ff8-8f324fcc7225",
+    "name": "Stolas",
+    "source": "Rainmaker",
+    "page": 62,
+    "structurePoints": 20,
+    "energyPoints": 10,
+    "heatCapacity": 15,
+    "systemSlots": 16,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 2,
+    "salvageValue": 6,
+    "chassisAbilities": ["Automech", "Hell Fumes"],
+    "patterns": [
+      {
+        "name": "Stolas Pattern B",
+        "systems": [
+          {
+            "name": ".50 Cal Machine Gun",
+            "count": 5
+          },
+          {
+            "name": "30mm Autocannon"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Weapon Link"
+          },
+          {
+            "name": "He₂ Coolant Flush"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Designed en masse to swarm over enemy defences, scouring them with heavy machine gun fire whilst sending out gouts of smoke to cover heavier Automechs in a battalion."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Stolas Mechs are lighter Auto-mech variants, designed to screen an Automech lance with fumes of smoke, and overwhelm their foes with their sheer weight of numbers. Following the Slaughter of Bunker-13 Stolas Mechs took to enhancing their smoke-launchers with superheated fumes to liquify the flesh of their foes, the smell of acrid smoke and putrid flesh a tell-tale sign of their approach."
+      }
+    ]
+  },
+  {
+    "id": "c21f66f4-228d-417e-a7f7-104994fa23a8",
+    "name": "Paladin",
+    "source": "Rainmaker",
+    "page": 70,
+    "structurePoints": 32,
+    "energyPoints": 15,
+    "heatCapacity": 12,
+    "systemSlots": 20,
+    "moduleSlots": 5,
+    "cargoCapacity": 6,
+    "techLevel": 4,
+    "salvageValue": 10,
+    "chassisAbilities": ["Energy Smite"],
+    "patterns": [
+      {
+        "name": "Lot Pattern Paladin",
+        "systems": [
+          {
+            "name": "Articulated Rigging Arm"
+          },
+          {
+            "name": "Rigging Arm",
+            "count": 2
+          },
+          {
+            "name": "Mech Melee Armament",
+            "preselectedChoices": {
+              "1d0f3be8-3cf9-4c3a-a6d1-d2f221b02832": "Longsword"
+            }
+          },
+          {
+            "name": "Armoured Shield"
+          },
+          {
+            "name": "Ejection System"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Ion Cannon"
+          },
+          {
+            "name": "Chaff Launcher"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Genetic Lock"
+          },
+          {
+            "name": "Offensive Protocols"
+          },
+          {
+            "name": "Pinpoint Targeter"
+          },
+          {
+            "name": "Firewall"
+          },
+          {
+            "name": "Energy Cell"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "The personal Paladin Mech of the Pilot Old Sand, a mercenary veteran fought in Contour's Oceanic Wars of expansion. Designed to disable an enemy's defensive systems and then deliver a killing blow in hand to hand combat. The Paladin is festooned with medals and banners and has been recently modded with a Genetic Lock to prevent anyone but Old Sand from Piloting his prized battle companion."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'v8.12.5' Paladin is engineered to channel and amplify its reactor energy reserves to enhance the force, impact, and destructive potential of its close combat attacks. This enables the mech to deliver bone-shattering strikes that obliterate enemy defenses. Developed by Aeon as an offensive siegebreaker, designed to breach fortifications and fearlessly lead its lance into the heart of enemy fire. It proved its prowess in the 100 day siege of the Union of Nations headquarters during the Last War of Nations, which led to their complete annihilation. Thousands of corpo mercs, with more scrip debt than sense, eagerly apply to Aeon's Privateer Partnership program with the hopes of being able to pilot a Paladin Mech as part of Aeon's Elite Security Division."
+      }
+    ]
+  },
+  {
+    "id": "5d3abe62-827d-4144-98e1-be0a30b70520",
+    "name": "Ravager",
+    "source": "Rainmaker",
+    "page": 64,
+    "structurePoints": 23,
+    "energyPoints": 8,
+    "heatCapacity": 14,
+    "systemSlots": 14,
+    "moduleSlots": 3,
+    "cargoCapacity": 6,
+    "techLevel": 2,
+    "salvageValue": 8,
+    "chassisAbilities": ["Integrated Advanced Stabilising Locomotion System"],
+    "patterns": [
+      {
+        "name": "Hunchback Pattern",
+        "legalStarting": false,
+        "systems": [
+          {
+            "name": "Long Barrelled Green Laser"
+          },
+          {
+            "name": "Missile Pod"
+          },
+          {
+            "name": "Ejection System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Multi-Targeter"
+          },
+          {
+            "name": "Coolant Flow Manifold"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Designed to track and destroy multiple targets at long range, ideal at defending a fortified position."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The Hunchback Pattern Ravager was developed by Aegean Dynamics during the Oceanic Expansion to defend arcologies and naval bases. It features a heavy-duty stabilization system that allows it to maintain accuracy while firing its long-range weaponry. The Ravager saw significant use in the Siege of Salamis against Automechs, where its defensive capabilities proved invaluable. Following the conflict, many Ravagers were repurposed by mercenaries and wannabe-corpos, including the Water-Baron's Elite Guard."
+      }
+    ]
+  },
+  {
+    "id": "f2262dbd-d0c9-44a5-9b9d-d4c73458ad48",
+    "name": "Agares",
+    "source": "Rainmaker",
+    "page": 66,
+    "structurePoints": 26,
+    "energyPoints": 12,
+    "heatCapacity": 17,
+    "systemSlots": 18,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": 3,
+    "salvageValue": 8,
+    "chassisAbilities": ["Automech", "Demonic Visage"],
+    "patterns": [
+      {
+        "name": "Agares Pattern A",
+        "systems": [
+          {
+            "name": "Missile Pod"
+          },
+          {
+            "name": "120mm Cannon"
+          },
+          {
+            "name": "Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Auto-Repair Droid"
+          },
+          {
+            "name": "Firewall"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "Designed to spearhead an Automech lance by laying down a withering hail of missile and cannon fire to soften an enemy's defences and allow the rest of the Automech lance to close in."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Forged in the frozen realm of Hell, Agares is a hulking, hellish Automech, designed to lead a lance into the fray."
+      },
+      {
+        "type": "paragraph",
+        "value": "Following the slaughter of Bunker 13 Agares Mechs began to don the flesh of the mortals they killed and marking their metallic forms with eerie symbols from humanity's ancient past designed to evoke primal fear."
+      },
+      {
+        "type": "paragraph",
+        "value": "This macabre practice was intended to ward off any other mortal intruders venturing into their domain."
+      }
+    ]
+  },
+  {
+    "id": "646280d7-eba9-452d-b680-3bc55c6da8f9",
+    "name": "Black Dragon",
+    "source": "Rainmaker",
+    "page": 68,
+    "structurePoints": 28,
+    "energyPoints": 10,
+    "heatCapacity": 17,
+    "systemSlots": 19,
+    "moduleSlots": 4,
+    "cargoCapacity": 6,
+    "techLevel": 4,
+    "salvageValue": 7,
+    "chassisAbilities": ["Excoriate"],
+    "patterns": [
+      {
+        "name": "Cerys-Pattern Black Dragon",
+        "systems": [
+          {
+            "name": "FM-3 Flamethrower",
+            "count": 2
+          },
+          {
+            "name": "Napalm Launcher"
+          },
+          {
+            "name": "Napalm Shotgun"
+          },
+          {
+            "name": "Locomotion System"
+          },
+          {
+            "name": "Escape Hatch"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Alpha Strike Module"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Multi-Targeter"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "The personal battle mech of Cerys who uses it to maintain control of the Water-Baron's Trading Outpost and other assets with extreme prejudice. Designed to be able to flame either a spread of targets or incinerate a single target in an overwhelming cascade of superheated petroleum."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Developed by Contour Aerospace as a cleanse and destroy Mech that specialises in the use of incendiary weapons. Black Dragon Mechs were deployed in the purging of the Primordials, a collective who rejected the profit driven, corporate devastation of the world in the name of endless consumption. Primordial groups took to living in communal, self-sufficient settlements within the last few natural places of the world. They were all turned to ash."
+      },
+      {
+        "type": "paragraph",
+        "value": "In response to the Corporate Council's prohibition of incendiary explosives, the Black Dragon found new buyers among more morally flexible mercenary groups and feudal corpos. Notably the security force of the Water Baron, deploying the Black Dragon to suppress the inhabitants of the Wild Hills."
+      }
+    ]
+  },
+  {
+    "id": "8cba10e1-20f1-4d82-a028-d9d84ac9f1b3",
+    "name": "Cerberus",
+    "source": "Rainmaker",
+    "page": 72,
+    "structurePoints": 40,
+    "energyPoints": 18,
+    "heatCapacity": 30,
+    "systemSlots": 5,
+    "moduleSlots": 2,
+    "cargoCapacity": 6,
+    "techLevel": 5,
+    "salvageValue": 18,
+    "chassisAbilities": ["Automech", "Cerberus Control System"],
+    "patterns": [
+      {
+        "name": "TAC-OS PATTERN CERBERUS",
+        "systems": [
+          {
+            "name": "Railgun"
+          },
+          {
+            "name": "Multi-Phase Shield"
+          },
+          {
+            "name": "Ion Cannon"
+          },
+          {
+            "name": "Shield Dome"
+          },
+          {
+            "name": "Missile Pod"
+          },
+          {
+            "name": "Automated Weapon Turret",
+            "preselectedChoices": {
+              "c05fd7f4-cd5a-4c0d-8518-3566cece416d": "Automated Machine Gun Turret"
+            }
+          },
+          {
+            "name": "Chaff Launcher",
+            "count": 2
+          },
+          {
+            "name": "Stabilising Locomotion System"
+          }
+        ],
+        "modules": [
+          {
+            "name": "Laser Guidance"
+          },
+          {
+            "name": "Thermal Optics"
+          },
+          {
+            "name": "Firewall"
+          },
+          {
+            "name": "Mech Scrambler"
+          },
+          {
+            "name": "Sonic Screecher"
+          },
+          {
+            "name": "Comms Tapper"
+          },
+          {
+            "name": "Coolant Flow Manifold"
+          },
+          {
+            "name": "Offensive Protocols"
+          },
+          {
+            "name": "Comms Module"
+          },
+          {
+            "name": "Reactor Safety Protocols"
+          }
+        ],
+        "content": [
+          {
+            "type": "paragraph",
+            "value": "The apex Mech of the doomed Automech Program. Only the advanced 'Tac-OS' A.I. system was powerful enough to singularly control its colossal form. Cerberus was last deployed to coordinate the Automech attack against the Bunker 13, each of its heads spitting death against the arrayed defences. It is said to still lurk deep within Hell, patiently plotting the destruction of any who would send its friends to their deaths."
+          },
+          {
+            "type": "paragraph",
+            "value": "Designed by TJG Automations, the Cerberus features an advanced Tac-OS A.I. that can control all three heads simultaneously. Each head - Kyrios, Phren, and Morphos - can mount separate systems and modules, allowing for devastating coordinated attacks."
+          },
+          {
+            "type": "paragraph",
+            "value": "HEAD 1 'KYRIOS': Mounts Railgun and Multi-Phase Shield systems, with Laser Guidance and Thermal Optics modules for precision targeting."
+          },
+          {
+            "type": "paragraph",
+            "value": "HEAD 2 'PHREN': Equipped with Ion Cannon and Shield Dome systems, supported by Firewall, Mech Scrambler, Sonic Screecher, and Comms Tapper modules for electronic warfare."
+          },
+          {
+            "type": "paragraph",
+            "value": "HEAD 3 'MORPHOS': Features Missile Pod, Automated Machine Gun Turret, and Chaff Launcher systems, with Coolant Flow Manifold and Offensive Protocols modules."
+          },
+          {
+            "type": "paragraph",
+            "value": "CHASSIS: The main body mounts Stabilising Locomotion System and Chaff Launcher systems, with Comms Module and Reactor Safety Protocols modules."
+          },
+          {
+            "type": "paragraph",
+            "value": "Each head and the chassis must be crafted and repaired separately. Systems and modules mounted on the chassis can be activated by any Pilot, while those on individual heads can only be activated by the Pilot controlling that head. Cerberus restores statistics and repairs damage in a Tech 5 Mechbay or higher during Downtime."
+          }
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "The 'TAC-OS PATTERN' Cerberus is a colossal multi-headed Automech, the pinnacle of the Automech Program. Designed by TJG Automations, it features three independently controlled heads - Kyrios, Phren, and Morphos - each capable of mounting separate weapon systems and modules. The advanced Tac-OS A.I. system was the only system powerful enough to control all three heads simultaneously, though the chassis can also be piloted by three separate Pilots, one for each head."
+      }
+    ]
   }
 ]

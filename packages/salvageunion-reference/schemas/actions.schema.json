@@ -16,6 +16,11 @@
           "displayName": {
             "type": "string",
             "description": "The optional display name of the action"
+          },
+          "activationCurrency": {
+            "type": "string",
+            "enum": ["Variable", "EP or AP", "SP or HP"],
+            "description": "The currency type for activation cost (EP/AP, SP/HP, or Variable)"
           }
         }
       }

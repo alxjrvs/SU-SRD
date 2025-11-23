@@ -6,7 +6,11 @@
 
 import type { SURefEnumActionType, SURefEnumDamageType, SURefEnumTree } from './enums.js'
 
-import type { SURefCommonHitPoints, SURefCommonPositiveInteger } from './common.js'
+import type {
+  SURefCommonHitPoints,
+  SURefCommonNonNegativeInteger,
+  SURefCommonPositiveInteger,
+} from './common.js'
 
 import type {
   SURefObjectAction,
@@ -18,6 +22,7 @@ import type {
   SURefObjectChoices,
   SURefObjectCombatEntity,
   SURefObjectContent,
+  SURefObjectFormationMech,
   SURefObjectGrant,
   SURefObjectMechanicalEntity,
   SURefObjectNpc,
@@ -37,7 +42,7 @@ export interface SURefAbility extends SURefObjectBaseEntity {
   level: number | 'L' | 'G'
   mechActionType?: SURefEnumActionType
   grants?: SURefObjectGrant[]
-  activationCurrency?: 'Variable'
+  activationCurrency?: 'Variable' | 'EP or AP' | 'SP or HP'
   actions?: string[]
 }
 
@@ -59,6 +64,10 @@ export interface SURefMetaAction extends SURefObjectAction {
    * The optional display name of the action
    */
   displayName?: string
+  /**
+   * The currency type for activation cost (EP/AP, SP/HP, or Variable)
+   */
+  activationCurrency?: 'Variable' | 'EP or AP' | 'SP or HP'
 }
 
 /**
@@ -74,16 +83,11 @@ export interface SURefBioTitan extends SURefObjectBaseEntity {
 }
 
 /**
- * Chassis abilities for mech chassis in Salvage Union
- */
-export type SURefMetaChassisAbility = SURefObjectAction
-
-/**
  * Mech chassis definitions in Salvage Union
  */
 export interface SURefChassis extends SURefObjectBaseEntity, SURefObjectChassisStats {
   /**
-   * Array of chassis ability names that reference chassis-abilities.json
+   * Array of chassis ability names that reference actions.json
    */
   chassisAbilities: string[]
   patterns: SURefObjectPattern[]
@@ -194,6 +198,29 @@ export interface SURefEquipment extends SURefObjectBaseEntity, SURefObjectStats 
 }
 
 /**
+ * Faction groups and organizations in Salvage Union
+ */
+export interface SURefFaction extends SURefObjectBaseEntity {
+  /**
+   * The goals and motivations of this faction
+   */
+  goals: string
+  /**
+   * The assets and resources controlled by this faction
+   */
+  assets: string
+  /**
+   * The weaknesses and vulnerabilities of this faction
+   */
+  weaknesses: string
+  /**
+   * The mechs that make up this faction formation
+   */
+  formation?: SURefObjectFormationMech[]
+  content?: SURefObjectContent
+}
+
+/**
  * Game keywords and terminology in Salvage Union
  */
 export interface SURefKeyword extends SURefObjectBaseEntity {
@@ -233,6 +260,10 @@ export type SURefModule = SURefObjectSystemModule & SURefObjectBaseEntity
  */
 export interface SURefNPC extends SURefObjectBaseEntity, SURefObjectCombatEntity {
   hitPoints: SURefCommonHitPoints
+  /**
+   * Bio-salvage value for Chimerium mutants
+   */
+  bioSalvageValue?: SURefCommonNonNegativeInteger
 }
 
 /**

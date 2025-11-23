@@ -256,15 +256,42 @@ export class SalvageUnionReference {
    * Get tech level from an entity
    *
    * @param entity - Any Salvage Union entity
-   * @returns Tech level or undefined if not present
+   * @returns Tech level (number, 'B', 'N') or undefined if not present
    *
    * @example
    * const techLevel = SalvageUnionReference.getTechLevel(chassis)
    */
-  public static getTechLevel(entity: SURefEntity): number | undefined {
+  public static getTechLevel(entity: SURefEntity): number | 'B' | 'N' | undefined {
     // Check if entity has top-level techLevel (Chassis, Systems, Modules, Drones, Vehicles)
-    if ('techLevel' in entity && typeof entity.techLevel === 'number') {
-      return entity.techLevel
+    if ('techLevel' in entity) {
+      const techLevel = entity.techLevel
+      if (typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N') {
+        return techLevel
+      }
+    }
+    return undefined
+  }
+
+  /**
+   * Get tech level from an entity as a numeric value
+   * Normalizes 'B' and 'N' to 1 for math operations
+   *
+   * @param entity - Any Salvage Union entity
+   * @returns Tech level as a number or undefined if not present
+   *
+   * @example
+   * const techLevel = SalvageUnionReference.getTechLevelNumber(chassis)
+   */
+  public static getTechLevelNumber(entity: SURefEntity): number | undefined {
+    // Check if entity has top-level techLevel (Chassis, Systems, Modules, Drones, Vehicles)
+    if ('techLevel' in entity) {
+      const techLevel = entity.techLevel
+      if (typeof techLevel === 'number') {
+        return techLevel
+      }
+      if (techLevel === 'B' || techLevel === 'N') {
+        return 1
+      }
     }
     return undefined
   }

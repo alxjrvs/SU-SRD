@@ -80,7 +80,6 @@ const dataFiles = [
   'actions.json',
   'bio-titans.json',
   'chassis.json',
-  'chassis-abilities.json',
   'classes.json',
   'crawler-bays.json',
   'crawler-tech-levels.json',

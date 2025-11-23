@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback } from 'react'
 import { Flex, VStack, Box } from '@chakra-ui/react'
-import type { SURefSystem, SURefModule } from 'salvageunion-reference'
+import { getTechLevelNumber, type SURefSystem, type SURefModule } from 'salvageunion-reference'
 import { EntityDisplay } from '@/components/entity/EntityDisplay'
 import { StatDisplay } from '@/components/StatDisplay'
 import { AddStatButton } from '@/components/shared/AddStatButton'
@@ -159,8 +159,10 @@ export function MechEntityList({
       }))
       .filter((e) => e.ref !== undefined)
       .sort((a, b) => {
-        if (a.ref.techLevel !== b.ref.techLevel) {
-          return a.ref.techLevel - b.ref.techLevel
+        const aTechLevel = getTechLevelNumber(a.ref) ?? 0
+        const bTechLevel = getTechLevelNumber(b.ref) ?? 0
+        if (aTechLevel !== bTechLevel) {
+          return aTechLevel - bTechLevel
         }
         return a.ref.name.localeCompare(b.ref.name)
       })

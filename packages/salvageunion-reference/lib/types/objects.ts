@@ -87,6 +87,11 @@ export interface SURefObjectMechanicalEntity {
   salvageValue?: SURefCommonSalvageValue
   systems?: string[]
   traits?: SURefObjectTrait[]
+  energyPoints?: SURefCommonNonNegativeInteger
+  heatCapacity?: SURefCommonNonNegativeInteger
+  systemSlots?: SURefCommonNonNegativeInteger
+  moduleSlots?: SURefCommonNonNegativeInteger
+  cargoCapacity?: SURefCommonNonNegativeInteger
 }
 
 /**
@@ -228,6 +233,32 @@ export interface SURefObjectContentBlock {
 }
 
 /**
+ * A mech in a lance formation
+ */
+export interface SURefObjectFormationMech {
+  /**
+   * The chassis name of the mech
+   */
+  chassis: string
+  /**
+   * The pattern name of the mech
+   */
+  pattern: string
+  /**
+   * The source book for this mech
+   */
+  source: SURefEnumSource
+  /**
+   * The page number where this mech can be found
+   */
+  page: SURefCommonPositiveInteger
+  /**
+   * The number of this mech in the formation (defaults to 1 if not specified)
+   */
+  quantity?: number
+}
+
+/**
  * Grantable entity with a name and description
  */
 export interface SURefObjectGrant {
@@ -271,6 +302,16 @@ export interface SURefObjectAction {
    * If true, this action will not affect the rendering of the entity display
    */
   hidden?: boolean
+  /**
+   * The currency type for activation cost (EP/AP, SP/HP, or Variable)
+   */
+  activationCurrency?: string
+  source?: SURefEnumSource
+  page?: SURefCommonPositiveInteger
+  /**
+   * The schema name that this action is used in (e.g., 'chassis', 'systems', 'modules')
+   */
+  actionSource?: SURefEnumSchemaName
 }
 
 /**
@@ -369,6 +410,80 @@ export type SURefObjectTable =
   | {
       '20': string
       type: 'dramatic'
+    }
+  | {
+      type: 'duos'
+      /**
+       * The name of the entity or ability
+       */
+      '1-2': string
+      /**
+       * The name of the entity or ability
+       */
+      '3-4': string
+      /**
+       * The name of the entity or ability
+       */
+      '5-6': string
+      /**
+       * The name of the entity or ability
+       */
+      '7-8': string
+      /**
+       * The name of the entity or ability
+       */
+      '9-10': string
+      /**
+       * The name of the entity or ability
+       */
+      '11-12': string
+      /**
+       * The name of the entity or ability
+       */
+      '13-14': string
+      /**
+       * The name of the entity or ability
+       */
+      '15-16': string
+      /**
+       * The name of the entity or ability
+       */
+      '17-18': string
+      /**
+       * The name of the entity or ability
+       */
+      '19-20': string
+    }
+  | {
+      /**
+       * Critical failure outcome
+       */
+      '1': string
+      /**
+       * Critical success outcome
+       */
+      '20': string
+      type: 'bio-chassis'
+      /**
+       * System destruction outcome
+       */
+      '2-3': string
+      /**
+       * Severe bio-backlash outcome
+       */
+      '4-5': string
+      /**
+       * Module destruction outcome
+       */
+      '6-8': string
+      /**
+       * Bio-backlash outcome
+       */
+      '9-10': string
+      /**
+       * Core damage outcome
+       */
+      '11-19': string
     }
 
 export type SURefObjectActionOptions = {

@@ -12,6 +12,7 @@ import { parseContentBlockString } from '@/utils/contentBlockHelpers'
 import type { DataValue } from '@/types/common'
 import { extractEntityDetails } from '@/lib/entityDataExtraction'
 import { SharedDetailItem } from './EntityDisplay/sharedDetailItem'
+import { RollTable } from '@/components/shared/RollTable'
 
 interface NestedChassisAbilityProps {
   /** Action data from salvageunion-reference */
@@ -54,6 +55,7 @@ export function NestedChassisAbility({
   const hasContent = data.content && data.content.length > 0
   const actionChoices: SURefObjectChoice[] = data.choices || []
   const hasChoices = actionChoices.length > 0
+  const hasTable = data.table !== undefined && data.table !== null
 
   // If there's a content block that's a datavalues type, extract those values
   let contentToRender: typeof data.content | undefined = data.content
@@ -153,7 +155,7 @@ export function NestedChassisAbility({
         direction="row"
         gap={compact ? 0.5 : 1}
         mb={
-          (details.length > 0 && !renderDetailsInline) || remainingContent || hasChoices
+          (details.length > 0 && !renderDetailsInline) || remainingContent || hasTable || hasChoices
             ? spacing
             : 0
         }
@@ -184,7 +186,7 @@ export function NestedChassisAbility({
           flexWrap="wrap"
           alignItems="center"
           direction="row"
-          mb={remainingContent || hasChoices ? spacing : 0}
+          mb={remainingContent || hasTable || hasChoices ? spacing : 0}
         >
           {details.map((item, index) => (
             <SharedDetailItem key={index} item={item} compact={compact} />
@@ -204,16 +206,42 @@ export function NestedChassisAbility({
         </VStack>
       )}
 
-      {/* Choices */}
-      {hasChoices && !hideChoices && (
-        <VStack
-          gap={spacing}
+      {/* Table */}
+      {hasTable && (
+        <Box
           pt={
             remainingContent && remainingContent.length > 0
               ? 0
               : details.length > 0 && !renderDetailsInline
                 ? 0
                 : spacing
+          }
+          borderRadius="md"
+          position="relative"
+          zIndex={10}
+        >
+          <RollTable
+            disabled={false}
+            table={data.table!}
+            showCommand
+            compact
+            tableName={data.name}
+          />
+        </Box>
+      )}
+
+      {/* Choices */}
+      {hasChoices && !hideChoices && (
+        <VStack
+          gap={spacing}
+          pt={
+            hasTable
+              ? 0
+              : remainingContent && remainingContent.length > 0
+                ? 0
+                : details.length > 0 && !renderDetailsInline
+                  ? 0
+                  : spacing
           }
           alignItems="stretch"
         >

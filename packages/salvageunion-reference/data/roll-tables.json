@@ -150,6 +150,127 @@
     ]
   },
   {
+    "id": "8803b3dd-6b7b-49a3-b95c-a77082867b12",
+    "source": "We Were Here First!",
+    "name": "Meteor Encounter",
+    "section": "salvaging",
+    "table": {
+      "1": "The Chimerid Meteor has burned up in orbit leaving nothing to salvage.",
+      "20": "Pilots arrive at the Chimerid Meteor first, and it is much larger than expected. It has a Supply Value of 2.",
+      "11-19": "Pilots arrive at the Chimerid Meteor first.",
+      "6-10": "A random faction wanting to salvage the Chimerid Meteor arrives at the same time as the Pilots.",
+      "2-5": "A random faction has arrived before the Pilots and has finished salvaging the Chimerid Meteor.",
+      "type": "standard"
+    },
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When the Pilots encounter a meteor, roll on the below table to see the situation on their arrival."
+      }
+    ]
+  },
+  {
+    "id": "5dae32bc-8e38-4c3d-8c6c-dae2ed6939f2",
+    "source": "We Were Here First!",
+    "name": "Harvesting Chimerium",
+    "section": "salvaging",
+    "table": {
+      "1": "There is no Chimerium to harvest.",
+      "20": "You harvest 5 Chimerium.",
+      "11-19": "You harvest 3 Chimerium.",
+      "6-10": "You harvest 2 Chimerium.",
+      "2-5": "You harvest 1 Chimerium.",
+      "type": "standard"
+    },
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Harvesting from Bio-Salvage spots: When harvesting Chimerium from an area marked as a Bio-Salvage spot, standard Area Salvaging rules apply. For each Bio-Salvage harvested, a d20 is rolled. A roll of 20 means that Bio-Salvage counts as 1 Chimerium."
+      },
+      {
+        "type": "paragraph",
+        "value": "Cargo Slot: 1 Chimerium occupies 1 Cargo Slot."
+      },
+      {
+        "type": "paragraph",
+        "value": "Trading: Chimerium can be traded as Tech 6 Scrap on the Union Crawler. Some factions may offer double this value or more."
+      },
+      {
+        "type": "paragraph",
+        "value": "Harvesting from a Chimerid Meteor (Actions): Harvesting Chimerium from a Chimerid Meteor requires a Mech to spend a Short Action and a Pilot to spend a Long Action."
+      },
+      {
+        "type": "paragraph",
+        "value": "Harvesting from a Chimerid Meteor (Costs & Traits): It costs 1 EP (Energy Point) or 1 AP (Action Point) to harvest from a Chimerid Meteor. The Mech or Pilot must possess an item or ability with the \"Salvaging Trait.\" Each Chimerium Meteor can only be harvested once."
+      }
+    ]
+  },
+  {
+    "id": "9b96bc47-106b-4cb5-8e9d-e42299764c96",
+    "source": "We Were Here First!",
+    "name": "Chimerium Exposure",
+    "section": "damage",
+    "table": {
+      "1": "You have been better. You fall unconscious and your HP is reduced to 0. If you recover, you will develop two Chimerium Mutations within 24 hours. Roll twice on the Chimerium Mutation Table.",
+      "20": "You are feeling great. Skip the next test.",
+      "11-19": "You are feeling good. Well, mostly. Sometimes you get this weird feeling in your teeth, and your scalp itches.",
+      "6-10": "You are not feeling well. You suffer a Major Injury or may choose to roll once on the Chimerium Mutation Table.",
+      "2-5": "You are feeling bad. Your scalp is peeling and you are spitting blood and teeth. Roll on the Chimerium Mutation Table. This mutation will develop within a week or during the next Downtime.",
+      "type": "standard"
+    },
+    "page": 10,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Chimerium is allegedly safe in short stints, but long-term exposure can cause an array of mutations."
+      },
+      {
+        "type": "paragraph",
+        "value": "If a Pilot is exposed to high levels of Chimerium, they must roll on the table below. They must do this each time they are exposed."
+      },
+      {
+        "type": "paragraph",
+        "value": "There is no known cure for Chimerium Mutation."
+      },
+      {
+        "type": "paragraph",
+        "value": "Sakura is developing a cure for Chimerium Mutation, but requires Chimerium Samples to research it. (See p. 42)"
+      }
+    ]
+  },
+  {
+    "id": "baba591d-eb31-4fcb-bd80-d6d6ed9193af",
+    "source": "We Were Here First!",
+    "name": "Chimerium Mutation",
+    "section": "character",
+    "table": {
+      "1": "You mutate into a Chimerium Beast. Your Pilot is no longer under your control and becomes an NPC.",
+      "2": "Your skin gains a translucent, slime-like complexion. The sun burns you, causing 2 HP damage for each hour you spend exposed.",
+      "3": "Your flesh fuses over your mouth, making you unable to speak beyond guttural moans.",
+      "4": "A fleshy face grows under your stomach. It is not alive per se, but blinks, coughs, and licks its lips in response to stimuli.",
+      "5": "Your skull elongates and distorts, your brain growing in size to accommodate it. You gain 1 Max AP.",
+      "6": "Your muscles liquify, and your skin takes on a blob-like consistency. Everything hurts. You must choose between taking a Turn Action or Moving on every turn.",
+      "7": "Your spine gains another 24 bones which protrude from you like a bony tail.",
+      "8": "Your tongue elongates to a bizarre length. You can extend it out to Medium Range. You gain the Rigging Trait.",
+      "9": "Your stomach develops a hardened exterior and engorges to bulbous size. Your stomach gains a Cargo Capacity of 3.",
+      "10": "An eye sprouts from a random location on your body, hanging from a thin tentacle.",
+      "11": "Your skin takes on a bright, rainbow-like glow.",
+      "12": "Your legs and arms fuse, and many more grow out of you. You gain the Climb Trait.",
+      "13": "Your jaw distends and stretches out into a maw. Your teeth grow jagged. You can make a Bite attack. Range: Close // Damage: 3 HP // Deadly (Non-Bio-Titan Creatures only) // Melee",
+      "14": "Your larynx distorts. You can produce a beautiful melody that hums at a frequency that only animals can hear.",
+      "15": "Painful, bulbous growths burst out of your body like wet balloons. They can pop at any sudden jolt, causing immense pain which deals 1 HP damage.",
+      "16": "Rock-like growths develop over your flesh. Increase your Max HP by 2.",
+      "17": "Poisonous sores develop over your body. They are wet and sticky to the touch and never stop oozing. Anyone who comes into contact with them is poisoned and suffers a Minor Injury. You are immune to poison.",
+      "18": "One of your arms morphs into a bright orange, claw-like appendage, able to crush and lift. Range: Close // Damage: 3 SP // Melee // Rigging",
+      "19": "Extra digits spawn on your hands; some are vestigial, and others move by your will. It takes time to adjust.",
+      "20": "Your skin peels like a snake and new irradiated flesh grows on you. You no longer suffer negative effects from Radiation.",
+      "type": "flat"
+    },
+    "page": 11
+  },
+  {
     "id": "3b30af52-8e82-4b55-bda8-e46e64bf141f",
     "source": "Salvage Union Workshop Manual",
     "name": "NPC Action",
@@ -514,5 +635,220 @@
       "type": "flat"
     },
     "page": 226
+  },
+  {
+    "id": "ba70ae70-e955-45af-af31-b4ca98ae223e",
+    "source": "We Were Here First!",
+    "name": "Faction Encounter Table",
+    "section": "duos",
+    "table": {
+      "type": "duos",
+      "1-2": "BOLZA Corp 1st Lance",
+      "3-4": "BOLZA Corp 2nd Lance",
+      "5-6": "BOLZA Logistics Corps",
+      "7-8": "Sakura 78th Lance MSD",
+      "9-10": "Trash Locusts",
+      "11-12": "Chimerium Cult",
+      "13-14": "Red Mesa Mutants",
+      "15-16": "Crawler #693 Salvagers",
+      "17-18": "Wolf Z' Traders",
+      "19-20": "Wagon Wasters"
+    },
+    "page": 22,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Roll on this table when the Pilots encounter another faction in Gehenna. For example: at a meteor site; when travelling between locations; or when appropriate in play."
+      }
+    ]
+  },
+  {
+    "id": "8b0c74d6-4358-4191-86cc-615a51639a40",
+    "source": "We Were Here First!",
+    "name": "Salvage Cache Table",
+    "section": "salvage",
+    "table": {
+      "1": "d20 Bio-Salvage",
+      "2": "5 Bio-Rifles",
+      "3": "5 Chimerium Salvaging Tools and 5 Bio-Scanners",
+      "4": "A Chimerium Harvester System",
+      "5": "An Acid Spitter Mule",
+      "6": "A Mutant Pattern Thresher",
+      "7": "A Bio-Wings Bio-System",
+      "8": "An Olfactory Glands Module",
+      "9": "A Regeneration Glands Module",
+      "10": "A Stormterror Bio-Chassis",
+      "11": "A Bio-Talon Bio-System",
+      "12": "A Bio-Maw Bio-System",
+      "13": "An Acid Cannon Bio-System",
+      "14": "An EDG Alpha Bio-System",
+      "15": "A Fleshripper Bio-Chassis",
+      "16": "A Super-Sonic Screecher Bio-System",
+      "17": "A Scuttler Bio-Chassis",
+      "18": "A Cranium Bio-Chassis",
+      "19": "An Impaler Mech Chassis",
+      "20": "A Chimerium Meteor",
+      "type": "flat"
+    },
+    "page": 23
+  },
+  {
+    "id": "e213dd70-6ece-4950-8036-e4b495e6dd34",
+    "source": "We Were Here First!",
+    "name": "Chimerium Mutant Ability Table",
+    "section": "duos",
+    "table": {
+      "type": "duos",
+      "1-2": "Chimeric Weapon: A mutated weapon forms on the subject. Range: Close // Damage: 4 SP // Melee",
+      "3-4": "Chimeric Glands: Chimeric adrenal boosting glands form in the subject's body. Once every 10 minutes, they can move and take an additional action on their turn.",
+      "5-6": "Chimeric Exoskeleton: Hardened Chimerium plates form on the subject's body. Increases HP by 4 and no longer suffer from the effects of Radiation.",
+      "7-8": "Chimeric Vision: The subject's eyes take on a serpent-like appearance. Their eyes function as Thermal Optics.",
+      "9-10": "Chimeric Acid Sacs: The subject can spray caustic acid from liquid sacs that grow upon their throat. Range: Medium // Damage: 2 SP // Burn (1), Explosive (1)",
+      "11-12": "Chimeric Camouflage: The subject can lower their body temperature to make them appear as inert matter. Cannot be detected or seen by Scanners or Optics, or targeted by Targeters.",
+      "13-14": "Chimeric Regeneration: The subject's blood can rapidly clot. Recovers 2 HP at the start of each turn if they have been injured.",
+      "15-16": "Chimeric Neuropathy: The subject's brain mass expands and evolves. Can communicate telepathically. Communication is one-way unless someone has a similar mutation or equivalent, such as a Neuralink Module.",
+      "17-18": "Chimeric Tunnelling: The subject's body elongates and they grow sharpened tunnelling claws. Gains the Burrower Trait.",
+      "19-20": "Chimeric Wings: The subject sprouts wings. Gains the Fly Trait."
+    },
+    "page": 59,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Roll on this table to determine what Chimerium Mutation a subject gains. Abilities rolled twice may double their effects. If not applicable, re-roll."
+      }
+    ]
+  },
+  {
+    "id": "12862a65-5609-4fd0-8167-a8ee64bbad6a",
+    "source": "We Were Here First!",
+    "name": "Bio-Chassis Damage Table",
+    "section": "damage",
+    "table": {
+      "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
+      "20": "ADRENAL BURST: Your Bio-Chassis has survived. It has 1 SP. In addition, you may move or take one action of your choice with your Bio-Chassis, or Push your next roll within 10 minutes for free.",
+      "type": "bio-chassis",
+      "2-3": "SYSTEM DESTRUCTION: A System mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
+      "4-5": "SEVERE BIO-BACKLASH: Your Pilot suffers a Major Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
+      "6-8": "MODULE DESTRUCTION: A Module mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
+      "9-10": "BIO-BACKLASH: Your Pilot suffers a Minor Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
+      "11-19": "CORE DAMAGE: Your Bio-Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means of escape."
+    },
+    "page": 78,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Roll on this table when a Bio-Chassis is reduced to 0 SP."
+      }
+    ]
+  },
+  {
+    "id": "2f4a4871-571e-4aad-95da-d83f32f2ea5d",
+    "source": "We Were Here First!",
+    "name": "Bio-Chassis Overload Table",
+    "section": "damage",
+    "table": {
+      "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
+      "20": "BIO-OVERDRIVE: Your Bio-Chassis goes into a frenzy. You may take any additional move or action this Turn, or Push your next roll within 10 minutes for free.",
+      "type": "bio-chassis",
+      "2-3": "SYSTEM OVERLOAD: One of your Bio-Chassis Systems, chosen at random or by the Mediator, is destroyed.",
+      "4-5": "SEVERE PILOT OVERLOAD: Your Pilot suffers a Major Injury.",
+      "6-8": "MODULE OVERLOAD: One of your Bio-Chassis Modules, chosen at random or by the Mediator, is destroyed.",
+      "9-10": "PILOT OVERLOAD: Your Pilot suffers a Minor Injury.",
+      "11-19": "BIO-OVERLOAD: Your Bio-Chassis burns out, threatening to liquify you in its amniotic sac. Your Pilot is unconscious for 1 Turn, in which time your Bio-Chassis cannot act and gains the Vulnerable Trait. Your Pilot takes HP damage equal to your Bio-Chassis' current Heat."
+    },
+    "page": 79,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Roll on this table when a Bio-Chassis fails a Heat Check."
+      }
+    ]
+  },
+  {
+    "id": "a8b9c0d1-e2f3-4a5b-b6c7-d8e9f0a1b2c3",
+    "source": "False Flag",
+    "name": "Rumour",
+    "section": "rumours",
+    "table": {
+      "1": "Vornaya is gathering dirt on the other corpos.",
+      "2": "Novosrik has been dead for years, and they blame the Vornayans for it.",
+      "3": "Drakov's Mercs will hire just about anyone.",
+      "4": "DronTek is operating a black site somewhere in the Nanite Coast.",
+      "5": "Stefanus listens to everything within Ostfjord Port and stores it all somewhere in the city.",
+      "6": "Markov is a friendly guy when you get to know him.",
+      "7": "There's something alive in the Ice Caves.",
+      "8": "Olga uses the blood of the last person that betrayed her to grease her Mech's pistons.",
+      "9": "Something big is hidden in Solitude.",
+      "10": "Do not think about the experiments Stefanus is conducting.",
+      "11": "Stefanus is paying a fortune for anomalies.",
+      "12": "Do not look at the trees for long.",
+      "13": "Stefanus is researching strange Meld Tech.",
+      "14": "They say that a lobotomised Pilot eternally guards the lighthouse.",
+      "15": "There's a Big Brother Mech in the old Mil-Tech Base.",
+      "16": "Something swallowed an entire caravan in the Solitude Icefall.",
+      "17": "Vornaya would be dead without its clean water reservoir.",
+      "18": "The checkpoint leads to DronTek territory, but they don't like folk from here going there.",
+      "19": "An exec living up in Isston has a high tech Medbay.",
+      "20": "The Meld wants to destroy us all and become one again.",
+      "type": "flat"
+    },
+    "page": 8
+  },
+  {
+    "id": "c2d3e4f5-a6b7-4c8d-9e0f-1a2b3c4d5e6f",
+    "source": "False Flag",
+    "name": "Meld Encounter",
+    "section": "encounters",
+    "table": {
+      "1": "Meld Behemoth",
+      "20": "4x Active Meld Nanites",
+      "11-19": "6x Meld Nanoids",
+      "6-10": "5x Meld Drone Swarm",
+      "2-5": "3x Meld Splitter",
+      "type": "standard"
+    },
+    "page": 9,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "If you want to randomise an encounter with Meld, or at points when this Module prompts you to, roll on this table to determine what Meld are in the area."
+      }
+    ]
+  },
+  {
+    "id": "98a883c5-1fb9-4240-b299-5cd000723566",
+    "source": "False Flag",
+    "name": "Anomalous Zone",
+    "section": "encounters",
+    "table": {
+      "1": "MELD DUST SWARM: Inert Meld dust swarms are carried by the wind. They are harmless. Harvesting a swarm yields 10 Inert Meld. There is a 1 in 20 chance for an 'Active' swarm containing 10 Active Meld Nanites, which can infect Mechs, Vehicles, Creatures, and water.",
+      "2": "PIERCER: These creatures create horrendous echoes. Any creature within their Far Range suffers a Minor Injury and is deaf for an hour, including Pilots in Mechs. Piercers are often found emanating from hollow scrap, pipes, barrels, empty cockpits, or cargo holds.",
+      "3": "SLUDGER: Sludge from the Nanite Sea coats wide areas and is dangerous due to Active Meld Nanites. Biological or mechanical entities entering it become infected. Harvesting and refining a spill yields Active Meld Nanites, but requires specific tools or a clever approach to avoid infection.",
+      "4": "GRAVITY MUSHER: An invisible anomaly that drastically increases gravity, crushing Mechs and biological creatures. It can be detected by scanners, probing, or careful searching, and by throwing small items. It can usually be pushed through with one Mech movement, but some are larger. Exposed Pilots are reduced to 0 HP, must roll on the Critical Injury Table, and die if they remain for over a minute. Mechs must roll on the Critical Damage Table each turn spent in the anomaly.",
+      "5": "MELD DRONE SWARM: These swarms are composed of fallen and infected corpses, rising zombie-like from the ground. They seek to crush and infect biological and mechanical entities. A d20 roll determines the number of active Meld Drones, which can be run individually or as one squad per multiple of 5.",
+      "6": "FLITTER: A relatively harmless anomaly that causes objects and creatures to float a few inches off the ground, making it visible. Anything in motion when entering continues at half speed, and the area counts as Difficult Terrain.",
+      "7": "ZAPPER: This anomaly generates a field of dangerously charged electricity. Movement through it causes 4 SP damage. Mechs or Vehicles regain 2 Energy Points and become statically charged. The next time they use an Energy Point ability, they deal 2 SP damage to a random Mech or Vehicle (including themselves), and the target gains 1 EP. The anomaly then discharges harmlessly.",
+      "8": "HEAT HAZE: This anomaly superheats the area. Each hour, a Mech's Heat increases by 2, forcing a Heat Check. Heat-generating effects (like pushing) generate twice as much heat. Exposed creatures suffer a Major Injury each hour. Meld-infected entities in the area become permanently heated, suffering these effects hourly in any area.",
+      "9": "SLIMER: This anomaly causes highly corrosive, clear slime to coat the area, which is difficult to spot. It wells up from the earth and accumulates in holes and ditches. Anything caught in it takes 2 SP damage per turn (1 minute) until removed or it deals 6 SP total damage. Water worsens the slime (2 SP additional damage), while fire and freezing can remove it.",
+      "10": "MELD NANOID: Groups of d20 Meld Nanoids emerge from the ground or small pools, forming creatures that target anything with a Reactor source before attacking.",
+      "11": "LAUNCH PAD: This anomaly creates a sudden gravitational thrust, propelling a Mech, Vehicle, or Pilot into the air in a random direction, allowing them to clear terrain or obstacles. Landing deals 3 SP damage to Mechs or Vehicles, and 2 HP damage to Pilots (unless a smoother landing method is found).",
+      "12": "VORTEX: This anomaly creates a gravitational field around large metallic objects (mech chassis, scrap piles, metal rebars), drawing other objects into a vortex-like pattern. Pilots drawn in take 2 HP damage and suffer a Major Injury from being slammed. Mechs can usually avoid the force, but passing through it risks a random Scrap, System, or Module in their cargo bay being sucked in and damaged. Retrieving it risks 1 SP damage from debris.",
+      "13": "NANITE SPORE: A bulbous, spore-like black mushroom grows from fertile earth. Anything within Medium Range causes it to disperse a Meld Dust Swarm, which acts like a regular Dust Swarm but deals 3 SP damage and causes Meld Infection.",
+      "14": "IRRADIATED ANOMALY: This anomaly causes radiation to spike to dangerous levels, making the area count as Irradiated (per Salvage Union Core Rules p.323). Anything Meld-infected in the area also becomes irradiated.",
+      "15": "MELD SPLITTER: A Meld Splitter emerges from pools of Meld, seeking to convert Mechs into Behemoths or creatures into drones.",
+      "16": "GROUNDSWELL: This anomaly causes black veins to criss-cross and split the earth, creating dangerous fissures that creatures can fall into and Mechs can get stuck in.",
+      "17": "TIME DILATION: This anomaly slows down time in the area. Every hour spent there counts as 24 hours of normal time. For example, 3 hours spent equals 3 days outside. Contracts and other time-critical events progress, and the Union Crawler requires additional Upkeep per week.",
+      "18": "TRANSMOGRIFICATION: This anomaly transforms the molecular structure of mechanical and electronic entities. When a Mech or Vehicle enters, a random System or Module transforms into another random System or Module of its Tech Level or lower over the next hour. If this exceeds System Slots, it destroys the previous system, damages the mech, and potentially harms the pilot. It's identifiable by distorted or shifting Mech Systems, Modules, and scrap.",
+      "19": "RED DEATH: This anomaly rapidly rusts metallic objects, visible as numerous objects in varying states of extreme rusting. Each hour, Mechs or Vehicles take 3 SP damage, and a random System becomes damaged. Exposed metallic Pilot Equipment is destroyed.",
+      "20": "MELD BEHEMOTH: A Meld Behemoth rises from the ground. The anomaly is strewn with rotting, kelp-covered carcasses of broken mechs. It infects Mechs, Vehicles, Pilots, Creatures, and pools of water.",
+      "type": "flat"
+    },
+    "page": 10,
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When Pilots are in an Anomalous Zone, roll on the Anomaly Table below for each journey or each hour spent in the area as appropriate."
+      }
+    ]
   }
 ]

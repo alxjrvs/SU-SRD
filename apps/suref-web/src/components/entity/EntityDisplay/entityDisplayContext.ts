@@ -4,8 +4,8 @@ import type { ButtonProps } from '@chakra-ui/react'
 import type {
   SURefEntity,
   SURefEnumSchemaName,
+  SURefEnumSource,
   SURefMetaAction,
-  SURefMetaChassisAbility,
   SURefObjectTable,
 } from 'salvageunion-reference'
 // Import functions for type extraction (typeof requires actual values, not types)
@@ -46,8 +46,8 @@ export interface EntityDisplayContextValue {
   compact: boolean
   /** Computed entity name */
   title: string
-  /** Computed tech level */
-  techLevel: number | undefined
+  /** Computed tech level (can be number, 'B' for Bio, 'N' for N tech level, or undefined) */
+  techLevel: number | 'B' | 'N' | undefined
   /** Computed header background color */
   headerBg: string
   /** Spacing values */
@@ -101,7 +101,7 @@ export interface EntityDisplayContextValue {
   /** Whether entity has actions */
   hasActions: boolean
   /** Array of chassis abilities (or undefined) */
-  chassisAbilities?: SURefMetaChassisAbility[]
+  chassisAbilities?: SURefMetaAction[]
   /** Array of effects (or undefined) */
   effects?: ReturnType<typeof getEffects>
   /** Table data (or undefined) */
@@ -114,6 +114,8 @@ export interface EntityDisplayContextValue {
   actionsToDisplay?: SURefMetaAction[]
   /** Action with matching name for content replacement (or undefined) */
   matchingAction?: SURefMetaAction
+  /** Source book for source-based styling */
+  source?: SURefEnumSource
 }
 
 export const EntityDisplayContext = createContext<EntityDisplayContextValue | null>(null)

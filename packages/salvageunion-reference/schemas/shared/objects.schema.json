@@ -140,6 +140,21 @@
           "items": {
             "$ref": "#/definitions/trait"
           }
+        },
+        "energyPoints": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "heatCapacity": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "systemSlots": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "moduleSlots": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "cargoCapacity": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
         }
       }
     },
@@ -473,6 +488,110 @@
               "const": "dramatic"
             }
           }
+        },
+        {
+          "type": "object",
+          "description": "Duos roll table with custom ranges and entity references",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "1-2",
+            "3-4",
+            "5-6",
+            "7-8",
+            "9-10",
+            "11-12",
+            "13-14",
+            "15-16",
+            "17-18",
+            "19-20"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "duos"
+            },
+            "1-2": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "3-4": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "5-6": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "7-8": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "9-10": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "11-12": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "13-14": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "15-16": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "17-18": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            },
+            "19-20": {
+              "type": "string",
+              "description": "The name of the entity or ability"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "description": "Bio-Chassis roll table with custom ranges",
+          "additionalProperties": false,
+          "required": ["type", "1", "2-3", "4-5", "6-8", "9-10", "11-19", "20"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "bio-chassis"
+            },
+            "1": {
+              "type": "string",
+              "description": "Critical failure outcome"
+            },
+            "2-3": {
+              "type": "string",
+              "description": "System destruction outcome"
+            },
+            "4-5": {
+              "type": "string",
+              "description": "Severe bio-backlash outcome"
+            },
+            "6-8": {
+              "type": "string",
+              "description": "Module destruction outcome"
+            },
+            "9-10": {
+              "type": "string",
+              "description": "Bio-backlash outcome"
+            },
+            "11-19": {
+              "type": "string",
+              "description": "Core damage outcome"
+            },
+            "20": {
+              "type": "string",
+              "description": "Critical success outcome"
+            }
+          }
         }
       ]
     },
@@ -628,6 +747,35 @@
         "$ref": "#/definitions/contentBlock"
       }
     },
+    "formationMech": {
+      "type": "object",
+      "description": "A mech in a lance formation",
+      "required": ["chassis", "pattern", "source", "page"],
+      "properties": {
+        "chassis": {
+          "type": "string",
+          "description": "The chassis name of the mech"
+        },
+        "pattern": {
+          "type": "string",
+          "description": "The pattern name of the mech"
+        },
+        "source": {
+          "$ref": "enums.schema.json#/definitions/source",
+          "description": "The source book for this mech"
+        },
+        "page": {
+          "$ref": "common.schema.json#/definitions/positiveInteger",
+          "description": "The page number where this mech can be found"
+        },
+        "quantity": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "The number of this mech in the formation (defaults to 1 if not specified)"
+        }
+      },
+      "additionalProperties": false
+    },
     "grant": {
       "type": "object",
       "description": "Grantable entity with a name and description",
@@ -748,6 +896,21 @@
         "hidden": {
           "type": "boolean",
           "description": "If true, this action will not affect the rendering of the entity display"
+        },
+        "activationCurrency": {
+          "type": "string",
+          "enum": ["EP or AP", "SP or HP", "Variable"],
+          "description": "The currency type for activation cost (EP/AP, SP/HP, or Variable)"
+        },
+        "source": {
+          "$ref": "enums.schema.json#/definitions/source"
+        },
+        "page": {
+          "$ref": "common.schema.json#/definitions/positiveInteger"
+        },
+        "actionSource": {
+          "$ref": "enums.schema.json#/definitions/schemaName",
+          "description": "The schema name that this action is used in (e.g., 'chassis', 'systems', 'modules')"
         }
       }
     },

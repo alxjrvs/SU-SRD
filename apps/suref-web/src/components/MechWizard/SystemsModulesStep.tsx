@@ -5,6 +5,7 @@ import {
   getSystemSlots,
   getModuleSlots,
   getSlotsRequired,
+  getTechLevelNumber,
   type SURefChassis,
   type SURefSystem,
   type SURefModule,
@@ -73,8 +74,10 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
 
   const sortedSystems = useMemo(() => {
     return [...selectedSystems].sort((a, b) => {
-      if (a.techLevel !== b.techLevel) {
-        return a.techLevel - b.techLevel
+      const aTechLevel = getTechLevelNumber(a) ?? 0
+      const bTechLevel = getTechLevelNumber(b) ?? 0
+      if (aTechLevel !== bTechLevel) {
+        return aTechLevel - bTechLevel
       }
       return a.name.localeCompare(b.name)
     })
@@ -82,8 +85,10 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
 
   const sortedModules = useMemo(() => {
     return [...selectedModules].sort((a, b) => {
-      if (a.techLevel !== b.techLevel) {
-        return a.techLevel - b.techLevel
+      const aTechLevel = getTechLevelNumber(a) ?? 0
+      const bTechLevel = getTechLevelNumber(b) ?? 0
+      if (aTechLevel !== bTechLevel) {
+        return aTechLevel - bTechLevel
       }
       return a.name.localeCompare(b.name)
     })

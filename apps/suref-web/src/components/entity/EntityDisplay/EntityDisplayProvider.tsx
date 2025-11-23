@@ -1,8 +1,9 @@
 import { useState, useMemo, type ReactNode } from 'react'
 import type { ButtonProps } from '@chakra-ui/react'
-import type { SURefEntity, SURefEnumSchemaName } from 'salvageunion-reference'
+import type { SURefEntity, SURefEnumSchemaName, SURefEnumSource } from 'salvageunion-reference'
 import {
   getTechLevel,
+  getTechLevelNumber,
   hasActions,
   getChassisAbilities,
   getEffects,
@@ -11,6 +12,7 @@ import {
   extractVisibleActions,
   filterActionsExcludingName,
   findActionByName,
+  getSource,
 } from 'salvageunion-reference'
 import { techLevelColors } from '@/theme'
 import {
@@ -96,11 +98,15 @@ export function EntityDisplayProvider({
     }
   }
   const title = extractName(data, schemaName)
+  // Get tech level for display (preserves "B" and "N")
   const techLevel = getTechLevel(data)
+  // Get numeric tech level for calculations (converts "B" and "N" to 1)
+  const techLevelNumeric = getTechLevelNumber(data)
+  const source = getSource(data) as SURefEnumSource | undefined
   const calculatedHeaderBg = calculateBackgroundColor(
     schemaName,
     headerColor,
-    techLevel,
+    techLevelNumeric,
     data,
     techLevelColors
   )
@@ -181,6 +187,7 @@ export function EntityDisplayProvider({
     visibleActions,
     actionsToDisplay,
     matchingAction,
+    source,
   }
 
   return <EntityDisplayContext.Provider value={value}>{children}</EntityDisplayContext.Provider>

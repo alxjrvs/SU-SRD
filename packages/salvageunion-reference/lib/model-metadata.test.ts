@@ -3,62 +3,70 @@
  */
 
 import { describe, expect, it } from 'vitest'
-import { SalvageUnionReference, SchemaToDisplayName } from './index.js'
+import { SchemaToDisplayName } from './index.js'
+
+// Import SalvageUnionReference - use lazy getter to avoid initialization issues
+import type { SalvageUnionReference as SURefType } from './index.js'
+let SalvageUnionReference: typeof SURefType
+
+function getReference() {
+  if (!SalvageUnionReference) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    SalvageUnionReference = require('./index.js').SalvageUnionReference
+  }
+  return SalvageUnionReference
+}
 
 describe('Model Metadata', () => {
   describe('schemaName property', () => {
     it('should return correct schema name for Abilities', () => {
-      expect(SalvageUnionReference.Abilities.schemaName).toBe('abilities')
+      expect(getReference().Abilities.schemaName).toBe('abilities')
     })
 
     it('should return correct schema name for Equipment', () => {
-      expect(SalvageUnionReference.Equipment.schemaName).toBe('equipment')
+      expect(getReference().Equipment.schemaName).toBe('equipment')
     })
 
     it('should return correct schema name for Modules', () => {
-      expect(SalvageUnionReference.Modules.schemaName).toBe('modules')
+      expect(getReference().Modules.schemaName).toBe('modules')
     })
 
     it('should return correct schema name for Chassis', () => {
-      expect(SalvageUnionReference.Chassis.schemaName).toBe('chassis')
+      expect(getReference().Chassis.schemaName).toBe('chassis')
     })
 
     it('should return correct schema name for Classes', () => {
-      expect(SalvageUnionReference.Classes.schemaName).toBe('classes')
+      expect(getReference().Classes.schemaName).toBe('classes')
     })
 
     it('should return correct schema name for AbilityTreeRequirements', () => {
-      expect(SalvageUnionReference.AbilityTreeRequirements.schemaName).toBe(
-        'ability-tree-requirements'
-      )
+      expect(getReference().AbilityTreeRequirements.schemaName).toBe('ability-tree-requirements')
     })
   })
 
   describe('displayName property', () => {
     it('should return correct display name for Abilities', () => {
-      expect(SalvageUnionReference.Abilities.displayName).toBe('Abilities')
+      expect(getReference().Abilities.displayName).toBe('Abilities')
     })
 
     it('should return correct display name for Equipment', () => {
-      expect(SalvageUnionReference.Equipment.displayName).toBe('Equipment')
+      expect(getReference().Equipment.displayName).toBe('Equipment')
     })
 
     it('should return correct display name for Modules', () => {
-      expect(SalvageUnionReference.Modules.displayName).toBe('Modules')
+      expect(getReference().Modules.displayName).toBe('Modules')
     })
 
     it('should return correct display name for Chassis', () => {
-      expect(SalvageUnionReference.Chassis.displayName).toBe('Chassis')
+      expect(getReference().Chassis.displayName).toBe('Chassis')
     })
 
     it('should return correct display name for Classes', () => {
-      expect(SalvageUnionReference.Classes.displayName).toBe('Classes')
+      expect(getReference().Classes.displayName).toBe('Classes')
     })
 
     it('should return correct display name for AbilityTreeRequirements', () => {
-      expect(SalvageUnionReference.AbilityTreeRequirements.displayName).toBe(
-        'Ability Tree Requirements'
-      )
+      expect(getReference().AbilityTreeRequirements.displayName).toBe('Ability Tree Requirements')
     })
   })
 
@@ -123,22 +131,22 @@ describe('Model Metadata', () => {
 
   describe('Consistency between schemaName and SchemaToDisplayName', () => {
     it('should have matching schema names', () => {
-      const schemaName = SalvageUnionReference.Abilities.schemaName
-      const displayName = SalvageUnionReference.Abilities.displayName
+      const schemaName = getReference().Abilities.schemaName
+      const displayName = getReference().Abilities.displayName
 
       expect(SchemaToDisplayName[schemaName as keyof typeof SchemaToDisplayName]).toBe(displayName)
     })
 
     it('should work for all models', () => {
       const models = [
-        SalvageUnionReference.Abilities,
-        SalvageUnionReference.Equipment,
-        SalvageUnionReference.Modules,
-        SalvageUnionReference.Chassis,
-        SalvageUnionReference.Classes,
-        SalvageUnionReference.Systems,
-        SalvageUnionReference.Drones,
-        SalvageUnionReference.Vehicles,
+        getReference().Abilities,
+        getReference().Equipment,
+        getReference().Modules,
+        getReference().Chassis,
+        getReference().Classes,
+        getReference().Systems,
+        getReference().Drones,
+        getReference().Vehicles,
       ]
 
       for (const model of models) {

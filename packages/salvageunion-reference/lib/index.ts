@@ -21,6 +21,7 @@ import type {
   SURefDistance,
   SURefDrone,
   SURefEquipment,
+  SURefFaction,
   SURefKeyword,
   SURefMeld,
   SURefModule,
@@ -32,7 +33,6 @@ import type {
   SURefVehicle,
   SURefMetaAbilityTreeRequirement,
   SURefMetaAction,
-  SURefMetaChassisAbility,
   SURefMetaCrawlerTechLevel,
   SURefEntity,
   SURefEnumSchemaName,
@@ -75,7 +75,6 @@ export type SchemaToEntityMap = {
   'ability-tree-requirements': SURefMetaAbilityTreeRequirement
   actions: SURefMetaAction
   'bio-titans': SURefBioTitan
-  'chassis-abilities': SURefMetaChassisAbility
   chassis: SURefChassis
   classes: SURefClass
   'crawler-bays': SURefCrawlerBay
@@ -85,6 +84,7 @@ export type SchemaToEntityMap = {
   distances: SURefDistance
   drones: SURefDrone
   equipment: SURefEquipment
+  factions: SURefFaction
   keywords: SURefKeyword
   meld: SURefMeld
   modules: SURefModule
@@ -105,7 +105,6 @@ export const EntitySchemaNames = new Set<EntitySchemaName>([
   'ability-tree-requirements',
   'actions',
   'bio-titans',
-  'chassis-abilities',
   'chassis',
   'classes',
   'crawler-bays',
@@ -115,6 +114,7 @@ export const EntitySchemaNames = new Set<EntitySchemaName>([
   'distances',
   'drones',
   'equipment',
+  'factions',
   'keywords',
   'meld',
   'modules',
@@ -132,7 +132,6 @@ export const SchemaToModelMap = {
   'ability-tree-requirements': 'AbilityTreeRequirements',
   actions: 'Actions',
   'bio-titans': 'BioTitans',
-  'chassis-abilities': 'ChassisAbilities',
   chassis: 'Chassis',
   classes: 'Classes',
   'crawler-bays': 'CrawlerBays',
@@ -142,6 +141,7 @@ export const SchemaToModelMap = {
   distances: 'Distances',
   drones: 'Drones',
   equipment: 'Equipment',
+  factions: 'Factions',
   keywords: 'Keywords',
   meld: 'Meld',
   modules: 'Modules',
@@ -159,7 +159,6 @@ export const SchemaToDisplayName = {
   'ability-tree-requirements': 'Ability Tree Requirements',
   actions: 'actions',
   'bio-titans': 'Bio-Titans',
-  'chassis-abilities': 'chassis-abilities',
   chassis: 'Chassis',
   classes: 'Classes',
   'crawler-bays': 'Crawler Bays',
@@ -169,6 +168,7 @@ export const SchemaToDisplayName = {
   distances: 'Distances',
   drones: 'Drones',
   equipment: 'Equipment',
+  factions: 'factions',
   keywords: 'Keywords',
   meld: 'Meld',
   modules: 'Modules',
@@ -193,7 +193,6 @@ export class SalvageUnionReference {
     models.AbilityTreeRequirements as ModelWithMetadata<SURefMetaAbilityTreeRequirement>
   static Actions = models.Actions as ModelWithMetadata<SURefMetaAction>
   static BioTitans = models.BioTitans as ModelWithMetadata<SchemaToEntityMap['bio-titans']>
-  static ChassisAbilities = models.ChassisAbilities as ModelWithMetadata<SURefMetaChassisAbility>
   static Chassis = models.Chassis as ModelWithMetadata<SchemaToEntityMap['chassis']>
   static Classes = models.Classes as ModelWithMetadata<SchemaToEntityMap['classes']>
   static CrawlerBays = models.CrawlerBays as ModelWithMetadata<SchemaToEntityMap['crawler-bays']>
@@ -204,6 +203,7 @@ export class SalvageUnionReference {
   static Distances = models.Distances as ModelWithMetadata<SchemaToEntityMap['distances']>
   static Drones = models.Drones as ModelWithMetadata<SchemaToEntityMap['drones']>
   static Equipment = models.Equipment as ModelWithMetadata<SchemaToEntityMap['equipment']>
+  static Factions = models.Factions as ModelWithMetadata<SchemaToEntityMap['factions']>
   static Keywords = models.Keywords as ModelWithMetadata<SchemaToEntityMap['keywords']>
   static Meld = models.Meld as ModelWithMetadata<SchemaToEntityMap['meld']>
   static Modules = models.Modules as ModelWithMetadata<SchemaToEntityMap['modules']>
@@ -404,15 +404,42 @@ export class SalvageUnionReference {
    * Get tech level from an entity
    *
    * @param entity - Any Salvage Union entity
-   * @returns Tech level or undefined if not present
+   * @returns Tech level (number, 'B', 'N') or undefined if not present
    *
    * @example
    * const techLevel = SalvageUnionReference.getTechLevel(chassis)
    */
-  public static getTechLevel(entity: SURefEntity): number | undefined {
+  public static getTechLevel(entity: SURefEntity): number | 'B' | 'N' | undefined {
     // Check if entity has top-level techLevel (Chassis, Systems, Modules, Drones, Vehicles)
-    if ('techLevel' in entity && typeof entity.techLevel === 'number') {
-      return entity.techLevel
+    if ('techLevel' in entity) {
+      const techLevel = entity.techLevel
+      if (typeof techLevel === 'number' || techLevel === 'B' || techLevel === 'N') {
+        return techLevel
+      }
+    }
+    return undefined
+  }
+
+  /**
+   * Get tech level from an entity as a numeric value
+   * Normalizes 'B' and 'N' to 1 for math operations
+   *
+   * @param entity - Any Salvage Union entity
+   * @returns Tech level as a number or undefined if not present
+   *
+   * @example
+   * const techLevel = SalvageUnionReference.getTechLevelNumber(chassis)
+   */
+  public static getTechLevelNumber(entity: SURefEntity): number | undefined {
+    // Check if entity has top-level techLevel (Chassis, Systems, Modules, Drones, Vehicles)
+    if ('techLevel' in entity) {
+      const techLevel = entity.techLevel
+      if (typeof techLevel === 'number') {
+        return techLevel
+      }
+      if (techLevel === 'B' || techLevel === 'N') {
+        return 1
+      }
     }
     return undefined
   }

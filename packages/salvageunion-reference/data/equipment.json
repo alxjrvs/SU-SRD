@@ -612,7 +612,7 @@
     "indexable": false,
     "source": "Salvage Union Workshop Manual",
     "techLevel": 1,
-    "actions": ["Knife Missle"],
+    "actions": ["Knife Missile"],
     "page": 73,
     "id": "256126db-8ba3-4a57-975a-2ed74832b983"
   },
@@ -621,7 +621,7 @@
     "indexable": false,
     "source": "Salvage Union Workshop Manual",
     "techLevel": 1,
-    "actions": ["Custom Missle Launcher"],
+    "actions": ["Custom Missile Launcher"],
     "page": 73,
     "id": "d83b2f0b-ba15-431d-baa2-2e2381a4d9fb",
     "content": [
@@ -633,7 +633,7 @@
     "choices": [
       {
         "name": "Modification",
-        "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "id": "d097ed5d-d7d9-46f5-8bda-ba902f09ebc8",
         "content": [
           {
             "type": "paragraph",
@@ -776,5 +776,133 @@
     "blackMarket": true,
     "page": 71,
     "actions": ["Blinding Blue Laser Rifle"]
+  },
+  {
+    "id": "5791f747-ff16-472a-a053-4facabfc6c32",
+    "source": "We Were Here First!",
+    "name": "Chimerium Salvaging Tools",
+    "techLevel": 1,
+    "actions": ["Chimerium Salvaging Tools"],
+    "page": 63
+  },
+  {
+    "id": "9d03a748-15e6-4da0-a867-ab06b113386f",
+    "source": "We Were Here First!",
+    "name": "Bio-Scanner",
+    "techLevel": 1,
+    "actions": ["Bio-Scanner"],
+    "page": 63
+  },
+  {
+    "id": "39a78811-073a-46e4-8fbe-771652b00af5",
+    "source": "We Were Here First!",
+    "name": "Bio-Rifle",
+    "techLevel": 3,
+    "actions": ["Bio-Rifle (Equipment)"],
+    "page": 63
+  },
+  {
+    "id": "1c7b4f08-1b59-4963-bd2c-9188876a194d",
+    "source": "We Were Here First!",
+    "name": "Chimerium Beast Companion",
+    "techLevel": 4,
+    "actions": ["Chimerium Beast Companion"],
+    "page": 63
+  },
+  {
+    "id": "87741c2e-d586-422a-a159-56898c5c8bf6",
+    "source": "False Flag",
+    "name": "DronTek Rifle",
+    "techLevel": 2,
+    "page": 71,
+    "actions": ["DronTek Rifle"]
+  },
+  {
+    "id": "14444711-c4d0-4b7c-83de-19317e74b445",
+    "source": "False Flag",
+    "name": "Portable Cryopod",
+    "techLevel": 3,
+    "page": 71,
+    "actions": ["Portable Cryopod"]
+  },
+  {
+    "id": "cef55692-1271-40df-b679-3adc314e48a9",
+    "source": "False Flag",
+    "name": "Overcharged Green Laser Rifle",
+    "techLevel": 3,
+    "page": 71,
+    "actions": ["Overcharged Green Laser Rifle"]
+  },
+  {
+    "id": "f771ce61-40ce-4154-bdbe-12a9b5ffcac2",
+    "source": "False Flag",
+    "name": "Handheld Meld Injector",
+    "techLevel": 3,
+    "page": 71,
+    "actions": ["Handheld Meld Injector"]
+  },
+  {
+    "id": "506a37cb-593c-47fa-b244-ca8fffae8050",
+    "source": "False Flag",
+    "name": "Handheld Meld Manipulator",
+    "techLevel": 3,
+    "page": 71,
+    "actions": ["Handheld Meld Manipulator"]
+  },
+  {
+    "id": "ba62b5ee-0fb3-447a-a5b6-70f0829de2e5",
+    "source": "False Flag",
+    "name": "Meld Rifle",
+    "techLevel": 4,
+    "page": 71,
+    "actions": ["Meld Rifle"]
+  },
+  {
+    "id": "bfcad53c-62d4-4f7f-a530-4deb257f9e38",
+    "source": "Rainmaker",
+    "name": "Deployable .50 Cal Machine Gun",
+    "techLevel": 2,
+    "page": 77,
+    "actions": ["Deployable .50 Cal Machine Gun"]
+  },
+  {
+    "id": "58cb5108-c4fe-42c4-9b12-49465aba0686",
+    "source": "Rainmaker",
+    "name": "Machine Pistols",
+    "techLevel": 3,
+    "page": 77,
+    "actions": ["Machine Pistols"]
+  },
+  {
+    "id": "c1e0d32b-7886-4764-b5e9-72e098a2494b",
+    "source": "Rainmaker",
+    "name": "Epoxy Gun",
+    "techLevel": 1,
+    "page": 77,
+    "actions": ["Epoxy Gun"]
+  },
+  {
+    "id": "3fc5f7d2-9567-457b-93f6-9aea1225e569",
+    "source": "Rainmaker",
+    "name": "Rebar Lance",
+    "techLevel": 2,
+    "page": 77,
+    "actions": ["Rebar Lance", "Lance Charge"]
+  },
+  {
+    "id": "fe054736-a12f-4ea3-823d-ce1705c84600",
+    "source": "Rainmaker",
+    "name": "Servo Lasso",
+    "techLevel": 2,
+    "page": 77,
+    "actions": ["Servo Lasso"]
+  },
+  {
+    "id": "d1a94bb8-ea46-4143-ae62-171b21db7045",
+    "source": "Rainmaker",
+    "name": "Fell Rifle",
+    "techLevel": 3,
+    "page": 77,
+    "actions": ["Fell Rifle"]
   }
 ]
