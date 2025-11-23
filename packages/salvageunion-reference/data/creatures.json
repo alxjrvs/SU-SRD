@@ -106,16 +106,12 @@
     "source": "Rainmaker",
     "page": 81,
     "name": "Basement Frogs",
-    "actions": ["Pseudo-teeth", "Tongue Lash"],
+    "actions": ["Pseudo-teeth", "Tongue Lash", "Ambush"],
     "hitPoints": 2,
     "content": [
       {
         "type": "paragraph",
         "value": "Territorial, these frogs have grown large and aggressive to defend their home. They use their tongues to trip and tangle their prey so that the rest can descend on them."
-      },
-      {
-        "type": "paragraph",
-        "value": "Ambush: Basement Frogs always act first in combat. If someone else has a similar Ability they act simultaneously."
       }
     ]
   },
@@ -124,20 +120,12 @@
     "source": "Rainmaker",
     "name": "Ghost",
     "page": 81,
-    "actions": ["Metal Bars and Ripping Hands (Ghost)"],
+    "actions": ["Metal Bars and Ripping Hands (Ghost)", "Phased", "Organic"],
     "hitPoints": 4,
     "content": [
       {
         "type": "paragraph",
         "value": "Creatures of nightmares brought to life by biotechnology to rip and tear."
-      },
-      {
-        "type": "paragraph",
-        "value": "Phased: Ghosts are permanently phased. They can move through walls and obstacles and are invisible except for a faint blue outline. They can make attacks whilst phased. Thermal Optics will allow a Ghost to be seen in its phased state."
-      },
-      {
-        "type": "paragraph",
-        "value": "Organic: Ghosts are biological horrors. They are treated as creatures for the purposes of all Traits and Abilities, for example the Anti-Organic Trait (p.318 SU Core Book)."
       }
     ]
   },
@@ -146,20 +134,12 @@
     "source": "Rainmaker",
     "name": "Ghost Haunt",
     "page": 81,
-    "actions": ["Metal Bars and Ripping Hands (Ghost Haunt)"],
+    "actions": ["Metal Bars and Ripping Hands (Ghost Haunt)", "Phased", "Organic"],
     "hitPoints": 12,
     "content": [
       {
         "type": "paragraph",
         "value": "A haunt of ghosts that sow terror and mayhem."
-      },
-      {
-        "type": "paragraph",
-        "value": "Phased: See Ghost."
-      },
-      {
-        "type": "paragraph",
-        "value": "Organic: See Ghost."
       }
     ]
   }

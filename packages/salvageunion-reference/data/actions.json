@@ -1311,6 +1311,41 @@
     "actionSource": "systems"
   },
   {
+    "id": "512bbb19-ffe2-4c97-8591-04ad83e1422e",
+    "name": "Burrower (Iron Wyrm)",
+    "displayName": "Burrower",
+    "activationCost": 2,
+    "actionType": "Turn",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "When you activate this Ability, the Iron Wyrm can burrow and move underneath the ground."
+      },
+      {
+        "type": "paragraph",
+        "value": "It can burrow through sand, stone, and earth as well as basic metal and stone structures such as bunkers."
+      },
+      {
+        "type": "paragraph",
+        "value": "The Iron Wyrm remains burrowed until it unborrows as a Turn Action where it emerges at a point of the Pilot's choice within Close Range of it."
+      },
+      {
+        "type": "paragraph",
+        "value": "When burrowed, the Iron Wyrm cannot be targeted by anything on the ground, however it cannot see anything on the ground either."
+      },
+      {
+        "type": "paragraph",
+        "value": "Its location can be verified with a Deep Survey Scanner."
+      },
+      {
+        "type": "paragraph",
+        "value": "The burrowing Ability of the Iron Wyrm enables it to create tunnels behind it that are large enough for a Mech to fit through."
+      }
+    ],
+    "actionSource": "chassis"
+  },
+
+  {
     "name": "Burrower",
     "actionType": "Passive",
     "id": "18046c18-ea11-429c-a09f-66c87cccb579",
@@ -3192,7 +3227,8 @@
     "id": "5b3adf7f-fc0e-4fb7-b4e8-844325ba441c",
     "content": [
       {
-        "type": "paragraph"
+        "type": "paragraph",
+        "value": "The [[CHASSIS]] can move an additional Range Band on its turn as a free action. In addition, it moves twice as fast across the Campaign, Area, and Region Maps."
       }
     ],
     "actionSource": "chassis"
@@ -12056,6 +12092,7 @@
   {
     "id": "2b67d7d6-3434-40c0-9cfe-5591b5092d41",
     "name": "Metal Bars and Ripping Hands (Ghost)",
+    "displayName": "Metal Bars and Ripping Hands",
     "range": ["Close"],
     "damage": {
       "damageType": "SP",
@@ -12076,6 +12113,7 @@
   {
     "id": "d13aa01b-3b60-44b7-8a42-a36d0b798097",
     "name": "Metal Bars and Ripping Hands (Ghost Haunt)",
+    "displayName": "Metal Bars and Ripping Hands",
     "range": ["Close"],
     "damage": {
       "damageType": "SP",
@@ -12490,5 +12528,41 @@
       }
     ],
     "actionSource": "chassis"
+  },
+  {
+    "id": "8806e453-1c00-4418-acbe-bc294ccc33be",
+    "name": "Ambush",
+    "actionType": "Passive",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Basement Frogs always act first in combat. If someone else has a similar Ability they act simultaneously."
+      }
+    ],
+    "actionSource": "creatures"
+  },
+  {
+    "id": "a463388b-1573-480b-b852-8dba40116e4b",
+    "name": "Phased",
+    "actionType": "Passive",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Ghosts are permanently phased. They can move through walls and obstacles and are invisible except for a faint blue outline. They can make attacks whilst phased. Thermal Optics will allow a Ghost to be seen in its phased state."
+      }
+    ],
+    "actionSource": "creatures"
+  },
+  {
+    "id": "673e56ac-9aa4-4560-b1c7-8059f873cc14",
+    "name": "Organic",
+    "actionType": "Passive",
+    "content": [
+      {
+        "type": "paragraph",
+        "value": "Ghosts are biological horrors. They are treated as creatures for the purposes of all Traits and Abilities, for example the Anti-Organic Trait (p.318 SU Core Book)."
+      }
+    ],
+    "actionSource": "creatures"
   }
 ]

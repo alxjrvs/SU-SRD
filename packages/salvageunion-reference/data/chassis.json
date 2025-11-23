@@ -4069,7 +4069,7 @@
         "value": "The 'EPBM-S11' Iron Wyrm is a mammoth tunnelling Mech capable of subterranean operations. It was designed as a joint venture between Sakura Futures, Herrsch Manufacturing, and Thatcher Steel in order to construct a vast tunnel network that would connect the Ferrous Range with the Central Wastes. Nobody knows whether the project was completed or what the current state of the tunnel network is, but some say the tunnels still exist and that they are filled with salvage just lying around. ready to be plundered. They also say that the tunnels are inhabited by those who have not seen the red sun for generations."
       }
     ],
-    "chassisAbilities": ["Burrower"]
+    "chassisAbilities": ["Burrower (Iron Wyrm)"]
   },
   {
     "id": "bedfa4d4-b1b2-4130-8e7b-efcd235da430",
