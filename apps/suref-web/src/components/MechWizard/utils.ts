@@ -1,5 +1,10 @@
 import type { SURefChassis } from 'salvageunion-reference'
-import { SalvageUnionReference, getTechLevel, getTechLevelNumber, getSalvageValue } from 'salvageunion-reference'
+import {
+  SalvageUnionReference,
+  getTechLevel,
+  getTechLevelNumber,
+  getSalvageValue,
+} from 'salvageunion-reference'
 
 export interface WizardState {
   selectedChassisId: string | null

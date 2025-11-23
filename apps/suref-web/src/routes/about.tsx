@@ -47,7 +47,7 @@ function AboutPage() {
         <VStack gap={8} align="stretch" bg="transparent">
           {/* Quote section - centered */}
           <Box textAlign="center">
-            <Text fontSize="md" fontStyle="italic" color="brand.srd">
+            <Text fontSize="md" fontStyle="italic" color="su.black">
               "You're in the union, now!" - Lester{' '}
               <Text as="span" variant="pseudoheader" fontSize="md" fontStyle="italic">
                 "STUMPY"
@@ -285,7 +285,7 @@ function AboutPage() {
 
           {/* Thanks section - centered */}
           <Box textAlign="center">
-            <Text fontSize="sm" color="brand.srd">
+            <Text fontSize="sm" color="su.black">
               Many thanks to{' '}
               <Text as="span" variant="pseudoheader" fontSize="sm">
                 <Link
@@ -319,7 +319,7 @@ function AboutPage() {
           {/* GitHub link - centered */}
           <Box textAlign="center">
             <HStack gap={2} justifyContent="center" display="inline-flex">
-              <Text fontSize="sm" color="brand.srd">
+              <Text fontSize="sm" color="su.black">
                 development ongoing at
               </Text>
               <Box
@@ -353,6 +353,46 @@ function AboutPage() {
                 </Link>
               </Box>
             </HStack>
+          </Box>
+
+          {/* Feedback and bug reports */}
+          <Box textAlign="center">
+            <Text fontSize="sm" color="su.black">
+              Feedback? Bug Report? File an issue in{' '}
+              <Link
+                href="https://github.com/alxjrvs/SU-SRD/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                textDecoration="underline"
+                _hover={{ opacity: 0.8 }}
+                color="su.black"
+              >
+                Github
+              </Link>{' '}
+              or file a report in the{' '}
+              <Link
+                href="https://discord.com/channels/874613501124042793/1442144225469796382"
+                target="_blank"
+                rel="noopener noreferrer"
+                textDecoration="underline"
+                _hover={{ opacity: 0.8 }}
+                color="su.black"
+              >
+                #salvage-union-io
+              </Link>{' '}
+              channel in the{' '}
+              <Link
+                href="https://discord.gg/kMwD2bWgtC"
+                target="_blank"
+                rel="noopener noreferrer"
+                textDecoration="underline"
+                _hover={{ opacity: 0.8 }}
+                color="su.black"
+              >
+                Salvage Union Discord
+              </Link>
+              !
+            </Text>
           </Box>
         </VStack>
       </Container>

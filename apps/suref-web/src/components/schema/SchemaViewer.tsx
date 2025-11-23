@@ -179,7 +179,12 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
                 {techLevels.map((level) => {
                   const levelValue: number | 'B' | 'N' = level
                   const isSelected = techLevelFilters.has(String(levelValue))
-                  const displayLabel = typeof levelValue === 'number' ? `T${levelValue}` : levelValue === 'B' ? 'Bio' : 'N'
+                  const displayLabel =
+                    typeof levelValue === 'number'
+                      ? `T${levelValue}`
+                      : levelValue === 'B'
+                        ? 'Bio'
+                        : 'N'
                   return (
                     <Button
                       key={String(levelValue)}

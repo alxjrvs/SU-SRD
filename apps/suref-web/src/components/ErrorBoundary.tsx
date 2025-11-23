@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Text, Link } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react'
 import type { ReactNode } from 'react'
 import { Heading } from '@/components/base/Heading'
@@ -94,6 +94,42 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
                 )}
               </Text>
             </Box>
+            <Text fontSize="sm" color="su.black" mb={4} textAlign="center">
+              Feedback? Bug Report? File an issue in{' '}
+              <Link
+                href="https://github.com/alxjrvs/SU-SRD/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                textDecoration="underline"
+                _hover={{ opacity: 0.8 }}
+                color="brand.srd"
+              >
+                Github
+              </Link>{' '}
+              or file a report in the{' '}
+              <Link
+                href="https://discord.com/channels/874613501124042793/1442144225469796382"
+                target="_blank"
+                rel="noopener noreferrer"
+                textDecoration="underline"
+                _hover={{ opacity: 0.8 }}
+                color="brand.srd"
+              >
+                #salvage-union-io
+              </Link>{' '}
+              channel in the{' '}
+              <Link
+                href="https://discord.gg/kMwD2bWgtC"
+                target="_blank"
+                rel="noopener noreferrer"
+                textDecoration="underline"
+                _hover={{ opacity: 0.8 }}
+                color="brand.srd"
+              >
+                Salvage Union Discord
+              </Link>
+              !
+            </Text>
             <Button
               onClick={() => window.location.reload()}
               w="full"
