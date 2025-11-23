@@ -163,7 +163,6 @@ const ability = {
 #### New npm Scripts
 
 - `docs:schemas` - Generate schema documentation
-- `validate:generated` - Validate that generated files are up-to-date
 - `validate:references` - Validate cross-references in data files
 
 ### 🛠️ Development Tools

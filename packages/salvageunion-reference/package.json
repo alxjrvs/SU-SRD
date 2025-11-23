@@ -55,7 +55,6 @@
     "generate:types": "npm-run-all --parallel generate:enums generate:common generate:objects generate:schemas",
     "generate:index": "tsx tools/generateIndexFile.ts",
     "generate": "bun run generate:types && bun run generate:typeIndex && bun run generate:index && bun run generate:utilities && bun run lint -- --fix && bun run format",
-    "validate:generated": "tsx tools/validateGenerated.ts",
     "validate:references": "tsx tools/validateReferences.ts",
     "validate:actions": "tsx tools/validateActionReferences.ts",
     "validate:all": "npm-run-all --parallel validate:ids validate:references validate:actions",
