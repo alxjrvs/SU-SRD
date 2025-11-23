@@ -10,7 +10,7 @@ const schemaIndexData = getSchemaCatalog()
 
 const schemaViewerSearchSchema = z.object({
   search: z.string().optional(),
-  tl: z.array(z.number()).optional(),
+  tl: z.array(z.union([z.number(), z.literal('B'), z.literal('N')])).optional(),
   source: z.array(z.string()).optional(),
 })
 

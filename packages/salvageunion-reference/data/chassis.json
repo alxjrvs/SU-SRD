@@ -399,7 +399,7 @@
         ]
       },
       {
-        "name": "Royce Pattern Scrapper",
+        "name": "Royce",
         "systems": [
           {
             "name": "30mm Autocannon"
@@ -676,7 +676,7 @@
         ]
       },
       {
-        "name": "Chimerium Harvester Pattern Thresher",
+        "name": "Chimerium Harvester",
         "systems": [
           {
             "name": "Chimerium Harvester"
@@ -700,7 +700,7 @@
         "content": []
       },
       {
-        "name": "Mutant Pattern Thresher",
+        "name": "Mutant",
         "systems": [
           {
             "name": "Bio-Talon"
@@ -3865,7 +3865,7 @@
         ]
       },
       {
-        "name": "Gruman Pattern Neura-Phage",
+        "name": "Gruman",
         "systems": [
           {
             "name": "Red Pulse Laser"
@@ -4408,7 +4408,7 @@
     "page": 64,
     "patterns": [
       {
-        "name": "Alpha Pattern Impaler",
+        "name": "Alpha",
         "systems": [
           {
             "name": "Railgun"
@@ -4442,7 +4442,7 @@
         ]
       },
       {
-        "name": "Delta Pattern Impaler",
+        "name": "Delta",
         "systems": [
           {
             "name": "30mm Autocannon",
@@ -4477,7 +4477,7 @@
         ]
       },
       {
-        "name": "Experimental Bio Pattern Impaler",
+        "name": "Experimental Bio",
         "systems": [
           {
             "name": "Acid Cannon"
@@ -4529,7 +4529,7 @@
     "page": 67,
     "patterns": [
       {
-        "name": "Maw Pattern Fleshripper",
+        "name": "Maw",
         "systems": [
           {
             "name": "Acid Cannon"
@@ -4593,7 +4593,7 @@
     "page": 68,
     "patterns": [
       {
-        "name": "Screecher Pattern Stormterror",
+        "name": "Screecher",
         "systems": [
           {
             "name": "Super-Sonic Screecher"
@@ -4651,7 +4651,7 @@
     "page": 70,
     "patterns": [
       {
-        "name": "Probe Pattern Cranium",
+        "name": "Probe Pattern",
         "systems": [
           {
             "name": "Bio-Talon"
@@ -4714,7 +4714,7 @@
     "page": 72,
     "patterns": [
       {
-        "name": "Harvester Pattern Scuttler",
+        "name": "Harvester",
         "systems": [
           {
             "name": "Bio-Maw"
@@ -5191,7 +5191,7 @@
     "chassisAbilities": ["Integrated Wader Locomotion System", "Hybrid Diesel Reactor"],
     "patterns": [
       {
-        "name": "Weaver Pattern Wader",
+        "name": "Weaver",
         "systems": [
           {
             "name": ".50 Cal Machine Gun"
@@ -5249,7 +5249,7 @@
     "chassisAbilities": ["Automech", "Hell Fumes"],
     "patterns": [
       {
-        "name": "Stolas Pattern B",
+        "name": "B",
         "systems": [
           {
             "name": ".50 Cal Machine Gun",
@@ -5304,7 +5304,7 @@
     "chassisAbilities": ["Energy Smite"],
     "patterns": [
       {
-        "name": "Lot Pattern Paladin",
+        "name": "Lot",
         "systems": [
           {
             "name": "Articulated Rigging Arm"
@@ -5438,7 +5438,7 @@
     "chassisAbilities": ["Automech", "Demonic Visage"],
     "patterns": [
       {
-        "name": "Agares Pattern A",
+        "name": "A",
         "systems": [
           {
             "name": "Missile Pod"
@@ -5500,7 +5500,7 @@
     "chassisAbilities": ["Excoriate"],
     "patterns": [
       {
-        "name": "Cerys-Pattern Black Dragon",
+        "name": "Cerys",
         "systems": [
           {
             "name": "FM-3 Flamethrower",

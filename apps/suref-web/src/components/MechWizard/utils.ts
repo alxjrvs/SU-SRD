@@ -1,5 +1,5 @@
 import type { SURefChassis } from 'salvageunion-reference'
-import { SalvageUnionReference, getTechLevelNumber, getSalvageValue } from 'salvageunion-reference'
+import { SalvageUnionReference, getTechLevel, getTechLevelNumber, getSalvageValue } from 'salvageunion-reference'
 
 export interface WizardState {
   selectedChassisId: string | null
@@ -33,9 +33,12 @@ export function getWorkshopManualChassis(): SURefChassis[] {
 /**
  * Get chassis filtered by tech level
  */
-export function getChassisByTechLevel(chassis: SURefChassis[], techLevel: number): SURefChassis[] {
+export function getChassisByTechLevel(
+  chassis: SURefChassis[],
+  techLevel: number | 'B' | 'N'
+): SURefChassis[] {
   return chassis.filter((c) => {
-    const tl = getTechLevelNumber(c)
+    const tl = getTechLevel(c)
     return tl === techLevel
   })
 }

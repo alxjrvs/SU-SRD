@@ -5,13 +5,13 @@ import type {
   SURefObjectContentBlock,
 } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
-import { ContentBlockRenderer } from './EntityDisplay/ContentBlockRenderer'
+import { BlockContentRendererView } from './BlockContentRendererView'
 import { EntityChoice } from './EntityDisplay/EntityChoice'
 import { useParseTraitReferences } from '@/utils/parseTraitReferences'
 import { parseContentBlockString } from '@/utils/contentBlockHelpers'
 import type { DataValue } from '@/types/common'
 import { extractEntityDetails } from '@/lib/entityDataExtraction'
-import { SharedDetailItem } from './EntityDisplay/sharedDetailItem'
+import { DataValueDisplayView } from './DataValueDisplayView'
 import { RollTable } from '@/components/shared/RollTable'
 
 interface NestedChassisAbilityProps {
@@ -167,7 +167,7 @@ export function NestedChassisAbility({
         {renderDetailsInline &&
           details.length > 0 &&
           details.map((item, index) => (
-            <SharedDetailItem key={index} item={item} compact={compact} />
+            <DataValueDisplayView key={index} item={item} compact={compact} damaged={false} />
           ))}
         {/* Render first content block inline when condition is met */}
         {renderFirstContentInline && firstContentBlock && (
@@ -189,7 +189,7 @@ export function NestedChassisAbility({
           mb={remainingContent || hasTable || hasChoices ? spacing : 0}
         >
           {details.map((item, index) => (
-            <SharedDetailItem key={index} item={item} compact={compact} />
+            <DataValueDisplayView key={index} item={item} compact={compact} damaged={false} />
           ))}
         </Flex>
       )}
@@ -197,11 +197,12 @@ export function NestedChassisAbility({
       {/* Remaining content blocks below detail row */}
       {remainingContent && remainingContent.length > 0 && !hideContent && (
         <VStack gap={spacing} alignItems="stretch" pt={0}>
-          <ContentBlockRenderer
+          <BlockContentRendererView
             content={remainingContent}
             fontSize={fontSize}
             compact={compact}
             chassisName={chassisName}
+            damaged={false}
           />
         </VStack>
       )}

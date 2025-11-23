@@ -1,6 +1,6 @@
 import { useMemo, useState, useCallback } from 'react'
 import { Box, VStack, Button, Tabs, Flex } from '@chakra-ui/react'
-import { SalvageUnionReference, getTechLevelNumber } from 'salvageunion-reference'
+import { SalvageUnionReference, getTechLevel } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
 import { EntityDisplay } from '@/components/entity/EntityDisplay'
 import type { UseMechWizardStateReturn } from './useMechWizardState'
@@ -13,12 +13,12 @@ interface ChassisSelectionStepProps {
 
 export function ChassisSelectionStep({ wizardState, onComplete }: ChassisSelectionStepProps) {
   const { state, setSelectedChassisId } = wizardState
-  const [selectedTechLevel, setSelectedTechLevel] = useState<number | null>(() => {
+  const [selectedTechLevel, setSelectedTechLevel] = useState<number | 'B' | 'N' | null>(() => {
     // If a chassis is already selected, use its tech level
     if (state.selectedChassisId) {
       const chassis = SalvageUnionReference.Chassis.find((c) => c.id === state.selectedChassisId)
       if (chassis) {
-        return getTechLevelNumber(chassis) ?? 1
+        return getTechLevel(chassis) ?? 1
       }
     }
     return 1
@@ -30,14 +30,22 @@ export function ChassisSelectionStep({ wizardState, onComplete }: ChassisSelecti
   const workshopChassis = useMemo(() => getWorkshopManualChassis(), [])
 
   const techLevels = useMemo(() => {
-    const levels = new Set<number>()
+    const levels = new Set<number | 'B' | 'N'>()
     workshopChassis.forEach((chassis) => {
-      const tl = getTechLevelNumber(chassis)
+      const tl = getTechLevel(chassis)
       if (tl !== undefined) {
         levels.add(tl)
       }
     })
-    return Array.from(levels).sort()
+    // Sort: numbers first (ascending), then 'B', then 'N'
+    return Array.from(levels).sort((a, b) => {
+      if (typeof a === 'number' && typeof b === 'number') return a - b
+      if (typeof a === 'number') return -1
+      if (typeof b === 'number') return 1
+      if (a === 'B' && b === 'N') return -1
+      if (a === 'N' && b === 'B') return 1
+      return 0
+    })
   }, [workshopChassis])
 
   const filteredChassis = useMemo(() => {
@@ -66,7 +74,7 @@ export function ChassisSelectionStep({ wizardState, onComplete }: ChassisSelecti
   }, [state.selectedChassisId, onComplete])
 
   const handleTechLevelChange = useCallback(
-    (techLevel: number | null) => {
+    (techLevel: number | 'B' | 'N' | null) => {
       setSelectedTechLevel(techLevel)
       setSelectedChassisTab('')
       setSelectedChassisId(null)
@@ -92,21 +100,24 @@ export function ChassisSelectionStep({ wizardState, onComplete }: ChassisSelecti
 
       {/* Tech Level Tabs */}
       <Flex gap={1} flexWrap="wrap" justifyContent="center">
-        {techLevels.map((tl) => (
-          <Button
-            key={tl}
-            onClick={() => handleTechLevelChange(tl === selectedTechLevel ? null : tl)}
-            px={3}
-            py={2}
-            borderRadius="md"
-            fontWeight="bold"
-            fontSize="sm"
-            bg={selectedTechLevel === tl ? 'su.orange' : 'su.lightBlue'}
-            color={selectedTechLevel === tl ? 'su.white' : 'su.black'}
-          >
-            TL{tl}
-          </Button>
-        ))}
+        {techLevels.map((tl) => {
+          const displayLabel = typeof tl === 'number' ? `TL${tl}` : tl === 'B' ? 'Bio' : 'N'
+          return (
+            <Button
+              key={String(tl)}
+              onClick={() => handleTechLevelChange(tl === selectedTechLevel ? null : tl)}
+              px={3}
+              py={2}
+              borderRadius="md"
+              fontWeight="bold"
+              fontSize="sm"
+              bg={selectedTechLevel === tl ? 'su.orange' : 'su.lightBlue'}
+              color={selectedTechLevel === tl ? 'su.white' : 'su.black'}
+            >
+              {displayLabel}
+            </Button>
+          )
+        })}
         <Button
           onClick={() => handleTechLevelChange(null)}
           px={3}

@@ -1,27 +1,27 @@
 import { useMemo, type ReactNode } from 'react'
-import { EntityDetailDisplay } from '@/components/entity/EntityDetailDisplay'
+import { TraitKeywordDisplayView } from '@/components/entity/TraitKeywordDisplayView'
 
 /**
- * Hook to parse text content for trait references and replace them with EntityDetailDisplay components
+ * Hook to parse text content for trait references and replace them with TraitKeywordDisplayView components
  *
  * Supports two bracket notation patterns:
- * 1. Simple traits: [[trait-name]] → EntityDetailDisplay with label="trait-name"
- * 2. Traits with parameters: [[[Trait Name] (parameter)]] → EntityDetailDisplay with label="trait-name", value="parameter"
+ * 1. Simple traits: [[trait-name]] → TraitKeywordDisplayView with label="trait-name"
+ * 2. Traits with parameters: [[[Trait Name] (parameter)]] → TraitKeywordDisplayView with label="trait-name", value="parameter"
  *
  * Performance: Uses useMemo to prevent re-parsing on every render
  * Returns original text as-is if no bracket notation found (common case)
- * EntityDetailDisplay uses useMemo to cache entity lookups for performance
+ * TraitKeywordDisplayView uses useMemo to cache entity lookups for performance
  *
  * @param text - The text content to parse
- * @returns Original text string if no matches, or array of React nodes (strings and EntityDetailDisplay components) if matches found
+ * @returns Original text string if no matches, or array of React nodes (strings and TraitKeywordDisplayView components) if matches found
  *
  * @example
  * const parsed = useParseTraitReferences("This has [[vulnerable]] trait")
- * // Returns: ["This has ", <EntityDetailDisplay label="vulnerable" schemaName="traits" />, " trait"]
+ * // Returns: ["This has ", <TraitKeywordDisplayView label="vulnerable" schemaName="traits" damaged={false} />, " trait"]
  *
  * @example
  * const parsed = useParseTraitReferences("This has [[[explosive] (4)]] trait")
- * // Returns: ["This has ", <EntityDetailDisplay label="explosive" schemaName="traits" value="4" />, " trait"]
+ * // Returns: ["This has ", <TraitKeywordDisplayView label="explosive" schemaName="traits" value="4" damaged={false} />, " trait"]
  *
  * @example
  * const parsed = useParseTraitReferences("No trait references here")
@@ -54,23 +54,25 @@ export function useParseTraitReferences(text: string | undefined): ReactNode {
         const paramValue = match[2].trim()
 
         nodes.push(
-          <EntityDetailDisplay
+          <TraitKeywordDisplayView
             key={`trait-${match.index}`}
             label={traitName}
             schemaName="traits"
             value={paramValue}
             compact
+            damaged={false}
           />
         )
       } else if (match[3] !== undefined) {
         const traitName = match[3].trim()
 
         nodes.push(
-          <EntityDetailDisplay
+          <TraitKeywordDisplayView
             key={`trait-${match.index}`}
             label={traitName}
             schemaName="traits"
             compact
+            damaged={false}
           />
         )
       }

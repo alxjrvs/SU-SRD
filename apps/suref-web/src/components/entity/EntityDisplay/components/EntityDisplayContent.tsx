@@ -176,6 +176,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
                     content={contentBlocks!}
                     fontSize={fontSize.sm}
                     compact={compact}
+                    damaged={damaged}
                   />
                 )}
                 {children}

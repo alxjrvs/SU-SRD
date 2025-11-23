@@ -51,7 +51,7 @@ export function EntitySelectionModal({
 }: EntitySelectionModalProps) {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterSearchTerm, setFilterSearchTerm] = useState('')
-  const [techLevelFilter, setTechLevelFilter] = useState<number | null>(null)
+  const [techLevelFilter, setTechLevelFilter] = useState<number | 'B' | 'N' | null>(null)
   const [schemaFilter, setSchemaFilter] = useState<SURefEnumSchemaName | null>(null)
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null)
 
@@ -239,6 +239,30 @@ export function EntitySelectionModal({
                     TL{tl}
                   </Button>
                 ))}
+                <Button
+                  onClick={() => setTechLevelFilter('B' === techLevelFilter ? null : 'B')}
+                  px={3}
+                  py={2}
+                  borderRadius="md"
+                  fontWeight="bold"
+                  fontSize="sm"
+                  bg={techLevelFilter === 'B' ? 'su.orange' : 'su.lightBlue'}
+                  color={techLevelFilter === 'B' ? 'su.white' : 'su.black'}
+                >
+                  Bio
+                </Button>
+                <Button
+                  onClick={() => setTechLevelFilter('N' === techLevelFilter ? null : 'N')}
+                  px={3}
+                  py={2}
+                  borderRadius="md"
+                  fontWeight="bold"
+                  fontSize="sm"
+                  bg={techLevelFilter === 'N' ? 'su.orange' : 'su.lightBlue'}
+                  color={techLevelFilter === 'N' ? 'su.white' : 'su.black'}
+                >
+                  N
+                </Button>
                 <Button
                   onClick={() => setTechLevelFilter(null)}
                   px={3}

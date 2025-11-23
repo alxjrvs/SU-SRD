@@ -19,7 +19,7 @@ export function MainMechDisplay({ id, isEditable }: { id: string; isEditable: bo
   const techLevelDisplay = chassisRef ? (getTechLevel(chassisRef) ?? 0) : 0
   const isBioTechLevel = techLevelDisplay === 'B'
   const isNTechLevel = techLevelDisplay === 'N'
-  const bgColor = isBioTechLevel ? 'su.sicklyYellow' : isNTechLevel ? 'su.silver' : 'su.green'
+  const bgColor = 'su.green' // Always green for mech chassis header
 
   return (
     <VStack flex="1" gap={2} alignItems="stretch">

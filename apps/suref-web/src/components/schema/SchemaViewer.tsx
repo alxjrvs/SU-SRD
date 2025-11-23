@@ -10,7 +10,7 @@ import { useNavigate } from '@tanstack/react-router'
 import { Route } from '@/routes/schema/$schemaId/index'
 import { getDisplayComponent } from '@/components/componentRegistry'
 import type { SURefEntity } from 'salvageunion-reference'
-import { getTechLevelNumber } from 'salvageunion-reference'
+import { getTechLevel } from 'salvageunion-reference'
 import { getEntitySlug } from '@/utils/slug'
 
 interface SchemaViewerProps {
@@ -27,20 +27,28 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
 
   const { search = '', tl = [], source = [] } = Route.useSearch()
 
-  const techLevelFilters = useMemo(() => new Set(tl.map(String)), [tl])
+  const techLevelFilters = useMemo(() => new Set(tl.map((level) => String(level))), [tl])
   const sourceFilters = useMemo(() => new Set(source), [source])
 
   const currentSchema = schemas.find((s) => s.id === schemaId)
 
   const techLevels = useMemo(() => {
-    const levels = new Set<number>()
+    const levels = new Set<number | 'B' | 'N'>()
     data.forEach((item) => {
-      const techLevel = getTechLevelNumber(item)
+      const techLevel = getTechLevel(item)
       if (techLevel !== undefined) {
         levels.add(techLevel)
       }
     })
-    return Array.from(levels).sort()
+    // Sort: numbers first (ascending), then 'B', then 'N'
+    return Array.from(levels).sort((a, b) => {
+      if (typeof a === 'number' && typeof b === 'number') return a - b
+      if (typeof a === 'number') return -1
+      if (typeof b === 'number') return 1
+      if (a === 'B' && b === 'N') return -1
+      if (a === 'N' && b === 'B') return 1
+      return 0
+    })
   }, [data])
 
   const sources = useMemo(() => {
@@ -65,7 +73,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
       }
 
       if (techLevelFilters.size > 0) {
-        const techLevel = getTechLevelNumber(item)
+        const techLevel = getTechLevel(item)
         const itemTechLevel = techLevel?.toString()
         if (!itemTechLevel || !techLevelFilters.has(itemTechLevel)) {
           return false
@@ -169,17 +177,19 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
                   All
                 </Button>
                 {techLevels.map((level) => {
-                  const isSelected = techLevelFilters.has(String(level))
+                  const levelValue: number | 'B' | 'N' = level
+                  const isSelected = techLevelFilters.has(String(levelValue))
+                  const displayLabel = typeof levelValue === 'number' ? `T${levelValue}` : levelValue === 'B' ? 'Bio' : 'N'
                   return (
                     <Button
-                      key={level}
+                      key={String(levelValue)}
                       onClick={() => {
                         navigate({
                           search: (prev) => ({
                             ...prev,
-                            tl: prev.tl?.includes(level)
-                              ? prev.tl.filter((l) => l !== level)
-                              : [...(prev.tl || []), level],
+                            tl: prev.tl?.includes(levelValue)
+                              ? prev.tl.filter((l) => l !== levelValue)
+                              : [...(prev.tl || []), levelValue],
                           }),
                         })
                       }}
@@ -192,7 +202,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
                       borderColor="border.default"
                       _hover={isSelected ? {} : { bg: 'bg.hover' }}
                     >
-                      T{level}
+                      {displayLabel}
                     </Button>
                   )
                 })}

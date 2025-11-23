@@ -392,11 +392,9 @@ export function getSourceStyles(
     }
     case 'False Flag': {
       // Windows 95 beveled border aesthetic
-      // Classic raised button look: light top/left, dark bottom/right
+      // Classic raised button look: dark bottom/right
       // Add inner grey border and horizontal lines mimicking old computer UI
       const baseStyles = {
-        borderTop: '1px solid rgba(255, 255, 255, 0.8)',
-        borderLeft: '1px solid rgba(255, 255, 255, 0.8)',
         borderBottom: '1px solid rgba(128, 128, 128, 0.6)',
         borderRight: '1px solid rgba(128, 128, 128, 0.6)',
         position: 'relative' as const,

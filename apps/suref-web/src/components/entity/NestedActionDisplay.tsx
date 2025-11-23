@@ -2,10 +2,10 @@ import { Box, Flex, VStack } from '@chakra-ui/react'
 import type { SURefMetaAction, SURefObjectChoice } from 'salvageunion-reference'
 import { getEntityDisplayName } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
-import { ContentBlockRenderer } from './EntityDisplay/ContentBlockRenderer'
+import { BlockContentRendererView } from './BlockContentRendererView'
 import { EntityChoice } from './EntityDisplay/EntityChoice'
 import { extractEntityDetails } from '@/lib/entityDataExtraction'
-import { SharedDetailItem } from './EntityDisplay/sharedDetailItem'
+import { DataValueDisplayView } from './DataValueDisplayView'
 import { RollTable } from '@/components/shared/RollTable'
 
 interface NestedActionDisplayProps {
@@ -78,7 +78,7 @@ export function NestedActionDisplay({
           direction="row"
         >
           {details.map((item, index) => (
-            <SharedDetailItem key={index} item={item} compact={compact} />
+            <DataValueDisplayView key={index} item={item} compact={compact} damaged={false} />
           ))}
         </Flex>
       )}
@@ -90,7 +90,12 @@ export function NestedActionDisplay({
           pt={details.length > 0 ? 0 : spacing}
           alignItems="stretch"
         >
-          <ContentBlockRenderer content={data.content!} fontSize={fontSize} compact={compact} />
+          <BlockContentRendererView
+            content={data.content!}
+            fontSize={fontSize}
+            compact={compact}
+            damaged={false}
+          />
         </VStack>
       )}
 
