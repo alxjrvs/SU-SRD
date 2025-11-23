@@ -1,6 +1,6 @@
 import { Grid, VStack, Text } from '@chakra-ui/react'
 import { useMemo } from 'react'
-import type { SURefSystem, SURefModule } from 'salvageunion-reference'
+import { getTechLevelNumber, type SURefSystem, type SURefModule } from 'salvageunion-reference'
 import { useHydratedPilot } from '@/hooks/pilot'
 import { RoundedBox } from '@/components/shared/RoundedBox'
 
@@ -16,8 +16,10 @@ export function PilotModulesSystems({ id, disabled = false }: PilotModulesSystem
     return modules
       .map((m) => m.ref as SURefModule)
       .sort((a, b) => {
-        if (a.techLevel !== b.techLevel) {
-          return a.techLevel - b.techLevel
+        const aTechLevel = getTechLevelNumber(a) ?? 0
+        const bTechLevel = getTechLevelNumber(b) ?? 0
+        if (aTechLevel !== bTechLevel) {
+          return aTechLevel - bTechLevel
         }
         return a.name.localeCompare(b.name)
       })
@@ -27,8 +29,10 @@ export function PilotModulesSystems({ id, disabled = false }: PilotModulesSystem
     return systems
       .map((s) => s.ref as SURefSystem)
       .sort((a, b) => {
-        if (a.techLevel !== b.techLevel) {
-          return a.techLevel - b.techLevel
+        const aTechLevel = getTechLevelNumber(a) ?? 0
+        const bTechLevel = getTechLevelNumber(b) ?? 0
+        if (aTechLevel !== bTechLevel) {
+          return aTechLevel - bTechLevel
         }
         return a.name.localeCompare(b.name)
       })

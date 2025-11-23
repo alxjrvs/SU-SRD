@@ -8,6 +8,7 @@ import {
   getSystemSlots,
   getModuleSlots,
   getSlotsRequired,
+  getTechLevelNumber,
 } from 'salvageunion-reference'
 import { StatDisplay } from '@/components/StatDisplay'
 import { AddStatButton } from '@/components/shared/AddStatButton'
@@ -71,8 +72,10 @@ function EquipmentItemWithSlots({
       .map((s) => allSystems.find((e) => e.id === s.ref.id))
       .filter((e): e is SURefSystem => e !== undefined)
       .sort((a, b) => {
-        if (a.techLevel !== b.techLevel) {
-          return a.techLevel - b.techLevel
+        const aTechLevel = getTechLevelNumber(a) ?? 0
+        const bTechLevel = getTechLevelNumber(b) ?? 0
+        if (aTechLevel !== bTechLevel) {
+          return aTechLevel - bTechLevel
         }
         return a.name.localeCompare(b.name)
       })
@@ -83,8 +86,10 @@ function EquipmentItemWithSlots({
       .map((m) => allModules.find((e) => e.id === m.ref.id))
       .filter((e): e is SURefModule => e !== undefined)
       .sort((a, b) => {
-        if (a.techLevel !== b.techLevel) {
-          return a.techLevel - b.techLevel
+        const aTechLevel = getTechLevelNumber(a) ?? 0
+        const bTechLevel = getTechLevelNumber(b) ?? 0
+        if (aTechLevel !== bTechLevel) {
+          return aTechLevel - bTechLevel
         }
         return a.name.localeCompare(b.name)
       })
