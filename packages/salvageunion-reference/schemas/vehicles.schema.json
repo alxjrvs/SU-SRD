@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://salvageunion.com/schemas/vehicles.schema.json",
   "title": "vehicles",
   "description": "Conventional vehicles in Salvage Union",
@@ -15,7 +15,70 @@
         "$ref": "shared/objects.schema.json#/definitions/mechanicalEntity"
       }
     ],
-    "properties": {},
-    "unevaluatedProperties": false
+    "properties": {
+      "asset_url": {
+        "$ref": "shared/common.schema.json#/definitions/asset_url"
+      },
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
+      },
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
+      "indexable": {
+        "type": "boolean",
+        "default": true
+      },
+      "blackMarket": {
+        "type": "boolean",
+        "default": false
+      },
+      "name": {
+        "$ref": "shared/common.schema.json#/definitions/name"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
+      "page": {
+        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
+      },
+      "structurePoints": {
+        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
+      },
+      "techLevel": {
+        "$ref": "shared/common.schema.json#/definitions/techLevel"
+      },
+      "salvageValue": {
+        "$ref": "shared/common.schema.json#/definitions/salvageValue"
+      },
+      "systems": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "traits": {
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/trait"
+        }
+      },
+      "energyPoints": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "heatCapacity": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "systemSlots": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "moduleSlots": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "cargoCapacity": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      }
+    },
+    "additionalProperties": false
   }
 }

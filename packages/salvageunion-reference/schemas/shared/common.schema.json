@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://salvageunion.com/schemas/shared/common.schema.json",
   "title": "Salvage Union Common Definitions",
   "description": "Shared common type definitions for Salvage Union game data",

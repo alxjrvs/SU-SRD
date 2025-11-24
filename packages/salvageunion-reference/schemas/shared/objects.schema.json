@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://salvageunion.com/schemas/shared/objects.schema.json",
   "title": "Salvage Union Object Definitions",
   "description": "Shared complex object definitions for Salvage Union game data",
@@ -647,6 +647,32 @@
         }
       ],
       "properties": {
+        "asset_url": {
+          "$ref": "common.schema.json#/definitions/asset_url"
+        },
+        "content": {
+          "$ref": "#/definitions/content"
+        },
+        "id": {
+          "$ref": "common.schema.json#/definitions/id"
+        },
+        "indexable": {
+          "type": "boolean",
+          "default": true
+        },
+        "blackMarket": {
+          "type": "boolean",
+          "default": false
+        },
+        "name": {
+          "$ref": "common.schema.json#/definitions/name"
+        },
+        "source": {
+          "$ref": "enums.schema.json#/definitions/source"
+        },
+        "page": {
+          "$ref": "common.schema.json#/definitions/positiveInteger"
+        },
         "hybrid": {
           "type": "boolean",
           "description": "Whether this is a hybrid class (cannot be selected as initial class)"
@@ -656,12 +682,9 @@
         },
         "legendaryTree": {
           "$ref": "enums.schema.json#/definitions/tree"
-        },
-        "content": {
-          "$ref": "#/definitions/content"
         }
       },
-      "unevaluatedProperties": false
+      "additionalProperties": false
     },
     "dataValue": {
       "type": "object",

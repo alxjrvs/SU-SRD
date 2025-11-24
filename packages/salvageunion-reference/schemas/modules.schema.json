@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://salvageunion.com/schemas/modules.schema.json",
   "title": "modules",
   "description": "Mech modules in Salvage Union",
@@ -12,6 +12,74 @@
       {
         "$ref": "shared/objects.schema.json#/definitions/baseEntity"
       }
-    ]
+    ],
+    "properties": {
+      "asset_url": {
+        "$ref": "shared/common.schema.json#/definitions/asset_url"
+      },
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
+      },
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
+      "indexable": {
+        "type": "boolean",
+        "default": true
+      },
+      "blackMarket": {
+        "type": "boolean",
+        "default": false
+      },
+      "name": {
+        "$ref": "shared/common.schema.json#/definitions/name"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
+      "page": {
+        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
+      },
+      "structurePoints": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "energyPoints": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "heatCapacity": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "systemSlots": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "moduleSlots": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "cargoCapacity": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "techLevel": {
+        "$ref": "shared/common.schema.json#/definitions/techLevel"
+      },
+      "salvageValue": {
+        "$ref": "shared/common.schema.json#/definitions/salvageValue"
+      },
+      "slotsRequired": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "recommended": {
+        "type": "boolean"
+      },
+      "count": {
+        "$ref": "shared/common.schema.json#/definitions/nonNegativeInteger"
+      },
+      "actions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": false
   }
 }

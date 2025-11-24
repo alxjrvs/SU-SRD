@@ -2,11 +2,10 @@ import { describe, expect, it, beforeAll } from 'vitest'
 import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import Ajv2019Import from 'ajv/dist/2019.js'
+import Ajv from 'ajv'
 import addFormatsImport from 'ajv-formats'
-import schemaIndex from '../schemas/index.json' with { type: 'json' }
+import schemaIndex from '../schemas/index.json'
 
-const Ajv2019 = Ajv2019Import.default || Ajv2019Import
 const addFormats = addFormatsImport.default || addFormatsImport
 
 // Get the project root directory
@@ -40,8 +39,8 @@ interface JSONSchemaObject {
   [key: string]: unknown
 }
 
-// Create AJV instance with draft 2019-09 support
-const ajv = new Ajv2019({
+// Create AJV instance with draft 7 support
+const ajv = new Ajv({
   strict: false,
   allErrors: true,
   verbose: true,
@@ -75,6 +74,35 @@ function loadSchema(schemaPath: string): JSONSchemaObject {
   return loadJson(schemaPath) as JSONSchemaObject
 }
 
+/**
+ * Get a human-readable identifier for an error path.
+ * Tries to use the 'name' field from the data item, falls back to 'id', then to the path.
+ */
+function getErrorIdentifier(instancePath: string, data: unknown): string {
+  if (!instancePath || instancePath === '') {
+    return 'root'
+  }
+
+  // Extract array index from path like "/0" or "/123"
+  const indexMatch = instancePath.match(/^\/(\d+)(?:\/.*)?$/)
+  if (indexMatch && indexMatch[1] && Array.isArray(data)) {
+    const index = parseInt(indexMatch[1], 10)
+    const item = data[index]
+    if (item && typeof item === 'object' && item !== null) {
+      const itemObj = item as Record<string, unknown>
+      if (typeof itemObj.name === 'string') {
+        return `"${itemObj.name}"`
+      }
+      if (typeof itemObj.id === 'string') {
+        return `id:${itemObj.id}`
+      }
+    }
+  }
+
+  // Fallback to the path itself
+  return instancePath
+}
+
 describe('Schema Validation', () => {
   // Create a test for each data file
   for (const config of validationConfigs) {
@@ -88,8 +116,8 @@ describe('Schema Validation', () => {
       if (!valid && validate.errors) {
         // Format errors for better test output
         const errorMessages = validate.errors.map((error, index) => {
-          const path = error.instancePath || 'root'
-          return `  ${index + 1}. ${path}: ${error.message}`
+          const identifier = getErrorIdentifier(error.instancePath || '', data)
+          return `  ${index + 1}. ${identifier}: ${error.message}`
         })
 
         // Show first 10 errors in the test output
@@ -153,4 +181,101 @@ describe('Schema Catalog Enhancement', () => {
       }
     })
   })
+})
+
+describe('Additional Properties Validation', () => {
+  const testCases = [
+    {
+      schemaName: 'abilities',
+      validData: {
+        id: 'test-id',
+        name: 'Test Ability',
+        source: 'Salvage Union Workshop Manual',
+        page: 1,
+        tree: 'Generic',
+        level: 1,
+        actions: ['Test Ability'],
+      },
+      extraProperty: 'invalidProperty',
+    },
+    {
+      schemaName: 'chassis',
+      validData: {
+        id: 'test-id',
+        name: 'Test Chassis',
+        source: 'Salvage Union Workshop Manual',
+        page: 1,
+        structurePoints: 10,
+        energyPoints: 10,
+        heatCapacity: 10,
+        systemSlots: 10,
+        moduleSlots: 10,
+        cargoCapacity: 10,
+        techLevel: 1,
+        salvageValue: 1,
+        chassisAbilities: [],
+        patterns: [],
+      },
+      extraProperty: 'extraField',
+    },
+    {
+      schemaName: 'equipment',
+      validData: {
+        id: 'test-id',
+        name: 'Test Equipment',
+        source: 'Salvage Union Workshop Manual',
+        page: 1,
+        techLevel: 1,
+        actions: ['Test Equipment'],
+      },
+      extraProperty: 'unknownField',
+    },
+  ]
+
+  for (const testCase of testCases) {
+    describe(testCase.schemaName, () => {
+      let validate: ReturnType<typeof ajv.compile>
+
+      beforeAll(() => {
+        const schemaPath = `schemas/${testCase.schemaName}.schema.json`
+        const schema = loadSchema(schemaPath)
+        // Remove $id to avoid conflicts if schema is already registered
+        const schemaWithoutId = { ...schema }
+        delete schemaWithoutId.$id
+        validate = ajv.compile(schemaWithoutId)
+      })
+
+      it('should reject data with extra properties', () => {
+        const invalidData = [
+          {
+            ...testCase.validData,
+            [testCase.extraProperty]: 'This should not be allowed',
+          },
+        ]
+
+        const valid = validate(invalidData)
+
+        expect(valid).toBe(false)
+        expect(validate.errors).toBeDefined()
+        expect(validate.errors?.length).toBeGreaterThan(0)
+        expect(validate.errors?.[0]?.keyword).toBe('additionalProperties')
+      })
+
+      it('should accept valid data without extra properties', () => {
+        const validData = [testCase.validData]
+
+        const valid = validate(validData)
+
+        if (!valid && validate.errors) {
+          const errorMessages = validate.errors.slice(0, 5).map((error) => {
+            const identifier = getErrorIdentifier(error.instancePath || '', validData)
+            return `  ${identifier}: ${error.message}`
+          })
+          throw new Error(`Validation failed:\n${errorMessages.join('\n')}`)
+        }
+
+        expect(valid).toBe(true)
+      })
+    })
+  }
 })
