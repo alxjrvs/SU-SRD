@@ -35,12 +35,12 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "rm -rf dist && bun test && bun run docs && bun run generate && tsc --project tsconfig.build.json && bun run validate:all && bun run format && bun run lint",
-    "build:quick": "bun run generate && tsc --project tsconfig.build.json",
-    "build:incremental": "bun run generate && tsc --project tsconfig.build.json --incremental",
-    "watch": "bun run generate && tsc --project tsconfig.build.json --watch",
+    "build": "rm -rf dist && bun test && bun run docs && tsc --project tsconfig.build.json && bun run validate:all && bun run format && bun run lint",
+    "build:quick": "tsc --project tsconfig.build.json",
+    "build:incremental": "tsc --project tsconfig.build.json --incremental",
+    "watch": "tsc --project tsconfig.build.json --watch",
     "watch:quick": "tsc --project tsconfig.build.json --watch",
-    "prepare": "bun run generate && tsc --project tsconfig.build.json",
+    "prepare": "tsc --project tsconfig.build.json",
     "prepublishOnly": "bun run build && bun run typecheck",
     "validate:ids": "tsx tools/checkUniqueIds.ts",
     "fix:ids": "tsx tools/generateMissingIds.ts",

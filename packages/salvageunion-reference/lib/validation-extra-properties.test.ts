@@ -6,10 +6,9 @@ import { describe, expect, it, beforeAll } from 'vitest'
 import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import AjvImport from 'ajv'
+import Ajv from 'ajv'
 import addFormatsImport from 'ajv-formats'
 
-const Ajv = AjvImport.default || AjvImport
 const addFormats = addFormatsImport.default || addFormatsImport
 
 const __filename = fileURLToPath(import.meta.url)

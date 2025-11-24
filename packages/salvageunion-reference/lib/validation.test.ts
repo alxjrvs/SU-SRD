@@ -2,11 +2,10 @@ import { describe, expect, it, beforeAll } from 'vitest'
 import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import AjvImport from 'ajv'
+import Ajv from 'ajv'
 import addFormatsImport from 'ajv-formats'
 import schemaIndex from '../schemas/index.json'
 
-const Ajv = AjvImport.default || AjvImport
 const addFormats = addFormatsImport.default || addFormatsImport
 
 // Get the project root directory
