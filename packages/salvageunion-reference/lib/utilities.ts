@@ -1004,6 +1004,37 @@ export function getGrants(entity: SURefMetaEntity): SURefObjectGrant[] | undefin
 }
 
 /**
+ * Get source from an entity
+ * @param entity - The entity to extract source from
+ * @returns The source string or undefined if not present
+ */
+export function getSource(entity: SURefMetaEntity): string | undefined {
+  return 'source' in entity && typeof entity.source === 'string' ? entity.source : undefined
+}
+
+/**
+ * Get requirement from an entity (for ability-tree-requirements)
+ * @param entity - The entity to extract requirement from
+ * @returns The requirement array or undefined if not present
+ */
+export function getRequirement(entity: SURefMetaEntity): string[] | undefined {
+  return 'requirement' in entity && Array.isArray(entity.requirement)
+    ? (entity.requirement as string[])
+    : undefined
+}
+
+/**
+ * Get indexable from an entity
+ * @param entity - The entity to extract indexable from
+ * @returns The indexable boolean or undefined if not present
+ */
+export function getIndexable(entity: SURefMetaEntity): boolean | undefined {
+  return 'indexable' in entity && typeof entity.indexable === 'boolean'
+    ? entity.indexable
+    : undefined
+}
+
+/**
  * Represents a parsed trait reference from text
  */
 export interface ParsedTraitReference {

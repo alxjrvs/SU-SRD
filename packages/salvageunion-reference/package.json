@@ -23,6 +23,11 @@
       "import": "./schemas/*.json",
       "default": "./schemas/*.json"
     },
+    "./schemas/zod": {
+      "types": "./lib/schemas/index.ts",
+      "import": "./lib/schemas/index.ts",
+      "default": "./lib/schemas/index.ts"
+    },
     "./package.json": "./package.json"
   },
   "sideEffects": false,
@@ -86,8 +91,7 @@
     "@eslint/js": "^9.39.1",
     "@types/bun": "^1.3.2",
     "@types/node": "^24.10.1",
-    "ajv": "^8.17.1",
-    "ajv-formats": "^3.0.1",
+    "zod": "^4.0.0",
     "bun-types": "^1.3.2",
     "eslint": "^9.39.1",
     "json-schema-to-typescript": "^15.0.4",
@@ -101,5 +105,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "zod": "^4.0.0"
   }
 }

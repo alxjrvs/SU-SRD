@@ -46,6 +46,10 @@ export * from './utilities.js'
 // Export helper functions for common operations
 export * from './helpers.js'
 
+// Export Zod schemas (source of truth for validation)
+export * from './schemas/index.js'
+export { toJSONSchema, exportSchemaToJSON, type JSONSchema } from './schemas/toJSONSchema.js'
+
 export {
   search,
   searchIn,

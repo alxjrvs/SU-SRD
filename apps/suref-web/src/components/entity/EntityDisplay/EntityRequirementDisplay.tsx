@@ -13,7 +13,7 @@ export function EntityRequirementDisplay() {
   return (
     <Flex p={spacing.contentPadding}>
       <SheetDisplay compact={compact} label="Requirements" labelColor="brand.srd">
-        {requirement.map((req, index) => (
+        {requirement.map((req: string, index: number) => (
           <Fragment key={req + '-' + index}>
             <Text as="span" key={index}>
               <Text as="span" fontWeight="bold">

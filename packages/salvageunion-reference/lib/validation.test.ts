@@ -1,13 +1,9 @@
-import { describe, expect, it, beforeAll } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import Ajv2019Import from 'ajv/dist/2019.js'
-import addFormatsImport from 'ajv-formats'
 import schemaIndex from '../schemas/index.json' with { type: 'json' }
-
-const Ajv2019 = Ajv2019Import.default || Ajv2019Import
-const addFormats = addFormatsImport.default || addFormatsImport
+import { getZodSchema } from './schemas/index.js'
 
 // Get the project root directory
 const __filename = fileURLToPath(import.meta.url)
@@ -35,60 +31,23 @@ function loadJson(filePath: string): unknown {
   return JSON.parse(content)
 }
 
-interface JSONSchemaObject {
-  $id?: string
-  [key: string]: unknown
-}
-
-// Create AJV instance with draft 2019-09 support
-const ajv = new Ajv2019({
-  strict: false,
-  allErrors: true,
-  verbose: true,
-})
-addFormats(ajv)
-
-// Load shared schemas once before all tests
-beforeAll(() => {
-  const sharedSchemas = [
-    {
-      path: 'schemas/shared/common.schema.json',
-      relativeId: 'shared/common.schema.json',
-    },
-    {
-      path: 'schemas/shared/enums.schema.json',
-      relativeId: 'shared/enums.schema.json',
-    },
-    {
-      path: 'schemas/shared/objects.schema.json',
-      relativeId: 'shared/objects.schema.json',
-    },
-  ]
-
-  for (const sharedInfo of sharedSchemas) {
-    const sharedSchema = loadJson(sharedInfo.path) as JSONSchemaObject
-    ajv.addSchema(sharedSchema, sharedInfo.relativeId)
-  }
-})
-
-function loadSchema(schemaPath: string): JSONSchemaObject {
-  return loadJson(schemaPath) as JSONSchemaObject
-}
-
 describe('Schema Validation', () => {
   // Create a test for each data file
   for (const config of validationConfigs) {
     it(`should validate ${config.title}`, () => {
       const data = loadJson(config.dataFile)
-      const schema = loadSchema(config.schemaFile)
+      const schema = getZodSchema(config.id)
 
-      const validate = ajv.compile(schema)
-      const valid = validate(data)
+      if (!schema) {
+        throw new Error(`Schema not found for ${config.id}`)
+      }
 
-      if (!valid && validate.errors) {
+      const result = schema.safeParse(data)
+
+      if (!result.success) {
         // Format errors for better test output
-        const errorMessages = validate.errors.map((error, index) => {
-          const path = error.instancePath || 'root'
+        const errorMessages = result.error.issues.map((error, index) => {
+          const path = error.path.join('.') || 'root'
           return `  ${index + 1}. ${path}: ${error.message}`
         })
 
@@ -96,7 +55,7 @@ describe('Schema Validation', () => {
         const displayErrors = errorMessages.slice(0, 10)
         const remainingCount = errorMessages.length - 10
 
-        let errorOutput = `${config.title} validation failed with ${validate.errors.length} error(s):\n`
+        let errorOutput = `${config.title} validation failed with ${result.error.issues.length} error(s):\n`
         errorOutput += displayErrors.join('\n')
 
         if (remainingCount > 0) {
@@ -106,7 +65,7 @@ describe('Schema Validation', () => {
         throw new Error(errorOutput)
       }
 
-      expect(valid).toBe(true)
+      expect(result.success).toBe(true)
     })
   }
 })
@@ -118,7 +77,7 @@ describe('Schema Files', () => {
 
   it('should have valid schema file paths', () => {
     for (const config of validationConfigs) {
-      expect(() => loadSchema(config.schemaFile)).not.toThrow()
+      expect(() => loadJson(config.schemaFile)).not.toThrow()
     }
   })
 
@@ -136,21 +95,26 @@ describe('Schema Files', () => {
       expect(schema.schemaFile).toBeDefined()
     }
   })
+
+  it('should have Zod schemas for all schema IDs', () => {
+    for (const schema of schemaIndex.schemas) {
+      const zodSchema = getZodSchema(schema.id)
+      expect(zodSchema).toBeDefined()
+    }
+  })
 })
 
 describe('Schema Catalog Enhancement', () => {
-  it('should have display names for all schemas', () => {
-    const catalog = import('../lib/ModelFactory.js').then((m) => m.getSchemaCatalog())
+  it('should have display names for all schemas', async () => {
+    const catalog = await import('./ModelFactory.js').then((m) => m.getSchemaCatalog())
 
-    catalog.then((cat) => {
-      for (const schema of cat.schemas) {
-        expect(schema.displayName).toBeDefined()
-        expect(schema.displayNamePlural).toBeDefined()
-        expect(typeof schema.displayName).toBe('string')
-        expect(typeof schema.displayNamePlural).toBe('string')
-        expect(schema.displayName.length).toBeGreaterThan(0)
-        expect(schema.displayNamePlural.length).toBeGreaterThan(0)
-      }
-    })
+    for (const schema of catalog.schemas) {
+      expect(schema.displayName).toBeDefined()
+      expect(schema.displayNamePlural).toBeDefined()
+      expect(typeof schema.displayName).toBe('string')
+      expect(typeof schema.displayNamePlural).toBe('string')
+      expect(schema.displayName.length).toBeGreaterThan(0)
+      expect(schema.displayNamePlural.length).toBeGreaterThan(0)
+    }
   })
 })

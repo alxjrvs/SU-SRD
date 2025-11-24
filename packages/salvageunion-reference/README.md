@@ -7,7 +7,8 @@ A comprehensive, schema-validated JSON reference and TypeScript ORM for the **Sa
 ✅ **513+ game data items** across 18 categories
 ✅ **Type-safe TypeScript ORM** with inferred types
 ✅ **Powerful search API** with relevance scoring
-✅ **JSON Schema validation** for all data
+✅ **Zod schema validation** for all data (source of truth)
+✅ **JSON Schema export** available when needed
 ✅ **Zero runtime dependencies**
 ✅ **ESM-only** for modern JavaScript
 ✅ **Full page references** to source material
@@ -75,6 +76,53 @@ All models are accessible via the `SalvageUnionReference` export:
 | `RollTables`              | 14    | Game tables                      |
 | `Traits`                  | 43    | Special traits                   |
 | `Vehicles`                | 7     | Wasteland vehicles               |
+
+## Schema Validation
+
+All data is validated using **Zod schemas**, which are the source of truth for validation. JSON Schema files are available for backward compatibility and can be generated from Zod schemas when needed.
+
+### Using Zod Schemas Directly
+
+```typescript
+import { abilitiesSchema, chassisSchema, getZodSchema } from 'salvageunion-data'
+
+// Validate data with a specific schema
+const data = [
+  /* ... */
+]
+const result = abilitiesSchema.safeParse(data)
+
+if (result.success) {
+  console.log('Valid data:', result.data)
+} else {
+  console.error('Validation errors:', result.error.errors)
+}
+
+// Get a schema by name
+const schema = getZodSchema('chassis')
+if (schema) {
+  const chassisResult = schema.safeParse(data)
+}
+```
+
+### Exporting to JSON Schema
+
+```typescript
+import { toJSONSchema, exportSchemaToJSON } from 'salvageunion-data'
+import { abilitiesSchema } from 'salvageunion-data'
+
+// Convert Zod schema to JSON Schema
+const jsonSchema = toJSONSchema(abilitiesSchema, {
+  target: 'draft-2019-09',
+  includeDefs: true,
+})
+
+// Export with metadata
+const exported = exportSchemaToJSON(
+  abilitiesSchema,
+  'https://salvageunion.com/schemas/abilities.schema.json'
+)
+```
 
 ## API Reference
 
