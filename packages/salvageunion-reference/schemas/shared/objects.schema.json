@@ -759,7 +759,41 @@
           "type": "array",
           "description": "Nested content blocks (e.g., list items within a list)",
           "items": {
-            "$ref": "#/definitions/contentBlock"
+            "type": "object",
+            "description": "Nested content block ",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "type": {
+                "$ref": "enums.schema.json#/definitions/contentType",
+                "default": "paragraph"
+              },
+              "value": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "description": "The text content of this block"
+                  },
+                  {
+                    "type": "array",
+                    "description": "Array of data values when type is 'datavalues'",
+                    "items": {
+                      "$ref": "#/definitions/dataValue"
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "string",
+                "description": "Optional label for this content block (e.g., for labeled sections)"
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 6,
+                "description": "Heading level (1-6) when type is 'heading'"
+              }
+            }
           }
         }
       }
