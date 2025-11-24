@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://salvageunion.com/schemas/keywords.schema.json",
   "title": "keywords",
   "description": "Game keywords and terminology in Salvage Union",
@@ -11,10 +11,33 @@
       }
     ],
     "properties": {
+      "asset_url": {
+        "$ref": "shared/common.schema.json#/definitions/asset_url"
+      },
       "content": {
         "$ref": "shared/objects.schema.json#/definitions/content"
+      },
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
+      "indexable": {
+        "type": "boolean",
+        "default": true
+      },
+      "blackMarket": {
+        "type": "boolean",
+        "default": false
+      },
+      "name": {
+        "$ref": "shared/common.schema.json#/definitions/name"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
+      "page": {
+        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
       }
     },
-    "unevaluatedProperties": false
+    "additionalProperties": false
   }
 }

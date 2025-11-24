@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://salvageunion.com/schemas/crawler-tech-levels.schema.json",
   "title": "crawler-tech-levels",
   "description": "Tech levels for Union Crawlers in Salvage Union",
@@ -14,6 +14,32 @@
       }
     ],
     "properties": {
+      "asset_url": {
+        "$ref": "shared/common.schema.json#/definitions/asset_url"
+      },
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
+      },
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
+      "indexable": {
+        "type": "boolean",
+        "default": true
+      },
+      "blackMarket": {
+        "type": "boolean",
+        "default": false
+      },
+      "name": {
+        "$ref": "shared/common.schema.json#/definitions/name"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
+      "page": {
+        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
+      },
       "techLevel": {
         "type": "integer",
         "minimum": 1,
@@ -36,6 +62,6 @@
         "description": "Maximum approximate population (0 means unlimited/25,000+)"
       }
     },
-    "unevaluatedProperties": false
+    "additionalProperties": false
   }
 }

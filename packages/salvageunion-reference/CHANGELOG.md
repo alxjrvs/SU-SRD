@@ -144,7 +144,7 @@ const ability = {
 #### Generated Utilities
 
 - **tools/generateUtilities.ts** - Auto-generates type guards and property extractors from schemas (277 lines)
-- **lib/utilities-generated.ts** - Generated utility functions (not currently exported, available for future use)
+- **lib/utilities.ts** - Utility functions including type guards and property extractors
 - **npm script `generate:utilities`** - Generate utility functions from schemas
 
 ### 📚 Documentation

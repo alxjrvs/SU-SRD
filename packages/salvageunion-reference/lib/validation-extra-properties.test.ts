@@ -6,10 +6,10 @@ import { describe, expect, it, beforeAll } from 'vitest'
 import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import Ajv2019Import from 'ajv/dist/2019.js'
+import AjvImport from 'ajv'
 import addFormatsImport from 'ajv-formats'
 
-const Ajv2019 = Ajv2019Import.default || Ajv2019Import
+const Ajv = AjvImport.default || AjvImport
 const addFormats = addFormatsImport.default || addFormatsImport
 
 const __filename = fileURLToPath(import.meta.url)
@@ -20,8 +20,8 @@ interface JSONSchemaObject {
   [key: string]: unknown
 }
 
-// Create AJV instance with draft 2019-09 support
-const ajv = new Ajv2019({
+// Create AJV instance with draft 7 support
+const ajv = new Ajv({
   strict: false,
   allErrors: true,
   verbose: true,
@@ -81,7 +81,7 @@ describe('Extra Properties Validation', () => {
       expect(valid).toBe(false)
       expect(validate.errors).toBeDefined()
       expect(validate.errors?.length).toBeGreaterThan(0)
-      expect(validate.errors?.[0]?.keyword).toBe('unevaluatedProperties')
+      expect(validate.errors?.[0]?.keyword).toBe('additionalProperties')
     })
 
     it('should accept valid abilities without extra properties', () => {
@@ -139,7 +139,7 @@ describe('Extra Properties Validation', () => {
       expect(valid).toBe(false)
       expect(validate.errors).toBeDefined()
       expect(validate.errors?.length).toBeGreaterThan(0)
-      expect(validate.errors?.[0]?.keyword).toBe('unevaluatedProperties')
+      expect(validate.errors?.[0]?.keyword).toBe('additionalProperties')
     })
   })
 
@@ -170,7 +170,7 @@ describe('Extra Properties Validation', () => {
       expect(valid).toBe(false)
       expect(validate.errors).toBeDefined()
       expect(validate.errors?.length).toBeGreaterThan(0)
-      expect(validate.errors?.[0]?.keyword).toBe('unevaluatedProperties')
+      expect(validate.errors?.[0]?.keyword).toBe('additionalProperties')
     })
   })
 })

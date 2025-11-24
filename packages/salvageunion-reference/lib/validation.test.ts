@@ -2,11 +2,11 @@ import { describe, expect, it, beforeAll } from 'vitest'
 import { readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import Ajv2019Import from 'ajv/dist/2019.js'
+import AjvImport from 'ajv'
 import addFormatsImport from 'ajv-formats'
-import schemaIndex from '../schemas/index.json' with { type: 'json' }
+import schemaIndex from '../schemas/index.json'
 
-const Ajv2019 = Ajv2019Import.default || Ajv2019Import
+const Ajv = AjvImport.default || AjvImport
 const addFormats = addFormatsImport.default || addFormatsImport
 
 // Get the project root directory
@@ -40,8 +40,8 @@ interface JSONSchemaObject {
   [key: string]: unknown
 }
 
-// Create AJV instance with draft 2019-09 support
-const ajv = new Ajv2019({
+// Create AJV instance with draft 7 support
+const ajv = new Ajv({
   strict: false,
   allErrors: true,
   verbose: true,

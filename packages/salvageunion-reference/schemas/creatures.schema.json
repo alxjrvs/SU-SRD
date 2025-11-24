@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://salvageunion.com/schemas/creatures.schema.json",
   "title": "creatures",
   "description": "Creatures and wildlife in Salvage Union",
@@ -16,10 +16,48 @@
       }
     ],
     "properties": {
+      "asset_url": {
+        "$ref": "shared/common.schema.json#/definitions/asset_url"
+      },
+      "content": {
+        "$ref": "shared/objects.schema.json#/definitions/content"
+      },
+      "id": {
+        "$ref": "shared/common.schema.json#/definitions/id"
+      },
+      "indexable": {
+        "type": "boolean",
+        "default": true
+      },
+      "blackMarket": {
+        "type": "boolean",
+        "default": false
+      },
+      "name": {
+        "$ref": "shared/common.schema.json#/definitions/name"
+      },
+      "source": {
+        "$ref": "shared/enums.schema.json#/definitions/source"
+      },
+      "page": {
+        "$ref": "shared/common.schema.json#/definitions/positiveInteger"
+      },
+      "actions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "traits": {
+        "type": "array",
+        "items": {
+          "$ref": "shared/objects.schema.json#/definitions/trait"
+        }
+      },
       "hitPoints": {
         "$ref": "shared/common.schema.json#/definitions/hitPoints"
       }
     },
-    "unevaluatedProperties": false
+    "additionalProperties": false
   }
 }
