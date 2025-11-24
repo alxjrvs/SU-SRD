@@ -74,6 +74,35 @@ function loadSchema(schemaPath: string): JSONSchemaObject {
   return loadJson(schemaPath) as JSONSchemaObject
 }
 
+/**
+ * Get a human-readable identifier for an error path.
+ * Tries to use the 'name' field from the data item, falls back to 'id', then to the path.
+ */
+function getErrorIdentifier(instancePath: string, data: unknown): string {
+  if (!instancePath || instancePath === '') {
+    return 'root'
+  }
+
+  // Extract array index from path like "/0" or "/123"
+  const indexMatch = instancePath.match(/^\/(\d+)(?:\/.*)?$/)
+  if (indexMatch && indexMatch[1] && Array.isArray(data)) {
+    const index = parseInt(indexMatch[1], 10)
+    const item = data[index]
+    if (item && typeof item === 'object' && item !== null) {
+      const itemObj = item as Record<string, unknown>
+      if (typeof itemObj.name === 'string') {
+        return `"${itemObj.name}"`
+      }
+      if (typeof itemObj.id === 'string') {
+        return `id:${itemObj.id}`
+      }
+    }
+  }
+
+  // Fallback to the path itself
+  return instancePath
+}
+
 describe('Schema Validation', () => {
   // Create a test for each data file
   for (const config of validationConfigs) {
@@ -87,8 +116,8 @@ describe('Schema Validation', () => {
       if (!valid && validate.errors) {
         // Format errors for better test output
         const errorMessages = validate.errors.map((error, index) => {
-          const path = error.instancePath || 'root'
-          return `  ${index + 1}. ${path}: ${error.message}`
+          const identifier = getErrorIdentifier(error.instancePath || '', data)
+          return `  ${index + 1}. ${identifier}: ${error.message}`
         })
 
         // Show first 10 errors in the test output
@@ -239,8 +268,8 @@ describe('Additional Properties Validation', () => {
 
         if (!valid && validate.errors) {
           const errorMessages = validate.errors.slice(0, 5).map((error) => {
-            const path = error.instancePath || 'root'
-            return `  ${path}: ${error.message}`
+            const identifier = getErrorIdentifier(error.instancePath || '', validData)
+            return `  ${identifier}: ${error.message}`
           })
           throw new Error(`Validation failed:\n${errorMessages.join('\n')}`)
         }
