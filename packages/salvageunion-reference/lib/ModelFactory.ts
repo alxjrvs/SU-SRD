@@ -1,5 +1,5 @@
 /**
- * Model Factory - Auto-generates models from schema catalog
+ * Model Factory - Creates models from schema catalog
  * Uses static imports for synchronous data loading
  *
  * Note: Current implementation loads all data at import time for synchronous access.
@@ -193,7 +193,7 @@ function createModel<T>(schemaId: string): BaseModel<T> & {
 }
 
 /**
- * Auto-generate all models from the schema catalog (synchronous)
+ * Create all models from the schema catalog (synchronous)
  */
 export function generateModels(): Record<string, BaseModel<unknown>> {
   const models: Record<string, BaseModel<unknown>> = {}

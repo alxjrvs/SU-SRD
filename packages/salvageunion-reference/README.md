@@ -53,7 +53,7 @@ const heavyArmor = Equipment.findAll(
 
 ## Available Models
 
-All models are auto-generated from the schema catalog and accessible via the `SalvageUnionReference` export:
+All models are accessible via the `SalvageUnionReference` export:
 
 | Model                     | Count | Description                      |
 | ------------------------- | ----- | -------------------------------- |

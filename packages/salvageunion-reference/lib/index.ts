@@ -2,10 +2,6 @@
  * Salvage Union Data ORM
  *
  * Type-safe query interface for Salvage Union game data
- * Models are auto-generated from the schema catalog
- *
- * DO NOT EDIT MANUALLY - This file is generated from lib/index.template.ts
- * Run 'npm run generate:index' to regenerate
  */
 
 import { BaseModel, type ModelWithMetadata } from './BaseModel.js'
