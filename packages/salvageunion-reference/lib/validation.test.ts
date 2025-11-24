@@ -153,3 +153,100 @@ describe('Schema Catalog Enhancement', () => {
     })
   })
 })
+
+describe('Additional Properties Validation', () => {
+  const testCases = [
+    {
+      schemaName: 'abilities',
+      validData: {
+        id: 'test-id',
+        name: 'Test Ability',
+        source: 'Salvage Union Workshop Manual',
+        page: 1,
+        tree: 'Generic',
+        level: 1,
+        actions: ['Test Ability'],
+      },
+      extraProperty: 'invalidProperty',
+    },
+    {
+      schemaName: 'chassis',
+      validData: {
+        id: 'test-id',
+        name: 'Test Chassis',
+        source: 'Salvage Union Workshop Manual',
+        page: 1,
+        structurePoints: 10,
+        energyPoints: 10,
+        heatCapacity: 10,
+        systemSlots: 10,
+        moduleSlots: 10,
+        cargoCapacity: 10,
+        techLevel: 1,
+        salvageValue: 1,
+        chassisAbilities: [],
+        patterns: [],
+      },
+      extraProperty: 'extraField',
+    },
+    {
+      schemaName: 'equipment',
+      validData: {
+        id: 'test-id',
+        name: 'Test Equipment',
+        source: 'Salvage Union Workshop Manual',
+        page: 1,
+        techLevel: 1,
+        actions: ['Test Equipment'],
+      },
+      extraProperty: 'unknownField',
+    },
+  ]
+
+  for (const testCase of testCases) {
+    describe(testCase.schemaName, () => {
+      let validate: ReturnType<typeof ajv.compile>
+
+      beforeAll(() => {
+        const schemaPath = `schemas/${testCase.schemaName}.schema.json`
+        const schema = loadSchema(schemaPath)
+        // Remove $id to avoid conflicts if schema is already registered
+        const schemaWithoutId = { ...schema }
+        delete schemaWithoutId.$id
+        validate = ajv.compile(schemaWithoutId)
+      })
+
+      it('should reject data with extra properties', () => {
+        const invalidData = [
+          {
+            ...testCase.validData,
+            [testCase.extraProperty]: 'This should not be allowed',
+          },
+        ]
+
+        const valid = validate(invalidData)
+
+        expect(valid).toBe(false)
+        expect(validate.errors).toBeDefined()
+        expect(validate.errors?.length).toBeGreaterThan(0)
+        expect(validate.errors?.[0]?.keyword).toBe('additionalProperties')
+      })
+
+      it('should accept valid data without extra properties', () => {
+        const validData = [testCase.validData]
+
+        const valid = validate(validData)
+
+        if (!valid && validate.errors) {
+          const errorMessages = validate.errors.slice(0, 5).map((error) => {
+            const path = error.instancePath || 'root'
+            return `  ${path}: ${error.message}`
+          })
+          throw new Error(`Validation failed:\n${errorMessages.join('\n')}`)
+        }
+
+        expect(valid).toBe(true)
+      })
+    })
+  }
+})
