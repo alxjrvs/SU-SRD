@@ -3,9 +3,6 @@
  * Manually defined type guards and property extractors
  */
 
-// Re-export all generated utilities (type guards and property extractors)
-export * from './utilities-generated.js'
-
 import type {
   SURefMetaEntity,
   SURefMetaAction,
