@@ -6,7 +6,7 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["section", "table"],
+    "required": ["table"],
     "properties": {
       "asset_url": {
         "$ref": "shared/common.schema.json#/definitions/asset_url"
@@ -16,7 +16,7 @@
       },
       "indexable": {
         "type": "boolean",
-        "default": true
+        "default": false
       },
       "blackMarket": {
         "type": "boolean",
@@ -30,10 +30,6 @@
       },
       "page": {
         "$ref": "shared/common.schema.json#/definitions/positiveInteger"
-      },
-      "section": {
-        "type": "string",
-        "description": "Section or category of the roll table"
       },
       "table": {
         "$ref": "shared/objects.schema.json#/definitions/table"

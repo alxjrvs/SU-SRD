@@ -3,7 +3,6 @@
     "id": "fa9860bb-83c2-4d8c-b100-40708948257d",
     "source": "Salvage Union Workshop Manual",
     "name": "Core Mechanic",
-    "section": "core",
     "table": {
       "1": {
         "label": "Cascade Failure",
@@ -33,13 +32,13 @@
         "type": "paragraph",
         "value": "When a player declares an action within the game that has an uncertain, risky, or potentially inter- esting outcome, they roll a 20-sided die. This is referred to as a d20, or ‘the die’. Salvage Union only uses this one die, and it is all you need to resolve situations in the game."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "cdbc20d9-ff63-4272-805b-f148f0c01752",
     "source": "Salvage Union Workshop Manual",
     "name": "Group Initiative",
-    "section": "action scene",
     "table": {
       "1": {
         "label": "Ambush",
@@ -69,13 +68,13 @@
         "type": "paragraph",
         "value": "When the group finds themselves in a combat or similar tense situation, the Mediator can decide which group in the action scene acts first.  If in doubt, one of the Pilots in the group can roll the die. This roll can be Pushed as normal. The Pilot can be chosen by the Mediator, or is whoever in the group initiated the altercation. Then check the table below to see who acts first and also determine the Group Initiative Order."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "dcd888a2-dc2d-4f45-94eb-ae6138761931",
     "source": "Salvage Union Workshop Manual",
     "name": "Critical Injury",
-    "section": "damage",
     "table": {
       "1": {
         "label": "Fatal Injury",
@@ -105,13 +104,13 @@
         "type": "paragraph",
         "value": "This table determines what happens to your Pilot when they are reduced to 0 Hit Points or suffer a severe injury during play."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "aa54dcd4-efd0-4cbb-83dc-4cf6f0411066",
     "source": "Salvage Union Workshop Manual",
     "name": "Critical Damage",
-    "section": "damage",
     "table": {
       "1": {
         "label": "Catastrophic Damage",
@@ -141,13 +140,13 @@
         "type": "paragraph",
         "value": "Roll on this table when your Mech reaches 0 Structure Points. In addition, you can roll on this table to see what happens if a Mech suffers significant critical damage within a narrative situation in game."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "0050af76-7d88-43e7-b098-1a6af7656353",
     "source": "Salvage Union Workshop Manual",
     "name": "Reactor Overload",
-    "section": "heat",
     "table": {
       "1": {
         "label": "Reactor Overload",
@@ -171,13 +170,13 @@
       },
       "type": "standard"
     },
-    "page": 235
+    "page": 235,
+    "indexable": true
   },
   {
     "id": "abca780b-da93-47b0-91e6-290da910e2fd",
     "source": "Salvage Union Workshop Manual",
     "name": "Area Salvage",
-    "section": "salvaging",
     "table": {
       "1": {
         "label": "Nothing",
@@ -201,13 +200,13 @@
       },
       "type": "standard"
     },
-    "page": 248
+    "page": 248,
+    "indexable": true
   },
   {
     "id": "acdc85ee-056c-4edc-95be-e25f0ab9b319",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Salvage",
-    "section": "salvaging",
     "table": {
       "1": {
         "label": "Ashes and Dust",
@@ -231,13 +230,13 @@
       },
       "type": "standard"
     },
-    "page": 2
+    "page": 2,
+    "indexable": true
   },
   {
     "id": "2bdb98de-31a2-4eb1-b8f5-cf42f44ff618",
     "source": "Salvage Union Workshop Manual",
     "name": "Reaction Roll",
-    "section": "npc tables",
     "table": {
       "1": {
         "label": "Actively Hostile",
@@ -267,13 +266,13 @@
         "type": "paragraph",
         "value": "Roll a d20 on this table when your Pilots meet a group of NPCs to determine how they react to them.  This sets the initial Reaction, and the rest of the scene can be roleplayed out from that point."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "8803b3dd-6b7b-49a3-b95c-a77082867b12",
     "source": "We Were Here First!",
     "name": "Meteor Encounter",
-    "section": "salvaging",
     "table": {
       "1": {
         "value": "The Chimerid Meteor has burned up in orbit leaving nothing to salvage."
@@ -298,13 +297,13 @@
         "type": "paragraph",
         "value": "When the Pilots encounter a meteor, roll on the below table to see the situation on their arrival."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "5dae32bc-8e38-4c3d-8c6c-dae2ed6939f2",
     "source": "We Were Here First!",
     "name": "Harvesting Chimerium",
-    "section": "salvaging",
     "table": {
       "1": {
         "value": "There is no Chimerium to harvest."
@@ -345,13 +344,13 @@
         "type": "paragraph",
         "value": "Harvesting from a Chimerid Meteor (Costs & Traits): It costs 1 EP (Energy Point) or 1 AP (Action Point) to harvest from a Chimerid Meteor. The Mech or Pilot must possess an item or ability with the \"Salvaging Trait.\" Each Chimerium Meteor can only be harvested once."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "9b96bc47-106b-4cb5-8e9d-e42299764c96",
     "source": "We Were Here First!",
     "name": "Chimerium Exposure",
-    "section": "damage",
     "table": {
       "1": {
         "value": "You have been better. You fall unconscious and your HP is reduced to 0. If you recover, you will develop two Chimerium Mutations within 24 hours. Roll twice on the Chimerium Mutation Table."
@@ -388,13 +387,13 @@
         "type": "paragraph",
         "value": "Sakura is developing a cure for Chimerium Mutation, but requires Chimerium Samples to research it. (See p. 42)"
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "baba591d-eb31-4fcb-bd80-d6d6ed9193af",
     "source": "We Were Here First!",
     "name": "Chimerium Mutation",
-    "section": "character",
     "table": {
       "1": {
         "value": "You mutate into a Chimerium Beast. Your Pilot is no longer under your control and becomes an NPC."
@@ -459,13 +458,13 @@
       },
       "type": "flat"
     },
-    "page": 11
+    "page": 11,
+    "indexable": true
   },
   {
     "id": "3b30af52-8e82-4b55-bda8-e46e64bf141f",
     "source": "Salvage Union Workshop Manual",
     "name": "NPC Action",
-    "section": "npc tables",
     "table": {
       "1": {
         "label": "Cascade Failure",
@@ -495,13 +494,13 @@
         "type": "paragraph",
         "value": "When an NPC takes an action in the game, the Mediator rolls on their own table below. This table is similar to the player table, but reframes many of the options."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "30b5379a-45d5-4e7b-9dfa-45b2ecead926",
     "source": "Salvage Union Workshop Manual",
     "name": "Morale",
-    "section": "npc tables",
     "table": {
       "1": {
         "label": "Surrender",
@@ -531,13 +530,13 @@
         "type": "paragraph",
         "value": "These rules cover whether or not NPCs in the game choose to retreat. The Pilots never roll Morale, and it is always the player’s choice whether their Pilots retreat or not. NPCs include both those the Pilots are actively fighting as well as any allied NPCs they may have with them.  • When an NPC Mech is reduced to 50% or less of its Structure Points, make a Morale check to determine if it stays in the fight.  • When a Creature is reduced to 50% or less of its Hit Points, make a Morale check to determine if it stays in the fight. You can also apply this to an entire group rather than individual creatures or Mechs.  • When a group of NPCs suffers 50% or more overall deaths or the destruction of 50% or more Mechs, make a Morale check to determine if the entire group stays in the fight."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "70f6e979-f511-4407-a276-11b3e63f6758",
     "source": "Salvage Union Workshop Manual",
     "name": "Retreat",
-    "section": "npc tables",
     "table": {
       "1": {
         "label": "Disastrous Escape",
@@ -567,13 +566,13 @@
         "type": "paragraph",
         "value": "Sometimes things go wrong and retreat becomes the only option. If the Pilots or a Group of NPCs choose to retreat, roll the die on the table below to find out what happens. If using Group Initiative, retreat may be chosen at the start of anyone in the group’s turn. The entire group must agree to retreat."
       }
-    ]
+    ],
+    "indexable": true
   },
   {
     "id": "044f3890-2d62-4bbe-b851-cc978a68ae8e",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Deterioration",
-    "section": "crawler",
     "table": {
       "1": {
         "value": "Your Union Crawler loses 5 Structure Points and a Bay chosen at random is Damaged until repaired to the Intact Condition."
@@ -592,13 +591,13 @@
       },
       "type": "standard"
     },
-    "page": 7
+    "page": 7,
+    "indexable": true
   },
   {
     "id": "f4e866be-1092-4760-896c-fa3571b983d6",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Damage",
-    "section": "crawler",
     "table": {
       "1": {
         "value": "Your Union Crawler is Destroyed as a mass series of malfunctions causes it to entirely collapse. Roll on the Union Crawler Destruction Table."
@@ -617,13 +616,13 @@
       },
       "type": "standard"
     },
-    "page": 219
+    "page": 219,
+    "indexable": true
   },
   {
     "id": "50f0dcca-d2ac-408d-a916-55027485299b",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Destruction",
-    "section": "crawler",
     "table": {
       "1": {
         "value": "The Union Crawler suffers critical damage, goes into a reactor meltdown, and explodes. The Union Crawler is destroyed beyond all recognition. It cannot be rebuilt.  Everyone and everything on board and within Medium Range takes 50 Structure Points of damage, and can be assumed destroyed or killed outright."
@@ -642,13 +641,13 @@
       },
       "type": "standard"
     },
-    "page": 220
+    "page": 220,
+    "indexable": true
   },
   {
     "id": "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6",
     "source": "Salvage Union Workshop Manual",
     "name": "Keepsake",
-    "section": "character",
     "table": {
       "1": {
         "value": "Stuffed Toy"
@@ -718,7 +717,6 @@
     "id": "e5317ec5-241c-4bed-97cc-b8d9764e011f",
     "source": "Salvage Union Workshop Manual",
     "name": "Motto",
-    "section": "character",
     "table": {
       "1": {
         "value": "Live and let live."
@@ -788,7 +786,6 @@
     "id": "d07e8fbf-0750-45ad-9cb8-faa95d8cbaf3",
     "source": "Salvage Union Workshop Manual",
     "name": "Pilot Appearance",
-    "section": "character",
     "table": {
       "1": {
         "value": "Stocky"
@@ -858,7 +855,6 @@
     "id": "d65de78f-3131-40fd-bd40-018e858c723b",
     "source": "Salvage Union Workshop Manual",
     "name": "A.I. Personality",
-    "section": "character",
     "table": {
       "1": {
         "value": "Megalomaniacal to a fault."
@@ -928,7 +924,6 @@
     "id": "3ba3c58c-4f75-454f-be16-6bd3236b79d8",
     "source": "Salvage Union Workshop Manual",
     "name": "Quirks",
-    "section": "mech",
     "table": {
       "1": {
         "value": "Flashing RGB lights"
@@ -998,7 +993,6 @@
     "id": "f6a7b8c9-daeb-4cfd-a4b5-c6d7e8f9a0b1",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Appearance",
-    "section": "mech",
     "table": {
       "1": {
         "value": "Flashy, bright, vibrant, paint job"
@@ -1068,7 +1062,6 @@
     "id": "a7b8c9da-ebfc-4dfe-b5c6-d7e8f9a0b1c2",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Pattern Names",
-    "section": "mech",
     "table": {
       "1": {
         "value": "Bullseye"
@@ -1138,7 +1131,6 @@
     "id": "ea4227a6-8c57-4018-86b0-338bbf5a151f",
     "source": "Salvage Union Workshop Manual",
     "name": "Crawler Name",
-    "section": "crawler",
     "table": {
       "1": {
         "value": "Big Smoke"
@@ -1208,7 +1200,6 @@
     "id": "ba70ae70-e955-45af-af31-b4ca98ae223e",
     "source": "We Were Here First!",
     "name": "Faction Encounter Table",
-    "section": "duos",
     "table": {
       "type": "duos",
       "1-2": {
@@ -1254,7 +1245,6 @@
     "id": "8b0c74d6-4358-4191-86cc-615a51639a40",
     "source": "We Were Here First!",
     "name": "Salvage Cache Table",
-    "section": "salvage",
     "table": {
       "1": {
         "value": "d20 Bio-Salvage"
@@ -1324,7 +1314,6 @@
     "id": "e213dd70-6ece-4950-8036-e4b495e6dd34",
     "source": "We Were Here First!",
     "name": "Chimerium Mutant Ability Table",
-    "section": "duos",
     "table": {
       "type": "duos",
       "1-2": {
@@ -1380,7 +1369,6 @@
     "id": "12862a65-5609-4fd0-8167-a8ee64bbad6a",
     "source": "We Were Here First!",
     "name": "Bio-Chassis Damage Table",
-    "section": "damage",
     "table": {
       "1": {
         "label": "DEATH THROES",
@@ -1424,7 +1412,6 @@
     "id": "2f4a4871-571e-4aad-95da-d83f32f2ea5d",
     "source": "We Were Here First!",
     "name": "Bio-Chassis Overload Table",
-    "section": "damage",
     "table": {
       "1": {
         "label": "DEATH THROES",
@@ -1468,7 +1455,6 @@
     "id": "a8b9c0d1-e2f3-4a5b-b6c7-d8e9f0a1b2c3",
     "source": "False Flag",
     "name": "Rumour",
-    "section": "rumours",
     "table": {
       "1": {
         "value": "Vornaya is gathering dirt on the other corpos."
@@ -1538,7 +1524,6 @@
     "id": "c2d3e4f5-a6b7-4c8d-9e0f-1a2b3c4d5e6f",
     "source": "False Flag",
     "name": "Meld Encounter",
-    "section": "encounters",
     "table": {
       "1": {
         "value": "Meld Behemoth"
@@ -1569,7 +1554,6 @@
     "id": "98a883c5-1fb9-4240-b299-5cd000723566",
     "source": "False Flag",
     "name": "Anomalous Zone",
-    "section": "encounters",
     "table": {
       "1": {
         "label": "MELD DUST SWARM",
@@ -1665,7 +1649,6 @@
     "id": "0bc689ca-057d-406e-bb17-ade21e4199bd",
     "source": "Salvage Union Workshop Manual",
     "name": "Aardvarks Tongue",
-    "section": "modules",
     "table": {
       "1": {
         "value": "THE TONGUE REPLICATES IN YOUR SYSTEM. YOU GAIN THE IMMOBILE TRAIT FOR 10 MINUTES"
@@ -1689,7 +1672,6 @@
     "id": "ff63e8a7-35db-40f3-b270-7c2246597760",
     "source": "Salvage Union Workshop Manual",
     "name": "Adv. Reactor Safety Protocols",
-    "section": "modules",
     "table": {
       "1": {
         "label": "Reactor Disabled",
@@ -1718,7 +1700,6 @@
     "id": "9b341b6c-6df1-4851-aafe-cfde86547c97",
     "source": "Salvage Union Workshop Manual",
     "name": "Anti-Mech Mine Layer",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The mines hit an unintended target such as an Ally or something innocent in the area."
@@ -1742,7 +1723,6 @@
     "id": "9da02a5a-3769-4410-8e49-a12aca8731b7",
     "source": "Salvage Union Workshop Manual",
     "name": "Armoured Shield",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The attack smashes through your Armoured Shield. The attack hits as normal and your Armoured Shield is destroyed."
@@ -1766,7 +1746,6 @@
     "id": "fde7907f-1ea4-44cf-be1a-d84cb6209bfc",
     "source": "Salvage Union Workshop Manual",
     "name": "Behemoth",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "They stand strong in the face of you, and are much stronger than you thought. The Mediator may add reinforcements to their numbers, or improve their strength or capabilities in some other way."
@@ -1790,7 +1769,6 @@
     "id": "ae120942-4723-455c-9413-d12d86bdd7a7",
     "source": "Salvage Union Workshop Manual",
     "name": "Blinding Blue Laser Rifle",
-    "section": "equipment",
     "table": {
       "20": {
         "value": "The target suffers a Major Injury of permanent blindness."
@@ -1802,7 +1780,6 @@
     "id": "76535e17-f868-470f-86ec-72675281d90f",
     "source": "Salvage Union Workshop Manual",
     "name": "Counter-Hacking",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "Your counter hacking attempt fails, and the opposing hacker can activate any Ability with the [[Hacking]] Trait in response to your attempt."
@@ -1826,7 +1803,6 @@
     "id": "d84c92a6-b75d-4ea4-86d0-8623a241e2bb",
     "source": "Salvage Union Workshop Manual",
     "name": "Denial of Service Attack",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "All Mechs within Close Range of your Mech Shutdown for 10 minutes. This includes your Mech and those of any allies."
@@ -1850,7 +1826,6 @@
     "id": "941a7496-50a0-4c78-811e-fa6f756d5e4b",
     "source": "Salvage Union Workshop Manual",
     "name": "Hack",
-    "section": "actions",
     "table": {
       "1": {
         "value": "The hack fails and the target is alerted to your hacking attempt. They can retaliate as appropriate."
@@ -1874,7 +1849,6 @@
     "id": "43baa6cc-7a80-4c2b-bbc4-78d9a7b1b79d",
     "source": "Salvage Union Workshop Manual",
     "name": "Ejection System",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The Ejection System severely malfunctions, harming you inside your cockpit. The Ejection System is destroyed and your Pilot must roll on the Critical Injury Table."
@@ -1898,7 +1872,6 @@
     "id": "7edaefa5-e0d7-466d-aa8f-8b6681c8cd2c",
     "source": "Salvage Union Workshop Manual",
     "name": "Ejector Pod",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The Ejector Pod fails to trigger and is damaged in the process, it cannot be used until repaired to the Intact Condition."
@@ -1922,7 +1895,6 @@
     "id": "09dee811-d665-4529-89fe-7cf16dba42c0",
     "source": "Salvage Union Workshop Manual",
     "name": "Electro-Magnetic Shield Projector",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check."
@@ -1946,7 +1918,6 @@
     "id": "c5657a7a-e877-4158-8472-3701643e5dd4",
     "source": "Salvage Union Workshop Manual",
     "name": "Escape Hatch",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The Escape Hatch severely malfunctions trapping you in your Mech and injuring you. You must roll on the Critical Injury Table, and the Escape Hatch is destroyed."
@@ -1970,7 +1941,6 @@
     "id": "6fa35aec-3691-4f64-afad-f184984515d2",
     "source": "Salvage Union Workshop Manual",
     "name": "Experimental Teleportation Hold",
-    "section": "systems",
     "table": {
       "1": {
         "value": "Everything you are attempting to teleport is destroyed or killed."
@@ -1994,7 +1964,6 @@
     "id": "e2956852-d8b0-4aa2-9e5e-616f1139f5c3",
     "source": "Salvage Union Workshop Manual",
     "name": "Firewall",
-    "section": "modules",
     "table": {
       "1": {
         "value": "You fail to block the hack, and your Firewall is breached, it becomes damaged and cannot be used until repaired to the Intact Condition."
@@ -2018,7 +1987,6 @@
     "id": "cce68e98-6a69-4ce5-b480-f195be845579",
     "source": "Salvage Union Workshop Manual",
     "name": "Glanded Stims",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "You overdose on stims, your HP is reduced to 0 and you must roll on the Critical Injury Table."
@@ -2042,7 +2010,6 @@
     "id": "e1b0a8d8-59a5-4436-98a0-e2fe52924475",
     "source": "Salvage Union Workshop Manual",
     "name": "Improved Trading Bay",
-    "section": "crawlers",
     "table": {
       "1": {
         "value": "Re-roll on this table. If a 1 is rolled again nothing is available for trade this Downtime."
@@ -2066,7 +2033,6 @@
     "id": "952a9c83-0812-471f-8af3-6e9f5324e51e",
     "source": "Salvage Union Workshop Manual",
     "name": "Knife Missile",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "The target avoids harm, your location is compromised, and you are detected and pursued."
@@ -2090,7 +2056,6 @@
     "id": "579d82ab-fb44-4c4e-9b30-6ecf97df9f76",
     "source": "Salvage Union Workshop Manual",
     "name": "Let’s Make a Deal",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "The deal is rejected and the people you are making a deal with become hostile to you and cannot be negotiated with further."
@@ -2114,7 +2079,6 @@
     "id": "e29fa949-f62f-4d5d-98b8-3862c25a264f",
     "source": "Salvage Union Workshop Manual",
     "name": "Mech Scrambler",
-    "section": "modules",
     "table": {
       "1": {
         "value": "The target goes haywire, it moves one Range Band in a random direction, falls Prone, and gains the [[Vulnerable]] Trait."
@@ -2138,7 +2102,6 @@
     "id": "06d27b02-4bf4-42ad-83c8-3eef0c9fec7c",
     "source": "Salvage Union Workshop Manual",
     "name": "Mechapult",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The Mechapult explodes and is destroyed. Deal SP damage equal to 2× the Tech Level of the Scrap to your Mech and everything within Close Range."
@@ -2207,7 +2170,6 @@
     "id": "cb215f2c-31c2-4c25-a3e9-5456b52565dc",
     "source": "Salvage Union Workshop Manual",
     "name": "Multi-Phase Shield",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The attack hits as normal and the shield overloads. Your Mech gains 2 Heat and must make a Heat Check."
@@ -2231,7 +2193,6 @@
     "id": "6b9d2fdf-89ff-431b-9650-7b9245f8584b",
     "source": "Salvage Union Workshop Manual",
     "name": "Panda Sneeze",
-    "section": "modules",
     "table": {
       "1": {
         "value": "The hack fails and the target is alerted of your hacking attempt. They can retaliate as appropriate."
@@ -2255,7 +2216,6 @@
     "id": "92e68ef8-fd6b-4312-9715-1fa13845bda8",
     "source": "Salvage Union Workshop Manual",
     "name": "Portable Multi-Phase Shield",
-    "section": "equipment",
     "table": {
       "1": {
         "value": "The attack hits as normal and the shield overloads. Your Portable Multi-Phase Shield is destroyed."
@@ -2279,7 +2239,6 @@
     "id": "958972ab-3236-41e7-a544-adbaa353fe84",
     "source": "Salvage Union Workshop Manual",
     "name": "Prawn Sifter",
-    "section": "systems",
     "table": {
       "1": {
         "value": "You find 1 Scrap of the Tech Level of the area."
@@ -2303,7 +2262,6 @@
     "id": "c93113c2-ac19-4c1b-abf3-76513366f6ad",
     "source": "Salvage Union Workshop Manual",
     "name": "Probing Proboscis",
-    "section": "chassis",
     "table": {
       "1": {
         "value": "The Probing Proboscis fails to penetrate the target and leaves you exposed. You gain the Vulnerable Trait until the start of your next turn."
@@ -2327,7 +2285,6 @@
     "id": "b682a43f-e853-4e59-86cb-304eac9c338f",
     "source": "Salvage Union Workshop Manual",
     "name": "Reactor Safety Protocols",
-    "section": "modules",
     "table": {
       "1": {
         "label": "Reactor Damage",
@@ -2356,7 +2313,6 @@
     "id": "8bd4dcf0-43a4-4ef8-9195-2c51e2b8d563",
     "source": "Salvage Union Workshop Manual",
     "name": "Reflective Shielding",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The shield malfunctions. You take no damage from the attack, but it is deflected to a random target within Medium Range, which takes the full damage of the attack. In addition, your Reflective Shielding System becomes damaged."
@@ -2380,7 +2336,6 @@
     "id": "9460c816-0113-48dd-8911-463c0969c65b",
     "source": "Salvage Union Workshop Manual",
     "name": "Refractive Shield Projector",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check."
@@ -2404,7 +2359,6 @@
     "id": "38b46715-4f82-493f-9a9a-17594f0b56ef",
     "source": "Salvage Union Workshop Manual",
     "name": "Reinforced Chassis",
-    "section": "chassis",
     "table": {
       "1": {
         "value": "The Jackhammer Mech Chassis is damaged. All of its mounted Systems, Modules, and any carried Cargo are destroyed. The Pilot survives in the reinforced cockpit."
@@ -2428,7 +2382,6 @@
     "id": "7422a070-9b49-46df-969f-65ad7985839d",
     "source": "Salvage Union Workshop Manual",
     "name": "Shield",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The attack hits as normal and the shield temporarily breaks down. It cannot be used for 10 minutes."
@@ -2452,7 +2405,6 @@
     "id": "77662019-6419-497b-9b5b-9dd9836e09cf",
     "source": "Salvage Union Workshop Manual",
     "name": "Sonic Screecher",
-    "section": "modules",
     "table": {
       "1": {
         "value": "The targets are entirely unharmed. The Module malfunctions causing the sound to reverberate through your Mech's Cockpit, your Pilot must roll on the Critical Injury Table."
@@ -2476,7 +2428,6 @@
     "id": "34b27d48-9b19-4a74-9884-6a7c897ce026",
     "source": "Salvage Union Workshop Manual",
     "name": "Survey Scanner",
-    "section": "modules",
     "table": {
       "1": {
         "value": "Your scan returns inaccurate data. You may ask the Mediator 2 questions about the area and both answers will contain false information which you believe to be true."
@@ -2500,7 +2451,6 @@
     "id": "117faf24-a910-4625-93bb-71572ff32cf6",
     "source": "Salvage Union Workshop Manual",
     "name": "System and Software Hacker",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "The hacking attempt fails and the target cannot be targeted by any Abilities with the [[Hacking]] Trait for the next 10 minutes."
@@ -2524,7 +2474,6 @@
     "id": "f82a16a7-3d51-45e9-8c07-0750a725b94e",
     "source": "Salvage Union Workshop Manual",
     "name": "Teleportation Pod",
-    "section": "systems",
     "table": {
       "1": {
         "value": "The teleporter malfunctions. You instead teleport to a random Teleportation Bay somewhere on the Campaign Map you are currently in."
@@ -2548,7 +2497,6 @@
     "id": "3cbe87a9-1c80-4209-bb85-af089d3e7542",
     "source": "Salvage Union Workshop Manual",
     "name": "Union Call",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "The mission fails, and cannot be completed as something has gone badly wrong, for example, the target of an assassination attempt escapes and places a bounty on you instead, the trade caravan is destroyed, or the salvage is taken by a corpo or raider band instead."
@@ -2572,7 +2520,6 @@
     "id": "8b64a87b-258a-4917-acbb-3ad6c349d3fd",
     "source": "Salvage Union Workshop Manual",
     "name": "Well actually...",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "You do not know the answer, and everyone realises this."
@@ -2596,7 +2543,6 @@
     "id": "28e23b1b-3529-4188-b494-91e20fffb30e",
     "source": "Salvage Union Workshop Manual",
     "name": "Whirlwind Strike",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "Your attacks miss. You spin wildly and then collapse, falling Prone."
@@ -2620,7 +2566,6 @@
     "id": "0ae408ae-f7c1-4a5f-8220-ce083c2ea61d",
     "source": "Salvage Union Workshop Manual",
     "name": "Worm",
-    "section": "abilities",
     "table": {
       "1": {
         "value": "The Worm fails to upload to the targets and has no effect."
@@ -2644,7 +2589,6 @@
     "id": "cc5aed4e-c782-4996-9472-ffb35e64d66c",
     "source": "Salvage Union Workshop Manual",
     "name": "Bio-Talon",
-    "section": "systems",
     "table": {
       "20": {
         "value": "A System or Appendage on the target is destroyed."
@@ -2656,7 +2600,6 @@
     "id": "8c107425-8ddf-49dd-9882-7559a4fda62b",
     "source": "Salvage Union Workshop Manual",
     "name": "Nanite Reconstruction (Meld Regenerator)",
-    "section": "modules",
     "table": {
       "1": {
         "label": "Awakening",
@@ -2685,7 +2628,6 @@
     "id": "b2eb603f-036a-4984-b79b-330e745554d3",
     "source": "Salvage Union Workshop Manual",
     "name": "Meld Distorter",
-    "section": "modules",
     "table": {
       "1": {
         "value": "It transforms into a Meld Nanoid, controlled by the Meld and hostile to you."
@@ -2709,7 +2651,6 @@
     "id": "12a6fcf2-2eda-492e-b9f5-f86a340c9fb3",
     "source": "Salvage Union Workshop Manual",
     "name": "Trading Bay",
-    "section": "crawler",
     "table": {
       "1": {
         "value": "Nothing is available for trade during this Downtime."

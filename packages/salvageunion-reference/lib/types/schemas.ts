@@ -268,10 +268,6 @@ export interface SURefNPC extends SURefObjectBaseEntity, SURefObjectCombatEntity
  * Random tables and roll tables in Salvage Union
  */
 export interface SURefRollTable extends SURefObjectBaseEntity {
-  /**
-   * Section or category of the roll table
-   */
-  section: string
   table: SURefObjectTable
   content?: SURefObjectContent
 }
