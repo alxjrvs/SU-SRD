@@ -332,6 +332,7 @@ export interface SURefObjectPattern {
 
 export type SURefObjectSchemaName = SURefEnumSchemaName | 'actions'
 
+export type SURefObjectTableContent = { label?: string; value: string }
 /**
  * Roll table for random outcomes based on d20 rolls
  */
@@ -340,24 +341,24 @@ export type SURefObjectTable =
       /**
        * Critical failure outcome
        */
-      '1': string
+      '1': SURefObjectTableContent
       /**
        * Critical success outcome
        */
-      '20': string
+      '20': SURefObjectTableContent
       type: 'standard'
       /**
        * High success outcome
        */
-      '11-19': string
+      '11-19': SURefObjectTableContent
       /**
        * Moderate outcome
        */
-      '6-10': string
+      '6-10': SURefObjectTableContent
       /**
        * Low outcome
        */
-      '2-5': string
+      '2-5': SURefObjectTableContent
     }
   | {
       /**
@@ -368,45 +369,45 @@ export type SURefObjectTable =
       /**
        * Critical success outcome
        */
-      '19-20': string
+      '19-20': SURefObjectTableContent
       /**
        * High success outcome
        */
-      '11-18': string
+      '11-18': SURefObjectTableContent
       /**
        * Moderate outcome
        */
-      '6-10': string
+      '6-10': SURefObjectTableContent
       /**
        * Low outcome
        */
-      '2-5': string
+      '2-5': SURefObjectTableContent
     }
   | {
-      '1': string
-      '2': string
-      '3': string
-      '4': string
-      '5': string
-      '6': string
-      '7': string
-      '8': string
-      '9': string
-      '10': string
-      '11': string
-      '12': string
-      '13': string
-      '14': string
-      '15': string
-      '16': string
-      '17': string
-      '18': string
-      '19': string
-      '20': string
+      '1': SURefObjectTableContent
+      '2': SURefObjectTableContent
+      '3': SURefObjectTableContent
+      '4': SURefObjectTableContent
+      '5': SURefObjectTableContent
+      '6': SURefObjectTableContent
+      '7': SURefObjectTableContent
+      '8': SURefObjectTableContent
+      '9': SURefObjectTableContent
+      '10': SURefObjectTableContent
+      '11': SURefObjectTableContent
+      '12': SURefObjectTableContent
+      '13': SURefObjectTableContent
+      '14': SURefObjectTableContent
+      '15': SURefObjectTableContent
+      '16': SURefObjectTableContent
+      '17': SURefObjectTableContent
+      '18': SURefObjectTableContent
+      '19': SURefObjectTableContent
+      '20': SURefObjectTableContent
       type: 'flat'
     }
   | {
-      '20': string
+      '20': SURefObjectTableContent
       type: 'dramatic'
     }
   | {
@@ -414,74 +415,74 @@ export type SURefObjectTable =
       /**
        * The name of the entity or ability
        */
-      '1-2': string
+      '1-2': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '3-4': string
+      '3-4': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '5-6': string
+      '5-6': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '7-8': string
+      '7-8': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '9-10': string
+      '9-10': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '11-12': string
+      '11-12': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '13-14': string
+      '13-14': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '15-16': string
+      '15-16': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '17-18': string
+      '17-18': SURefObjectTableContent
       /**
        * The name of the entity or ability
        */
-      '19-20': string
+      '19-20': SURefObjectTableContent
     }
   | {
       /**
        * Critical failure outcome
        */
-      '1': string
+      '1': SURefObjectTableContent
       /**
        * Critical success outcome
        */
-      '20': string
+      '20': SURefObjectTableContent
       type: 'bio-chassis'
       /**
        * System destruction outcome
        */
-      '2-3': string
+      '2-3': SURefObjectTableContent
       /**
        * Severe bio-backlash outcome
        */
-      '4-5': string
+      '4-5': SURefObjectTableContent
       /**
        * Module destruction outcome
        */
-      '6-8': string
+      '6-8': SURefObjectTableContent
       /**
        * Bio-backlash outcome
        */
-      '9-10': string
+      '9-10': SURefObjectTableContent
       /**
        * Core damage outcome
        */
-      '11-19': string
+      '11-19': SURefObjectTableContent
     }
 
 export type SURefObjectActionOptions = {

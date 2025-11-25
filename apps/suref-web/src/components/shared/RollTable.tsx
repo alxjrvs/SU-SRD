@@ -28,7 +28,7 @@ interface RollTableDisplayProps {
 
 function digestRollTable(table: RollTableType): DigestedRollTable[] {
   if (!table) return []
-  
+
   // Helper function to extract numeric value from a key for sorting
   // Handles: "20" -> 20, "11-19" -> 11, "2-5" -> 2, etc.
   const getSortValue = (key: string): number => {
@@ -38,7 +38,7 @@ function digestRollTable(table: RollTableType): DigestedRollTable[] {
     const num = parseInt(firstPart, 10)
     return isNaN(num) ? 0 : num
   }
-  
+
   const sorted = Object.keys(table)
     .filter((key) => key !== 'type')
     .sort((a, b) => {

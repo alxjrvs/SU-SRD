@@ -3,29 +3,32 @@ import type { SURefObjectTable } from '../types/index.js'
 /**
  * Result type for table roll resolution
  */
-export type TableRollResult = { success: boolean; result: string; key: string }
+export type TableRollResult = {
+  success: boolean
+  result: { label?: string; value: string }
+  key: string
+}
 
 /**
- * Resolves a d20 roll against a table to get the result string
+ * Resolves a d20 roll against a table to get the result
  *
  * @param table - The roll table data (SURefRollTable['table'] | SURefSystem['table'] | undefined)
  * @param roll - The d20 roll result (1-20)
- * @returns Object with success flag and either the result string or error message
+ * @returns Object with success flag and result object containing optional label and required value
  *
  * @example
  * const rollTable = SalvageUnionReference.RollTables.findByName('Core Mechanic');
  * const result = resultForTable(rollTable?.table, 15);
  * if (result.success) {
- *   console.log(result.result); // "Success: You have achieved your goal..."
- * } else {
- *   console.error(result.error);
+ *   console.log(result.result.value); // "You have achieved your goal..."
+ *   console.log(result.result.label); // "Success" (if present)
  * }
  */
 export function resultForTable(table: SURefObjectTable | undefined, roll: number): TableRollResult {
   if (!table) {
     return {
       success: false,
-      result: 'Table data is undefined',
+      result: { value: 'Table data is undefined' },
       key: '',
     }
   }
@@ -33,7 +36,7 @@ export function resultForTable(table: SURefObjectTable | undefined, roll: number
   if (roll < 1 || roll > 20) {
     return {
       success: false,
-      result: `Roll must be between 1 and 20, got ${roll}`,
+      result: { value: `Roll must be between 1 and 20, got ${roll}` },
       key: '',
     }
   }
@@ -55,7 +58,7 @@ export function resultForTable(table: SURefObjectTable | undefined, roll: number
     }
     return {
       success: false,
-      result: `No result found for roll ${roll} in flat table`,
+      result: { value: `No result found for roll ${roll} in flat table` },
       key: '',
     }
   }
@@ -64,23 +67,41 @@ export function resultForTable(table: SURefObjectTable | undefined, roll: number
 }
 
 /**
- * Formats table content to a string, handling both old string format and new tableContent object format
+ * Formats table content to the new format: { label?: string, value: string }
+ * Handles both old string format and new tableContent object format
  */
-function formatTableContent(content: unknown): string | null {
+function formatTableContent(content: unknown): { label?: string; value: string } | null {
   if (!content) return null
 
   // Handle new tableContent format: { label?: string, value: string }
   if (typeof content === 'object' && content !== null && 'value' in content) {
     const tableContent = content as { label?: string; value: string }
-    if (tableContent.label) {
-      return `${tableContent.label}: ${tableContent.value}`
+    if (typeof tableContent.value === 'string') {
+      return {
+        label: typeof tableContent.label === 'string' ? tableContent.label : undefined,
+        value: tableContent.value,
+      }
     }
-    return tableContent.value
   }
 
-  // Handle old string format
+  // Handle old string format: "Label: Description" or just "Description"
   if (typeof content === 'string') {
-    return content
+    const parts = content.split(':')
+    const labelPart = parts[0]?.trim()
+    const valuePart = parts.slice(1).join(':').trim()
+
+    // If there's a label part and it's different from the value, include it
+    if (labelPart && labelPart !== valuePart && valuePart) {
+      return {
+        label: labelPart,
+        value: valuePart,
+      }
+    }
+
+    // Otherwise, just return the string as the value
+    return {
+      value: content,
+    }
   }
 
   return null
@@ -103,7 +124,8 @@ function findRangeResult(rollTable: Record<string, unknown>, roll: number): Tabl
   }
 
   // Get all numeric range keys (e.g., "2-5", "11-19")
-  const rangeKeys = Object.keys(rollTable).filter((k) => k.includes('-'))
+  // Filter out "type" key
+  const rangeKeys = Object.keys(rollTable).filter((k) => k.includes('-') && k !== 'type')
 
   for (const rangeKey of rangeKeys) {
     if (rollInRange(roll, rangeKey)) {
@@ -121,7 +143,7 @@ function findRangeResult(rollTable: Record<string, unknown>, roll: number): Tabl
 
   return {
     success: false,
-    result: `No result found for roll ${roll}`,
+    result: { value: `No result found for roll ${roll}` },
     key: '',
   }
 }
