@@ -279,3 +279,58 @@ describe('Additional Properties Validation', () => {
     })
   }
 })
+
+describe('Table Name References', () => {
+  it('should have all tableName references point to valid tables in roll-tables.json', () => {
+    // Load roll-tables.json to get all valid table names
+    const rollTables = loadJson('data/roll-tables.json') as Array<{ name: string }>
+    const validTableNames = new Set(rollTables.map((table) => table.name))
+
+    // Load files that may contain tableName references
+    const actions = loadJson('data/actions.json') as Array<Record<string, unknown>>
+    const crawlerBays = loadJson('data/crawler-bays.json') as Array<Record<string, unknown>>
+
+    const invalidReferences: Array<{
+      file: string
+      entityName: string
+      tableName: string
+    }> = []
+
+    // Check actions.json
+    for (const action of actions) {
+      if (action.tableName && typeof action.tableName === 'string') {
+        if (!validTableNames.has(action.tableName)) {
+          invalidReferences.push({
+            file: 'actions.json',
+            entityName: (action.name as string) || (action.id as string) || 'unknown',
+            tableName: action.tableName,
+          })
+        }
+      }
+    }
+
+    // Check crawler-bays.json
+    for (const bay of crawlerBays) {
+      if (bay.tableName && typeof bay.tableName === 'string') {
+        if (!validTableNames.has(bay.tableName)) {
+          invalidReferences.push({
+            file: 'crawler-bays.json',
+            entityName: (bay.name as string) || (bay.id as string) || 'unknown',
+            tableName: bay.tableName,
+          })
+        }
+      }
+    }
+
+    if (invalidReferences.length > 0) {
+      const errorMessages = invalidReferences.map(
+        (ref) => `  - ${ref.file}: "${ref.entityName}" references invalid table "${ref.tableName}"`
+      )
+      throw new Error(
+        `Found ${invalidReferences.length} invalid tableName reference(s):\n${errorMessages.join('\n')}`
+      )
+    }
+
+    expect(invalidReferences.length).toBe(0)
+  })
+})

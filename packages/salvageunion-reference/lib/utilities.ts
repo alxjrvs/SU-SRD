@@ -1398,7 +1398,7 @@ export function getEffects(entity: SURefMetaEntity):
 
 /**
  * Get table from an entity
- * Checks both base level and nested action property
+ * Checks base level, nested action property, and tableName references
  * @param entity - The entity to extract table from
  * @returns The table object or undefined if not present
  */
@@ -1406,6 +1406,19 @@ export function getTable(entity: SURefMetaEntity): SURefObjectTable | undefined 
   // Check base level first
   if ('table' in entity && entity.table !== null && typeof entity.table === 'object') {
     return entity.table
+  }
+
+  // Check for tableName reference
+  if ('tableName' in entity && typeof entity.tableName === 'string') {
+    const rollTablesModel = getModel('roll-tables')
+    if (rollTablesModel) {
+      const rollTable = rollTablesModel.find(
+        (rt) => 'name' in rt && rt.name === entity.tableName
+      ) as SURefRollTable | undefined
+      if (rollTable && rollTable.table) {
+        return rollTable.table
+      }
+    }
   }
 
   // Check action property (only if action name matches entity name)
@@ -1419,6 +1432,25 @@ export function getTable(entity: SURefMetaEntity): SURefObjectTable | undefined 
     typeof matchingAction.table === 'object'
   ) {
     return matchingAction.table
+  }
+
+  // Check for tableName in matching action
+  if (
+    matchingAction !== undefined &&
+    matchingAction !== null &&
+    typeof matchingAction === 'object' &&
+    'tableName' in matchingAction &&
+    typeof matchingAction.tableName === 'string'
+  ) {
+    const rollTablesModel = getModel('roll-tables')
+    if (rollTablesModel) {
+      const rollTable = rollTablesModel.find(
+        (rt) => 'name' in rt && rt.name === matchingAction.tableName
+      ) as SURefRollTable | undefined
+      if (rollTable && rollTable.table) {
+        return rollTable.table
+      }
+    }
   }
 
   return undefined

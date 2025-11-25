@@ -482,6 +482,34 @@ describe('Action Property Getters', () => {
         expect(table).toHaveProperty('type')
       }
     })
+
+    test('should get table from tableName reference in crawler bay', () => {
+      const tradingBay = getReference()
+        .CrawlerBays.all()
+        .find((cb) => 'tableName' in cb && cb.tableName === 'Trading Bay')
+      if (tradingBay) {
+        const table = getTable(tradingBay)
+        expect(table).toBeDefined()
+        expect(table).toHaveProperty('type')
+        // Verify it's the correct table by checking for expected entries
+        expect(table).toHaveProperty('1')
+        expect(table).toHaveProperty('20')
+      }
+    })
+
+    test('should get table from tableName reference in action', () => {
+      const mechapultAction = getReference()
+        .Actions.all()
+        .find((a) => 'tableName' in a && a.tableName === 'Mechapult')
+      if (mechapultAction) {
+        const table = getTable(mechapultAction)
+        expect(table).toBeDefined()
+        expect(table).toHaveProperty('type')
+        // Verify it's the correct table by checking for expected entries
+        expect(table).toHaveProperty('1')
+        expect(table).toHaveProperty('20')
+      }
+    })
   })
 
   describe('getOptions', () => {

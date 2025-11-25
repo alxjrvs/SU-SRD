@@ -592,13 +592,7 @@
       },
       "type": "standard"
     },
-    "page": 7,
-    "content": [
-      {
-        "type": "paragraph",
-        "value": "When you fail to pay upkeep, roll on this table."
-      }
-    ]
+    "page": 7
   },
   {
     "id": "f4e866be-1092-4760-896c-fa3571b983d6",
@@ -623,13 +617,7 @@
       },
       "type": "standard"
     },
-    "page": 219,
-    "content": [
-      {
-        "type": "paragraph",
-        "value": "Your Union Crawler can suffer damage from being attacked as well as through deterioration when you fail to pay its upkeep. When your Crawler reaches 0 Structure Points roll on this table."
-      }
-    ]
+    "page": 219
   },
   {
     "id": "50f0dcca-d2ac-408d-a916-55027485299b",
@@ -654,13 +642,7 @@
       },
       "type": "standard"
     },
-    "page": 220,
-    "content": [
-      {
-        "type": "paragraph",
-        "value": "If your Union Crawler is destroyed, roll on this table to find out what happens."
-      }
-    ]
+    "page": 220
   },
   {
     "id": "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6",
@@ -1678,5 +1660,1074 @@
         "value": "When Pilots are in an Anomalous Zone, roll on the Anomaly Table below for each journey or each hour spent in the area as appropriate."
       }
     ]
+  },
+  {
+    "id": "0bc689ca-057d-406e-bb17-ade21e4199bd",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Aardvarks Tongue",
+    "section": "modules",
+    "table": {
+      "1": {
+        "value": "THE TONGUE REPLICATES IN YOUR SYSTEM. YOU GAIN THE IMMOBILE TRAIT FOR 10 MINUTES"
+      },
+      "20": {
+        "value": "CHOOSE 3 TARGETS IN RANGE, THEY ALL GAIN THE IMMOBILE TRAIT FOR 10 MINUTES."
+      },
+      "11-19": {
+        "value": "CHOOSE 2 TARGETS IN RANGE THEY GAIN THE IMMOBILE TRAIT FOR 10 MINUTES."
+      },
+      "6-10": {
+        "value": "CHOOSE 1 TARGET IN RANGE, IT GAINS THE IMMOBILE TRAIT FOR 10 MINUTES."
+      },
+      "2-5": {
+        "value": "THE MODULE FAILS TO ACTIVATE"
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "ff63e8a7-35db-40f3-b270-7c2246597760",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Adv. Reactor Safety Protocols",
+    "section": "modules",
+    "table": {
+      "1": {
+        "label": "Reactor Disabled",
+        "value": "Your Mech is forced to Shutdown for one hour and cannot be powered back on in that period. Whilst Shutdown your Mech cannot move or take any actions and gains the [[Vulnerable]] Trait. Its Heat is reduced to 0 after the hour ends."
+      },
+      "20": {
+        "label": "Reactor Hyper Stabilisation",
+        "value": "Your Mechs reactor stabilises and its Heat is reduced to 0. You may Push your Mech's next action for free."
+      },
+      "11-19": {
+        "label": "Temporary Reactor Shutdown",
+        "value": "Your Mech has overheated and shuts down, gaining the [[Vulnerable]] Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech reduces its Heat to 0."
+      },
+      "6-10": {
+        "label": "Module Overheat",
+        "value": "One of your Mech's Modules, chosen at random or by the Mediator, has overheated and is inoperable for 10 minutes."
+      },
+      "2-5": {
+        "label": "System Overheat",
+        "value": "One of the Mech's Systems, chosen at random or by the Mediator, has overheated and is inoperable for 10 minutes."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "9b341b6c-6df1-4851-aafe-cfde86547c97",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Anti-Mech Mine Layer",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The mines hit an unintended target such as an Ally or something innocent in the area."
+      },
+      "20": {
+        "value": "Everything in the area is destroyed."
+      },
+      "11-19": {
+        "value": "Deal 5 SP damage to everything in the area."
+      },
+      "6-10": {
+        "value": "Deal 5 SP damage to one target in the area. The rest get clear unharmed."
+      },
+      "2-5": {
+        "value": "The targets avoid the mines and they explode to no effect."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "9da02a5a-3769-4410-8e49-a12aca8731b7",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Armoured Shield",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The attack smashes through your Armoured Shield. The attack hits as normal and your Armoured Shield is destroyed."
+      },
+      "20": {
+        "value": "The attack misses and deals no damage and you put your opponent off guard. You may make an attack against the target as a Reaction."
+      },
+      "11-19": {
+        "value": "The Armoured Shield blocks the blow, the attack deals no damage."
+      },
+      "6-10": {
+        "value": "The Armoured Shield deflects the attack, it misses and deals no damage, but your Armoured Shield is destroyed."
+      },
+      "2-5": {
+        "value": "The attack breaks through your Armoured Shield, it hits as normal, and your Armoured Shield is damaged."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "fde7907f-1ea4-44cf-be1a-d84cb6209bfc",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Behemoth",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "They stand strong in the face of you, and are much stronger than you thought. The Mediator may add reinforcements to their numbers, or improve their strength or capabilities in some other way."
+      },
+      "20": {
+        "value": "They flee from you or acquiesce to your demands. You may choose which and may demand something in addition to what you originally requested."
+      },
+      "11-19": {
+        "value": "They flee from you or acquiesce to your demands."
+      },
+      "6-10": {
+        "value": "They flee from you, but barricade themselves in or alert something stronger to your presence."
+      },
+      "2-5": {
+        "value": "They stand strong in the face of you, ready to fight, and do not retreat or acquiesce."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "ae120942-4723-455c-9413-d12d86bdd7a7",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Blinding Blue Laser Rifle",
+    "section": "equipment",
+    "table": {
+      "20": {
+        "value": "The target suffers a Major Injury of permanent blindness."
+      },
+      "type": "dramatic"
+    }
+  },
+  {
+    "id": "76535e17-f868-470f-86ec-72675281d90f",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Counter-Hacking",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "Your counter hacking attempt fails, and the opposing hacker can activate any Ability with the [[Hacking]] Trait in response to your attempt."
+      },
+      "20": {
+        "value": "You stop the hacking attempt. In addition, you can activate any of your Abilities with the [[Hacking]] Trait in response as a Reaction, without paying their EP or AP cost."
+      },
+      "11-19": {
+        "value": "You stop the hacking attempt. In addition, you can activate any of your Abilities with the [[Hacking]] Trait in response as a Reaction."
+      },
+      "6-10": {
+        "value": "You can choose to stop the hacking attempt, or activate one of your Abilities with the [[Hacking]] Trait in response."
+      },
+      "2-5": {
+        "value": "Your counter hacking attempt fails"
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "d84c92a6-b75d-4ea4-86d0-8623a241e2bb",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Denial of Service Attack",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "All Mechs within Close Range of your Mech Shutdown for 10 minutes. This includes your Mech and those of any allies."
+      },
+      "20": {
+        "value": "All targets Shutdown for 10 minutes."
+      },
+      "11-19": {
+        "value": "All targets Shutdown for one round. They are active again at the end of their next turn."
+      },
+      "6-10": {
+        "value": "All targets must choose to either move or take an action during its next turn."
+      },
+      "2-5": {
+        "value": "The hacking attempt fails."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "941a7496-50a0-4c78-811e-fa6f756d5e4b",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Hack",
+    "section": "actions",
+    "table": {
+      "1": {
+        "value": "The hack fails and the target is alerted to your hacking attempt. They can retaliate as appropriate."
+      },
+      "20": {
+        "value": "You masterfully hack into the system and can ask 5 questions to the Mediator about it. The answers they give must be true."
+      },
+      "11-19": {
+        "value": "You successfully hack in and can ask 3 questions to the Mediator about it. The answers they give must be true."
+      },
+      "6-10": {
+        "value": "Your hack produces a mix of confused data. You are able to ask the Mediator 2 questions about it. One of the answers they give must be true, but the other contains false information as decided by the Mediator."
+      },
+      "2-5": {
+        "value": "The hacking attempt fails. The Mediator may choose an appropriate Setback."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "43baa6cc-7a80-4c2b-bbc4-78d9a7b1b79d",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Ejection System",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The Ejection System severely malfunctions, harming you inside your cockpit. The Ejection System is destroyed and your Pilot must roll on the Critical Injury Table."
+      },
+      "20": {
+        "value": "You eject perfectly from the Mech and land in any location up to Far Range of your Mech."
+      },
+      "11-19": {
+        "value": "You eject safely from the Mech and land unharmed within Long Range of your Mech."
+      },
+      "6-10": {
+        "value": "You eject, but suffer injury in the process. You land within Medium Range of your Mech and must roll on the Critical Injury Table for your Pilot."
+      },
+      "2-5": {
+        "value": "The Ejection System fails to trigger and is damaged in the process."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "7edaefa5-e0d7-466d-aa8f-8b6681c8cd2c",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Ejector Pod",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The Ejector Pod fails to trigger and is damaged in the process, it cannot be used until repaired to the Intact Condition."
+      },
+      "20": {
+        "value": "The pod ejects perfectly and lands in any location within Far Range of your Mech."
+      },
+      "11-19": {
+        "value": "The pod ejects safely and lands within Long Range of your Mech."
+      },
+      "6-10": {
+        "value": "The pod ejects and lands within Medium Range of the Mech. The ride is bumpy and your Pilot suffers a Minor Injury."
+      },
+      "2-5": {
+        "value": "The Ejector Pod fails to trigger. You may not attempt to use it again until your next turn."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "09dee811-d665-4529-89fe-7cf16dba42c0",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Electro-Magnetic Shield Projector",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check."
+      },
+      "20": {
+        "value": "The attack misses, deals no damage, and is reflected back at the attacker, hitting them for the damage of the weapon."
+      },
+      "11-19": {
+        "value": "The attack misses and deals no damage."
+      },
+      "6-10": {
+        "value": "You may choose to gain Heat equal to the damage of the weapon that attacked you. If you do the attack misses and deals no damage. if you do not, the attack deals damage as normal."
+      },
+      "2-5": {
+        "value": "The attack hits as normal."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "c5657a7a-e877-4158-8472-3701643e5dd4",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Escape Hatch",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The Escape Hatch severely malfunctions trapping you in your Mech and injuring you. You must roll on the Critical Injury Table, and the Escape Hatch is destroyed."
+      },
+      "20": {
+        "value": "You escape safely from your Mech in Medium Range."
+      },
+      "11-19": {
+        "value": "You escape safely from your Mech in Close Range."
+      },
+      "6-10": {
+        "value": "You escape in Close Range, but are injured in the process. Roll on the Critical Injury Table."
+      },
+      "2-5": {
+        "value": "The Escape Hatch fails to trigger and is damaged in the process, it must be repaired to Intact Condition to be used again."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "6fa35aec-3691-4f64-afad-f184984515d2",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Experimental Teleportation Hold",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "Everything you are attempting to teleport is destroyed or killed."
+      },
+      "20": {
+        "value": "Copy/Paste error. Everything you attempt to teleport appears on your Crawler. They are also still on your Mech."
+      },
+      "2-5": {
+        "value": "Teleport Successful!"
+      },
+      "6-10": {
+        "value": "Teleport Successful!"
+      },
+      "11-19": {
+        "value": "Teleport Successful!"
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "e2956852-d8b0-4aa2-9e5e-616f1139f5c3",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Firewall",
+    "section": "modules",
+    "table": {
+      "1": {
+        "value": "You fail to block the hack, and your Firewall is breached, it becomes damaged and cannot be used until repaired to the Intact Condition."
+      },
+      "20": {
+        "value": "You successfully block the hack and you and your Allies cannot be affected by anything with the [[Hacking]] Trait for the next 10 minutes."
+      },
+      "11-19": {
+        "value": "You successfully block the hack and entirely nullify all of its effects."
+      },
+      "6-10": {
+        "value": "The Mediator offers you a Tough Choice in relation to the hack. This could be partially nullifying its effects, an additional EP cost, or damage to your Module."
+      },
+      "2-5": {
+        "value": "You fail to block the hack, and it has full effect."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "cce68e98-6a69-4ce5-b480-f195be845579",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Glanded Stims",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "You overdose on stims, your HP is reduced to 0 and you must roll on the Critical Injury Table."
+      },
+      "20": {
+        "value": "For the next 10 minutes you can take up to three actions on your turn or Push an action for free."
+      },
+      "11-19": {
+        "value": "For the next 10 minutes you can take up to two actions on your turn or Push an action for free."
+      },
+      "6-10": {
+        "value": "You can act twice this turn or Push an action for free."
+      },
+      "2-5": {
+        "value": "Everything slows to a crawl. For the next 10 minutes you must choose between moving or taking an action on your turn. You also cannot Push rolls."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "e1b0a8d8-59a5-4436-98a0-e2fe52924475",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Improved Trading Bay",
+    "section": "crawlers",
+    "table": {
+      "1": {
+        "value": "Re-roll on this table. If a 1 is rolled again nothing is available for trade this Downtime."
+      },
+      "20": {
+        "value": "An Intact Mech Chassis, System, and Module are all available for trade."
+      },
+      "11-19": {
+        "value": "An Intact Mech Chassis and an Intact System are available for trade."
+      },
+      "6-10": {
+        "value": "An Intact Mech Chassis and an Intact Module are available for trade."
+      },
+      "2-5": {
+        "value": "An Intact System and an Intact Module are available for trade."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "952a9c83-0812-471f-8af3-6e9f5324e51e",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Knife Missile",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "The target avoids harm, your location is compromised, and you are detected and pursued."
+      },
+      "20": {
+        "value": "The target creature is killed, and any number of other target creatures within Close Range of the original target can also be killed if you desire."
+      },
+      "11-19": {
+        "value": "The target creature is killed."
+      },
+      "6-10": {
+        "value": "You can choose to kill the target creature, but if you do you are detected and your location is compromised."
+      },
+      "2-5": {
+        "value": "The target narrowly avoids being killed, but is reduced to 0 HP and must roll on the Critical Injury Table."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "579d82ab-fb44-4c4e-9b30-6ecf97df9f76",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Let’s Make a Deal",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "The deal is rejected and the people you are making a deal with become hostile to you and cannot be negotiated with further."
+      },
+      "20": {
+        "value": "The deal is accepted and you may ask for an additional request."
+      },
+      "11-19": {
+        "value": "The deal is accepted based on your leverage."
+      },
+      "6-10": {
+        "value": "The deal is accepted, but you must offer your leverage now. If it was scrap they want the payment in advance, if it was a threat you have to follow through on the threat immediately, if it was your reputation you must find a way to flex it now."
+      },
+      "2-5": {
+        "value": "The deal is rejected."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "e29fa949-f62f-4d5d-98b8-3862c25a264f",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Mech Scrambler",
+    "section": "modules",
+    "table": {
+      "1": {
+        "value": "The target goes haywire, it moves one Range Band in a random direction, falls Prone, and gains the [[Vulnerable]] Trait."
+      },
+      "20": {
+        "value": "The target entirely loses control of itself, attacking wildly. It must make an attack with all its Weapons Systems against a random Ally within Range. It cannot move or take any actions until the end of your next turn."
+      },
+      "11-19": {
+        "value": "The target loses control of itself and cannot tell friend from foe. It must make an attack with a random Weapons System against a random Ally within Range."
+      },
+      "6-10": {
+        "value": "The target activates a random non-Weapons System. You decide a Tough Choice related to it that the target must resolve."
+      },
+      "2-5": {
+        "value": "The target activates a random Module. You decide a Tough Choice related to it that the target must resolve."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "06d27b02-4bf4-42ad-83c8-3eef0c9fec7c",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Mechapult",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The Mechapult explodes and is destroyed. Deal SP damage equal to 2× the Tech Level of the Scrap to your Mech and everything within Close Range."
+      },
+      "2": {
+        "value": "The Mechapult overloads collapsing in on itself. Your Mech takes damage equal to the Tech Level of the Scrap and the Mechapult is damaged."
+      },
+      "3": {
+        "value": "The Mechapult backfires, hitting a random Ally in Range for SP damage equal to the Tech Level of the Scrap."
+      },
+      "4": {
+        "value": "The Mechapult swings wildly out of control. Your Mech spins in a random direction and hits a random target within Range for SP damage equal to 3× the Tech Level of the Scrap."
+      },
+      "5": {
+        "value": "Dense slabs of rigid plastics fire from the Mechapult into the ground around you. These act as a barricade protecting your Mech from harm. For the next 10 minutes you may use them as though they were a single Armour Plating System."
+      },
+      "6": {
+        "value": "A shower of pistons, gears, and mechanisms scatters across the area wildly. Every target within Long Range, including Allies, takes SP damage equal to the Tech Level of the Scrap."
+      },
+      "7": {
+        "value": "The Mechapult guzzles up another piece of Scrap and fires them both. A random piece of Scrap your Mech is carrying is loaded onto the Mechapult. Roll on the Mechapult Table twice and resolve both results. If you have no other Scrap, then roll once on the Mechapult Table and resolve the result."
+      },
+      "8": {
+        "value": "Splat! A wasteland critter was inadvertently caught in the Mechapult when it launched and has smeared gore over the target. The target is hit for Tech Level of the Scrap and must make a Morale Check."
+      },
+      "9": {
+        "value": "A superheated lump of scrap is fired at the target. The target is hit for SP damage equal to 2× the Tech Level of the Scrap and this attack has the [[[Explosive] (X)]] and [[[Burn] (X)]] Trait where X is the Tech Level of the Scrap. Your Mech gains 2 Heat and must make a Heat Check."
+      },
+      "10": {
+        "value": "A leaky uranium shell strikes the target. It takes SP damage equal to 3× the Tech Level of the Scrap. The target and the area within Close Range of it becomes Irradiated."
+      },
+      "11": {
+        "value": "Heavy superconductors charged with electricity arc towards the target. The target and up to three other targets within Medium Range of the target of your choice each take SP damage equal to 2× the Tech Level of the Scrap. Each of these attacks count as having the [[Ion]] Trait."
+      },
+      "12": {
+        "value": "The target is struck by dense coils of wiring looms which wind around it. It takes SP damage equal to 2× the Tech Level of the Scrap and falls Prone."
+      },
+      "13": {
+        "value": "Streams of superheated gas lash out at the target. The attack deals SP damage equal to tHe₂× the Tech Level of the Scrap and the attack has the [[[Burn] (X)]] Trait, where X is the Tech Level of the Scrap."
+      },
+      "14": {
+        "value": "The Mechapult was loaded with crude oil. The target is hit for SP damage equal to 2× the Tech Level of the Scrap and the area around them is coated in slippery, flammable oil. This can be ignited and moving within it can cause a Mech or Creature to fall prone."
+      },
+      "15": {
+        "value": "A chaotic mess of circuit boards hits the target causing a static discharge. The target Mech is Shutdown for one turn."
+      },
+      "16": {
+        "value": "Shards of refractive glass fire at the target. It is hit for SP damage equal to 2× the Tech Level of the Scrap and the area around the target is hit by multiple rays of dazzling light, blinding the target and everything within Close Range for one round."
+      },
+      "17": {
+        "value": "A bundle of carbon fibre rods fire at the target. It takes SP damage equal to 3× the Tech Level of the Scrap and is skewered to the ground. It cannot move and gains the [[Vulnerable]] Trait until it takes an action to free itself."
+      },
+      "18": {
+        "value": "The scrap carves through the target flaying chunks off of it. A number of random Systems equal to the Tech Level of the Scrap on the target are damaged. In addition, it takes SP damage equal to tHe₂× Tech Level of the Scrap."
+      },
+      "19": {
+        "value": "A heavy lump of scrap strikes the target with a devastating blow. The target is hit for SP damage equal to 4× the Tech Level of the Scrap"
+      },
+      "20": {
+        "value": "A dense ball of concentrated scrap hits the target with catastrophic force dealing SP damage equal to 6× the Tech Level of the Scrap."
+      },
+      "type": "flat"
+    }
+  },
+  {
+    "id": "cb215f2c-31c2-4c25-a3e9-5456b52565dc",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Multi-Phase Shield",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The attack hits as normal and the shield overloads. Your Mech gains 2 Heat and must make a Heat Check."
+      },
+      "20": {
+        "value": "The attack deals no damage and reflects back at the attacker, hitting them for the damage of the weapon they attacked with."
+      },
+      "11-19": {
+        "value": "The attack misses and deals no damage."
+      },
+      "6-10": {
+        "value": "You may choose to gain Heat equal to the damage of the weapon. If you do so, the attack deals no damage. If you do not, the attack deals damage as normal."
+      },
+      "2-5": {
+        "value": "The attack hits as normal."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "6b9d2fdf-89ff-431b-9650-7b9245f8584b",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Panda Sneeze",
+    "section": "modules",
+    "table": {
+      "1": {
+        "value": "The hack fails and the target is alerted of your hacking attempt. They can retaliate as appropriate."
+      },
+      "20": {
+        "value": "You may change or manipulate up to 5 pieces of data within the target."
+      },
+      "11-19": {
+        "value": "You may change or manipulate up to 3 pieces of data within the target."
+      },
+      "6-10": {
+        "value": "You may change or manipulate up to 2 pieces of data within the target. One of these manipulations will have a Setback attached as decided by the Mediator."
+      },
+      "2-5": {
+        "value": "The hacking attempt fails. The Mediator may choose an appropriate Setback."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "92e68ef8-fd6b-4312-9715-1fa13845bda8",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Portable Multi-Phase Shield",
+    "section": "equipment",
+    "table": {
+      "1": {
+        "value": "The attack hits as normal and the shield overloads. Your Portable Multi-Phase Shield is destroyed."
+      },
+      "20": {
+        "value": "The attack deals no damage."
+      },
+      "11-19": {
+        "value": "The forcefield partially absorbs some of the hit, you take half damage from the attack."
+      },
+      "6-10": {
+        "value": "The forcefield absorbs the blow, but is destroyed. You take no damage from the attack and your Portable Multi-Phase Shield is destroyed."
+      },
+      "2-5": {
+        "value": "The force field fails and the attack hits as normal."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "958972ab-3236-41e7-a544-adbaa353fe84",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Prawn Sifter",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "You find 1 Scrap of the Tech Level of the area."
+      },
+      "20": {
+        "value": "You find a damaged Mech Chassis of the Tech Level of the area. This can be determined randomly or chosen by the Mediator."
+      },
+      "11-19": {
+        "value": "You find a damaged System of the Tech Level of the area. This can be determined randomly or chosen by the Mediator."
+      },
+      "6-10": {
+        "value": "You find a damaged Module of the Tech Level of the area. This can be determined randomly or chosen by the Mediator."
+      },
+      "2-5": {
+        "value": "You find 2 Scrap of the Tech Level of the area."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "c93113c2-ac19-4c1b-abf3-76513366f6ad",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Probing Proboscis",
+    "section": "chassis",
+    "table": {
+      "1": {
+        "value": "The Probing Proboscis fails to penetrate the target and leaves you exposed. You gain the Vulnerable Trait until the start of your next turn."
+      },
+      "20": {
+        "value": "You may ask the Mediator 5 questions and they will answer based on what the creature would know. The target creature then dies."
+      },
+      "11-19": {
+        "value": "You may ask the Mediator 3 questions and they will answer based on what the creature would know. The target creature then dies."
+      },
+      "6-10": {
+        "value": "You may ask the Mediator 2 questions and they will answer based on what the creature would know. One of these answers will contain some false information. The target creature rolls on the Critical Damage Table."
+      },
+      "2-5": {
+        "value": "The Probing Proboscis fails to penetrate the target."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "b682a43f-e853-4e59-86cb-304eac9c338f",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Reactor Safety Protocols",
+    "section": "modules",
+    "table": {
+      "1": {
+        "label": "Reactor Damage",
+        "value": "The Chassis of your Mech becomes damaged as your reactor wildly overheats."
+      },
+      "20": {
+        "label": "Reactor Stabilisation",
+        "value": "Your Mech's reactor stabilises and its Heat is reduced to 0."
+      },
+      "11-19": {
+        "label": "Reactor Overheat",
+        "value": "Your Mech has overheated. It shuts down and gains the [[Vulnerable]] Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech takes SP damage equal to half your current Heat level. Your Mech then reduces its Heat by 2."
+      },
+      "6-10": {
+        "label": "Module Overheat",
+        "value": "One of the Modules on your Mech, chosen at random or by the Mediator, has overheated and is damaged."
+      },
+      "2-5": {
+        "label": "System Overheat",
+        "value": "One of the Systems on your Mech, chosen at random or by the Mediator, has overheated and is damaged."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "8bd4dcf0-43a4-4ef8-9195-2c51e2b8d563",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Reflective Shielding",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The shield malfunctions. You take no damage from the attack, but it is deflected to a random target within Medium Range, which takes the full damage of the attack. In addition, your Reflective Shielding System becomes damaged."
+      },
+      "20": {
+        "value": "The attack deals no damage and is reflected devastatingly back at the attacker, hitting them for 2× the damage of the weapon they attacked with."
+      },
+      "11-19": {
+        "value": "The attack deals half damage and is reflected back at the attacker dealing the full damage of the weapon they attacked with to them."
+      },
+      "6-10": {
+        "value": "The attack deals full damage and is reflected back at the attacker dealing half damage to them of the weapon they attacked with."
+      },
+      "2-5": {
+        "value": "The shielding fails and you are hit by the attack as normal."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "9460c816-0113-48dd-8911-463c0969c65b",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Refractive Shield Projector",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check."
+      },
+      "20": {
+        "value": "The attack misses and deals no damage and refracts back at the attacker, hitting them for the damage of the weapon."
+      },
+      "11-19": {
+        "value": "The attack misses and deals no damage."
+      },
+      "6-10": {
+        "value": "You may choose to gain Heat equal to the damage of the weapon that attacked you. If you do the attack misses and deals no damage. if you do not, the attack deals damage as normal."
+      },
+      "2-5": {
+        "value": "The attack hits as normal."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "38b46715-4f82-493f-9a9a-17594f0b56ef",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Reinforced Chassis",
+    "section": "chassis",
+    "table": {
+      "1": {
+        "value": "The Jackhammer Mech Chassis is damaged. All of its mounted Systems, Modules, and any carried Cargo are destroyed. The Pilot survives in the reinforced cockpit."
+      },
+      "20": {
+        "value": "The Jackhammer is Intact and operational with 1 SP. The Pilot is unharmed."
+      },
+      "11-19": {
+        "value": "The Jackhammer is temporarily Shutdown and becomes inoperable. At the end of its next turn it activates and becomes operational with 1 SP. The Pilot is unharmed."
+      },
+      "6-10": {
+        "value": "As per 11-19, but a random Module on the Jackhammer is also Damaged."
+      },
+      "2-5": {
+        "value": "As per 11-19, but a random System on the Jackhammer is also Damaged."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "7422a070-9b49-46df-969f-65ad7985839d",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Shield",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The attack hits as normal and the shield temporarily breaks down. It cannot be used for 10 minutes."
+      },
+      "20": {
+        "value": "The attack deals no damage. If the weapon that made the attack had the [[Melee]] Trait, it is destroyed. You may activate your Matter Phase Shield as a Reaction without spending EP for the next 10 minutes."
+      },
+      "11-19": {
+        "value": "The attack misses and deals no damage. If the weapon that made the attack had the [[Melee]] Trait, it is destroyed."
+      },
+      "6-10": {
+        "value": "The attack hits and deals half damage. If the weapon that made the attack had the [[Melee]] Trait, it is destroyed."
+      },
+      "2-5": {
+        "value": "The shield fails and the attack hits as normal."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "77662019-6419-497b-9b5b-9dd9836e09cf",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Sonic Screecher",
+    "section": "modules",
+    "table": {
+      "1": {
+        "value": "The targets are entirely unharmed. The Module malfunctions causing the sound to reverberate through your Mech's Cockpit, your Pilot must roll on the Critical Injury Table."
+      },
+      "20": {
+        "value": "All targets that can hear within Range are reduced to 0 HP."
+      },
+      "11-19": {
+        "value": "All targets that can hear within Range cannot take any actions and gain the [[Vulnerable]] Trait until the end of your next turn."
+      },
+      "6-10": {
+        "value": "All targets that can hear within Range can choose to either not be able to take any actions until the end of your next turn or gain the [[Vulnerable]] Trait until the end of your next turn."
+      },
+      "2-5": {
+        "value": "The targets manage to resist the effect and are unharmed beyond some mild nausea."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "34b27d48-9b19-4a74-9884-6a7c897ce026",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Survey Scanner",
+    "section": "modules",
+    "table": {
+      "1": {
+        "value": "Your scan returns inaccurate data. You may ask the Mediator 2 questions about the area and both answers will contain false information which you believe to be true."
+      },
+      "20": {
+        "value": "You make a thorough scan of the area and may ask the Mediator 5 questions about it. The answers they give must be true."
+      },
+      "11-19": {
+        "value": "Your scan is successful and you may ask the Mediator 3 questions about the scanned area. The answers they give must be true."
+      },
+      "6-10": {
+        "value": "You partially scan the area and return messy results. You may ask the Mediator 2 questions about the area. One of the answers they give must be true, but the other answer contains false information as decided by the Mediator."
+      },
+      "2-5": {
+        "value": "Your scan fails to find any useful information about the area."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "117faf24-a910-4625-93bb-71572ff32cf6",
+    "source": "Salvage Union Workshop Manual",
+    "name": "System and Software Hacker",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "The hacking attempt fails and the target cannot be targeted by any Abilities with the [[Hacking]] Trait for the next 10 minutes."
+      },
+      "20": {
+        "value": "The System or Module is destroyed."
+      },
+      "11-19": {
+        "value": "The System or Module is damaged."
+      },
+      "6-10": {
+        "value": "The System or Module is inoperable and cannot be used until the end of the next turn."
+      },
+      "2-5": {
+        "value": "The hacking attempt fails."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "f82a16a7-3d51-45e9-8c07-0750a725b94e",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Teleportation Pod",
+    "section": "systems",
+    "table": {
+      "1": {
+        "value": "The teleporter malfunctions. You instead teleport to a random Teleportation Bay somewhere on the Campaign Map you are currently in."
+      },
+      "20": {
+        "value": "You teleport perfectly to your destination. In addition, you may bring an additional creature within Close Range with you as you teleport."
+      },
+      "11-19": {
+        "value": "You teleport safely to your destination."
+      },
+      "6-10": {
+        "value": "You teleport to your destination, but suffer a teleportation mishap. Roll on the Critical Injury Table."
+      },
+      "2-5": {
+        "value": "The teleporter fails to trigger. You may try again on your next turn."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "3cbe87a9-1c80-4209-bb85-af089d3e7542",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Union Call",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "The mission fails, and cannot be completed as something has gone badly wrong, for example, the target of an assassination attempt escapes and places a bounty on you instead, the trade caravan is destroyed, or the salvage is taken by a corpo or raider band instead."
+      },
+      "20": {
+        "value": "The mission is completed within a week. You pay the reward during Downtime."
+      },
+      "11-19": {
+        "value": "The mission is completed within two weeks. You pay the reward during Downtime."
+      },
+      "6-10": {
+        "value": "The mission will be completed within two weeks, but only if you pay twice the agreed reward during Downtime."
+      },
+      "2-5": {
+        "value": "You wait two weeks and realise the mission is not completed. You may post the mission offer again or choose a different one."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "8b64a87b-258a-4917-acbb-3ad6c349d3fd",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Well actually...",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "You do not know the answer, and everyone realises this."
+      },
+      "20": {
+        "value": "You can ask the Mediator five questions about it and they must give you true answers."
+      },
+      "11-19": {
+        "value": "You can ask the Mediator three questions about it and they must give you true answers."
+      },
+      "6-10": {
+        "value": "You can ask the Mediator two questions about it. One of these answers must be true, but the other can be false."
+      },
+      "2-5": {
+        "value": "You do not actually know, and must make up a convincing answer to save your pride."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "28e23b1b-3529-4188-b494-91e20fffb30e",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Whirlwind Strike",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "Your attacks miss. You spin wildly and then collapse, falling Prone."
+      },
+      "19-20": {
+        "value": "You strike all enemies within Range of the weapon, hitting them for double damage."
+      },
+      "11-18": {
+        "value": "You hit all enemies within Range of the weapon."
+      },
+      "6-10": {
+        "value": "You hit all enemies within Range of the weapon. Choose one: you deal half damage to all targets or you deal full damage, but your weapon is damaged after finishing the attack."
+      },
+      "2-5": {
+        "value": "You hit one enemy in Range of the weapon, then your weapon is damaged."
+      },
+      "type": "alternate"
+    }
+  },
+  {
+    "id": "0ae408ae-f7c1-4a5f-8220-ce083c2ea61d",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Worm",
+    "section": "abilities",
+    "table": {
+      "1": {
+        "value": "The Worm fails to upload to the targets and has no effect."
+      },
+      "20": {
+        "value": "The Chassis of all targeted Mechs is damaged and inoperable until repaired."
+      },
+      "11-19": {
+        "value": "A System and Module of your choice on each Mech is damaged."
+      },
+      "6-10": {
+        "value": "A System or Module of your choice on each Mech is damaged."
+      },
+      "2-5": {
+        "value": "A System or Module on one targeted Mech of your choice is damaged."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "cc5aed4e-c782-4996-9472-ffb35e64d66c",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Bio-Talon",
+    "section": "systems",
+    "table": {
+      "20": {
+        "value": "A System or Appendage on the target is destroyed."
+      },
+      "type": "dramatic"
+    }
+  },
+  {
+    "id": "8c107425-8ddf-49dd-9882-7559a4fda62b",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Nanite Reconstruction (Meld Regenerator)",
+    "section": "modules",
+    "table": {
+      "1": {
+        "label": "Awakening",
+        "value": "Your Mech is transformed into a Meld Behemoth under the control of the Meld. Your Pilot may attempt to escape, but if they fail, they are consumed by the Meld and considered dead."
+      },
+      "20": {
+        "label": "Full Restoration",
+        "value": "Your Mech Chassis is Intact and restored to its Max SP value."
+      },
+      "11-19": {
+        "label": "Partial Restoration",
+        "value": "Your Mech Chassis is Intact and gains an amount of SP equal to 3 + its Tech Level."
+      },
+      "6-10": {
+        "label": "Improvised Restoration",
+        "value": "A System of your choice on your Mech is destroyed. However, your Mech Chassis is Intact, and gains an amount of SP equal to the Salvage Value of the destroyed System."
+      },
+      "2-5": {
+        "label": "Failed Restoration",
+        "value": "Roll on the Critical Damage Table as normal."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "b2eb603f-036a-4984-b79b-330e745554d3",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Meld Distorter",
+    "section": "modules",
+    "table": {
+      "1": {
+        "value": "It transforms into a Meld Nanoid, controlled by the Meld and hostile to you."
+      },
+      "20": {
+        "value": "It morphs into a System or Module of your choice which is of its Tech Level."
+      },
+      "11-19": {
+        "value": "It morphs into a random System or Module of its Tech Level."
+      },
+      "6-10": {
+        "value": "It morphs into a Tech 1 System or Module of your choice."
+      },
+      "2-5": {
+        "value": "It's mangled beyond comprehension and considered destroyed."
+      },
+      "type": "standard"
+    }
+  },
+  {
+    "id": "12a6fcf2-2eda-492e-b9f5-f86a340c9fb3",
+    "source": "Salvage Union Workshop Manual",
+    "name": "Trading Bay",
+    "section": "crawler",
+    "table": {
+      "1": {
+        "value": "Nothing is available for trade during this Downtime."
+      },
+      "20": {
+        "value": "An Intact Mech Chassis is available for trade."
+      },
+      "type": "standard",
+      "2-5": {
+        "value": "An Intact Module is available for trade."
+      },
+      "6-10": {
+        "value": "An Intact System is available for trade."
+      },
+      "11-19": {
+        "value": "An Intact System and an Intact Module are available for trade."
+      }
+    },
+    "page": 222
   }
 ]

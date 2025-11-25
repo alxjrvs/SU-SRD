@@ -50,6 +50,10 @@
       },
       "table": {
         "$ref": "shared/objects.schema.json#/definitions/table"
+      },
+      "tableName": {
+        "type": "string",
+        "description": "Reference to a roll table by name. The referenced table must exist in roll-tables.json"
       }
     },
     "additionalProperties": false

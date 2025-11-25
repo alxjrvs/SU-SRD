@@ -91,6 +91,10 @@
       "table": {
         "$ref": "shared/objects.schema.json#/definitions/table"
       },
+      "tableName": {
+        "type": "string",
+        "description": "Reference to a roll table by name. The referenced table must exist in roll-tables.json"
+      },
       "hidden": {
         "type": "boolean",
         "description": "If true, this action will not affect the rendering of the entity display"

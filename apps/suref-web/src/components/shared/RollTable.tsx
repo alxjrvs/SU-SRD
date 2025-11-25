@@ -28,15 +28,25 @@ interface RollTableDisplayProps {
 
 function digestRollTable(table: RollTableType): DigestedRollTable[] {
   if (!table) return []
+  
+  // Helper function to extract numeric value from a key for sorting
+  // Handles: "20" -> 20, "11-19" -> 11, "2-5" -> 2, etc.
+  const getSortValue = (key: string): number => {
+    if (key === 'type') return -1 // Will be filtered out anyway
+    const firstPart = key.split('-')[0]?.trim()
+    if (!firstPart) return 0
+    const num = parseInt(firstPart, 10)
+    return isNaN(num) ? 0 : num
+  }
+  
   const sorted = Object.keys(table)
+    .filter((key) => key !== 'type')
     .sort((a, b) => {
-      const aPart = a.split('-')[0]
-      const bPart = b.split('-')[0]
-      const aNum = aPart ? parseInt(aPart) : 0
-      const bNum = bPart ? parseInt(bPart) : 0
-      return aNum - bNum
+      const aNum = getSortValue(a)
+      const bNum = getSortValue(b)
+      // Sort descending (highest to lowest)
+      return bNum - aNum
     })
-    .reverse()
 
   return sorted
     .map((key, order) => {
