@@ -121,13 +121,6 @@ export function calculateBackgroundColor(
 }
 
 /**
- * Get background color for content area based on schema
- */
-export function getContentBackground(schemaName: SURefMetaSchemaName): string {
-  return 'su.white'
-}
-
-/**
  * Calculate opacity values for entity display
  */
 export function calculateOpacity(dimHeader: boolean, disabled: boolean) {

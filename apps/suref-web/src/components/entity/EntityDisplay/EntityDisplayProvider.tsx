@@ -18,7 +18,6 @@ import { techLevelColors } from '@/theme'
 import {
   calculateBackgroundColor,
   extractName,
-  getContentBackground,
   calculateOpacity,
   shouldShowExtraContent as calculateShouldShowExtraContent,
   createHeaderClickHandler,
@@ -113,7 +112,6 @@ export function EntityDisplayProvider({
   const headerBg = damaged ? 'su.grey' : calculatedHeaderBg
   const spacing = getEntitySpacing(compact)
   const fontSize = getEntityFontSizes(compact)
-  const contentBg = getContentBackground(schemaName)
   const opacity = calculateOpacity(dimHeader, disabled)
   const shouldShowExtraContent = calculateShouldShowExtraContent(compact, hideActions)
   const handleHeaderClick = createHeaderClickHandler(
@@ -158,7 +156,7 @@ export function EntityDisplayProvider({
     headerBg,
     spacing,
     fontSize,
-    contentBg,
+    contentBg: 'su.white',
     opacity,
     shouldShowExtraContent,
     handleHeaderClick,
