@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Salvage Union Data Schema Catalog",
   "description": "Catalog of all available schemas in the salvageunion-data repository",
-  "version": "2.2.0",
-  "generated": "2025-11-23T05:13:31.968Z",
+  "version": "2.3.0",
+  "generated": "2025-11-25T21:09:35.638Z",
   "schemas": [
     {
       "id": "abilities",
@@ -32,7 +32,7 @@
       "description": "Actions, abilities, and attacks that can be performed in Salvage Union",
       "dataFile": "data/actions.json",
       "schemaFile": "schemas/actions.schema.json",
-      "itemCount": 607,
+      "itemCount": 611,
       "requiredFields": ["id", "name"],
       "displayName": "actions",
       "meta": true
