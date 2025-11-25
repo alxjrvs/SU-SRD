@@ -1,12 +1,12 @@
 import { SheetTextarea } from './SheetTextarea'
-import { RoundedBox } from './RoundedBox'
+import { Card } from './Card'
 
 interface NotesProps {
   notes: string
   onChange: (value: string) => void
   /** Disables the textarea input */
   disabled?: boolean
-  /** Greys out the RoundedBox background (only for missing required data) */
+  /** Greys out the Card background (only for missing required data) */
   incomplete?: boolean
   backgroundColor?: string
   placeholder?: string
@@ -27,7 +27,7 @@ export function Notes({
   minH,
 }: NotesProps) {
   return (
-    <RoundedBox
+    <Card
       title="notes"
       bg={backgroundColor}
       disabled={incomplete}
@@ -43,6 +43,6 @@ export function Notes({
         placeholder={placeholder}
         height="full"
       />
-    </RoundedBox>
+    </Card>
   )
 }

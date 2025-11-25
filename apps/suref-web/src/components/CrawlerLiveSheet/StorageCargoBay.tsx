@@ -1,4 +1,4 @@
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { DynamicBay } from '@/components/shared/DynamicBay'
 import { useState } from 'react'
 import { getTiltRotation } from '@/utils/tiltUtils'
@@ -23,7 +23,7 @@ export function StorageCargoBay({ disabled = false, readOnly = false, id }: Carg
 
   return (
     <>
-      <RoundedBox
+      <Card
         bg={damaged ? 'su.grey' : 'bg.builder.crawler'}
         w="full"
         justifyContent="flex-start"
@@ -45,7 +45,7 @@ export function StorageCargoBay({ disabled = false, readOnly = false, id }: Carg
           disabled={disabled}
           singleCellMode
         />
-      </RoundedBox>
+      </Card>
 
       <CargoModal
         isOpen={isCargoModalOpen}

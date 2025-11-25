@@ -1,8 +1,10 @@
 import { Flex, type FlexProps } from '@chakra-ui/react'
 import type { ReactNode } from 'react'
+import type { SURefEnumSource } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
+import { getSourceStyles } from '@/components/entity/entityDisplayHelpers'
 
-type RoundedBoxProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 'direction'> & {
+type CardProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 'direction'> & {
   /** Background color token (e.g., 'bg.builder.pilot', 'su.orange', 'su.green') */
   bg?: string
   /** Optional background color for the header section (defaults to bg if not provided) */
@@ -40,9 +42,13 @@ type RoundedBoxProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 'dire
   /** Whether to reverse the header layout (title on right, rightContent on left) */
   reverse?: boolean
   bottomHeaderBorder?: boolean
+  /** Optional source book for source-based styling */
+  source?: SURefEnumSource
+  /** Whether the entity is expanded (affects source styling) */
+  isExpanded?: boolean
 }
 
-export function RoundedBox({
+export function Card({
   label,
   compact = false,
   bg = 'su.lightBlue',
@@ -63,14 +69,19 @@ export function RoundedBox({
   bottomHeaderBorder = false,
   headerTestId,
   reverse = false,
+  source,
+  isExpanded = true,
   ...flexProps
-}: RoundedBoxProps) {
+}: CardProps) {
   const actualHeaderBg = disabled ? 'su.grey' : headerBg || bg
   const actualBodyBg = disabled ? 'su.grey' : bodyBg || bg
 
   const hasHeader = !!(title || leftContent || rightContent)
   const headerCursor = onHeaderClick ? 'pointer' : 'default'
   const headerBottomRadius = children ? '0' : 'xs'
+
+  // Source-based styling using shared helper function (only when expanded)
+  const sourceHeaderStyles = getSourceStyles(source, disabled, 'header', isExpanded)
 
   return (
     <Flex
@@ -128,6 +139,7 @@ export function RoundedBox({
           borderBottomWidth="2px"
           borderColor={bottomHeaderBorder ? 'su.black' : actualHeaderBg}
           overflow="visible"
+          css={sourceHeaderStyles}
         >
           <Flex alignItems="center" gap={compact ? 0.5 : 1}>
             {leftContent}

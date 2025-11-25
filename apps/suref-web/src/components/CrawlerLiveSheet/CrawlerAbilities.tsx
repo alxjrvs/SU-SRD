@@ -1,7 +1,7 @@
 import type { SURefCrawler, SURefMetaAction } from 'salvageunion-reference'
 import { extractActions } from 'salvageunion-reference'
 
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { VStack } from '@chakra-ui/react'
 import { SheetEntityChoiceDisplay } from './SheetEntityChoiceDisplay'
 import { useHydratedCrawler } from '@/hooks/crawler'
@@ -21,7 +21,7 @@ export function CrawlerAbilities({
   const crawlerTypeRef = selectedCrawlerType?.ref as SURefCrawler | undefined
 
   return (
-    <RoundedBox
+    <Card
       bg="bg.builder.crawler"
       title="Abilities"
       justifyContent={'flex-start'}
@@ -48,7 +48,7 @@ export function CrawlerAbilities({
           />
         ))
       })()}
-    </RoundedBox>
+    </Card>
   )
 }
 

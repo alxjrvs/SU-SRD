@@ -2,7 +2,7 @@ import { Grid, VStack, Text } from '@chakra-ui/react'
 import { useMemo } from 'react'
 import { getTechLevelNumber, type SURefSystem, type SURefModule } from 'salvageunion-reference'
 import { useHydratedPilot } from '@/hooks/pilot'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 
 interface PilotModulesSystemsProps {
   id: string
@@ -40,7 +40,7 @@ export function PilotModulesSystems({ id, disabled = false }: PilotModulesSystem
 
   return (
     <Grid templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }} gap={6}>
-      <RoundedBox bg="bg.builder.pilot" title="Systems" disabled={disabled}>
+      <Card bg="bg.builder.pilot" title="Systems" disabled={disabled}>
         <VStack gap={2} w="full" alignItems="flex-start">
           {sortedSystems.length === 0 ? (
             <Text color="gray.500" fontStyle="italic">
@@ -54,9 +54,9 @@ export function PilotModulesSystems({ id, disabled = false }: PilotModulesSystem
             ))
           )}
         </VStack>
-      </RoundedBox>
+      </Card>
 
-      <RoundedBox bg="bg.builder.pilot" title="Modules" disabled={disabled}>
+      <Card bg="bg.builder.pilot" title="Modules" disabled={disabled}>
         <VStack gap={2} w="full" alignItems="flex-start">
           {sortedModules.length === 0 ? (
             <Text color="gray.500" fontStyle="italic">
@@ -70,7 +70,7 @@ export function PilotModulesSystems({ id, disabled = false }: PilotModulesSystem
             ))
           )}
         </VStack>
-      </RoundedBox>
+      </Card>
     </Grid>
   )
 }

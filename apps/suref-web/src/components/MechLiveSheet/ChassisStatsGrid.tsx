@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react'
 import { StatDisplay } from '@/components/StatDisplay'
 import type { SURefChassis } from 'salvageunion-reference'
 import { getSystemSlots, getModuleSlots, getCargoCapacity } from 'salvageunion-reference'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 
 interface ChassisStatsGridProps {
   chassis: SURefChassis | undefined
@@ -22,7 +22,7 @@ export function ChassisStatsGrid({
   disabled = false,
 }: ChassisStatsGridProps) {
   return (
-    <RoundedBox bg="su.green" h="full" flex="1" disabled={disabled}>
+    <Card bg="su.green" h="full" flex="1" disabled={disabled}>
       <Flex
         flexDirection="row"
         justifyContent="space-between"
@@ -62,6 +62,6 @@ export function ChassisStatsGrid({
           hoverText="Salvage Value represents the sum of a Mech, System, or Module's material components. As such it's the amount of Scrap you receive when breaking down a Chassis, System, or Module, as well as the amount of Scrap required to craft a Mech, System, or Module."
         />
       </Flex>
-    </RoundedBox>
+    </Card>
   )
 }

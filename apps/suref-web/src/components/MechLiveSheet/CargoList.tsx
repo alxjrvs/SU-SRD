@@ -1,5 +1,5 @@
 import { StatDisplay } from '@/components/StatDisplay'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { DynamicBay } from '@/components/shared/DynamicBay'
 import { CargoModal } from '@/components/shared/CargoModal'
 import { useState } from 'react'
@@ -29,7 +29,7 @@ export function CargoList({ id, disabled = false, readOnly = false }: CargoListP
   }
   return (
     <>
-      <RoundedBox
+      <Card
         bg="bg.builder.mech"
         title="Cargo"
         disabled={disabled}
@@ -50,7 +50,7 @@ export function CargoList({ id, disabled = false, readOnly = false }: CargoListP
           onAddClick={canAddCargo ? onAddClick : undefined}
           disabled={disabled}
         />
-      </RoundedBox>
+      </Card>
       <CargoModal
         isOpen={isCargoModalOpen}
         onClose={() => {

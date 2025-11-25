@@ -6,7 +6,7 @@ import {
   getModuleSlots,
   getCargoCapacity,
 } from 'salvageunion-reference'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { StatDisplay } from '@/components/StatDisplay'
 import { NestedChassisAbility } from '@/components/entity/NestedChassisAbility'
 
@@ -24,7 +24,7 @@ export function ChassisAbilities({
   const chassisAbilities = chassis ? getChassisAbilities(chassis) : undefined
 
   return (
-    <RoundedBox
+    <Card
       rightContent={
         <Flex flexDirection="row" justifyContent="flex-end" gap={4}>
           <StatDisplay
@@ -73,6 +73,6 @@ export function ChassisAbilities({
             ))
           : null}
       </VStack>
-    </RoundedBox>
+    </Card>
   )
 }

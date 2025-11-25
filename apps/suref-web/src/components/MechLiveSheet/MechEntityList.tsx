@@ -4,7 +4,7 @@ import { getTechLevelNumber, type SURefSystem, type SURefModule } from 'salvageu
 import { EntityDisplay } from '@/components/entity/EntityDisplay'
 import { StatDisplay } from '@/components/StatDisplay'
 import { AddStatButton } from '@/components/shared/AddStatButton'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { EntitySelectionModal } from '@/components/entity/EntitySelectionModal'
 import { Text } from '@/components/base/Text'
 import type { HydratedEntity } from '@/types/hydrated'
@@ -198,7 +198,7 @@ export function MechEntityList({
 
   return (
     <>
-      <RoundedBox
+      <Card
         bg="bg.builder.mech"
         title={title}
         disabled={disabled}
@@ -240,7 +240,7 @@ export function MechEntityList({
             />
           ))}
         </VStack>
-      </RoundedBox>
+      </Card>
 
       <EntitySelectionModal
         isOpen={isModalOpen}

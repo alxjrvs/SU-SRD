@@ -2,7 +2,7 @@ import { useMemo, useCallback } from 'react'
 import { Box, Grid, Stack } from '@chakra-ui/react'
 import { Heading } from '@/components/base/Heading'
 import { Text } from '@/components/base/Text'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { SalvageUnionReference } from 'salvageunion-reference'
 import type { SURefAbility, SURefClass } from 'salvageunion-reference'
 import { EntityDisplay } from '@/components/entity/EntityDisplay'
@@ -143,11 +143,11 @@ export function ClassAbilitiesList({
 
   if (!selectedClass && !selectedAdvancedClass) {
     return (
-      <RoundedBox bg="su.grey">
+      <Card bg="su.grey">
         <Text variant="pseudoheader" textAlign="center">
           Choose class to see abilities
         </Text>
-      </RoundedBox>
+      </Card>
     )
   }
 

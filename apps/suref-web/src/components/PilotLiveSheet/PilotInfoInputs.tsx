@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { Box, Flex, Grid } from '@chakra-ui/react'
 import { SheetInput } from '@/components/shared/SheetInput'
 import { SheetSelect } from '@/components/shared/SheetSelect'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { SalvageUnionReference } from 'salvageunion-reference'
 import { useChangePilotClass } from '@/hooks/pilot/useChangePilotClass'
 import { useChangePilotHybridClass } from '@/hooks/pilot/useChangePilotHybridClass'
@@ -14,7 +14,7 @@ import { checkTreeRequirements } from './utils/checkTreeRequirements'
 interface PilotInfoInputsProps {
   /** Disables all inputs */
   disabled?: boolean
-  /** Greys out the RoundedBox background (only for missing required data) */
+  /** Greys out the Card background (only for missing required data) */
   incomplete?: boolean
   id: string
 }
@@ -178,7 +178,7 @@ export function PilotInfoInputs({
   }
 
   return (
-    <RoundedBox
+    <Card
       title={callsign ?? 'New Pilot'}
       subTitleContent={<Text></Text>}
       bg="bg.builder.pilot"
@@ -319,6 +319,6 @@ export function PilotInfoInputs({
           }
         />
       </Grid>
-    </RoundedBox>
+    </Card>
   )
 }

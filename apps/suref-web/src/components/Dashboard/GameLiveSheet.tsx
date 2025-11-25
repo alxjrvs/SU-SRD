@@ -10,7 +10,7 @@ import { PilotMechCell } from './PilotMechCell'
 import { ActiveToggle } from '@/components/shared/ActiveToggle'
 import { PrivateToggle } from '@/components/shared/PrivateToggle'
 import { PermissionError } from '@/components/shared/PermissionError'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { LiveSheetLayout } from '@/components/shared/LiveSheetLayout'
 import { ControlBarContainer } from '@/components/shared/ControlBarContainer'
 import { useCreateEntity } from '@/hooks/useCreateEntity'
@@ -270,7 +270,7 @@ export function GameLiveSheet() {
           )}
 
           {isMediator && (
-            <RoundedBox bg="red.600" title="Danger Zone">
+            <Card bg="red.600" title="Danger Zone">
               <VStack gap={2} align="stretch" p={4}>
                 {deleteError && (
                   <Text color="red.200" fontSize="sm">
@@ -296,12 +296,12 @@ export function GameLiveSheet() {
                   be undone.
                 </Text>
               </VStack>
-            </RoundedBox>
+            </Card>
           )}
         </VStack>
 
         <VStack w={{ base: 'full', lg: '400px' }} gap={4} align="stretch" flexShrink={0}>
-          <RoundedBox bg="su.gameBlue" title="Members">
+          <Card bg="su.gameBlue" title="Members">
             <VStack gap={2} align="stretch" w="full">
               {members.map((member) => (
                 <ValueDisplay
@@ -314,10 +314,10 @@ export function GameLiveSheet() {
                 />
               ))}
             </VStack>
-          </RoundedBox>
+          </Card>
 
           {isMediator && (
-            <RoundedBox
+            <Card
               bg="su.gameBlue"
               title="Invites"
               rightContent={
@@ -397,10 +397,10 @@ export function GameLiveSheet() {
                   ))}
                 </VStack>
               )}
-            </RoundedBox>
+            </Card>
           )}
 
-          <RoundedBox
+          <Card
             bg="su.gameBlue"
             title="Resources"
             rightContent={
@@ -480,7 +480,7 @@ export function GameLiveSheet() {
                 ))}
               </VStack>
             )}
-          </RoundedBox>
+          </Card>
         </VStack>
       </Flex>
 

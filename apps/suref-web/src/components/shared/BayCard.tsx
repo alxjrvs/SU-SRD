@@ -4,7 +4,7 @@ import type { SURefCrawlerBay } from 'salvageunion-reference'
 
 import type { HydratedBay } from '@/types/hydrated'
 import type { BayNPCData } from '@/components/CrawlerWizard/utils'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { NPCCard } from '@/components/shared/NPCCard'
 import { BayInfo } from './BayInfo'
 import { StatDisplay } from '@/components/StatDisplay'
@@ -203,7 +203,7 @@ export function BayCard(props: BayCardProps) {
   const readOnly = mode === 'entity' ? (props.readOnly ?? false) : false
 
   return (
-    <RoundedBox
+    <Card
       bg={metadata.damaged ? 'su.grey' : 'su.crawlerPink'}
       justifyContent="flex-start"
       title={bayRef.name}
@@ -303,6 +303,6 @@ export function BayCard(props: BayCardProps) {
           </Box>
         </VStack>
       </Box>
-    </RoundedBox>
+    </Card>
   )
 }

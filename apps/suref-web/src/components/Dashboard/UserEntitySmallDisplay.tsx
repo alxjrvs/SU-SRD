@@ -3,7 +3,7 @@ import type { BoxProps } from '@chakra-ui/react'
 import { Flex } from '@chakra-ui/react'
 import { Link, type LinkProps } from '@tanstack/react-router'
 import { Text } from '@/components/base/Text'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { ValueDisplay } from '@/components/shared/ValueDisplay'
 
 interface UserEntitySmallDisplayProps extends Omit<BoxProps, 'onClick'> {
@@ -62,8 +62,8 @@ export function UserEntitySmallDisplay({
       rightHeader
     )
 
-  const roundedBoxContent = (
-    <RoundedBox
+  const cardContent = (
+    <Card
       minH="90px"
       reverse={reverse}
       bg={effectiveBgColor}
@@ -85,7 +85,7 @@ export function UserEntitySmallDisplay({
           {deleteButton}
         </Flex>
       )}
-    </RoundedBox>
+    </Card>
   )
 
   if (to) {
@@ -96,10 +96,10 @@ export function UserEntitySmallDisplay({
         style={{ textDecoration: 'none', display: 'block', width: '100%' }}
         onMouseEnter={onMouseEnter}
       >
-        {roundedBoxContent}
+        {cardContent}
       </Link>
     )
   }
 
-  return roundedBoxContent
+  return cardContent
 }

@@ -8,7 +8,7 @@ import { CrawlerResourceSteppers } from './CrawlerResourceSteppers'
 import { BayCard } from './BayCard'
 import { StorageCargoBay } from './StorageCargoBay'
 import { Notes } from '@/components/shared/Notes'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { LiveSheetLayout } from '@/components/shared/LiveSheetLayout'
 import { LiveSheetControlBar } from '@/components/shared/LiveSheetControlBar'
 import { CrawlerNPC } from './CrawlerNPC'
@@ -172,11 +172,11 @@ export default function CrawlerLiveSheet({ id }: CrawlerLiveSheetProps) {
           <Tabs.Content value="pilots">
             <VStack gap={4} align="stretch" mt={6}>
               {pilotsWithMechs.length === 0 ? (
-                <RoundedBox bg="su.grey">
+                <Card bg="su.grey">
                   <Text variant="pseudoheader" textAlign="center">
                     No pilots assigned to this crawler
                   </Text>
-                </RoundedBox>
+                </Card>
               ) : (
                 <Grid gridTemplateColumns="repeat(2, 1fr)" gap={4}>
                   {pilotsWithMechs.map(({ pilot }) => (

@@ -1,6 +1,6 @@
 import type { SURefCrawler } from 'salvageunion-reference'
 
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import type { CrawlerNPC as CrawlerNPCType } from '@/types/common'
 import type { Json } from '@/types/database-generated.types'
 import { NPCCard } from '@/components/shared/NPCCard'
@@ -56,14 +56,7 @@ export function CrawlerNPC({
   )
 
   return (
-    <RoundedBox
-      bg="bg.builder.crawler"
-      title="NPC"
-      disabled={disabled}
-      w="full"
-      maxW="50%"
-      flex="1"
-    >
+    <Card bg="bg.builder.crawler" title="NPC" disabled={disabled} w="full" maxW="50%" flex="1">
       <NPCCard
         npc={npc}
         choices={selectedCrawlerType?.choices || []}
@@ -75,6 +68,6 @@ export function CrawlerNPC({
         position={crawlerTypeRef?.npc.position || 'NPC'}
         disabled={!crawlerTypeRef}
       />
-    </RoundedBox>
+    </Card>
   )
 }

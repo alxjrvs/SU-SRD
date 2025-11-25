@@ -2,14 +2,14 @@ import { VStack } from '@chakra-ui/react'
 import type { SURefChassis } from 'salvageunion-reference'
 import { getStructurePoints, getEnergyPoints, getHeatCapacity } from 'salvageunion-reference'
 import NumericStepper from '@/components/NumericStepper'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { useHydratedMech, useUpdateMech } from '@/hooks/mech'
 
 interface MechResourceSteppersProps {
   id: string
   /** Disables all steppers */
   disabled?: boolean
-  /** Greys out the RoundedBox background (only for missing required data) */
+  /** Greys out the Card background (only for missing required data) */
   incomplete?: boolean
 }
 
@@ -28,7 +28,7 @@ export function MechResourceSteppers({
   const currentSP = maxSP - currentDamage
 
   return (
-    <RoundedBox bg="su.green" disabled={incomplete}>
+    <Card bg="su.green" disabled={incomplete}>
       <VStack alignItems="center" gap={2} h="full" justifyContent="space-between">
         <NumericStepper
           label="SP"
@@ -55,6 +55,6 @@ export function MechResourceSteppers({
           disabled={disabled}
         />
       </VStack>
-    </RoundedBox>
+    </Card>
   )
 }

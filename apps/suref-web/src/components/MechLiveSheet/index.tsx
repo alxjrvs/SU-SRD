@@ -12,7 +12,7 @@ import { SystemsList } from './SystemsList'
 import { ModulesList } from './ModulesList'
 import { CargoList } from './CargoList'
 import { Notes } from '@/components/shared/Notes'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { LiveSheetLayout } from '@/components/shared/LiveSheetLayout'
 import { DeleteEntity } from '@/components/shared/DeleteEntity'
 import { LiveSheetControlBar } from '@/components/shared/LiveSheetControlBar'
@@ -220,7 +220,7 @@ export default function MechLiveSheet({ id }: { id: string }) {
                   <PilotSmallDisplay id={mech.pilot_id} />
                 </>
               ) : (
-                <RoundedBox bg="su.grey">
+                <Card bg="su.grey">
                   <VStack gap={4}>
                     <Text variant="pseudoheader" textAlign="center">
                       No pilot assigned to this mech
@@ -266,7 +266,7 @@ export default function MechLiveSheet({ id }: { id: string }) {
                       </HStack>
                     )}
                   </VStack>
-                </RoundedBox>
+                </Card>
               )}
             </VStack>
           </Tabs.Content>

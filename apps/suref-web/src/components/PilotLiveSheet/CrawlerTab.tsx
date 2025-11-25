@@ -1,6 +1,6 @@
 import { Box, VStack, HStack } from '@chakra-ui/react'
 import { Text } from '@/components/base/Text'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { SheetSelect } from '@/components/shared/SheetSelect'
 import { CrawlerSmallDisplay } from '@/components/Dashboard/CrawlerSmallDisplay'
 import { AddStatButton } from '@/components/shared/AddStatButton'
@@ -69,7 +69,7 @@ export function CrawlerTab({ pilot, pilotId, isLocal, isEditable }: CrawlerTabPr
           <CrawlerSmallDisplay id={pilot.crawler_id} />
         </>
       ) : (
-        <RoundedBox bg="su.grey">
+        <Card bg="su.grey">
           <VStack gap={4}>
             <Text variant="pseudoheader" textAlign="center">
               No crawler assigned to this pilot
@@ -98,7 +98,7 @@ export function CrawlerTab({ pilot, pilotId, isLocal, isEditable }: CrawlerTabPr
               </HStack>
             )}
           </VStack>
-        </RoundedBox>
+        </Card>
       )}
     </VStack>
   )

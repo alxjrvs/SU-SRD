@@ -4,7 +4,7 @@ import { getTiltRotation } from '@/utils/tiltUtils'
 import type { SURefClass } from 'salvageunion-reference'
 import { EntityDisplayFooter } from '@/components/shared/EntityDisplayFooter'
 import { RollTable } from '@/components/shared/RollTable'
-import { EntityContainer } from '@/components/shared/EntityContainer'
+import { Card } from '@/components/shared/Card'
 import { EntitySubTitleElement } from '@/components/entity/EntityDisplay/EntitySubTitleContent'
 import { EntityLeftContent } from '@/components/entity/EntityDisplay/EntityLeftContent'
 import { EntityRightHeaderContent } from '@/components/entity/EntityDisplay/EntityRightHeaderContent'
@@ -126,7 +126,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
   }, [schemaName, data])
 
   return (
-    <EntityContainer
+    <Card
       bg="su.lightBlue"
       w="full"
       headerBg={headerBg}
@@ -242,6 +242,6 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
           {(showFooter ?? !hideActions) && <EntityDisplayFooter bg={headerBg} />}
         </VStack>
       )}
-    </EntityContainer>
+    </Card>
   )
 }

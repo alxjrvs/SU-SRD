@@ -11,7 +11,7 @@ import {
   type SURefModule,
 } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { StatDisplay } from '@/components/StatDisplay'
 import { AddStatButton } from '@/components/shared/AddStatButton'
 import { EntityDisplay } from '@/components/entity/EntityDisplay'
@@ -246,7 +246,7 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
       )}
 
       {/* Systems List */}
-      <RoundedBox
+      <Card
         bg="bg.builder.mech"
         title="Systems"
         rightContent={
@@ -304,10 +304,10 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
             </Text>
           )}
         </VStack>
-      </RoundedBox>
+      </Card>
 
       {/* Modules List */}
-      <RoundedBox
+      <Card
         bg="bg.builder.mech"
         title="Modules"
         rightContent={
@@ -365,7 +365,7 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
             </Text>
           )}
         </VStack>
-      </RoundedBox>
+      </Card>
 
       {/* Progress Button */}
       <Button

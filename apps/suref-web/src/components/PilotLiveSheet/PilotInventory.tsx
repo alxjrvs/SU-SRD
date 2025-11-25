@@ -12,7 +12,7 @@ import {
 } from 'salvageunion-reference'
 import { StatDisplay } from '@/components/StatDisplay'
 import { AddStatButton } from '@/components/shared/AddStatButton'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { EntityDisplay } from '@/components/entity/EntityDisplay'
 import { EntitySelectionModal } from '@/components/entity/EntitySelectionModal'
 import { EquipmentSelector } from './EquipmentSelector'
@@ -23,7 +23,7 @@ import type { HydratedEntity } from '@/types/hydrated'
 
 interface PilotInventoryProps {
   id: string
-  /** Greys out the RoundedBox background (only for missing required data) */
+  /** Greys out the Card background (only for missing required data) */
   disabled?: boolean
   /** Hides add/remove buttons when viewing another player's sheet */
   readOnly?: boolean
@@ -324,7 +324,7 @@ export function PilotInventory({ id, disabled = false, readOnly = false }: Pilot
 
   return (
     <>
-      <RoundedBox
+      <Card
         bg="su.orange"
         title="Inventory"
         disabled={disabled}
@@ -359,7 +359,7 @@ export function PilotInventory({ id, disabled = false, readOnly = false }: Pilot
             />
           ))}
         </Grid>
-      </RoundedBox>
+      </Card>
       <EquipmentSelector
         isOpen={isEquipmentSelectorOpen}
         onClose={() => setIsEquipmentSelectorOpen(false)}

@@ -3,7 +3,7 @@ import { SheetInput } from '@/components/shared/SheetInput'
 import { SheetSelect } from '@/components/shared/SheetSelect'
 import { SheetTextarea } from '@/components/shared/SheetTextarea'
 import { SalvageUnionReference } from 'salvageunion-reference'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import NumericStepper from '@/components/NumericStepper'
 import { StatDisplay } from '@/components/StatDisplay'
 import { useMemo, useState, useEffect, useCallback } from 'react'
@@ -15,7 +15,7 @@ import { calculateScrapRemoval, hasEnoughScrapAtTechLevel } from '@/utils/scrapC
 interface CrawlerHeaderInputsProps {
   /** Disables all inputs */
   disabled?: boolean
-  /** Greys out the RoundedBox background (only for missing required data) */
+  /** Greys out the Card background (only for missing required data) */
   incomplete?: boolean
   id: string
 }
@@ -136,7 +136,7 @@ export function CrawlerHeaderInputs({
   }, [flashSP])
 
   return (
-    <RoundedBox
+    <Card
       title={crawler?.name ?? 'Crawler'}
       bg="bg.builder.crawler"
       flex="1"
@@ -240,6 +240,6 @@ export function CrawlerHeaderInputs({
           />
         </Flex>
       </VStack>
-    </RoundedBox>
+    </Card>
   )
 }

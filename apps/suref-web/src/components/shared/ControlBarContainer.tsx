@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react'
 import { Box, HStack, Spinner } from '@chakra-ui/react'
-import { RoundedBox } from './RoundedBox'
+import { Card } from './Card'
 
 interface ControlBarContainerProps {
   backgroundColor: string
@@ -41,7 +41,7 @@ export function ControlBarContainer({
   )
 
   return (
-    <RoundedBox
+    <Card
       bg={backgroundColor}
       px={6}
       py={3}

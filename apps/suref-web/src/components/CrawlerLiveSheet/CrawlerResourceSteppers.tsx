@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Button, Flex, Grid } from '@chakra-ui/react'
 import NumericStepper from '@/components/NumericStepper'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { StatDisplay } from '@/components/StatDisplay'
 import { ScrapConversionModal } from './ScrapConversionModal'
 import { useHydratedCrawler, useUpdateCrawler } from '@/hooks/crawler'
@@ -10,7 +10,7 @@ interface CrawlerResourceSteppersProps {
   id: string
   /** Disables all steppers */
   disabled?: boolean
-  /** Greys out the RoundedBox background (only for missing required data) */
+  /** Greys out the Card background (only for missing required data) */
   incomplete?: boolean
   flashingTLs?: number[]
 }
@@ -65,7 +65,7 @@ export function CrawlerResourceSteppers({
 
   return (
     <>
-      <RoundedBox
+      <Card
         title="SCRAP"
         bg="bg.builder.crawler"
         disabled={incomplete}
@@ -158,7 +158,7 @@ export function CrawlerResourceSteppers({
         >
           CONVERT
         </Button>
-      </RoundedBox>
+      </Card>
 
       <ScrapConversionModal
         isOpen={isConversionModalOpen}

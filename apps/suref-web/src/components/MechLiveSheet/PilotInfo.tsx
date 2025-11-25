@@ -1,5 +1,5 @@
 import { Flex, Text, VStack } from '@chakra-ui/react'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { SheetSelect } from '@/components/shared/SheetSelect'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { useEntityRelationships } from '@/hooks/useEntityRelationships'
@@ -30,7 +30,7 @@ export function PilotInfo({ mechId, pilotId, onPilotChange, disabled = false }: 
 
   if (!mechId) {
     return (
-      <RoundedBox
+      <Card
         rightContent={<DiscordSignInButton disabled={disabled} />}
         flex="1"
         title="Pilot"
@@ -42,7 +42,7 @@ export function PilotInfo({ mechId, pilotId, onPilotChange, disabled = false }: 
 
   if (!pilotId) {
     return (
-      <RoundedBox flex="1" title="Pilot" disabled={disabled} bg="su.orange">
+      <Card flex="1" title="Pilot" disabled={disabled} bg="su.orange">
         <Flex justify="center" align="center" h="full" py={2}>
           <SheetSelect
             label="Pilot"
@@ -54,26 +54,26 @@ export function PilotInfo({ mechId, pilotId, onPilotChange, disabled = false }: 
             placeholder="No Pilot"
           />
         </Flex>
-      </RoundedBox>
+      </Card>
     )
   }
 
   if (!pilot) {
     return (
-      <RoundedBox flex="1" title="Pilot" disabled={disabled} bg="su.orange">
+      <Card flex="1" title="Pilot" disabled={disabled} bg="su.orange">
         <Flex justify="center" align="center" h="full" py={4}>
           <Text fontSize="sm" color="red.500" fontFamily="mono">
             Pilot not found
           </Text>
         </Flex>
-      </RoundedBox>
+      </Card>
     )
   }
 
   const className = selectedAdvancedClass?.ref.name ?? selectedClass?.ref.name ?? 'No Class'
 
   return (
-    <RoundedBox flex="1" title={pilot.callsign} disabled={disabled} bg="su.orange">
+    <Card flex="1" title={pilot.callsign} disabled={disabled} bg="su.orange">
       <VStack gap={3} align="stretch" py={2} px={3}>
         <Text fontSize="lg" fontWeight="bold" fontFamily="mono" textAlign="center">
           {pilot.callsign} the {className}
@@ -82,6 +82,6 @@ export function PilotInfo({ mechId, pilotId, onPilotChange, disabled = false }: 
           <LinkButton to={`/dashboard/pilots/${pilot.id}`} label="→ Pilot Page" />
         </Flex>
       </VStack>
-    </RoundedBox>
+    </Card>
   )
 }

@@ -1,6 +1,6 @@
 import { VStack } from '@chakra-ui/react'
 import { getTechLevel, type SURefChassis } from 'salvageunion-reference'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { StatDisplay } from '@/components/StatDisplay'
 import { ChassisInputs } from './ChassisInputs'
 import { useHydratedMech } from '@/hooks/mech'
@@ -23,7 +23,7 @@ export function MainMechDisplay({ id, isEditable }: { id: string; isEditable: bo
 
   return (
     <VStack flex="1" gap={2} alignItems="stretch">
-      <RoundedBox
+      <Card
         leftContent={
           <StatDisplay
             inverse={!isBioTechLevel && !isNTechLevel}
@@ -44,7 +44,7 @@ export function MainMechDisplay({ id, isEditable }: { id: string; isEditable: bo
         disabled={!selectedChassis}
       >
         <ChassisInputs id={id} isEditable={isEditable} />
-      </RoundedBox>
+      </Card>
     </VStack>
   )
 }

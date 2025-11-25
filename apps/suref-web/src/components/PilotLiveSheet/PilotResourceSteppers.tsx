@@ -1,13 +1,13 @@
 import { VStack } from '@chakra-ui/react'
 import NumericStepper from '@/components/NumericStepper'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { useHydratedPilot, useUpdatePilot } from '@/hooks/pilot'
 
 interface PilotResourceSteppersProps {
   id: string
   /** Disables all steppers */
   disabled?: boolean
-  /** Greys out the RoundedBox background (only for missing required data) */
+  /** Greys out the Card background (only for missing required data) */
   incomplete?: boolean
 }
 
@@ -26,7 +26,7 @@ export function PilotResourceSteppers({
   const currentHP = maxHP - currentDamage
 
   return (
-    <RoundedBox bg="bg.builder.pilot" disabled={incomplete}>
+    <Card bg="bg.builder.pilot" disabled={incomplete}>
       <VStack alignItems="center" justifyContent="space-between" h="full">
         <NumericStepper
           label="HP"
@@ -52,6 +52,6 @@ export function PilotResourceSteppers({
           disabled={disabled}
         />
       </VStack>
-    </RoundedBox>
+    </Card>
   )
 }

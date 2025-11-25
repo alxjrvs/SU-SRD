@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { Box, Image, Button, Input } from '@chakra-ui/react'
-import { RoundedBox } from './RoundedBox'
+import { Card } from './Card'
 
 interface LiveSheetAssetDisplayProps {
   url?: string
@@ -49,7 +49,7 @@ export function LiveSheetAssetDisplay({
   const hasUserImage = !!userImageUrl
 
   return (
-    <RoundedBox flexShrink={0} bg={bg} minW="300px" maxW="440px">
+    <Card flexShrink={0} bg={bg} minW="300px" maxW="440px">
       <Box
         position="relative"
         onMouseEnter={() => setIsHovered(true)}
@@ -127,6 +127,6 @@ export function LiveSheetAssetDisplay({
           onChange={handleFileChange}
         />
       </Box>
-    </RoundedBox>
+    </Card>
   )
 }

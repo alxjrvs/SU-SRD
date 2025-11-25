@@ -3,7 +3,7 @@ import { Box, VStack, Button, Tabs, Flex } from '@chakra-ui/react'
 import { extractActions } from 'salvageunion-reference'
 import type { SURefMetaAction } from 'salvageunion-reference'
 import { Text } from '@/components/base/Text'
-import { RoundedBox } from '@/components/shared/RoundedBox'
+import { Card } from '@/components/shared/Card'
 import { NPCCard } from '@/components/shared/NPCCard'
 import { NestedChassisAbility } from '@/components/entity/NestedChassisAbility'
 import { EntityChoiceDisplay } from '@/components/shared/EntityChoiceDisplay'
@@ -227,7 +227,7 @@ export function CrawlerTypeSelectionStep({
                 {/* NPC Box on the right */}
                 {selectedCrawlerType.npc && crawlerNPC && (
                   <Box flex="1" maxW="50%" minH={0} display="flex" flexDirection="column">
-                    <RoundedBox
+                    <Card
                       bg="bg.builder.crawler"
                       title="NPC"
                       disabled={false}
@@ -248,7 +248,7 @@ export function CrawlerTypeSelectionStep({
                         tilted={false}
                         disabled={false}
                       />
-                    </RoundedBox>
+                    </Card>
                   </Box>
                 )}
               </Flex>
