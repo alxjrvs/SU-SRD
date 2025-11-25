@@ -12,6 +12,8 @@ export const suColors = {
   darkOrange: 'rgb(200, 100, 50)',
   lightOrange: 'rgb(245, 193, 163)',
   lightBlue: 'rgb(199, 223, 231)',
+  lightBlueLighter: 'rgb(205, 226, 233)', // 10% lighter than lightBlue
+  lightBlueLighter2: 'rgb(210, 229, 235)', // 10% lighter than lightBlueLighter
   paleBlue: 'rgb(230, 240, 245)', // Paler than lightBlue
   oneBlue: 'rgb(115, 201, 230)',
   oneTwoBlue: 'rgb(101, 185, 215)', // Midpoint between tech level 1 and 2
@@ -70,6 +72,8 @@ const config = defineConfig({
           darkOrange: { value: suColors.darkOrange },
           lightOrange: { value: suColors.lightOrange },
           lightBlue: { value: suColors.lightBlue },
+          lightBlueLighter: { value: suColors.lightBlueLighter },
+          lightBlueLighter2: { value: suColors.lightBlueLighter2 },
           paleBlue: { value: suColors.paleBlue },
           oneBlue: { value: suColors.oneBlue },
           oneTwoBlue: { value: suColors.oneTwoBlue },

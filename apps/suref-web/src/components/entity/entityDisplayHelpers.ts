@@ -124,7 +124,7 @@ export function calculateBackgroundColor(
  * Get background color for content area based on schema
  */
 export function getContentBackground(schemaName: SURefMetaSchemaName): string {
-  return schemaName === 'actions' ? 'su.blue' : 'su.lightBlue'
+  return 'su.white'
 }
 
 /**

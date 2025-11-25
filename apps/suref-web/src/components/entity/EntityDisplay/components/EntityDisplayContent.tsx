@@ -200,21 +200,22 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
           ))}
 
           <EntityRequirementDisplay />
+          {/* Always show table in compact mode, regardless of schema */}
+          {table && (
+            <Box p={spacing.contentPadding} borderRadius="md" position="relative" zIndex={10}>
+              <RollTable
+                disabled={disabled}
+                table={table}
+                showCommand
+                compact
+                tableName={'name' in data ? String(data.name) : undefined}
+              />
+            </Box>
+          )}
           {shouldShowExtraContent && (
             <>
               {!hidePatterns && <EntityChassisPatterns />}
               <EntityOptions />
-              {table && (
-                <Box p={spacing.contentPadding} borderRadius="md" position="relative" zIndex={10}>
-                  <RollTable
-                    disabled={disabled}
-                    table={table}
-                    showCommand
-                    compact
-                    tableName={'name' in data ? String(data.name) : undefined}
-                  />
-                </Box>
-              )}
               {'damagedEffect' in data && data.damagedEffect && compact && (
                 <ConditionalSheetInfo
                   propertyName="damagedEffect"
