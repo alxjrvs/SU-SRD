@@ -3,15 +3,15 @@
   "version": "2.3.2",
   "description": "Comprehensive, schema-validated JSON dataset and TypeScript ORM for the Salvage Union tabletop RPG",
   "type": "module",
-  "main": "./lib/index.ts",
-  "types": "./lib/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./lib/index.ts",
+      "types": "./dist/index.d.ts",
       "development": "./lib/index.ts",
-      "import": "./lib/index.ts",
-      "require": "./lib/index.ts",
-      "default": "./lib/index.ts"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./data/*": {
       "types": "./data/*.d.ts",
