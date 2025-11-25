@@ -76,6 +76,7 @@ export type {
   SURefObjectNpc,
   SURefObjectSystemModule,
   SURefObjectTable,
+  SURefObjectTableContent,
   SURefObjectAdvancedClass,
   SURefObjectAction,
   SURefObjectGrant,

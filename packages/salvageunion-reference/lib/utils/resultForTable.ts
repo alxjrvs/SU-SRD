@@ -1,11 +1,11 @@
-import type { SURefObjectTable } from '../types/index.js'
+import type { SURefObjectTable, SURefObjectTableContent } from '../types/index.js'
 
 /**
  * Result type for table roll resolution
  */
 export type TableRollResult = {
   success: boolean
-  result: { label?: string; value: string }
+  result: SURefObjectTableContent
   key: string
 }
 
