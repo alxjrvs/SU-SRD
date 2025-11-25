@@ -63,7 +63,7 @@ The main web application built with:
 
 TypeScript ORM for Salvage Union game data:
 - Schema-validated JSON data
-- Type-safe model access via `SalvageUnionReference.instance`
+- Type-safe model access via `SalvageUnionReference` static methods (e.g., `SalvageUnionReference.Chassis.find(...)`)
 - Code generation from schemas
 - Search and filtering utilities
 
