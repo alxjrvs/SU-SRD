@@ -45,10 +45,11 @@ export function resultForTable(table: SURefObjectTable | undefined, roll: number
   if (numericKeys.length === 20 && numericKeys.every((k) => !k.includes('-'))) {
     const key = roll.toString()
     const result = tableData[key]
-    if (result && typeof result === 'string') {
+    const formattedResult = formatTableContent(result)
+    if (formattedResult) {
       return {
         success: true,
-        result,
+        result: formattedResult,
         key,
       }
     }
@@ -63,16 +64,40 @@ export function resultForTable(table: SURefObjectTable | undefined, roll: number
 }
 
 /**
+ * Formats table content to a string, handling both old string format and new tableContent object format
+ */
+function formatTableContent(content: unknown): string | null {
+  if (!content) return null
+  
+  // Handle new tableContent format: { label?: string, value: string }
+  if (typeof content === 'object' && content !== null && 'value' in content) {
+    const tableContent = content as { label?: string; value: string }
+    if (tableContent.label) {
+      return `${tableContent.label}: ${tableContent.value}`
+    }
+    return tableContent.value
+  }
+  
+  // Handle old string format
+  if (typeof content === 'string') {
+    return content
+  }
+  
+  return null
+}
+
+/**
  * Finds the result for a given roll in a range-based table
  * Automatically detects the range structure from available keys
  */
 function findRangeResult(rollTable: Record<string, unknown>, roll: number): TableRollResult {
   const exactKey = roll.toString()
   const exactResult = rollTable[exactKey]
-  if (exactResult && typeof exactResult === 'string') {
+  const formattedExactResult = formatTableContent(exactResult)
+  if (formattedExactResult) {
     return {
       success: true,
-      result: exactResult,
+      result: formattedExactResult,
       key: exactKey,
     }
   }
@@ -83,10 +108,11 @@ function findRangeResult(rollTable: Record<string, unknown>, roll: number): Tabl
   for (const rangeKey of rangeKeys) {
     if (rollInRange(roll, rangeKey)) {
       const result = rollTable[rangeKey]
-      if (result && typeof result === 'string') {
+      const formattedResult = formatTableContent(result)
+      if (formattedResult) {
         return {
           success: true,
-          result,
+          result: formattedResult,
           key: rangeKey,
         }
       }

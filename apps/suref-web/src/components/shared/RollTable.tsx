@@ -7,14 +7,16 @@ import { Text } from '@/components/base/Text'
 
 interface DigestedRollTable {
   order: number
-  name: string
-  description: string
+  label: string | null
+  value: string
   key: string
 }
 
+type TableContent = string | { label?: string; value: string }
+
 type RollTableType =
   | SURefObjectTable
-  | { type: 'standard' | 'alternate' | 'flat' | 'full'; [key: string]: string }
+  | { type: 'standard' | 'alternate' | 'flat' | 'full'; [key: string]: TableContent }
 
 interface RollTableDisplayProps {
   table: RollTableType
@@ -38,39 +40,56 @@ function digestRollTable(table: RollTableType): DigestedRollTable[] {
 
   return sorted
     .map((key, order) => {
-      const fullDescription = table[key as keyof typeof table] || ''
+      const content = table[key as keyof typeof table]
+      
+      // Handle new tableContent format: { label?: string, value: string }
+      if (
+        content &&
+        typeof content === 'object' &&
+        content !== null &&
+        'value' in content &&
+        typeof (content as { value: unknown }).value === 'string'
+      ) {
+        const tableContent = content as { label?: string; value: string }
+        return {
+          order,
+          label: tableContent.label || null,
+          value: tableContent.value,
+          key,
+        }
+      }
+      
+      // Handle old string format: "Label: Description" or just "Description"
+      const fullDescription = typeof content === 'string' ? content : ''
       const parts = fullDescription.split(':')
-      const namePart = parts[0]
-      const name = namePart ?? ''
-      const description = parts[1] ?? ''
-
+      const labelPart = parts[0]?.trim()
+      const valuePart = parts.slice(1).join(':').trim()
+      
       return {
         order,
-        name,
-        description,
+        label: labelPart && labelPart !== valuePart ? labelPart : null,
+        value: valuePart || fullDescription,
         key,
       }
     })
-    .filter((item): item is DigestedRollTable => item.name !== undefined)
+    .filter((item): item is DigestedRollTable => item.value !== undefined)
 }
 
 function RollTableDescription({
-  name,
-  description,
-  showTitle,
+  label,
+  value,
   compact,
 }: {
-  name: string
-  description: string
-  showTitle: boolean
+  label: string | null
+  value: string
   compact?: boolean
 }) {
-  const parsed = useParseTraitReferences(description)
+  const parsed = useParseTraitReferences(value)
   return (
     <Box color="su.black" fontSize={compact ? 'xs' : 'md'}>
-      {showTitle && (
+      {label && (
         <Box as="span" fontWeight="bold">
-          {name}:{' '}
+          {label}:{' '}
         </Box>
       )}
       {parsed}
@@ -146,16 +165,15 @@ export function RollTable({
             )}
           </Flex>
         )}
-        {digestedTable.map(({ name, description, key }, index) => {
+        {digestedTable.map(({ label, value, key }, index) => {
           if (key === 'type') return null
-          const showTitle = name !== description
           const isHighlighted = highlightedKey === key
           const bgColor = index % 2 === 0 ? 'su.lightOrange' : 'su.white'
 
           return (
             <Flex
               ref={isHighlighted ? highlightedRowRef : null}
-              key={key + name + index}
+              key={key + label + index}
               flexDirection="row"
               flexWrap="wrap"
               bg={bgColor}
@@ -233,9 +251,8 @@ export function RollTable({
                 py={compact ? 0.5 : 1}
               >
                 <RollTableDescription
-                  name={name}
-                  description={description}
-                  showTitle={showTitle}
+                  label={label}
+                  value={value}
                   compact={compact}
                 />
               </Flex>

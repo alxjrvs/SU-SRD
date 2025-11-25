@@ -284,11 +284,6 @@
       "description": "A system or module that can be installed on a mech",
       "type": "object",
       "required": ["actions", "salvageValue", "slotsRequired", "techLevel"],
-      "allOf": [
-        {
-          "$ref": "#/definitions/stats"
-        }
-      ],
       "properties": {
         "techLevel": {
           "$ref": "common.schema.json#/definitions/techLevel"
@@ -313,6 +308,19 @@
         }
       }
     },
+    "tableContent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
     "table": {
       "description": "Roll table for random outcomes based on d20 rolls",
       "oneOf": [
@@ -323,11 +331,11 @@
           "required": ["type", "1", "20", "11-19", "6-10", "2-5"],
           "properties": {
             "1": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Critical failure outcome"
             },
             "20": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Critical success outcome"
             },
             "type": {
@@ -335,15 +343,15 @@
               "const": "standard"
             },
             "11-19": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "High success outcome"
             },
             "6-10": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Moderate outcome"
             },
             "2-5": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Low outcome"
             }
           }
@@ -355,7 +363,7 @@
           "required": ["type", "1", "19-20", "11-18", "6-10", "2-5"],
           "properties": {
             "1": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Critical failure outcome"
             },
             "type": {
@@ -363,19 +371,19 @@
               "const": "alternate"
             },
             "19-20": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Critical success outcome"
             },
             "11-18": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "High success outcome"
             },
             "6-10": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Moderate outcome"
             },
             "2-5": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Low outcome"
             }
           }
@@ -409,64 +417,64 @@
           ],
           "properties": {
             "1": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "2": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "3": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "4": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "5": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "6": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "7": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "8": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "9": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "10": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "11": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "12": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "13": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "14": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "15": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "16": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "17": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "18": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "19": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "20": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "type": {
               "type": "string",
@@ -481,7 +489,7 @@
           "required": ["type", "20"],
           "properties": {
             "20": {
-              "type": "string"
+              "$ref": "#/definitions/tableContent"
             },
             "type": {
               "type": "string",
@@ -512,43 +520,43 @@
               "const": "duos"
             },
             "1-2": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "3-4": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "5-6": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "7-8": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "9-10": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "11-12": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "13-14": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "15-16": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "17-18": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             },
             "19-20": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "The name of the entity or ability"
             }
           }
@@ -564,31 +572,31 @@
               "const": "bio-chassis"
             },
             "1": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Critical failure outcome"
             },
             "2-3": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "System destruction outcome"
             },
             "4-5": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Severe bio-backlash outcome"
             },
             "6-8": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Module destruction outcome"
             },
             "9-10": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Bio-backlash outcome"
             },
             "11-19": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Core damage outcome"
             },
             "20": {
-              "type": "string",
+              "$ref": "#/definitions/tableContent",
               "description": "Critical success outcome"
             }
           }
@@ -631,21 +639,37 @@
     "bonusPerTechLevel": {
       "type": "object",
       "description": "Bonus values that increase with tech level",
-      "allOf": [
-        {
-          "$ref": "#/definitions/stats"
+      "properties": {
+        "structurePoints": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "energyPoints": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "heatCapacity": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "systemSlots": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "moduleSlots": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "cargoCapacity": {
+          "$ref": "common.schema.json#/definitions/nonNegativeInteger"
+        },
+        "techLevel": {
+          "$ref": "common.schema.json#/definitions/techLevel"
+        },
+        "salvageValue": {
+          "$ref": "common.schema.json#/definitions/salvageValue"
         }
-      ]
+      }
     },
     "advancedClass": {
       "type": "object",
       "description": "Advanced or hybrid character class",
       "required": ["advancedTree", "legendaryTree"],
-      "allOf": [
-        {
-          "$ref": "#/definitions/baseEntity"
-        }
-      ],
       "properties": {
         "asset_url": {
           "$ref": "common.schema.json#/definitions/asset_url"

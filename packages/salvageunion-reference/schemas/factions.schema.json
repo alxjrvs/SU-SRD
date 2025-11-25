@@ -6,11 +6,6 @@
   "type": "array",
   "items": {
     "type": "object",
-    "allOf": [
-      {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
-      }
-    ],
     "properties": {
       "asset_url": {
         "$ref": "shared/common.schema.json#/definitions/asset_url"

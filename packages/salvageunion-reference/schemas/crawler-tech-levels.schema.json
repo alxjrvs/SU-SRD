@@ -8,11 +8,6 @@
     "type": "object",
     "description": "A crawler tech level",
     "required": ["techLevel", "structurePoints", "populationMin", "populationMax"],
-    "allOf": [
-      {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
-      }
-    ],
     "properties": {
       "asset_url": {
         "$ref": "shared/common.schema.json#/definitions/asset_url"

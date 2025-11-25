@@ -7,11 +7,6 @@
   "type": "array",
   "asset_url": "https://opxrguskxuogghzcnppk.supabase.co/storage/v1/object/public/LP-Assets/distances.jpg",
   "items": {
-    "allOf": [
-      {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
-      }
-    ],
     "properties": {
       "asset_url": {
         "$ref": "shared/common.schema.json#/definitions/asset_url"

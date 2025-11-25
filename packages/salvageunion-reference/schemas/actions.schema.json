@@ -7,11 +7,6 @@
   "items": {
     "type": "object",
     "required": ["id", "name"],
-    "allOf": [
-      {
-        "$ref": "shared/objects.schema.json#/definitions/action"
-      }
-    ],
     "properties": {
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"

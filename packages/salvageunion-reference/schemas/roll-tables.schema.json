@@ -7,17 +7,9 @@
   "items": {
     "type": "object",
     "required": ["section", "table"],
-    "allOf": [
-      {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
-      }
-    ],
     "properties": {
       "asset_url": {
         "$ref": "shared/common.schema.json#/definitions/asset_url"
-      },
-      "content": {
-        "$ref": "shared/objects.schema.json#/definitions/content"
       },
       "id": {
         "$ref": "shared/common.schema.json#/definitions/id"

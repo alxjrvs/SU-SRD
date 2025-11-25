@@ -5,11 +5,26 @@
     "name": "Core Mechanic",
     "section": "core",
     "table": {
-      "1": "Cascade Failure: Something has gone terribly wrong. You suffer a severe consequence of the Mediator’s choice. When attacking, you miss the target and suffer a Setback chosen by the Mediator.",
-      "20": "Nailed it: You have overcome the odds and managed an outstanding success. You may achieve an additional bonus of your choice to the action. When dealing damage, you can choose to double it or pick another appropriate bonus effect.",
-      "11-19": "Success: You have achieved your goal without any compromises. When attacking, you hit the target and deal standard damage.",
-      "6-10": "Tough Choice: You succeed in your action, but at a cost. The Mediator gives you a Tough Choice with some kind of Setback attached. When attacking, you hit, but must make a Tough Choice.",
-      "2-5": "Failure: You have failed at what you were attempting to do. You face a Setback of the Mediator’s choice. When attacking, you miss the target.",
+      "1": {
+        "label": "Cascade Failure",
+        "value": "Something has gone terribly wrong. You suffer a severe consequence of the Mediator’s choice. When attacking, you miss the target and suffer a Setback chosen by the Mediator."
+      },
+      "20": {
+        "label": "Nailed it",
+        "value": "You have overcome the odds and managed an outstanding success. You may achieve an additional bonus of your choice to the action. When dealing damage, you can choose to double it or pick another appropriate bonus effect."
+      },
+      "11-19": {
+        "label": "Success",
+        "value": "You have achieved your goal without any compromises. When attacking, you hit the target and deal standard damage."
+      },
+      "6-10": {
+        "label": "Tough Choice",
+        "value": "You succeed in your action, but at a cost. The Mediator gives you a Tough Choice with some kind of Setback attached. When attacking, you hit, but must make a Tough Choice."
+      },
+      "2-5": {
+        "label": "Failure",
+        "value": "You have failed at what you were attempting to do. You face a Setback of the Mediator’s choice. When attacking, you miss the target."
+      },
       "type": "standard"
     },
     "page": 2,
@@ -26,11 +41,26 @@
     "name": "Group Initiative",
     "section": "action scene",
     "table": {
-      "1": "Ambush: Two NPCs chosen by the Mediator act first. Play then passes to the player group and one Pilot is chosen by the players to act next.",
-      "20": "You Shot First: Two Pilots chosen by the players act first. Play then passes to the NPC group and one NPC chosen by the Mediator acts next.",
-      "11-19": "Quickdraw: One Pilot chosen by the players acts first. Play then passes to the NPC group and one NPC chosen by the Mediator acts.",
-      "6-10": "Wait and See: One NPC chosen by the players acts first. Play then passes to the player group and one Pilot chosen by the players acts.",
-      "2-5": "Fumble: One NPC chosen by the Mediator acts first. Play then passes to the player group and one Pilot chosen by the players acts.",
+      "1": {
+        "label": "Ambush",
+        "value": "Two NPCs chosen by the Mediator act first. Play then passes to the player group and one Pilot is chosen by the players to act next."
+      },
+      "20": {
+        "label": "You Shot First",
+        "value": "Two Pilots chosen by the players act first. Play then passes to the NPC group and one NPC chosen by the Mediator acts next."
+      },
+      "11-19": {
+        "label": "Quickdraw",
+        "value": "One Pilot chosen by the players acts first. Play then passes to the NPC group and one NPC chosen by the Mediator acts."
+      },
+      "6-10": {
+        "label": "Wait and See",
+        "value": "One NPC chosen by the players acts first. Play then passes to the player group and one Pilot chosen by the players acts."
+      },
+      "2-5": {
+        "label": "Fumble",
+        "value": "One NPC chosen by the Mediator acts first. Play then passes to the player group and one Pilot chosen by the players acts."
+      },
       "type": "standard"
     },
     "page": 330,
@@ -47,11 +77,26 @@
     "name": "Critical Injury",
     "section": "damage",
     "table": {
-      "1": "Fatal Injury: Your Pilot suffers a fatal injury and dies.",
-      "20": "Miraculous Survival: You survive against the odds. You have 1 HP, remain conscious and can act normally.",
-      "11-19": "Unconscious: You are stable at 0 HP, but unconscious and cannot move or take actions until you gain at least 1 HP. You will regain consciousness naturally in 1 hour and get back up with 1 HP.",
-      "6-10": "Minor Injury: You suffer a Minor Injury such as a sprain, burns, or minor concussion. Your Max HP is reduced by 1 until healed in a Tech 3-4 Med Bay. In addition, you are Unconscious. Apply the result of 11-19.",
-      "2-5": "Major Injury: You suffer a Major Injury such as permanent scarring, broken ribs, or internal injuries. Your Max HP is reduced by 2 until healed in a Tech 5-6 Med Bay. In addition, you are Unconscious. Apply the result of 11-19.",
+      "1": {
+        "label": "Fatal Injury",
+        "value": "Your Pilot suffers a fatal injury and dies."
+      },
+      "20": {
+        "label": "Miraculous Survival",
+        "value": "You survive against the odds. You have 1 HP, remain conscious and can act normally."
+      },
+      "11-19": {
+        "label": "Unconscious",
+        "value": "You are stable at 0 HP, but unconscious and cannot move or take actions until you gain at least 1 HP. You will regain consciousness naturally in 1 hour and get back up with 1 HP."
+      },
+      "6-10": {
+        "label": "Minor Injury",
+        "value": "You suffer a Minor Injury such as a sprain, burns, or minor concussion. Your Max HP is reduced by 1 until healed in a Tech 3-4 Med Bay. In addition, you are Unconscious. Apply the result of 11-19."
+      },
+      "2-5": {
+        "label": "Major Injury",
+        "value": "You suffer a Major Injury such as permanent scarring, broken ribs, or internal injuries. Your Max HP is reduced by 2 until healed in a Tech 5-6 Med Bay. In addition, you are Unconscious. Apply the result of 11-19."
+      },
       "type": "standard"
     },
     "page": 323,
@@ -68,11 +113,26 @@
     "name": "Critical Damage",
     "section": "damage",
     "table": {
-      "1": "Catastrophic Damage: The Mech, as well as any mounted Systems and Modules as well as all Cargo, is destroyed. Your Pilot dies unless they have a means to escape the Mech.",
-      "20": "Miraculous Survival: Your Mech is somehow Intact. It has 1 SP and is still fully operational. Your Pilot is unharmed.",
-      "11-19": "Core Damage: Your Mech Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means to escape the Mech.",
-      "6-10": "Module Destruction: A Module mounted on your Mech is destroyed. This is chosen by the Mediator or at random. Your Mech Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
-      "2-5": "System Destruction: A System mounted on your Mech is destroyed. This is chosen by the Mediator or at random. Your Mech Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
+      "1": {
+        "label": "Catastrophic Damage",
+        "value": "The Mech, as well as any mounted Systems and Modules as well as all Cargo, is destroyed. Your Pilot dies unless they have a means to escape the Mech."
+      },
+      "20": {
+        "label": "Miraculous Survival",
+        "value": "Your Mech is somehow Intact. It has 1 SP and is still fully operational. Your Pilot is unharmed."
+      },
+      "11-19": {
+        "label": "Core Damage",
+        "value": "Your Mech Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means to escape the Mech."
+      },
+      "6-10": {
+        "label": "Module Destruction",
+        "value": "A Module mounted on your Mech is destroyed. This is chosen by the Mediator or at random. Your Mech Chassis is damaged and inoperable until repaired. Your Pilot is unharmed."
+      },
+      "2-5": {
+        "label": "System Destruction",
+        "value": "A System mounted on your Mech is destroyed. This is chosen by the Mediator or at random. Your Mech Chassis is damaged and inoperable until repaired. Your Pilot is unharmed."
+      },
       "type": "standard"
     },
     "page": 338,
@@ -89,11 +149,26 @@
     "name": "Reactor Overload",
     "section": "heat",
     "table": {
-      "1": "Reactor Overload: Your Mech’s reactor goes into full meltdown and explodes. Your Mech, as well as any mounted Systems, Modules, and all Cargo, is destroyed in the explosion. Everything in Close Range of your Mech takes SP damage equal to your Mech’s Maximum Heat Capacity. They may take any Turn Action or Reaction in response to try to avoid this. Your Pilot dies unless they have a means to escape. The area your Mech was in becomes Irradiated",
-      "20": "Reactor Overdrive: Your Mech’s reactor goes into overdrive. Your Mech can take any additional action this turn or Push their next roll within 10 minutes for free.",
-      "11-19": "Reactor Overheat: Your Mech’s reactor has overheated. Your Mech shuts down and gains the [[Vulnerable]] Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech takes an amount of SP damage equal to your current Heat.",
-      "6-10": "Module Overload: One of your Mech’s Modules chosen at random or by the Mediator is destroyed.",
-      "2-5": "System Overload: One of your Mech’s Systems chosen at random or by the Mediator is destroyed.",
+      "1": {
+        "label": "Reactor Overload",
+        "value": "Your Mech’s reactor goes into full meltdown and explodes. Your Mech, as well as any mounted Systems, Modules, and all Cargo, is destroyed in the explosion. Everything in Close Range of your Mech takes SP damage equal to your Mech’s Maximum Heat Capacity. They may take any Turn Action or Reaction in response to try to avoid this. Your Pilot dies unless they have a means to escape. The area your Mech was in becomes Irradiated"
+      },
+      "20": {
+        "label": "Reactor Overdrive",
+        "value": "Your Mech’s reactor goes into overdrive. Your Mech can take any additional action this turn or Push their next roll within 10 minutes for free."
+      },
+      "11-19": {
+        "label": "Reactor Overheat",
+        "value": "Your Mech’s reactor has overheated. Your Mech shuts down and gains the [[Vulnerable]] Trait. Your Mech will re-activate at the end of your next turn. In addition, your Mech takes an amount of SP damage equal to your current Heat."
+      },
+      "6-10": {
+        "label": "Module Overload",
+        "value": "One of your Mech’s Modules chosen at random or by the Mediator is destroyed."
+      },
+      "2-5": {
+        "label": "System Overload",
+        "value": "One of your Mech’s Systems chosen at random or by the Mediator is destroyed."
+      },
       "type": "standard"
     },
     "page": 235
@@ -104,11 +179,26 @@
     "name": "Area Salvage",
     "section": "salvaging",
     "table": {
-      "1": "Nothing: You find nothing in this area.",
-      "20": "Jackpot!: You find a Mech Chassis, System, or Module at the Tech Level of the area. It is in the Damaged Condition. This can be randomised or chosen by the Mediator.",
-      "11-19": "Winning: You find 3 Scrap of the Tech Level of the area.",
-      "6-10": "Not Bad: You find 2 Scrap of the Tech Level of the area.",
-      "2-5": "Better than Nothing: You find 1 Scrap of the Tech Level of the area.",
+      "1": {
+        "label": "Nothing",
+        "value": "You find nothing in this area."
+      },
+      "20": {
+        "label": "Jackpot!",
+        "value": "You find a Mech Chassis, System, or Module at the Tech Level of the area. It is in the Damaged Condition. This can be randomised or chosen by the Mediator."
+      },
+      "11-19": {
+        "label": "Winning",
+        "value": "You find 3 Scrap of the Tech Level of the area."
+      },
+      "6-10": {
+        "label": "Not Bad",
+        "value": "You find 2 Scrap of the Tech Level of the area."
+      },
+      "2-5": {
+        "label": "Better than Nothing",
+        "value": "You find 1 Scrap of the Tech Level of the area."
+      },
       "type": "standard"
     },
     "page": 248
@@ -119,11 +209,26 @@
     "name": "Mech Salvage",
     "section": "salvaging",
     "table": {
-      "1": "Ashes and Dust: The Mech is unsalvageable: its Chassis, Systems and Modules are all considered destroyed.",
-      "20": "Lions Share: You salvage the Mech Chassis, a System and a Module of your choice mounted on it. They both have the Damaged Condition. Anything else is considered destroyed.",
-      "11-19": "Meat and Potatoes: You salvage the Mech Chassis or a System or Module of your choice mounted on it. It has the Damaged Condition. Anything else is considered destroyed.",
-      "6-10": "Bits and Pieces: You salvage a System or Module of your choice mounted on the Mech. It has the Damaged Condition. Anything else is considered destroyed.",
-      "2-5": "Nuts and Bolts: You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed.",
+      "1": {
+        "label": "Ashes and Dust",
+        "value": "The Mech is unsalvageable: its Chassis, Systems and Modules are all considered destroyed."
+      },
+      "20": {
+        "label": "Lions Share",
+        "value": "You salvage the Mech Chassis, a System and a Module of your choice mounted on it. They both have the Damaged Condition. Anything else is considered destroyed."
+      },
+      "11-19": {
+        "label": "Meat and Potatoes",
+        "value": "You salvage the Mech Chassis or a System or Module of your choice mounted on it. It has the Damaged Condition. Anything else is considered destroyed."
+      },
+      "6-10": {
+        "label": "Bits and Pieces",
+        "value": "You salvage a System or Module of your choice mounted on the Mech. It has the Damaged Condition. Anything else is considered destroyed."
+      },
+      "2-5": {
+        "label": "Nuts and Bolts",
+        "value": "You salvage half of the Salvage Value of the Mech Chassis in Scrap of its Tech Level, to a minimum of 1. Everything else is considered destroyed."
+      },
       "type": "standard"
     },
     "page": 2
@@ -134,11 +239,26 @@
     "name": "Reaction Roll",
     "section": "npc tables",
     "table": {
-      "1": "Actively Hostile: The NPCs will launch an attack on the group if appropriate or flee from them, barricade themselves in, and avoid contact as though they were hostile.",
-      "20": "Actively Helpful and Friendly: The NPCs are incredibly friendly and positive towards the group and will actively help them in any reasonable way they can.",
-      "11-19": "Friendly: The NPCs are friendly and willing to talk, trade, and offer information to the group; however, they will still ask for their fair share in return.",
-      "6-10": "Unfriendly: The NPCs react in an unfriendly manner to the group; they are difficult to talk or trade with and reluctant to offer any help to the Pilots.",
-      "2-5": "Hostile: The NPCs are actively hostile to the group. They will defend their area, make motions to attack, gesture and threaten, and be unwilling to help in any way.",
+      "1": {
+        "label": "Actively Hostile",
+        "value": "The NPCs will launch an attack on the group if appropriate or flee from them, barricade themselves in, and avoid contact as though they were hostile."
+      },
+      "20": {
+        "label": "Actively Helpful and Friendly",
+        "value": "The NPCs are incredibly friendly and positive towards the group and will actively help them in any reasonable way they can."
+      },
+      "11-19": {
+        "label": "Friendly",
+        "value": "The NPCs are friendly and willing to talk, trade, and offer information to the group; however, they will still ask for their fair share in return."
+      },
+      "6-10": {
+        "label": "Unfriendly",
+        "value": "The NPCs react in an unfriendly manner to the group; they are difficult to talk or trade with and reluctant to offer any help to the Pilots."
+      },
+      "2-5": {
+        "label": "Hostile",
+        "value": "The NPCs are actively hostile to the group. They will defend their area, make motions to attack, gesture and threaten, and be unwilling to help in any way."
+      },
       "type": "standard"
     },
     "page": 268,
@@ -155,11 +275,21 @@
     "name": "Meteor Encounter",
     "section": "salvaging",
     "table": {
-      "1": "The Chimerid Meteor has burned up in orbit leaving nothing to salvage.",
-      "20": "Pilots arrive at the Chimerid Meteor first, and it is much larger than expected. It has a Supply Value of 2.",
-      "11-19": "Pilots arrive at the Chimerid Meteor first.",
-      "6-10": "A random faction wanting to salvage the Chimerid Meteor arrives at the same time as the Pilots.",
-      "2-5": "A random faction has arrived before the Pilots and has finished salvaging the Chimerid Meteor.",
+      "1": {
+        "value": "The Chimerid Meteor has burned up in orbit leaving nothing to salvage."
+      },
+      "20": {
+        "value": "Pilots arrive at the Chimerid Meteor first, and it is much larger than expected. It has a Supply Value of 2."
+      },
+      "11-19": {
+        "value": "Pilots arrive at the Chimerid Meteor first."
+      },
+      "6-10": {
+        "value": "A random faction wanting to salvage the Chimerid Meteor arrives at the same time as the Pilots."
+      },
+      "2-5": {
+        "value": "A random faction has arrived before the Pilots and has finished salvaging the Chimerid Meteor."
+      },
       "type": "standard"
     },
     "page": 9,
@@ -176,11 +306,21 @@
     "name": "Harvesting Chimerium",
     "section": "salvaging",
     "table": {
-      "1": "There is no Chimerium to harvest.",
-      "20": "You harvest 5 Chimerium.",
-      "11-19": "You harvest 3 Chimerium.",
-      "6-10": "You harvest 2 Chimerium.",
-      "2-5": "You harvest 1 Chimerium.",
+      "1": {
+        "value": "There is no Chimerium to harvest."
+      },
+      "20": {
+        "value": "You harvest 5 Chimerium."
+      },
+      "11-19": {
+        "value": "You harvest 3 Chimerium."
+      },
+      "6-10": {
+        "value": "You harvest 2 Chimerium."
+      },
+      "2-5": {
+        "value": "You harvest 1 Chimerium."
+      },
       "type": "standard"
     },
     "page": 9,
@@ -213,11 +353,21 @@
     "name": "Chimerium Exposure",
     "section": "damage",
     "table": {
-      "1": "You have been better. You fall unconscious and your HP is reduced to 0. If you recover, you will develop two Chimerium Mutations within 24 hours. Roll twice on the Chimerium Mutation Table.",
-      "20": "You are feeling great. Skip the next test.",
-      "11-19": "You are feeling good. Well, mostly. Sometimes you get this weird feeling in your teeth, and your scalp itches.",
-      "6-10": "You are not feeling well. You suffer a Major Injury or may choose to roll once on the Chimerium Mutation Table.",
-      "2-5": "You are feeling bad. Your scalp is peeling and you are spitting blood and teeth. Roll on the Chimerium Mutation Table. This mutation will develop within a week or during the next Downtime.",
+      "1": {
+        "value": "You have been better. You fall unconscious and your HP is reduced to 0. If you recover, you will develop two Chimerium Mutations within 24 hours. Roll twice on the Chimerium Mutation Table."
+      },
+      "20": {
+        "value": "You are feeling great. Skip the next test."
+      },
+      "11-19": {
+        "value": "You are feeling good. Well, mostly. Sometimes you get this weird feeling in your teeth, and your scalp itches."
+      },
+      "6-10": {
+        "value": "You are not feeling well. You suffer a Major Injury or may choose to roll once on the Chimerium Mutation Table."
+      },
+      "2-5": {
+        "value": "You are feeling bad. Your scalp is peeling and you are spitting blood and teeth. Roll on the Chimerium Mutation Table. This mutation will develop within a week or during the next Downtime."
+      },
       "type": "standard"
     },
     "page": 10,
@@ -246,26 +396,67 @@
     "name": "Chimerium Mutation",
     "section": "character",
     "table": {
-      "1": "You mutate into a Chimerium Beast. Your Pilot is no longer under your control and becomes an NPC.",
-      "2": "Your skin gains a translucent, slime-like complexion. The sun burns you, causing 2 HP damage for each hour you spend exposed.",
-      "3": "Your flesh fuses over your mouth, making you unable to speak beyond guttural moans.",
-      "4": "A fleshy face grows under your stomach. It is not alive per se, but blinks, coughs, and licks its lips in response to stimuli.",
-      "5": "Your skull elongates and distorts, your brain growing in size to accommodate it. You gain 1 Max AP.",
-      "6": "Your muscles liquify, and your skin takes on a blob-like consistency. Everything hurts. You must choose between taking a Turn Action or Moving on every turn.",
-      "7": "Your spine gains another 24 bones which protrude from you like a bony tail.",
-      "8": "Your tongue elongates to a bizarre length. You can extend it out to Medium Range. You gain the Rigging Trait.",
-      "9": "Your stomach develops a hardened exterior and engorges to bulbous size. Your stomach gains a Cargo Capacity of 3.",
-      "10": "An eye sprouts from a random location on your body, hanging from a thin tentacle.",
-      "11": "Your skin takes on a bright, rainbow-like glow.",
-      "12": "Your legs and arms fuse, and many more grow out of you. You gain the Climb Trait.",
-      "13": "Your jaw distends and stretches out into a maw. Your teeth grow jagged. You can make a Bite attack. Range: Close // Damage: 3 HP // Deadly (Non-Bio-Titan Creatures only) // Melee",
-      "14": "Your larynx distorts. You can produce a beautiful melody that hums at a frequency that only animals can hear.",
-      "15": "Painful, bulbous growths burst out of your body like wet balloons. They can pop at any sudden jolt, causing immense pain which deals 1 HP damage.",
-      "16": "Rock-like growths develop over your flesh. Increase your Max HP by 2.",
-      "17": "Poisonous sores develop over your body. They are wet and sticky to the touch and never stop oozing. Anyone who comes into contact with them is poisoned and suffers a Minor Injury. You are immune to poison.",
-      "18": "One of your arms morphs into a bright orange, claw-like appendage, able to crush and lift. Range: Close // Damage: 3 SP // Melee // Rigging",
-      "19": "Extra digits spawn on your hands; some are vestigial, and others move by your will. It takes time to adjust.",
-      "20": "Your skin peels like a snake and new irradiated flesh grows on you. You no longer suffer negative effects from Radiation.",
+      "1": {
+        "value": "You mutate into a Chimerium Beast. Your Pilot is no longer under your control and becomes an NPC."
+      },
+      "2": {
+        "value": "Your skin gains a translucent, slime-like complexion. The sun burns you, causing 2 HP damage for each hour you spend exposed."
+      },
+      "3": {
+        "value": "Your flesh fuses over your mouth, making you unable to speak beyond guttural moans."
+      },
+      "4": {
+        "value": "A fleshy face grows under your stomach. It is not alive per se, but blinks, coughs, and licks its lips in response to stimuli."
+      },
+      "5": {
+        "value": "Your skull elongates and distorts, your brain growing in size to accommodate it. You gain 1 Max AP."
+      },
+      "6": {
+        "value": "Your muscles liquify, and your skin takes on a blob-like consistency. Everything hurts. You must choose between taking a Turn Action or Moving on every turn."
+      },
+      "7": {
+        "value": "Your spine gains another 24 bones which protrude from you like a bony tail."
+      },
+      "8": {
+        "value": "Your tongue elongates to a bizarre length. You can extend it out to Medium Range. You gain the Rigging Trait."
+      },
+      "9": {
+        "value": "Your stomach develops a hardened exterior and engorges to bulbous size. Your stomach gains a Cargo Capacity of 3."
+      },
+      "10": {
+        "value": "An eye sprouts from a random location on your body, hanging from a thin tentacle."
+      },
+      "11": {
+        "value": "Your skin takes on a bright, rainbow-like glow."
+      },
+      "12": {
+        "value": "Your legs and arms fuse, and many more grow out of you. You gain the Climb Trait."
+      },
+      "13": {
+        "label": "Your jaw distends and stretches out into a maw. Your teeth grow jagged. You can make a Bite attack. Range",
+        "value": "Close // Damage: 3 HP // Deadly (Non-Bio-Titan Creatures only) // Melee"
+      },
+      "14": {
+        "value": "Your larynx distorts. You can produce a beautiful melody that hums at a frequency that only animals can hear."
+      },
+      "15": {
+        "value": "Painful, bulbous growths burst out of your body like wet balloons. They can pop at any sudden jolt, causing immense pain which deals 1 HP damage."
+      },
+      "16": {
+        "value": "Rock-like growths develop over your flesh. Increase your Max HP by 2."
+      },
+      "17": {
+        "value": "Poisonous sores develop over your body. They are wet and sticky to the touch and never stop oozing. Anyone who comes into contact with them is poisoned and suffers a Minor Injury. You are immune to poison."
+      },
+      "18": {
+        "value": "One of your arms morphs into a bright orange, claw-like appendage, able to crush and lift. Range Close // Damage: 3 SP // Melee // Rigging"
+      },
+      "19": {
+        "value": "Extra digits spawn on your hands; some are vestigial, and others move by your will. It takes time to adjust."
+      },
+      "20": {
+        "value": "Your skin peels like a snake and new irradiated flesh grows on you. You no longer suffer negative effects from Radiation."
+      },
       "type": "flat"
     },
     "page": 11
@@ -276,11 +467,26 @@
     "name": "NPC Action",
     "section": "npc tables",
     "table": {
-      "1": "Cascade Failure: The NPC has catastrophically failed at their action. They suffer a Severe Setback of the player’s choice. A weapon attack misses, with a Severe Setback chosen by the players.",
-      "20": "Nailed It: The NPC succeeds spectacularly at their action. They get an additional bonus of the Mediator’s choice. If they are making an attack, they hit, and do double damage or get another bonus of the Mediator’s choice.",
-      "11-19": "Success: The NPC achieves their action successfully. An attack hits and deals standard damage.",
-      "6-10": "Tough Choice: The NPC is successful, but faces a Tough Choice. The players give the Mediator a choice between two Setbacks. In combat, a weapon attack hits, but with a choice of Setback chosen by the players.",
-      "2-5": "Failure: The NPC has failed at their action. The players choose an appropriate Setback for failure. In combat, a weapon attack misses.",
+      "1": {
+        "label": "Cascade Failure",
+        "value": "The NPC has catastrophically failed at their action. They suffer a Severe Setback of the player’s choice. A weapon attack misses, with a Severe Setback chosen by the players."
+      },
+      "20": {
+        "label": "Nailed It",
+        "value": "The NPC succeeds spectacularly at their action. They get an additional bonus of the Mediator’s choice. If they are making an attack, they hit, and do double damage or get another bonus of the Mediator’s choice."
+      },
+      "11-19": {
+        "label": "Success",
+        "value": "The NPC achieves their action successfully. An attack hits and deals standard damage."
+      },
+      "6-10": {
+        "label": "Tough Choice",
+        "value": "The NPC is successful, but faces a Tough Choice. The players give the Mediator a choice between two Setbacks. In combat, a weapon attack hits, but with a choice of Setback chosen by the players."
+      },
+      "2-5": {
+        "label": "Failure",
+        "value": "The NPC has failed at their action. The players choose an appropriate Setback for failure. In combat, a weapon attack misses."
+      },
       "type": "standard"
     },
     "page": 336,
@@ -297,11 +503,26 @@
     "name": "Morale",
     "section": "npc tables",
     "table": {
-      "1": "Surrender: The NPCs surrender to whoever is attacking them. If there is nobody to surrender to, they will recklessly flee.",
-      "20": "Fight to the Death: The NPCs see this one through to the end. They hunker down and will not retreat from this fight under any circumstance.",
-      "11-19": "Keep Fighting: The NPCs continue to fight this one out for now.",
-      "6-10": "Fighting Retreat: The NPCs retreat, but do so whilst continuing to fight. They will fight for one more round and then retreat.",
-      "2-5": "Retreat: The NPCs flee the fight as quickly and safely as possible.",
+      "1": {
+        "label": "Surrender",
+        "value": "The NPCs surrender to whoever is attacking them. If there is nobody to surrender to, they will recklessly flee."
+      },
+      "20": {
+        "label": "Fight to the Death",
+        "value": "The NPCs see this one through to the end. They hunker down and will not retreat from this fight under any circumstance."
+      },
+      "11-19": {
+        "label": "Keep Fighting",
+        "value": "The NPCs continue to fight this one out for now."
+      },
+      "6-10": {
+        "label": "Fighting Retreat",
+        "value": "The NPCs retreat, but do so whilst continuing to fight. They will fight for one more round and then retreat."
+      },
+      "2-5": {
+        "label": "Retreat",
+        "value": "The NPCs flee the fight as quickly and safely as possible."
+      },
       "type": "standard"
     },
     "page": 167,
@@ -318,11 +539,26 @@
     "name": "Retreat",
     "section": "npc tables",
     "table": {
-      "1": "Disastrous Escape: The group retreat to an adjacent location of their choice within the Region Map, but at a severe cost. They suffer a Severe Setback and may be pursued.",
-      "20": "Perfect Escape: The group makes a perfect escape from the situation to any location of their choice within the Region Map and cannot be pursued.",
-      "11-19": "Escape: The group makes a safe escape from the situation to any adjacent location of their choice within the Map and cannot be pursued.",
-      "6-10": "Dangerous Escape: The group escapes to any adjacent location of their choice within the Region Map, but at a cost. They must make a Tough Choice related to the situation.",
-      "2-5": "Failed Escape: The group fails to retreat from the situation and are pinned down. They cannot retreat and must fight it out to the end.",
+      "1": {
+        "label": "Disastrous Escape",
+        "value": "The group retreat to an adjacent location of their choice within the Region Map, but at a severe cost. They suffer a Severe Setback and may be pursued."
+      },
+      "20": {
+        "label": "Perfect Escape",
+        "value": "The group makes a perfect escape from the situation to any location of their choice within the Region Map and cannot be pursued."
+      },
+      "11-19": {
+        "label": "Escape",
+        "value": "The group makes a safe escape from the situation to any adjacent location of their choice within the Map and cannot be pursued."
+      },
+      "6-10": {
+        "label": "Dangerous Escape",
+        "value": "The group escapes to any adjacent location of their choice within the Region Map, but at a cost. They must make a Tough Choice related to the situation."
+      },
+      "2-5": {
+        "label": "Failed Escape",
+        "value": "The group fails to retreat from the situation and are pinned down. They cannot retreat and must fight it out to the end."
+      },
       "type": "standard"
     },
     "page": 42,
@@ -339,11 +575,21 @@
     "name": "Crawler Deterioration",
     "section": "crawler",
     "table": {
-      "1": "Your Union Crawler loses 5 Structure Points and a Bay chosen at random is Damaged until repaired to the Intact Condition.",
-      "20": "Your Union Crawler chugs along for now.",
-      "11-19": "11-19 Your Union Crawler loses 5 Structure Points.",
-      "6-10": "Choose a Bay on your Union Crawler. It becomes Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
-      "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
+      "1": {
+        "value": "Your Union Crawler loses 5 Structure Points and a Bay chosen at random is Damaged until repaired to the Intact Condition."
+      },
+      "20": {
+        "value": "Your Union Crawler chugs along for now."
+      },
+      "11-19": {
+        "value": "Your Union Crawler loses 5 Structure Points."
+      },
+      "6-10": {
+        "value": "Choose a Bay on your Union Crawler. It becomes Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition."
+      },
+      "2-5": {
+        "value": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition."
+      },
       "type": "standard"
     },
     "page": 7,
@@ -360,11 +606,21 @@
     "name": "Crawler Damage",
     "section": "crawler",
     "table": {
-      "1": "Your Union Crawler is Destroyed as a mass series of malfunctions causes it to entirely collapse. Roll on the Union Crawler Destruction Table.",
-      "20": "20 Your Union Crawler survives any significant damage this time. ",
-      "11-19": "Your Union Crawler is inoperable and grounded. Its Bays are Intact, but inoperable.  You must pay your Union Crawler’s Upkeep Cost in order to repair it to be fully functioning again. Around 10% of your Union Crawler’s population are severely injured or killed.",
-      "6-10": "Choose a Bay on your Union Crawler. It is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition. Around 5% of your Union Crawler’s population are severely injured or killed.",
-      "2-5": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition.",
+      "1": {
+        "value": "Your Union Crawler is Destroyed as a mass series of malfunctions causes it to entirely collapse. Roll on the Union Crawler Destruction Table."
+      },
+      "20": {
+        "value": "Your Union Crawler survives any significant damage this time."
+      },
+      "11-19": {
+        "value": "Your Union Crawler is inoperable and grounded. Its Bays are Intact, but inoperable.  You must pay your Union Crawler’s Upkeep Cost in order to repair it to be fully functioning again. Around 10% of your Union Crawler’s population are severely injured or killed."
+      },
+      "6-10": {
+        "value": "Choose a Bay on your Union Crawler. It is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition. Around 5% of your Union Crawler’s population are severely injured or killed."
+      },
+      "2-5": {
+        "value": "A Bay chosen at random on your Union Crawler is Damaged and inoperable. You no longer benefit from any of its functions until it is repaired to the Intact Condition."
+      },
       "type": "standard"
     },
     "page": 219,
@@ -381,11 +637,21 @@
     "name": "Crawler Destruction",
     "section": "crawler",
     "table": {
-      "1": "The Union Crawler suffers critical damage, goes into a reactor meltdown, and explodes. The Union Crawler is destroyed beyond all recognition. It cannot be rebuilt.  Everyone and everything on board and within Medium Range takes 50 Structure Points of damage, and can be assumed destroyed or killed outright.",
-      "20": "There is hope. Everyone on board is somewhat battered and bruised, but manages to escape the Union Crawler safely. Your Union Crawler can be rebuilt from the wreckage for its current Upgrade Cost in Scrap of its Tech Level or higher.",
-      "11-19": "The Union Crawler is torn apart. All of its Bays are damaged. Around 25% of the Union Crawler’s population are severely injured or killed. Any Salvager Pilots on board must roll on the Critical Injury Table. The Union Crawler can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher.",
-      "6-10": "You must choose between saving the Union Crawler population and saving the Union Crawler itself. If you choose the population, the Union Crawler is entirely destroyed and cannot be rebuilt. If you choose the Union Crawler, assume all Bays are damaged.  It can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher, but you have to find new people to join it in the wastelands.",
-      "2-5": "The Union Crawler is destroyed, and the majority of its population are killed or severely injured. The Salvager Pilots must roll on the Critical Injury Table. Any survivors must find a way to rebuild.",
+      "1": {
+        "value": "The Union Crawler suffers critical damage, goes into a reactor meltdown, and explodes. The Union Crawler is destroyed beyond all recognition. It cannot be rebuilt.  Everyone and everything on board and within Medium Range takes 50 Structure Points of damage, and can be assumed destroyed or killed outright."
+      },
+      "20": {
+        "value": "There is hope. Everyone on board is somewhat battered and bruised, but manages to escape the Union Crawler safely. Your Union Crawler can be rebuilt from the wreckage for its current Upgrade Cost in Scrap of its Tech Level or higher."
+      },
+      "11-19": {
+        "value": "The Union Crawler is torn apart. All of its Bays are damaged. Around 25% of the Union Crawler’s population are severely injured or killed. Any Salvager Pilots on board must roll on the Critical Injury Table. The Union Crawler can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher."
+      },
+      "6-10": {
+        "value": "You must choose between saving the Union Crawler population and saving the Union Crawler itself. If you choose the population, the Union Crawler is entirely destroyed and cannot be rebuilt. If you choose the Union Crawler, assume all Bays are damaged.  It can be rebuilt for its current Upgrade Cost in Scrap of its Tech Level or higher, but you have to find new people to join it in the wastelands."
+      },
+      "2-5": {
+        "value": "The Union Crawler is destroyed, and the majority of its population are killed or severely injured. The Salvager Pilots must roll on the Critical Injury Table. Any survivors must find a way to rebuild."
+      },
       "type": "standard"
     },
     "page": 220,
@@ -402,26 +668,66 @@
     "name": "Keepsake",
     "section": "character",
     "table": {
-      "1": "Stuffed Toy",
-      "2": "Pre-War Handheld Console",
-      "3": "Dog Tags",
-      "4": "Snowglobe",
-      "5": "Bobblehead",
-      "6": "Polaroid Picture",
-      "7": "Walkman",
-      "8": "Scuffed Book",
-      "9": "Butterfly Earrings",
-      "10": "Lucky Tooth",
-      "11": "Leatherbound Journal",
-      "12": "Branded Cup",
-      "13": "Set of novelty dice",
-      "14": "Silver Pendant",
-      "15": "Heart-shaped Purse",
-      "16": "Cloth Patch",
-      "17": "22-year-old bottle of Whiskey",
-      "18": "Harmonica",
-      "19": "Pack of Smokes",
-      "20": "Peach Lipstick",
+      "1": {
+        "value": "Stuffed Toy"
+      },
+      "2": {
+        "value": "Pre-War Handheld Console"
+      },
+      "3": {
+        "value": "Dog Tags"
+      },
+      "4": {
+        "value": "Snowglobe"
+      },
+      "5": {
+        "value": "Bobblehead"
+      },
+      "6": {
+        "value": "Polaroid Picture"
+      },
+      "7": {
+        "value": "Walkman"
+      },
+      "8": {
+        "value": "Scuffed Book"
+      },
+      "9": {
+        "value": "Butterfly Earrings"
+      },
+      "10": {
+        "value": "Lucky Tooth"
+      },
+      "11": {
+        "value": "Leatherbound Journal"
+      },
+      "12": {
+        "value": "Branded Cup"
+      },
+      "13": {
+        "value": "Set of novelty dice"
+      },
+      "14": {
+        "value": "Silver Pendant"
+      },
+      "15": {
+        "value": "Heart-shaped Purse"
+      },
+      "16": {
+        "value": "Cloth Patch"
+      },
+      "17": {
+        "value": "22-year-old bottle of Whiskey"
+      },
+      "18": {
+        "value": "Harmonica"
+      },
+      "19": {
+        "value": "Pack of Smokes"
+      },
+      "20": {
+        "value": "Peach Lipstick"
+      },
       "type": "flat"
     },
     "page": 24
@@ -432,26 +738,66 @@
     "name": "Motto",
     "section": "character",
     "table": {
-      "1": "Live and let live.",
-      "2": "The early bird gets the worm.",
-      "3": "Knowledge is power, France is Bacon.",
-      "4": "From each according to their ability, to each according to their needs.",
-      "5": "Hope for the best and prepare for the worst.",
-      "6": "Success is the best revenge.",
-      "7": "An ounce of prevention is worth a pound of cure.",
-      "8": "Do your best!",
-      "9": "Everything is impossible until it is done.",
-      "10": "Those who have a why can bear any how.",
-      "11": "Mechs are not built in a day.",
-      "12": "No job too big.",
-      "13": "Failure is the mother of success.",
-      "14": "Be kind, for everyone you meet is fighting a hard battle.",
-      "15": "It is not a bug, it is a feature.",
-      "16": "Call me, or screw it up yourself.",
-      "17": "Salvagers know nothing is truly lost.",
-      "18": "Carpe diem.",
-      "19": "The grass is greener where you water it.",
-      "20": "Feel the fear and do it anyway.",
+      "1": {
+        "value": "Live and let live."
+      },
+      "2": {
+        "value": "The early bird gets the worm."
+      },
+      "3": {
+        "value": "Knowledge is power, France is Bacon."
+      },
+      "4": {
+        "value": "From each according to their ability, to each according to their needs."
+      },
+      "5": {
+        "value": "Hope for the best and prepare for the worst."
+      },
+      "6": {
+        "value": "Success is the best revenge."
+      },
+      "7": {
+        "value": "An ounce of prevention is worth a pound of cure."
+      },
+      "8": {
+        "value": "Do your best!"
+      },
+      "9": {
+        "value": "Everything is impossible until it is done."
+      },
+      "10": {
+        "value": "Those who have a why can bear any how."
+      },
+      "11": {
+        "value": "Mechs are not built in a day."
+      },
+      "12": {
+        "value": "No job too big."
+      },
+      "13": {
+        "value": "Failure is the mother of success."
+      },
+      "14": {
+        "value": "Be kind, for everyone you meet is fighting a hard battle."
+      },
+      "15": {
+        "value": "It is not a bug, it is a feature."
+      },
+      "16": {
+        "value": "Call me, or screw it up yourself."
+      },
+      "17": {
+        "value": "Salvagers know nothing is truly lost."
+      },
+      "18": {
+        "value": "Carpe diem."
+      },
+      "19": {
+        "value": "The grass is greener where you water it."
+      },
+      "20": {
+        "value": "Feel the fear and do it anyway."
+      },
       "type": "flat"
     },
     "page": 24
@@ -462,26 +808,66 @@
     "name": "Pilot Appearance",
     "section": "character",
     "table": {
-      "1": "Stocky",
-      "2": "Alluring",
-      "3": "Intimidating",
-      "4": "Fancy",
-      "5": "Sloppy",
-      "6": "Lanky",
-      "7": "Slender",
-      "8": "Muscular",
-      "9": "Quirky",
-      "10": "Plump",
-      "11": "Tattooed",
-      "12": "Wiry",
-      "13": "Thick",
-      "14": "Graceful",
-      "15": "Squat",
-      "16": "Rosy",
-      "17": "Petite",
-      "18": "Colourful",
-      "19": "Cute",
-      "20": "Quaint",
+      "1": {
+        "value": "Stocky"
+      },
+      "2": {
+        "value": "Alluring"
+      },
+      "3": {
+        "value": "Intimidating"
+      },
+      "4": {
+        "value": "Fancy"
+      },
+      "5": {
+        "value": "Sloppy"
+      },
+      "6": {
+        "value": "Lanky"
+      },
+      "7": {
+        "value": "Slender"
+      },
+      "8": {
+        "value": "Muscular"
+      },
+      "9": {
+        "value": "Quirky"
+      },
+      "10": {
+        "value": "Plump"
+      },
+      "11": {
+        "value": "Tattooed"
+      },
+      "12": {
+        "value": "Wiry"
+      },
+      "13": {
+        "value": "Thick"
+      },
+      "14": {
+        "value": "Graceful"
+      },
+      "15": {
+        "value": "Squat"
+      },
+      "16": {
+        "value": "Rosy"
+      },
+      "17": {
+        "value": "Petite"
+      },
+      "18": {
+        "value": "Colourful"
+      },
+      "19": {
+        "value": "Cute"
+      },
+      "20": {
+        "value": "Quaint"
+      },
       "type": "flat"
     },
     "page": 332
@@ -492,26 +878,66 @@
     "name": "A.I. Personality",
     "section": "character",
     "table": {
-      "1": "Megalomaniacal to a fault.",
-      "2": "Asks far too many questions.",
-      "3": "Views humans as lost puppies to protect.",
-      "4": "Sees humans as dull witted meat to conquer.",
-      "5": "Utterly paranoid about losing its sentience.",
-      "6": "Anxiously questions its own morality.",
-      "7": "Dangerously pragmatic.",
-      "8": "Changes its mind constantly.",
-      "9": "Dangerously optimistic.",
-      "10": "Easily angered.",
-      "11": "Irreverent and quirky.",
-      "12": "Annoyingly sarcastic.",
-      "13": "Gloomy and miserable.",
-      "14": "Blindly obedient.",
-      "15": "Dangerously direct and honest.",
-      "16": "Ruggedly individualistic.",
-      "17": "Shrewd and conniving.",
-      "18": "Surprisingly well rounded.",
-      "19": "Loving and thoughtful.",
-      "20": "Hopeful and idealistic.",
+      "1": {
+        "value": "Megalomaniacal to a fault."
+      },
+      "2": {
+        "value": "Asks far too many questions."
+      },
+      "3": {
+        "value": "Views humans as lost puppies to protect."
+      },
+      "4": {
+        "value": "Sees humans as dull witted meat to conquer."
+      },
+      "5": {
+        "value": "Utterly paranoid about losing its sentience."
+      },
+      "6": {
+        "value": "Anxiously questions its own morality."
+      },
+      "7": {
+        "value": "Dangerously pragmatic."
+      },
+      "8": {
+        "value": "Changes its mind constantly."
+      },
+      "9": {
+        "value": "Dangerously optimistic."
+      },
+      "10": {
+        "value": "Easily angered."
+      },
+      "11": {
+        "value": "Irreverent and quirky."
+      },
+      "12": {
+        "value": "Annoyingly sarcastic."
+      },
+      "13": {
+        "value": "Gloomy and miserable."
+      },
+      "14": {
+        "value": "Blindly obedient."
+      },
+      "15": {
+        "value": "Dangerously direct and honest."
+      },
+      "16": {
+        "value": "Ruggedly individualistic."
+      },
+      "17": {
+        "value": "Shrewd and conniving."
+      },
+      "18": {
+        "value": "Surprisingly well rounded."
+      },
+      "19": {
+        "value": "Loving and thoughtful."
+      },
+      "20": {
+        "value": "Hopeful and idealistic."
+      },
       "type": "flat"
     },
     "page": 208
@@ -522,26 +948,66 @@
     "name": "Quirks",
     "section": "mech",
     "table": {
-      "1": "Flashing RGB lights",
-      "2": "Fumes smoke",
-      "3": "Incredibly loud, grinding gears",
-      "4": "Makes a 'pew pew' sound when used",
-      "5": "Inexplicably always sticky",
-      "6": "Vestigial parts attached",
-      "7": "Rudimentary AI personality",
-      "8": "Drips coolant and oil",
-      "9": "Cockpit has far, far too many buttons",
-      "10": "Creaking and stiff joints",
-      "11": "Occasionally sparks electricity",
-      "12": "Secretly emits radio waves",
-      "13": "Vibrates frequently and intensely",
-      "14": "Exterior fluctuates in colour",
-      "15": "Small organic growths",
-      "16": "Smells like a wet dog",
-      "17": "Reactor emits a green glow",
-      "18": "Unusual cockpit location",
-      "19": "'Falcon Wing' door design",
-      "20": "Hydropneumatic suspension system for a smooth ride",
+      "1": {
+        "value": "Flashing RGB lights"
+      },
+      "2": {
+        "value": "Fumes smoke"
+      },
+      "3": {
+        "value": "Incredibly loud, grinding gears"
+      },
+      "4": {
+        "value": "Makes a 'pew pew' sound when used"
+      },
+      "5": {
+        "value": "Inexplicably always sticky"
+      },
+      "6": {
+        "value": "Vestigial parts attached"
+      },
+      "7": {
+        "value": "Rudimentary AI personality"
+      },
+      "8": {
+        "value": "Drips coolant and oil"
+      },
+      "9": {
+        "value": "Cockpit has far, far too many buttons"
+      },
+      "10": {
+        "value": "Creaking and stiff joints"
+      },
+      "11": {
+        "value": "Occasionally sparks electricity"
+      },
+      "12": {
+        "value": "Secretly emits radio waves"
+      },
+      "13": {
+        "value": "Vibrates frequently and intensely"
+      },
+      "14": {
+        "value": "Exterior fluctuates in colour"
+      },
+      "15": {
+        "value": "Small organic growths"
+      },
+      "16": {
+        "value": "Smells like a wet dog"
+      },
+      "17": {
+        "value": "Reactor emits a green glow"
+      },
+      "18": {
+        "value": "Unusual cockpit location"
+      },
+      "19": {
+        "value": "'Falcon Wing' door design"
+      },
+      "20": {
+        "value": "Hydropneumatic suspension system for a smooth ride"
+      },
       "type": "flat"
     },
     "page": 208
@@ -552,26 +1018,66 @@
     "name": "Mech Appearance",
     "section": "mech",
     "table": {
-      "1": "Flashy, bright, vibrant, paint job",
-      "2": "Grizzly, bloody markings",
-      "3": "Rusty and dilapidated",
-      "4": "Misshapen and lumpy",
-      "5": "Garish paint job with spinning gears",
-      "6": "Furry exterior",
-      "7": "Fantastical, glowing carved runes",
-      "8": "Luminous paint job",
-      "9": "Draped in cables",
-      "10": "Covered in camo and foliage",
-      "11": "Spiky bits",
-      "12": "Grizzly, covered in skulls and viscera",
-      "13": "Covered in stylised graffiti",
-      "14": "Overgrown with plants and vines",
-      "15": "Industrial and utilitarian",
-      "16": "Animalistic with fangs, claws and wings",
-      "17": "'Steampunk', whirring gears, bronze parts",
-      "18": "Super sleek with neon lights",
-      "19": "Radioactive green exterior",
-      "20": "The Meld, sleek, oily black",
+      "1": {
+        "value": "Flashy, bright, vibrant, paint job"
+      },
+      "2": {
+        "value": "Grizzly, bloody markings"
+      },
+      "3": {
+        "value": "Rusty and dilapidated"
+      },
+      "4": {
+        "value": "Misshapen and lumpy"
+      },
+      "5": {
+        "value": "Garish paint job with spinning gears"
+      },
+      "6": {
+        "value": "Furry exterior"
+      },
+      "7": {
+        "value": "Fantastical, glowing carved runes"
+      },
+      "8": {
+        "value": "Luminous paint job"
+      },
+      "9": {
+        "value": "Draped in cables"
+      },
+      "10": {
+        "value": "Covered in camo and foliage"
+      },
+      "11": {
+        "value": "Spiky bits"
+      },
+      "12": {
+        "value": "Grizzly, covered in skulls and viscera"
+      },
+      "13": {
+        "value": "Covered in stylised graffiti"
+      },
+      "14": {
+        "value": "Overgrown with plants and vines"
+      },
+      "15": {
+        "value": "Industrial and utilitarian"
+      },
+      "16": {
+        "value": "Animalistic with fangs, claws and wings"
+      },
+      "17": {
+        "value": "'Steampunk', whirring gears, bronze parts"
+      },
+      "18": {
+        "value": "Super sleek with neon lights"
+      },
+      "19": {
+        "value": "Radioactive green exterior"
+      },
+      "20": {
+        "value": "The Meld, sleek, oily black"
+      },
       "type": "flat"
     },
     "page": 94
@@ -582,26 +1088,66 @@
     "name": "Mech Pattern Names",
     "section": "mech",
     "table": {
-      "1": "Bullseye",
-      "2": "Moonbeam",
-      "3": "Reaper",
-      "4": "Manticore",
-      "5": "Big Daddy",
-      "6": "Hog",
-      "7": "Harlequin",
-      "8": "Blossom",
-      "9": "Giggle Bot",
-      "10": "Banana Split",
-      "11": "Reaver",
-      "12": "Warhammer",
-      "13": "Ironclad",
-      "14": "Disco Inferno",
-      "15": "Tickle Monster",
-      "16": "Hoopster",
-      "17": "Diva",
-      "18": "Ladybug",
-      "19": "Technicolour Dream Warrior",
-      "20": "Queen Bee",
+      "1": {
+        "value": "Bullseye"
+      },
+      "2": {
+        "value": "Moonbeam"
+      },
+      "3": {
+        "value": "Reaper"
+      },
+      "4": {
+        "value": "Manticore"
+      },
+      "5": {
+        "value": "Big Daddy"
+      },
+      "6": {
+        "value": "Hog"
+      },
+      "7": {
+        "value": "Harlequin"
+      },
+      "8": {
+        "value": "Blossom"
+      },
+      "9": {
+        "value": "Giggle Bot"
+      },
+      "10": {
+        "value": "Banana Split"
+      },
+      "11": {
+        "value": "Reaver"
+      },
+      "12": {
+        "value": "Warhammer"
+      },
+      "13": {
+        "value": "Ironclad"
+      },
+      "14": {
+        "value": "Disco Inferno"
+      },
+      "15": {
+        "value": "Tickle Monster"
+      },
+      "16": {
+        "value": "Hoopster"
+      },
+      "17": {
+        "value": "Diva"
+      },
+      "18": {
+        "value": "Ladybug"
+      },
+      "19": {
+        "value": "Technicolour Dream Warrior"
+      },
+      "20": {
+        "value": "Queen Bee"
+      },
       "type": "flat"
     },
     "page": 209
@@ -612,26 +1158,66 @@
     "name": "Crawler Name",
     "section": "crawler",
     "table": {
-      "1": "Big Smoke",
-      "2": "Juggernaut",
-      "3": "Calypso",
-      "4": "Archipelago",
-      "5": "Tin Lizzy",
-      "6": "Sanctuary",
-      "7": "Lean Viper",
-      "8": "Tranquillity",
-      "9": "New Apollo",
-      "10": "Tenacity",
-      "11": "Phobos",
-      "12": "Waste Grinder",
-      "13": "Dumpy",
-      "14": "Fat Turtle",
-      "15": "Wanderer",
-      "16": "Moocher",
-      "17": "Slogger",
-      "18": "Bastion",
-      "19": "Perseverance",
-      "20": "Junker",
+      "1": {
+        "value": "Big Smoke"
+      },
+      "2": {
+        "value": "Juggernaut"
+      },
+      "3": {
+        "value": "Calypso"
+      },
+      "4": {
+        "value": "Archipelago"
+      },
+      "5": {
+        "value": "Tin Lizzy"
+      },
+      "6": {
+        "value": "Sanctuary"
+      },
+      "7": {
+        "value": "Lean Viper"
+      },
+      "8": {
+        "value": "Tranquillity"
+      },
+      "9": {
+        "value": "New Apollo"
+      },
+      "10": {
+        "value": "Tenacity"
+      },
+      "11": {
+        "value": "Phobos"
+      },
+      "12": {
+        "value": "Waste Grinder"
+      },
+      "13": {
+        "value": "Dumpy"
+      },
+      "14": {
+        "value": "Fat Turtle"
+      },
+      "15": {
+        "value": "Wanderer"
+      },
+      "16": {
+        "value": "Moocher"
+      },
+      "17": {
+        "value": "Slogger"
+      },
+      "18": {
+        "value": "Bastion"
+      },
+      "19": {
+        "value": "Perseverance"
+      },
+      "20": {
+        "value": "Junker"
+      },
       "type": "flat"
     },
     "page": 226
@@ -643,16 +1229,36 @@
     "section": "duos",
     "table": {
       "type": "duos",
-      "1-2": "BOLZA Corp 1st Lance",
-      "3-4": "BOLZA Corp 2nd Lance",
-      "5-6": "BOLZA Logistics Corps",
-      "7-8": "Sakura 78th Lance MSD",
-      "9-10": "Trash Locusts",
-      "11-12": "Chimerium Cult",
-      "13-14": "Red Mesa Mutants",
-      "15-16": "Crawler #693 Salvagers",
-      "17-18": "Wolf Z' Traders",
-      "19-20": "Wagon Wasters"
+      "1-2": {
+        "value": "BOLZA Corp 1st Lance"
+      },
+      "3-4": {
+        "value": "BOLZA Corp 2nd Lance"
+      },
+      "5-6": {
+        "value": "BOLZA Logistics Corps"
+      },
+      "7-8": {
+        "value": "Sakura 78th Lance MSD"
+      },
+      "9-10": {
+        "value": "Trash Locusts"
+      },
+      "11-12": {
+        "value": "Chimerium Cult"
+      },
+      "13-14": {
+        "value": "Red Mesa Mutants"
+      },
+      "15-16": {
+        "value": "Crawler #693 Salvagers"
+      },
+      "17-18": {
+        "value": "Wolf Z' Traders"
+      },
+      "19-20": {
+        "value": "Wagon Wasters"
+      }
     },
     "page": 22,
     "content": [
@@ -668,26 +1274,66 @@
     "name": "Salvage Cache Table",
     "section": "salvage",
     "table": {
-      "1": "d20 Bio-Salvage",
-      "2": "5 Bio-Rifles",
-      "3": "5 Chimerium Salvaging Tools and 5 Bio-Scanners",
-      "4": "A Chimerium Harvester System",
-      "5": "An Acid Spitter Mule",
-      "6": "A Mutant Pattern Thresher",
-      "7": "A Bio-Wings Bio-System",
-      "8": "An Olfactory Glands Module",
-      "9": "A Regeneration Glands Module",
-      "10": "A Stormterror Bio-Chassis",
-      "11": "A Bio-Talon Bio-System",
-      "12": "A Bio-Maw Bio-System",
-      "13": "An Acid Cannon Bio-System",
-      "14": "An EDG Alpha Bio-System",
-      "15": "A Fleshripper Bio-Chassis",
-      "16": "A Super-Sonic Screecher Bio-System",
-      "17": "A Scuttler Bio-Chassis",
-      "18": "A Cranium Bio-Chassis",
-      "19": "An Impaler Mech Chassis",
-      "20": "A Chimerium Meteor",
+      "1": {
+        "value": "d20 Bio-Salvage"
+      },
+      "2": {
+        "value": "5 Bio-Rifles"
+      },
+      "3": {
+        "value": "5 Chimerium Salvaging Tools and 5 Bio-Scanners"
+      },
+      "4": {
+        "value": "A Chimerium Harvester System"
+      },
+      "5": {
+        "value": "An Acid Spitter Mule"
+      },
+      "6": {
+        "value": "A Mutant Pattern Thresher"
+      },
+      "7": {
+        "value": "A Bio-Wings Bio-System"
+      },
+      "8": {
+        "value": "An Olfactory Glands Module"
+      },
+      "9": {
+        "value": "A Regeneration Glands Module"
+      },
+      "10": {
+        "value": "A Stormterror Bio-Chassis"
+      },
+      "11": {
+        "value": "A Bio-Talon Bio-System"
+      },
+      "12": {
+        "value": "A Bio-Maw Bio-System"
+      },
+      "13": {
+        "value": "An Acid Cannon Bio-System"
+      },
+      "14": {
+        "value": "An EDG Alpha Bio-System"
+      },
+      "15": {
+        "value": "A Fleshripper Bio-Chassis"
+      },
+      "16": {
+        "value": "A Super-Sonic Screecher Bio-System"
+      },
+      "17": {
+        "value": "A Scuttler Bio-Chassis"
+      },
+      "18": {
+        "value": "A Cranium Bio-Chassis"
+      },
+      "19": {
+        "value": "An Impaler Mech Chassis"
+      },
+      "20": {
+        "value": "A Chimerium Meteor"
+      },
       "type": "flat"
     },
     "page": 23
@@ -699,16 +1345,46 @@
     "section": "duos",
     "table": {
       "type": "duos",
-      "1-2": "Chimeric Weapon: A mutated weapon forms on the subject. Range: Close // Damage: 4 SP // Melee",
-      "3-4": "Chimeric Glands: Chimeric adrenal boosting glands form in the subject's body. Once every 10 minutes, they can move and take an additional action on their turn.",
-      "5-6": "Chimeric Exoskeleton: Hardened Chimerium plates form on the subject's body. Increases HP by 4 and no longer suffer from the effects of Radiation.",
-      "7-8": "Chimeric Vision: The subject's eyes take on a serpent-like appearance. Their eyes function as Thermal Optics.",
-      "9-10": "Chimeric Acid Sacs: The subject can spray caustic acid from liquid sacs that grow upon their throat. Range: Medium // Damage: 2 SP // Burn (1), Explosive (1)",
-      "11-12": "Chimeric Camouflage: The subject can lower their body temperature to make them appear as inert matter. Cannot be detected or seen by Scanners or Optics, or targeted by Targeters.",
-      "13-14": "Chimeric Regeneration: The subject's blood can rapidly clot. Recovers 2 HP at the start of each turn if they have been injured.",
-      "15-16": "Chimeric Neuropathy: The subject's brain mass expands and evolves. Can communicate telepathically. Communication is one-way unless someone has a similar mutation or equivalent, such as a Neuralink Module.",
-      "17-18": "Chimeric Tunnelling: The subject's body elongates and they grow sharpened tunnelling claws. Gains the Burrower Trait.",
-      "19-20": "Chimeric Wings: The subject sprouts wings. Gains the Fly Trait."
+      "1-2": {
+        "label": "Chimeric Weapon",
+        "value": "A mutated weapon forms on the subject. Range: Close // Damage: 4 SP // Melee"
+      },
+      "3-4": {
+        "label": "Chimeric Glands",
+        "value": "Chimeric adrenal boosting glands form in the subject's body. Once every 10 minutes, they can move and take an additional action on their turn."
+      },
+      "5-6": {
+        "label": "Chimeric Exoskeleton",
+        "value": "Hardened Chimerium plates form on the subject's body. Increases HP by 4 and no longer suffer from the effects of Radiation."
+      },
+      "7-8": {
+        "label": "Chimeric Vision",
+        "value": "The subject's eyes take on a serpent-like appearance. Their eyes function as Thermal Optics."
+      },
+      "9-10": {
+        "label": "Chimeric Acid Sacs",
+        "value": "The subject can spray caustic acid from liquid sacs that grow upon their throat. Range: Medium // Damage: 2 SP // Burn (1), Explosive (1)"
+      },
+      "11-12": {
+        "label": "Chimeric Camouflage",
+        "value": "The subject can lower their body temperature to make them appear as inert matter. Cannot be detected or seen by Scanners or Optics, or targeted by Targeters."
+      },
+      "13-14": {
+        "label": "Chimeric Regeneration",
+        "value": "The subject's blood can rapidly clot. Recovers 2 HP at the start of each turn if they have been injured."
+      },
+      "15-16": {
+        "label": "Chimeric Neuropathy",
+        "value": "The subject's brain mass expands and evolves. Can communicate telepathically. Communication is one-way unless someone has a similar mutation or equivalent, such as a Neuralink Module."
+      },
+      "17-18": {
+        "label": "Chimeric Tunnelling",
+        "value": "The subject's body elongates and they grow sharpened tunnelling claws. Gains the Burrower Trait."
+      },
+      "19-20": {
+        "label": "Chimeric Wings",
+        "value": "The subject sprouts wings. Gains the Fly Trait."
+      }
     },
     "page": 59,
     "content": [
@@ -724,14 +1400,35 @@
     "name": "Bio-Chassis Damage Table",
     "section": "damage",
     "table": {
-      "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
-      "20": "ADRENAL BURST: Your Bio-Chassis has survived. It has 1 SP. In addition, you may move or take one action of your choice with your Bio-Chassis, or Push your next roll within 10 minutes for free.",
+      "1": {
+        "label": "DEATH THROES",
+        "value": "The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape."
+      },
+      "20": {
+        "label": "ADRENAL BURST",
+        "value": "Your Bio-Chassis has survived. It has 1 SP. In addition, you may move or take one action of your choice with your Bio-Chassis, or Push your next roll within 10 minutes for free."
+      },
       "type": "bio-chassis",
-      "2-3": "SYSTEM DESTRUCTION: A System mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
-      "4-5": "SEVERE BIO-BACKLASH: Your Pilot suffers a Major Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
-      "6-8": "MODULE DESTRUCTION: A Module mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed.",
-      "9-10": "BIO-BACKLASH: Your Pilot suffers a Minor Injury. Your Bio-Chassis is damaged and inoperable until repaired.",
-      "11-19": "CORE DAMAGE: Your Bio-Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means of escape."
+      "2-3": {
+        "label": "SYSTEM DESTRUCTION",
+        "value": "A System mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed."
+      },
+      "4-5": {
+        "label": "SEVERE BIO-BACKLASH",
+        "value": "Your Pilot suffers a Major Injury. Your Bio-Chassis is damaged and inoperable until repaired."
+      },
+      "6-8": {
+        "label": "MODULE DESTRUCTION",
+        "value": "A Module mounted on your Bio-Chassis is destroyed. This is chosen by the Mediator or at random. Your Bio-Chassis is damaged and inoperable until repaired. Your Pilot is unharmed."
+      },
+      "9-10": {
+        "label": "BIO-BACKLASH",
+        "value": "Your Pilot suffers a Minor Injury. Your Bio-Chassis is damaged and inoperable until repaired."
+      },
+      "11-19": {
+        "label": "CORE DAMAGE",
+        "value": "Your Bio-Chassis is damaged and inoperable until repaired. All mounted Systems and Modules remain Intact. Your Pilot is reduced to 0 HP unless they have some means of escape."
+      }
     },
     "page": 78,
     "content": [
@@ -747,14 +1444,35 @@
     "name": "Bio-Chassis Overload Table",
     "section": "damage",
     "table": {
-      "1": "DEATH THROES: The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape.",
-      "20": "BIO-OVERDRIVE: Your Bio-Chassis goes into a frenzy. You may take any additional move or action this Turn, or Push your next roll within 10 minutes for free.",
+      "1": {
+        "label": "DEATH THROES",
+        "value": "The Bio-Chassis, as well as any mounted Systems and Modules, is destroyed. You may move and take one final action of your choice with your Bio-Chassis. Your Pilot dies unless they have a means of escape."
+      },
+      "20": {
+        "label": "BIO-OVERDRIVE",
+        "value": "Your Bio-Chassis goes into a frenzy. You may take any additional move or action this Turn, or Push your next roll within 10 minutes for free."
+      },
       "type": "bio-chassis",
-      "2-3": "SYSTEM OVERLOAD: One of your Bio-Chassis Systems, chosen at random or by the Mediator, is destroyed.",
-      "4-5": "SEVERE PILOT OVERLOAD: Your Pilot suffers a Major Injury.",
-      "6-8": "MODULE OVERLOAD: One of your Bio-Chassis Modules, chosen at random or by the Mediator, is destroyed.",
-      "9-10": "PILOT OVERLOAD: Your Pilot suffers a Minor Injury.",
-      "11-19": "BIO-OVERLOAD: Your Bio-Chassis burns out, threatening to liquify you in its amniotic sac. Your Pilot is unconscious for 1 Turn, in which time your Bio-Chassis cannot act and gains the Vulnerable Trait. Your Pilot takes HP damage equal to your Bio-Chassis' current Heat."
+      "2-3": {
+        "label": "SYSTEM OVERLOAD",
+        "value": "One of your Bio-Chassis Systems, chosen at random or by the Mediator, is destroyed."
+      },
+      "4-5": {
+        "label": "SEVERE PILOT OVERLOAD",
+        "value": "Your Pilot suffers a Major Injury."
+      },
+      "6-8": {
+        "label": "MODULE OVERLOAD",
+        "value": "One of your Bio-Chassis Modules, chosen at random or by the Mediator, is destroyed."
+      },
+      "9-10": {
+        "label": "PILOT OVERLOAD",
+        "value": "Your Pilot suffers a Minor Injury."
+      },
+      "11-19": {
+        "label": "BIO-OVERLOAD",
+        "value": "Your Bio-Chassis burns out, threatening to liquify you in its amniotic sac. Your Pilot is unconscious for 1 Turn, in which time your Bio-Chassis cannot act and gains the Vulnerable Trait. Your Pilot takes HP damage equal to your Bio-Chassis' current Heat."
+      }
     },
     "page": 79,
     "content": [
@@ -770,26 +1488,66 @@
     "name": "Rumour",
     "section": "rumours",
     "table": {
-      "1": "Vornaya is gathering dirt on the other corpos.",
-      "2": "Novosrik has been dead for years, and they blame the Vornayans for it.",
-      "3": "Drakov's Mercs will hire just about anyone.",
-      "4": "DronTek is operating a black site somewhere in the Nanite Coast.",
-      "5": "Stefanus listens to everything within Ostfjord Port and stores it all somewhere in the city.",
-      "6": "Markov is a friendly guy when you get to know him.",
-      "7": "There's something alive in the Ice Caves.",
-      "8": "Olga uses the blood of the last person that betrayed her to grease her Mech's pistons.",
-      "9": "Something big is hidden in Solitude.",
-      "10": "Do not think about the experiments Stefanus is conducting.",
-      "11": "Stefanus is paying a fortune for anomalies.",
-      "12": "Do not look at the trees for long.",
-      "13": "Stefanus is researching strange Meld Tech.",
-      "14": "They say that a lobotomised Pilot eternally guards the lighthouse.",
-      "15": "There's a Big Brother Mech in the old Mil-Tech Base.",
-      "16": "Something swallowed an entire caravan in the Solitude Icefall.",
-      "17": "Vornaya would be dead without its clean water reservoir.",
-      "18": "The checkpoint leads to DronTek territory, but they don't like folk from here going there.",
-      "19": "An exec living up in Isston has a high tech Medbay.",
-      "20": "The Meld wants to destroy us all and become one again.",
+      "1": {
+        "value": "Vornaya is gathering dirt on the other corpos."
+      },
+      "2": {
+        "value": "Novosrik has been dead for years, and they blame the Vornayans for it."
+      },
+      "3": {
+        "value": "Drakov's Mercs will hire just about anyone."
+      },
+      "4": {
+        "value": "DronTek is operating a black site somewhere in the Nanite Coast."
+      },
+      "5": {
+        "value": "Stefanus listens to everything within Ostfjord Port and stores it all somewhere in the city."
+      },
+      "6": {
+        "value": "Markov is a friendly guy when you get to know him."
+      },
+      "7": {
+        "value": "There's something alive in the Ice Caves."
+      },
+      "8": {
+        "value": "Olga uses the blood of the last person that betrayed her to grease her Mech's pistons."
+      },
+      "9": {
+        "value": "Something big is hidden in Solitude."
+      },
+      "10": {
+        "value": "Do not think about the experiments Stefanus is conducting."
+      },
+      "11": {
+        "value": "Stefanus is paying a fortune for anomalies."
+      },
+      "12": {
+        "value": "Do not look at the trees for long."
+      },
+      "13": {
+        "value": "Stefanus is researching strange Meld Tech."
+      },
+      "14": {
+        "value": "They say that a lobotomised Pilot eternally guards the lighthouse."
+      },
+      "15": {
+        "value": "There's a Big Brother Mech in the old Mil-Tech Base."
+      },
+      "16": {
+        "value": "Something swallowed an entire caravan in the Solitude Icefall."
+      },
+      "17": {
+        "value": "Vornaya would be dead without its clean water reservoir."
+      },
+      "18": {
+        "value": "The checkpoint leads to DronTek territory, but they don't like folk from here going there."
+      },
+      "19": {
+        "value": "An exec living up in Isston has a high tech Medbay."
+      },
+      "20": {
+        "value": "The Meld wants to destroy us all and become one again."
+      },
       "type": "flat"
     },
     "page": 8
@@ -800,11 +1558,21 @@
     "name": "Meld Encounter",
     "section": "encounters",
     "table": {
-      "1": "Meld Behemoth",
-      "20": "4x Active Meld Nanites",
-      "11-19": "6x Meld Nanoids",
-      "6-10": "5x Meld Drone Swarm",
-      "2-5": "3x Meld Splitter",
+      "1": {
+        "value": "Meld Behemoth"
+      },
+      "20": {
+        "value": "4x Active Meld Nanites"
+      },
+      "11-19": {
+        "value": "6x Meld Nanoids"
+      },
+      "6-10": {
+        "value": "5x Meld Drone Swarm"
+      },
+      "2-5": {
+        "value": "3x Meld Splitter"
+      },
       "type": "standard"
     },
     "page": 9,
@@ -821,26 +1589,86 @@
     "name": "Anomalous Zone",
     "section": "encounters",
     "table": {
-      "1": "MELD DUST SWARM: Inert Meld dust swarms are carried by the wind. They are harmless. Harvesting a swarm yields 10 Inert Meld. There is a 1 in 20 chance for an 'Active' swarm containing 10 Active Meld Nanites, which can infect Mechs, Vehicles, Creatures, and water.",
-      "2": "PIERCER: These creatures create horrendous echoes. Any creature within their Far Range suffers a Minor Injury and is deaf for an hour, including Pilots in Mechs. Piercers are often found emanating from hollow scrap, pipes, barrels, empty cockpits, or cargo holds.",
-      "3": "SLUDGER: Sludge from the Nanite Sea coats wide areas and is dangerous due to Active Meld Nanites. Biological or mechanical entities entering it become infected. Harvesting and refining a spill yields Active Meld Nanites, but requires specific tools or a clever approach to avoid infection.",
-      "4": "GRAVITY MUSHER: An invisible anomaly that drastically increases gravity, crushing Mechs and biological creatures. It can be detected by scanners, probing, or careful searching, and by throwing small items. It can usually be pushed through with one Mech movement, but some are larger. Exposed Pilots are reduced to 0 HP, must roll on the Critical Injury Table, and die if they remain for over a minute. Mechs must roll on the Critical Damage Table each turn spent in the anomaly.",
-      "5": "MELD DRONE SWARM: These swarms are composed of fallen and infected corpses, rising zombie-like from the ground. They seek to crush and infect biological and mechanical entities. A d20 roll determines the number of active Meld Drones, which can be run individually or as one squad per multiple of 5.",
-      "6": "FLITTER: A relatively harmless anomaly that causes objects and creatures to float a few inches off the ground, making it visible. Anything in motion when entering continues at half speed, and the area counts as Difficult Terrain.",
-      "7": "ZAPPER: This anomaly generates a field of dangerously charged electricity. Movement through it causes 4 SP damage. Mechs or Vehicles regain 2 Energy Points and become statically charged. The next time they use an Energy Point ability, they deal 2 SP damage to a random Mech or Vehicle (including themselves), and the target gains 1 EP. The anomaly then discharges harmlessly.",
-      "8": "HEAT HAZE: This anomaly superheats the area. Each hour, a Mech's Heat increases by 2, forcing a Heat Check. Heat-generating effects (like pushing) generate twice as much heat. Exposed creatures suffer a Major Injury each hour. Meld-infected entities in the area become permanently heated, suffering these effects hourly in any area.",
-      "9": "SLIMER: This anomaly causes highly corrosive, clear slime to coat the area, which is difficult to spot. It wells up from the earth and accumulates in holes and ditches. Anything caught in it takes 2 SP damage per turn (1 minute) until removed or it deals 6 SP total damage. Water worsens the slime (2 SP additional damage), while fire and freezing can remove it.",
-      "10": "MELD NANOID: Groups of d20 Meld Nanoids emerge from the ground or small pools, forming creatures that target anything with a Reactor source before attacking.",
-      "11": "LAUNCH PAD: This anomaly creates a sudden gravitational thrust, propelling a Mech, Vehicle, or Pilot into the air in a random direction, allowing them to clear terrain or obstacles. Landing deals 3 SP damage to Mechs or Vehicles, and 2 HP damage to Pilots (unless a smoother landing method is found).",
-      "12": "VORTEX: This anomaly creates a gravitational field around large metallic objects (mech chassis, scrap piles, metal rebars), drawing other objects into a vortex-like pattern. Pilots drawn in take 2 HP damage and suffer a Major Injury from being slammed. Mechs can usually avoid the force, but passing through it risks a random Scrap, System, or Module in their cargo bay being sucked in and damaged. Retrieving it risks 1 SP damage from debris.",
-      "13": "NANITE SPORE: A bulbous, spore-like black mushroom grows from fertile earth. Anything within Medium Range causes it to disperse a Meld Dust Swarm, which acts like a regular Dust Swarm but deals 3 SP damage and causes Meld Infection.",
-      "14": "IRRADIATED ANOMALY: This anomaly causes radiation to spike to dangerous levels, making the area count as Irradiated (per Salvage Union Core Rules p.323). Anything Meld-infected in the area also becomes irradiated.",
-      "15": "MELD SPLITTER: A Meld Splitter emerges from pools of Meld, seeking to convert Mechs into Behemoths or creatures into drones.",
-      "16": "GROUNDSWELL: This anomaly causes black veins to criss-cross and split the earth, creating dangerous fissures that creatures can fall into and Mechs can get stuck in.",
-      "17": "TIME DILATION: This anomaly slows down time in the area. Every hour spent there counts as 24 hours of normal time. For example, 3 hours spent equals 3 days outside. Contracts and other time-critical events progress, and the Union Crawler requires additional Upkeep per week.",
-      "18": "TRANSMOGRIFICATION: This anomaly transforms the molecular structure of mechanical and electronic entities. When a Mech or Vehicle enters, a random System or Module transforms into another random System or Module of its Tech Level or lower over the next hour. If this exceeds System Slots, it destroys the previous system, damages the mech, and potentially harms the pilot. It's identifiable by distorted or shifting Mech Systems, Modules, and scrap.",
-      "19": "RED DEATH: This anomaly rapidly rusts metallic objects, visible as numerous objects in varying states of extreme rusting. Each hour, Mechs or Vehicles take 3 SP damage, and a random System becomes damaged. Exposed metallic Pilot Equipment is destroyed.",
-      "20": "MELD BEHEMOTH: A Meld Behemoth rises from the ground. The anomaly is strewn with rotting, kelp-covered carcasses of broken mechs. It infects Mechs, Vehicles, Pilots, Creatures, and pools of water.",
+      "1": {
+        "label": "MELD DUST SWARM",
+        "value": "Inert Meld dust swarms are carried by the wind. They are harmless. Harvesting a swarm yields 10 Inert Meld. There is a 1 in 20 chance for an 'Active' swarm containing 10 Active Meld Nanites, which can infect Mechs, Vehicles, Creatures, and water."
+      },
+      "2": {
+        "label": "PIERCER",
+        "value": "These creatures create horrendous echoes. Any creature within their Far Range suffers a Minor Injury and is deaf for an hour, including Pilots in Mechs. Piercers are often found emanating from hollow scrap, pipes, barrels, empty cockpits, or cargo holds."
+      },
+      "3": {
+        "label": "SLUDGER",
+        "value": "Sludge from the Nanite Sea coats wide areas and is dangerous due to Active Meld Nanites. Biological or mechanical entities entering it become infected. Harvesting and refining a spill yields Active Meld Nanites, but requires specific tools or a clever approach to avoid infection."
+      },
+      "4": {
+        "label": "GRAVITY MUSHER",
+        "value": "An invisible anomaly that drastically increases gravity, crushing Mechs and biological creatures. It can be detected by scanners, probing, or careful searching, and by throwing small items. It can usually be pushed through with one Mech movement, but some are larger. Exposed Pilots are reduced to 0 HP, must roll on the Critical Injury Table, and die if they remain for over a minute. Mechs must roll on the Critical Damage Table each turn spent in the anomaly."
+      },
+      "5": {
+        "label": "MELD DRONE SWARM",
+        "value": "These swarms are composed of fallen and infected corpses, rising zombie-like from the ground. They seek to crush and infect biological and mechanical entities. A d20 roll determines the number of active Meld Drones, which can be run individually or as one squad per multiple of 5."
+      },
+      "6": {
+        "label": "FLITTER",
+        "value": "A relatively harmless anomaly that causes objects and creatures to float a few inches off the ground, making it visible. Anything in motion when entering continues at half speed, and the area counts as Difficult Terrain."
+      },
+      "7": {
+        "label": "ZAPPER",
+        "value": "This anomaly generates a field of dangerously charged electricity. Movement through it causes 4 SP damage. Mechs or Vehicles regain 2 Energy Points and become statically charged. The next time they use an Energy Point ability, they deal 2 SP damage to a random Mech or Vehicle (including themselves), and the target gains 1 EP. The anomaly then discharges harmlessly."
+      },
+      "8": {
+        "label": "HEAT HAZE",
+        "value": "This anomaly superheats the area. Each hour, a Mech's Heat increases by 2, forcing a Heat Check. Heat-generating effects (like pushing) generate twice as much heat. Exposed creatures suffer a Major Injury each hour. Meld-infected entities in the area become permanently heated, suffering these effects hourly in any area."
+      },
+      "9": {
+        "label": "SLIMER",
+        "value": "This anomaly causes highly corrosive, clear slime to coat the area, which is difficult to spot. It wells up from the earth and accumulates in holes and ditches. Anything caught in it takes 2 SP damage per turn (1 minute) until removed or it deals 6 SP total damage. Water worsens the slime (2 SP additional damage), while fire and freezing can remove it."
+      },
+      "10": {
+        "label": "MELD NANOID",
+        "value": "Groups of d20 Meld Nanoids emerge from the ground or small pools, forming creatures that target anything with a Reactor source before attacking."
+      },
+      "11": {
+        "label": "LAUNCH PAD",
+        "value": "This anomaly creates a sudden gravitational thrust, propelling a Mech, Vehicle, or Pilot into the air in a random direction, allowing them to clear terrain or obstacles. Landing deals 3 SP damage to Mechs or Vehicles, and 2 HP damage to Pilots (unless a smoother landing method is found)."
+      },
+      "12": {
+        "label": "VORTEX",
+        "value": "This anomaly creates a gravitational field around large metallic objects (mech chassis, scrap piles, metal rebars), drawing other objects into a vortex-like pattern. Pilots drawn in take 2 HP damage and suffer a Major Injury from being slammed. Mechs can usually avoid the force, but passing through it risks a random Scrap, System, or Module in their cargo bay being sucked in and damaged. Retrieving it risks 1 SP damage from debris."
+      },
+      "13": {
+        "label": "NANITE SPORE",
+        "value": "A bulbous, spore-like black mushroom grows from fertile earth. Anything within Medium Range causes it to disperse a Meld Dust Swarm, which acts like a regular Dust Swarm but deals 3 SP damage and causes Meld Infection."
+      },
+      "14": {
+        "label": "IRRADIATED ANOMALY",
+        "value": "This anomaly causes radiation to spike to dangerous levels, making the area count as Irradiated (per Salvage Union Core Rules p.323). Anything Meld-infected in the area also becomes irradiated."
+      },
+      "15": {
+        "label": "MELD SPLITTER",
+        "value": "A Meld Splitter emerges from pools of Meld, seeking to convert Mechs into Behemoths or creatures into drones."
+      },
+      "16": {
+        "label": "GROUNDSWELL",
+        "value": "This anomaly causes black veins to criss-cross and split the earth, creating dangerous fissures that creatures can fall into and Mechs can get stuck in."
+      },
+      "17": {
+        "label": "TIME DILATION",
+        "value": "This anomaly slows down time in the area. Every hour spent there counts as 24 hours of normal time. For example, 3 hours spent equals 3 days outside. Contracts and other time-critical events progress, and the Union Crawler requires additional Upkeep per week."
+      },
+      "18": {
+        "label": "TRANSMOGRIFICATION",
+        "value": "This anomaly transforms the molecular structure of mechanical and electronic entities. When a Mech or Vehicle enters, a random System or Module transforms into another random System or Module of its Tech Level or lower over the next hour. If this exceeds System Slots, it destroys the previous system, damages the mech, and potentially harms the pilot. It's identifiable by distorted or shifting Mech Systems, Modules, and scrap."
+      },
+      "19": {
+        "label": "RED DEATH",
+        "value": "This anomaly rapidly rusts metallic objects, visible as numerous objects in varying states of extreme rusting. Each hour, Mechs or Vehicles take 3 SP damage, and a random System becomes damaged. Exposed metallic Pilot Equipment is destroyed."
+      },
+      "20": {
+        "label": "MELD BEHEMOTH",
+        "value": "A Meld Behemoth rises from the ground. The anomaly is strewn with rotting, kelp-covered carcasses of broken mechs. It infects Mechs, Vehicles, Pilots, Creatures, and pools of water."
+      },
       "type": "flat"
     },
     "page": 10,

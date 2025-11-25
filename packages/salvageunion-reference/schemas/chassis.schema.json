@@ -18,14 +18,6 @@
       "techLevel",
       "salvageValue"
     ],
-    "allOf": [
-      {
-        "$ref": "shared/objects.schema.json#/definitions/baseEntity"
-      },
-      {
-        "$ref": "shared/objects.schema.json#/definitions/chassisStats"
-      }
-    ],
     "properties": {
       "asset_url": {
         "$ref": "shared/common.schema.json#/definitions/asset_url"

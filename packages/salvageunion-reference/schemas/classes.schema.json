@@ -11,11 +11,6 @@
         "type": "object",
         "description": "Base character class",
         "required": ["maxAbilities", "advanceable", "coreTrees"],
-        "allOf": [
-          {
-            "$ref": "shared/objects.schema.json#/definitions/baseEntity"
-          }
-        ],
         "properties": {
           "asset_url": {
             "$ref": "shared/common.schema.json#/definitions/asset_url"
