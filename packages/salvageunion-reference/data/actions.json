@@ -1,9 +1,7 @@
 [
   {
     "id": "696b540c-310b-497d-a6eb-191b4d80bc6f",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -35,9 +33,7 @@
   {
     "name": ".50 Cal Machine Gun (Machine Gun Squad)",
     "displayName": ".50 Cal Machine Gun",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "SP"
@@ -62,9 +58,7 @@
   },
   {
     "id": "1ee3c81e-a6aa-4515-a70f-f73d156d4095",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 6
@@ -93,9 +87,7 @@
   },
   {
     "id": "5946780b-82f1-4633-a58d-268ae5aece3a",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 6
@@ -127,9 +119,7 @@
   },
   {
     "id": "c9734532-1261-4a25-a9a9-7539fbef65e4",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -163,9 +153,7 @@
         "type": "hacking"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 4,
     "table": {
       "1": {
@@ -200,9 +188,7 @@
   },
   {
     "name": "Acid Spit",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 2,
       "damageType": "HP"
@@ -302,9 +288,7 @@
   {
     "id": "1fae1763-5d29-43f6-b782-4020d753f611",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 3,
     "name": "Aerosolised Nerve Gas Sprayer",
     "content": [
@@ -322,9 +306,7 @@
   {
     "id": "6d9a3fb9-56a0-46c7-9197-e4ddca1c9602",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 1,
     "traits": [
       {
@@ -808,27 +790,21 @@
             "techLevel": 4,
             "slotsRequired": 5,
             "salvageValue": 2,
-            "actions": [
-              "Automated Machine Gun Turret"
-            ]
+            "actions": ["Automated Machine Gun Turret"]
           },
           {
             "name": "Automated Green Laser Turret",
             "techLevel": 4,
             "slotsRequired": 9,
             "salvageValue": 4,
-            "actions": [
-              "Automated Green Laser Turret"
-            ]
+            "actions": ["Automated Green Laser Turret"]
           },
           {
             "name": "Automated 120mm Cannon Turret",
             "techLevel": 4,
             "slotsRequired": 7,
             "salvageValue": 3,
-            "actions": [
-              "Automated 120mm Cannon Turret"
-            ]
+            "actions": ["Automated 120mm Cannon Turret"]
           }
         ]
       }
@@ -848,9 +824,7 @@
   },
   {
     "name": "Barbed Tentacles",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "HP"
@@ -896,9 +870,7 @@
   },
   {
     "name": "Bear Carnage",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 4,
       "damageType": "HP"
@@ -930,9 +902,7 @@
   {
     "id": "e236c17b-161d-46b0-be08-203847307e8c",
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "table": {
       "1": {
@@ -964,9 +934,7 @@
   {
     "name": "Behemoth Tendrils",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 6,
       "damageType": "SP"
@@ -1011,9 +979,7 @@
         "amount": 3
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 7
@@ -1030,9 +996,7 @@
   {
     "name": "Beta Fission Gun (Elite Beam Squad)",
     "displayName": "Beta Fission Gun",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "amount": 9,
       "damageType": "SP"
@@ -1071,9 +1035,7 @@
   {
     "name": "Bio-Electric Arc",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "energy"
@@ -1109,9 +1071,7 @@
     "id": "ab8b327f-3f29-406a-af7e-5719bfffaccd",
     "name": "Bio-Rifle (Chimerium Chosen)",
     "displayName": "Bio-Rifle",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -1132,9 +1092,7 @@
     "name": "Bio-Rifle (Equipment)",
     "displayName": "Bio-Rifle",
     "techLevel": 3,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -1170,9 +1128,7 @@
     "techLevel": 1,
     "actionType": "Turn",
     "activationCost": 1,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "uses",
@@ -1193,9 +1149,7 @@
       "damageType": "SP",
       "amount": "X"
     },
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "melee"
@@ -1253,14 +1207,8 @@
       {
         "id": "0cbc2a80-bf97-4acb-ad26-9e2f8f5ed0d7",
         "name": "Bionic Senses",
-        "schemaEntities": [
-          "Thermal Optics",
-          "Zoom Optics",
-          "IR Night Vision Optics"
-        ],
-        "schema": [
-          "modules"
-        ]
+        "schemaEntities": ["Thermal Optics", "Zoom Optics", "IR Night Vision Optics"],
+        "schema": ["modules"]
       }
     ],
     "name": "Bionic Senses",
@@ -1292,9 +1240,7 @@
   },
   {
     "name": "Bite",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 2,
       "damageType": "HP"
@@ -1334,46 +1280,30 @@
       {
         "id": "64c7bec9-fe16-4c57-af5c-5441e6fc961d",
         "name": "Black Market Modules",
-        "schema": [
-          "modules"
-        ],
+        "schema": ["modules"],
         "setIndexable": true,
-        "schemaEntities": [
-          "Goflow Plant Growing System",
-          "Corrupted Neuralink"
-        ]
+        "schemaEntities": ["Goflow Plant Growing System", "Corrupted Neuralink"]
       },
       {
         "id": "ae51286a-64c8-416f-a052-81ef0869d4cc",
         "name": "Black Market Systems",
-        "schema": [
-          "systems"
-        ],
+        "schema": ["systems"],
         "setIndexable": true,
-        "schemaEntities": [
-          "Napalm Launcher",
-          "Rad Wave Generator"
-        ]
+        "schemaEntities": ["Napalm Launcher", "Rad Wave Generator"]
       },
       {
         "id": "3df10ce5-ef5d-44a5-8a64-949a6e56bed6",
         "name": "Black Market Pilot Equipment",
-        "schema": [
-          "equipment"
-        ],
+        "schema": ["equipment"],
         "setIndexable": true,
-        "schemaEntities": [
-          "Blinding Blue Laser Rifle"
-        ]
+        "schemaEntities": ["Blinding Blue Laser Rifle"]
       }
     ],
     "actionSource": "abilities"
   },
   {
     "id": "6de946e1-e511-4fb1-9b0a-a57f16ca24f4",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 3
@@ -1400,9 +1330,7 @@
   },
   {
     "id": "32db342c-b76e-475b-b5a9-6cbf77b9ff32",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": "X"
@@ -1427,9 +1355,7 @@
   },
   {
     "id": "e0ebea27-00ca-4ede-b889-3ab4ec77c2e5",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 6
@@ -1504,9 +1430,7 @@
   },
   {
     "id": "2e67cdca-2fbb-446a-948b-ed8fa48500ed",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -1561,9 +1485,7 @@
   {
     "id": "f286ad7a-ceee-4e73-92e7-d21d54335d16",
     "activationCost": 3,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "name": "Can't Stop, Won't Stop",
     "content": [
@@ -1658,9 +1580,7 @@
   },
   {
     "id": "60d029c0-c928-4909-ba0e-3c07efa3cbff",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -1689,9 +1609,7 @@
   {
     "id": "2b98527c-2950-4f80-a4dd-cc4cf6129994",
     "activationCost": 1,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Free",
     "name": "Charge",
     "content": [
@@ -1721,9 +1639,7 @@
   {
     "name": "Chassis Repair",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "id": "2a1f9775-0864-4cc5-a88b-169a95db5e66",
     "content": [
@@ -1737,9 +1653,7 @@
   {
     "name": "Chassis Repair (Adv. Fabrication Arm)",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "id": "c71ab281-98b0-4a4d-9b45-09e290ff6c76",
     "content": [
@@ -1754,9 +1668,7 @@
   {
     "name": "Chassis Repair (Fabrication Arm)",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "id": "6ee2f439-94c0-4407-a219-7554601a7ac5",
     "content": [
@@ -1772,9 +1684,7 @@
     "name": "Chassis Repair (Miniaturised Repair Arm)",
     "actionType": "Long",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "a4bcfe9f-757b-48e4-be23-de1af83022f4",
     "content": [
       {
@@ -1788,9 +1698,7 @@
   {
     "name": "Chassis Repair (Nanite Repair Arm)",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "id": "91ae660d-c99f-4e45-b62e-37820ed72aa0",
     "content": [
@@ -1806,9 +1714,7 @@
     "name": "Chassis Repair (Nanite Repair Injector)",
     "actionType": "Long",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "402d6b78-b85e-4f3d-90e9-ca1b74f25ffc",
     "content": [
       {
@@ -1823,9 +1729,7 @@
     "name": "Chassis Repair (Portable Arc Welder)",
     "actionType": "Long",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "a0884c7f-b6ab-4939-b155-f504d21de381",
     "content": [
       {
@@ -1840,9 +1744,7 @@
     "name": "Chassis Repair (Welding Laser)",
     "displayName": "Chassis Repair",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "id": "d1c93921-fe69-4ba8-8d48-47ab44500ea4",
     "content": [
@@ -1901,9 +1803,7 @@
   {
     "name": "Claw Swipes",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 10,
       "damageType": "SP"
@@ -1952,9 +1852,7 @@
   {
     "name": "Cluster Energy Bombs",
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "amount": 5,
       "damageType": "SP"
@@ -2001,9 +1899,7 @@
       }
     ],
     "actionType": "Free",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "name": "Comms",
     "content": [
       {
@@ -2025,9 +1921,7 @@
         "type": "hacking"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 2,
     "name": "Comms Tapper",
     "content": [
@@ -2070,9 +1964,7 @@
     "id": "8ec910ec-a87a-4d06-a8c6-f07ddb240cf9",
     "name": "Consume (Bio-Maw)",
     "actionType": "Short",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "content": [
       {
         "type": "paragraph",
@@ -2125,9 +2017,7 @@
     "name": "Coolant Flush",
     "activationCost": 2,
     "actionType": "Short",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "scanner"
@@ -2175,9 +2065,7 @@
     "actionType": "Passive",
     "choices": [
       {
-        "schema": [
-          "chassis"
-        ],
+        "schema": ["chassis"],
         "id": "8286393e-daf8-4a1d-8b91-dd8457da6251",
         "name": "Chassis Choice",
         "constraints": {
@@ -2222,9 +2110,7 @@
   {
     "id": "804477cc-db67-4fb6-b8f6-52fe4085a6a7",
     "activationCost": 1,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Reaction",
     "traits": [
       {
@@ -2517,9 +2403,7 @@
       "damageType": "SP",
       "amount": 2
     },
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "name": "Custom Sniper Rifle (Custom Sniper Rifle)",
     "displayName": "Custom Sniper Rifle",
     "content": [
@@ -2602,9 +2486,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 1,
     "name": "Damage Assessor",
     "content": [
@@ -2640,9 +2522,7 @@
     "name": "Data Scanner",
     "activationCost": 2,
     "actionType": "Short",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "scanner"
@@ -2686,9 +2566,7 @@
       }
     ],
     "actionType": "Short",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 2,
     "name": "Deep Survey Scanner",
     "content": [
@@ -2731,9 +2609,7 @@
   {
     "id": "dee41123-65cc-4f43-b01d-88cf54d27f5a",
     "activationCost": "X",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -2781,9 +2657,7 @@
   },
   {
     "name": "Devour",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "HP"
@@ -2812,9 +2686,7 @@
   {
     "name": "Disintegrate",
     "activationCost": "X",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "traits": [
       {
@@ -2843,9 +2715,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "name": "Disposable Camera",
     "content": [
       {
@@ -2898,9 +2768,7 @@
   {
     "id": "0d80e1fb-c57b-41d0-b2c0-00c6325c128f",
     "activationCost": 3,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "name": "Duel",
     "content": [
@@ -2918,9 +2786,7 @@
   {
     "id": "26befd64-edfe-4347-88da-5766310b9394",
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 3,
     "name": "ECM Transmitter",
     "content": [
@@ -2940,9 +2806,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 2,
     "table": {
       "1": {
@@ -3055,9 +2919,7 @@
   {
     "name": "Electrified Spines",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 8,
       "damageType": "SP"
@@ -3086,9 +2948,7 @@
         "type": "climbing"
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "name": "Electro Grappling Hook",
     "content": [
       {
@@ -3144,9 +3004,7 @@
         "type": "shield"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "table": {
       "1": {
         "value": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check."
@@ -3413,9 +3271,7 @@
   },
   {
     "id": "6faa3681-1ad5-4d32-a7de-d2f17e890c94",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": "2d20"
@@ -3502,9 +3358,7 @@
   {
     "id": "9f46c8e3-b06e-4830-af74-a54185ff209d",
     "actionType": "Short",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 3,
     "name": "Fabrication Bay",
     "content": [
@@ -3551,9 +3405,7 @@
       }
     ],
     "actionType": "Reaction",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 2,
     "table": {
       "1": {
@@ -3593,9 +3445,7 @@
   {
     "name": "First Aid",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Free",
     "id": "dff5c995-b7bf-45ce-b951-8e16ea6a75f4",
     "content": [
@@ -3614,9 +3464,7 @@
         "amount": 3
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "First Aid Kit",
     "content": [
       {
@@ -3649,9 +3497,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "name": "Flare Gun",
     "content": [
       {
@@ -3700,9 +3546,7 @@
   {
     "id": "8b26ca5b-c7a1-42d3-9b13-ad8a2284e2c2",
     "actionType": "Free",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "name": "Floodlights",
     "content": [
       {
@@ -3726,9 +3570,7 @@
   },
   {
     "id": "416526f5-d704-4437-a0ed-5d6d10cbf0f6",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -3933,9 +3775,7 @@
   },
   {
     "id": "8442ae83-beb2-4c19-ad25-c867fc81bd0d",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -3969,9 +3809,7 @@
         "type": "energy"
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "HP",
       "amount": 5
@@ -3988,9 +3826,7 @@
   {
     "name": "Green Laser Rifle (Veteran)",
     "displayName": "Green Laser Rifle",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 5,
       "damageType": "HP"
@@ -4015,9 +3851,7 @@
         "amount": 3
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -4074,9 +3908,7 @@
         "type": "hacking"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 1,
     "name": "Hacking Repeater Node",
     "content": [
@@ -4108,9 +3940,7 @@
   },
   {
     "id": "72e73a35-f913-4153-9105-0a6ee3433e82",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "Handheld Riveting Gun",
     "content": [
       {
@@ -4189,9 +4019,7 @@
   {
     "name": "Heal",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "9bcadaa9-c771-4668-acda-746a4bdec539",
     "content": [
@@ -4222,9 +4050,7 @@
   {
     "name": "Healing Spray",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "4a6878a0-f2c2-4e70-8854-ee1ad9ada50a",
     "content": [
       {
@@ -4289,9 +4115,7 @@
   },
   {
     "id": "69254864-8da6-4ace-bb6b-e4b79b4b064a",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 6
@@ -4326,9 +4150,7 @@
   {
     "id": "6ba4598f-8b08-4866-94e1-9099c2aa76d7",
     "actionType": "Free",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "Heavy Duty Torch",
     "content": [
       {
@@ -4387,9 +4209,7 @@
         "amount": 5
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "High Pressure Hose",
     "content": [
       {
@@ -4411,9 +4231,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "High Tensile Wire",
     "content": [
       {
@@ -4476,9 +4294,7 @@
   {
     "id": "0e56c8ef-3f73-4d6c-80d7-a874a609105e",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 2,
     "name": "Holo Projector",
     "content": [
@@ -4591,9 +4407,7 @@
   {
     "id": "3f251696-6c0c-4b6c-9cf3-9f7851edcb21",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 2,
     "name": "Hull Magnetiser",
     "content": [
@@ -4614,9 +4428,7 @@
   },
   {
     "id": "c5e0e6b5-c4dd-4ad9-9ddc-749c1eb0df4b",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -4651,9 +4463,7 @@
   {
     "id": "fb752e33-d45c-41df-b257-bf6fa262af0a",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "name": "If I cut this wire...",
     "content": [
@@ -4674,9 +4484,7 @@
       {
         "id": "49dbf700-b4b4-4718-8847-5f24dbf033a2",
         "name": "Additional Armament Bay Weapons System",
-        "schema": [
-          "systems"
-        ],
+        "schema": ["systems"],
         "content": [
           {
             "type": "paragraph",
@@ -4735,9 +4543,7 @@
         "amount": 2
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -4765,9 +4571,7 @@
         "type": "unwieldy"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 3
@@ -4784,9 +4588,7 @@
   {
     "name": "Improvised Firearm (Raider)",
     "displayName": "Improvised Firearm",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "HP"
@@ -4804,9 +4606,7 @@
   },
   {
     "name": "Improvised Firearms",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 4,
       "damageType": "HP"
@@ -4833,9 +4633,7 @@
         "type": "silent"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 2
@@ -4852,9 +4650,7 @@
   {
     "name": "Improvised Melee Weapon (Wastelander)",
     "displayName": "Improvised Melee Weapon",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 2,
       "damageType": "HP"
@@ -4869,9 +4665,7 @@
   },
   {
     "name": "Improvised Weapons",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 4,
       "damageType": "HP"
@@ -4893,9 +4687,7 @@
     "choices": [
       {
         "name": "Industrial Body Kit Choice",
-        "schema": [
-          "chassis"
-        ],
+        "schema": ["chassis"],
         "id": "ed8cb1b3-3b38-4c92-9f0c-2638356edfc7",
         "constraints": {
           "field": "techLevel",
@@ -5027,9 +4819,7 @@
     "name": "Integrated Advanced Shield Projector",
     "activationCost": "X",
     "actionType": "Reaction",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "shield"
@@ -5138,9 +4928,7 @@
   },
   {
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -5231,9 +5019,7 @@
   },
   {
     "id": "d4c14bba-f02f-4c7a-b179-5f297973bf4e",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -5270,9 +5056,7 @@
       }
     ],
     "actionType": "Free",
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "activationCost": 1,
     "name": "IR Night Vision Optics",
     "content": [
@@ -5289,9 +5073,7 @@
   },
   {
     "name": "Iron Claw",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 4,
       "damageType": "SP"
@@ -5307,9 +5089,7 @@
   {
     "name": "Irradiated Beam",
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "amount": 40,
       "damageType": "SP"
@@ -5374,9 +5154,7 @@
   {
     "id": "76dc53c8-d3c5-4481-8983-f3d036549789",
     "activationCost": 3,
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "actionType": "Turn",
     "traits": [
       {
@@ -5438,9 +5216,7 @@
         "type": "targeter"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 3,
     "name": "Laser Guidance",
     "content": [
@@ -5464,9 +5240,7 @@
         "type": "guided"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "id": "b9f08412-3a34-4440-8468-3e8d93a8e242",
     "content": [
       {
@@ -5540,9 +5314,7 @@
   },
   {
     "id": "c447e95d-56d8-431f-adfb-150622977dac",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "traits": [],
     "name": "Load",
@@ -5589,9 +5361,7 @@
   },
   {
     "id": "7d338e20-579c-43fa-abde-1929f4f1f73f",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -5621,9 +5391,7 @@
   {
     "id": "d511b72e-6645-4a64-bda4-74c42ade4a51",
     "actionType": "Free",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "name": "Loudspeakers",
     "content": [
       {
@@ -5639,9 +5407,7 @@
   },
   {
     "id": "9ef717cb-cf19-46bd-81dc-ee112e509199",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -5672,9 +5438,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 1,
     "name": "M315 Motion Scanner",
     "content": [
@@ -5692,9 +5456,7 @@
   {
     "id": "7ea39631-ed12-4045-bcd6-944eb1a19ffc",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "name": "Mass Energy Recharge",
     "content": [
@@ -5708,9 +5470,7 @@
   {
     "id": "e2f9bdc1-3887-40e1-8f51-f83d56c867a5",
     "activationCost": "X",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "name": "Mass Field Maintenance",
     "content": [
@@ -5728,9 +5488,7 @@
   {
     "id": "4cdf74ac-1b33-4431-9d9b-209f7ec10e4b",
     "activationCost": "X",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "name": "Mass Field Repair",
     "content": [
@@ -5748,9 +5506,7 @@
   {
     "id": "508e3422-417c-492c-a759-e649f918efd6",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "name": "Master Salvager",
     "content": [
@@ -5832,9 +5588,7 @@
   },
   {
     "id": "91623264-232b-4ea4-baf0-e7bf127e7d2c",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -5874,9 +5628,7 @@
   },
   {
     "id": "c98dcfcd-e39b-4587-8cb7-2be494bb14e4",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "table": {
       "1": {
@@ -5932,9 +5684,7 @@
         "type": "hacking"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "table": {
       "1": {
         "value": "The target goes haywire, it moves one Range Band in a random direction, falls Prone, and gains the [[Vulnerable]] Trait."
@@ -6038,9 +5788,7 @@
   {
     "id": "93c1da61-7e1a-49c2-bdc2-20ed230f7556",
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "table": {
       "1": {
         "value": "The Mechapult explodes and is destroyed. Deal SP damage equal to 2× the Tech Level of the Scrap to your Mech and everything within Close Range."
@@ -6194,9 +5942,7 @@
       "damageType": "SP",
       "amount": 5
     },
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "melee"
@@ -6228,9 +5974,7 @@
         "type": "silent"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -6270,9 +6014,7 @@
   },
   {
     "id": "bf393a3b-5df9-49f2-a677-22d2a3b3d108",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -6299,9 +6041,7 @@
   {
     "id": "a141c475-9893-43e6-be15-0fa4a313b079",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "traits": [
       {
@@ -6342,9 +6082,7 @@
   },
   {
     "id": "058bb890-236d-4a12-9bf9-f81c36b8f99e",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -6375,9 +6113,7 @@
   },
   {
     "id": "4d5518c5-f14f-4f54-ad5f-f8778a6b1453",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 8
@@ -6442,9 +6178,7 @@
   },
   {
     "id": "87b221d5-749e-4e45-b352-33276f1f64fd",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 7
@@ -6478,9 +6212,7 @@
   },
   {
     "id": "340b0516-9ab2-4808-9928-6d724d0d9f79",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 7
@@ -6521,9 +6253,7 @@
         "type": "silent"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -6540,9 +6270,7 @@
   {
     "name": "Monomolecular Sword (Elite Blade Squad)",
     "displayName": "Monomolecular Sword",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 6,
       "damageType": "SP"
@@ -6565,9 +6293,7 @@
   {
     "name": "Morph Scythes",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 5,
       "damageType": "SP"
@@ -6613,9 +6339,7 @@
   },
   {
     "id": "b36d791b-9a0c-450a-9e3a-56947a4f31b6",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "traits": [],
     "name": "Mount",
@@ -6639,9 +6363,7 @@
         "type": "targeter"
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 4,
     "name": "MRSI Co-Ordinator",
     "content": [
@@ -6760,9 +6482,7 @@
     "id": "35dec542-51ff-4377-8e39-bab20debb96a",
     "name": "Mutated Weapon (Chimerium Chosen)",
     "displayName": "Mutated Weapon",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 6
@@ -6784,9 +6504,7 @@
     "id": "4e9ceec8-c298-45c2-9a3f-7a3e0e77368a",
     "name": "Mutated Weapon (Chimerium Mutant)",
     "displayName": "Mutated Weapon",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -6808,9 +6526,7 @@
     "id": "b8ac3c5b-666b-4b3d-a9f2-e15d185ad56a",
     "name": "Mutated Weapons (Chimerium Mutant Squad)",
     "displayName": "Mutated Weapons",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -6846,9 +6562,7 @@
         "type": "targeter"
       }
     ],
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "name": "N15 Fat Boy",
     "content": [
       {
@@ -6892,9 +6606,7 @@
   {
     "id": "9c0171f6-b40c-45c9-a6c1-7479a249bd46",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 2,
     "name": "Nanofibre Net Launcher",
     "content": [
@@ -6911,9 +6623,7 @@
   },
   {
     "name": "Nanoid Tendrils",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "SP"
@@ -6937,9 +6647,7 @@
   },
   {
     "id": "65f25a6f-3aac-45d6-ba7c-3cbaa6d098d8",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -6971,9 +6679,7 @@
   },
   {
     "id": "528c8a36-83ea-406b-b775-0573031953d9",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -7011,9 +6717,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 1,
     "name": "Navigation",
     "content": [
@@ -7050,9 +6754,7 @@
   },
   {
     "id": "2f5e34a7-5655-4442-86dd-2d0cd444c36a",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -7093,9 +6795,7 @@
   {
     "id": "df658854-feab-4c76-bff9-061a847194bb",
     "activationCost": 5,
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "actionType": "Turn",
     "traits": [
       {
@@ -7123,9 +6823,7 @@
         "type": "communicator"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "name": "Neuralink Communicator",
     "content": [
       {
@@ -7142,9 +6840,7 @@
   {
     "id": "583dfdf0-ff70-4deb-9191-8bdf5042a282",
     "actionType": "Free",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "name": "Night Vision Goggles",
     "content": [
       {
@@ -7305,9 +7001,7 @@
       }
     ],
     "actionType": "Turn",
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "name": "Orbital Lance Controller",
     "content": [
       {
@@ -7324,9 +7018,7 @@
   {
     "id": "63026b4d-366b-4046-8bdb-8bc0616453c5",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "name": "Overpower",
     "content": [
@@ -7345,9 +7037,7 @@
         "type": "hacking"
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 2,
     "table": {
       "1": {
@@ -7383,9 +7073,7 @@
   {
     "name": "Patch",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "id": "b42c2ac4-0d5d-4719-96b6-8e7946d92896",
     "content": [
@@ -7400,9 +7088,7 @@
     "name": "Patch (Adv. Epoxy Applicator)",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "67d64a51-6f0d-4a51-919d-bfd68fddb25f",
     "content": [
       {
@@ -7416,9 +7102,7 @@
   {
     "name": "Patch (Adv. Fabrication Arm)",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "id": "95b5f4cd-2668-4e98-baa9-d3b5209aae86",
     "content": [
@@ -7433,9 +7117,7 @@
   {
     "name": "Patch (Fabrication Arm)",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "id": "c9247d18-6535-4e10-b20a-10cba22cf0db",
     "content": [
@@ -7451,9 +7133,7 @@
     "name": "Patch (Handheld Epoxy Canister)",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "903370bf-ce43-4f87-a07a-ee524359eba8",
     "content": [
       {
@@ -7468,9 +7148,7 @@
     "name": "Patch (Handheld Riveting Gun)",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "07739aaa-f188-47e8-8f5b-f9e236e53d11",
     "content": [
       {
@@ -7485,9 +7163,7 @@
     "name": "Patch (Miniaturised Repair Arm)",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "f146d9b8-35f6-4694-a202-e70c12109c07",
     "content": [
       {
@@ -7501,9 +7177,7 @@
   {
     "name": "Patch (Nanite Repair Arm)",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "id": "cd84b6b1-907d-40af-ace8-02a097428e4f",
     "content": [
@@ -7519,9 +7193,7 @@
     "name": "Patch (Nanite Repair Injector)",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "d738d5c0-10f1-45ff-92b5-5a4d42f0d5d7",
     "content": [
       {
@@ -7536,9 +7208,7 @@
     "name": "Patch (Portable Arc Welder)",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "23956569-f661-4b45-b9e0-d3549b80b092",
     "content": [
       {
@@ -7553,9 +7223,7 @@
     "name": "Patch (Welding Laser)",
     "displayName": "Patch",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "id": "0ca29c5a-19ce-490d-ae61-18690197b8e5",
     "content": [
@@ -7568,9 +7236,7 @@
   },
   {
     "id": "195077ef-7f6b-457c-a8c4-ee1ad32bf68e",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "traits": [],
     "name": "Patch Up",
@@ -7672,9 +7338,7 @@
   {
     "name": "Physio",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "5bde20a0-0965-4e16-b482-bd7747ff9cf2",
     "content": [
@@ -7688,9 +7352,7 @@
   {
     "name": "Pin",
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -7758,9 +7420,7 @@
         "type": "ballistic"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 3
@@ -7777,9 +7437,7 @@
   {
     "name": "Pistol (Combat Pilot)",
     "displayName": "Pistol",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "HP"
@@ -7794,9 +7452,7 @@
   },
   {
     "id": "c286ff6e-6860-492f-8e1e-4732882726ee",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -7880,9 +7536,7 @@
       }
     ],
     "actionType": "Free",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "name": "Portable Comms Unit",
     "content": [
       {
@@ -7923,9 +7577,7 @@
         "type": "heavy"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 2
@@ -8038,9 +7690,7 @@
     "name": "Probing Proboscis",
     "actionType": "Turn",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "melee"
@@ -8088,9 +7738,7 @@
     "id": "4a4b4f90-1abe-4738-add9-6e554dd3cc99",
     "name": "Proboscis (Cortex Bio-Titan)",
     "displayName": "Proboscis",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "melee"
@@ -8111,9 +7759,7 @@
   {
     "name": "Project",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "id": "cbae8222-5584-4d12-b59a-10c6555972c2",
     "content": [
       {
@@ -8126,9 +7772,7 @@
   {
     "id": "904fe2cb-e549-461a-8fcf-54220db0243b",
     "activationCost": 1,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "name": "Provoke",
     "content": [
@@ -8154,9 +7798,7 @@
   },
   {
     "id": "78fa4b82-b7df-44d2-993b-f41f756cdde7",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "overheat"
@@ -8205,9 +7847,7 @@
   },
   {
     "id": "a4bf371b-529b-4b0a-a777-507a28722063",
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -8236,9 +7876,7 @@
   },
   {
     "id": "07c395a3-e81c-4f1b-a44f-832a2bcec780",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 9
@@ -8344,9 +7982,7 @@
   {
     "id": "7e063dde-3281-4b15-ba2a-ed09252a990e",
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 1,
     "name": "Reactor Flare",
     "content": [
@@ -8369,9 +8005,7 @@
         "type": "hacking"
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 2,
     "name": "Reactor Overload",
     "content": [
@@ -8509,9 +8143,7 @@
   },
   {
     "id": "7baa5f4a-d9b6-49c8-9440-da303f46f811",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -8541,9 +8173,7 @@
   {
     "name": "Red Laser (Drone Squadron)",
     "displayName": "Red Laser",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 4,
       "damageType": "SP"
@@ -8571,9 +8201,7 @@
         "type": "energy"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 3
@@ -8589,9 +8217,7 @@
   },
   {
     "id": "46e8c091-7902-430a-bba3-06bea0ab24fe",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -8626,9 +8252,7 @@
         "type": "shield"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 2,
     "table": {
       "1": {
@@ -8665,9 +8289,7 @@
         "type": "shield"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "table": {
       "1": {
         "value": "The attack hits as normal and your shield overloads.Your Mech gains 2 Heat and must make a Heat Check."
@@ -8776,9 +8398,7 @@
         "amount": 2
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -8803,9 +8423,7 @@
   {
     "name": "Rending Bite",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 20,
       "damageType": "SP"
@@ -8829,9 +8447,7 @@
   },
   {
     "id": "4649d724-1cf6-4517-8814-2077291331ae",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "traits": [],
     "name": "Repair",
@@ -8909,9 +8525,7 @@
         "type": "ballistic"
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "HP",
       "amount": 5
@@ -8928,9 +8542,7 @@
   {
     "name": "Rifle (Trooper)",
     "displayName": "Rifle",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 5,
       "damageType": "HP"
@@ -8945,9 +8557,7 @@
   },
   {
     "name": "Rifles",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 6,
       "damageType": "HP"
@@ -9037,9 +8647,7 @@
         "amount": 3
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -9056,9 +8664,7 @@
   {
     "name": "Rocket Launcher (Missile Squad)",
     "displayName": "Rocket Launcher",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "amount": 6,
       "damageType": "SP"
@@ -9085,9 +8691,7 @@
   },
   {
     "id": "c54b7ebe-0125-4b93-bf80-53816ef48440",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -9164,9 +8768,7 @@
   {
     "id": "b5316ff6-6a0d-4c97-bb55-9912a2b728e4",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -9186,9 +8788,7 @@
   },
   {
     "id": "7c006633-d112-4369-bbe0-8fa86f165ab5",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "traits": [],
     "name": "Scrap",
@@ -9217,9 +8817,7 @@
   },
   {
     "name": "Scythe Attack",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 4,
       "damageType": "SP"
@@ -9280,9 +8878,7 @@
   {
     "name": "Shield",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Reaction",
     "traits": [
       {
@@ -9324,9 +8920,7 @@
         "type": "shield"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "Shield Dome",
     "content": [
       {
@@ -9351,9 +8945,7 @@
         "type": "ballistic"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -9507,9 +9099,7 @@
         "type": "ballistic"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "HP",
       "amount": 6
@@ -9526,9 +9116,7 @@
   {
     "name": "Sniper Rifle (Ace)",
     "displayName": "Sniper Rifle",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "amount": 6,
       "damageType": "HP"
@@ -9543,9 +9131,7 @@
   },
   {
     "id": "fc3b0d04-2b80-4483-af94-938837690657",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -9586,9 +9172,7 @@
   {
     "id": "34b696b8-b97b-4741-b251-4de139efb959",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "activationCost": 2,
     "table": {
       "1": {
@@ -9666,9 +9250,7 @@
   },
   {
     "name": "Splitter Tendrils",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 4,
       "damageType": "SP"
@@ -9697,9 +9279,7 @@
   {
     "id": "c7f68c3b-5edd-4894-a953-e44a9da2717d",
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Free",
     "name": "Spotter",
     "content": [
@@ -9717,9 +9297,7 @@
   {
     "id": "0e241e49-170c-4865-a7fe-29d122337986",
     "activationCost": 5,
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "actionType": "Turn",
     "traits": [
       {
@@ -9746,9 +9324,7 @@
   {
     "id": "fc4b9167-661a-4101-a3b1-f1e336c72800",
     "activationCost": 1,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "name": "Squeeze it in",
     "content": [
@@ -9786,9 +9362,7 @@
   },
   {
     "name": "Stampede",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "HP"
@@ -9826,9 +9400,7 @@
   {
     "id": "6b889072-bfb5-4479-8a23-f6f650ea8d60",
     "activationCost": 4,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "traits": [
       {
@@ -9883,9 +9455,7 @@
   },
   {
     "name": "Stinger",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 2,
       "damageType": "HP"
@@ -9940,9 +9510,7 @@
       }
     ],
     "actionType": "Short",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 2,
     "table": {
       "1": {
@@ -9974,9 +9542,7 @@
   {
     "name": "Suturing Spray",
     "actionType": "Short",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "657af5f2-b1dd-4954-bf6a-b85693a6e442",
     "content": [
       {
@@ -9989,9 +9555,7 @@
   {
     "name": "Swallow Whole",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "melee"
@@ -10009,9 +9573,7 @@
   {
     "name": "Swing",
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "id": "1d581b4f-d2a5-42f9-b203-4a0517828760",
     "content": [
@@ -10025,9 +9587,7 @@
   {
     "id": "737ac1a0-455f-470b-906e-8e08eb9ae47b",
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -10084,9 +9644,7 @@
   {
     "name": "System Repair",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "db618835-6d9f-463a-915f-b9490f71d241",
     "content": [
@@ -10100,9 +9658,7 @@
   {
     "name": "System Repair (Adv. Fabrication Arm)",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "601a6286-ce58-44fb-9017-3c6df07b8a5f",
     "content": [
@@ -10131,9 +9687,7 @@
   {
     "name": "System Repair (Fabrication Arm)",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "388f3c7d-f324-4cf8-b419-0ee878c186d6",
     "content": [
@@ -10149,9 +9703,7 @@
     "name": "System Repair (Handheld Epoxy Canister)",
     "actionType": "Short",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "135672bb-5022-4c93-a701-2aa4021f8d3c",
     "content": [
       {
@@ -10166,9 +9718,7 @@
     "name": "System Repair (Miniaturised Repair Arm)",
     "actionType": "Short",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "e713a9fb-46ef-49ef-8801-3ececd42952a",
     "content": [
       {
@@ -10182,9 +9732,7 @@
   {
     "name": "System Repair (Nanite Repair Arm)",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "9f95ad2d-91b8-48e3-92cf-4658ab586a22",
     "content": [
@@ -10200,9 +9748,7 @@
     "name": "System Repair (Portable Arc Welder)",
     "actionType": "Short",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "id": "719e1de4-9f51-4be5-8067-bedcb2efa9eb",
     "content": [
       {
@@ -10217,9 +9763,7 @@
     "name": "System Repair (Welding Laser)",
     "displayName": "System Repair",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "1062ad1d-332a-4f07-bbb4-5b240b45d484",
     "content": [
@@ -10250,9 +9794,7 @@
   {
     "id": "f03c8620-863b-47e6-b0ba-9f9a8675ef06",
     "activationCost": 2,
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "actionType": "Turn",
     "name": "Tail",
     "content": [
@@ -10270,9 +9812,7 @@
   {
     "name": "Tail Swat",
     "actionType": "Reaction",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "amount": 15,
       "damageType": "SP"
@@ -10351,9 +9891,7 @@
   },
   {
     "name": "Talons",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 3,
       "damageType": "HP"
@@ -10369,9 +9907,7 @@
         "type": "targeter"
       }
     ],
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 2,
     "name": "Target Painter",
     "content": [
@@ -10481,9 +10017,7 @@
   {
     "name": "Tesla Arc",
     "activationCost": 2,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "id": "65af3472-760e-4213-8ed5-6b6a97f1c449",
     "content": [
@@ -10497,9 +10031,7 @@
   {
     "name": "Tesla Charge",
     "activationCost": 3,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "id": "e60ad298-1ed0-4fe7-937e-0e74fd837373",
     "content": [
@@ -10524,9 +10056,7 @@
   {
     "name": "Tesla Shield",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Turn",
     "traits": [
       {
@@ -10545,9 +10075,7 @@
   {
     "id": "c1835c9e-8c22-4dca-bd36-9761e15467a2",
     "activationCost": 3,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Long",
     "name": "The Full Works",
     "content": [
@@ -10565,9 +10093,7 @@
   {
     "name": "Therapy",
     "activationCost": 2,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "id": "b5f540ec-987a-4282-97b5-526e0f92bf51",
     "content": [
@@ -10586,9 +10112,7 @@
         "type": "optics"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 1,
     "name": "Thermal Optics",
     "content": [
@@ -10606,9 +10130,7 @@
   {
     "id": "9a1b5535-acf2-4564-9a07-6b7fa50df88f",
     "activationCost": 3,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "actionType": "Short",
     "name": "This one goes to 11...",
     "content": [
@@ -10842,10 +10364,7 @@
   },
   {
     "id": "0946ece1-ca7e-4aac-9bfe-31adcf40d455",
-    "range": [
-      "Close",
-      "Long"
-    ],
+    "range": ["Close", "Long"],
     "damage": {
       "damageType": "SP",
       "amount": 6
@@ -10888,9 +10407,7 @@
         "type": "targeter"
       }
     ],
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 2,
     "name": "Tracking Node",
     "content": [
@@ -10916,9 +10433,7 @@
         "amount": 3
       }
     ],
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "name": "Tranquiliser Rifle",
     "content": [
       {
@@ -10951,9 +10466,7 @@
   {
     "id": "d29ba356-ec3f-43b5-919f-20e4fdaad880",
     "activationCost": 4,
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -11124,9 +10637,7 @@
   {
     "id": "cd0784f5-3f3f-4edd-bda9-56899826b947",
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "activationCost": 1,
     "name": "Video Projection Array",
     "content": [
@@ -11140,9 +10651,7 @@
   {
     "id": "123d0e83-0362-4562-9351-0df38a24ac4d",
     "actionType": "Turn",
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "activationCost": 1,
     "name": "Video Recording Array",
     "content": [
@@ -11409,9 +10918,7 @@
   {
     "id": "7491065d-12c4-418e-bec9-7d8ef5718690",
     "activationCost": "X",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -11496,9 +11003,7 @@
     "id": "ea0bf5c3-9507-4976-a91c-2160d79b79a8",
     "name": "Acid Cannon",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -11521,9 +11026,7 @@
     "id": "cacb3560-0327-4b4a-8cd9-e4971bfb5f66",
     "name": "Bio-Talon",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -11562,9 +11065,7 @@
     "id": "2d55bd6c-1e38-48b5-8d4e-0e1699420537",
     "name": "Bite (Bio-Maw)",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 7
@@ -11622,9 +11123,7 @@
     "id": "bbe55547-f26f-4ef0-9aba-4372fa9a98c8",
     "name": "Consume (Bio-Maw)",
     "actionType": "Short",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "content": [
       {
         "type": "paragraph",
@@ -11649,9 +11148,7 @@
     "id": "610ae724-5c73-437f-bf19-ff3af032885e",
     "name": "EDG Alpha",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -11673,9 +11170,7 @@
     "id": "bcf4f6c1-b749-49fa-a9a9-2ce2e8138a17",
     "name": "Super-Sonic Screecher",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -11792,9 +11287,7 @@
     "actionType": "Turn",
     "activationCost": 1,
     "activationCurrency": "EP or AP",
-    "range": [
-      "Far"
-    ],
+    "range": ["Far"],
     "content": [
       {
         "type": "paragraph",
@@ -11807,9 +11300,7 @@
     "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
     "name": "Meld Injector",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "content": [
       {
         "type": "paragraph",
@@ -11831,9 +11322,7 @@
     "id": "d6c5cbbd-1874-4432-beb8-e823465b64d8",
     "name": "Meld Manipulator",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "content": [
       {
         "type": "paragraph",
@@ -11858,9 +11347,7 @@
     "id": "400e1fb8-b36d-421a-9052-72b0130f2db2",
     "name": "Overcharged Green Laser",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -11886,9 +11373,7 @@
     "id": "811977fb-e4fb-403a-8665-ac5eae79d412",
     "name": "Nanite Sifter",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "content": [
       {
         "type": "paragraph",
@@ -11930,9 +11415,7 @@
     "id": "e22738e3-8204-498d-892d-fa3aee59ead4",
     "name": "Meld Spore Launcher",
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -11969,9 +11452,7 @@
     "id": "ddb136e9-f203-427d-a41a-94e01584b00b",
     "name": "Replicate (Meld System Replicator)",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 4,
     "content": [
       {
@@ -11996,9 +11477,7 @@
     "id": "b43c3e9b-eaca-4341-a89c-3fe848c736eb",
     "name": "Meld Tendrils",
     "actionType": "Turn",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -12040,9 +11519,7 @@
     "id": "b15b6e0d-68c7-41ba-94cb-3247e6518075",
     "actionType": "Turn",
     "activationCost": "X",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "traits": [
       {
         "type": "hacking"
@@ -12061,9 +11538,7 @@
     "id": "cb72d05d-9e63-49ba-927e-0ae7c8781851",
     "actionType": "Turn",
     "activationCost": 3,
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "Meld Replicator",
     "content": [
       {
@@ -12144,9 +11619,7 @@
     "id": "d1cbda54-90e6-4d92-bdb9-6c8b160638fe",
     "name": "Meld Distorter",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "activationCost": 3,
     "content": [
       {
@@ -12188,9 +11661,7 @@
   },
   {
     "id": "a57c0c27-190c-47f6-a649-de6335efd946",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -12222,9 +11693,7 @@
   },
   {
     "id": "cfe37881-a3ce-4545-b081-18f6c058eeb2",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "HP",
       "amount": 6
@@ -12249,9 +11718,7 @@
   {
     "id": "8e59d1ad-e5cd-40bb-aaf8-58c228f2f74b",
     "actionType": "Turn",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "name": "Handheld Meld Injector",
     "content": [
       {
@@ -12274,9 +11741,7 @@
   },
   {
     "id": "8b0f4051-e8bb-49f4-9849-1918690f0c05",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -12316,9 +11781,7 @@
   {
     "id": "52bb3a90-6642-4847-9bb4-d996a767e7ef",
     "name": "Deployable .50 Cal Machine Gun",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -12352,9 +11815,7 @@
   {
     "id": "f889193e-e842-4a1b-9462-431564522eec",
     "name": "Machine Pistols",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -12383,9 +11844,7 @@
   {
     "id": "1a48a9cb-df87-4732-82ef-ebb8bcf485e7",
     "name": "Epoxy Gun",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -12405,9 +11864,7 @@
   {
     "id": "ca6a0f7f-8f47-4234-a348-5675402140f0",
     "name": "Rebar Lance",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -12432,9 +11889,7 @@
   {
     "id": "aba98f6c-e5e6-4dac-b0b9-13b93836bb2e",
     "name": "Lance Charge",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "content": [
       {
@@ -12451,9 +11906,7 @@
   {
     "id": "997d8dd7-9002-496c-83a9-6a954b43da02",
     "name": "Servo Lasso",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "content": [
       {
         "type": "paragraph",
@@ -12469,9 +11922,7 @@
   {
     "id": "70179219-f6ad-41e8-aaab-f2091400a6ef",
     "name": "Fell Rifle",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -12496,9 +11947,7 @@
   {
     "id": "cb744f12-f69f-427b-949e-6cecc6b1d173",
     "name": "Machine-Pistols (Gully Crusher Squad)",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 4
@@ -12534,9 +11983,7 @@
   {
     "id": "355d08a3-c640-49f9-9eca-7ad9c02055bc",
     "name": "Improvised Explosive Device (Flint Children Squad)",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 4
@@ -12584,9 +12031,7 @@
   {
     "id": "bf5fee40-2333-40bf-bbda-94e1ccdecaab",
     "name": "Epoxy Guns (Cuspers Squad)",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -12623,9 +12068,7 @@
   {
     "id": "0ca7b931-beec-490a-b75d-38f1feb1a90b",
     "name": "Fell Rifles (Fell Stalkers Squad)",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -12665,9 +12108,7 @@
   {
     "id": "d70135ab-0cd4-4706-ad7f-01716b6ddf0c",
     "name": "Rebar Lances (Free Hill Coalition Squad)",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -12692,9 +12133,7 @@
   {
     "id": "7b1efaf3-5ae6-45bb-b7c9-81ba066a041a",
     "name": "Servo-Lasso (Free Hill Coalition Squad)",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "content": [
       {
         "type": "paragraph",
@@ -12735,9 +12174,7 @@
     "id": "5cf942e4-d588-402a-bea2-135dda076c89",
     "name": "Venomous Bite (Apophis)",
     "displayName": "Venomous Bite",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "amount": 5,
       "damageType": "SP"
@@ -12769,9 +12206,7 @@
     "id": "44a1e91e-4a29-40e7-a426-5c9f661b1466",
     "name": "Constricting Coils (Apophis)",
     "displayName": "Constricting Coils",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "melee"
@@ -12834,9 +12269,7 @@
   {
     "id": "32c1b47f-38cd-4de3-8447-8ff898aa73b9",
     "name": "Pilot Seeker Tendrils",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -12864,9 +12297,7 @@
   {
     "id": "f5ad4482-fb2b-468b-995c-9b930ac9356d",
     "name": "Puppeteer Tendrils",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "traits": [
       {
@@ -12884,9 +12315,7 @@
   {
     "id": "c07208c2-f5fc-40b3-a8d1-368039f82b0b",
     "name": "Mech Marionette",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "actionType": "Turn",
     "content": [
       {
@@ -12975,9 +12404,7 @@
     "id": "8e6b4dc1-863d-4581-94a5-9c0742e9435e",
     "name": "Grasping Tentacles (Genbu)",
     "displayName": "Grasping Tentacles",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -12998,9 +12425,7 @@
     "id": "676f4cf0-9bbc-486c-96c8-c4c113347404",
     "name": "Mace-Tentacles (Genbu)",
     "displayName": "Mace-Tentacles",
-    "range": [
-      "Medium"
-    ],
+    "range": ["Medium"],
     "damage": {
       "damageType": "SP",
       "amount": 5
@@ -13102,9 +12527,7 @@
   {
     "id": "05957294-9d2b-4ce2-a77a-b55f744bbe53",
     "name": "Pseudo-teeth",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "HP",
       "amount": 1
@@ -13125,9 +12548,7 @@
   {
     "id": "11d76f01-536f-4e92-9325-c6f8c9fd4379",
     "name": "Tongue Lash",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "pinning"
@@ -13145,9 +12566,7 @@
     "id": "2b67d7d6-3434-40c0-9cfe-5591b5092d41",
     "name": "Metal Bars and Ripping Hands (Ghost)",
     "displayName": "Metal Bars and Ripping Hands",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 1
@@ -13168,9 +12587,7 @@
     "id": "d13aa01b-3b60-44b7-8a42-a36d0b798097",
     "name": "Metal Bars and Ripping Hands (Ghost Haunt)",
     "displayName": "Metal Bars and Ripping Hands",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "damage": {
       "damageType": "SP",
       "amount": 2
@@ -13230,9 +12647,7 @@
   {
     "id": "5ccedd0f-4626-4211-a0c8-0b5305361f33",
     "name": "K4 Rifle",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "damage": {
       "damageType": "SP",
       "amount": 3
@@ -13317,9 +12732,7 @@
     "id": "042f2f1f-f5dc-4606-a14e-dbf30991cd03",
     "activationCost": 0,
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "traits": [
       {
         "type": "hacking"
@@ -13417,9 +12830,7 @@
     "id": "2af25422-a3ed-426e-b07e-d1d2c7587442",
     "activationCost": 0,
     "actionType": "Short",
-    "range": [
-      "Close"
-    ],
+    "range": ["Close"],
     "traits": [
       {
         "type": "uses",
@@ -13520,9 +12931,7 @@
     "id": "084a74be-8a8a-4382-81a3-0db67e5a8bc9",
     "activationCost": 3,
     "actionType": "Turn",
-    "range": [
-      "Long"
-    ],
+    "range": ["Long"],
     "content": [
       {
         "type": "paragraph",
