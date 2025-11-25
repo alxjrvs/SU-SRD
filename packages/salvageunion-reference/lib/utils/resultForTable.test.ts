@@ -6,7 +6,6 @@ const mockStandardTable: SURefRollTable = {
   id: 'test-standard',
   source: 'Salvage Union Workshop Manual',
   name: 'Test Standard',
-  section: 'test',
   table: {
     '1': { value: 'Critical Failure' },
     '2-5': { value: 'Failure' },
@@ -22,7 +21,6 @@ const mockFlatTable: SURefRollTable = {
   id: 'test-flat',
   source: 'Salvage Union Workshop Manual',
   name: 'Test Flat',
-  section: 'test',
   table: {
     '1': { value: 'Result 1' },
     '2': { value: 'Result 2' },
@@ -53,7 +51,6 @@ const mockFullTable: SURefRollTable = {
   id: 'test-full',
   source: 'Salvage Union Workshop Manual',
   name: 'Test Full',
-  section: 'test',
   table: {
     '1': { value: 'Full Result 1' },
     '2': { value: 'Full Result 2' },
@@ -255,7 +252,6 @@ describe('resultForTable', () => {
       id: 'test-labels',
       source: 'Salvage Union Workshop Manual',
       name: 'Test Labels',
-      section: 'test',
       table: {
         '1': { label: 'Critical Failure', value: 'Something terrible happens' },
         '2-5': { value: 'Failure occurs' },
