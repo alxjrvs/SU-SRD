@@ -41,7 +41,7 @@ function digestRollTable(table: RollTableType): DigestedRollTable[] {
   return sorted
     .map((key, order) => {
       const content = table[key as keyof typeof table]
-      
+
       // Handle new tableContent format: { label?: string, value: string }
       if (
         content &&
@@ -58,13 +58,13 @@ function digestRollTable(table: RollTableType): DigestedRollTable[] {
           key,
         }
       }
-      
+
       // Handle old string format: "Label: Description" or just "Description"
       const fullDescription = typeof content === 'string' ? content : ''
       const parts = fullDescription.split(':')
       const labelPart = parts[0]?.trim()
       const valuePart = parts.slice(1).join(':').trim()
-      
+
       return {
         order,
         label: labelPart && labelPart !== valuePart ? labelPart : null,
@@ -250,11 +250,7 @@ export function RollTable({
                 alignItems="center"
                 py={compact ? 0.5 : 1}
               >
-                <RollTableDescription
-                  label={label}
-                  value={value}
-                  compact={compact}
-                />
+                <RollTableDescription label={label} value={value} compact={compact} />
               </Flex>
             </Flex>
           )

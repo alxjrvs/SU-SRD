@@ -68,7 +68,7 @@ export function resultForTable(table: SURefObjectTable | undefined, roll: number
  */
 function formatTableContent(content: unknown): string | null {
   if (!content) return null
-  
+
   // Handle new tableContent format: { label?: string, value: string }
   if (typeof content === 'object' && content !== null && 'value' in content) {
     const tableContent = content as { label?: string; value: string }
@@ -77,12 +77,12 @@ function formatTableContent(content: unknown): string | null {
     }
     return tableContent.value
   }
-  
+
   // Handle old string format
   if (typeof content === 'string') {
     return content
   }
-  
+
   return null
 }
 

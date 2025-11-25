@@ -200,7 +200,9 @@
       {
         "id": "383de916-bbd6-4e34-9cfc-1b37e12178c8",
         "name": "Armament Bay Weapons System",
-        "schema": ["systems"],
+        "schema": [
+          "systems"
+        ],
         "content": [
           {
             "type": "paragraph",
@@ -336,12 +338,22 @@
     "source": "Salvage Union Workshop Manual",
     "damagedEffect": "If the Trading Bay becomes damaged, you can no longer trade Scrap or roll on the Trading Bay Table during Downtime.",
     "table": {
-      "1": "Nothing is available for trade during this Downtime.",
-      "20": "An Intact Mech Chassis is available for trade.",
+      "1": {
+        "value": "Nothing is available for trade during this Downtime."
+      },
+      "20": {
+        "value": "An Intact Mech Chassis is available for trade."
+      },
       "type": "standard",
-      "2-5": "An Intact Module is available for trade.",
-      "6-10": "An Intact System is available for trade.",
-      "11-19": "An Intact System and an Intact Module are available for trade."
+      "2-5": {
+        "value": "An Intact Module is available for trade."
+      },
+      "6-10": {
+        "value": "An Intact System is available for trade."
+      },
+      "11-19": {
+        "value": "An Intact System and an Intact Module are available for trade."
+      }
     },
     "page": 222,
     "npc": {
