@@ -15,7 +15,7 @@
     "build:package": "bun --filter salvageunion-reference build",
     "build:package:quick": "bun --filter salvageunion-reference build:quick",
     "build:package:watch": "bun --filter salvageunion-reference watch",
-    "typecheck": "bun --filter \"*\" typecheck",
+    "typecheck": "bun --filter salvageunion-reference typecheck && bun --filter suref-web typecheck",
     "lint": "bun --filter \"*\" lint",
     "format": "bun --filter \"*\" format",
     "format:check": "bun --filter suref-web format:check",
@@ -26,7 +26,7 @@
     "validate:actions": "bun --filter salvageunion-reference validate:actions",
     "validate:all": "bun --filter salvageunion-reference validate:all",
     "clean": "bun --filter \"*\" clean || true",
-    "check:all": "bun run lint && bun run format:check && bun run build:package:quick && bun run typecheck && bun run test && bun run validate:ids && bun run validate:references && bun run validate:actions",
+    "check:all": "bun run lint && bun run format:check && bun run build:package && bun --filter salvageunion-reference typecheck && bun --filter suref-web typecheck && bun run test && bun run validate:ids && bun run validate:references && bun run validate:actions",
     "fix:all": "bun run lint -- --fix && bun run format"
   },
   "devDependencies": {
