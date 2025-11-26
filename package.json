@@ -9,11 +9,11 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "bun run build:package:quick && bun --filter suref-web dev",
+    "dev": "bun run build:package && bun --filter suref-web dev",
     "dev:watch": "bun --filter salvageunion-reference watch & bun --filter suref-web dev",
-    "build": "bun --filter \"*\" build",
+    "build": "bun run build:package && bun run build:web",
+    "build:web": "bun --filter suref-web build",
     "build:package": "bun --filter salvageunion-reference build",
-    "build:package:quick": "bun --filter salvageunion-reference build:quick",
     "build:package:watch": "bun --filter salvageunion-reference watch",
     "typecheck": "bun --filter salvageunion-reference typecheck && bun --filter suref-web typecheck",
     "lint": "bun --filter \"*\" lint",
