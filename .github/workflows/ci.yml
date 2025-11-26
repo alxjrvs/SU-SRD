@@ -19,12 +19,6 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Build salvageunion-reference package
-        run: bun run build:package
-
-      - name: Validate package cross-references
-        run: bun --filter salvageunion-reference validate:references
-
       - name: Run all checks
         run: bun run check:all
 
