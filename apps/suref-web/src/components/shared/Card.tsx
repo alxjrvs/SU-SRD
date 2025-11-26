@@ -1,8 +1,8 @@
 import { Flex, type FlexProps } from '@chakra-ui/react'
 import type { ReactNode } from 'react'
 import type { SURefEnumSource } from 'salvageunion-reference'
-import { Text } from '@/components/base/Text'
-import { getSourceStyles } from '@/components/entity/entityDisplayHelpers'
+import { Text } from '../base/Text'
+import { getSourceStyles } from '../entity/entityDisplayHelpers'
 
 type CardProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 'direction'> & {
   /** Background color token (e.g., 'bg.builder.pilot', 'su.orange', 'su.green') */

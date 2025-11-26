@@ -1,12 +1,12 @@
 import { Box, Flex, VStack } from '@chakra-ui/react'
 import { SheetTextarea } from './SheetTextarea'
 import { NPCCardChoice } from './NPCCardChoice'
-import type { CrawlerNPC } from '@/types/common'
-import type { Tables } from '@/types/database-generated.types'
-import NumericStepper from '@/components/NumericStepper'
-import { Text } from '@/components/base/Text'
+import type { CrawlerNPC } from '../../types/common'
+import type { Tables } from '../../types/database-generated.types'
+import NumericStepper from '../NumericStepper'
+import { Text } from '../base/Text'
 import { useRef, useEffect, useState, useMemo } from 'react'
-import { getTiltRotation } from '@/utils/tiltUtils'
+import { getTiltRotation } from '../../utils/tiltUtils'
 import type { SURefCrawler, SURefCrawlerBay } from 'salvageunion-reference'
 
 export function NPCCard({

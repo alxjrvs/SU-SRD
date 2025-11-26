@@ -1,6 +1,6 @@
 import { VStack } from '@chakra-ui/react'
 import { useEntityDisplayContext } from './useEntityDisplayContext'
-import { NestedActionDisplay } from '@/components/entity/NestedActionDisplay'
+import { NestedActionDisplay } from '../NestedActionDisplay'
 
 export function EntityActions() {
   const {

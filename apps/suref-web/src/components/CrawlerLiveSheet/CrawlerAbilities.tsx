@@ -1,12 +1,12 @@
 import type { SURefCrawler, SURefMetaAction } from 'salvageunion-reference'
 import { extractActions } from 'salvageunion-reference'
 
-import { Card } from '@/components/shared/Card'
+import { Card } from '../shared/Card'
 import { VStack } from '@chakra-ui/react'
 import { SheetEntityChoiceDisplay } from './SheetEntityChoiceDisplay'
-import { useHydratedCrawler } from '@/hooks/crawler'
-import { useManageEntityChoices } from '@/hooks/suentity'
-import { NestedChassisAbility } from '@/components/entity/NestedChassisAbility'
+import { useHydratedCrawler } from '../../hooks/crawler'
+import { useManageEntityChoices } from '../../hooks/suentity'
+import { NestedChassisAbility } from '../entity/NestedChassisAbility'
 
 export function CrawlerAbilities({
   id,

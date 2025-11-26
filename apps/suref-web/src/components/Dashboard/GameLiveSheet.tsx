@@ -1,21 +1,21 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useParams, useNavigate, Link } from '@tanstack/react-router'
 import { Box, Flex, VStack, HStack, Grid } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import { Button } from '@chakra-ui/react'
 
 import { ExternalLinkModal } from './ExternalLinkModal'
 import { GameInfo } from './GameInfo'
 import { PilotMechCell } from './PilotMechCell'
-import { ActiveToggle } from '@/components/shared/ActiveToggle'
-import { PrivateToggle } from '@/components/shared/PrivateToggle'
-import { PermissionError } from '@/components/shared/PermissionError'
-import { Card } from '@/components/shared/Card'
-import { LiveSheetLayout } from '@/components/shared/LiveSheetLayout'
-import { ControlBarContainer } from '@/components/shared/ControlBarContainer'
-import { useCreateEntity } from '@/hooks/useCreateEntity'
-import { useCurrentUser } from '@/hooks/useCurrentUser'
-import { isGameMediator } from '@/lib/permissions'
+import { ActiveToggle } from '../shared/ActiveToggle'
+import { PrivateToggle } from '../shared/PrivateToggle'
+import { PermissionError } from '../shared/PermissionError'
+import { Card } from '../shared/Card'
+import { LiveSheetLayout } from '../shared/LiveSheetLayout'
+import { ControlBarContainer } from '../shared/ControlBarContainer'
+import { useCreateEntity } from '../../hooks/useCreateEntity'
+import { useCurrentUser } from '../../hooks/useCurrentUser'
+import { isGameMediator } from '../../lib/permissions'
 import {
   useGame,
   useGameCrawler,
@@ -27,12 +27,12 @@ import {
   useExternalLinks,
   useCreateExternalLink,
   useDeleteExternalLink,
-} from '@/hooks/game'
-import { useGameMembers } from '@/hooks/game/useGameMembers'
-import type { GameInvite } from '@/lib/api/games'
-import { ValueDisplay } from '@/components/shared/ValueDisplay'
+} from '../../hooks/game'
+import { useGameMembers } from '../../hooks/game/useGameMembers'
+import type { GameInvite } from '../../lib/api/games'
+import { ValueDisplay } from '../shared/ValueDisplay'
 import { CrawlerSmallDisplay } from './CrawlerSmallDisplay'
-import { logger } from '@/lib/logger'
+import { logger } from '../../lib/logger'
 
 type GameInviteRow = GameInvite
 

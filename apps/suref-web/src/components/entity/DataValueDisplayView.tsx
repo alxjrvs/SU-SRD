@@ -1,10 +1,10 @@
-import type { DataValue } from '@/types/common'
+import type { DataValue } from '../../types/common'
 import type { SURefObjectDataValue } from 'salvageunion-reference'
-import { ActivationCostBox } from '@/components/shared/ActivationCostBox'
+import { ActivationCostBox } from '../shared/ActivationCostBox'
 import { TraitKeywordDisplayView } from './TraitKeywordDisplayView'
-import { ValueDisplay } from '@/components/shared/ValueDisplay'
+import { ValueDisplay } from '../shared/ValueDisplay'
 import { useMemo } from 'react'
-import { getTiltRotation } from '@/utils/tiltUtils'
+import { getTiltRotation } from '../../utils/tiltUtils'
 
 /**
  * View-only component for rendering DataValue items

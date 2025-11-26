@@ -4,9 +4,9 @@ import { Box, Input, Text, VStack } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react'
 import { useForm } from '@tanstack/react-form'
 import { z } from 'zod'
-import { Heading } from '@/components/base/Heading'
-import { redeemInviteCode } from '@/lib/api'
-import { logger } from '@/lib/logger'
+import { Heading } from '../base/Heading'
+import { redeemInviteCode } from '../../lib/api'
+import { logger } from '../../lib/logger'
 
 const codeValidator = z.string().min(1, 'Invite code is required').trim()
 

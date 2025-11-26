@@ -1,5 +1,5 @@
 import { VStack, Box, Button } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
+import { Text } from '../../base/Text'
 import type {
   SURefObjectChoice,
   SURefEnumSchemaName,
@@ -9,9 +9,9 @@ import type {
 } from 'salvageunion-reference'
 import { getModel, extractActions, isSystemModule } from 'salvageunion-reference'
 import { EntityDisplay } from './index'
-import { NestedActionDisplay } from '@/components/entity/NestedActionDisplay'
+import { NestedActionDisplay } from '../NestedActionDisplay'
 import { useEntityDisplayContext } from './useEntityDisplayContext'
-import { resolveEntityName } from '@/components/entity/entityDisplayHelpers'
+import { resolveEntityName } from '../entityDisplayHelpers'
 import { createChoiceButtonConfig } from './buttonConfigHelpers'
 
 export interface EntityListDisplayProps {

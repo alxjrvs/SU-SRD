@@ -37,9 +37,11 @@ The main web application built with:
 
 #### Key Patterns
 
-**Path Aliases**
-- Use `@/` prefix for imports from `src/` directory
-- Example: `import { useHydratedPilot } from '@/hooks/pilot'`
+**Imports**
+- Prefer relative imports over path aliases for imports from `src/` directory
+- Example: `import { useHydratedPilot } from '../../hooks/pilot'`
+- Relative imports make file relationships explicit and clear
+- This applies to ALL files including route files, components, hooks, utilities, etc.
 
 **Data Fetching**
 - Use TanStack Query hooks in `src/hooks/`
@@ -123,6 +125,16 @@ TypeScript ORM for Salvage Union game data:
 3. Build package if reference data changed
 4. Start dev server
 5. Hot reload updates UI
+
+## Bun Workspace Best Practices
+
+This monorepo follows [Bun workspace conventions](https://bun.com/docs/guides/install/workspaces):
+
+- Root `package.json` is `"private": true` to prevent accidental publishing
+- Each package/app is self-contained with its own dependencies
+- Workspace dependencies use `workspace:*` protocol
+- Run `bun install` from root to install dependencies for all workspaces
+- Add dependencies to specific workspaces by `cd`ing into the package directory and running `bun add <package>`
 
 ## Build Process
 

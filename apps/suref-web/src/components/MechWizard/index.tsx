@@ -1,4 +1,4 @@
-import { BaseWizard } from '@/components/shared/BaseWizard'
+import { BaseWizard } from '../shared/BaseWizard'
 import { useMechWizardState } from './useMechWizardState'
 import { ChassisSelectionStep } from './ChassisSelectionStep'
 import { SystemsModulesStep } from './SystemsModulesStep'

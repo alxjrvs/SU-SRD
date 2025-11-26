@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { VStack, Button } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
-import { SheetInput } from '@/components/shared/SheetInput'
+import { Text } from '../base/Text'
+import { SheetInput } from '../shared/SheetInput'
 import type { UseCrawlerWizardStateReturn } from './useCrawlerWizardState'
 
 interface CrawlerNameStepProps {

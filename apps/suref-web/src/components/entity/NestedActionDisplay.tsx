@@ -1,12 +1,12 @@
 import { Box, Flex, VStack } from '@chakra-ui/react'
 import type { SURefMetaAction, SURefObjectChoice } from 'salvageunion-reference'
 import { getEntityDisplayName } from 'salvageunion-reference'
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import { BlockContentRendererView } from './BlockContentRendererView'
 import { EntityChoice } from './EntityDisplay/EntityChoice'
-import { extractEntityDetails } from '@/lib/entityDataExtraction'
+import { extractEntityDetails } from '../../lib/entityDataExtraction'
 import { DataValueDisplayView } from './DataValueDisplayView'
-import { RollTable } from '@/components/shared/RollTable'
+import { RollTable } from '../shared/RollTable'
 
 interface NestedActionDisplayProps {
   /** Action data from salvageunion-reference */

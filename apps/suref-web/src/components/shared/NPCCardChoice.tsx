@@ -3,7 +3,7 @@ import { SheetInput } from './SheetInput'
 import { rollTable } from '@randsum/salvageunion'
 import { SalvageUnionReference } from 'salvageunion-reference'
 import type { SURefObjectChoice } from 'salvageunion-reference'
-import { getParagraphString } from '@/lib/contentBlockHelpers'
+import { getParagraphString } from '../../lib/contentBlockHelpers'
 
 interface NPCCardChoiceProps {
   choice: SURefObjectChoice

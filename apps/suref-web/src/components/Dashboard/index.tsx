@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Outlet } from '@tanstack/react-router'
 import { Box, Flex, Text } from '@chakra-ui/react'
-import { getSession, onAuthStateChange } from '@/lib/api'
+import { getSession, onAuthStateChange } from '../../lib/api'
 import type { User } from '@supabase/supabase-js'
-import Footer from '@/components/Footer'
+import Footer from '../Footer'
 import { Auth } from './Auth'
-import { logger } from '@/lib/logger'
+import { logger } from '../../lib/logger'
 
 export default function Dashboard() {
   const [user, setUser] = useState<User | null>(null)

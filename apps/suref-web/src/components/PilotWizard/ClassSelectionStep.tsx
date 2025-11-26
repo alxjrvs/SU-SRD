@@ -2,10 +2,10 @@ import { useMemo, useState, useCallback, useRef, useEffect } from 'react'
 import { Box, VStack, Button, Tabs } from '@chakra-ui/react'
 import { Link } from '@tanstack/react-router'
 import { getCoreClasses } from 'salvageunion-reference'
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import { getLevel1AbilitiesForClass, getAllCoreLevel1Abilities } from './utils'
-import { EntityDisplay } from '@/components/entity/EntityDisplay'
-import { getEntitySlug } from '@/utils/slug'
+import { EntityDisplay } from '../entity/EntityDisplay'
+import { getEntitySlug } from '../../utils/slug'
 import type { UsePilotWizardStateReturn } from './usePilotWizardState'
 
 interface ClassSelectionStepProps {

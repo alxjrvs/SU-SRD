@@ -18,17 +18,9 @@
     "emitDeclarationOnly": true,
     "jsx": "react-jsx",
 
-    /* Path aliases */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src", "vite.config.ts"],
-  "typeRoots": ["./node_modules/@types", "./src/test"]
+  }
 }

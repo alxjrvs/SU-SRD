@@ -1,10 +1,10 @@
 import { describe, test, expect } from 'bun:test'
 import { screen, waitFor } from '@testing-library/react'
-import { LOCAL_ID } from '@/lib/cacheHelpers'
-import { render } from '@/test/render'
-import PilotLiveSheet from '@/components/PilotLiveSheet/index'
-import { setupPilotWithClass } from '@/test/liveSheetUtils'
-import { getBaseClass, getNonAdvanceableClass } from '@/test/fixtures'
+import { LOCAL_ID } from '../../../lib/cacheHelpers'
+import { render } from '../../../test/render'
+import PilotLiveSheet from '../index'
+import { setupPilotWithClass } from '../../../test/liveSheetUtils'
+import { getBaseClass, getNonAdvanceableClass } from '../../../test/fixtures'
 
 describe('PilotLiveSheet - Class Selection', () => {
   describe('Common Cases', () => {

@@ -1,11 +1,11 @@
 import { describe, test, expect } from 'bun:test'
 import { screen, waitFor } from '@testing-library/react'
-import { LOCAL_ID } from '@/lib/cacheHelpers'
-import { render } from '@/test/render'
-import PilotLiveSheet from '@/components/PilotLiveSheet/index'
-import { setupPilotWithClass, addAbilityToPilot } from '@/test/liveSheetUtils'
-import { getBaseClass, getCoreTreeLevel1Ability, getAbilitiesByTree } from '@/test/fixtures'
-import type { Tables } from '@/types/database-generated.types'
+import { LOCAL_ID } from '../../../lib/cacheHelpers'
+import { render } from '../../../test/render'
+import PilotLiveSheet from '../index'
+import { setupPilotWithClass, addAbilityToPilot } from '../../../test/liveSheetUtils'
+import { getBaseClass, getCoreTreeLevel1Ability, getAbilitiesByTree } from '../../../test/fixtures'
+import type { Tables } from '../../../types/database-generated.types'
 
 describe('PilotLiveSheet - Class Abilities', () => {
   describe('Common Cases', () => {

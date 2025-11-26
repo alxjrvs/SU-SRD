@@ -16,7 +16,8 @@ This guide covers the development workflow, common tasks, and best practices for
 git clone <repository-url>
 cd SU-SRD
 
-# Install dependencies (sets up workspace links)
+# Install dependencies for all workspaces (sets up workspace links)
+# This installs dependencies for both apps/ and packages/
 bun install
 
 # Build the reference package (required for types)
@@ -25,6 +26,16 @@ bun run build:package
 # Start development server
 bun run dev
 ```
+
+### Bun Workspace Structure
+
+This is a Bun workspace monorepo following [Bun workspace best practices](https://bun.com/docs/guides/install/workspaces):
+
+- Root `package.json` is marked `"private": true` to prevent accidental publishing
+- Each package/app is self-contained with its own dependencies
+- Workspace dependencies use `workspace:*` protocol
+- Run `bun install` from root to install dependencies for all workspaces
+- Add dependencies to specific workspaces by `cd`ing into the package directory
 
 ## Development Workflow
 
@@ -84,22 +95,29 @@ When modifying `salvageunion-reference`:
 
 - Use strict TypeScript settings (enabled in `tsconfig.json`)
 - Prefer `type` over `interface` for object types (unless extending)
-- Use path aliases (`@/`) instead of relative imports when possible
+- Prefer relative imports over path aliases
 - Avoid `any` - use `unknown` if type is truly unknown
 
 ### Imports
 
-**Use path aliases:**
+**Prefer relative imports over path aliases:**
+
 ```ts
-import { useHydratedPilot } from '@/hooks/pilot'
-import { supabase } from '@/lib/supabase'
+// ✅ Correct - use relative imports
+import { useHydratedPilot } from '../../hooks/pilot'
+import { supabase } from '../lib/supabase'
+import { PilotWizard } from '../components/PilotWizard'
 ```
 
-**Avoid deep relative imports:**
+**Avoid path aliases:**
 ```ts
-// ❌ Avoid
-import { useHydratedPilot } from '../../../hooks/pilot'
+// ❌ Avoid - path aliases hide file structure
+import { useHydratedPilot } from '@/hooks/pilot'
+import { supabase } from '@/lib/supabase'
+import { PilotWizard } from '@/components/PilotWizard'
 ```
+
+Relative imports make file relationships explicit and clear. This applies to ALL files including route files, components, hooks, utilities, etc.
 
 ### React Components
 

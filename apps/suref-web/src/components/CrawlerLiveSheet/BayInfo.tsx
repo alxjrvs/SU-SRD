@@ -1,5 +1,5 @@
 import type { SURefCrawlerBay } from 'salvageunion-reference'
-import { BayInfo as UnifiedBayInfo } from '@/components/shared/BayInfo'
+import { BayInfo as UnifiedBayInfo } from '../shared/BayInfo'
 
 interface BayInfoProps {
   bayRef: SURefCrawlerBay

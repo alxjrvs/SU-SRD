@@ -1,8 +1,8 @@
 import { GameSmallDisplay } from './GameSmallDisplay'
 import { GridLayout } from './GridLayout'
-import { useUserGamesList } from '@/hooks/game/useGames'
-import { useCreateEntity } from '@/hooks/useCreateEntity'
-import { logger } from '@/lib/logger'
+import { useUserGamesList } from '../../hooks/game/useGames'
+import { useCreateEntity } from '../../hooks/useCreateEntity'
+import { logger } from '../../lib/logger'
 
 export function GamesGrid() {
   const { data: games, isLoading: loading, error, refetch: reload } = useUserGamesList()

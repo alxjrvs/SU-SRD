@@ -1,8 +1,8 @@
 import { Flex } from '@chakra-ui/react'
 import { getDisplayName, isAbility } from 'salvageunion-reference'
-import { Text } from '@/components/base/Text'
-import { useEntityDisplayContext } from '@/components/entity/EntityDisplay/useEntityDisplayContext'
-import { getSourceStyles } from '@/components/entity/entityDisplayHelpers'
+import { Text } from '../base/Text'
+import { useEntityDisplayContext } from '../entity/EntityDisplay/useEntityDisplayContext'
+import { getSourceStyles } from '../entity/entityDisplayHelpers'
 
 export function EntityDisplayFooter({ bg }: { bg?: string }) {
   const { data, schemaName, spacing, compact, source, disabled, isExpanded } =

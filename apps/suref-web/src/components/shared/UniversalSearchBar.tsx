@@ -1,14 +1,14 @@
 import { useState, useMemo, useEffect, useRef, useCallback, startTransition } from 'react'
 import { useNavigate, useLocation } from '@tanstack/react-router'
 import { Box, Input } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
-import type { SchemaInfo } from '@/types/schema'
+import { Text } from '../base/Text'
+import type { SchemaInfo } from '../../types/schema'
 import { SalvageUnionReference } from 'salvageunion-reference'
 import type { SURefEntity, SURefEnumSchemaName } from 'salvageunion-reference'
-import { highlightMatch } from '@/utils/searchHighlight'
-import { DEBOUNCE_TIMINGS } from '@/constants/gameRules'
-import { getEntitySlug } from '@/utils/slug'
-import { EntityDisplayTooltip } from '@/components/entity/EntityDisplayTooltip'
+import { highlightMatch } from '../../utils/searchHighlight'
+import { DEBOUNCE_TIMINGS } from '../../constants/gameRules'
+import { getEntitySlug } from '../../utils/slug'
+import { EntityDisplayTooltip } from '../entity/EntityDisplayTooltip'
 
 const SEARCH_RESULTS_MAX_HEIGHT = 400
 

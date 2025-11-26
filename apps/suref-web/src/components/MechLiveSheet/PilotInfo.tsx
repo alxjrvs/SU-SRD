@@ -1,10 +1,10 @@
 import { Flex, Text, VStack } from '@chakra-ui/react'
-import { Card } from '@/components/shared/Card'
-import { SheetSelect } from '@/components/shared/SheetSelect'
-import { LinkButton } from '@/components/shared/LinkButton'
-import { useEntityRelationships } from '@/hooks/useEntityRelationships'
-import { useHydratedPilot } from '@/hooks/pilot'
-import { DiscordSignInButton } from '@/components/DiscordSignInButton'
+import { Card } from '../shared/Card'
+import { SheetSelect } from '../shared/SheetSelect'
+import { LinkButton } from '../shared/LinkButton'
+import { useEntityRelationships } from '../../hooks/useEntityRelationships'
+import { useHydratedPilot } from '../../hooks/pilot'
+import { DiscordSignInButton } from '../DiscordSignInButton'
 
 interface PilotInfoProps {
   mechId?: string

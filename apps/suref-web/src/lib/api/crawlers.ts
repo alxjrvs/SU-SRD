@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase'
-import type { Tables, TablesInsert } from '@/types/database-generated.types'
-import { assertCanViewCrawler } from '@/lib/permissions'
+import { supabase } from '../supabase'
+import type { Tables, TablesInsert } from '../../types/database-generated.types'
+import { assertCanViewCrawler } from '../permissions'
 
 export type CrawlerRow = Tables<'crawlers'>
 

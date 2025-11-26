@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react'
-import { DiscordSignInButton } from '@/components/DiscordSignInButton'
+import { DiscordSignInButton } from '../DiscordSignInButton'
 
 export function Auth() {
   return (

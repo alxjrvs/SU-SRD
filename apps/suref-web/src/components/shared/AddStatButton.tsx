@@ -1,4 +1,4 @@
-import { StatDisplay } from '@/components/StatDisplay'
+import { StatDisplay } from '../StatDisplay'
 
 interface AddStatButtonProps {
   onClick: () => void

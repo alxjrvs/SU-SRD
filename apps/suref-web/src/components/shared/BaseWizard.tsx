@@ -1,6 +1,6 @@
 import { Box, VStack, Button, Flex } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
-import { WizardBreadcrumbs } from '@/components/shared/WizardBreadcrumbs'
+import { Text } from '../base/Text'
+import { WizardBreadcrumbs } from './WizardBreadcrumbs'
 import type { ReactNode } from 'react'
 
 export interface BaseWizardProps {

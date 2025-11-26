@@ -10,7 +10,10 @@
 import { z } from 'zod'
 import { SalvageUnionReference } from 'salvageunion-reference'
 import type { SURefEnumSchemaName } from 'salvageunion-reference'
-import { publicCargoInsertSchema, publicCargoUpdateSchema } from '@/types/database-generated.zod'
+import {
+  publicCargoInsertSchema,
+  publicCargoUpdateSchema,
+} from '../../types/database-generated.zod'
 
 /**
  * Valid schema names for cargo items

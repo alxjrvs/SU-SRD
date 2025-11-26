@@ -1,6 +1,6 @@
 import { VStack } from '@chakra-ui/react'
 import { useEntityDisplayContext } from './useEntityDisplayContext'
-import { NestedChassisAbility } from '@/components/entity/NestedChassisAbility'
+import { NestedChassisAbility } from '../NestedChassisAbility'
 
 export function EntityChassisAbilitiesContent() {
   const { data, spacing, compact, chassisAbilities } = useEntityDisplayContext()

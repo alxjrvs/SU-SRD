@@ -12,9 +12,9 @@ import {
   type SURefEnumSchemaName,
   type EntitySchemaName,
 } from 'salvageunion-reference'
-import type { Tables } from '@/types/database-generated.types'
-import type { HydratedEntity, HydratedCargo } from '@/types/hydrated'
-import { logger } from '@/lib/logger'
+import type { Tables } from '../../types/database-generated.types'
+import type { HydratedEntity, HydratedCargo } from '../../types/hydrated'
+import { logger } from '../logger'
 
 /**
  * Hydrate a single entity with reference data

@@ -1,15 +1,15 @@
 import { VStack } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import { UserEntitySmallDisplay } from './UserEntitySmallDisplay'
 import { findCrawlerTechLevel } from 'salvageunion-reference'
-import { ValueDisplay } from '@/components/shared/ValueDisplay'
-import { useHydratedCrawler, useDeleteCrawler } from '@/hooks/crawler'
-import { useCurrentUser } from '@/hooks/useCurrentUser'
+import { ValueDisplay } from '../shared/ValueDisplay'
+import { useHydratedCrawler, useDeleteCrawler } from '../../hooks/crawler'
+import { useCurrentUser } from '../../hooks/useCurrentUser'
 import { useQueryClient } from '@tanstack/react-query'
-import { crawlersKeys } from '@/hooks/crawler/useCrawlers'
-import { fetchEntity } from '@/lib/api/entities'
-import type { Tables } from '@/types/database-generated.types'
-import { DeleteButton } from '@/components/shared/DeleteButton'
+import { crawlersKeys } from '../../hooks/crawler/useCrawlers'
+import { fetchEntity } from '../../lib/api/entities'
+import type { Tables } from '../../types/database-generated.types'
+import { DeleteButton } from '../shared/DeleteButton'
 
 interface CrawlerSmallDisplayProps {
   id: string

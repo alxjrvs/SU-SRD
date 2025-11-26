@@ -5,8 +5,8 @@
  * occupies a connected region of cells, creating a "single box" visual appearance.
  */
 
-import { getCargoGridConfig } from '@/constants/gameRules'
-import { logger } from '@/lib/logger'
+import { getCargoGridConfig } from '../constants/gameRules'
+import { logger } from '../lib/logger'
 
 export interface GridCell {
   itemId: string | null

@@ -26,16 +26,9 @@
     "validate:actions": "bun --filter salvageunion-reference validate:actions",
     "validate:all": "bun --filter salvageunion-reference validate:all",
     "clean": "bun --filter \"*\" clean || true",
-    "check:all": "bun run lint && bun run format:check && bun run build:package && bun --filter salvageunion-reference typecheck && bun --filter suref-web typecheck && bun run test && bun run validate:ids && bun run validate:references && bun run validate:actions",
+    "check:all": "bun run lint && bun run format:check && bun run build:package:quick && bun --filter salvageunion-reference typecheck && bun run build:package:quick && bun --filter suref-web typecheck && bun run test && bun run validate:ids && bun run validate:references && bun run validate:actions",
     "fix:all": "bun run lint -- --fix && bun run format"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "netlify-cli": "^23.12.0",
-    "prettier": "^3.6.2",
-    "typescript-eslint": "^8.48.0"
-  },
-  "dependencies": {
-    "next-themes": "^0.4.6"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }

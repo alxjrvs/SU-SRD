@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button } from '@chakra-ui/react'
-import { logger } from '@/lib/logger'
+import { logger } from '../../lib/logger'
 
 interface DeleteEntityProps {
   entityName: string

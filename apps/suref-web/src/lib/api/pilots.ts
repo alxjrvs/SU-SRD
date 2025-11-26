@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase'
-import type { Tables, TablesInsert } from '@/types/database-generated.types'
-import { assertCanViewPilot } from '@/lib/permissions'
+import { supabase } from '../supabase'
+import type { Tables, TablesInsert } from '../../types/database-generated.types'
+import { assertCanViewPilot } from '../permissions'
 
 export type PilotRow = Tables<'pilots'>
 

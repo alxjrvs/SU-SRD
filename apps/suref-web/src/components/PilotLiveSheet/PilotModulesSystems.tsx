@@ -1,8 +1,8 @@
 import { Grid, VStack, Text } from '@chakra-ui/react'
 import { useMemo } from 'react'
 import { getTechLevelNumber, type SURefSystem, type SURefModule } from 'salvageunion-reference'
-import { useHydratedPilot } from '@/hooks/pilot'
-import { Card } from '@/components/shared/Card'
+import { useHydratedPilot } from '../../hooks/pilot'
+import { Card } from '../shared/Card'
 
 interface PilotModulesSystemsProps {
   id: string

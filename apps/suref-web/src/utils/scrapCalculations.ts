@@ -5,7 +5,7 @@
  * @returns Object with scrap to remove by TL and which TLs were affected
  */
 
-import { logger } from '@/lib/logger'
+import { logger } from '../lib/logger'
 export function calculateScrapRemoval(
   totalNeeded: number,
   scrapByTL: Record<number, number>

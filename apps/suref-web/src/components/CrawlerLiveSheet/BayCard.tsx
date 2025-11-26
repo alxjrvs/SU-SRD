@@ -1,5 +1,5 @@
-import type { HydratedBay } from '@/types/hydrated'
-import { BayCard as UnifiedBayCard } from '@/components/shared/BayCard'
+import type { HydratedBay } from '../../types/hydrated'
+import { BayCard as UnifiedBayCard } from '../shared/BayCard'
 
 interface BayCardProps {
   bay: HydratedBay

@@ -8,7 +8,7 @@ import {
   NativeSelectField,
   Input,
 } from '@chakra-ui/react'
-import Modal from '@/components/Modal'
+import Modal from '../Modal'
 
 interface ScrapConversionModalProps {
   isOpen: boolean

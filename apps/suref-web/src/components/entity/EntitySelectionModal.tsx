@@ -9,9 +9,9 @@ import {
   type SURefEnumSchemaName,
 } from 'salvageunion-reference'
 import { useVirtualizer } from '@tanstack/react-virtual'
-import Modal from '@/components/Modal'
+import Modal from '../Modal'
 import { EntityDisplay } from './EntityDisplay'
-import { TECH_LEVELS } from '@/constants/gameRules'
+import { TECH_LEVELS } from '../../constants/gameRules'
 
 // Estimated height for an expanded EntityDisplay item
 const ESTIMATED_ITEM_HEIGHT = 300

@@ -1,5 +1,5 @@
 import type { SURefObjectChoice } from 'salvageunion-reference'
-import { EntityChoiceDisplay } from '@/components/shared/EntityChoiceDisplay'
+import { EntityChoiceDisplay } from '../shared/EntityChoiceDisplay'
 
 export function SheetEntityChoiceDisplay({
   choice,

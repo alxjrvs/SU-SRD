@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import type { WizardState, BayNPCData, CrawlerNPCData } from './utils'
 import { validateWizardStep } from './utils'
-import { useBaseWizardState } from '@/hooks/useBaseWizardState'
+import { useBaseWizardState } from '../../hooks/useBaseWizardState'
 
 export interface UseCrawlerWizardStateReturn {
   state: WizardState

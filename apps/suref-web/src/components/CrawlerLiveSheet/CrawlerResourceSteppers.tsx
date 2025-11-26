@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react'
 import { Button, Flex, Grid } from '@chakra-ui/react'
-import NumericStepper from '@/components/NumericStepper'
-import { Card } from '@/components/shared/Card'
-import { StatDisplay } from '@/components/StatDisplay'
+import NumericStepper from '../NumericStepper'
+import { Card } from '../shared/Card'
+import { StatDisplay } from '../StatDisplay'
 import { ScrapConversionModal } from './ScrapConversionModal'
-import { useHydratedCrawler, useUpdateCrawler } from '@/hooks/crawler'
+import { useHydratedCrawler, useUpdateCrawler } from '../../hooks/crawler'
 
 interface CrawlerResourceSteppersProps {
   id: string

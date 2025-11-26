@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import { NativeSelectField, NativeSelectRoot } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import type { ReactNode } from 'react'
 
 interface SheetSelectProps {

@@ -1,5 +1,5 @@
 import { useMemo, type ReactNode } from 'react'
-import { TraitKeywordDisplayView } from '@/components/entity/TraitKeywordDisplayView'
+import { TraitKeywordDisplayView } from '../components/entity/TraitKeywordDisplayView'
 
 /**
  * Hook to parse text content for trait references and replace them with TraitKeywordDisplayView components

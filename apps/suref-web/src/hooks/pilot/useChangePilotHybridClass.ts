@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
-import { useDeleteEntity, useCreateEntity } from '@/hooks/suentity'
+import { useDeleteEntity, useCreateEntity } from '../suentity'
 import { useHydratedPilot } from './useHydratedPilot'
 import { SalvageUnionReference } from 'salvageunion-reference'
 import type { SURefClass } from 'salvageunion-reference'
-import { logger } from '@/lib/logger'
+import { logger } from '../../lib/logger'
 
 export function useChangePilotHybridClass(id: string | undefined) {
   const { pilot, abilities, selectedAdvancedClass } = useHydratedPilot(id)

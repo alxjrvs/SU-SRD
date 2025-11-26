@@ -6,9 +6,9 @@ import {
   getModuleSlots,
   getCargoCapacity,
 } from 'salvageunion-reference'
-import { Card } from '@/components/shared/Card'
-import { StatDisplay } from '@/components/StatDisplay'
-import { NestedChassisAbility } from '@/components/entity/NestedChassisAbility'
+import { Card } from '../shared/Card'
+import { StatDisplay } from '../StatDisplay'
+import { NestedChassisAbility } from '../entity/NestedChassisAbility'
 
 interface ChassisAbilitiesProps {
   chassis: SURefChassis | undefined

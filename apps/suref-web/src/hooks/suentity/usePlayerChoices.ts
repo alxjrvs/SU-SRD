@@ -14,8 +14,8 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import type { Tables, TablesInsert } from '@/types/database-generated.types'
-import type { HydratedEntity } from '@/types/hydrated'
+import type { Tables, TablesInsert } from '../../types/database-generated.types'
+import type { HydratedEntity } from '../../types/hydrated'
 import {
   fetchChoicesForEntity,
   fetchChoicesForChoice,
@@ -23,9 +23,9 @@ import {
   deletePlayerChoice,
   deleteChoicesForEntity,
   deleteChoicesForChoice,
-} from '@/lib/api/playerChoices'
+} from '../../lib/api/playerChoices'
 import { entitiesKeys } from './useSUEntities'
-import { isLocalId, generateLocalId } from '@/lib/cacheHelpers'
+import { isLocalId, generateLocalId } from '../../lib/cacheHelpers'
 
 /**
  * Query key factory for player choices

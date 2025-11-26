@@ -1,10 +1,10 @@
 import { useCallback, useState } from 'react'
 import { useNavigate } from '@tanstack/react-router'
-import type { TablesInsert } from '@/types/database-generated.types'
-import type { ValidTable, CrawlerNPC } from '@/types/common'
-import { getUser, createEntity as createEntityAPI } from '@/lib/api'
+import type { TablesInsert } from '../types/database-generated.types'
+import type { ValidTable, CrawlerNPC } from '../types/common'
+import { getUser, createEntity as createEntityAPI } from '../lib/api'
 import { useCreateCrawler } from './crawler/useCrawlers'
-import { logger } from '@/lib/logger'
+import { logger } from '../lib/logger'
 
 interface useCreateEntityConfig<T extends ValidTable> {
   table: T

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Button, Flex } from '@chakra-ui/react'
 import type { ButtonProps } from '@chakra-ui/react'
-import { signInWithDiscord } from '@/lib/api'
+import { signInWithDiscord } from '../lib/api'
 import { DiscordIcon } from './shared/DiscordIcon'
-import { logger } from '@/lib/logger'
+import { logger } from '../lib/logger'
 
 interface DiscordSignInButtonProps extends ButtonProps {
   redirectTo?: string

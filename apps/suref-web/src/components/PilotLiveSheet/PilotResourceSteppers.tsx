@@ -1,7 +1,7 @@
 import { VStack } from '@chakra-ui/react'
-import NumericStepper from '@/components/NumericStepper'
-import { Card } from '@/components/shared/Card'
-import { useHydratedPilot, useUpdatePilot } from '@/hooks/pilot'
+import NumericStepper from '../NumericStepper'
+import { Card } from '../shared/Card'
+import { useHydratedPilot, useUpdatePilot } from '../../hooks/pilot'
 
 interface PilotResourceSteppersProps {
   id: string

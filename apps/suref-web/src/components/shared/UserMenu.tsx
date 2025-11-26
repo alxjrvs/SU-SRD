@@ -1,6 +1,6 @@
 import { Button, Flex, Text } from '@chakra-ui/react'
 import type { User } from '@supabase/supabase-js'
-import { DiscordSignInButton } from '@/components/DiscordSignInButton'
+import { DiscordSignInButton } from '../DiscordSignInButton'
 
 interface UserMenuProps {
   /** Current user or null if not authenticated */

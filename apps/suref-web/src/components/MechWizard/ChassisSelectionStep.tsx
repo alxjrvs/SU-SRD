@@ -1,8 +1,8 @@
 import { useMemo, useState, useCallback } from 'react'
 import { Box, VStack, Button, Tabs, Flex } from '@chakra-ui/react'
 import { SalvageUnionReference, getTechLevel } from 'salvageunion-reference'
-import { Text } from '@/components/base/Text'
-import { EntityDisplay } from '@/components/entity/EntityDisplay'
+import { Text } from '../base/Text'
+import { EntityDisplay } from '../entity/EntityDisplay'
 import type { UseMechWizardStateReturn } from './useMechWizardState'
 import { getWorkshopManualChassis, getChassisByTechLevel } from './utils'
 

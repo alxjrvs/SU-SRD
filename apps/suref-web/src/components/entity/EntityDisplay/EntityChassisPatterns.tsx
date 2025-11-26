@@ -1,7 +1,7 @@
 import { VStack, Tabs } from '@chakra-ui/react'
 import { useCallback } from 'react'
 import { useSearch, useRouter } from '@tanstack/react-router'
-import { Text } from '@/components/base/Text'
+import { Text } from '../../base/Text'
 import { normalizePatternName } from 'salvageunion-reference'
 import { EntitySubheader } from './EntitySubheader'
 import { EntityChassisPattern } from './EntityChassisPattern'

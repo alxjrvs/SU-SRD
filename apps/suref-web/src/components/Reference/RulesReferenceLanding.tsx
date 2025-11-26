@@ -1,6 +1,6 @@
 import { Box, Flex, Link } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
-import Footer from '@/components/Footer'
+import { Text } from '../base/Text'
+import Footer from '../Footer'
 
 export function RulesReferenceLanding() {
   return (

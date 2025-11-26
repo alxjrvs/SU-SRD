@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
-import type { Database } from '@/types/database-generated.types'
-import { getUser, fetchUserEntities } from '@/lib/api'
-import { logger } from '@/lib/logger'
+import type { Database } from '../types/database-generated.types'
+import { getUser, fetchUserEntities } from '../lib/api'
+import { logger } from '../lib/logger'
 
 type TableName = keyof Database['public']['Tables']
 

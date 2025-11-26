@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
 import { SalvageUnionReference, type SURefAbility, type SURefClass } from 'salvageunion-reference'
-import { getAbilityCost } from '@/components/PilotLiveSheet/utils/getAbilityCost'
+import { getAbilityCost } from '../../components/PilotLiveSheet/utils/getAbilityCost'
 import { useHydratedPilot } from './useHydratedPilot'
-import { useCreateEntity, useDeleteEntity } from '@/hooks/suentity'
+import { useCreateEntity, useDeleteEntity } from '../suentity'
 import { useUpdatePilot } from './usePilots'
-import { logger } from '@/lib/logger'
+import { logger } from '../../lib/logger'
 
 export function useManagePilotAbilities(id: string | undefined) {
   const { pilot, abilities, selectedClass, selectedAdvancedClass } = useHydratedPilot(id)

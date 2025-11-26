@@ -1,10 +1,10 @@
 import { describe, test, expect } from 'bun:test'
 import { screen, waitFor } from '@testing-library/react'
-import { LOCAL_ID } from '@/lib/cacheHelpers'
-import { render } from '@/test/render'
-import PilotLiveSheet from '@/components/PilotLiveSheet/index'
-import { addEquipmentToPilot } from '@/test/liveSheetUtils'
-import { getEquipmentWithoutSlots } from '@/test/fixtures'
+import { LOCAL_ID } from '../../../lib/cacheHelpers'
+import { render } from '../../../test/render'
+import PilotLiveSheet from '../index'
+import { addEquipmentToPilot } from '../../../test/liveSheetUtils'
+import { getEquipmentWithoutSlots } from '../../../test/fixtures'
 
 describe('PilotLiveSheet - Equipment Inventory', () => {
   describe('Common Cases', () => {

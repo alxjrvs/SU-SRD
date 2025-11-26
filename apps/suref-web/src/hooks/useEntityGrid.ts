@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
-import type { ValidTable } from '@/types/common'
-import { getUser, fetchUserEntities } from '@/lib/api'
-import { logger } from '@/lib/logger'
+import type { ValidTable } from '../types/common'
+import { getUser, fetchUserEntities } from '../lib/api'
+import { logger } from '../lib/logger'
 
 export interface UseEntityGridConfig {
   table: ValidTable

@@ -14,7 +14,7 @@ import {
   findActionByName,
   getSource,
 } from 'salvageunion-reference'
-import { techLevelColors } from '@/theme'
+import { techLevelColors } from '../../../theme'
 import {
   calculateBackgroundColor,
   extractName,
@@ -22,7 +22,7 @@ import {
   shouldShowExtraContent as calculateShouldShowExtraContent,
   createHeaderClickHandler,
   getEntityDisplayName,
-} from '@/components/entity/entityDisplayHelpers'
+} from '../entityDisplayHelpers'
 import {
   EntityDisplayContext,
   getEntityFontSizes,

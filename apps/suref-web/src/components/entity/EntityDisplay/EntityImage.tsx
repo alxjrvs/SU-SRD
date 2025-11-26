@@ -1,7 +1,7 @@
 import { Box, Image } from '@chakra-ui/react'
 import { useState } from 'react'
 import { useEntityDisplayContext } from './useEntityDisplayContext'
-import { logger } from '@/lib/logger'
+import { logger } from '../../../lib/logger'
 
 export function EntityImage({ customWidth }: { customWidth?: string }) {
   const { title, compact, assetUrl } = useEntityDisplayContext()

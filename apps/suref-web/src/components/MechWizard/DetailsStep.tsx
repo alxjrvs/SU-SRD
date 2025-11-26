@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo } from 'react'
 import { Box, VStack, Button, Separator } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
-import { SheetInput } from '@/components/shared/SheetInput'
-import { SheetTextarea } from '@/components/shared/SheetTextarea'
+import { Text } from '../base/Text'
+import { SheetInput } from '../shared/SheetInput'
+import { SheetTextarea } from '../shared/SheetTextarea'
 import { normalizePatternName } from 'salvageunion-reference'
 import type { UseMechWizardStateReturn } from './useMechWizardState'
 

@@ -3,9 +3,9 @@ import { VStack, Box, Button } from '@chakra-ui/react'
 import type { SURefCrawlerBay } from 'salvageunion-reference'
 
 import { EntityChoiceDisplay } from './EntityChoiceDisplay'
-import { useManageEntityChoices } from '@/hooks/suentity'
-import { useParseTraitReferences } from '@/utils/parseTraitReferences'
-import { getParagraphString } from '@/lib/contentBlockHelpers'
+import { useManageEntityChoices } from '../../hooks/suentity'
+import { useParseTraitReferences } from '../../utils/parseTraitReferences'
+import { getParagraphString } from '../../lib/contentBlockHelpers'
 
 type EntityModeProps = {
   mode: 'entity'

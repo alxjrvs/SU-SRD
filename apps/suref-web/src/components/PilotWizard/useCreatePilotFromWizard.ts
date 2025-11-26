@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useNavigate } from '@tanstack/react-router'
-import { useCreatePilot, useUpdatePilot } from '@/hooks/pilot'
-import { useCreateEntity } from '@/hooks/suentity'
-import { getUser } from '@/lib/api'
+import { useCreatePilot, useUpdatePilot } from '../../hooks/pilot'
+import { useCreateEntity } from '../../hooks/suentity'
+import { getUser } from '../../lib/api'
 import type { WizardState } from './utils'
 
 export function useCreatePilotFromWizard() {

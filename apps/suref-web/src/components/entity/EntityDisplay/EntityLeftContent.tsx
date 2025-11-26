@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react'
-import { StatDisplay } from '@/components/StatDisplay'
-import { LevelDisplay } from '@/components/shared/LevelDisplay'
+import { StatDisplay } from '../../StatDisplay'
+import { LevelDisplay } from '../../shared/LevelDisplay'
 import { useEntityDisplayContext } from './useEntityDisplayContext'
 
 export function EntityLeftContent() {

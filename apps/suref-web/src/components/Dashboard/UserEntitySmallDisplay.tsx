@@ -2,9 +2,9 @@ import type { ReactNode } from 'react'
 import type { BoxProps } from '@chakra-ui/react'
 import { Flex } from '@chakra-ui/react'
 import { Link, type LinkProps } from '@tanstack/react-router'
-import { Text } from '@/components/base/Text'
-import { Card } from '@/components/shared/Card'
-import { ValueDisplay } from '@/components/shared/ValueDisplay'
+import { Text } from '../base/Text'
+import { Card } from '../shared/Card'
+import { ValueDisplay } from '../shared/ValueDisplay'
 
 interface UserEntitySmallDisplayProps extends Omit<BoxProps, 'onClick'> {
   /** Navigation target (when provided, component becomes a link) */

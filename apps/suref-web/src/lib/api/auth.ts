@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase'
+import { supabase } from '../supabase'
 import type { User } from '@supabase/supabase-js'
-import { logger } from '@/lib/logger'
+import { logger } from '../logger'
 
 /**
  * Get the current authenticated user

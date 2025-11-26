@@ -10,16 +10,16 @@ import {
   getSlotsRequired,
   getTechLevelNumber,
 } from 'salvageunion-reference'
-import { StatDisplay } from '@/components/StatDisplay'
-import { AddStatButton } from '@/components/shared/AddStatButton'
-import { Card } from '@/components/shared/Card'
-import { EntityDisplay } from '@/components/entity/EntityDisplay'
-import { EntitySelectionModal } from '@/components/entity/EntitySelectionModal'
+import { StatDisplay } from '../StatDisplay'
+import { AddStatButton } from '../shared/AddStatButton'
+import { Card } from '../shared/Card'
+import { EntityDisplay } from '../entity/EntityDisplay'
+import { EntitySelectionModal } from '../entity/EntitySelectionModal'
 import { EquipmentSelector } from './EquipmentSelector'
-import { useManagePilotInventory } from '@/hooks/pilot/useManagePilotInventory'
-import { useHydratedPilot } from '@/hooks/pilot'
-import { useManagePilotEquipmentSystemsAndModules } from '@/hooks/pilot/useManagePilotEquipmentSystemsAndModules'
-import type { HydratedEntity } from '@/types/hydrated'
+import { useManagePilotInventory } from '../../hooks/pilot/useManagePilotInventory'
+import { useHydratedPilot } from '../../hooks/pilot'
+import { useManagePilotEquipmentSystemsAndModules } from '../../hooks/pilot/useManagePilotEquipmentSystemsAndModules'
+import type { HydratedEntity } from '../../types/hydrated'
 
 interface PilotInventoryProps {
   id: string

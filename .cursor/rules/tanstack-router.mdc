@@ -18,3 +18,4 @@ TanStack Router patterns for file-based routing in the web app.
 - Prefer `beforeLoad` for server-side data fetching, use TanStack Query in components for client-side data, pass prefetched data via route context
 - Access route context via `useRouteContext()`: `const { pilotId } = useRouteContext({ from: '/pilots/$id' })`
 - Root route provides `serverUser` in context, use context for shared data across route tree
+- Prefer relative imports for all imports (e.g., `import('../../../components/PilotWizard')` not `import('@/components/PilotWizard')`)

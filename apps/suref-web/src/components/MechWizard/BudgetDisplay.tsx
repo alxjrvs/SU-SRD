@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react'
-import { SheetDisplay } from '@/components/shared/SheetDisplay'
-import { Text } from '@/components/base/Text'
+import { SheetDisplay } from '../shared/SheetDisplay'
+import { Text } from '../base/Text'
 import { calculateRemainingBudget, STARTING_BUDGET } from './utils'
 import type { WizardState } from './utils'
 

@@ -14,5 +14,6 @@ React component patterns using functional components, TypeScript, and Chakra UI 
 - Live sheet components (PilotLiveSheet, MechLiveSheet, CrawlerLiveSheet): Use `LiveSheetLayout` wrapper, use `LiveSheetControlBar` for actions, use `LiveSheetLoadingState`, `LiveSheetNotFoundState`, `LiveSheetErrorState` for states, implement realtime subscriptions via `useLiveSheetSubscriptions`
 - Entity display components: Use `EntityDisplay` for showing reference data, use `EntitySelectionModal` for selecting entities, support pattern selection via URL query params when applicable
 - Prefer props over context when possible, use TanStack Query hooks for server state, use React state for local UI state, use `useHydrated*` hooks (e.g., `useHydratedPilot`, `useHydratedMech`) for entity data
+- Prefer relative imports for all imports (e.g., `import { useHydratedPilot } from '../../hooks/pilot'` not `import { useHydratedPilot } from '@/hooks/pilot'`)
 - Component with props: `interface MyComponentProps { id: string; isEditable?: boolean }; export function MyComponent({ id, isEditable = false }: MyComponentProps) { const { mech } = useHydratedMech(id); ... }`
 - Route component (default export allowed): `export const Route = createFileRoute('/my-route')({ component: MyRoute }); export default function MyRoute() { return <div>Route content</div> }`

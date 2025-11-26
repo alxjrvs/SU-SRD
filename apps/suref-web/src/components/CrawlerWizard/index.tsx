@@ -1,4 +1,4 @@
-import { BaseWizard } from '@/components/shared/BaseWizard'
+import { BaseWizard } from '../shared/BaseWizard'
 import { useCrawlerWizardState } from './useCrawlerWizardState'
 import { CrawlerTypeSelectionStep } from './CrawlerTypeSelectionStep'
 import { CrawlerBaysStep } from './CrawlerBaysStep'

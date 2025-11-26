@@ -5,9 +5,9 @@ import {
   type EntitySchemaName,
 } from 'salvageunion-reference'
 import { EntityDisplayTooltip } from './EntityDisplayTooltip'
-import { ValueDisplay } from '@/components/shared/ValueDisplay'
+import { ValueDisplay } from '../shared/ValueDisplay'
 import { useMemo } from 'react'
-import { getTiltRotation } from '@/utils/tiltUtils'
+import { getTiltRotation } from '../../utils/tiltUtils'
 
 /**
  * View-only component for displaying trait or keyword details

@@ -1,10 +1,10 @@
 import { VStack } from '@chakra-ui/react'
 import { getTechLevel, type SURefChassis } from 'salvageunion-reference'
-import { Card } from '@/components/shared/Card'
-import { StatDisplay } from '@/components/StatDisplay'
+import { Card } from '../shared/Card'
+import { StatDisplay } from '../StatDisplay'
 import { ChassisInputs } from './ChassisInputs'
-import { useHydratedMech } from '@/hooks/mech'
-import { Text } from '@/components/base/Text'
+import { useHydratedMech } from '../../hooks/mech'
+import { Text } from '../base/Text'
 
 export function MainMechDisplay({ id, isEditable }: { id: string; isEditable: boolean }) {
   const { mech, selectedChassis } = useHydratedMech(id)

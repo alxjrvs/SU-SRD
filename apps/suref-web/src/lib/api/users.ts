@@ -1,5 +1,5 @@
-import { supabase } from '@/lib/supabase'
-import { logger } from '@/lib/logger'
+import { supabase } from '../supabase'
+import { logger } from '../logger'
 
 /**
  * Fetch user display name by user ID

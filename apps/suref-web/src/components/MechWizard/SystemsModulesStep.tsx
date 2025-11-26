@@ -10,12 +10,12 @@ import {
   type SURefSystem,
   type SURefModule,
 } from 'salvageunion-reference'
-import { Text } from '@/components/base/Text'
-import { Card } from '@/components/shared/Card'
-import { StatDisplay } from '@/components/StatDisplay'
-import { AddStatButton } from '@/components/shared/AddStatButton'
-import { EntityDisplay } from '@/components/entity/EntityDisplay'
-import { EntitySelectionModal } from '@/components/entity/EntitySelectionModal'
+import { Text } from '../base/Text'
+import { Card } from '../shared/Card'
+import { StatDisplay } from '../StatDisplay'
+import { AddStatButton } from '../shared/AddStatButton'
+import { EntityDisplay } from '../entity/EntityDisplay'
+import { EntitySelectionModal } from '../entity/EntitySelectionModal'
 import type { UseMechWizardStateReturn } from './useMechWizardState'
 
 interface SystemsModulesStepProps {

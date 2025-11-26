@@ -1,9 +1,9 @@
 import { describe, test, expect } from 'bun:test'
 import { screen, waitFor } from '@testing-library/react'
-import { LOCAL_ID } from '@/lib/cacheHelpers'
-import { render } from '@/test/render'
-import PilotLiveSheet from '@/components/PilotLiveSheet/index'
-import type { Tables } from '@/types/database-generated.types'
+import { LOCAL_ID } from '../../../lib/cacheHelpers'
+import { render } from '../../../test/render'
+import PilotLiveSheet from '../index'
+import type { Tables } from '../../../types/database-generated.types'
 
 describe('PilotLiveSheet - Notes', () => {
   describe('Common Cases', () => {

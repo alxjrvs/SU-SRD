@@ -1,4 +1,4 @@
-import { EntitySelectionModal } from '@/components/entity/EntitySelectionModal'
+import { EntitySelectionModal } from '../entity/EntitySelectionModal'
 
 interface EquipmentSelectorProps {
   isOpen: boolean

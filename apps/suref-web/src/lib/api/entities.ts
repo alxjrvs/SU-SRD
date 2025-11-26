@@ -1,12 +1,12 @@
-import { supabase } from '@/lib/supabase'
-import type { ValidTable } from '@/types/common'
-import type { Tables } from '@/types/database-generated.types'
+import { supabase } from '../supabase'
+import type { ValidTable } from '../../types/common'
+import type { Tables } from '../../types/database-generated.types'
 import {
   assertCanViewGame,
   assertCanViewCrawler,
   assertCanViewPilot,
   assertCanViewMech,
-} from '@/lib/permissions'
+} from '../permissions'
 
 /**
  * Helper to safely cast database results to expected type.

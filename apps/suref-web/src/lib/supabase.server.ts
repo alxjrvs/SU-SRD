@@ -1,6 +1,6 @@
 import { createServerFn } from '@tanstack/react-start'
 import { createClient } from '@supabase/supabase-js'
-import type { Database } from '@/types/database-generated.types'
+import type { Database } from '../types/database-generated.types'
 import { getSupabaseUrl, getSupabaseAnonKey } from './env'
 
 const supabaseUrl = getSupabaseUrl()

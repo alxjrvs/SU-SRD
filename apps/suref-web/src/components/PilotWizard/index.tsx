@@ -1,4 +1,4 @@
-import { BaseWizard } from '@/components/shared/BaseWizard'
+import { BaseWizard } from '../shared/BaseWizard'
 import { usePilotWizardState } from './usePilotWizardState'
 import { ClassSelectionStep } from './ClassSelectionStep'
 import { EquipmentSelectionStep } from './EquipmentSelectionStep'

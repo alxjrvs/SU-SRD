@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from 'react'
 import { Box, Flex, IconButton, Button } from '@chakra-ui/react'
 import { resultForTable, type SURefObjectTable } from 'salvageunion-reference'
 import { roll } from '@randsum/roller'
-import { useParseTraitReferences } from '@/utils/parseTraitReferences'
-import { Text } from '@/components/base/Text'
+import { useParseTraitReferences } from '../../utils/parseTraitReferences'
+import { Text } from '../base/Text'
 
 interface DigestedRollTable {
   order: number

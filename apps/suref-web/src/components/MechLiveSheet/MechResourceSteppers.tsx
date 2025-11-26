@@ -1,9 +1,9 @@
 import { VStack } from '@chakra-ui/react'
 import type { SURefChassis } from 'salvageunion-reference'
 import { getStructurePoints, getEnergyPoints, getHeatCapacity } from 'salvageunion-reference'
-import NumericStepper from '@/components/NumericStepper'
-import { Card } from '@/components/shared/Card'
-import { useHydratedMech, useUpdateMech } from '@/hooks/mech'
+import NumericStepper from '../NumericStepper'
+import { Card } from '../shared/Card'
+import { useHydratedMech, useUpdateMech } from '../../hooks/mech'
 
 interface MechResourceSteppersProps {
   id: string

@@ -13,16 +13,16 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import type { TablesInsert, TablesUpdate } from '@/types/database-generated.types'
-import { logger } from '@/lib/logger'
+import type { TablesInsert, TablesUpdate } from '../../types/database-generated.types'
+import { logger } from '../../lib/logger'
 import {
   fetchEntitiesForParent,
   createNormalizedEntity,
   updateNormalizedEntity,
   deleteNormalizedEntity,
-} from '@/lib/api/normalizedEntities'
-import { LOCAL_ID, isLocalId, generateLocalId, addToCache } from '@/lib/cacheHelpers'
-import type { HydratedEntity } from '@/types/hydrated'
+} from '../../lib/api/normalizedEntities'
+import { LOCAL_ID, isLocalId, generateLocalId, addToCache } from '../../lib/cacheHelpers'
+import type { HydratedEntity } from '../../types/hydrated'
 import { SalvageUnionReference } from 'salvageunion-reference'
 import type { SURefEnumSchemaName } from 'salvageunion-reference'
 

@@ -1,9 +1,9 @@
 import { Flex, Box } from '@chakra-ui/react'
-import { SheetDisplay } from '@/components/shared/SheetDisplay'
+import { SheetDisplay } from '../../shared/SheetDisplay'
 import { useEntityDisplayContext } from './useEntityDisplayContext'
-import { useParseTraitReferences } from '@/utils/parseTraitReferences'
+import { useParseTraitReferences } from '../../../utils/parseTraitReferences'
 import { useMemo } from 'react'
-import { getTiltRotation } from '@/utils/tiltUtils'
+import { getTiltRotation } from '../../../utils/tiltUtils'
 
 interface ConditionalSheetInfoProps {
   /** Property name to check in data (for backwards compatibility) */

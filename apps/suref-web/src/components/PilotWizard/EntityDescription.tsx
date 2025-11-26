@@ -1,4 +1,4 @@
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import type { SURefEntity } from 'salvageunion-reference'
 
 interface EntityDescriptionProps {

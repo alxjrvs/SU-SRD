@@ -1,5 +1,5 @@
 import type { SURefObjectContentBlock } from 'salvageunion-reference'
-import { BlockContentRendererView } from '@/components/entity/BlockContentRendererView'
+import { BlockContentRendererView } from '../BlockContentRendererView'
 
 interface ContentBlockRendererProps {
   /** Content blocks to render */

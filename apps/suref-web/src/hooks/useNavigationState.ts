@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { useNavigate, useLocation } from '@tanstack/react-router'
-import { signOut } from '@/lib/api'
-import { logger } from '@/lib/logger'
+import { signOut } from '../lib/api'
+import { logger } from '../lib/logger'
 
 /**
  * Shared navigation state and handlers

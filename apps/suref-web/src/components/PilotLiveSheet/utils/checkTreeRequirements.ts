@@ -1,4 +1,4 @@
-import type { HydratedEntity } from '@/types/hydrated'
+import type { HydratedEntity } from '../../../types/hydrated'
 import type { SURefAbility } from 'salvageunion-reference'
 import { SalvageUnionReference } from 'salvageunion-reference'
 

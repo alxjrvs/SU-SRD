@@ -1,12 +1,12 @@
-import { StatDisplay } from '@/components/StatDisplay'
-import { Card } from '@/components/shared/Card'
-import { DynamicBay } from '@/components/shared/DynamicBay'
-import { CargoModal } from '@/components/shared/CargoModal'
+import { StatDisplay } from '../StatDisplay'
+import { Card } from '../shared/Card'
+import { DynamicBay } from '../shared/DynamicBay'
+import { CargoModal } from '../shared/CargoModal'
 import { useState } from 'react'
 import type { SURefChassis } from 'salvageunion-reference'
 import { getCargoCapacity } from 'salvageunion-reference'
-import { useManageMechCargo } from '@/hooks/mech/useManageMechCargo'
-import { useHydratedMech } from '@/hooks/mech'
+import { useManageMechCargo } from '../../hooks/mech/useManageMechCargo'
+import { useHydratedMech } from '../../hooks/mech'
 
 interface CargoListProps {
   disabled?: boolean

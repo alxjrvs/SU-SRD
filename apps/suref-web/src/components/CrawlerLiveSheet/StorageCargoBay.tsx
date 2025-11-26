@@ -1,10 +1,10 @@
-import { Card } from '@/components/shared/Card'
-import { DynamicBay } from '@/components/shared/DynamicBay'
+import { Card } from '../shared/Card'
+import { DynamicBay } from '../shared/DynamicBay'
 import { useState } from 'react'
-import { getTiltRotation } from '@/utils/tiltUtils'
-import { CargoModal } from '@/components/shared/CargoModal'
-import { useManageCrawlerCargo } from '@/hooks/crawler/useManageCrawlerCargo'
-import { useHydratedCrawler } from '@/hooks/crawler'
+import { getTiltRotation } from '../../utils/tiltUtils'
+import { CargoModal } from '../shared/CargoModal'
+import { useManageCrawlerCargo } from '../../hooks/crawler/useManageCrawlerCargo'
+import { useHydratedCrawler } from '../../hooks/crawler'
 
 interface CargoBayProps {
   id: string

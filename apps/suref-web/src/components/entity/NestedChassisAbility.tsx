@@ -4,15 +4,15 @@ import type {
   SURefObjectChoice,
   SURefObjectContentBlock,
 } from 'salvageunion-reference'
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import { BlockContentRendererView } from './BlockContentRendererView'
 import { EntityChoice } from './EntityDisplay/EntityChoice'
-import { useParseTraitReferences } from '@/utils/parseTraitReferences'
-import { parseContentBlockString } from '@/utils/contentBlockHelpers'
-import type { DataValue } from '@/types/common'
-import { extractEntityDetails } from '@/lib/entityDataExtraction'
+import { useParseTraitReferences } from '../../utils/parseTraitReferences'
+import { parseContentBlockString } from '../../utils/contentBlockHelpers'
+import type { DataValue } from '../../types/common'
+import { extractEntityDetails } from '../../lib/entityDataExtraction'
 import { DataValueDisplayView } from './DataValueDisplayView'
-import { RollTable } from '@/components/shared/RollTable'
+import { RollTable } from '../shared/RollTable'
 
 interface NestedChassisAbilityProps {
   /** Action data from salvageunion-reference */

@@ -1,13 +1,13 @@
 import { Box, Grid } from '@chakra-ui/react'
-import { Text } from '@/components/base/Text'
+import { Text } from '../base/Text'
 import { Button } from '@chakra-ui/react'
 import { useMemo, useEffect } from 'react'
-import { packCargoGrid } from '@/utils/cargoGridPacking'
-import { techLevelColors } from '@/theme'
-import { EntityDisplayTooltip } from '@/components/entity/EntityDisplayTooltip'
+import { packCargoGrid } from '../../utils/cargoGridPacking'
+import { techLevelColors } from '../../theme'
+import { EntityDisplayTooltip } from '../entity/EntityDisplayTooltip'
 import type { SURefEnumSchemaName } from 'salvageunion-reference'
-import type { HydratedCargo } from '@/types/hydrated'
-import { useUpdateCargo } from '@/hooks/cargo/useCargo'
+import type { HydratedCargo } from '../../types/hydrated'
+import { useUpdateCargo } from '../../hooks/cargo/useCargo'
 
 interface DynamicBayProps {
   items: HydratedCargo[]

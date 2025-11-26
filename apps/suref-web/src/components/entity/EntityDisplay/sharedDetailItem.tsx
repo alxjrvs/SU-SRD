@@ -1,7 +1,7 @@
-import type { DataValue } from '@/types/common'
+import type { DataValue } from '../../../types/common'
 import type { SURefObjectDataValue } from 'salvageunion-reference'
 import { useEntityDisplayContext } from './useEntityDisplayContext'
-import { DataValueDisplayView } from '@/components/entity/DataValueDisplayView'
+import { DataValueDisplayView } from '../DataValueDisplayView'
 
 /**
  * Shared DetailItem component for rendering DataValue items
