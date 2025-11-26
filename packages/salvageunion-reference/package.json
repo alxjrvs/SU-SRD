@@ -44,6 +44,7 @@
   ],
   "scripts": {
     "build": "tsc --project tsconfig.build.json && bun run format && bun run lint",
+    "build:ci": "tsc --project tsconfig.build.json",
     "prepare": "tsc --project tsconfig.build.json",
     "prepublishOnly": "bun run build && bun run typecheck",
     "validate:ids": "tsx tools/checkUniqueIds.ts",

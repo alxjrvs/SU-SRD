@@ -14,6 +14,7 @@
     "build": "bun run build:package && bun run build:web",
     "build:web": "bun --filter suref-web build",
     "build:package": "bun --filter salvageunion-reference build",
+    "build:package:ci": "bun --filter salvageunion-reference build:ci",
     "build:package:watch": "bun --filter salvageunion-reference watch",
     "typecheck": "bun --filter salvageunion-reference typecheck && bun --filter suref-web typecheck",
     "lint": "bun --filter \"*\" lint",

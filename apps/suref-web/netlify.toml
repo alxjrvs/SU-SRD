@@ -5,7 +5,7 @@
 [build]
   # Build command runs from base directory (repository root)
   # Package directory is set to apps/suref-web in Netlify UI
-  command = "bun install --frozen-lockfile && bun run build:package && bun --filter suref-web build"
+  command = "bun install --frozen-lockfile && bun run build:package:ci && bun --filter suref-web build"
   # Publish directory is relative to base directory (root)
   publish = "apps/suref-web/dist/client"
 
