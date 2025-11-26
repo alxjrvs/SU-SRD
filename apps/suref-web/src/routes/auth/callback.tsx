@@ -16,7 +16,10 @@ const DISCORD_USER_ID_PATTERN = /^\d{17,19}$/
  * @param source - Optional source parameter
  * @returns true if this is a bot callback
  */
-function isBotCallback(state: string | null | undefined, source: string | null | undefined): boolean {
+function isBotCallback(
+  state: string | null | undefined,
+  source: string | null | undefined
+): boolean {
   // Check for explicit source=bot parameter
   if (source === 'bot') {
     return true
@@ -116,4 +119,3 @@ export const Route = createFileRoute('/auth/callback')({
     ],
   }),
 })
-
