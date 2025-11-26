@@ -19,6 +19,7 @@ import { Route as SheetsPilotRouteImport } from './routes/sheets/pilot'
 import { Route as SheetsMechRouteImport } from './routes/sheets/mech'
 import { Route as SheetsCrawlerRouteImport } from './routes/sheets/crawler'
 import { Route as DashboardJoinRouteImport } from './routes/dashboard/join'
+import { Route as AuthCallbackRouteImport } from './routes/auth/callback'
 import { Route as SchemaSchemaIdIndexRouteImport } from './routes/schema/$schemaId/index'
 import { Route as DashboardPilotsIndexRouteImport } from './routes/dashboard/pilots/index'
 import { Route as DashboardMechsIndexRouteImport } from './routes/dashboard/mechs/index'
@@ -82,6 +83,11 @@ const DashboardJoinRoute = DashboardJoinRouteImport.update({
   id: '/join',
   path: '/join',
   getParentRoute: () => DashboardRoute,
+} as any)
+const AuthCallbackRoute = AuthCallbackRouteImport.update({
+  id: '/auth/callback',
+  path: '/auth/callback',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const SchemaSchemaIdIndexRoute = SchemaSchemaIdIndexRouteImport.update({
   id: '/schema/$schemaId/',
@@ -156,6 +162,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/randsum': typeof RandsumRoute
+  '/auth/callback': typeof AuthCallbackRoute
   '/dashboard/join': typeof DashboardJoinRoute
   '/sheets/crawler': typeof SheetsCrawlerRoute
   '/sheets/mech': typeof SheetsMechRoute
@@ -180,6 +187,7 @@ export interface FileRoutesByTo {
   '/404': typeof R404Route
   '/about': typeof AboutRoute
   '/randsum': typeof RandsumRoute
+  '/auth/callback': typeof AuthCallbackRoute
   '/dashboard/join': typeof DashboardJoinRoute
   '/sheets/crawler': typeof SheetsCrawlerRoute
   '/sheets/mech': typeof SheetsMechRoute
@@ -206,6 +214,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/dashboard': typeof DashboardRouteWithChildren
   '/randsum': typeof RandsumRoute
+  '/auth/callback': typeof AuthCallbackRoute
   '/dashboard/join': typeof DashboardJoinRoute
   '/sheets/crawler': typeof SheetsCrawlerRoute
   '/sheets/mech': typeof SheetsMechRoute
@@ -233,6 +242,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/dashboard'
     | '/randsum'
+    | '/auth/callback'
     | '/dashboard/join'
     | '/sheets/crawler'
     | '/sheets/mech'
@@ -257,6 +267,7 @@ export interface FileRouteTypes {
     | '/404'
     | '/about'
     | '/randsum'
+    | '/auth/callback'
     | '/dashboard/join'
     | '/sheets/crawler'
     | '/sheets/mech'
@@ -282,6 +293,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/dashboard'
     | '/randsum'
+    | '/auth/callback'
     | '/dashboard/join'
     | '/sheets/crawler'
     | '/sheets/mech'
@@ -308,6 +320,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   DashboardRoute: typeof DashboardRouteWithChildren
   RandsumRoute: typeof RandsumRoute
+  AuthCallbackRoute: typeof AuthCallbackRoute
   SheetsCrawlerRoute: typeof SheetsCrawlerRoute
   SheetsMechRoute: typeof SheetsMechRoute
   SheetsPilotRoute: typeof SheetsPilotRoute
@@ -386,6 +399,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/dashboard/join'
       preLoaderRoute: typeof DashboardJoinRouteImport
       parentRoute: typeof DashboardRoute
+    }
+    '/auth/callback': {
+      id: '/auth/callback'
+      path: '/auth/callback'
+      fullPath: '/auth/callback'
+      preLoaderRoute: typeof AuthCallbackRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/schema/$schemaId/': {
       id: '/schema/$schemaId/'
@@ -523,6 +543,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   DashboardRoute: DashboardRouteWithChildren,
   RandsumRoute: RandsumRoute,
+  AuthCallbackRoute: AuthCallbackRoute,
   SheetsCrawlerRoute: SheetsCrawlerRoute,
   SheetsMechRoute: SheetsMechRoute,
   SheetsPilotRoute: SheetsPilotRoute,
