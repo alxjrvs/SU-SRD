@@ -1,10 +1,15 @@
 # Netlify configuration for suref-web
 # Located in package directory per Netlify monorepo best practices
 # https://docs.netlify.com/build/configure-builds/monorepos/
+#
+# Recommended setup:
+# - Base directory: root (/) - set in Netlify UI or leave unset
+# - Package directory: apps/suref-web - set in Netlify UI
+# - Build command and publish directory configured below
 
 [build]
-  # Build command runs from base directory (repository root)
-  # Package directory is set to apps/suref-web in Netlify UI
+  # Build command runs from root directory (base directory)
+  # This allows access to workspace scripts in root package.json
   command = "bun install --frozen-lockfile && bun run build:package:ci && bun --filter suref-web build"
   # Publish directory is relative to base directory (root)
   publish = "apps/suref-web/dist/client"
