@@ -1,10 +1,11 @@
+import js from '@eslint/js'
+import tseslint from 'typescript-eslint'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import prettier from 'eslint-config-prettier'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
-import { baseConfig } from '../../eslint.config.base.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -23,7 +24,15 @@ export default [
       'src/routeTree.gen.ts',
     ],
   },
-  ...baseConfig,
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    rules: {
+      semi: ['error', 'never'],
+      'no-extra-semi': 'error',
+    },
+  },
   {
     files: ['**/*.{ts,tsx}'],
     ignores: ['happydom.ts', 'testing-library.ts', 'src/lib/logger.ts'],
