@@ -5,8 +5,7 @@ import { useEntityDisplayContext } from '../entity/EntityDisplay/useEntityDispla
 import { getSourceStyles } from '../entity/entityDisplayHelpers'
 
 export function EntityDisplayFooter({ bg }: { bg?: string }) {
-  const { data, schemaName, spacing, compact, source, disabled, isExpanded } =
-    useEntityDisplayContext()
+  const { data, schemaName, compact, source, disabled, isExpanded } = useEntityDisplayContext()
   if (!('page' in data) || !data.page) return null
   const displayName = getDisplayName(schemaName)
 
@@ -21,7 +20,7 @@ export function EntityDisplayFooter({ bg }: { bg?: string }) {
 
   return (
     <Flex
-      p={spacing.contentPadding}
+      p={3}
       color="su.black"
       justifyContent="space-between"
       alignItems="center"

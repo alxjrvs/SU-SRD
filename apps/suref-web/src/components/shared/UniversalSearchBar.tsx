@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, useRef, useCallback, startTransition } from 'react'
 import { useNavigate, useLocation } from '@tanstack/react-router'
-import { Box, Input } from '@chakra-ui/react'
+import { Box, Input, useBreakpointValue } from '@chakra-ui/react'
 import { Text } from '../base/Text'
 import type { SchemaInfo } from '../../types/schema'
 import { SalvageUnionReference } from 'salvageunion-reference'
@@ -36,6 +36,9 @@ export function UniversalSearchBar({ schemas }: UniversalSearchBarProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null)
   const previousPathnameRef = useRef<string>(location.pathname)
+
+  // Disable tooltips on mobile for better performance
+  const isMobile = useBreakpointValue({ base: true, lg: false }) ?? true
 
   // Debounce search query for search results computation
   useEffect(() => {
@@ -327,7 +330,8 @@ export function UniversalSearchBar({ schemas }: UniversalSearchBarProps) {
             )
 
             // Wrap item results with EntityDisplayTooltip if entity is available
-            if (result.type === 'item' && result.itemEntity && result.itemId) {
+            // Only on desktop - disable on mobile for better performance
+            if (!isMobile && result.type === 'item' && result.itemEntity && result.itemId) {
               return (
                 <EntityDisplayTooltip
                   key={`${result.type}-${result.schemaId}-${result.itemId}`}

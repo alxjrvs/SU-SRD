@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Input, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Text, Input } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react'
 import { ReferenceHeader } from '../shared/ReferenceHeader'
 import Footer from '../Footer'

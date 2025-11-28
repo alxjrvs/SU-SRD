@@ -1,4 +1,14 @@
-import { Box, Button, Flex, IconButton, HStack, Text, useBreakpointValue, Drawer, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Flex,
+  IconButton,
+  HStack,
+  Text,
+  useBreakpointValue,
+  Drawer,
+  VStack,
+} from '@chakra-ui/react'
 import type { User } from '@supabase/supabase-js'
 import { Link } from '@tanstack/react-router'
 import { Heading } from '../base/Heading'
@@ -6,14 +16,17 @@ import { useNavigationState } from '../../hooks/useNavigationState'
 import { NavigationLink } from '../shared/NavigationLink'
 import { UserMenu } from '../shared/UserMenu'
 import { DiscordSignInButton } from '../DiscordSignInButton'
+import { UniversalSearchBar } from '../shared/UniversalSearchBar'
+import type { SchemaInfo } from '../../types/schema'
 
 interface DashboardNavigationProps {
   user: User | null
+  schemas?: SchemaInfo[]
 }
 
-export function DashboardNavigation({ user }: DashboardNavigationProps) {
+export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationProps) {
   const { isOpen, signingOut, handleSignOut, isActive, toggleMenu } = useNavigationState()
-  
+
   // Only show hamburger menu on screens smaller than lg
   const showHamburger = useBreakpointValue({ base: true, lg: false }) ?? true
 
@@ -160,9 +173,7 @@ export function DashboardNavigation({ user }: DashboardNavigationProps) {
           user={user}
           onSignOut={handleSignOut}
           signingOut={signingOut}
-          signInComponent={
-            <DiscordSignInButton px={4} py={2} fontSize="sm" w="full" />
-          }
+          signInComponent={<DiscordSignInButton px={4} py={2} fontSize="sm" w="full" />}
         />
       </Flex>
     </VStack>
@@ -230,10 +241,14 @@ export function DashboardNavigation({ user }: DashboardNavigationProps) {
             <Drawer.Backdrop />
             <Drawer.Positioner>
               <Drawer.Content>
-                <Drawer.Header>
-                  <Heading level="h2">Menu</Heading>
-                </Drawer.Header>
-                <Drawer.Body>{renderNavigationContent()}</Drawer.Body>
+                <Drawer.Body>
+                  <VStack gap={4} alignItems="stretch" w="full" mb={4}>
+                    <Box w="full">
+                      <UniversalSearchBar schemas={schemas} />
+                    </Box>
+                  </VStack>
+                  {renderNavigationContent()}
+                </Drawer.Body>
               </Drawer.Content>
             </Drawer.Positioner>
           </Drawer.Root>
@@ -270,12 +285,7 @@ export function DashboardNavigation({ user }: DashboardNavigationProps) {
           </Link>
         </Button>
 
-        <HStack
-          as="ul"
-          gap={2}
-          flexDirection="row"
-          w="auto"
-        >
+        <HStack as="ul" gap={2} flexDirection="row" w="auto">
           <Box as="li">
             <NavigationLink isActive={isActive('/dashboard', true)} to="/dashboard">
               Overview
@@ -303,20 +313,12 @@ export function DashboardNavigation({ user }: DashboardNavigationProps) {
           </Box>
         </HStack>
 
-        <Flex
-          alignItems="center"
-          gap={4}
-          flexDirection="row"
-          w="auto"
-          ml="auto"
-        >
+        <Flex alignItems="center" gap={4} flexDirection="row" w="auto" ml="auto">
           <UserMenu
             user={user}
             onSignOut={handleSignOut}
             signingOut={signingOut}
-            signInComponent={
-              <DiscordSignInButton px={4} py={2} fontSize="sm" w="auto" />
-            }
+            signInComponent={<DiscordSignInButton px={4} py={2} fontSize="sm" w="auto" />}
           />
         </Flex>
       </Flex>

@@ -30,7 +30,7 @@ interface TopNavigationProps {
 export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNavigationProps) {
   const { isOpen, signingOut, handleNavigate, handleSignOut, isActive, toggleMenu } =
     useNavigationState()
-  
+
   // Only show hamburger menu on screens smaller than lg
   const showHamburger = useBreakpointValue({ base: true, lg: false }) ?? true
 
@@ -378,10 +378,14 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
             <Drawer.Backdrop />
             <Drawer.Positioner>
               <Drawer.Content>
-                <Drawer.Header>
-                  <Heading level="h2">Menu</Heading>
-                </Drawer.Header>
-                <Drawer.Body>{renderNavigationContent()}</Drawer.Body>
+                <Drawer.Body>
+                  <VStack gap={4} alignItems="stretch" w="full" mb={4}>
+                    <Box w="full">
+                      <UniversalSearchBar schemas={schemas} />
+                    </Box>
+                  </VStack>
+                  {renderNavigationContent()}
+                </Drawer.Body>
               </Drawer.Content>
             </Drawer.Positioner>
           </Drawer.Root>
@@ -401,12 +405,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
         overflow="visible"
         display={{ base: 'none', lg: 'flex' }}
       >
-        <Flex
-          alignItems="center"
-          gap={2}
-          flexDirection="row"
-          flex={1}
-        >
+        <Flex alignItems="center" gap={2} flexDirection="row" flex={1}>
           <Button
             asChild
             _hover={{ bg: 'bg.hover' }}
@@ -425,12 +424,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
             </Link>
           </Button>
 
-          <HStack
-            as="ul"
-            gap={2}
-            flexDirection="row"
-            w="auto"
-          >
+          <HStack as="ul" gap={2} flexDirection="row" w="auto">
             <Box as="li">
               <UniversalSearchBar schemas={schemas} />
             </Box>
@@ -544,13 +538,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
           </HStack>
         </Flex>
 
-        <Flex
-          alignItems="center"
-          gap={4}
-          flexDirection="row"
-          w="auto"
-          ml="auto"
-        >
+        <Flex alignItems="center" gap={4} flexDirection="row" w="auto" ml="auto">
           {userLoading ? (
             <Spinner size="sm" color="fg.default" />
           ) : user ? (

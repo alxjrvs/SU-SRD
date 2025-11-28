@@ -66,7 +66,7 @@ export function EntityDisplayTooltip({
       <Portal>
         <HoverCard.Positioner>
           <HoverCard.Content
-            minW="933px"
+            minW="746px"
             maxH="80vh"
             overflowY="auto"
             bg="transparent"
@@ -75,7 +75,12 @@ export function EntityDisplayTooltip({
             p={0}
           >
             {showArrow && <HoverCard.Arrow />}
-            <EntityDisplay schemaName={schemaName} data={entity} collapsible={false} />
+            <EntityDisplay
+              schemaName={schemaName}
+              data={entity}
+              collapsible={false}
+              compact={true}
+            />
           </HoverCard.Content>
         </HoverCard.Positioner>
       </Portal>

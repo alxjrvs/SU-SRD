@@ -18,9 +18,10 @@ export default function Footer() {
         alignItems="center"
         justifyContent="center"
         gap={4}
-        flexDirection={{ base: 'column', lg: 'row' }}
+        flexDirection="row"
+        flexWrap="wrap"
       >
-        <Box textAlign="center">
+        <Box textAlign={{ base: 'left', lg: 'center' }} flex="1" minW="0">
           <Text>
             Salvage Union is copyrighted by{' '}
             <Link
@@ -65,7 +66,13 @@ export default function Footer() {
             .
           </Text>
         </Box>
-        <Box p={2} borderRadius="md" display="inline-block" bg="var(--footer-logo-bg)">
+        <Box
+          p={2}
+          borderRadius="md"
+          display="inline-block"
+          bg="var(--footer-logo-bg)"
+          flexShrink={0}
+        >
           <Image src="/Powered_by_Salvage_Black.webp" alt="Powered by Salvage" h="12" w="auto" />
         </Box>
       </Flex>
