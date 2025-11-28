@@ -49,7 +49,7 @@ export default function ItemShowPage({ prefetchedItem }: ItemShowPageProps) {
 
   return (
     <Flex minH="100%" flexDirection="column" bg="bg.landing">
-      <Flex flex="1" p={{ base: 4, lg: 0 }} alignItems="center" justifyContent="center" minH="0">
+      <Flex flex="1" p={4} alignItems="center" justifyContent="center" minH="0">
         <Box maxW="6xl" w="full">
           <Suspense
             fallback={

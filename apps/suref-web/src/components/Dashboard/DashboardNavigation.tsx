@@ -69,9 +69,8 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             h="auto"
             w="full"
             justifyContent="flex-start"
-            onClick={toggleMenu}
           >
-            <Link to="/dashboard">Overview</Link>
+            <Link to="/dashboard" onClick={toggleMenu}>Overview</Link>
           </Button>
         </Box>
         <Box as="li">
@@ -90,9 +89,8 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             h="auto"
             w="full"
             justifyContent="flex-start"
-            onClick={toggleMenu}
           >
-            <Link to="/dashboard/games">Games</Link>
+            <Link to="/dashboard/games" onClick={toggleMenu}>Games</Link>
           </Button>
         </Box>
         <Box as="li">
@@ -111,9 +109,8 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             h="auto"
             w="full"
             justifyContent="flex-start"
-            onClick={toggleMenu}
           >
-            <Link to="/dashboard/crawlers">Crawlers</Link>
+            <Link to="/dashboard/crawlers" onClick={toggleMenu}>Crawlers</Link>
           </Button>
         </Box>
         <Box as="li">
@@ -132,9 +129,8 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             h="auto"
             w="full"
             justifyContent="flex-start"
-            onClick={toggleMenu}
           >
-            <Link to="/dashboard/pilots">Pilots</Link>
+            <Link to="/dashboard/pilots" onClick={toggleMenu}>Pilots</Link>
           </Button>
         </Box>
         <Box as="li">
@@ -153,9 +149,8 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             h="auto"
             w="full"
             justifyContent="flex-start"
-            onClick={toggleMenu}
           >
-            <Link to="/dashboard/mechs">Mechs</Link>
+            <Link to="/dashboard/mechs" onClick={toggleMenu}>Mechs</Link>
           </Button>
         </Box>
       </VStack>

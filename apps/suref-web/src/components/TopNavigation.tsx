@@ -40,7 +40,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
         p={2}
         color="fg.default"
         w="full"
-        justifyContent="flex-start"
+        justifyContent="center"
       >
         <Link to="/" onClick={toggleMenu}>
           <Heading level="h2">Salvage Union</Heading>
@@ -69,7 +69,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                 variant="ghost"
                 h="auto"
                 w="full"
-                justifyContent="flex-start"
+                justifyContent="center"
               >
                 Reference
               </Button>
@@ -88,7 +88,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                     value={schema.id}
                     onSelect={() => {
                       handleNavigate(`/schema/${schema.id}`)
-                      toggleMenu()
                     }}
                     color="fg.default"
                   >
@@ -116,7 +115,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                 variant="ghost"
                 h="auto"
                 w="full"
-                justifyContent="flex-start"
+                justifyContent="center"
               >
                 Playground
               </Button>
@@ -127,7 +126,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                   value="mech-sheet"
                   onSelect={() => {
                     handleNavigate('/sheets/mech')
-                    toggleMenu()
                   }}
                   color="fg.default"
                 >
@@ -137,7 +135,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                   value="pilot-sheet"
                   onSelect={() => {
                     handleNavigate('/sheets/pilot')
-                    toggleMenu()
                   }}
                   color="fg.default"
                 >
@@ -147,7 +144,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                   value="crawler-sheet"
                   onSelect={() => {
                     handleNavigate('/sheets/crawler')
-                    toggleMenu()
                   }}
                   color="fg.default"
                 >
@@ -174,9 +170,10 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
             h="auto"
             w="full"
             justifyContent="flex-start"
-            onClick={toggleMenu}
           >
-            <Link to="/randsum">Discord Bot</Link>
+            <Link to="/randsum" onClick={toggleMenu}>
+              Discord Bot
+            </Link>
           </Button>
         </Box>
 
@@ -196,9 +193,10 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
             h="auto"
             w="full"
             justifyContent="flex-start"
-            onClick={toggleMenu}
           >
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={toggleMenu}>
+              About
+            </Link>
           </Button>
         </Box>
       </VStack>
@@ -244,7 +242,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                     value="pilots"
                     onSelect={() => {
                       handleNavigate('/dashboard/pilots')
-                      toggleMenu()
                     }}
                     color="fg.default"
                   >
@@ -254,7 +251,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                     value="mechs"
                     onSelect={() => {
                       handleNavigate('/dashboard/mechs')
-                      toggleMenu()
                     }}
                     color="fg.default"
                   >
@@ -264,7 +260,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                     value="crawlers"
                     onSelect={() => {
                       handleNavigate('/dashboard/crawlers')
-                      toggleMenu()
                     }}
                     color="fg.default"
                   >
@@ -274,7 +269,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                     value="games"
                     onSelect={() => {
                       handleNavigate('/dashboard/games')
-                      toggleMenu()
                     }}
                     color="fg.default"
                   >
@@ -311,10 +305,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
   return (
     <>
       <Flex
-        position="fixed"
-        top={0}
-        left={0}
-        right={0}
         h="80px"
         bg="su.white"
         px={6}
