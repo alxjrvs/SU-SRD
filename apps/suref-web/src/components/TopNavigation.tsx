@@ -56,6 +56,10 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
         </Link>
       </Button>
 
+      <Box w="full">
+        <UniversalSearchBar schemas={schemas} />
+      </Box>
+
       <VStack as="ul" gap={2} alignItems="stretch" w="full" listStyleType="none">
         <Box as="li">
           <Menu.Root>
@@ -347,9 +351,6 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                 </Text>
               </Link>
             </Button>
-            <Box flex="1" maxW="400px" mx={4}>
-              <UniversalSearchBar schemas={schemas} />
-            </Box>
             <Box w="48px" />
           </Flex>
           <IconButton
@@ -378,14 +379,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
             <Drawer.Backdrop />
             <Drawer.Positioner>
               <Drawer.Content>
-                <Drawer.Body>
-                  <VStack gap={4} alignItems="stretch" w="full" mb={4}>
-                    <Box w="full">
-                      <UniversalSearchBar schemas={schemas} />
-                    </Box>
-                  </VStack>
-                  {renderNavigationContent()}
-                </Drawer.Body>
+                <Drawer.Body>{renderNavigationContent()}</Drawer.Body>
               </Drawer.Content>
             </Drawer.Positioner>
           </Drawer.Root>

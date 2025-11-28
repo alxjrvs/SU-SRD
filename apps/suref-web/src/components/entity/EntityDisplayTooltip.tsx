@@ -67,6 +67,7 @@ export function EntityDisplayTooltip({
         <HoverCard.Positioner>
           <HoverCard.Content
             minW="746px"
+            maxW="100vw"
             maxH="80vh"
             overflowY="auto"
             bg="transparent"

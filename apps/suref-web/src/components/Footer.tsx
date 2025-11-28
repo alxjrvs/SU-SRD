@@ -21,7 +21,7 @@ export default function Footer() {
         flexDirection="row"
         flexWrap="wrap"
       >
-        <Box textAlign={{ base: 'left', lg: 'center' }} flex="1" minW="0">
+        <Box textAlign="center" flex="1" minW="0">
           <Text>
             Salvage Union is copyrighted by{' '}
             <Link

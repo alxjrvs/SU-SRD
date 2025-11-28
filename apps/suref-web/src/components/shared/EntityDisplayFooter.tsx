@@ -26,7 +26,7 @@ export function EntityDisplayFooter({ bg }: { bg?: string }) {
       alignItems="center"
       w="full"
       gap={4}
-      bg={bg ?? 'transparent'}
+      bg={bg ?? 'su.white'}
       css={sourceFooterStyles}
     >
       <Flex gap={2} alignItems="center" flex="0 1 auto" minW="0">
