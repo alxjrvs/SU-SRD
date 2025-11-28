@@ -70,7 +70,9 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             w="full"
             justifyContent="flex-start"
           >
-            <Link to="/dashboard" onClick={toggleMenu}>Overview</Link>
+            <Link to="/dashboard" onClick={toggleMenu}>
+              Overview
+            </Link>
           </Button>
         </Box>
         <Box as="li">
@@ -90,7 +92,9 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             w="full"
             justifyContent="flex-start"
           >
-            <Link to="/dashboard/games" onClick={toggleMenu}>Games</Link>
+            <Link to="/dashboard/games" onClick={toggleMenu}>
+              Games
+            </Link>
           </Button>
         </Box>
         <Box as="li">
@@ -110,7 +114,9 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             w="full"
             justifyContent="flex-start"
           >
-            <Link to="/dashboard/crawlers" onClick={toggleMenu}>Crawlers</Link>
+            <Link to="/dashboard/crawlers" onClick={toggleMenu}>
+              Crawlers
+            </Link>
           </Button>
         </Box>
         <Box as="li">
@@ -130,7 +136,9 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             w="full"
             justifyContent="flex-start"
           >
-            <Link to="/dashboard/pilots" onClick={toggleMenu}>Pilots</Link>
+            <Link to="/dashboard/pilots" onClick={toggleMenu}>
+              Pilots
+            </Link>
           </Button>
         </Box>
         <Box as="li">
@@ -150,7 +158,9 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
             w="full"
             justifyContent="flex-start"
           >
-            <Link to="/dashboard/mechs" onClick={toggleMenu}>Mechs</Link>
+            <Link to="/dashboard/mechs" onClick={toggleMenu}>
+              Mechs
+            </Link>
           </Button>
         </Box>
       </VStack>

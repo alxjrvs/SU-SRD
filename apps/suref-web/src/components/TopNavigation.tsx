@@ -169,7 +169,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
             variant="ghost"
             h="auto"
             w="full"
-            justifyContent="flex-start"
+            justifyContent="center"
           >
             <Link to="/randsum" onClick={toggleMenu}>
               Discord Bot
@@ -192,7 +192,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
             variant="ghost"
             h="auto"
             w="full"
-            justifyContent="flex-start"
+            justifyContent="center"
           >
             <Link to="/about" onClick={toggleMenu}>
               About
@@ -227,7 +227,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                 variant="ghost"
                 h="auto"
                 w="full"
-                justifyContent="flex-start"
+                justifyContent="center"
               >
                 {user.user_metadata?.preferred_username ||
                   user.user_metadata?.full_name ||

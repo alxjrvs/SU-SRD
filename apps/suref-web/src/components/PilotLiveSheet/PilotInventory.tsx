@@ -32,7 +32,7 @@ interface PilotInventoryProps {
 interface EquipmentItemWithSlotsProps {
   item: {
     id: string
-    equipment: SURefEquipment
+    equipment: SURefEquipment & { schemaName: string }
     index: number
     entity: HydratedEntity
   }
@@ -70,7 +70,7 @@ function EquipmentItemWithSlots({
   const sortedSystems = useMemo(() => {
     return equipmentSystems
       .map((s) => allSystems.find((e) => e.id === s.ref.id))
-      .filter((e): e is SURefSystem & { schemaName?: string } => e !== undefined)
+      .filter((e): e is SURefSystem & { schemaName: 'systems' } => e !== undefined)
       .sort((a, b) => {
         const aTechLevel = getTechLevelNumber(a) ?? 0
         const bTechLevel = getTechLevelNumber(b) ?? 0
@@ -84,7 +84,7 @@ function EquipmentItemWithSlots({
   const sortedModules = useMemo(() => {
     return equipmentModules
       .map((m) => allModules.find((e) => e.id === m.ref.id))
-      .filter((e): e is SURefModule & { schemaName?: string } => e !== undefined)
+      .filter((e): e is SURefModule & { schemaName: 'modules' } => e !== undefined)
       .sort((a, b) => {
         const aTechLevel = getTechLevelNumber(a) ?? 0
         const bTechLevel = getTechLevelNumber(b) ?? 0
@@ -312,7 +312,7 @@ export function PilotInventory({ id, disabled = false, readOnly = false }: Pilot
           item
         ): item is {
           id: string
-          equipment: SURefEquipment & { schemaName?: string }
+          equipment: SURefEquipment & { schemaName: string }
           index: number
           entity: HydratedEntity
         } => item !== null

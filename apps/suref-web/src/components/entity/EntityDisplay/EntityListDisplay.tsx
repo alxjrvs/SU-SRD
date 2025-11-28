@@ -2,7 +2,6 @@ import { VStack, Box, Button } from '@chakra-ui/react'
 import { Text } from '../../base/Text'
 import type {
   SURefObjectChoice,
-  SURefEnumSchemaName,
   SURefObjectSystemModule,
   SURefMetaEntity,
   SURefEntity,

@@ -46,13 +46,13 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
   const selectedSystems = useMemo(() => {
     return state.selectedSystemIds
       .map((id) => SalvageUnionReference.get('systems', id))
-      .filter((s): s is SURefSystem & { schemaName: string } => s !== undefined)
+      .filter((s): s is SURefSystem & { schemaName: 'systems' } => s !== undefined)
   }, [state.selectedSystemIds])
 
   const selectedModules = useMemo(() => {
     return state.selectedModuleIds
       .map((id) => SalvageUnionReference.get('modules', id))
-      .filter((m): m is SURefModule & { schemaName: string } => m !== undefined)
+      .filter((m): m is SURefModule & { schemaName: 'modules' } => m !== undefined)
   }, [state.selectedModuleIds])
 
   const usedSystemSlots = useMemo(() => {
