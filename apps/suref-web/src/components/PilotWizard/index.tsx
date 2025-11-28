@@ -4,26 +4,18 @@ import { ClassSelectionStep } from './ClassSelectionStep'
 import { EquipmentSelectionStep } from './EquipmentSelectionStep'
 import { PersonalizeStep } from './PersonalizeStep'
 import { useCreatePilotFromWizard } from './useCreatePilotFromWizard'
-import { useState } from 'react'
+import { useWizardCreation } from '../../hooks/useWizardCreation'
 
 export function PilotWizard() {
   const wizardState = usePilotWizardState()
   const createPilot = useCreatePilotFromWizard()
-  const [isCreating, setIsCreating] = useState(false)
+  const { isCreating, handleCreate } = useWizardCreation(createPilot)
 
   const handleStepComplete = () => {
     wizardState.goToNextStep()
   }
 
-  const handleCreatePilot = async () => {
-    setIsCreating(true)
-    try {
-      await createPilot(wizardState.state)
-    } catch (error) {
-      console.error('Failed to create pilot:', error)
-      setIsCreating(false)
-    }
-  }
+  const handleCreatePilot = () => handleCreate(wizardState.state)
 
   const renderStep = (step: number) => {
     switch (step) {

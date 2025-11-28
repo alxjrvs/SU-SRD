@@ -5,7 +5,7 @@ import { useIsMutating, useQuery } from '@tanstack/react-query'
 import { CrawlerHeaderInputs } from './CrawlerHeaderInputs'
 import { CrawlerAbilities } from './CrawlerAbilities'
 import { CrawlerResourceSteppers } from './CrawlerResourceSteppers'
-import { BayCard } from './BayCard'
+import { BayCard } from '../shared/BayCard'
 import { StorageCargoBay } from './StorageCargoBay'
 import { Notes } from '../shared/Notes'
 import { Card } from '../shared/Card'
@@ -136,6 +136,7 @@ export default function CrawlerLiveSheet({ id }: CrawlerLiveSheetProps) {
               {regularBays.map((bay) => (
                 <BayCard
                   key={bay.id}
+                  mode="entity"
                   bay={bay}
                   disabled={!selectedCrawlerType}
                   readOnly={!isEditable}
@@ -148,7 +149,12 @@ export default function CrawlerLiveSheet({ id }: CrawlerLiveSheetProps) {
         <Tabs.Content value="storage">
           <VStack gap="0" alignItems="stretch" mt={6}>
             {storageBay && (
-              <BayCard bay={storageBay} disabled={!selectedCrawlerType} readOnly={!isEditable} />
+              <BayCard
+                mode="entity"
+                bay={storageBay}
+                disabled={!selectedCrawlerType}
+                readOnly={!isEditable}
+              />
             )}
 
             <StorageCargoBay id={id} disabled={!selectedCrawlerType} readOnly={!isEditable} />

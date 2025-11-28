@@ -123,7 +123,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                   userLoading={userLoading}
                   schemas={schemaIndexData.schemas.filter((s) => !s.meta)}
                 />
-                <Box as="main" flex="1" display="flex" flexDirection="column">
+                <Box as="main" flex="1" display="flex" bg="bg.landing" flexDirection="column">
                   {children}
                 </Box>
                 <Footer />

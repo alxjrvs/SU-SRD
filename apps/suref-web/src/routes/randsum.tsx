@@ -9,7 +9,7 @@ export const Route = createFileRoute('/randsum')({
 
 function RandsumPage() {
   return (
-    <Flex direction="column" w="full" h="full" flex="1" justifyContent="center" bg="bg.canvas">
+    <Flex direction="column" w="full" h="full" flex="1" justifyContent="center">
       <Container
         maxW="6xl"
         h="full"

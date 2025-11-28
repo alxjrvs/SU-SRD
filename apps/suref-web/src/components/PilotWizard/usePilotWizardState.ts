@@ -1,7 +1,7 @@
-import { useCallback } from 'react'
 import type { WizardState } from './utils'
 import { validateWizardStep } from './utils'
 import { useBaseWizardState } from '../../hooks/useBaseWizardState'
+import { useWizardSetter } from '../../utils/wizardHelpers'
 
 export interface UsePilotWizardStateReturn {
   state: WizardState
@@ -52,54 +52,14 @@ export function usePilotWizardState(): UsePilotWizardStateReturn {
     goToStep: baseWizard.goToStep,
     goToNextStep: baseWizard.goToNextStep,
     goToPreviousStep: baseWizard.goToPreviousStep,
-    setSelectedClassId: useCallback(
-      (classId: string | null) => {
-        setState((prev) => ({ ...prev, selectedClassId: classId }))
-      },
-      [setState]
-    ),
-    setSelectedAbilityId: useCallback(
-      (abilityId: string | null) => {
-        setState((prev) => ({ ...prev, selectedAbilityId: abilityId }))
-      },
-      [setState]
-    ),
-    setSelectedEquipmentIds: useCallback(
-      (equipmentIds: string[]) => {
-        setState((prev) => ({ ...prev, selectedEquipmentIds: equipmentIds }))
-      },
-      [setState]
-    ),
-    setCallsign: useCallback(
-      (callsign: string) => {
-        setState((prev) => ({ ...prev, callsign }))
-      },
-      [setState]
-    ),
-    setBackground: useCallback(
-      (background: string) => {
-        setState((prev) => ({ ...prev, background }))
-      },
-      [setState]
-    ),
-    setMotto: useCallback(
-      (motto: string) => {
-        setState((prev) => ({ ...prev, motto }))
-      },
-      [setState]
-    ),
-    setKeepsake: useCallback(
-      (keepsake: string) => {
-        setState((prev) => ({ ...prev, keepsake }))
-      },
-      [setState]
-    ),
-    setAppearance: useCallback(
-      (appearance: string) => {
-        setState((prev) => ({ ...prev, appearance }))
-      },
-      [setState]
-    ),
+    setSelectedClassId: useWizardSetter<WizardState, string | null>(setState, 'selectedClassId'),
+    setSelectedAbilityId: useWizardSetter<WizardState, string | null>(setState, 'selectedAbilityId'),
+    setSelectedEquipmentIds: useWizardSetter<WizardState, string[]>(setState, 'selectedEquipmentIds'),
+    setCallsign: useWizardSetter<WizardState, string>(setState, 'callsign'),
+    setBackground: useWizardSetter<WizardState, string>(setState, 'background'),
+    setMotto: useWizardSetter<WizardState, string>(setState, 'motto'),
+    setKeepsake: useWizardSetter<WizardState, string>(setState, 'keepsake'),
+    setAppearance: useWizardSetter<WizardState, string>(setState, 'appearance'),
     reset: baseWizard.reset,
   }
 }

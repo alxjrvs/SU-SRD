@@ -2,6 +2,7 @@ import { useCallback } from 'react'
 import type { WizardState, BayNPCData, CrawlerNPCData } from './utils'
 import { validateWizardStep } from './utils'
 import { useBaseWizardState } from '../../hooks/useBaseWizardState'
+import { useWizardSetter } from '../../utils/wizardHelpers'
 
 export interface UseCrawlerWizardStateReturn {
   state: WizardState
@@ -73,15 +74,7 @@ export function useCrawlerWizardState(): UseCrawlerWizardStateReturn {
       },
       [setState]
     ),
-    setCrawlerNPC: useCallback(
-      (npc: CrawlerNPCData | null) => {
-        setState((prev) => ({
-          ...prev,
-          crawlerNPC: npc,
-        }))
-      },
-      [setState]
-    ),
+    setCrawlerNPC: useWizardSetter<WizardState, CrawlerNPCData | null>(setState, 'crawlerNPC'),
     setCrawlerNPCChoice: useCallback(
       (choiceId: string, value: string | undefined) => {
         setState((prev) => {
@@ -132,18 +125,11 @@ export function useCrawlerWizardState(): UseCrawlerWizardStateReturn {
       },
       [setState]
     ),
-    setArmamentBayWeaponId: useCallback(
-      (weaponId: string | null) => {
-        setState((prev) => ({ ...prev, armamentBayWeaponId: weaponId }))
-      },
-      [setState]
+    setArmamentBayWeaponId: useWizardSetter<WizardState, string | null>(
+      setState,
+      'armamentBayWeaponId'
     ),
-    setName: useCallback(
-      (name: string) => {
-        setState((prev) => ({ ...prev, name }))
-      },
-      [setState]
-    ),
+    setName: useWizardSetter<WizardState, string>(setState, 'name'),
     reset: baseWizard.reset,
   }
 }

@@ -1,7 +1,7 @@
-import { useCallback } from 'react'
 import type { WizardState } from './utils'
 import { validateWizardStep } from './utils'
 import { useBaseWizardState } from '../../hooks/useBaseWizardState'
+import { useWizardSetter } from '../../utils/wizardHelpers'
 
 export interface UseMechWizardStateReturn {
   state: WizardState
@@ -50,48 +50,13 @@ export function useMechWizardState(): UseMechWizardStateReturn {
     goToStep: baseWizard.goToStep,
     goToNextStep: baseWizard.goToNextStep,
     goToPreviousStep: baseWizard.goToPreviousStep,
-    setSelectedChassisId: useCallback(
-      (chassisId: string | null) => {
-        setState((prev) => ({ ...prev, selectedChassisId: chassisId }))
-      },
-      [setState]
-    ),
-    setSelectedSystemIds: useCallback(
-      (systemIds: string[]) => {
-        setState((prev) => ({ ...prev, selectedSystemIds: systemIds }))
-      },
-      [setState]
-    ),
-    setSelectedModuleIds: useCallback(
-      (moduleIds: string[]) => {
-        setState((prev) => ({ ...prev, selectedModuleIds: moduleIds }))
-      },
-      [setState]
-    ),
-    setSelectedPatternName: useCallback(
-      (patternName: string | null) => {
-        setState((prev) => ({ ...prev, selectedPatternName: patternName }))
-      },
-      [setState]
-    ),
-    setAppearance: useCallback(
-      (appearance: string) => {
-        setState((prev) => ({ ...prev, appearance }))
-      },
-      [setState]
-    ),
-    setQuirk: useCallback(
-      (quirk: string) => {
-        setState((prev) => ({ ...prev, quirk }))
-      },
-      [setState]
-    ),
-    setPatternName: useCallback(
-      (patternName: string) => {
-        setState((prev) => ({ ...prev, patternName }))
-      },
-      [setState]
-    ),
+    setSelectedChassisId: useWizardSetter<WizardState, string | null>(setState, 'selectedChassisId'),
+    setSelectedSystemIds: useWizardSetter<WizardState, string[]>(setState, 'selectedSystemIds'),
+    setSelectedModuleIds: useWizardSetter<WizardState, string[]>(setState, 'selectedModuleIds'),
+    setSelectedPatternName: useWizardSetter<WizardState, string | null>(setState, 'selectedPatternName'),
+    setAppearance: useWizardSetter<WizardState, string>(setState, 'appearance'),
+    setQuirk: useWizardSetter<WizardState, string>(setState, 'quirk'),
+    setPatternName: useWizardSetter<WizardState, string>(setState, 'patternName'),
     reset: baseWizard.reset,
   }
 }
