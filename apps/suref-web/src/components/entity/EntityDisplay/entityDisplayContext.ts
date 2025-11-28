@@ -19,8 +19,8 @@ export const getEntitySpacing = (compact: boolean) => ({
   smallGap: compact ? 2 : 3,
   /** Gap for minimal spacing: 0.5 (compact) or 1 (normal) */
   minimalGap: compact ? 0.5 : 1,
-  /** Gap for single spacing: 1 (compact) or 2 (normal) */
-  contentPadding: compact ? 1 : 2,
+  /** Gap for single spacing: 0.5 (compact) or 1 (normal) */
+  contentPadding: compact ? 0.5 : 1,
 })
 
 /**

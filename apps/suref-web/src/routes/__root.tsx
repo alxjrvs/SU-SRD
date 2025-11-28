@@ -127,7 +127,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                   flex="1"
                   display="flex"
                   flexDirection="column"
-                  pt={{ base: 16, md: 0 }}
+                  pt={{ base: 24, lg: 6 }}
                 >
                   {children}
                 </Box>

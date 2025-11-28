@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Box, Flex, Text, VStack } from '@chakra-ui/react'
+import { Box, Flex, Text, VStack, useBreakpointValue } from '@chakra-ui/react'
 import type { ReactElement } from 'react'
 import { useSearch } from '@tanstack/react-router'
 import Footer from './Footer'
@@ -20,7 +20,10 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
   const { data, loading, error } = useSchemaData(schemaId)
   const search = useSearch({ strict: false })
 
-  const compact = (search as { compact?: string }).compact === 'true'
+  // Force compact mode on mobile/small screens (same breakpoint as condensed header)
+  const isMobile = useBreakpointValue({ base: true, lg: false }) ?? false
+  const searchCompact = (search as { compact?: string }).compact === 'true'
+  const compact = isMobile ? true : searchCompact
 
   const currentSchema = schemas.find((s) => s.id === schemaId)
 
@@ -113,7 +116,7 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
           </Flex>
         }
       >
-        <Box maxW="80%" mx="auto">
+        <Box maxW="95%" mx="auto">
           <DisplayComponent data={item} compact={compact} />
         </Box>
       </Suspense>
@@ -124,7 +127,7 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
 
   return (
     <Flex minH="100%" flexDirection="column" bg="bg.landing">
-      <Flex flex="1" p={6} alignItems="center" justifyContent="center">
+      <Flex flex="1" p={{ base: 2, lg: 4 }} alignItems="center" justifyContent="center">
         <Box maxW="6xl" w="full">
           {specializedContent ? (
             specializedContent

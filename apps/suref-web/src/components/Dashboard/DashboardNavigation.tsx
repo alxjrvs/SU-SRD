@@ -1,4 +1,4 @@
-import { Box, Button, Flex, IconButton, HStack, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, IconButton, HStack, Text, useBreakpointValue, Drawer, VStack } from '@chakra-ui/react'
 import type { User } from '@supabase/supabase-js'
 import { Link } from '@tanstack/react-router'
 import { Heading } from '../base/Heading'
@@ -13,60 +13,244 @@ interface DashboardNavigationProps {
 
 export function DashboardNavigation({ user }: DashboardNavigationProps) {
   const { isOpen, signingOut, handleSignOut, isActive, toggleMenu } = useNavigationState()
+  
+  // Only show hamburger menu on screens smaller than lg
+  const showHamburger = useBreakpointValue({ base: true, lg: false }) ?? true
+
+  const renderNavigationContent = () => (
+    <VStack gap={4} alignItems="stretch" w="full">
+      <Button
+        asChild
+        _hover={{ bg: 'bg.hover' }}
+        bg="transparent"
+        borderRadius="md"
+        variant="ghost"
+        h="auto"
+        p={2}
+        color="fg.default"
+        w="full"
+        justifyContent="flex-start"
+      >
+        <Link to="/" onClick={toggleMenu}>
+          <Heading level="h2">Salvage Union</Heading>
+          <Text fontSize="xs" color="brand.srd">
+            Dashboard
+          </Text>
+        </Link>
+      </Button>
+
+      <VStack as="ul" gap={2} alignItems="stretch" w="full" listStyleType="none">
+        <Box as="li">
+          <Button
+            asChild
+            px={4}
+            py={2}
+            _hover={{ bg: 'bg.hover' }}
+            bg={isActive('/dashboard', true) ? 'bg.active' : 'transparent'}
+            borderBottomWidth={isActive('/dashboard', true) ? '3px' : 0}
+            borderBottomColor="su.orange"
+            color="fg.default"
+            fontWeight={isActive('/dashboard', true) ? 'semibold' : 'normal'}
+            borderRadius="md"
+            variant="ghost"
+            h="auto"
+            w="full"
+            justifyContent="flex-start"
+            onClick={toggleMenu}
+          >
+            <Link to="/dashboard">Overview</Link>
+          </Button>
+        </Box>
+        <Box as="li">
+          <Button
+            asChild
+            px={4}
+            py={2}
+            _hover={{ bg: 'bg.hover' }}
+            bg={isActive('/dashboard/games') ? 'bg.active' : 'transparent'}
+            borderBottomWidth={isActive('/dashboard/games') ? '3px' : 0}
+            borderBottomColor="su.orange"
+            color="fg.default"
+            fontWeight={isActive('/dashboard/games') ? 'semibold' : 'normal'}
+            borderRadius="md"
+            variant="ghost"
+            h="auto"
+            w="full"
+            justifyContent="flex-start"
+            onClick={toggleMenu}
+          >
+            <Link to="/dashboard/games">Games</Link>
+          </Button>
+        </Box>
+        <Box as="li">
+          <Button
+            asChild
+            px={4}
+            py={2}
+            _hover={{ bg: 'bg.hover' }}
+            bg={isActive('/dashboard/crawlers') ? 'bg.active' : 'transparent'}
+            borderBottomWidth={isActive('/dashboard/crawlers') ? '3px' : 0}
+            borderBottomColor="su.orange"
+            color="fg.default"
+            fontWeight={isActive('/dashboard/crawlers') ? 'semibold' : 'normal'}
+            borderRadius="md"
+            variant="ghost"
+            h="auto"
+            w="full"
+            justifyContent="flex-start"
+            onClick={toggleMenu}
+          >
+            <Link to="/dashboard/crawlers">Crawlers</Link>
+          </Button>
+        </Box>
+        <Box as="li">
+          <Button
+            asChild
+            px={4}
+            py={2}
+            _hover={{ bg: 'bg.hover' }}
+            bg={isActive('/dashboard/pilots') ? 'bg.active' : 'transparent'}
+            borderBottomWidth={isActive('/dashboard/pilots') ? '3px' : 0}
+            borderBottomColor="su.orange"
+            color="fg.default"
+            fontWeight={isActive('/dashboard/pilots') ? 'semibold' : 'normal'}
+            borderRadius="md"
+            variant="ghost"
+            h="auto"
+            w="full"
+            justifyContent="flex-start"
+            onClick={toggleMenu}
+          >
+            <Link to="/dashboard/pilots">Pilots</Link>
+          </Button>
+        </Box>
+        <Box as="li">
+          <Button
+            asChild
+            px={4}
+            py={2}
+            _hover={{ bg: 'bg.hover' }}
+            bg={isActive('/dashboard/mechs') ? 'bg.active' : 'transparent'}
+            borderBottomWidth={isActive('/dashboard/mechs') ? '3px' : 0}
+            borderBottomColor="su.orange"
+            color="fg.default"
+            fontWeight={isActive('/dashboard/mechs') ? 'semibold' : 'normal'}
+            borderRadius="md"
+            variant="ghost"
+            h="auto"
+            w="full"
+            justifyContent="flex-start"
+            onClick={toggleMenu}
+          >
+            <Link to="/dashboard/mechs">Mechs</Link>
+          </Button>
+        </Box>
+      </VStack>
+
+      <Flex
+        alignItems="center"
+        gap={4}
+        flexDirection="column"
+        w="full"
+        pt={4}
+        borderTopWidth="1px"
+        borderTopColor="border.default"
+      >
+        <UserMenu
+          user={user}
+          onSignOut={handleSignOut}
+          signingOut={signingOut}
+          signInComponent={
+            <DiscordSignInButton px={4} py={2} fontSize="sm" w="full" />
+          }
+        />
+      </Flex>
+    </VStack>
+  )
 
   return (
     <>
-      <IconButton
-        onClick={toggleMenu}
-        position="fixed"
-        top={4}
-        right={4}
-        zIndex={50}
-        display={{ base: 'flex', lg: 'none' }}
-        bg="su.orange"
-        color="su.white"
-        p={2}
-        borderRadius="md"
-        aria-label="Toggle menu"
-      >
-        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-          />
-        </svg>
-      </IconButton>
+      {showHamburger && (
+        <>
+          <Flex
+            position="fixed"
+            top={0}
+            left={0}
+            right={0}
+            h="80px"
+            bg="su.white"
+            px={6}
+            py={3}
+            alignItems="center"
+            justifyContent="space-between"
+            zIndex={45}
+            display={{ base: 'flex', lg: 'none' }}
+          >
+            <Button
+              asChild
+              _hover={{ bg: 'bg.hover' }}
+              bg="transparent"
+              borderRadius="md"
+              variant="ghost"
+              h="auto"
+              p={2}
+              color="fg.default"
+            >
+              <Link to="/">
+                <Heading level="h2">Salvage Union</Heading>
+                <Text fontSize="xs" color="brand.srd">
+                  Dashboard
+                </Text>
+              </Link>
+            </Button>
+          </Flex>
+          <IconButton
+            onClick={toggleMenu}
+            position="fixed"
+            top={4}
+            right={4}
+            zIndex={50}
+            bg="su.orange"
+            color="su.white"
+            p={2}
+            borderRadius="md"
+            aria-label="Toggle menu"
+          >
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+              />
+            </svg>
+          </IconButton>
 
-      {isOpen && (
-        <Box
-          position="fixed"
-          inset={0}
-          bg="blackAlpha.500"
-          zIndex={30}
-          display={{ base: 'block', lg: 'none' }}
-          onClick={toggleMenu}
-        />
+          <Drawer.Root open={isOpen} onOpenChange={(e) => !e.open && toggleMenu()}>
+            <Drawer.Backdrop />
+            <Drawer.Positioner>
+              <Drawer.Content>
+                <Drawer.Header>
+                  <Heading level="h2">Menu</Heading>
+                </Drawer.Header>
+                <Drawer.Body>{renderNavigationContent()}</Drawer.Body>
+              </Drawer.Content>
+            </Drawer.Positioner>
+          </Drawer.Root>
+        </>
       )}
 
       <Flex
         as="nav"
-        position={{ base: 'fixed', lg: 'static' }}
-        top={{ base: 0, lg: 'auto' }}
-        left={{ base: 0, lg: 'auto' }}
-        right={{ base: 0, lg: 'auto' }}
-        bg="bg.canvas"
-        borderBottomWidth="2px"
-        borderBottomColor="border.default"
+        position="static"
+        bg="su.white"
         px={6}
         py={3}
         alignItems="center"
         justifyContent="space-between"
-        zIndex={40}
-        flexDirection={{ base: 'column', lg: 'row' }}
-        gap={{ base: 4, lg: 0 }}
-        shadow={{ base: isOpen ? 'lg' : 'none', lg: 'sm' }}
+        flexDirection="row"
+        gap={0}
+        display={{ base: 'none', lg: 'flex' }}
       >
         <Button
           asChild
@@ -76,7 +260,6 @@ export function DashboardNavigation({ user }: DashboardNavigationProps) {
           variant="ghost"
           h="auto"
           p={2}
-          display={{ base: isOpen ? 'block' : 'none', lg: 'block' }}
           color="fg.default"
         >
           <Link to="/">
@@ -90,9 +273,8 @@ export function DashboardNavigation({ user }: DashboardNavigationProps) {
         <HStack
           as="ul"
           gap={2}
-          display={{ base: isOpen ? 'flex' : 'none', lg: 'flex' }}
-          flexDirection={{ base: 'column', lg: 'row' }}
-          w={{ base: 'full', lg: 'auto' }}
+          flexDirection="row"
+          w="auto"
         >
           <Box as="li">
             <NavigationLink isActive={isActive('/dashboard', true)} to="/dashboard">
@@ -124,16 +306,16 @@ export function DashboardNavigation({ user }: DashboardNavigationProps) {
         <Flex
           alignItems="center"
           gap={4}
-          display={{ base: isOpen ? 'flex' : 'none', lg: 'flex' }}
-          flexDirection={{ base: 'column', lg: 'row' }}
-          w={{ base: 'full', lg: 'auto' }}
+          flexDirection="row"
+          w="auto"
+          ml="auto"
         >
           <UserMenu
             user={user}
             onSignOut={handleSignOut}
             signingOut={signingOut}
             signInComponent={
-              <DiscordSignInButton px={4} py={2} fontSize="sm" w={{ base: 'full', lg: 'auto' }} />
+              <DiscordSignInButton px={4} py={2} fontSize="sm" w="auto" />
             }
           />
         </Flex>

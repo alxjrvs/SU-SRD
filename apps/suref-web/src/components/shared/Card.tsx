@@ -41,7 +41,6 @@ type CardProps = Omit<FlexProps, 'bg' | 'children' | 'borderColor' | 'direction'
   compact?: boolean
   /** Whether to reverse the header layout (title on right, rightContent on left) */
   reverse?: boolean
-  bottomHeaderBorder?: boolean
   /** Optional source book for source-based styling */
   source?: SURefEnumSource
   /** Whether the entity is expanded (affects source styling) */
@@ -66,7 +65,6 @@ export function Card({
   bodyBg,
   bodyPadding,
   onHeaderClick,
-  bottomHeaderBorder = false,
   headerTestId,
   reverse = false,
   source,
@@ -135,11 +133,13 @@ export function Card({
           borderBottomRadius={headerBottomRadius}
           bg={actualHeaderBg}
           opacity={headerOpacity}
-          h={compact ? '70px' : undefined}
-          borderBottomWidth="2px"
-          borderColor={bottomHeaderBorder ? 'su.black' : actualHeaderBg}
+          h={compact ? '70px' : 'auto'}
+          minH={compact ? '70px' : '100px'}
+          borderBottomWidth="0"
           overflow="visible"
-          css={sourceHeaderStyles}
+          css={{
+            ...sourceHeaderStyles,
+          }}
         >
           <Flex alignItems="center" gap={compact ? 0.5 : 1}>
             {leftContent}
