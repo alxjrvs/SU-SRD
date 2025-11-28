@@ -62,19 +62,16 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
     hideActions,
     hidePatterns,
     showFooter,
-    rightLabel,
     damaged,
     disabled,
     buttonConfig,
     userChoices,
-    onChoiceSelection,
-    hideImage,
     fontSize,
     imageWidth,
+    assetUrl,
     chassisAbilities,
     effects,
     table,
-    assetUrl,
     actionsToDisplay,
     matchingAction,
     source,
@@ -137,7 +134,6 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
         <EntityRightHeaderContent
           isExpanded={isExpanded}
           collapsible={collapsible}
-          rightLabel={rightLabel}
         />
       }
       compact={compact}
@@ -170,7 +166,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
                     : undefined
                 }
               >
-                {!hideImage && <EntityImage customWidth={imageWidth} />}
+                {assetUrl && <EntityImage customWidth={imageWidth} />}
                 {showContent && (
                   <ContentBlockRenderer
                     content={contentBlocks!}
@@ -216,7 +212,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
             <>
               {!hidePatterns && <EntityChassisPatterns />}
               <EntityOptions />
-              {'damagedEffect' in data && data.damagedEffect && compact && (
+              {'damagedEffect' in data && data.damagedEffect && (
                 <ConditionalSheetInfo
                   propertyName="damagedEffect"
                   labelBgColor="brand.srd"
@@ -238,7 +234,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
               <ButtonWithConfig buttonConfig={buttonConfig} />
             </Flex>
           )}
-          <EntityChoices userChoices={userChoices} onChoiceSelection={onChoiceSelection} />
+          <EntityChoices userChoices={userChoices} onChoiceSelection={undefined} />
           {(showFooter ?? !hideActions) && <EntityDisplayFooter bg={headerBg} />}
         </VStack>
       )}

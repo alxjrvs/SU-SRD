@@ -486,8 +486,7 @@ function TreeSection({
                 compact
                 key={ability.id}
                 data={ability}
-                collapsible={true}
-                disabled={false}
+                collapsible
                 defaultExpanded={alreadySelected}
               />
             )

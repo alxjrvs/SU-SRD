@@ -23,12 +23,8 @@ type EntityDisplayProps = {
   defaultExpanded?: boolean
   /** Controlled expanded state */
   expanded?: boolean
-  /** Callback when expanded state changes */
-  onToggleExpanded?: () => void
   /** Optional button configuration - if provided, renders a button at the bottom of the entity */
   buttonConfig?: ButtonProps & { children: ReactNode }
-  /** Optional label displayed in the top-right corner */
-  rightLabel?: string
   /** Optional custom content displayed in the top-right corner */
   rightContent?: ReactNode
   /** Whether the entity is damaged (affects header color and tilts components) */
@@ -47,16 +43,11 @@ type EntityDisplayProps = {
   showFooter?: boolean
   /** User choices object matching the format sent to the API: Record<choiceId, "schemaName||entityId"> */
   userChoices?: Record<string, string> | null
-  /** Callback when a choice is selected - if undefined, we're in schema page mode (not a live sheet) */
-  onChoiceSelection?: (choiceId: string, value: string | undefined) => void
-  /** Whether to hide the image */
-  hideImage?: boolean
   /** Custom width for the image (e.g., '40%') */
   imageWidth?: string
 }
 
 export const EntityDisplay = memo(function EntityDisplay({
-  rightLabel,
   rightContent,
   damaged = false,
   data,
@@ -69,7 +60,6 @@ export const EntityDisplay = memo(function EntityDisplay({
   collapsible = false,
   defaultExpanded = true,
   expanded,
-  onToggleExpanded,
   buttonConfig,
   hideActions = false,
   hidePatterns = false,
@@ -77,8 +67,6 @@ export const EntityDisplay = memo(function EntityDisplay({
   showFooter,
   compact = false,
   userChoices,
-  onChoiceSelection,
-  hideImage,
   imageWidth,
 }: EntityDisplayProps) {
   if (!data) return null
@@ -110,14 +98,10 @@ export const EntityDisplay = memo(function EntityDisplay({
       collapsible={collapsible}
       onClick={onClick}
       hideLevel={hideLevel}
-      rightLabel={rightLabel}
       rightContent={rightContent}
       damaged={damaged}
       buttonConfig={buttonConfig}
       userChoices={userChoices}
-      onChoiceSelection={onChoiceSelection}
-      onToggleExpanded={onToggleExpanded}
-      hideImage={hideImage}
       imageWidth={imageWidth}
     >
       <EntityDisplayContent>{children}</EntityDisplayContent>

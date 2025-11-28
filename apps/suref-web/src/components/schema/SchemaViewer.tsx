@@ -289,7 +289,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
                   hideActions
                   hideChoices
                   data={item}
-                  compact={true}
+                  compact
                   collapsible={false}
                 />
               </Suspense>

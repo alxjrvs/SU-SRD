@@ -66,9 +66,9 @@ export function EntityChassisPattern({ pattern }: EntityChassisPatternProps) {
                 <EntityDisplay
                   key={`${system.entity.id}-${idx}`}
                   data={system.entity}
-                  compact={true}
+                  compact
                   userChoices={system.preselectedChoices}
-                  collapsible={true}
+                  collapsible
                   defaultExpanded={false}
                 />
               ))}
@@ -86,9 +86,9 @@ export function EntityChassisPattern({ pattern }: EntityChassisPatternProps) {
                 <EntityDisplay
                   key={`${module.entity.id}-${idx}`}
                   data={module.entity}
-                  compact={true}
+                  compact
                   userChoices={module.preselectedChoices}
-                  collapsible={true}
+                  collapsible
                   defaultExpanded={false}
                 />
               ))}

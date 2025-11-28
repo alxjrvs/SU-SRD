@@ -335,14 +335,8 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
           <UniversalSearchBar schemas={schemas} />
         </Box>
 
-        <Box w="48px" display={{ base: 'block', md: 'none' }} />
-
         <IconButton
           onClick={toggleMenu}
-          position={{ base: 'fixed', md: 'static' }}
-          top={{ base: 4, md: 'auto' }}
-          right={{ base: 4, md: 'auto' }}
-          zIndex={50}
           bg="su.orange"
           color="su.white"
           p={2}

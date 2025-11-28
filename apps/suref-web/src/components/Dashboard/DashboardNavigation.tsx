@@ -189,10 +189,6 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
       {showHamburger && (
         <>
           <Flex
-            position="fixed"
-            top={0}
-            left={0}
-            right={0}
             h="80px"
             bg="su.white"
             px={6}
@@ -219,28 +215,24 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
                 </Text>
               </Link>
             </Button>
+            <IconButton
+              onClick={toggleMenu}
+              bg="su.orange"
+              color="su.white"
+              p={2}
+              borderRadius="md"
+              aria-label="Toggle menu"
+            >
+              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+                />
+              </svg>
+            </IconButton>
           </Flex>
-          <IconButton
-            onClick={toggleMenu}
-            position="fixed"
-            top={4}
-            right={4}
-            zIndex={50}
-            bg="su.orange"
-            color="su.white"
-            p={2}
-            borderRadius="md"
-            aria-label="Toggle menu"
-          >
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-              />
-            </svg>
-          </IconButton>
 
           <Drawer.Root open={isOpen} onOpenChange={(e) => !e.open && toggleMenu()}>
             <Drawer.Backdrop />

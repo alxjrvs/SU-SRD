@@ -6,13 +6,11 @@ import { useEntityDisplayContext } from './useEntityDisplayContext'
 import { useParseTraitReferences } from '../../../utils/parseTraitReferences'
 
 export function EntityRightHeaderContent({
-  rightLabel,
   collapsible,
   isExpanded,
 }: {
   isExpanded: boolean
   collapsible: boolean
-  rightLabel?: string
 }) {
   const { data, compact, fontSize, rightContent } = useEntityDisplayContext()
   const description = 'description' in data ? data.description : undefined
@@ -43,18 +41,6 @@ export function EntityRightHeaderContent({
       {abilityContent}
       <EntityStats data={data} />
       {rightContent}
-      {rightLabel && (
-        <Text
-          variant="pseudoheader"
-          fontSize="lg"
-          flexShrink={1}
-          textAlign="right"
-          overflow="hidden"
-          flexWrap="wrap"
-        >
-          {rightLabel}
-        </Text>
-      )}
       {collapsible && (
         <Flex
           alignItems="center"
