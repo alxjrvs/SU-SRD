@@ -244,7 +244,7 @@ export function DashboardNavigation({ user, schemas = [] }: DashboardNavigationP
                 <Drawer.Body>
                   <VStack gap={4} alignItems="stretch" w="full" mb={4}>
                     <Box w="full">
-                      <UniversalSearchBar schemas={schemas} />
+                      <UniversalSearchBar schemas={schemas} onResultSelect={toggleMenu} />
                     </Box>
                   </VStack>
                   {renderNavigationContent()}

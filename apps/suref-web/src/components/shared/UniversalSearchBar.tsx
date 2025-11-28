@@ -14,6 +14,8 @@ const SEARCH_RESULTS_MAX_HEIGHT = 400
 
 interface UniversalSearchBarProps {
   schemas: SchemaInfo[]
+  /** Optional callback to call when a search result is selected */
+  onResultSelect?: () => void
 }
 
 interface SearchResultDisplay {
@@ -27,7 +29,7 @@ interface SearchResultDisplay {
   matchedFields?: string[]
 }
 
-export function UniversalSearchBar({ schemas }: UniversalSearchBarProps) {
+export function UniversalSearchBar({ schemas, onResultSelect }: UniversalSearchBarProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [localSearchValue, setLocalSearchValue] = useState('')
   const [debouncedQuery, setDebouncedQuery] = useState('')
@@ -87,8 +89,11 @@ export function UniversalSearchBar({ schemas }: UniversalSearchBarProps) {
           params: { schemaId: result.schemaId, itemId: itemSlug },
         })
       }
+
+      // Call the optional callback (e.g., to close drawer)
+      onResultSelect?.()
     },
-    [navigate]
+    [navigate, onResultSelect]
   )
 
   const searchResults = useMemo(() => {

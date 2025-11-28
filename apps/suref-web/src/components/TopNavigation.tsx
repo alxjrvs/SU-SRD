@@ -420,7 +420,7 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
 
           <HStack as="ul" gap={2} flexDirection="row" w="auto">
             <Box as="li">
-              <UniversalSearchBar schemas={schemas} />
+              <UniversalSearchBar schemas={schemas} onResultSelect={toggleMenu} />
             </Box>
 
             <Box as="li">
