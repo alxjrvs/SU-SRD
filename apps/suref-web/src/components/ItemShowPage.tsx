@@ -31,7 +31,7 @@ export default function ItemShowPage({ prefetchedItem }: ItemShowPageProps) {
 
   if (loading) {
     return (
-      <Flex alignItems="center" justifyContent="center" h="full">
+      <Flex alignItems="center" justifyContent="center" h="full" bg="bg.landing">
         <Text fontSize="xl">Loading...</Text>
       </Flex>
     )
@@ -53,7 +53,7 @@ export default function ItemShowPage({ prefetchedItem }: ItemShowPageProps) {
         <Box maxW="6xl" w="full">
           <Suspense
             fallback={
-              <Flex alignItems="center" justifyContent="center" h="full">
+              <Flex alignItems="center" justifyContent="center" h="full" bg="bg.landing">
                 <Text fontSize="xl">Loading component...</Text>
               </Flex>
             }
