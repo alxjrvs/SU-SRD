@@ -128,8 +128,8 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
       <Flex
         flex="1"
         p={{ base: 0, lg: 0 }}
-        pt={{ base: 16, lg: 0 }}
-        pb={{ base: 10, lg: 0 }}
+        pt={{ base: 16, lg: 10 }}
+        pb={{ base: 10, lg: 10 }}
         alignItems="center"
         justifyContent="center"
         minH="0"
