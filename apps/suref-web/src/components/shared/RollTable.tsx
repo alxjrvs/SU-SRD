@@ -135,7 +135,7 @@ export function RollTable({
   }
 
   return (
-    <Box borderColor="su.black" borderWidth="3px" position="relative" overflow="visible">
+    <Box position="relative" overflow="visible">
       <Box transition="opacity 0.2s" overflow="visible">
         {showCommand && (
           <Flex
