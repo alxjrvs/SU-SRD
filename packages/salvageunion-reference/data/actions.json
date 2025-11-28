@@ -10801,6 +10801,7 @@
   {
     "id": "e98fa567-c485-47f5-803b-b2f08e1cb8bd",
     "name": "Nanite Reconstruction (Meld Regenerator)",
+    "displayName": "Nanite Reconstruction",
     "actionType": "Passive",
     "content": [
       {
@@ -10809,11 +10810,12 @@
       }
     ],
     "actionSource": "modules",
-    "tableName": "Nanite Reconstruction (Meld Regenerator)"
+    "tableName": "Nanite Reconstruction"
   },
   {
     "id": "34b68549-6a95-4fd1-8fd4-09301c7ac3cf",
     "name": "Nanite Repair (Meld Regenerator)",
+    "displayName": "Nanite Repair",
     "actionType": "Reaction",
     "activationCost": 3,
     "content": [
@@ -10857,10 +10859,6 @@
       {
         "type": "paragraph",
         "value": "When activated, choose a target System or Module in Range."
-      },
-      {
-        "type": "paragraph",
-        "value": "ROLL THE DIE"
       },
       {
         "type": "paragraph",
