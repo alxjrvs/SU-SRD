@@ -70,7 +70,7 @@ function EquipmentItemWithSlots({
   const sortedSystems = useMemo(() => {
     return equipmentSystems
       .map((s) => allSystems.find((e) => e.id === s.ref.id))
-      .filter((e): e is SURefSystem => e !== undefined)
+      .filter((e): e is SURefSystem & { schemaName?: string } => e !== undefined)
       .sort((a, b) => {
         const aTechLevel = getTechLevelNumber(a) ?? 0
         const bTechLevel = getTechLevelNumber(b) ?? 0
@@ -84,7 +84,7 @@ function EquipmentItemWithSlots({
   const sortedModules = useMemo(() => {
     return equipmentModules
       .map((m) => allModules.find((e) => e.id === m.ref.id))
-      .filter((e): e is SURefModule => e !== undefined)
+      .filter((e): e is SURefModule & { schemaName?: string } => e !== undefined)
       .sort((a, b) => {
         const aTechLevel = getTechLevelNumber(a) ?? 0
         const bTechLevel = getTechLevelNumber(b) ?? 0
@@ -166,7 +166,6 @@ function EquipmentItemWithSlots({
     <>
       <EntityDisplay
         buttonConfig={!readOnly && !item.entity.parentEntity ? removeButtonConfig : undefined}
-        schemaName="equipment"
         compact
         data={item.equipment}
       >
@@ -199,7 +198,6 @@ function EquipmentItemWithSlots({
                   return (
                     <EntityDisplay
                       key={system.id}
-                      schemaName="systems"
                       data={system}
                       compact
                       disabled={disabled}
@@ -245,7 +243,6 @@ function EquipmentItemWithSlots({
                   return (
                     <EntityDisplay
                       key={module.id}
-                      schemaName="modules"
                       data={module}
                       compact
                       disabled={disabled}
@@ -315,7 +312,7 @@ export function PilotInventory({ id, disabled = false, readOnly = false }: Pilot
           item
         ): item is {
           id: string
-          equipment: SURefEquipment
+          equipment: SURefEquipment & { schemaName?: string }
           index: number
           entity: HydratedEntity
         } => item !== null

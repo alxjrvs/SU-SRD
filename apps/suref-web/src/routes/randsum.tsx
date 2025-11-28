@@ -2,7 +2,6 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Box, Container, Flex, Image, Link, VStack, Button } from '@chakra-ui/react'
 import { Text } from '../components/base/Text'
 import { Heading } from '../components/base/Heading'
-import Footer from '../components/Footer'
 
 export const Route = createFileRoute('/randsum')({
   component: RandsumPage,
@@ -125,7 +124,6 @@ function RandsumPage() {
           </Flex>
         </VStack>
       </Container>
-      <Footer />
     </Flex>
   )
 }

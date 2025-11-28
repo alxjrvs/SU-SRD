@@ -28,11 +28,9 @@ export function EntityGrants() {
       if (!model) return null
 
       const entity = model.find((e: SURefEntity) => e.name === grant.name)
-      return entity ? { entity, schemaName: schema } : null
+      return entity || null
     })
-    .filter(
-      (item): item is { entity: SURefEntity; schemaName: SURefEnumSchemaName } => item !== null
-    )
+    .filter((entity): entity is SURefEntity & { schemaName: string } => entity !== null)
 
   if (grantedEntities.length === 0) {
     return null
@@ -44,12 +42,11 @@ export function EntityGrants() {
         <EntitySubheader disabled={true} label="Grants:" />
       </Box>
       <VStack gap={spacing.contentPadding} alignItems="start">
-        {grantedEntities.map(({ entity, schemaName }, idx) => (
+        {grantedEntities.map((entity, idx) => (
           <EntityDisplay
             key={idx}
             hideActions
             data={entity}
-            schemaName={schemaName}
             compact
             collapsible
             defaultExpanded={false}

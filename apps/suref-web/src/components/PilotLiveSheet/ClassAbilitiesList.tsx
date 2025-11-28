@@ -387,7 +387,6 @@ function TreeSection({
           if (isReadOnly) {
             return (
               <EntityDisplay
-                schemaName="abilities"
                 compact
                 key={ability.id}
                 data={ability}
@@ -455,7 +454,6 @@ function TreeSection({
 
           return (
             <EntityDisplay
-              schemaName="abilities"
               compact
               collapsible={!alreadySelected}
               key={ability.id}

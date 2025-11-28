@@ -373,7 +373,6 @@ export function EntitySelectionModal({
                     px={2}
                   >
                     <EntityDisplay
-                      schemaName={schemaName}
                       compact
                       hidePatterns={hidePatterns}
                       data={entity}

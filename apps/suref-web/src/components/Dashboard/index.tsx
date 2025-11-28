@@ -3,7 +3,6 @@ import { Outlet } from '@tanstack/react-router'
 import { Box, Flex, Text } from '@chakra-ui/react'
 import { getSession, onAuthStateChange } from '../../lib/api'
 import type { User } from '@supabase/supabase-js'
-import Footer from '../Footer'
 import { Auth } from './Auth'
 import { logger } from '../../lib/logger'
 
@@ -71,7 +70,6 @@ export default function Dashboard() {
         <Box flex="1" display="flex" alignItems="center" justifyContent="center">
           <Auth />
         </Box>
-        <Footer />
       </Flex>
     )
   }
@@ -81,7 +79,6 @@ export default function Dashboard() {
       <Box flex="1" display="flex" flexDirection="column">
         <Outlet />
       </Box>
-      <Footer />
     </Flex>
   )
 }

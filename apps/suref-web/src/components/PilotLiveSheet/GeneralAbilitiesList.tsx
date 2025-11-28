@@ -36,7 +36,7 @@ export function GeneralAbilitiesList() {
           position="relative"
           overflow="visible"
         >
-          <EntityDisplay schemaName="abilities" hideLevel data={ability} compact />
+          <EntityDisplay hideLevel data={ability} compact />
         </Box>
       ))}
     </Box>

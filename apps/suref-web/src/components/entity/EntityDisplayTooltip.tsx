@@ -77,7 +77,6 @@ export function EntityDisplayTooltip({
           >
             {showArrow && <HoverCard.Arrow />}
             <EntityDisplay
-              schemaName={schemaName}
               data={entity}
               collapsible={false}
               compact={true}

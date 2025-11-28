@@ -59,7 +59,7 @@ function trimCache(): void {
 export interface SearchResult {
   schemaName: SURefEnumSchemaName
   schemaTitle: string
-  entity: SURefEntity
+  entity: SURefEntity & { schemaName: SURefEnumSchemaName }
   entityId: string
   entityName: string
   matchedFields: string[]
@@ -245,11 +245,15 @@ export function search(options: SearchOptions): SearchResult[] {
 
       if (matches) {
         const matchScore = calculateScore(entity, query, matchedFields)
+        // Add schemaName to entity
+        const entityWithSchema = { ...entity, schemaName: schemaId } as SURefEntity & {
+          schemaName: SURefEnumSchemaName
+        }
 
         results.push({
           schemaName: schemaId,
           schemaTitle: schema.title,
-          entity,
+          entity: entityWithSchema,
           entityId: entity.id,
           entityName: entity.name,
           matchedFields,
@@ -279,7 +283,7 @@ export function searchIn<T extends SURefEntity>(
   schemaName: SURefEnumSchemaName,
   query: string,
   options?: { limit?: number; caseSensitive?: boolean }
-): T[] {
+): (T & { schemaName: SURefEnumSchemaName })[] {
   const results = search({
     query,
     schemas: [schemaName],
@@ -287,7 +291,7 @@ export function searchIn<T extends SURefEntity>(
     caseSensitive: options?.caseSensitive,
   })
 
-  return results.map((r) => r.entity as T)
+  return results.map((r) => r.entity as T & { schemaName: SURefEnumSchemaName })
 }
 
 /**

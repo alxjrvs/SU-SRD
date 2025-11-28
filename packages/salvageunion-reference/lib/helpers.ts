@@ -130,7 +130,7 @@ export function isBaseClass(cls: SURefClass): cls is SURefClass & { coreTrees: s
  * Get all base classes (classes with coreTrees)
  * @returns Array of base classes
  */
-export function getCoreClasses(): SURefClass[] {
+export function getCoreClasses(): (SURefClass & { schemaName: string })[] {
   return SalvageUnionReference.findAllIn(
     'classes',
     (c) => 'coreTrees' in c && Array.isArray(c.coreTrees)
@@ -141,9 +141,10 @@ export function getCoreClasses(): SURefClass[] {
  * Get all hybrid classes (classes with hybrid=true)
  * @returns Array of hybrid classes
  */
-export function getHybridClasses(): SURefObjectAdvancedClass[] {
+export function getHybridClasses(): (SURefObjectAdvancedClass & { schemaName: string })[] {
   return SalvageUnionReference.Classes.all().filter(
-    (c): c is SURefObjectAdvancedClass => 'hybrid' in c && c.hybrid === true
+    (c): c is SURefObjectAdvancedClass & { schemaName: string } =>
+      'hybrid' in c && c.hybrid === true
   )
 }
 
@@ -250,7 +251,7 @@ export function getChassisNameById(chassisId: string | null, fallback = 'Unknown
  * Get all crawlers
  * @returns Array of crawlers
  */
-export function getCrawlers(): SURefCrawler[] {
+export function getCrawlers(): (SURefCrawler & { schemaName: string })[] {
   return SalvageUnionReference.Crawlers.all()
 }
 
@@ -258,7 +259,7 @@ export function getCrawlers(): SURefCrawler[] {
  * Get all crawler bays
  * @returns Array of crawler bays
  */
-export function getCrawlerBays(): SURefCrawlerBay[] {
+export function getCrawlerBays(): (SURefCrawlerBay & { schemaName: string })[] {
   return SalvageUnionReference.CrawlerBays.all()
 }
 
@@ -267,7 +268,9 @@ export function getCrawlerBays(): SURefCrawlerBay[] {
  * @param crawlerId - The ID of the crawler to find
  * @returns The crawler or undefined if not found
  */
-export function findCrawlerById(crawlerId: string): SURefCrawler | undefined {
+export function findCrawlerById(
+  crawlerId: string
+): (SURefCrawler & { schemaName: string }) | undefined {
   return SalvageUnionReference.findIn('crawlers', (c) => c.id === crawlerId)
 }
 
@@ -299,7 +302,9 @@ export function normalizeTechLevel(techLevel: number | 'B' | 'N' | null | undefi
  * @param techLevel - The tech level number to find
  * @returns The tech level or undefined if not found
  */
-export function findCrawlerTechLevel(techLevel: number): SURefMetaCrawlerTechLevel | undefined {
+export function findCrawlerTechLevel(
+  techLevel: number
+): (SURefMetaCrawlerTechLevel & { schemaName: string }) | undefined {
   return SalvageUnionReference.CrawlerTechLevels.find((tl) => tl.techLevel === techLevel)
 }
 
@@ -326,7 +331,7 @@ export function getStructurePointsForTechLevel(
  * Get all abilities
  * @returns Array of abilities
  */
-export function getAbilities(): SURefAbility[] {
+export function getAbilities(): (SURefAbility & { schemaName: string })[] {
   return SalvageUnionReference.Abilities.all()
 }
 
@@ -335,7 +340,7 @@ export function getAbilities(): SURefAbility[] {
  * @param level - The ability level
  * @returns Array of abilities at that level
  */
-export function getAbilitiesByLevel(level: number): SURefAbility[] {
+export function getAbilitiesByLevel(level: number): (SURefAbility & { schemaName: string })[] {
   return SalvageUnionReference.Abilities.all().filter((a) => a.level === level)
 }
 
@@ -347,7 +352,7 @@ export function getAbilitiesByLevel(level: number): SURefAbility[] {
  * Get all equipment
  * @returns Array of equipment
  */
-export function getEquipment(): SURefEquipment[] {
+export function getEquipment(): (SURefEquipment & { schemaName: string })[] {
   return SalvageUnionReference.findAllIn('equipment', () => true)
 }
 

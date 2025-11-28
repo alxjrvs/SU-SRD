@@ -224,10 +224,10 @@ export class SalvageUnionReference {
   public static findIn<T extends keyof SchemaToEntityMap>(
     schemaName: T,
     predicate: (entity: SchemaToEntityMap[T]) => boolean
-  ): SchemaToEntityMap[T] | undefined {
+  ): (SchemaToEntityMap[T] & { schemaName: T }) | undefined {
     const modelName = SchemaToModelMap[schemaName]
     const model = models[modelName] as BaseModel<SchemaToEntityMap[T]>
-    return model.find(predicate)
+    return model.find(predicate) as (SchemaToEntityMap[T] & { schemaName: T }) | undefined
   }
 
   /**
@@ -243,10 +243,10 @@ export class SalvageUnionReference {
   public static findAllIn<T extends keyof SchemaToEntityMap>(
     schemaName: T,
     predicate: (entity: SchemaToEntityMap[T]) => boolean
-  ): SchemaToEntityMap[T][] {
+  ): (SchemaToEntityMap[T] & { schemaName: T })[] {
     const modelName = SchemaToModelMap[schemaName]
     const model = models[modelName] as BaseModel<SchemaToEntityMap[T]>
-    return model.findAll(predicate)
+    return model.findAll(predicate) as (SchemaToEntityMap[T] & { schemaName: T })[]
   }
 
   // Entity cache for O(1) lookups
@@ -265,15 +265,22 @@ export class SalvageUnionReference {
   public static get<T extends keyof SchemaToEntityMap>(
     schemaName: T,
     id: string
-  ): SchemaToEntityMap[T] | undefined {
+  ): (SchemaToEntityMap[T] & { schemaName: T }) | undefined {
     const cacheKey = `${schemaName}::${id}`
 
     // Check cache first
     if (this.entityCache.has(cacheKey)) {
-      return this.entityCache.get(cacheKey) as SchemaToEntityMap[T]
+      const cached = this.entityCache.get(cacheKey) as SchemaToEntityMap[T]
+      // Ensure cached entity has schemaName
+      if (cached && !('schemaName' in cached)) {
+        const withSchema = { ...cached, schemaName } as SchemaToEntityMap[T] & { schemaName: T }
+        this.entityCache.set(cacheKey, withSchema)
+        return withSchema
+      }
+      return cached as (SchemaToEntityMap[T] & { schemaName: T }) | undefined
     }
 
-    // Find entity
+    // Find entity (findIn now returns entity with schemaName)
     const entity = this.findIn(schemaName, (e: SchemaToEntityMap[T]) => e.id === id)
 
     // Cache if found
@@ -312,7 +319,10 @@ export class SalvageUnionReference {
    */
   public static getMany(
     requests: Array<{ schemaName: keyof SchemaToEntityMap; id: string }>
-  ): (SchemaToEntityMap[keyof SchemaToEntityMap] | undefined)[] {
+  ): (
+    | (SchemaToEntityMap[keyof SchemaToEntityMap] & { schemaName: keyof SchemaToEntityMap })
+    | undefined
+  )[] {
     return requests.map((req) => this.get(req.schemaName, req.id))
   }
 
@@ -365,7 +375,11 @@ export class SalvageUnionReference {
    * @example
    * const ability = SalvageUnionReference.getByRef('abilities::bionic-senses')
    */
-  public static getByRef(ref: string): SchemaToEntityMap[keyof SchemaToEntityMap] | undefined {
+  public static getByRef(
+    ref: string
+  ):
+    | (SchemaToEntityMap[keyof SchemaToEntityMap] & { schemaName: keyof SchemaToEntityMap })
+    | undefined {
     const parsed = this.parseRef(ref)
     if (!parsed) return undefined
     // Work with all schemas in SchemaToEntityMap (includes meta schemas)
@@ -389,8 +403,16 @@ export class SalvageUnionReference {
    */
   public static getManyByRef(
     refs: string[]
-  ): Map<string, SchemaToEntityMap[keyof SchemaToEntityMap] | undefined> {
-    const result = new Map<string, SchemaToEntityMap[keyof SchemaToEntityMap] | undefined>()
+  ): Map<
+    string,
+    | (SchemaToEntityMap[keyof SchemaToEntityMap] & { schemaName: keyof SchemaToEntityMap })
+    | undefined
+  > {
+    const result = new Map<
+      string,
+      | (SchemaToEntityMap[keyof SchemaToEntityMap] & { schemaName: keyof SchemaToEntityMap })
+      | undefined
+    >()
     for (const ref of refs) {
       result.set(ref, this.getByRef(ref))
     }
@@ -487,7 +509,7 @@ export class SalvageUnionReference {
     schemaName: SURefEnumSchemaName,
     query: string,
     options?: { limit?: number; caseSensitive?: boolean }
-  ): T[] {
+  ): (T & { schemaName: SURefEnumSchemaName })[] {
     return searchInFn(schemaName, query, options)
   }
 

@@ -1,17 +1,16 @@
 import { Box, Flex, Text, Input } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react'
 import { ReferenceHeader } from '../shared/ReferenceHeader'
-import Footer from '../Footer'
 import type { SchemaInfo } from '../../types/schema'
 import { useSchemaData } from './useSchemaData'
 import { useSchemaId } from '../../hooks/useSchemaParams'
 import { useMemo, Suspense } from 'react'
 import { useNavigate } from '@tanstack/react-router'
 import { Route } from '../../routes/schema/$schemaId/index'
-import { getDisplayComponent } from '../componentRegistry'
 import type { SURefEntity } from 'salvageunion-reference'
 import { getTechLevel } from 'salvageunion-reference'
 import { getEntitySlug } from '../../utils/slug'
+import { EntityDisplay } from '../entity/EntityDisplay'
 
 interface SchemaViewerProps {
   schemas: SchemaInfo[]
@@ -91,11 +90,9 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
     })
   }, [data, search, techLevelFilters, sourceFilters])
 
-  const DisplayComponent = useMemo(() => getDisplayComponent(schemaId), [schemaId])
-
   if (loading) {
     return (
-      <Flex alignItems="center" justifyContent="center" h="90vh">
+      <Flex alignItems="center" justifyContent="center" h="100%">
         <Text fontSize="xl">Loading data...</Text>
       </Flex>
     )
@@ -106,16 +103,6 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
       <Flex alignItems="center" justifyContent="center" h="full">
         <Text fontSize="xl" color="red.600">
           Error: {error || 'Schema not found'}
-        </Text>
-      </Flex>
-    )
-  }
-
-  if (!DisplayComponent) {
-    return (
-      <Flex alignItems="center" justifyContent="center" h="full">
-        <Text fontSize="xl" color="red.600">
-          No display component found for schema: {schemaId}
         </Text>
       </Flex>
     )
@@ -298,7 +285,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
               }
             >
               <Suspense fallback={<Box h="200px" bg="su.lightBlue" borderRadius="md" />}>
-                <DisplayComponent
+                <EntityDisplay
                   hideActions
                   hideChoices
                   data={item}
@@ -310,7 +297,6 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
           ))}
         </Box>
       </Box>
-      <Footer />
     </Flex>
   )
 }

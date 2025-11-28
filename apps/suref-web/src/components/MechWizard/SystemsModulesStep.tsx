@@ -46,13 +46,13 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
   const selectedSystems = useMemo(() => {
     return state.selectedSystemIds
       .map((id) => SalvageUnionReference.get('systems', id))
-      .filter((s): s is SURefSystem => s !== undefined)
+      .filter((s): s is SURefSystem & { schemaName: string } => s !== undefined)
   }, [state.selectedSystemIds])
 
   const selectedModules = useMemo(() => {
     return state.selectedModuleIds
       .map((id) => SalvageUnionReference.get('modules', id))
-      .filter((m): m is SURefModule => m !== undefined)
+      .filter((m): m is SURefModule & { schemaName: string } => m !== undefined)
   }, [state.selectedModuleIds])
 
   const usedSystemSlots = useMemo(() => {
@@ -284,7 +284,6 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
             sortedSystems.map((system) => (
               <EntityDisplay
                 key={system.id}
-                schemaName="systems"
                 data={system}
                 compact
                 buttonConfig={{
@@ -345,7 +344,6 @@ export function SystemsModulesStep({ wizardState, onComplete }: SystemsModulesSt
             sortedModules.map((module) => (
               <EntityDisplay
                 key={module.id}
-                schemaName="modules"
                 data={module}
                 compact
                 buttonConfig={{

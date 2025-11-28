@@ -15,7 +15,6 @@ import {
   DialogPositioner,
 } from '@chakra-ui/react'
 import { Text } from '../components/base/Text'
-import Footer from '../components/Footer'
 
 function AboutPage() {
   const search = useSearch({ strict: false })
@@ -397,9 +396,6 @@ function AboutPage() {
         </VStack>
       </Container>
 
-      {/* Footer */}
-      <Footer />
-
       {/* Image Modal */}
       <DialogRoot
         open={isImageModalOpen}
@@ -421,7 +417,7 @@ function AboutPage() {
         >
           <DialogContent
             maxW="90vw"
-            maxH="90vh"
+            maxH="100%"
             bg="transparent"
             border="none"
             shadow="none"

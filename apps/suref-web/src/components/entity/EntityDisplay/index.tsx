@@ -7,8 +7,6 @@ import { EntityDisplayProvider } from './EntityDisplayProvider'
 type EntityDisplayProps = {
   /** Entity data to display - only accepts SURefEntity (not SURefMetaAction or SURefObjectSystemModule) */
   data: SURefEntity | undefined
-  /** Schema name for the entity */
-  schemaName: SURefEnumSchemaName
   /** Optional header background color override */
   headerColor?: string
   /** Whether the ability is trained (affects header opacity for abilities) */
@@ -77,7 +75,6 @@ export const EntityDisplay = memo(function EntityDisplay({
   hidePatterns = false,
   hideChoices = false,
   showFooter,
-  schemaName,
   compact = false,
   userChoices,
   onChoiceSelection,
@@ -85,6 +82,16 @@ export const EntityDisplay = memo(function EntityDisplay({
   imageWidth,
 }: EntityDisplayProps) {
   if (!data) return null
+
+  // Get schemaName from data, with fallback for entities that might not have it yet
+  const schemaName = (
+    'schemaName' in data && typeof data.schemaName === 'string' ? data.schemaName : undefined
+  ) as SURefEnumSchemaName | undefined
+
+  if (!schemaName) {
+    console.warn('EntityDisplay: data does not have schemaName property', data)
+    return null
+  }
 
   return (
     <EntityDisplayProvider

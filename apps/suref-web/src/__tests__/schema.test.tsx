@@ -102,7 +102,6 @@ describe('Schema Entity Display Tests', () => {
             result = render(
               <EntityDisplay
                 data={entity as SURefEntity}
-                schemaName={schemaId}
                 hideActions={false}
                 compact={false}
                 collapsible={false}

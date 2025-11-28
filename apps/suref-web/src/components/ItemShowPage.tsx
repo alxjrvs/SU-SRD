@@ -1,21 +1,17 @@
 import { Suspense } from 'react'
-import { Box, Flex, Text, VStack, useBreakpointValue } from '@chakra-ui/react'
-import type { ReactElement } from 'react'
+import { Box, Flex, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useSearch } from '@tanstack/react-router'
-import Footer from './Footer'
-import type { SchemaInfo } from '../types/schema'
-import { getDisplayComponent } from './componentRegistry'
 import { useSchemaData } from './schema/useSchemaData'
 import { useSchemaParams } from '../hooks/useSchemaParams'
 import type { SURefEntity, SURefEnumSchemaName } from 'salvageunion-reference'
 import { findEntityBySlug } from '../utils/slug'
+import { EntityDisplay } from './entity/EntityDisplay'
 
 interface ItemShowPageProps {
-  schemas: SchemaInfo[]
   prefetchedItem?: SURefEntity | null
 }
 
-export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPageProps) {
+export default function ItemShowPage({ prefetchedItem }: ItemShowPageProps) {
   const { schemaId, itemId } = useSchemaParams()
   const { data, loading, error } = useSchemaData(schemaId)
   const search = useSearch({ strict: false })
@@ -25,8 +21,6 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
   const searchCompact = (search as { compact?: string }).compact === 'true'
   const compact = isMobile ? true : searchCompact
 
-  const currentSchema = schemas.find((s) => s.id === schemaId)
-
   // Find item by slug first, then fallback to ID for backward compatibility
   const item =
     prefetchedItem ??
@@ -34,57 +28,6 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
       ? (findEntityBySlug(schemaId as SURefEnumSchemaName, itemId) ??
         data.find((d) => d.id === itemId))
       : null)
-
-  const formatValue = (value: unknown): ReactElement => {
-    if (value === undefined || value === null) {
-      return (
-        <Text as="span" color="brand.srd" opacity={0.5}>
-          -
-        </Text>
-      )
-    }
-
-    if (Array.isArray(value)) {
-      return (
-        <Box as="ul" listStyleType="square" ml={6}>
-          <VStack gap={2} alignItems="stretch">
-            {value.map((v, i) => (
-              <Box as="li" key={i} pl={2}>
-                {formatValue(v)}
-              </Box>
-            ))}
-          </VStack>
-        </Box>
-      )
-    }
-
-    if (typeof value === 'object') {
-      return (
-        <Box ml={6} borderLeftWidth="2px" borderColor="su.lightBlue" pl={4}>
-          <VStack gap={2} alignItems="stretch">
-            {Object.entries(value).map(([k, v]) => (
-              <Box key={k}>
-                <Text as="span" fontWeight="medium" color="fg.default">
-                  {k}:{' '}
-                </Text>
-                {formatValue(v)}
-              </Box>
-            ))}
-          </VStack>
-        </Box>
-      )
-    }
-
-    if (typeof value === 'boolean') {
-      return (
-        <Text as="span" color={value ? 'su.green' : 'brand.srd'}>
-          {value ? 'Yes' : 'No'}
-        </Text>
-      )
-    }
-
-    return <Text as="span">{String(value)}</Text>
-  }
 
   if (loading) {
     return (
@@ -94,7 +37,7 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
     )
   }
 
-  if (error || !currentSchema || !item) {
+  if (error || !item) {
     return (
       <Flex alignItems="center" justifyContent="center" h="full">
         <Text fontSize="xl" color="red.600">
@@ -104,83 +47,21 @@ export default function ItemShowPage({ schemas, prefetchedItem }: ItemShowPagePr
     )
   }
 
-  const renderSpecializedContent = () => {
-    if (!schemaId) return null
-    const DisplayComponent = getDisplayComponent(schemaId)
-    if (!DisplayComponent) return null
-    return (
-      <Suspense
-        fallback={
-          <Flex alignItems="center" justifyContent="center" h="full">
-            <Text fontSize="xl">Loading component...</Text>
-          </Flex>
-        }
-      >
-        <DisplayComponent data={item} compact={compact} />
-      </Suspense>
-    )
-  }
-
-  const specializedContent = renderSpecializedContent()
-
   return (
-    <Flex minH="100vh" flexDirection="column" bg="bg.landing">
-      <Flex
-        flex="1"
-        p={{ base: 0, lg: 0 }}
-        pt={{ base: 16, lg: 10 }}
-        pb={{ base: 10, lg: 10 }}
-        alignItems="center"
-        justifyContent="center"
-        minH="0"
-      >
+    <Flex minH="100%" flexDirection="column" bg="bg.landing">
+      <Flex flex="1" p={{ base: 4, lg: 0 }} alignItems="center" justifyContent="center" minH="0">
         <Box maxW="6xl" w="full">
-          {specializedContent ? (
-            specializedContent
-          ) : (
-            <Box
-              bg="bg.canvas"
-              borderRadius="md"
-              shadow="lg"
-              p={8}
-              borderWidth="2px"
-              borderColor="border.default"
-            >
-              <VStack gap={6} alignItems="stretch">
-                {Object.entries(item)
-                  .sort(([a], [b]) => {
-                    if (a === 'name') return -1
-                    if (b === 'name') return 1
-                    return a.localeCompare(b)
-                  })
-                  .map(([key, value]) => (
-                    <Box
-                      key={key}
-                      borderBottomWidth="1px"
-                      borderColor="border.default"
-                      pb={6}
-                      _last={{ borderBottomWidth: 0 }}
-                    >
-                      <Text
-                        fontWeight="semibold"
-                        color="fg.default"
-                        mb={3}
-                        fontSize="lg"
-                        textTransform="capitalize"
-                      >
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
-                      </Text>
-                      <Box color="fg.default" fontSize="base">
-                        {formatValue(value)}
-                      </Box>
-                    </Box>
-                  ))}
-              </VStack>
-            </Box>
-          )}
+          <Suspense
+            fallback={
+              <Flex alignItems="center" justifyContent="center" h="full">
+                <Text fontSize="xl">Loading component...</Text>
+              </Flex>
+            }
+          >
+            <EntityDisplay data={item} compact={compact} />
+          </Suspense>
         </Box>
       </Flex>
-      <Footer />
     </Flex>
   )
 }

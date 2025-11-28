@@ -218,7 +218,7 @@ export function UniversalSearchBar({ schemas, onResultSelect }: UniversalSearchB
   }, [location.pathname])
 
   return (
-    <Box position="relative" w={{ base: 'full', lg: '300px' }}>
+    <Box position="relative" w="full" p={2}>
       <Box position="relative">
         <Box
           position="absolute"

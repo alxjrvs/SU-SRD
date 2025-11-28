@@ -1,6 +1,5 @@
 import { Box, Flex, Link } from '@chakra-ui/react'
 import { Text } from '../base/Text'
-import Footer from '../Footer'
 
 export function RulesReferenceLanding() {
   return (
@@ -54,8 +53,6 @@ export function RulesReferenceLanding() {
           </Text>
         </Box>
       </Flex>
-
-      <Footer />
     </Flex>
   )
 }

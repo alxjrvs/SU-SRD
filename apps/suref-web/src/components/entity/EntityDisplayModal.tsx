@@ -57,7 +57,7 @@ export function EntityDisplayModal({
             w={10}
             h={10}
           />
-          <EntityDisplay schemaName={schemaName} data={entity} collapsible={false} />
+          <EntityDisplay data={entity} collapsible={false} />
         </DialogContent>
       </DialogPositioner>
     </DialogRoot>

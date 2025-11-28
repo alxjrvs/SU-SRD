@@ -147,7 +147,6 @@ export function EntityListDisplay({
           return null
         }
 
-        const schema = (choice.schema?.[0] ?? 'systems') as SURefEnumSchemaName
         // EntityDisplay only accepts SURefEntity, so we need to check if entity is a valid entity
         // System modules without id are handled separately above
         if (!('id' in entity)) {
@@ -158,7 +157,6 @@ export function EntityListDisplay({
             key={idx}
             hideActions
             data={entity as SURefEntity}
-            schemaName={schema}
             compact
             collapsible
             defaultExpanded={false}

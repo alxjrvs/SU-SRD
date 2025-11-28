@@ -162,6 +162,7 @@ export interface SURefObjectChoice {
 
 /**
  * Basic entity with name, content, source, and page reference
+ * Note: schemaName is added at runtime by BaseModel, not part of the JSON schema
  */
 export interface SURefObjectBaseEntity {
   asset_url?: SURefCommonAssetUrl

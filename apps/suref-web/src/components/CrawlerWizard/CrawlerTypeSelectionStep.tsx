@@ -192,7 +192,6 @@ export function CrawlerTypeSelectionStep({
                   >
                     <EntityDisplay
                       data={selectedCrawlerType}
-                      schemaName="crawlers"
                       hideActions
                       hideChoices
                       imageWidth="40%"

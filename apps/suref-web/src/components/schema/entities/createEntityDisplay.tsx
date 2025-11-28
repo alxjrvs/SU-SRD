@@ -33,7 +33,6 @@ export function createEntityDisplay(
   }: EntityDisplayProps) => {
     return (
       <EntityDisplay
-        schemaName={schemaName}
         data={data}
         compact={compact}
         collapsible={collapsible}

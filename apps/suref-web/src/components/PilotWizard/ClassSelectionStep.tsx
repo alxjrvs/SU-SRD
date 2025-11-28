@@ -133,7 +133,6 @@ export function ClassSelectionStep({ wizardState, onComplete }: ClassSelectionSt
               {/* Class Display with image (40% width) and abilities as children */}
               <EntityDisplay
                 data={selectedClass}
-                schemaName="classes"
                 compact
                 hideActions
                 hideChoices
@@ -194,7 +193,6 @@ export function ClassSelectionStep({ wizardState, onComplete }: ClassSelectionSt
                         <EntityDisplay
                           key={ability.id}
                           data={ability}
-                          schemaName="abilities"
                           compact
                           hideActions
                           hideChoices

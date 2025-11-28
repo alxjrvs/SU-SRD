@@ -1,4 +1,4 @@
-import type { SURefObjectChoice, SURefEnumSchemaName } from 'salvageunion-reference'
+import type { SURefObjectChoice } from 'salvageunion-reference'
 import { getModel } from 'salvageunion-reference'
 import { EntityDisplay } from './index'
 
@@ -24,7 +24,6 @@ export function PreselectedEntityDisplay({
     <EntityDisplay
       hideActions
       data={entity}
-      schemaName={schema as SURefEnumSchemaName}
       collapsible={false}
     />
   )

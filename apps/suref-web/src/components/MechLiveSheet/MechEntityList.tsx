@@ -72,7 +72,6 @@ function EntityItem({
         transitionDuration="0.3s"
       >
         <EntityDisplay
-          schemaName={schemaName}
           data={ref}
           compact
           disabled={disabled}

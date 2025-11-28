@@ -5,6 +5,7 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { TopNavigation } from '../components/TopNavigation'
 import { ErrorBoundary } from '../components/ErrorBoundary'
 import { GlobalLoadingBar } from '../components/shared/GlobalLoadingBar'
+import Footer from '../components/Footer'
 import { getSchemaCatalog } from 'salvageunion-reference'
 import { getSession, onAuthStateChange } from '../lib/api'
 import type { User } from '@supabase/supabase-js'
@@ -122,15 +123,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                   userLoading={userLoading}
                   schemas={schemaIndexData.schemas.filter((s) => !s.meta)}
                 />
-                <Box
-                  as="main"
-                  flex="1"
-                  display="flex"
-                  flexDirection="column"
-                  pt={{ base: '40px', lg: 0 }}
-                >
+                <Box as="main" flex="1" display="flex" flexDirection="column">
                   {children}
                 </Box>
+                <Footer />
               </Flex>
               <Toaster />
             </EntityViewerModalProvider>

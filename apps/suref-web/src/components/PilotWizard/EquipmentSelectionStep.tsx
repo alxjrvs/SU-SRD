@@ -70,7 +70,6 @@ export function EquipmentSelectionStep({ wizardState, onComplete }: EquipmentSel
             <EntityDisplay
               key={equipment.id}
               data={equipment}
-              schemaName="equipment"
               compact
               hideActions
               hideChoices

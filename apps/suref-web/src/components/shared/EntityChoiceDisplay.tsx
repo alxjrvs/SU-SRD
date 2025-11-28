@@ -276,7 +276,6 @@ export function EntityChoiceDisplay(props: EntityChoiceDisplayProps) {
           return (
             <EntityDisplay
               key={selection.id}
-              schemaName={displayEntity.schemaName as SURefEnumSchemaName}
               data={displayEntity.entity}
               compact
               collapsible
@@ -334,7 +333,6 @@ export function EntityChoiceDisplay(props: EntityChoiceDisplayProps) {
         )
       ) : (
         <EntityDisplay
-          schemaName={selectedEntity.schemaName as SURefEnumSchemaName}
           data={selectedEntity.entity}
           compact
           collapsible

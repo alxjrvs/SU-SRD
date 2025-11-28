@@ -170,7 +170,6 @@ export function ChassisSelectionStep({ wizardState, onComplete }: ChassisSelecti
               <VStack gap={4} align="stretch">
                 <EntityDisplay
                   data={selectedChassis}
-                  schemaName="chassis"
                   hideActions
                   hideChoices
                   hidePatterns
