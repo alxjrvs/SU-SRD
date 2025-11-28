@@ -1,5 +1,5 @@
 import { useMemo, useCallback } from 'react'
-import { Box, Grid, Stack } from '@chakra-ui/react'
+import { Box, Grid, Stack, VStack } from '@chakra-ui/react'
 import { Heading } from '../base/Heading'
 import { Text } from '../base/Text'
 import { Card } from '../shared/Card'
@@ -141,6 +141,78 @@ export function ClassAbilitiesList({
       selectedAdvancedClass.legendaryTree &&
       allTreeAbilities[selectedAdvancedClass.legendaryTree])
 
+  // Organize trees in order: core, advanced, legendary
+  const orderedTrees = useMemo(() => {
+    const trees: Array<{
+      treeName: string
+      treeAbilities: SURefAbility[]
+      isCoreClassTree: boolean
+    }> = []
+
+    // Core trees
+    coreTreeNames.forEach((treeName: string) => {
+      if (allTreeAbilities[treeName]) {
+        trees.push({
+          treeName,
+          treeAbilities: allTreeAbilities[treeName] || [],
+          isCoreClassTree: false,
+        })
+      }
+    })
+
+    // Advanced trees
+    if (coreAdvancedTree && allTreeAbilities[coreAdvancedTree]) {
+      trees.push({
+        treeName: coreAdvancedTree,
+        treeAbilities: allTreeAbilities[coreAdvancedTree] || [],
+        isCoreClassTree: true,
+      })
+    }
+
+    if (
+      selectedAdvancedClass &&
+      'advancedTree' in selectedAdvancedClass &&
+      selectedAdvancedClass.advancedTree &&
+      allTreeAbilities[selectedAdvancedClass.advancedTree]
+    ) {
+      trees.push({
+        treeName: selectedAdvancedClass.advancedTree,
+        treeAbilities: allTreeAbilities[selectedAdvancedClass.advancedTree] || [],
+        isCoreClassTree: false,
+      })
+    }
+
+    // Legendary trees
+    if (coreLegendaryTree && allTreeAbilities[coreLegendaryTree]) {
+      trees.push({
+        treeName: coreLegendaryTree,
+        treeAbilities: allTreeAbilities[coreLegendaryTree] || [],
+        isCoreClassTree: true,
+      })
+    }
+
+    if (
+      selectedAdvancedClass &&
+      'legendaryTree' in selectedAdvancedClass &&
+      selectedAdvancedClass.legendaryTree &&
+      allTreeAbilities[selectedAdvancedClass.legendaryTree]
+    ) {
+      trees.push({
+        treeName: selectedAdvancedClass.legendaryTree,
+        treeAbilities: allTreeAbilities[selectedAdvancedClass.legendaryTree] || [],
+        isCoreClassTree: false,
+      })
+    }
+
+    return trees
+  }, [
+    coreTreeNames,
+    allTreeAbilities,
+    coreAdvancedTree,
+    coreLegendaryTree,
+    selectedAdvancedClass,
+  ])
+
   if (!selectedClass && !selectedAdvancedClass) {
     return (
       <Card bg="su.grey">
@@ -153,90 +225,114 @@ export function ClassAbilitiesList({
 
   return (
     <Box p={compact ? 1 : 2} w="full">
-      <Grid
-        gridTemplateColumns="repeat(3, 1fr)"
+      {/* Mobile/Tablet: Vertical stack with all trees in order */}
+      <VStack
         gap={2}
-        mb={hasAdvancedOrLegendary ? 4 : 0}
+        alignItems="stretch"
+        display={{ base: 'flex', lg: 'none' }}
         w="full"
       >
-        {coreTreeNames.map((treeName: string) => (
+        {orderedTrees.map((tree) => (
           <TreeSection
             selectedClass={selectedClass}
             selectedAdvancedClass={selectedAdvancedClass}
-            key={treeName}
-            treeName={treeName}
-            treeAbilities={allTreeAbilities[treeName] || []}
+            key={tree.treeName}
+            treeName={tree.treeName}
+            treeAbilities={tree.treeAbilities}
             id={id}
             hideUnchosen={hideUnchosen}
+            isCoreClassTree={tree.isCoreClassTree}
           />
         ))}
-      </Grid>
+      </VStack>
 
-      {hasAdvancedOrLegendary && (
-        <Grid gridTemplateColumns="repeat(2, 1fr)" gap={2} w="full">
-          {/* Core class advanced tree */}
-          {coreAdvancedTree && allTreeAbilities[coreAdvancedTree] && (
+      {/* Desktop: Grid layout */}
+      <Box display={{ base: 'none', lg: 'block' }} w="full">
+        <Grid
+          gridTemplateColumns="repeat(3, 1fr)"
+          gap={2}
+          mb={hasAdvancedOrLegendary ? 4 : 0}
+          w="full"
+        >
+          {coreTreeNames.map((treeName: string) => (
             <TreeSection
               selectedClass={selectedClass}
               selectedAdvancedClass={selectedAdvancedClass}
-              key={coreAdvancedTree}
-              treeName={coreAdvancedTree}
-              treeAbilities={allTreeAbilities[coreAdvancedTree] || []}
+              key={treeName}
+              treeName={treeName}
+              treeAbilities={allTreeAbilities[treeName] || []}
               id={id}
               hideUnchosen={hideUnchosen}
-              isCoreClassTree={true}
             />
-          )}
-
-          {/* Core class legendary tree */}
-          {coreLegendaryTree && allTreeAbilities[coreLegendaryTree] && (
-            <TreeSection
-              selectedClass={selectedClass}
-              selectedAdvancedClass={selectedAdvancedClass}
-              key={coreLegendaryTree}
-              treeName={coreLegendaryTree}
-              treeAbilities={allTreeAbilities[coreLegendaryTree] || []}
-              hideUnchosen={hideUnchosen}
-              id={id}
-              isCoreClassTree={true}
-            />
-          )}
-
-          {/* Hybrid class advanced tree */}
-          {selectedAdvancedClass &&
-            'advancedTree' in selectedAdvancedClass &&
-            selectedAdvancedClass.advancedTree &&
-            allTreeAbilities[selectedAdvancedClass.advancedTree] && (
-              <TreeSection
-                selectedClass={selectedClass}
-                selectedAdvancedClass={selectedAdvancedClass}
-                key={selectedAdvancedClass.advancedTree}
-                treeName={selectedAdvancedClass.advancedTree}
-                treeAbilities={allTreeAbilities[selectedAdvancedClass.advancedTree] || []}
-                id={id}
-                hideUnchosen={hideUnchosen}
-                isCoreClassTree={false}
-              />
-            )}
-
-          {/* Hybrid class legendary tree */}
-          {selectedAdvancedClass &&
-            'legendaryTree' in selectedAdvancedClass &&
-            selectedAdvancedClass.legendaryTree &&
-            allTreeAbilities[selectedAdvancedClass.legendaryTree] && (
-              <TreeSection
-                selectedClass={selectedClass}
-                selectedAdvancedClass={selectedAdvancedClass}
-                key={selectedAdvancedClass.legendaryTree}
-                treeName={selectedAdvancedClass.legendaryTree}
-                treeAbilities={allTreeAbilities[selectedAdvancedClass.legendaryTree] || []}
-                hideUnchosen={hideUnchosen}
-                id={id}
-                isCoreClassTree={false}
-              />
-            )}
+          ))}
         </Grid>
-      )}
+
+        {hasAdvancedOrLegendary && (
+          <Grid gridTemplateColumns="repeat(2, 1fr)" gap={2} w="full">
+            {/* Core class advanced tree */}
+            {coreAdvancedTree && allTreeAbilities[coreAdvancedTree] && (
+              <TreeSection
+                selectedClass={selectedClass}
+                selectedAdvancedClass={selectedAdvancedClass}
+                key={coreAdvancedTree}
+                treeName={coreAdvancedTree}
+                treeAbilities={allTreeAbilities[coreAdvancedTree] || []}
+                id={id}
+                hideUnchosen={hideUnchosen}
+                isCoreClassTree={true}
+              />
+            )}
+
+            {/* Core class legendary tree */}
+            {coreLegendaryTree && allTreeAbilities[coreLegendaryTree] && (
+              <TreeSection
+                selectedClass={selectedClass}
+                selectedAdvancedClass={selectedAdvancedClass}
+                key={coreLegendaryTree}
+                treeName={coreLegendaryTree}
+                treeAbilities={allTreeAbilities[coreLegendaryTree] || []}
+                hideUnchosen={hideUnchosen}
+                id={id}
+                isCoreClassTree={true}
+              />
+            )}
+
+            {/* Hybrid class advanced tree */}
+            {selectedAdvancedClass &&
+              'advancedTree' in selectedAdvancedClass &&
+              selectedAdvancedClass.advancedTree &&
+              allTreeAbilities[selectedAdvancedClass.advancedTree] && (
+                <TreeSection
+                  selectedClass={selectedClass}
+                  selectedAdvancedClass={selectedAdvancedClass}
+                  key={selectedAdvancedClass.advancedTree}
+                  treeName={selectedAdvancedClass.advancedTree}
+                  treeAbilities={allTreeAbilities[selectedAdvancedClass.advancedTree] || []}
+                  id={id}
+                  hideUnchosen={hideUnchosen}
+                  isCoreClassTree={false}
+                />
+              )}
+
+            {/* Hybrid class legendary tree */}
+            {selectedAdvancedClass &&
+              'legendaryTree' in selectedAdvancedClass &&
+              selectedAdvancedClass.legendaryTree &&
+              allTreeAbilities[selectedAdvancedClass.legendaryTree] && (
+                <TreeSection
+                  selectedClass={selectedClass}
+                  selectedAdvancedClass={selectedAdvancedClass}
+                  key={selectedAdvancedClass.legendaryTree}
+                  treeName={selectedAdvancedClass.legendaryTree}
+                  treeAbilities={allTreeAbilities[selectedAdvancedClass.legendaryTree] || []}
+                  hideUnchosen={hideUnchosen}
+                  id={id}
+                  isCoreClassTree={false}
+                />
+              )}
+          </Grid>
+        )}
+      </Box>
     </Box>
   )
 }
