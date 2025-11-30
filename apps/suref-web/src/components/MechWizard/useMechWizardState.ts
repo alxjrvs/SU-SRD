@@ -50,10 +50,16 @@ export function useMechWizardState(): UseMechWizardStateReturn {
     goToStep: baseWizard.goToStep,
     goToNextStep: baseWizard.goToNextStep,
     goToPreviousStep: baseWizard.goToPreviousStep,
-    setSelectedChassisId: useWizardSetter<WizardState, string | null>(setState, 'selectedChassisId'),
+    setSelectedChassisId: useWizardSetter<WizardState, string | null>(
+      setState,
+      'selectedChassisId'
+    ),
     setSelectedSystemIds: useWizardSetter<WizardState, string[]>(setState, 'selectedSystemIds'),
     setSelectedModuleIds: useWizardSetter<WizardState, string[]>(setState, 'selectedModuleIds'),
-    setSelectedPatternName: useWizardSetter<WizardState, string | null>(setState, 'selectedPatternName'),
+    setSelectedPatternName: useWizardSetter<WizardState, string | null>(
+      setState,
+      'selectedPatternName'
+    ),
     setAppearance: useWizardSetter<WizardState, string>(setState, 'appearance'),
     setQuirk: useWizardSetter<WizardState, string>(setState, 'quirk'),
     setPatternName: useWizardSetter<WizardState, string>(setState, 'patternName'),

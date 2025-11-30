@@ -130,12 +130,7 @@ export function EntityDisplayContent({ children }: { children?: React.ReactNode 
       headerOpacity={opacity.header}
       leftContent={<EntityLeftContent />}
       subTitleContent={<EntitySubTitleElement />}
-      rightContent={
-        <EntityRightHeaderContent
-          isExpanded={isExpanded}
-          collapsible={collapsible}
-        />
-      }
+      rightContent={<EntityRightHeaderContent isExpanded={isExpanded} collapsible={collapsible} />}
       compact={compact}
       title={title}
       titleRotation={useMemo(() => (damaged ? getTiltRotation() : 0), [damaged])}

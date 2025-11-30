@@ -12,7 +12,7 @@ interface NavigationLinkProps
 
 /**
  * Consistent navigation link component
- * Used across TopNavigation and DashboardNavigation for uniform styling
+ * Used in TopNavigation for uniform styling
  */
 export function NavigationLink({
   isActive,

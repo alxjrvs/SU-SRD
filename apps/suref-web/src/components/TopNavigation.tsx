@@ -8,6 +8,7 @@ import {
   Spinner,
   Drawer,
   VStack,
+  Image,
 } from '@chakra-ui/react'
 import type { User } from '@supabase/supabase-js'
 import type { SchemaInfo } from '../types/schema'
@@ -267,20 +268,43 @@ export function TopNavigation({ user, userLoading = false, schemas = [] }: TopNa
                     <>
                       <Box pt={4} borderTopWidth="1px" borderTopColor="border.default" w="full" />
                       <Box as="li" style={{ listStyle: 'none' }}>
-                        <Text
+                        <Flex
                           px={4}
                           py={2}
-                          fontSize="sm"
-                          color="fg.default"
-                          fontWeight="medium"
+                          alignItems="center"
+                          justifyContent="center"
+                          gap={2}
                           w="full"
-                          textAlign="center"
                         >
-                          {user.user_metadata?.preferred_username ||
-                            user.user_metadata?.full_name ||
-                            user.email?.split('@')[0] ||
-                            'User'}
-                        </Text>
+                          {user.user_metadata?.avatar_url && (
+                            <Box
+                              w="24px"
+                              h="24px"
+                              borderRadius="full"
+                              overflow="hidden"
+                              flexShrink={0}
+                            >
+                              <Image
+                                src={user.user_metadata.avatar_url}
+                                alt={
+                                  user.user_metadata?.preferred_username ||
+                                  user.user_metadata?.full_name ||
+                                  user.email?.split('@')[0] ||
+                                  'User'
+                                }
+                                w="full"
+                                h="full"
+                                objectFit="cover"
+                              />
+                            </Box>
+                          )}
+                          <Text fontSize="sm" color="fg.default" fontWeight="medium">
+                            {user.user_metadata?.preferred_username ||
+                              user.user_metadata?.full_name ||
+                              user.email?.split('@')[0] ||
+                              'User'}
+                          </Text>
+                        </Flex>
                       </Box>
                       <Box as="li" style={{ listStyle: 'none' }}>
                         <Button

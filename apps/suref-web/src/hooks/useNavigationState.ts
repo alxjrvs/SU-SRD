@@ -5,7 +5,7 @@ import { logger } from '../lib/logger'
 
 /**
  * Shared navigation state and handlers
- * Consolidates common navigation logic used across TopNavigation and DashboardNavigation
+ * Consolidates common navigation logic for TopNavigation
  */
 export function useNavigationState() {
   const navigate = useNavigate()

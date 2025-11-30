@@ -25,9 +25,10 @@ import { fetchCrawlerPilots, fetchPilotsMechs } from '../../lib/api'
 
 interface CrawlerLiveSheetProps {
   id: string
+  flat?: boolean
 }
 
-export default function CrawlerLiveSheet({ id }: CrawlerLiveSheetProps) {
+export default function CrawlerLiveSheet({ id, flat = false }: CrawlerLiveSheetProps) {
   const navigate = useNavigate()
 
   const { crawler, loading, error, selectedCrawlerType, isLocal, bays } = useHydratedCrawler(id)
@@ -75,8 +76,8 @@ export default function CrawlerLiveSheet({ id }: CrawlerLiveSheetProps) {
   const storageBay = bays.find((bay) => bay.ref.name === 'Storage Bay')
   const regularBays = bays.filter((bay) => bay.ref.name !== 'Storage Bay')
 
-  return (
-    <LiveSheetLayout>
+  const commonContent = (
+    <>
       {!isLocal && (
         <LiveSheetControlBar
           bg="su.pink"
@@ -100,6 +101,150 @@ export default function CrawlerLiveSheet({ id }: CrawlerLiveSheetProps) {
           flashingTLs={[]}
         />
       </Flex>
+    </>
+  )
+
+  const downgradeButton = (
+    <Button
+      w="full"
+      bg="gray.500"
+      color="white"
+      borderWidth="3px"
+      borderColor="su.black"
+      borderRadius="md"
+      fontSize="lg"
+      fontWeight="bold"
+      py={6}
+      _hover={{ bg: 'gray.600' }}
+      onClick={() => {
+        const currentTL = crawler?.tech_level || 1
+        if (currentTL > 1) {
+          updateCrawler.mutate({ id, updates: { tech_level: currentTL - 1 } })
+        }
+      }}
+      disabled={!selectedCrawlerType || !isEditable || (crawler?.tech_level || 1) <= 1}
+    >
+      DOWNGRADE TECH LEVEL
+    </Button>
+  )
+
+  if (flat) {
+    return (
+      <>
+        {commonContent}
+        <VStack gap={6} alignItems="stretch" mt={6}>
+          {/* Abilities Section */}
+          <Box>
+            <Text variant="pseudoheader" fontSize="lg" mb={4}>
+              Abilities
+            </Text>
+            <Flex gap={6} w="full">
+              <CrawlerAbilities id={id} disabled={!selectedCrawlerType} readOnly={!isEditable} />
+              <CrawlerNPC id={id} disabled={!selectedCrawlerType} readOnly={!isEditable} />
+            </Flex>
+          </Box>
+
+          {/* Bays Section */}
+          {regularBays.length > 0 && (
+            <Box>
+              <Text variant="pseudoheader" fontSize="lg" mb={4}>
+                Bays
+              </Text>
+              <Grid gridTemplateColumns="repeat(3, 1fr)" gap={4}>
+                {regularBays.map((bay) => (
+                  <BayCard
+                    key={bay.id}
+                    mode="entity"
+                    bay={bay}
+                    disabled={!selectedCrawlerType}
+                    readOnly={!isEditable}
+                  />
+                ))}
+              </Grid>
+            </Box>
+          )}
+
+          {/* Storage Bay Section */}
+          <Box>
+            <Text variant="pseudoheader" fontSize="lg" mb={4}>
+              Storage Bay
+            </Text>
+            <VStack gap="0" alignItems="stretch">
+              {storageBay && (
+                <BayCard
+                  mode="entity"
+                  bay={storageBay}
+                  disabled={!selectedCrawlerType}
+                  readOnly={!isEditable}
+                />
+              )}
+
+              <StorageCargoBay id={id} disabled={!selectedCrawlerType} readOnly={!isEditable} />
+            </VStack>
+          </Box>
+
+          {/* Notes Section */}
+          <Box>
+            <Text variant="pseudoheader" fontSize="lg" mb={4}>
+              Notes
+            </Text>
+            <Notes
+              notes={crawler?.notes ?? ''}
+              onChange={(value) => updateCrawler.mutate({ id, updates: { notes: value } })}
+              backgroundColor="bg.builder.crawler"
+              placeholder="Add notes about your crawler..."
+              disabled={!isEditable}
+              incomplete={!selectedCrawlerType}
+            />
+          </Box>
+
+          {/* Pilots & Mechs Section */}
+          {!isLocal && (
+            <Box>
+              <Text variant="pseudoheader" fontSize="lg" mb={4}>
+                Pilots & Mechs
+              </Text>
+              <VStack gap={4} align="stretch">
+                {pilotsWithMechs.length === 0 ? (
+                  <Card bg="su.grey">
+                    <Text variant="pseudoheader" textAlign="center">
+                      No pilots assigned to this crawler
+                    </Text>
+                  </Card>
+                ) : (
+                  <Grid gridTemplateColumns="repeat(2, 1fr)" gap={4}>
+                    {pilotsWithMechs.map(({ pilot }) => (
+                      <PilotMechCell key={pilot.id} crawlerId={id} memberId={pilot.user_id} />
+                    ))}
+                  </Grid>
+                )}
+              </VStack>
+            </Box>
+          )}
+        </VStack>
+
+        {downgradeButton}
+
+        {!isLocal && (
+          <DeleteEntity
+            entityName="Crawler"
+            onConfirmDelete={() =>
+              deleteCrawler.mutate(id, {
+                onSuccess: () => {
+                  navigate({ to: '/dashboard/crawlers' })
+                },
+              })
+            }
+            disabled={!isEditable || !id || updateCrawler.isPending}
+          />
+        )}
+      </>
+    )
+  }
+
+  return (
+    <LiveSheetLayout>
+      {commonContent}
 
       <Tabs.Root defaultValue="abilities">
         <Tabs.List borderColor="border.default">
@@ -195,27 +340,7 @@ export default function CrawlerLiveSheet({ id }: CrawlerLiveSheetProps) {
         )}
       </Tabs.Root>
 
-      <Button
-        w="full"
-        bg="gray.500"
-        color="white"
-        borderWidth="3px"
-        borderColor="su.black"
-        borderRadius="md"
-        fontSize="lg"
-        fontWeight="bold"
-        py={6}
-        _hover={{ bg: 'gray.600' }}
-        onClick={() => {
-          const currentTL = crawler?.tech_level || 1
-          if (currentTL > 1) {
-            updateCrawler.mutate({ id, updates: { tech_level: currentTL - 1 } })
-          }
-        }}
-        disabled={!selectedCrawlerType || !isEditable || (crawler?.tech_level || 1) <= 1}
-      >
-        DOWNGRADE TECH LEVEL
-      </Button>
+      {downgradeButton}
 
       {!isLocal && (
         <DeleteEntity

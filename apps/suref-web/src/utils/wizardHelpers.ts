@@ -31,4 +31,3 @@ export function useWizardSetter<TState, TValue>(
     [setState, fieldName]
   )
 }
-

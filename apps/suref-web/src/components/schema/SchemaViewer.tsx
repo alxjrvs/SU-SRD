@@ -285,13 +285,7 @@ export default function SchemaViewer({ schemas, data: prefetchedData }: SchemaVi
               }
             >
               <Suspense fallback={<Box h="200px" bg="su.lightBlue" borderRadius="md" />}>
-                <EntityDisplay
-                  hideActions
-                  hideChoices
-                  data={item}
-                  compact
-                  collapsible={false}
-                />
+                <EntityDisplay hideActions hideChoices data={item} compact collapsible={false} />
               </Suspense>
             </Box>
           ))}

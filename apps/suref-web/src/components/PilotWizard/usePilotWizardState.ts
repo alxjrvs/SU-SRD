@@ -53,8 +53,14 @@ export function usePilotWizardState(): UsePilotWizardStateReturn {
     goToNextStep: baseWizard.goToNextStep,
     goToPreviousStep: baseWizard.goToPreviousStep,
     setSelectedClassId: useWizardSetter<WizardState, string | null>(setState, 'selectedClassId'),
-    setSelectedAbilityId: useWizardSetter<WizardState, string | null>(setState, 'selectedAbilityId'),
-    setSelectedEquipmentIds: useWizardSetter<WizardState, string[]>(setState, 'selectedEquipmentIds'),
+    setSelectedAbilityId: useWizardSetter<WizardState, string | null>(
+      setState,
+      'selectedAbilityId'
+    ),
+    setSelectedEquipmentIds: useWizardSetter<WizardState, string[]>(
+      setState,
+      'selectedEquipmentIds'
+    ),
     setCallsign: useWizardSetter<WizardState, string>(setState, 'callsign'),
     setBackground: useWizardSetter<WizardState, string>(setState, 'background'),
     setMotto: useWizardSetter<WizardState, string>(setState, 'motto'),
