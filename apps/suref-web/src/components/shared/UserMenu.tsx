@@ -15,7 +15,7 @@ interface UserMenuProps {
 
 /**
  * User menu component showing user info and sign out button
- * Used across TopNavigation and DashboardNavigation for consistent auth UI
+ * Used in TopNavigation for consistent auth UI
  */
 export function UserMenu({ user, onSignOut, signingOut, signInComponent }: UserMenuProps) {
   return (

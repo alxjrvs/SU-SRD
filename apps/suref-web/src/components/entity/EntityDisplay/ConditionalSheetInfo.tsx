@@ -4,6 +4,7 @@ import { useEntityDisplayContext } from './useEntityDisplayContext'
 import { useParseTraitReferences } from '../../../utils/parseTraitReferences'
 import { useMemo } from 'react'
 import { getTiltRotation } from '../../../utils/tiltUtils'
+import { Text } from '../../base/Text'
 
 interface ConditionalSheetInfoProps {
   /** Property name to check in data (for backwards compatibility) */
@@ -29,7 +30,7 @@ export function ConditionalSheetInfo({
   labelBgColor,
   children,
 }: ConditionalSheetInfoProps) {
-  const { data, spacing, compact, damaged } = useEntityDisplayContext()
+  const { data, spacing, compact, damaged, fontSize } = useEntityDisplayContext()
 
   let displayValue: string | undefined
   if (explicitValue !== undefined) {
@@ -44,6 +45,43 @@ export function ConditionalSheetInfo({
 
   if (!displayValue) return null
   if (!(propertyName in data) && explicitValue === undefined) return null
+
+  // Special handling for damagedEffect - render with content block styling
+  if (propertyName === 'damagedEffect') {
+    return (
+      <Box p={spacing.contentPadding}>
+        <Box
+          transform={damaged ? `rotate(${valueRotation}deg)` : undefined}
+          transition="transform 0.3s ease"
+        >
+          {label && (
+            <Text
+              as="span"
+              fontWeight="bold"
+              fontSize={fontSize.lg}
+              color="su.black"
+              lineHeight="relaxed"
+              display="block"
+            >
+              {label}
+            </Text>
+          )}
+          <Box
+            color="su.black"
+            fontWeight="medium"
+            lineHeight="relaxed"
+            wordBreak="break-word"
+            overflowWrap="break-word"
+            whiteSpace="normal"
+            fontSize={fontSize.sm}
+            mb={2}
+          >
+            {children || parsedContent}
+          </Box>
+        </Box>
+      </Box>
+    )
+  }
 
   return (
     <Flex p={spacing.contentPadding}>

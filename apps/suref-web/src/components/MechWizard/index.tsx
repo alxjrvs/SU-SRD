@@ -5,26 +5,18 @@ import { SystemsModulesStep } from './SystemsModulesStep'
 import { DetailsStep } from './DetailsStep'
 import { useCreateMechFromWizard } from './useCreateMechFromWizard'
 import { BudgetDisplay } from './BudgetDisplay'
-import { useState } from 'react'
+import { useWizardCreation } from '../../hooks/useWizardCreation'
 
 export function MechWizard() {
   const wizardState = useMechWizardState()
   const createMech = useCreateMechFromWizard()
-  const [isCreating, setIsCreating] = useState(false)
+  const { isCreating, handleCreate } = useWizardCreation(createMech)
 
   const handleStepComplete = () => {
     wizardState.goToNextStep()
   }
 
-  const handleCreateMech = async () => {
-    setIsCreating(true)
-    try {
-      await createMech(wizardState.state)
-    } catch (error) {
-      console.error('Failed to create mech:', error)
-      setIsCreating(false)
-    }
-  }
+  const handleCreateMech = () => handleCreate(wizardState.state)
 
   const renderStep = (step: number) => {
     switch (step) {

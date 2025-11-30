@@ -205,13 +205,7 @@ export function ClassAbilitiesList({
     }
 
     return trees
-  }, [
-    coreTreeNames,
-    allTreeAbilities,
-    coreAdvancedTree,
-    coreLegendaryTree,
-    selectedAdvancedClass,
-  ])
+  }, [coreTreeNames, allTreeAbilities, coreAdvancedTree, coreLegendaryTree, selectedAdvancedClass])
 
   if (!selectedClass && !selectedAdvancedClass) {
     return (
@@ -226,12 +220,7 @@ export function ClassAbilitiesList({
   return (
     <Box p={compact ? 1 : 2} w="full">
       {/* Mobile/Tablet: Vertical stack with all trees in order */}
-      <VStack
-        gap={2}
-        alignItems="stretch"
-        display={{ base: 'flex', lg: 'none' }}
-        w="full"
-      >
+      <VStack gap={2} alignItems="stretch" display={{ base: 'flex', lg: 'none' }} w="full">
         {orderedTrees.map((tree) => (
           <TreeSection
             selectedClass={selectedClass}
@@ -486,8 +475,7 @@ function TreeSection({
                 compact
                 key={ability.id}
                 data={ability}
-                collapsible={true}
-                disabled={false}
+                collapsible
                 defaultExpanded={alreadySelected}
               />
             )

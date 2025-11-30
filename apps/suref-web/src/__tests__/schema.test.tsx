@@ -100,12 +100,7 @@ describe('Schema Entity Display Tests', () => {
           let result: ReturnType<typeof render>
           await act(async () => {
             result = render(
-              <EntityDisplay
-                data={entity as SURefEntity}
-                hideActions={false}
-                compact={false}
-                collapsible={false}
-              />
+              <EntityDisplay data={entity as SURefEntity} compact={false} collapsible={false} />
             )
           })
 

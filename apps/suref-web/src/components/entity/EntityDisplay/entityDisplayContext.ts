@@ -76,8 +76,6 @@ export interface EntityDisplayContextValue {
   showFooter?: boolean
   /** Whether to hide tech level */
   hideLevel: boolean
-  /** Right label for header */
-  rightLabel?: string
   /** Custom right content for header */
   rightContent?: ReactNode
   /** Whether the entity is damaged */
@@ -88,12 +86,8 @@ export interface EntityDisplayContextValue {
   buttonConfig?: ButtonProps & { children: ReactNode }
   /** User choices for entity options */
   userChoices?: Record<string, string> | null
-  /** Choice selection handler */
-  onChoiceSelection?: (choiceId: string, value: string | undefined) => void
   /** Children to render in the content area */
   children?: ReactNode
-  /** Whether to hide the image */
-  hideImage?: boolean
   /** Custom width for the image (e.g., '40%') */
   imageWidth?: string
   /** Computed entity display name */

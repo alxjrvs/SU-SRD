@@ -46,15 +46,11 @@ interface EntityDisplayProviderProps {
   onClick?: () => void
   hideLevel: boolean
   expanded?: boolean
-  rightLabel?: string
   rightContent?: ReactNode
   damaged?: boolean
   buttonConfig?: ButtonProps & { children: ReactNode }
   userChoices?: Record<string, string> | null
-  onChoiceSelection?: (choiceId: string, value: string | undefined) => void
-  onToggleExpanded?: () => void
   children?: ReactNode
-  hideImage?: boolean
   imageWidth?: string
 }
 
@@ -74,15 +70,11 @@ export function EntityDisplayProvider({
   defaultExpanded,
   onClick,
   hideLevel,
-  rightLabel,
   rightContent,
   damaged = false,
   buttonConfig,
   userChoices,
-  onChoiceSelection,
-  onToggleExpanded,
   children,
-  hideImage,
   imageWidth,
 }: EntityDisplayProviderProps) {
   const hasButtonConfig = !!buttonConfig
@@ -90,11 +82,7 @@ export function EntityDisplayProvider({
   const isExpanded = expanded !== undefined ? expanded : internalExpanded
 
   const onToggle = () => {
-    if (onToggleExpanded) {
-      onToggleExpanded()
-    } else {
-      setInternalExpanded(!internalExpanded)
-    }
+    setInternalExpanded(!internalExpanded)
   }
   const title = extractName(data, schemaName)
   // Get tech level for display (preserves "B" and "N")
@@ -167,14 +155,11 @@ export function EntityDisplayProvider({
     hideChoices,
     showFooter,
     hideLevel,
-    rightLabel,
     rightContent,
     damaged,
     disabled,
     buttonConfig,
     userChoices,
-    onChoiceSelection,
-    hideImage,
     imageWidth,
     entityName,
     hasActions: hasActionsValue,

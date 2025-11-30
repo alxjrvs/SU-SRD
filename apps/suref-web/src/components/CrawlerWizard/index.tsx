@@ -4,26 +4,18 @@ import { CrawlerTypeSelectionStep } from './CrawlerTypeSelectionStep'
 import { CrawlerBaysStep } from './CrawlerBaysStep'
 import { CrawlerNameStep } from './CrawlerNameStep'
 import { useCreateCrawlerFromWizard } from './useCreateCrawlerFromWizard'
-import { useState } from 'react'
+import { useWizardCreation } from '../../hooks/useWizardCreation'
 
 export function CrawlerWizard() {
   const wizardState = useCrawlerWizardState()
   const createCrawler = useCreateCrawlerFromWizard()
-  const [isCreating, setIsCreating] = useState(false)
+  const { isCreating, handleCreate } = useWizardCreation(createCrawler)
 
   const handleStepComplete = () => {
     wizardState.goToNextStep()
   }
 
-  const handleCreateCrawler = async () => {
-    setIsCreating(true)
-    try {
-      await createCrawler(wizardState.state)
-    } catch (error) {
-      console.error('Failed to create crawler:', error)
-      setIsCreating(false)
-    }
-  }
+  const handleCreateCrawler = () => handleCreate(wizardState.state)
 
   const renderStep = (step: number) => {
     switch (step) {
