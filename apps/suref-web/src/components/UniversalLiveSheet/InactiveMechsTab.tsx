@@ -85,4 +85,3 @@ export function InactiveMechsTab({ pilotId, isEditable }: InactiveMechsTabProps)
     </Grid>
   )
 }
-

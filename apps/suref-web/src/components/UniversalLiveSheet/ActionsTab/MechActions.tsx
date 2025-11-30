@@ -19,4 +19,3 @@ export function MechActions({ actions }: MechActionsProps) {
     </VStack>
   )
 }
-

@@ -19,4 +19,3 @@ export function CrawlerActions({ actions }: CrawlerActionsProps) {
     </VStack>
   )
 }
-

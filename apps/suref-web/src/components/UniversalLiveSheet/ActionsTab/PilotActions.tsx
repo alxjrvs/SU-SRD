@@ -19,4 +19,3 @@ export function PilotActions({ actions }: PilotActionsProps) {
     </VStack>
   )
 }
-
