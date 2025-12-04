@@ -35,5 +35,3 @@ export function useCreateCrawlerForPilot(pilotId: string) {
     isPending: createCrawler.isPending || updatePilot.isPending,
   }
 }
-
-

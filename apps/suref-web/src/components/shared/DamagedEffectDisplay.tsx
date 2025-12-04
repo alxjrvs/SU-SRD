@@ -59,5 +59,3 @@ export function DamagedEffectDisplay({ damagedEffect }: DamagedEffectDisplayProp
     </Box>
   )
 }
-
-

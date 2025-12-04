@@ -53,5 +53,3 @@ export function CrawlerDisplay({ crawlerId }: CrawlerDisplayProps) {
     </Box>
   )
 }
-
-

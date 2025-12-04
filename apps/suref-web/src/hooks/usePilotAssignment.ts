@@ -35,4 +35,3 @@ export function useCreatePilotForMech(mechId: string) {
     isPending: createPilot.isPending || updateMech.isPending,
   }
 }
-

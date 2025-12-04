@@ -164,7 +164,7 @@ export default function MechLiveSheet({ id, flat = false }: MechLiveSheetProps) 
               label="Create"
               bottomLabel="Pilot"
               onClick={handleCreatePilot}
-              disabled={createPilot.isPending}
+              disabled={isCreatingPilot}
               ariaLabel="Create new pilot for this mech"
             />
             {availablePilots.length > 0 && (

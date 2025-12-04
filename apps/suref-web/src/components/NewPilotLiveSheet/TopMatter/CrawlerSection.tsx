@@ -38,7 +38,6 @@ export function CrawlerSection({ pilotId, isEditable, isLocal }: CrawlerSectionP
     enabled: !!pilotId,
   })
 
-
   const handleCrawlerChange = (crawlerId: string | null) => {
     updatePilot.mutate({
       id: pilotId,

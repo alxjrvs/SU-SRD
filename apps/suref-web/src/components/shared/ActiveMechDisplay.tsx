@@ -60,5 +60,3 @@ export function ActiveMechDisplay({ mechId, isEditable }: ActiveMechDisplayProps
     </Box>
   )
 }
-
-

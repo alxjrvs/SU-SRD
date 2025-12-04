@@ -14,9 +14,7 @@ interface WizardStateWithNavigation {
  * @param wizardState - Wizard state object with goToNextStep method
  * @returns Handler function that advances to the next step
  */
-export function useWizardStepHandler(
-  wizardState: WizardStateWithNavigation
-): () => void {
+export function useWizardStepHandler(wizardState: WizardStateWithNavigation): () => void {
   return useCallback(() => {
     wizardState.goToNextStep()
   }, [wizardState])
@@ -36,5 +34,3 @@ export function useWizardCreateHandler<TState>(
     handleCreate(wizardState.state)
   }, [handleCreate, wizardState])
 }
-
-

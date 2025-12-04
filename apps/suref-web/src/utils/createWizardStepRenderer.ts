@@ -22,4 +22,3 @@ export function createWizardStepRenderer(
 ): (step: number) => ReactNode {
   return stepRenderer
 }
-

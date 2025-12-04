@@ -19,10 +19,7 @@ export function useCreateMechForPilot(pilotId: string) {
     if (!userId) return
 
     // Set all other mechs for this pilot to inactive first
-    const { data: pilotMechs } = await supabase
-      .from('mechs')
-      .select('id')
-      .eq('pilot_id', pilotId)
+    const { data: pilotMechs } = await supabase.from('mechs').select('id').eq('pilot_id', pilotId)
 
     if (pilotMechs) {
       for (const mech of pilotMechs) {
@@ -57,20 +54,14 @@ export function useCreateMechForPilot(pilotId: string) {
  * @param options.setPilotId - Whether to also set the mech's pilot_id (default: false)
  * @returns Object with assignMechToPilot function and isPending state
  */
-export function useAssignMechToPilot(
-  pilotId: string,
-  options?: { setPilotId?: boolean }
-) {
+export function useAssignMechToPilot(pilotId: string, options?: { setPilotId?: boolean }) {
   const updateMech = useUpdateMech()
   const { setPilotId = false } = options || {}
 
   const assignMechToPilot = useCallback(
     async (mechId: string) => {
       // Set all mechs for this pilot to inactive first
-      const { data: pilotMechs } = await supabase
-        .from('mechs')
-        .select('id')
-        .eq('pilot_id', pilotId)
+      const { data: pilotMechs } = await supabase.from('mechs').select('id').eq('pilot_id', pilotId)
 
       if (pilotMechs) {
         for (const mech of pilotMechs) {
@@ -92,4 +83,3 @@ export function useAssignMechToPilot(
     isPending: updateMech.isPending,
   }
 }
-

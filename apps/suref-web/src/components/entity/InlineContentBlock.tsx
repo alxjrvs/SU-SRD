@@ -12,11 +12,7 @@ interface InlineContentBlockProps {
 /**
  * Render a single content block inline (as span, not block)
  */
-export function InlineContentBlock({
-  block,
-  fontSize,
-  chassisName,
-}: InlineContentBlockProps) {
+export function InlineContentBlock({ block, fontSize, chassisName }: InlineContentBlockProps) {
   const type = block.type || 'paragraph'
   const stringValue = parseContentBlockString(block, chassisName)
   const parsedValue = useParseTraitReferences(stringValue)
@@ -45,5 +41,3 @@ export function InlineContentBlock({
   // For other types, render as block (shouldn't happen in inline context, but fallback)
   return null
 }
-
-
