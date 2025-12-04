@@ -20,7 +20,7 @@ import { LiveSheetLoadingState } from '../shared/LiveSheetLoadingState'
 import { LiveSheetNotFoundState } from '../shared/LiveSheetNotFoundState'
 import { LiveSheetErrorState } from '../shared/LiveSheetErrorState'
 import { useUpdateMech, useHydratedMech, useDeleteMech } from '../../hooks/mech'
-import { useCreatePilot } from '../../hooks/pilot'
+import { useCreatePilotForMech } from '../../hooks/usePilotAssignment'
 import { useCurrentUser } from '../../hooks/useCurrentUser'
 import { useImageUpload } from '../../hooks/useImageUpload'
 import { useEntityRelationships } from '../../hooks/useEntityRelationships'
@@ -56,7 +56,7 @@ export default function MechLiveSheet({ id, flat = false }: MechLiveSheetProps) 
     queryKey: ['mechs', id],
   })
 
-  const createPilot = useCreatePilot()
+  const { createPilotForMech, isPending: isCreatingPilot } = useCreatePilotForMech(id)
 
   const { items: allPilots } = useEntityRelationships<{
     id: string
@@ -72,19 +72,10 @@ export default function MechLiveSheet({ id, flat = false }: MechLiveSheetProps) 
   const availablePilots = allPilots.filter((p) => p.id !== mech?.pilot_id)
 
   const handleCreatePilot = async () => {
-    if (!userId) return
-
-    const newPilot = await createPilot.mutateAsync({
-      callsign: 'New Pilot',
-      max_hp: 10,
-      max_ap: 5,
-      current_damage: 0,
-      current_ap: 0,
-      user_id: userId,
-    })
-
-    updateMech.mutate({ id, updates: { pilot_id: newPilot.id } })
-    navigate({ to: `/dashboard/pilots/${newPilot.id}` })
+    const pilotId = await createPilotForMech()
+    if (pilotId) {
+      navigate({ to: `/dashboard/pilots/${pilotId}` })
+    }
   }
 
   if (!mech && !loading) {

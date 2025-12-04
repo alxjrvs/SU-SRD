@@ -124,10 +124,11 @@ export function ClassAbilitiesList({
     }
   }, [allAbilities, selectedClass, selectedAdvancedClass, pilot, abilities, id])
 
-  const coreTreeNames =
-    selectedClass && 'coreTrees' in selectedClass && Array.isArray(selectedClass.coreTrees)
+  const coreTreeNames = useMemo(() => {
+    return selectedClass && 'coreTrees' in selectedClass && Array.isArray(selectedClass.coreTrees)
       ? selectedClass.coreTrees
       : []
+  }, [selectedClass])
 
   const hasAdvancedOrLegendary =
     (coreAdvancedTree && allTreeAbilities[coreAdvancedTree]) ||

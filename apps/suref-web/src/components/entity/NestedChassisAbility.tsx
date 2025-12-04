@@ -7,8 +7,7 @@ import type {
 import { Text } from '../base/Text'
 import { BlockContentRendererView } from './BlockContentRendererView'
 import { EntityChoice } from './EntityDisplay/EntityChoice'
-import { useParseTraitReferences } from '../../utils/parseTraitReferences'
-import { parseContentBlockString } from '../../utils/contentBlockHelpers'
+import { InlineContentBlock } from './InlineContentBlock'
 import type { DataValue } from '../../types/common'
 import { extractEntityDetails } from '../../lib/entityDataExtraction'
 import { DataValueDisplayView } from './DataValueDisplayView'
@@ -258,45 +257,4 @@ export function NestedChassisAbility({
       )}
     </Box>
   )
-}
-
-/**
- * Render a single content block inline (as span, not block)
- */
-function InlineContentBlock({
-  block,
-  fontSize,
-  chassisName,
-}: {
-  block: SURefObjectContentBlock
-  fontSize: string
-  chassisName?: string
-}) {
-  const type = block.type || 'paragraph'
-  const stringValue = parseContentBlockString(block, chassisName)
-  const parsedValue = useParseTraitReferences(stringValue)
-
-  // Only render paragraph and hint types inline (others should be block-level)
-  if (type === 'paragraph' || type === 'hint') {
-    return (
-      <>
-        {' '}
-        <Box
-          as="span"
-          display="inline"
-          fontWeight={type === 'hint' ? 'normal' : 'medium'}
-          fontStyle={type === 'hint' ? 'italic' : 'normal'}
-          fontSize={fontSize}
-          lineHeight="relaxed"
-          whiteSpace="normal"
-          color="su.black"
-        >
-          {parsedValue}
-        </Box>
-      </>
-    )
-  }
-
-  // For other types, render as block (shouldn't happen in inline context, but fallback)
-  return null
 }

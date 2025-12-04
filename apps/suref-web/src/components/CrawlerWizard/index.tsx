@@ -5,19 +5,18 @@ import { CrawlerBaysStep } from './CrawlerBaysStep'
 import { CrawlerNameStep } from './CrawlerNameStep'
 import { useCreateCrawlerFromWizard } from './useCreateCrawlerFromWizard'
 import { useWizardCreation } from '../../hooks/useWizardCreation'
+import { useWizardStepHandler, useWizardCreateHandler } from '../../hooks/useWizardHandlers'
+import { createWizardStepRenderer } from '../../utils/createWizardStepRenderer'
 
 export function CrawlerWizard() {
   const wizardState = useCrawlerWizardState()
   const createCrawler = useCreateCrawlerFromWizard()
   const { isCreating, handleCreate } = useWizardCreation(createCrawler)
 
-  const handleStepComplete = () => {
-    wizardState.goToNextStep()
-  }
+  const handleStepComplete = useWizardStepHandler(wizardState)
+  const handleCreateCrawler = useWizardCreateHandler(handleCreate, wizardState)
 
-  const handleCreateCrawler = () => handleCreate(wizardState.state)
-
-  const renderStep = (step: number) => {
+  const renderStep = createWizardStepRenderer((step: number) => {
     switch (step) {
       case 1:
         return (
@@ -30,7 +29,7 @@ export function CrawlerWizard() {
       default:
         return null
     }
-  }
+  })
 
   const stepLabels = ['CRAWLER TYPE', 'CRAWLER BAYS', 'NAME'] as const
 
