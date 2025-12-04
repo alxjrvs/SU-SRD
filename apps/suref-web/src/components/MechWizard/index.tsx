@@ -6,19 +6,18 @@ import { DetailsStep } from './DetailsStep'
 import { useCreateMechFromWizard } from './useCreateMechFromWizard'
 import { BudgetDisplay } from './BudgetDisplay'
 import { useWizardCreation } from '../../hooks/useWizardCreation'
+import { useWizardStepHandler, useWizardCreateHandler } from '../../hooks/useWizardHandlers'
+import { createWizardStepRenderer } from '../../utils/createWizardStepRenderer'
 
 export function MechWizard() {
   const wizardState = useMechWizardState()
   const createMech = useCreateMechFromWizard()
   const { isCreating, handleCreate } = useWizardCreation(createMech)
 
-  const handleStepComplete = () => {
-    wizardState.goToNextStep()
-  }
+  const handleStepComplete = useWizardStepHandler(wizardState)
+  const handleCreateMech = useWizardCreateHandler(handleCreate, wizardState)
 
-  const handleCreateMech = () => handleCreate(wizardState.state)
-
-  const renderStep = (step: number) => {
+  const renderStep = createWizardStepRenderer((step: number) => {
     switch (step) {
       case 1:
         return <ChassisSelectionStep wizardState={wizardState} onComplete={handleStepComplete} />
@@ -29,7 +28,7 @@ export function MechWizard() {
       default:
         return null
     }
-  }
+  })
 
   const stepLabels = ['CHASSIS', 'SYSTEMS & MODULES', 'DETAILS'] as const
 

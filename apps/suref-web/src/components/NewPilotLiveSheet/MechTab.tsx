@@ -4,8 +4,7 @@ import { Text } from '../base/Text'
 import { Card } from '../shared/Card'
 import { AddStatButton } from '../shared/AddStatButton'
 import { SheetSelect } from '../shared/SheetSelect'
-import { useCreateMech, useUpdateMech } from '../../hooks/mech'
-import { useCurrentUser } from '../../hooks/useCurrentUser'
+import { useCreateMechForPilot, useAssignMechToPilot } from '../../hooks/useMechAssignment'
 import { supabase } from '../../lib/supabase'
 import type { Tables } from '../../types/database-generated.types'
 import MechLiveSheet from '../MechLiveSheet'
@@ -19,9 +18,10 @@ interface MechTabProps {
 }
 
 export function MechTab({ pilotId, isLocal, isEditable }: MechTabProps) {
-  const { userId } = useCurrentUser()
-  const createMech = useCreateMech()
-  const updateMech = useUpdateMech()
+  const { createMechForPilot, isPending: isCreatingMech } = useCreateMechForPilot(pilotId)
+  const { assignMechToPilot } = useAssignMechToPilot(pilotId, {
+    setPilotId: true,
+  })
 
   const { data: activeMech, isLoading } = useQuery({
     queryKey: ['active-mech', pilotId],
@@ -53,37 +53,6 @@ export function MechTab({ pilotId, isLocal, isEditable }: MechTabProps) {
     },
     enabled: !isLocal,
   })
-
-  const handleCreateMech = async () => {
-    if (!userId) return
-
-    // Set all other mechs to inactive first
-    const otherMechIds = allMechs.map((m) => m.id)
-    for (const id of otherMechIds) {
-      await updateMech.mutateAsync({ id, updates: { active: false } })
-    }
-
-    await createMech.mutateAsync({
-      pattern: 'New Mech',
-      current_damage: 0,
-      current_heat: 0,
-      current_ep: 0,
-      user_id: userId,
-      pilot_id: pilotId,
-      active: true, // Set as active when created
-    })
-  }
-
-  const handleAssignMech = async (mechId: string) => {
-    // Set all mechs to inactive first
-    const allMechIds = allMechs.map((m) => m.id)
-    for (const id of allMechIds) {
-      await updateMech.mutateAsync({ id, updates: { active: false } })
-    }
-
-    // Set selected mech to active
-    await updateMech.mutateAsync({ id: mechId, updates: { active: true, pilot_id: pilotId } })
-  }
 
   if (isLocal) {
     return (
@@ -120,8 +89,8 @@ export function MechTab({ pilotId, isLocal, isEditable }: MechTabProps) {
                 <AddStatButton
                   label="Create"
                   bottomLabel="Mech"
-                  onClick={handleCreateMech}
-                  disabled={createMech.isPending}
+                  onClick={createMechForPilot}
+                  disabled={isCreatingMech}
                   ariaLabel="Create new mech for this pilot"
                 />
                 {unassignedMechs.length > 0 && (
@@ -135,7 +104,7 @@ export function MechTab({ pilotId, isLocal, isEditable }: MechTabProps) {
                       }))}
                       onChange={(mechId) => {
                         if (mechId) {
-                          handleAssignMech(mechId)
+                          assignMechToPilot(mechId)
                         }
                       }}
                       placeholder="Select a mech..."

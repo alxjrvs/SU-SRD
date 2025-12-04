@@ -5,19 +5,18 @@ import { EquipmentSelectionStep } from './EquipmentSelectionStep'
 import { PersonalizeStep } from './PersonalizeStep'
 import { useCreatePilotFromWizard } from './useCreatePilotFromWizard'
 import { useWizardCreation } from '../../hooks/useWizardCreation'
+import { useWizardStepHandler, useWizardCreateHandler } from '../../hooks/useWizardHandlers'
+import { createWizardStepRenderer } from '../../utils/createWizardStepRenderer'
 
 export function PilotWizard() {
   const wizardState = usePilotWizardState()
   const createPilot = useCreatePilotFromWizard()
   const { isCreating, handleCreate } = useWizardCreation(createPilot)
 
-  const handleStepComplete = () => {
-    wizardState.goToNextStep()
-  }
+  const handleStepComplete = useWizardStepHandler(wizardState)
+  const handleCreatePilot = useWizardCreateHandler(handleCreate, wizardState)
 
-  const handleCreatePilot = () => handleCreate(wizardState.state)
-
-  const renderStep = (step: number) => {
+  const renderStep = createWizardStepRenderer((step: number) => {
     switch (step) {
       case 1:
         return <ClassSelectionStep wizardState={wizardState} onComplete={handleStepComplete} />
@@ -28,7 +27,7 @@ export function PilotWizard() {
       default:
         return null
     }
-  }
+  })
 
   const stepLabels = ['CLASS', 'EQUIPMENT', 'PERSONALIZE'] as const
 

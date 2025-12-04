@@ -18,7 +18,7 @@ import { LiveSheetNotFoundState } from '../../shared/LiveSheetNotFoundState'
 import { LiveSheetErrorState } from '../../shared/LiveSheetErrorState'
 import { DeleteEntity } from '../../shared/DeleteEntity'
 import { useUpdateMech, useHydratedMech, useDeleteMech } from '../../../hooks/mech'
-import { useCreatePilot } from '../../../hooks/pilot'
+import { useCreatePilotForMech } from '../../../hooks/usePilotAssignment'
 import { useCurrentUser } from '../../../hooks/useCurrentUser'
 import { useImageUpload } from '../../../hooks/useImageUpload'
 import { useEntityRelationships } from '../../../hooks/useEntityRelationships'
@@ -53,7 +53,7 @@ export default function MechLiveSheetContent({ mechId }: MechLiveSheetContentPro
     queryKey: ['mechs', mechId],
   })
 
-  const createPilot = useCreatePilot()
+  const { createPilotForMech, isPending: isCreatingPilot } = useCreatePilotForMech(mechId)
 
   const { items: allPilots } = useEntityRelationships<{
     id: string
@@ -67,21 +67,6 @@ export default function MechLiveSheetContent({ mechId }: MechLiveSheetContentPro
   })
 
   const availablePilots = allPilots.filter((p) => p.id !== mech?.pilot_id)
-
-  const handleCreatePilot = async () => {
-    if (!userId) return
-
-    const newPilot = await createPilot.mutateAsync({
-      callsign: 'New Pilot',
-      max_hp: 10,
-      max_ap: 5,
-      current_damage: 0,
-      current_ap: 0,
-      user_id: userId,
-    })
-
-    updateMech.mutate({ id: mechId, updates: { pilot_id: newPilot.id } })
-  }
 
   if (!mech && !loading) {
     return <LiveSheetNotFoundState entityType="Mech" />
@@ -235,8 +220,8 @@ export default function MechLiveSheetContent({ mechId }: MechLiveSheetContentPro
                         <AddStatButton
                           label="Create"
                           bottomLabel="Pilot"
-                          onClick={handleCreatePilot}
-                          disabled={createPilot.isPending}
+                          onClick={createPilotForMech}
+                          disabled={isCreatingPilot}
                           ariaLabel="Create new pilot for this mech"
                         />
                         {availablePilots.length > 0 && (

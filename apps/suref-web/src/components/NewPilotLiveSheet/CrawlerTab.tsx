@@ -4,9 +4,8 @@ import { Card } from '../shared/Card'
 import { SheetSelect } from '../shared/SheetSelect'
 import { AddStatButton } from '../shared/AddStatButton'
 import { useAvailableCrawlers } from '../../hooks/crawler'
-import { useCreateCrawler } from '../../hooks/crawler'
 import { useUpdatePilot } from '../../hooks/pilot'
-import { useCurrentUser } from '../../hooks/useCurrentUser'
+import { useCreateCrawlerForPilot } from '../../hooks/useCrawlerAssignment'
 import type { Tables } from '../../types/database-generated.types'
 import CrawlerLiveSheet from '../CrawlerLiveSheet'
 
@@ -20,26 +19,9 @@ interface CrawlerTabProps {
 }
 
 export function CrawlerTab({ pilot, pilotId, isLocal, isEditable }: CrawlerTabProps) {
-  const { userId } = useCurrentUser()
   const { data: availableCrawlers = [], isLoading: loadingCrawlers } = useAvailableCrawlers()
-  const createCrawler = useCreateCrawler()
+  const { createCrawlerForPilot, isPending: isCreatingCrawler } = useCreateCrawlerForPilot(pilotId)
   const updatePilot = useUpdatePilot()
-
-  const handleCreateCrawler = async () => {
-    if (!userId) return
-
-    const newCrawler = await createCrawler.mutateAsync({
-      name: 'New Crawler',
-      active: false,
-      private: true,
-      user_id: userId,
-    })
-
-    updatePilot.mutate({
-      id: pilotId,
-      updates: { crawler_id: newCrawler.id },
-    })
-  }
 
   const handleCrawlerChange = (crawlerId: string | null) => {
     updatePilot.mutate({
@@ -79,8 +61,8 @@ export function CrawlerTab({ pilot, pilotId, isLocal, isEditable }: CrawlerTabPr
                 <AddStatButton
                   label="Create"
                   bottomLabel="Crawler"
-                  onClick={handleCreateCrawler}
-                  disabled={createCrawler.isPending}
+                  onClick={createCrawlerForPilot}
+                  disabled={isCreatingCrawler}
                   ariaLabel="Create new crawler for this pilot"
                 />
                 {availableCrawlers.length > 0 && (

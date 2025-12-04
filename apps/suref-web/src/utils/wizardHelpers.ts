@@ -1,17 +1,4 @@
 import { useCallback } from 'react'
-import { getUser } from '../lib/api'
-
-/**
- * Helper to ensure user is authenticated
- * Throws error if user is not authenticated
- */
-export async function ensureAuthenticated() {
-  const user = await getUser()
-  if (!user) {
-    throw new Error('Not authenticated')
-  }
-  return user
-}
 
 /**
  * Hook to create a setter function for a wizard state field

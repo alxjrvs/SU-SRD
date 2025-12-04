@@ -1,13 +1,10 @@
-import { Box, Flex, HStack, VStack } from '@chakra-ui/react'
+import { Box, HStack, VStack } from '@chakra-ui/react'
 import { useQuery } from '@tanstack/react-query'
-import { getTechLevel, type SURefChassis } from 'salvageunion-reference'
 import { Text } from '../../base/Text'
-import { StatDisplay } from '../../StatDisplay'
 import { AddStatButton } from '../../shared/AddStatButton'
 import { SheetSelect } from '../../shared/SheetSelect'
-import { MechResourceSteppers } from '../../MechLiveSheet/MechResourceSteppers'
-import { useHydratedMech, useCreateMech, useUpdateMech } from '../../../hooks/mech'
-import { useCurrentUser } from '../../../hooks/useCurrentUser'
+import { ActiveMechDisplay } from '../../shared/ActiveMechDisplay'
+import { useCreateMechForPilot, useAssignMechToPilot } from '../../../hooks/useMechAssignment'
 import { supabase } from '../../../lib/supabase'
 import type { Tables } from '../../../types/database-generated.types'
 
@@ -20,9 +17,8 @@ interface ActiveMechSectionProps {
 }
 
 export function ActiveMechSection({ pilotId, isEditable, isLocal }: ActiveMechSectionProps) {
-  const { userId } = useCurrentUser()
-  const createMech = useCreateMech()
-  const updateMech = useUpdateMech()
+  const { createMechForPilot, isPending: isCreatingMech } = useCreateMechForPilot(pilotId)
+  const { assignMechToPilot } = useAssignMechToPilot(pilotId)
 
   const { data: activeMech, isLoading } = useQuery({
     queryKey: ['active-mech', pilotId],
@@ -57,43 +53,6 @@ export function ActiveMechSection({ pilotId, isEditable, isLocal }: ActiveMechSe
     enabled: !!pilotId && !isLocal,
   })
 
-  const handleCreateMech = async () => {
-    if (!userId) return
-
-    // Set all other mechs for this pilot to inactive first
-    const { data: pilotMechs } = await supabase.from('mechs').select('id').eq('pilot_id', pilotId)
-
-    if (pilotMechs) {
-      for (const mech of pilotMechs) {
-        await updateMech.mutateAsync({ id: mech.id, updates: { active: false } })
-      }
-    }
-
-    await createMech.mutateAsync({
-      pattern: 'New Mech',
-      current_damage: 0,
-      current_heat: 0,
-      current_ep: 0,
-      user_id: userId,
-      pilot_id: pilotId,
-      active: true, // Set as active when created
-    })
-  }
-
-  const handleAssignMech = async (mechId: string) => {
-    // Set all mechs for this pilot to inactive first
-    const { data: pilotMechs } = await supabase.from('mechs').select('id').eq('pilot_id', pilotId)
-
-    if (pilotMechs) {
-      for (const mech of pilotMechs) {
-        await updateMech.mutateAsync({ id: mech.id, updates: { active: false } })
-      }
-    }
-
-    // Set selected mech to active
-    await updateMech.mutateAsync({ id: mechId, updates: { active: true } })
-  }
-
   if (isLoading || mechsLoading) {
     return (
       <Box w="full" p={4} borderWidth="3px" borderColor="su.green" borderRadius="md" bg="su.grey">
@@ -114,8 +73,8 @@ export function ActiveMechSection({ pilotId, isEditable, isLocal }: ActiveMechSe
               <AddStatButton
                 label="Create"
                 bottomLabel="Mech"
-                onClick={handleCreateMech}
-                disabled={createMech.isPending}
+                onClick={createMechForPilot}
+                disabled={isCreatingMech}
                 ariaLabel="Create new mech for this pilot"
               />
               {inactiveMechs.length > 0 && (
@@ -129,7 +88,7 @@ export function ActiveMechSection({ pilotId, isEditable, isLocal }: ActiveMechSe
                     }))}
                     onChange={(mechId) => {
                       if (mechId) {
-                        handleAssignMech(mechId)
+                        assignMechToPilot(mechId)
                       }
                     }}
                     placeholder="Select a mech..."
@@ -145,60 +104,4 @@ export function ActiveMechSection({ pilotId, isEditable, isLocal }: ActiveMechSe
   }
 
   return <ActiveMechDisplay mechId={activeMech.id} isEditable={isEditable} />
-}
-
-interface ActiveMechDisplayProps {
-  mechId: string
-  isEditable: boolean
-}
-
-function ActiveMechDisplay({ mechId, isEditable }: ActiveMechDisplayProps) {
-  const { mech, selectedChassis } = useHydratedMech(mechId)
-  const chassisRef = selectedChassis?.ref as SURefChassis | undefined
-  const chassisName = chassisRef?.name
-  const pattern = mech?.pattern ?? undefined
-
-  const title = chassisName && pattern ? `"${pattern}"` : chassisName || 'Mech Chassis'
-  const subtitle = pattern && chassisName ? `${chassisName} Chassis` : ''
-
-  // Get tech level for display (preserves "B" and "N")
-  const techLevelDisplay = chassisRef ? (getTechLevel(chassisRef) ?? 0) : 0
-  const isBioTechLevel = techLevelDisplay === 'B'
-  const isNTechLevel = techLevelDisplay === 'N'
-
-  return (
-    <Box w="full" borderWidth="3px" borderColor="su.green" borderRadius="md" p={4} bg="su.green">
-      <Flex
-        gap={4}
-        direction={{ base: 'column', lg: 'row' }}
-        alignItems={{ base: 'stretch', lg: 'stretch' }}
-      >
-        <VStack flex="1" gap={2} alignItems="stretch">
-          <HStack gap={4} alignItems="center">
-            <StatDisplay
-              inverse={!isBioTechLevel && !isNTechLevel}
-              bg={isBioTechLevel ? 'su.sicklyYellow' : isNTechLevel ? 'su.silver' : undefined}
-              valueColor={isBioTechLevel ? 'su.black' : isNTechLevel ? 'su.black' : undefined}
-              label="tech"
-              bottomLabel="Level"
-              value={techLevelDisplay}
-              disabled={!selectedChassis}
-            />
-            <VStack alignItems="flex-start" gap={0}>
-              <Text variant="pseudoheader" fontSize="lg">
-                {title}
-              </Text>
-              {subtitle && (
-                <Text variant="pseudoheader" fontSize="sm">
-                  {subtitle}
-                </Text>
-              )}
-            </VStack>
-          </HStack>
-        </VStack>
-
-        <MechResourceSteppers id={mechId} disabled={!isEditable} incomplete={!selectedChassis} />
-      </Flex>
-    </Box>
-  )
 }
